@@ -66,10 +66,8 @@ namespace SysCisepro3.TalentoHumano
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
             //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip1.ForeColor = Color.White;
-            Label24.BackColor = ValidationForms.GetColorSistema(TipoCon);
-            Label24.ForeColor = Color.White;
-            Label1.BackColor = ValidationForms.GetColorSistema(TipoCon);
-            Label1.ForeColor = Color.White;
+            
+            
             
             
             switch (TipoCon)

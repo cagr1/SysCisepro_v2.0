@@ -36,25 +36,16 @@
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpFechaEntrada = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtArea = new System.Windows.Forms.TextBox();
-            this.Label27 = new System.Windows.Forms.Label();
             this.txtCargo = new System.Windows.Forms.TextBox();
-            this.Label25 = new System.Windows.Forms.Label();
             this.btnPersonalEntra = new System.Windows.Forms.Button();
             this.txtIdPersonal = new System.Windows.Forms.TextBox();
-            this.Label22 = new System.Windows.Forms.Label();
             this.txtPersonal = new System.Windows.Forms.TextBox();
-            this.Label26 = new System.Windows.Forms.Label();
-            this.GroupBox2 = new System.Windows.Forms.GroupBox();
             this.txtValorCobro = new System.Windows.Forms.TextBox();
             this.chkCobro = new System.Windows.Forms.CheckBox();
             this.txtDisponibles = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.cbxPeriodo = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnRemover = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -68,7 +59,6 @@
             this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtPendientes = new System.Windows.Forms.TextBox();
             this.txtDias = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,23 +72,39 @@
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtNumDoc = new System.Windows.Forms.TextBox();
             this.txtObservacion = new System.Windows.Forms.TextBox();
-            this.Label18 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.dtpHasta = new System.Windows.Forms.DateTimePicker();
-            this.Label4 = new System.Windows.Forms.Label();
             this.bntPuesto = new System.Windows.Forms.Button();
             this.txtSitio = new System.Windows.Forms.TextBox();
             this.dtpDesde = new System.Windows.Forms.DateTimePicker();
-            this.Label23 = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.Label3 = new System.Windows.Forms.Label();
-            this.Label31 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.kryptonGroupBox1 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonGroupBox2 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel6 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel7 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel8 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel9 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel10 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel11 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel12 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel13 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel14 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel15 = new Krypton.Toolkit.KryptonLabel();
             this.toolStrip1.SuspendLayout();
-            this.GroupBox1.SuspendLayout();
-            this.GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
+            this.kryptonGroupBox1.Panel.SuspendLayout();
+            this.kryptonGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
+            this.kryptonGroupBox2.Panel.SuspendLayout();
+            this.kryptonGroupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -111,7 +117,7 @@
             this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(779, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(689, 31);
             this.toolStrip1.TabIndex = 215;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -147,93 +153,47 @@
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // GroupBox1
-            // 
-            this.GroupBox1.BackColor = System.Drawing.Color.White;
-            this.GroupBox1.Controls.Add(this.dtpFechaEntrada);
-            this.GroupBox1.Controls.Add(this.label6);
-            this.GroupBox1.Controls.Add(this.txtArea);
-            this.GroupBox1.Controls.Add(this.Label27);
-            this.GroupBox1.Controls.Add(this.txtCargo);
-            this.GroupBox1.Controls.Add(this.Label25);
-            this.GroupBox1.Controls.Add(this.btnPersonalEntra);
-            this.GroupBox1.Controls.Add(this.txtIdPersonal);
-            this.GroupBox1.Controls.Add(this.Label22);
-            this.GroupBox1.Controls.Add(this.txtPersonal);
-            this.GroupBox1.Controls.Add(this.Label26);
-            this.GroupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox1.Location = new System.Drawing.Point(0, 40);
-            this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(778, 64);
-            this.GroupBox1.TabIndex = 216;
-            this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "DATOS DE PERSONAL";
-            // 
             // dtpFechaEntrada
             // 
             this.dtpFechaEntrada.CustomFormat = "dddd, dd/MM/yyyy";
             this.dtpFechaEntrada.Enabled = false;
-            this.dtpFechaEntrada.Location = new System.Drawing.Point(530, 39);
+            this.dtpFechaEntrada.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaEntrada.Location = new System.Drawing.Point(441, 30);
             this.dtpFechaEntrada.Name = "dtpFechaEntrada";
-            this.dtpFechaEntrada.Size = new System.Drawing.Size(242, 21);
+            this.dtpFechaEntrada.Size = new System.Drawing.Size(193, 21);
             this.dtpFechaEntrada.TabIndex = 206;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(476, 42);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 13);
-            this.label6.TabIndex = 207;
-            this.label6.Text = "INGRESO:";
             // 
             // txtArea
             // 
             this.txtArea.BackColor = System.Drawing.Color.White;
             this.txtArea.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtArea.Enabled = false;
-            this.txtArea.Location = new System.Drawing.Point(285, 39);
+            this.txtArea.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArea.Location = new System.Drawing.Point(239, 30);
             this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(156, 21);
+            this.txtArea.Size = new System.Drawing.Size(136, 21);
             this.txtArea.TabIndex = 197;
-            // 
-            // Label27
-            // 
-            this.Label27.AutoSize = true;
-            this.Label27.Location = new System.Drawing.Point(242, 42);
-            this.Label27.Name = "Label27";
-            this.Label27.Size = new System.Drawing.Size(37, 13);
-            this.Label27.TabIndex = 196;
-            this.Label27.Text = "ÁREA:";
             // 
             // txtCargo
             // 
             this.txtCargo.BackColor = System.Drawing.Color.White;
             this.txtCargo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCargo.Enabled = false;
-            this.txtCargo.Location = new System.Drawing.Point(59, 39);
+            this.txtCargo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCargo.Location = new System.Drawing.Point(54, 30);
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(163, 21);
+            this.txtCargo.Size = new System.Drawing.Size(136, 21);
             this.txtCargo.TabIndex = 195;
-            // 
-            // Label25
-            // 
-            this.Label25.AutoSize = true;
-            this.Label25.Location = new System.Drawing.Point(13, 42);
-            this.Label25.Name = "Label25";
-            this.Label25.Size = new System.Drawing.Size(47, 13);
-            this.Label25.TabIndex = 194;
-            this.Label25.Text = "CARGO:";
             // 
             // btnPersonalEntra
             // 
-            this.btnPersonalEntra.BackColor = System.Drawing.Color.White;
+            this.btnPersonalEntra.BackColor = System.Drawing.Color.Transparent;
             this.btnPersonalEntra.Enabled = false;
             this.btnPersonalEntra.FlatAppearance.BorderSize = 0;
             this.btnPersonalEntra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPersonalEntra.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersonalEntra.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
-            this.btnPersonalEntra.Location = new System.Drawing.Point(744, 12);
+            this.btnPersonalEntra.Location = new System.Drawing.Point(647, -1);
             this.btnPersonalEntra.Name = "btnPersonalEntra";
             this.btnPersonalEntra.Size = new System.Drawing.Size(26, 26);
             this.btnPersonalEntra.TabIndex = 193;
@@ -246,85 +206,32 @@
             this.txtIdPersonal.BackColor = System.Drawing.Color.White;
             this.txtIdPersonal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIdPersonal.Enabled = false;
-            this.txtIdPersonal.Location = new System.Drawing.Point(61, 13);
+            this.txtIdPersonal.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdPersonal.Location = new System.Drawing.Point(54, 3);
             this.txtIdPersonal.Name = "txtIdPersonal";
             this.txtIdPersonal.Size = new System.Drawing.Size(47, 21);
             this.txtIdPersonal.TabIndex = 28;
-            // 
-            // Label22
-            // 
-            this.Label22.AutoSize = true;
-            this.Label22.Location = new System.Drawing.Point(18, 18);
-            this.Label22.Name = "Label22";
-            this.Label22.Size = new System.Drawing.Size(20, 13);
-            this.Label22.TabIndex = 8;
-            this.Label22.Text = "ID:";
             // 
             // txtPersonal
             // 
             this.txtPersonal.BackColor = System.Drawing.Color.White;
             this.txtPersonal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPersonal.Enabled = false;
-            this.txtPersonal.Location = new System.Drawing.Point(219, 13);
+            this.txtPersonal.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPersonal.Location = new System.Drawing.Point(239, 4);
             this.txtPersonal.Name = "txtPersonal";
-            this.txtPersonal.Size = new System.Drawing.Size(523, 21);
+            this.txtPersonal.Size = new System.Drawing.Size(395, 21);
             this.txtPersonal.TabIndex = 0;
-            // 
-            // Label26
-            // 
-            this.Label26.AutoSize = true;
-            this.Label26.Location = new System.Drawing.Point(156, 17);
-            this.Label26.Name = "Label26";
-            this.Label26.Size = new System.Drawing.Size(63, 13);
-            this.Label26.TabIndex = 3;
-            this.Label26.Text = "NOMBRES:";
-            // 
-            // GroupBox2
-            // 
-            this.GroupBox2.BackColor = System.Drawing.Color.White;
-            this.GroupBox2.Controls.Add(this.txtValorCobro);
-            this.GroupBox2.Controls.Add(this.chkCobro);
-            this.GroupBox2.Controls.Add(this.txtDisponibles);
-            this.GroupBox2.Controls.Add(this.label9);
-            this.GroupBox2.Controls.Add(this.cbxPeriodo);
-            this.GroupBox2.Controls.Add(this.label8);
-            this.GroupBox2.Controls.Add(this.btnAgregar);
-            this.GroupBox2.Controls.Add(this.btnRemover);
-            this.GroupBox2.Controls.Add(this.dataGridView2);
-            this.GroupBox2.Controls.Add(this.txtPendientes);
-            this.GroupBox2.Controls.Add(this.txtDias);
-            this.GroupBox2.Controls.Add(this.label1);
-            this.GroupBox2.Controls.Add(this.dataGridView1);
-            this.GroupBox2.Controls.Add(this.txtNumDoc);
-            this.GroupBox2.Controls.Add(this.txtObservacion);
-            this.GroupBox2.Controls.Add(this.Label18);
-            this.GroupBox2.Controls.Add(this.label2);
-            this.GroupBox2.Controls.Add(this.dtpHasta);
-            this.GroupBox2.Controls.Add(this.Label4);
-            this.GroupBox2.Controls.Add(this.bntPuesto);
-            this.GroupBox2.Controls.Add(this.txtSitio);
-            this.GroupBox2.Controls.Add(this.dtpDesde);
-            this.GroupBox2.Controls.Add(this.Label23);
-            this.GroupBox2.Controls.Add(this.dtpFecha);
-            this.GroupBox2.Controls.Add(this.Label3);
-            this.GroupBox2.Controls.Add(this.Label31);
-            this.GroupBox2.Controls.Add(this.label5);
-            this.GroupBox2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox2.Location = new System.Drawing.Point(0, 92);
-            this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Size = new System.Drawing.Size(778, 549);
-            this.GroupBox2.TabIndex = 217;
-            this.GroupBox2.TabStop = false;
-            this.GroupBox2.Text = "DATOS DE LA SOLICITUD DE VACACIONES";
             // 
             // txtValorCobro
             // 
             this.txtValorCobro.BackColor = System.Drawing.Color.White;
             this.txtValorCobro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtValorCobro.Enabled = false;
-            this.txtValorCobro.Location = new System.Drawing.Point(653, 336);
+            this.txtValorCobro.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValorCobro.Location = new System.Drawing.Point(530, 295);
             this.txtValorCobro.Name = "txtValorCobro";
-            this.txtValorCobro.Size = new System.Drawing.Size(72, 21);
+            this.txtValorCobro.Size = new System.Drawing.Size(75, 21);
             this.txtValorCobro.TabIndex = 232;
             this.txtValorCobro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorCobro_KeyPress);
             this.txtValorCobro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtValorCobro_KeyUp);
@@ -332,12 +239,15 @@
             // chkCobro
             // 
             this.chkCobro.AutoSize = true;
-            this.chkCobro.Location = new System.Drawing.Point(653, 315);
+            this.chkCobro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.chkCobro.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkCobro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.chkCobro.Location = new System.Drawing.Point(530, 274);
             this.chkCobro.Name = "chkCobro";
-            this.chkCobro.Size = new System.Drawing.Size(83, 17);
+            this.chkCobro.Size = new System.Drawing.Size(75, 17);
             this.chkCobro.TabIndex = 231;
-            this.chkCobro.Text = "COBRADAS";
-            this.chkCobro.UseVisualStyleBackColor = true;
+            this.chkCobro.Text = "Cobradas";
+            this.chkCobro.UseVisualStyleBackColor = false;
             this.chkCobro.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // txtDisponibles
@@ -345,52 +255,34 @@
             this.txtDisponibles.BackColor = System.Drawing.Color.White;
             this.txtDisponibles.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDisponibles.Enabled = false;
-            this.txtDisponibles.Location = new System.Drawing.Point(181, 336);
+            this.txtDisponibles.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisponibles.Location = new System.Drawing.Point(175, 296);
             this.txtDisponibles.Name = "txtDisponibles";
             this.txtDisponibles.Size = new System.Drawing.Size(58, 21);
             this.txtDisponibles.TabIndex = 229;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 340);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(106, 13);
-            this.label9.TabIndex = 228;
-            this.label9.Text = "DÍAS DISPONIBLES:";
             // 
             // cbxPeriodo
             // 
             this.cbxPeriodo.BackColor = System.Drawing.Color.White;
             this.cbxPeriodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxPeriodo.Enabled = false;
-            this.cbxPeriodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxPeriodo.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxPeriodo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxPeriodo.FormattingEnabled = true;
-            this.cbxPeriodo.Location = new System.Drawing.Point(73, 310);
+            this.cbxPeriodo.Location = new System.Drawing.Point(67, 271);
             this.cbxPeriodo.Name = "cbxPeriodo";
             this.cbxPeriodo.Size = new System.Drawing.Size(166, 21);
             this.cbxPeriodo.TabIndex = 227;
             this.cbxPeriodo.SelectedValueChanged += new System.EventHandler(this.cbxPeriodo_SelectedValueChanged);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 314);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 13);
-            this.label8.TabIndex = 226;
-            this.label8.Text = "PERÍODO:";
-            // 
             // btnAgregar
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.White;
+            this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
             this.btnAgregar.Enabled = false;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
-            this.btnAgregar.Location = new System.Drawing.Point(740, 303);
+            this.btnAgregar.Location = new System.Drawing.Point(613, 297);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(26, 26);
             this.btnAgregar.TabIndex = 225;
@@ -400,13 +292,13 @@
             // 
             // btnRemover
             // 
-            this.btnRemover.BackColor = System.Drawing.Color.White;
+            this.btnRemover.BackColor = System.Drawing.Color.Transparent;
             this.btnRemover.Enabled = false;
             this.btnRemover.FlatAppearance.BorderSize = 0;
             this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemover.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemover.Image = global::SysCisepro3.Properties.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24;
-            this.btnRemover.Location = new System.Drawing.Point(739, 336);
+            this.btnRemover.Location = new System.Drawing.Point(644, 297);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(27, 27);
             this.btnRemover.TabIndex = 224;
@@ -421,7 +313,8 @@
             this.dataGridView2.AllowUserToResizeRows = false;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -433,12 +326,12 @@
             this.Column15,
             this.Column16,
             this.Column18});
-            this.dataGridView2.Location = new System.Drawing.Point(7, 393);
+            this.dataGridView2.Location = new System.Drawing.Point(6, 347);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(766, 149);
+            this.dataGridView2.Size = new System.Drawing.Size(670, 149);
             this.dataGridView2.TabIndex = 223;
             // 
             // Column10
@@ -504,7 +397,8 @@
             this.txtPendientes.BackColor = System.Drawing.Color.White;
             this.txtPendientes.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPendientes.Enabled = false;
-            this.txtPendientes.Location = new System.Drawing.Point(613, 336);
+            this.txtPendientes.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPendientes.Location = new System.Drawing.Point(489, 295);
             this.txtPendientes.Name = "txtPendientes";
             this.txtPendientes.Size = new System.Drawing.Size(35, 21);
             this.txtPendientes.TabIndex = 222;
@@ -514,20 +408,12 @@
             this.txtDias.BackColor = System.Drawing.Color.White;
             this.txtDias.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDias.Enabled = false;
-            this.txtDias.Location = new System.Drawing.Point(613, 310);
+            this.txtDias.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDias.Location = new System.Drawing.Point(489, 272);
             this.txtDias.Name = "txtDias";
             this.txtDias.Size = new System.Drawing.Size(35, 21);
             this.txtDias.TabIndex = 220;
             this.txtDias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumDoc_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(576, 313);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
-            this.label1.TabIndex = 219;
-            this.label1.Text = "DÍAS:";
             // 
             // dataGridView1
             // 
@@ -536,7 +422,8 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -550,12 +437,12 @@
             this.Column7,
             this.Column8,
             this.Column17});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 48);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(766, 244);
+            this.dataGridView1.Size = new System.Drawing.Size(674, 227);
             this.dataGridView1.TabIndex = 218;
             // 
             // Column9
@@ -635,7 +522,8 @@
             this.txtNumDoc.BackColor = System.Drawing.Color.White;
             this.txtNumDoc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNumDoc.Enabled = false;
-            this.txtNumDoc.Location = new System.Drawing.Point(208, 21);
+            this.txtNumDoc.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumDoc.Location = new System.Drawing.Point(239, 1);
             this.txtNumDoc.Name = "txtNumDoc";
             this.txtNumDoc.Size = new System.Drawing.Size(52, 21);
             this.txtNumDoc.TabIndex = 217;
@@ -646,57 +534,33 @@
             this.txtObservacion.BackColor = System.Drawing.Color.White;
             this.txtObservacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtObservacion.Enabled = false;
-            this.txtObservacion.Location = new System.Drawing.Point(58, 365);
+            this.txtObservacion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservacion.Location = new System.Drawing.Point(103, 322);
             this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.Size = new System.Drawing.Size(636, 21);
+            this.txtObservacion.Size = new System.Drawing.Size(502, 21);
             this.txtObservacion.TabIndex = 201;
-            // 
-            // Label18
-            // 
-            this.Label18.AutoSize = true;
-            this.Label18.Location = new System.Drawing.Point(5, 368);
-            this.Label18.Name = "Label18";
-            this.Label18.Size = new System.Drawing.Size(52, 13);
-            this.Label18.TabIndex = 200;
-            this.Label18.Text = "OBSERV:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(162, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 216;
-            this.label2.Text = "N° DOC:";
             // 
             // dtpHasta
             // 
             this.dtpHasta.CustomFormat = "dddd, dd/MM/yyyy";
             this.dtpHasta.Enabled = false;
-            this.dtpHasta.Location = new System.Drawing.Point(301, 336);
+            this.dtpHasta.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHasta.Location = new System.Drawing.Point(291, 297);
             this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(264, 21);
+            this.dtpHasta.Size = new System.Drawing.Size(145, 21);
             this.dtpHasta.TabIndex = 209;
             this.dtpHasta.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
             // 
-            // Label4
-            // 
-            this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(249, 339);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(56, 13);
-            this.Label4.TabIndex = 210;
-            this.Label4.Text = "INGRESA:";
-            // 
             // bntPuesto
             // 
-            this.bntPuesto.BackColor = System.Drawing.Color.White;
+            this.bntPuesto.BackColor = System.Drawing.Color.Transparent;
             this.bntPuesto.Enabled = false;
             this.bntPuesto.FlatAppearance.BorderSize = 0;
             this.bntPuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntPuesto.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntPuesto.Image = global::SysCisepro3.Properties.Resources.location_on_24dp_FILL0_wght400_GRAD0_opsz24;
-            this.bntPuesto.Location = new System.Drawing.Point(745, 17);
+            this.bntPuesto.Location = new System.Drawing.Point(647, -4);
             this.bntPuesto.Name = "bntPuesto";
             this.bntPuesto.Size = new System.Drawing.Size(26, 26);
             this.bntPuesto.TabIndex = 213;
@@ -709,75 +573,227 @@
             this.txtSitio.BackColor = System.Drawing.Color.White;
             this.txtSitio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSitio.Enabled = false;
-            this.txtSitio.Location = new System.Drawing.Point(322, 21);
+            this.txtSitio.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSitio.Location = new System.Drawing.Point(370, 1);
             this.txtSitio.Name = "txtSitio";
-            this.txtSitio.Size = new System.Drawing.Size(420, 21);
+            this.txtSitio.Size = new System.Drawing.Size(264, 21);
             this.txtSitio.TabIndex = 211;
             // 
             // dtpDesde
             // 
             this.dtpDesde.CustomFormat = "dddd, dd/MM/yyyy";
             this.dtpDesde.Enabled = false;
-            this.dtpDesde.Location = new System.Drawing.Point(301, 310);
+            this.dtpDesde.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDesde.Location = new System.Drawing.Point(291, 271);
             this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(264, 21);
+            this.dtpDesde.Size = new System.Drawing.Size(145, 21);
             this.dtpDesde.TabIndex = 207;
             this.dtpDesde.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
-            // 
-            // Label23
-            // 
-            this.Label23.AutoSize = true;
-            this.Label23.Location = new System.Drawing.Point(273, 25);
-            this.Label23.Name = "Label23";
-            this.Label23.Size = new System.Drawing.Size(52, 13);
-            this.Label23.TabIndex = 212;
-            this.Label23.Text = "PUESTO:";
             // 
             // dtpFecha
             // 
             this.dtpFecha.CustomFormat = "MMMM yyyy";
             this.dtpFecha.Enabled = false;
+            this.dtpFecha.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(45, 21);
+            this.dtpFecha.Location = new System.Drawing.Point(54, 3);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(90, 21);
             this.dtpFecha.TabIndex = 204;
             // 
-            // Label3
+            // kryptonGroupBox1
             // 
-            this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(249, 313);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(36, 13);
-            this.Label3.TabIndex = 208;
-            this.Label3.Text = "SALE:";
+            this.kryptonGroupBox1.CaptionOverlap = 0D;
+            this.kryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(0, 33);
+            this.kryptonGroupBox1.Name = "kryptonGroupBox1";
             // 
-            // Label31
+            // kryptonGroupBox1.Panel
             // 
-            this.Label31.AutoSize = true;
-            this.Label31.Location = new System.Drawing.Point(4, 24);
-            this.Label31.Name = "Label31";
-            this.Label31.Size = new System.Drawing.Size(44, 13);
-            this.Label31.TabIndex = 205;
-            this.Label31.Text = "FECHA:";
+            this.kryptonGroupBox1.Panel.Controls.Add(this.dtpFechaEntrada);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel5);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel4);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnPersonalEntra);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel3);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtArea);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel2);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel1);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtIdPersonal);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtCargo);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtPersonal);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(688, 81);
+            this.kryptonGroupBox1.TabIndex = 218;
+            this.kryptonGroupBox1.Values.Heading = "Datos Personal";
             // 
-            // label5
+            // kryptonLabel1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(575, 339);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
-            this.label5.TabIndex = 230;
-            this.label5.Text = "PEND:";
+            this.kryptonLabel1.Location = new System.Drawing.Point(6, 3);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(21, 20);
+            this.kryptonLabel1.TabIndex = 0;
+            this.kryptonLabel1.Values.Text = "Id";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(172, 3);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(61, 20);
+            this.kryptonLabel2.TabIndex = 29;
+            this.kryptonLabel2.Values.Text = "Nombres";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(6, 29);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(43, 20);
+            this.kryptonLabel3.TabIndex = 30;
+            this.kryptonLabel3.Values.Text = "Cargo";
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(197, 30);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(36, 20);
+            this.kryptonLabel4.TabIndex = 196;
+            this.kryptonLabel4.Values.Text = "Area";
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(385, 30);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(51, 20);
+            this.kryptonLabel5.TabIndex = 198;
+            this.kryptonLabel5.Values.Text = "Ingreso";
+            // 
+            // kryptonGroupBox2
+            // 
+            this.kryptonGroupBox2.CaptionOverlap = 0D;
+            this.kryptonGroupBox2.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox2.Location = new System.Drawing.Point(0, 116);
+            this.kryptonGroupBox2.Name = "kryptonGroupBox2";
+            // 
+            // kryptonGroupBox2.Panel
+            // 
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel15);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtValorCobro);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.dataGridView2);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel14);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.btnRemover);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtObservacion);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.btnAgregar);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel13);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.chkCobro);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel12);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel11);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel10);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtPendientes);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel9);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtDisponibles);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel8);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel7);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtDias);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel6);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.cbxPeriodo);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.dtpFecha);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtNumDoc);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtSitio);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.bntPuesto);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.dtpHasta);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.dataGridView1);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.dtpDesde);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(688, 529);
+            this.kryptonGroupBox2.TabIndex = 219;
+            this.kryptonGroupBox2.Values.Heading = "Datos Solicitud Vacaciones";
+            // 
+            // kryptonLabel6
+            // 
+            this.kryptonLabel6.Location = new System.Drawing.Point(6, 3);
+            this.kryptonLabel6.Name = "kryptonLabel6";
+            this.kryptonLabel6.Size = new System.Drawing.Size(42, 20);
+            this.kryptonLabel6.TabIndex = 31;
+            this.kryptonLabel6.Values.Text = "Fecha";
+            // 
+            // kryptonLabel7
+            // 
+            this.kryptonLabel7.Location = new System.Drawing.Point(181, 2);
+            this.kryptonLabel7.Name = "kryptonLabel7";
+            this.kryptonLabel7.Size = new System.Drawing.Size(52, 20);
+            this.kryptonLabel7.TabIndex = 205;
+            this.kryptonLabel7.Values.Text = "No Doc";
+            // 
+            // kryptonLabel8
+            // 
+            this.kryptonLabel8.Location = new System.Drawing.Point(316, 2);
+            this.kryptonLabel8.Name = "kryptonLabel8";
+            this.kryptonLabel8.Size = new System.Drawing.Size(48, 20);
+            this.kryptonLabel8.TabIndex = 218;
+            this.kryptonLabel8.Values.Text = "Puesto";
+            // 
+            // kryptonLabel9
+            // 
+            this.kryptonLabel9.Location = new System.Drawing.Point(7, 271);
+            this.kryptonLabel9.Name = "kryptonLabel9";
+            this.kryptonLabel9.Size = new System.Drawing.Size(53, 20);
+            this.kryptonLabel9.TabIndex = 219;
+            this.kryptonLabel9.Values.Text = "Periodo";
+            // 
+            // kryptonLabel10
+            // 
+            this.kryptonLabel10.Location = new System.Drawing.Point(7, 297);
+            this.kryptonLabel10.Name = "kryptonLabel10";
+            this.kryptonLabel10.Size = new System.Drawing.Size(100, 20);
+            this.kryptonLabel10.TabIndex = 228;
+            this.kryptonLabel10.Values.Text = "Dias Disponibles";
+            // 
+            // kryptonLabel11
+            // 
+            this.kryptonLabel11.Location = new System.Drawing.Point(239, 271);
+            this.kryptonLabel11.Name = "kryptonLabel11";
+            this.kryptonLabel11.Size = new System.Drawing.Size(33, 20);
+            this.kryptonLabel11.TabIndex = 230;
+            this.kryptonLabel11.Values.Text = "Sale";
+            // 
+            // kryptonLabel12
+            // 
+            this.kryptonLabel12.Location = new System.Drawing.Point(239, 296);
+            this.kryptonLabel12.Name = "kryptonLabel12";
+            this.kryptonLabel12.Size = new System.Drawing.Size(50, 20);
+            this.kryptonLabel12.TabIndex = 231;
+            this.kryptonLabel12.Values.Text = "Ingresa";
+            // 
+            // kryptonLabel13
+            // 
+            this.kryptonLabel13.Location = new System.Drawing.Point(447, 272);
+            this.kryptonLabel13.Name = "kryptonLabel13";
+            this.kryptonLabel13.Size = new System.Drawing.Size(34, 20);
+            this.kryptonLabel13.TabIndex = 232;
+            this.kryptonLabel13.Values.Text = "Dias";
+            // 
+            // kryptonLabel14
+            // 
+            this.kryptonLabel14.Location = new System.Drawing.Point(447, 296);
+            this.kryptonLabel14.Name = "kryptonLabel14";
+            this.kryptonLabel14.Size = new System.Drawing.Size(38, 20);
+            this.kryptonLabel14.TabIndex = 233;
+            this.kryptonLabel14.Values.Text = "Pend";
+            // 
+            // kryptonLabel15
+            // 
+            this.kryptonLabel15.Location = new System.Drawing.Point(7, 323);
+            this.kryptonLabel15.Name = "kryptonLabel15";
+            this.kryptonLabel15.Size = new System.Drawing.Size(90, 20);
+            this.kryptonLabel15.TabIndex = 234;
+            this.kryptonLabel15.Values.Text = "Observaciones";
             // 
             // FrmVacaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(779, 646);
-            this.Controls.Add(this.GroupBox1);
-            this.Controls.Add(this.GroupBox2);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
+            this.ClientSize = new System.Drawing.Size(689, 646);
+            this.Controls.Add(this.kryptonGroupBox2);
+            this.Controls.Add(this.kryptonGroupBox1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "FrmVacaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -789,12 +805,18 @@
             this.Load += new System.EventHandler(this.FrmVacaciones_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
-            this.GroupBox2.ResumeLayout(false);
-            this.GroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
+            this.kryptonGroupBox1.Panel.ResumeLayout(false);
+            this.kryptonGroupBox1.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
+            this.kryptonGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).EndInit();
+            this.kryptonGroupBox2.Panel.ResumeLayout(false);
+            this.kryptonGroupBox2.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).EndInit();
+            this.kryptonGroupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -806,44 +828,27 @@
         private System.Windows.Forms.ToolStripButton btnNuevo;
         private System.Windows.Forms.ToolStripButton btnGuardar;
         private System.Windows.Forms.ToolStripButton btnCancelar;
-        internal System.Windows.Forms.GroupBox GroupBox1;
         internal System.Windows.Forms.TextBox txtArea;
-        internal System.Windows.Forms.Label Label27;
         internal System.Windows.Forms.TextBox txtCargo;
-        internal System.Windows.Forms.Label Label25;
         internal System.Windows.Forms.Button btnPersonalEntra;
         internal System.Windows.Forms.TextBox txtIdPersonal;
-        internal System.Windows.Forms.Label Label22;
         internal System.Windows.Forms.TextBox txtPersonal;
-        internal System.Windows.Forms.Label Label26;
-        internal System.Windows.Forms.GroupBox GroupBox2;
         internal System.Windows.Forms.Button bntPuesto;
         internal System.Windows.Forms.TextBox txtSitio;
-        internal System.Windows.Forms.Label Label23;
         internal System.Windows.Forms.DateTimePicker dtpHasta;
-        internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.DateTimePicker dtpDesde;
-        internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.DateTimePicker dtpFecha;
-        internal System.Windows.Forms.Label Label31;
         internal System.Windows.Forms.TextBox txtObservacion;
-        internal System.Windows.Forms.Label Label18;
         internal System.Windows.Forms.TextBox txtNumDoc;
-        internal System.Windows.Forms.Label label2;
         public System.Windows.Forms.DataGridView dataGridView1;
         internal System.Windows.Forms.TextBox txtPendientes;
         internal System.Windows.Forms.TextBox txtDias;
-        internal System.Windows.Forms.Label label1;
         internal System.Windows.Forms.DateTimePicker dtpFechaEntrada;
-        internal System.Windows.Forms.Label label6;
         public System.Windows.Forms.DataGridView dataGridView2;
         internal System.Windows.Forms.Button btnAgregar;
         internal System.Windows.Forms.Button btnRemover;
-        internal System.Windows.Forms.Label label8;
         internal System.Windows.Forms.ComboBox cbxPeriodo;
         internal System.Windows.Forms.TextBox txtDisponibles;
-        internal System.Windows.Forms.Label label9;
-        internal System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox chkCobro;
         internal System.Windows.Forms.TextBox txtValorCobro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
@@ -864,5 +869,22 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel5;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox2;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel8;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel7;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel6;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel14;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel13;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel12;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel11;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel10;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel9;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel15;
     }
 }

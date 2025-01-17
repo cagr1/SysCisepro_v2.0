@@ -17,7 +17,7 @@ using Font = System.Drawing.Font;
 using SysCisepro3.Main;
 using Microsoft.Office.Interop.Excel;
 using Krypton.Toolkit;
-using ComponentFactory.Krypton.Toolkit;
+
 
 
 
@@ -338,14 +338,14 @@ namespace SysCisepro3.TalentoHumano
                          dgvPersonal_SelectionChanged(null, null);
                      }
                      
-                Krypton.Toolkit.KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
 
 
             }
              else
 
                 // MessageBox.Show(@"No se puede guardar debido a que no ha llenado todos los campos necesarios!","Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Krypton.Toolkit.KryptonMessageBox.Show(@"No se puede guardar debido a que no ha llenado todos los campos necesarios!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"No se puede guardar debido a que no ha llenado todos los campos necesarios!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
 
 
         }

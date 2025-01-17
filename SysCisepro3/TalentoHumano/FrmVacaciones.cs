@@ -100,6 +100,8 @@ namespace SysCisepro3.TalentoHumano
 
             txtNumDoc.Clear();
             txtNumDoc.Enabled = false;
+            txtNumDoc.Text = (_objRegistroPermisoPersonal.BuscarMayorIdDoc(TipoCon) + 1).ToString();
+
             dtpFecha.Value = Usuario.Now(TipoCon);
             bntPuesto.Enabled = false;
             txtSitio.Clear();
@@ -420,7 +422,7 @@ namespace SysCisepro3.TalentoHumano
                     dtpFecha.Enabled = true;
 
                     txtObservacion.Enabled = true;
-                    txtNumDoc.Enabled = true;
+                    //txtNumDoc.Enabled = true;
                     txtDias.Enabled = false;
                     txtPendientes.Enabled = false;
                     cbxPeriodo.Enabled = true;

@@ -30,9 +30,9 @@ namespace SysCisepro3.TalentoHumano
         private void FrmBuscarProveedor_Load(object sender, EventArgs e)
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
-            BackColor = ValidationForms.GetColorSistema(TipoCon);
+            
             //Label1.ForeColor = Color.White;
-            Label2.ForeColor = Color.White;
+            //Label2.ForeColor = Color.White;
             dataGridView1.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
             switch (TipoCon)
             {

@@ -52,26 +52,15 @@
             this.ticFarmacia = new System.Windows.Forms.ToolStripButton();
             this.Label1 = new System.Windows.Forms.Label();
             this.txtNombreDenunciante = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtCiRuc = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtNumDoc = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaNotificacion = new System.Windows.Forms.DateTimePicker();
-            this.GroupBox2 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.cbxTipo = new System.Windows.Forms.ComboBox();
-            this.Label3 = new System.Windows.Forms.Label();
             this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
-            this.Label31 = new System.Windows.Forms.Label();
             this.txtDetallesNotificacion = new System.Windows.Forms.TextBox();
-            this.Label18 = new System.Windows.Forms.Label();
-            this.Label24 = new System.Windows.Forms.Label();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
-            this.Label10 = new System.Windows.Forms.Label();
-            this.Label11 = new System.Windows.Forms.Label();
             this.cbxFiltro = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,11 +71,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvRegistro = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.crvCredenciales = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DOC = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -96,13 +81,30 @@
             this.TIPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.crvCredenciales = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.kryptonGroupBox1 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel6 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel7 = new Krypton.Toolkit.KryptonLabel();
+            this.metroTabControl1 = new ReaLTaiizor.Controls.MetroTabControl();
+            this.metroTabPage1 = new ReaLTaiizor.Child.Metro.MetroTabPage();
+            this.metroTabPage2 = new ReaLTaiizor.Child.Metro.MetroTabPage();
+            this.kryptonLabel8 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel9 = new Krypton.Toolkit.KryptonLabel();
             this.toolStrip1.SuspendLayout();
-            this.GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistro)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
+            this.kryptonGroupBox1.Panel.SuspendLayout();
+            this.kryptonGroupBox1.SuspendLayout();
+            this.metroTabControl1.SuspendLayout();
+            this.metroTabPage1.SuspendLayout();
+            this.metroTabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAnular
@@ -162,7 +164,7 @@
             this.ticFarmacia});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(778, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(686, 31);
             this.toolStrip1.TabIndex = 235;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -204,7 +206,7 @@
             this.ticFarmacia.Image = global::SysCisepro3.Properties.Resources.tick;
             this.ticFarmacia.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ticFarmacia.Name = "ticFarmacia";
-            this.ticFarmacia.Size = new System.Drawing.Size(124, 28);
+            this.ticFarmacia.Size = new System.Drawing.Size(124, 20);
             this.ticFarmacia.Text = "TICKET FARMACIA";
             this.ticFarmacia.Visible = false;
             this.ticFarmacia.Click += new System.EventHandler(this.ticFarmacia_Click);
@@ -212,10 +214,11 @@
             // Label1
             // 
             this.Label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(1, 589);
+            this.Label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.Label1.Location = new System.Drawing.Point(1, 585);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(773, 26);
+            this.Label1.Size = new System.Drawing.Size(683, 26);
             this.Label1.TabIndex = 234;
             this.Label1.Text = "0 REGISTRO(S)";
             this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -225,198 +228,104 @@
             this.txtNombreDenunciante.BackColor = System.Drawing.Color.White;
             this.txtNombreDenunciante.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombreDenunciante.Enabled = false;
-            this.txtNombreDenunciante.Location = new System.Drawing.Point(376, 46);
+            this.txtNombreDenunciante.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreDenunciante.Location = new System.Drawing.Point(279, 30);
             this.txtNombreDenunciante.Name = "txtNombreDenunciante";
             this.txtNombreDenunciante.Size = new System.Drawing.Size(381, 21);
             this.txtNombreDenunciante.TabIndex = 219;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(281, 49);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 13);
-            this.label5.TabIndex = 218;
-            this.label5.Text = "NOMBRES:";
             // 
             // txtCiRuc
             // 
             this.txtCiRuc.BackColor = System.Drawing.Color.White;
             this.txtCiRuc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCiRuc.Enabled = false;
-            this.txtCiRuc.Location = new System.Drawing.Point(72, 46);
+            this.txtCiRuc.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCiRuc.Location = new System.Drawing.Point(99, 29);
             this.txtCiRuc.MaxLength = 10;
             this.txtCiRuc.Name = "txtCiRuc";
-            this.txtCiRuc.Size = new System.Drawing.Size(148, 21);
+            this.txtCiRuc.Size = new System.Drawing.Size(90, 21);
             this.txtCiRuc.TabIndex = 217;
             this.txtCiRuc.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCiRuc_KeyUp);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 49);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 13);
-            this.label4.TabIndex = 216;
-            this.label4.Text = "CÉDULA:";
             // 
             // txtNumDoc
             // 
             this.txtNumDoc.BackColor = System.Drawing.Color.White;
             this.txtNumDoc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNumDoc.Enabled = false;
-            this.txtNumDoc.Location = new System.Drawing.Point(296, 16);
+            this.txtNumDoc.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumDoc.Location = new System.Drawing.Point(282, 2);
             this.txtNumDoc.Name = "txtNumDoc";
             this.txtNumDoc.Size = new System.Drawing.Size(75, 21);
             this.txtNumDoc.TabIndex = 215;
             this.txtNumDoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumDoc_KeyPress);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(248, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 214;
-            this.label2.Text = "N° DOC:";
             // 
             // dtpFechaDesde
             // 
             this.dtpFechaDesde.CustomFormat = "dddd, dd-MMM-yyyy";
             this.dtpFechaDesde.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(518, 156);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(455, 151);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
-            this.dtpFechaDesde.Size = new System.Drawing.Size(93, 21);
+            this.dtpFechaDesde.Size = new System.Drawing.Size(90, 21);
             this.dtpFechaDesde.TabIndex = 229;
             // 
             // dtpFechaNotificacion
             // 
             this.dtpFechaNotificacion.CustomFormat = "dddd, dd/MM/yyyy";
             this.dtpFechaNotificacion.Enabled = false;
-            this.dtpFechaNotificacion.Location = new System.Drawing.Point(505, 17);
+            this.dtpFechaNotificacion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaNotificacion.Location = new System.Drawing.Point(460, 2);
             this.dtpFechaNotificacion.Name = "dtpFechaNotificacion";
-            this.dtpFechaNotificacion.Size = new System.Drawing.Size(252, 21);
+            this.dtpFechaNotificacion.Size = new System.Drawing.Size(200, 21);
             this.dtpFechaNotificacion.TabIndex = 207;
-            // 
-            // GroupBox2
-            // 
-            this.GroupBox2.BackColor = System.Drawing.Color.White;
-            this.GroupBox2.Controls.Add(this.label6);
-            this.GroupBox2.Controls.Add(this.cbxTipo);
-            this.GroupBox2.Controls.Add(this.txtNombreDenunciante);
-            this.GroupBox2.Controls.Add(this.label5);
-            this.GroupBox2.Controls.Add(this.txtCiRuc);
-            this.GroupBox2.Controls.Add(this.label4);
-            this.GroupBox2.Controls.Add(this.txtNumDoc);
-            this.GroupBox2.Controls.Add(this.label2);
-            this.GroupBox2.Controls.Add(this.dtpFechaNotificacion);
-            this.GroupBox2.Controls.Add(this.Label3);
-            this.GroupBox2.Controls.Add(this.dtpFechaRegistro);
-            this.GroupBox2.Controls.Add(this.Label31);
-            this.GroupBox2.Controls.Add(this.txtDetallesNotificacion);
-            this.GroupBox2.Controls.Add(this.Label18);
-            this.GroupBox2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox2.Location = new System.Drawing.Point(4, 35);
-            this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Size = new System.Drawing.Size(770, 101);
-            this.GroupBox2.TabIndex = 233;
-            this.GroupBox2.TabStop = false;
-            this.GroupBox2.Text = "DATOS DEL TICKET";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 75);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 221;
-            this.label6.Text = "TIPO:";
             // 
             // cbxTipo
             // 
             this.cbxTipo.BackColor = System.Drawing.Color.White;
             this.cbxTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTipo.Enabled = false;
-            this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxTipo.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTipo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxTipo.FormattingEnabled = true;
             this.cbxTipo.Items.AddRange(new object[] {
             "TICKET FARMACIA",
             "TICKET COMECSA",
             "ANTICIPO EMERGENTE",
             "TICKET COMISARIATO"});
-            this.cbxTipo.Location = new System.Drawing.Point(72, 73);
+            this.cbxTipo.Location = new System.Drawing.Point(61, 54);
             this.cbxTipo.Name = "cbxTipo";
-            this.cbxTipo.Size = new System.Drawing.Size(197, 21);
+            this.cbxTipo.Size = new System.Drawing.Size(128, 21);
             this.cbxTipo.TabIndex = 220;
-            // 
-            // Label3
-            // 
-            this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(419, 20);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(80, 13);
-            this.Label3.TabIndex = 208;
-            this.Label3.Text = "FEC. EMISIÓN:";
             // 
             // dtpFechaRegistro
             // 
             this.dtpFechaRegistro.CustomFormat = "MMMM yyyy";
             this.dtpFechaRegistro.Enabled = false;
+            this.dtpFechaRegistro.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaRegistro.Location = new System.Drawing.Point(106, 20);
+            this.dtpFechaRegistro.Location = new System.Drawing.Point(99, 2);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
             this.dtpFechaRegistro.Size = new System.Drawing.Size(90, 21);
             this.dtpFechaRegistro.TabIndex = 204;
-            // 
-            // Label31
-            // 
-            this.Label31.AutoSize = true;
-            this.Label31.Location = new System.Drawing.Point(3, 23);
-            this.Label31.Name = "Label31";
-            this.Label31.Size = new System.Drawing.Size(100, 13);
-            this.Label31.TabIndex = 205;
-            this.Label31.Text = "FECHA REGISTRO:";
             // 
             // txtDetallesNotificacion
             // 
             this.txtDetallesNotificacion.BackColor = System.Drawing.Color.White;
             this.txtDetallesNotificacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDetallesNotificacion.Enabled = false;
-            this.txtDetallesNotificacion.Location = new System.Drawing.Point(376, 72);
+            this.txtDetallesNotificacion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDetallesNotificacion.Location = new System.Drawing.Point(294, 53);
             this.txtDetallesNotificacion.Name = "txtDetallesNotificacion";
-            this.txtDetallesNotificacion.Size = new System.Drawing.Size(381, 21);
+            this.txtDetallesNotificacion.Size = new System.Drawing.Size(366, 21);
             this.txtDetallesNotificacion.TabIndex = 201;
-            // 
-            // Label18
-            // 
-            this.Label18.AutoSize = true;
-            this.Label18.Location = new System.Drawing.Point(281, 75);
-            this.Label18.Name = "Label18";
-            this.Label18.Size = new System.Drawing.Size(85, 13);
-            this.Label18.TabIndex = 200;
-            this.Label18.Text = "OBSERVACIÓN:";
-            // 
-            // Label24
-            // 
-            this.Label24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Label24.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label24.Location = new System.Drawing.Point(3, 136);
-            this.Label24.Name = "Label24";
-            this.Label24.Size = new System.Drawing.Size(780, 16);
-            this.Label24.TabIndex = 228;
-            this.Label24.Text = "REGISTRO DE NOTIFICACIONES";
-            this.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtFiltro
             // 
             this.txtFiltro.BackColor = System.Drawing.Color.White;
             this.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFiltro.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltro.Location = new System.Drawing.Point(9, 156);
+            this.txtFiltro.Location = new System.Drawing.Point(4, 151);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(264, 21);
+            this.txtFiltro.Size = new System.Drawing.Size(230, 21);
             this.txtFiltro.TabIndex = 227;
             this.txtFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiltro_KeyUp);
             // 
@@ -425,36 +334,15 @@
             this.dtpFechaHasta.CustomFormat = "dddd, dd-MMM-yyyy";
             this.dtpFechaHasta.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(641, 156);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(592, 151);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
-            this.dtpFechaHasta.Size = new System.Drawing.Size(93, 21);
+            this.dtpFechaHasta.Size = new System.Drawing.Size(90, 21);
             this.dtpFechaHasta.TabIndex = 230;
-            // 
-            // Label10
-            // 
-            this.Label10.AutoSize = true;
-            this.Label10.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label10.Location = new System.Drawing.Point(471, 159);
-            this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(43, 13);
-            this.Label10.TabIndex = 231;
-            this.Label10.Text = "DESDE:";
-            // 
-            // Label11
-            // 
-            this.Label11.AutoSize = true;
-            this.Label11.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label11.Location = new System.Drawing.Point(625, 159);
-            this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(17, 13);
-            this.Label11.TabIndex = 232;
-            this.Label11.Text = "A:";
             // 
             // cbxFiltro
             // 
             this.cbxFiltro.BackColor = System.Drawing.Color.White;
             this.cbxFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxFiltro.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxFiltro.FormattingEnabled = true;
             this.cbxFiltro.Items.AddRange(new object[] {
@@ -463,7 +351,7 @@
             "TICKET COMECSA",
             "ANTICIPO EMERGENTE",
             "TICKET COMISARIATO"});
-            this.cbxFiltro.Location = new System.Drawing.Point(285, 156);
+            this.cbxFiltro.Location = new System.Drawing.Point(245, 151);
             this.cbxFiltro.Name = "cbxFiltro";
             this.cbxFiltro.Size = new System.Drawing.Size(159, 21);
             this.cbxFiltro.TabIndex = 237;
@@ -571,35 +459,13 @@
             this.Column1.ReadOnly = true;
             this.Column1.Width = 40;
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(4, 192);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(774, 394);
-            this.tabControl1.TabIndex = 238;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.dgvRegistro);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(766, 368);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Busqueda";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
             // dgvRegistro
             // 
             this.dgvRegistro.AllowUserToAddRows = false;
             this.dgvRegistro.AllowUserToDeleteRows = false;
             this.dgvRegistro.AllowUserToResizeColumns = false;
             this.dgvRegistro.AllowUserToResizeRows = false;
-            this.dgvRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRegistro.ColumnHeadersHeight = 30;
             this.dgvRegistro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.FECHA,
@@ -611,47 +477,23 @@
             this.DATA,
             this.ESTADO});
             this.dgvRegistro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvRegistro.Location = new System.Drawing.Point(3, 3);
+            this.dgvRegistro.Location = new System.Drawing.Point(0, 0);
             this.dgvRegistro.Name = "dgvRegistro";
             this.dgvRegistro.RowHeadersVisible = false;
             this.dgvRegistro.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgvRegistro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRegistro.Size = new System.Drawing.Size(760, 362);
+            this.dgvRegistro.Size = new System.Drawing.Size(672, 365);
             this.dgvRegistro.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.dgvRegistro.StateCommon.DataCell.Border.Color1 = System.Drawing.Color.White;
             this.dgvRegistro.StateCommon.DataCell.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.dgvRegistro.StateCommon.DataCell.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.dgvRegistro.StateCommon.DataCell.Content.Color1 = System.Drawing.Color.Black;
+            this.dgvRegistro.StateCommon.DataCell.Content.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.dgvRegistro.StateCommon.DataCell.Content.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.dgvRegistro.TabIndex = 0;
             this.dgvRegistro.SelectionChanged += new System.EventHandler(this.dgvRegistro_SelectionChanged);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.crvCredenciales);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(766, 368);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Reporte";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // crvCredenciales
-            // 
-            this.crvCredenciales.ActiveViewIndex = -1;
-            this.crvCredenciales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crvCredenciales.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crvCredenciales.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crvCredenciales.Location = new System.Drawing.Point(3, 3);
-            this.crvCredenciales.Name = "crvCredenciales";
-            this.crvCredenciales.ShowCloseButton = false;
-            this.crvCredenciales.ShowGroupTreeButton = false;
-            this.crvCredenciales.ShowLogo = false;
-            this.crvCredenciales.ShowParameterPanelButton = false;
-            this.crvCredenciales.Size = new System.Drawing.Size(760, 362);
-            this.crvCredenciales.TabIndex = 0;
-            this.crvCredenciales.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // ID
             // 
@@ -721,23 +563,201 @@
             this.ESTADO.Name = "ESTADO";
             this.ESTADO.ReadOnly = true;
             // 
+            // crvCredenciales
+            // 
+            this.crvCredenciales.ActiveViewIndex = -1;
+            this.crvCredenciales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crvCredenciales.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crvCredenciales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crvCredenciales.Location = new System.Drawing.Point(0, 0);
+            this.crvCredenciales.Name = "crvCredenciales";
+            this.crvCredenciales.ShowCloseButton = false;
+            this.crvCredenciales.ShowGroupTreeButton = false;
+            this.crvCredenciales.ShowLogo = false;
+            this.crvCredenciales.ShowParameterPanelButton = false;
+            this.crvCredenciales.Size = new System.Drawing.Size(340, 62);
+            this.crvCredenciales.TabIndex = 0;
+            this.crvCredenciales.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            // 
+            // kryptonGroupBox1
+            // 
+            this.kryptonGroupBox1.CaptionOverlap = 0D;
+            this.kryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(4, 34);
+            this.kryptonGroupBox1.Name = "kryptonGroupBox1";
+            // 
+            // kryptonGroupBox1.Panel
+            // 
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel7);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel6);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.cbxTipo);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel5);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel4);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtNombreDenunciante);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtDetallesNotificacion);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel3);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel2);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel1);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtCiRuc);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.dtpFechaRegistro);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtNumDoc);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.dtpFechaNotificacion);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(680, 109);
+            this.kryptonGroupBox1.TabIndex = 239;
+            this.kryptonGroupBox1.Values.Heading = "Datos de Ticket";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(3, 3);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(90, 20);
+            this.kryptonLabel1.TabIndex = 0;
+            this.kryptonLabel1.Values.Text = "Fecha Registro";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(219, 3);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(52, 20);
+            this.kryptonLabel2.TabIndex = 205;
+            this.kryptonLabel2.Values.Text = "No Doc";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(365, 2);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(88, 20);
+            this.kryptonLabel3.TabIndex = 216;
+            this.kryptonLabel3.Values.Text = "Fecha Emision";
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(4, 29);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(48, 20);
+            this.kryptonLabel4.TabIndex = 217;
+            this.kryptonLabel4.Values.Text = "Cedula";
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(210, 29);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(61, 20);
+            this.kryptonLabel5.TabIndex = 218;
+            this.kryptonLabel5.Values.Text = "Nombres";
+            // 
+            // kryptonLabel6
+            // 
+            this.kryptonLabel6.Location = new System.Drawing.Point(4, 55);
+            this.kryptonLabel6.Name = "kryptonLabel6";
+            this.kryptonLabel6.Size = new System.Drawing.Size(34, 20);
+            this.kryptonLabel6.TabIndex = 220;
+            this.kryptonLabel6.Values.Text = "Tipo";
+            // 
+            // kryptonLabel7
+            // 
+            this.kryptonLabel7.Location = new System.Drawing.Point(210, 54);
+            this.kryptonLabel7.Name = "kryptonLabel7";
+            this.kryptonLabel7.Size = new System.Drawing.Size(78, 20);
+            this.kryptonLabel7.TabIndex = 221;
+            this.kryptonLabel7.Values.Text = "Observacion";
+            // 
+            // metroTabControl1
+            // 
+            this.metroTabControl1.AnimateEasingType = ReaLTaiizor.Enum.Metro.EasingType.CubeOut;
+            this.metroTabControl1.AnimateTime = 200;
+            this.metroTabControl1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.metroTabControl1.Controls.Add(this.metroTabPage1);
+            this.metroTabControl1.Controls.Add(this.metroTabPage2);
+            this.metroTabControl1.ControlsVisible = true;
+            this.metroTabControl1.IsDerivedStyle = true;
+            this.metroTabControl1.ItemSize = new System.Drawing.Size(100, 30);
+            this.metroTabControl1.Location = new System.Drawing.Point(4, 179);
+            this.metroTabControl1.MCursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTabControl1.Name = "metroTabControl1";
+            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroTabControl1.Size = new System.Drawing.Size(680, 403);
+            this.metroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.metroTabControl1.Speed = 100;
+            this.metroTabControl1.Style = ReaLTaiizor.Enum.Metro.Style.Light;
+            this.metroTabControl1.StyleManager = null;
+            this.metroTabControl1.TabIndex = 240;
+            this.metroTabControl1.TabStyle = ReaLTaiizor.Enum.Metro.TabStyle.Style2;
+            this.metroTabControl1.ThemeAuthor = "Taiizor";
+            this.metroTabControl1.ThemeName = "MetroLight";
+            this.metroTabControl1.UnselectedTextColor = System.Drawing.Color.Gray;
+            // 
+            // metroTabPage1
+            // 
+            this.metroTabPage1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.metroTabPage1.Controls.Add(this.dgvRegistro);
+            this.metroTabPage1.Font = null;
+            this.metroTabPage1.ImageIndex = 0;
+            this.metroTabPage1.ImageKey = null;
+            this.metroTabPage1.IsDerivedStyle = true;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 34);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Size = new System.Drawing.Size(672, 365);
+            this.metroTabPage1.Style = ReaLTaiizor.Enum.Metro.Style.Light;
+            this.metroTabPage1.StyleManager = null;
+            this.metroTabPage1.TabIndex = 0;
+            this.metroTabPage1.Text = "Busqueda";
+            this.metroTabPage1.ThemeAuthor = "Taiizor";
+            this.metroTabPage1.ThemeName = "MetroLight";
+            this.metroTabPage1.ToolTipText = null;
+            // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.metroTabPage2.Controls.Add(this.crvCredenciales);
+            this.metroTabPage2.Font = null;
+            this.metroTabPage2.ImageIndex = 0;
+            this.metroTabPage2.ImageKey = null;
+            this.metroTabPage2.IsDerivedStyle = true;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 34);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(340, 62);
+            this.metroTabPage2.Style = ReaLTaiizor.Enum.Metro.Style.Light;
+            this.metroTabPage2.StyleManager = null;
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "Reporte";
+            this.metroTabPage2.ThemeAuthor = "Taiizor";
+            this.metroTabPage2.ThemeName = "MetroLight";
+            this.metroTabPage2.ToolTipText = null;
+            // 
+            // kryptonLabel8
+            // 
+            this.kryptonLabel8.Location = new System.Drawing.Point(409, 152);
+            this.kryptonLabel8.Name = "kryptonLabel8";
+            this.kryptonLabel8.Size = new System.Drawing.Size(45, 20);
+            this.kryptonLabel8.TabIndex = 241;
+            this.kryptonLabel8.Values.Text = "Desde";
+            // 
+            // kryptonLabel9
+            // 
+            this.kryptonLabel9.Location = new System.Drawing.Point(551, 152);
+            this.kryptonLabel9.Name = "kryptonLabel9";
+            this.kryptonLabel9.Size = new System.Drawing.Size(41, 20);
+            this.kryptonLabel9.TabIndex = 242;
+            this.kryptonLabel9.Values.Text = "Hasta";
+            // 
             // FrmTicketsFamaciaComecsa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(778, 618);
-            this.Controls.Add(this.tabControl1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
+            this.ClientSize = new System.Drawing.Size(686, 608);
+            this.Controls.Add(this.kryptonLabel9);
+            this.Controls.Add(this.kryptonLabel8);
+            this.Controls.Add(this.metroTabControl1);
+            this.Controls.Add(this.kryptonGroupBox1);
             this.Controls.Add(this.cbxFiltro);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.dtpFechaDesde);
-            this.Controls.Add(this.GroupBox2);
-            this.Controls.Add(this.Label24);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.dtpFechaHasta);
-            this.Controls.Add(this.Label10);
-            this.Controls.Add(this.Label11);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmTicketsFamaciaComecsa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -752,13 +772,16 @@
             this.Load += new System.EventHandler(this.FrmTicketsFamaciaComecsa_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.GroupBox2.ResumeLayout(false);
-            this.GroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistro)).EndInit();
-            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
+            this.kryptonGroupBox1.Panel.ResumeLayout(false);
+            this.kryptonGroupBox1.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
+            this.kryptonGroupBox1.ResumeLayout(false);
+            this.metroTabControl1.ResumeLayout(false);
+            this.metroTabPage1.ResumeLayout(false);
+            this.metroTabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -775,25 +798,14 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.TextBox txtNombreDenunciante;
-        internal System.Windows.Forms.Label label5;
         internal System.Windows.Forms.TextBox txtCiRuc;
-        internal System.Windows.Forms.Label label4;
         internal System.Windows.Forms.TextBox txtNumDoc;
-        internal System.Windows.Forms.Label label2;
         internal System.Windows.Forms.DateTimePicker dtpFechaDesde;
         internal System.Windows.Forms.DateTimePicker dtpFechaNotificacion;
-        internal System.Windows.Forms.GroupBox GroupBox2;
-        internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.DateTimePicker dtpFechaRegistro;
-        internal System.Windows.Forms.Label Label31;
         internal System.Windows.Forms.TextBox txtDetallesNotificacion;
-        internal System.Windows.Forms.Label Label18;
-        internal System.Windows.Forms.Label Label24;
         internal System.Windows.Forms.TextBox txtFiltro;
         internal System.Windows.Forms.DateTimePicker dtpFechaHasta;
-        internal System.Windows.Forms.Label Label10;
-        internal System.Windows.Forms.Label Label11;
-        internal System.Windows.Forms.Label label6;
         internal System.Windows.Forms.ComboBox cbxTipo;
         private System.Windows.Forms.ToolStripButton ticComecsa;
         private System.Windows.Forms.ToolStripButton ticFarmacia;
@@ -807,10 +819,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dgvRegistro;
-        private System.Windows.Forms.TabPage tabPage2;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crvCredenciales;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA;
@@ -821,5 +830,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TIPO;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATA;
         private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel7;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel6;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel5;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private ReaLTaiizor.Controls.MetroTabControl metroTabControl1;
+        private ReaLTaiizor.Child.Metro.MetroTabPage metroTabPage1;
+        private ReaLTaiizor.Child.Metro.MetroTabPage metroTabPage2;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel8;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel9;
     }
 }

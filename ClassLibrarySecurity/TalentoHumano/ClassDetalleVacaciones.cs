@@ -146,6 +146,8 @@ namespace ClassLibraryCisepro3.TalentoHumano
             return cmd;
         }
 
+
+      
         public SqlCommand AnularRegistroDetalleVacacionesCommand()
         {
             var cmd = new SqlCommand

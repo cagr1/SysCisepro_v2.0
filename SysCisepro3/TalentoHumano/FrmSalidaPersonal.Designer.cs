@@ -49,12 +49,10 @@
             this.chkbxRoles = new System.Windows.Forms.CheckBox();
             this.chkbxUniformes = new System.Windows.Forms.CheckBox();
             this.txtFiltro = new System.Windows.Forms.TextBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.crvSalida = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.kryptonDockableNavigator1 = new ComponentFactory.Krypton.Docking.KryptonDockableNavigator();
             this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonGroupBox2 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.lblEstado = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -65,7 +63,6 @@
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonGroupBox4 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.dgvFirmado = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.kryptonGroupBox3 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
@@ -86,14 +83,15 @@
             this.kryptonDockableNavigator2 = new ComponentFactory.Krypton.Docking.KryptonDockableNavigator();
             this.kryptonPage3 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonPage4 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.metroTabControl1 = new ReaLTaiizor.Controls.MetroTabControl();
+            this.metroTabPage1 = new ReaLTaiizor.Child.Metro.MetroTabPage();
+            this.metroTabPage2 = new ReaLTaiizor.Child.Metro.MetroTabPage();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDockableNavigator1)).BeginInit();
             this.kryptonDockableNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
             this.kryptonGroupBox2.Panel.SuspendLayout();
@@ -102,7 +100,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
             this.kryptonGroupBox1.Panel.SuspendLayout();
             this.kryptonGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox4.Panel)).BeginInit();
             this.kryptonGroupBox4.Panel.SuspendLayout();
@@ -118,6 +115,9 @@
             this.kryptonPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage4)).BeginInit();
             this.kryptonPage4.SuspendLayout();
+            this.metroTabControl1.SuspendLayout();
+            this.metroTabPage1.SuspendLayout();
+            this.metroTabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -207,6 +207,7 @@
             this.dgvPersonal.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(235)))), ((int)(((byte)(247)))));
             this.dgvPersonal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPersonal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.dgvPersonal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPersonal.Location = new System.Drawing.Point(0, 0);
             this.dgvPersonal.MultiSelect = false;
             this.dgvPersonal.Name = "dgvPersonal";
@@ -214,7 +215,7 @@
             this.dgvPersonal.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvPersonal.RowHeadersVisible = false;
             this.dgvPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPersonal.Size = new System.Drawing.Size(820, 427);
+            this.dgvPersonal.Size = new System.Drawing.Size(807, 402);
             this.dgvPersonal.TabIndex = 1;
             this.dgvPersonal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPersonal_CellFormatting);
             this.dgvPersonal.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvPersonal_DataError);
@@ -355,50 +356,17 @@
             this.txtFiltro.TabIndex = 6;
             this.txtFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiltro_KeyUp);
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(9, 190);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(831, 459);
-            this.tabControl1.TabIndex = 7;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(235)))), ((int)(((byte)(247)))));
-            this.tabPage2.Controls.Add(this.dgvPersonal);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(823, 433);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "BUSQUEDA";
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(235)))), ((int)(((byte)(247)))));
-            this.tabPage1.Controls.Add(this.crvSalida);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(823, 433);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "REPORTE";
-            // 
             // crvSalida
             // 
             this.crvSalida.ActiveViewIndex = -1;
             this.crvSalida.Cursor = System.Windows.Forms.Cursors.Default;
             this.crvSalida.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crvSalida.Location = new System.Drawing.Point(3, 3);
+            this.crvSalida.Location = new System.Drawing.Point(0, 0);
             this.crvSalida.Name = "crvSalida";
             this.crvSalida.ShowCloseButton = false;
             this.crvSalida.ShowGroupTreeButton = false;
             this.crvSalida.ShowLogo = false;
-            this.crvSalida.Size = new System.Drawing.Size(817, 427);
+            this.crvSalida.Size = new System.Drawing.Size(807, 402);
             this.crvSalida.TabIndex = 0;
             this.crvSalida.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
@@ -431,10 +399,24 @@
             this.kryptonPage1.ToolTipTitle = "Page ToolTip";
             this.kryptonPage1.UniqueName = "72B6CA9884A342142F9E3662CA6DFBB1";
             // 
+            // kryptonPage2
+            // 
+            this.kryptonPage2.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage2.Flags = 65534;
+            this.kryptonPage2.LastVisibleSet = true;
+            this.kryptonPage2.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage2.Name = "kryptonPage2";
+            this.kryptonPage2.Size = new System.Drawing.Size(843, 646);
+            this.kryptonPage2.Text = "FIRMAS";
+            this.kryptonPage2.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage2.UniqueName = "207CC92FB639448F449DC3AA0545F4B6";
+            // 
             // kryptonGroupBox2
             // 
             this.kryptonGroupBox2.CaptionOverlap = 0D;
+            this.kryptonGroupBox2.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive;
+            this.kryptonGroupBox2.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox2.Location = new System.Drawing.Point(612, 4);
             this.kryptonGroupBox2.Name = "kryptonGroupBox2";
             // 
@@ -451,7 +433,9 @@
             // kryptonGroupBox1
             // 
             this.kryptonGroupBox1.CaptionOverlap = 0D;
+            this.kryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive;
+            this.kryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox1.Location = new System.Drawing.Point(12, 5);
             this.kryptonGroupBox1.Name = "kryptonGroupBox1";
             // 
@@ -541,22 +525,12 @@
             this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "ID";
             // 
-            // kryptonPage2
-            // 
-            this.kryptonPage2.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
-            this.kryptonPage2.Flags = 65534;
-            this.kryptonPage2.LastVisibleSet = true;
-            this.kryptonPage2.MinimumSize = new System.Drawing.Size(50, 50);
-            this.kryptonPage2.Name = "kryptonPage2";
-            this.kryptonPage2.Size = new System.Drawing.Size(843, 646);
-            this.kryptonPage2.Text = "FIRMAS";
-            this.kryptonPage2.ToolTipTitle = "Page ToolTip";
-            this.kryptonPage2.UniqueName = "207CC92FB639448F449DC3AA0545F4B6";
-            // 
             // kryptonGroupBox4
             // 
             this.kryptonGroupBox4.CaptionOverlap = 0D;
+            this.kryptonGroupBox4.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox4.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive;
+            this.kryptonGroupBox4.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox4.Location = new System.Drawing.Point(3, 190);
             this.kryptonGroupBox4.Name = "kryptonGroupBox4";
             // 
@@ -578,13 +552,16 @@
             this.dgvFirmado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFirmado.Size = new System.Drawing.Size(817, 413);
             this.dgvFirmado.StateCommon.Background.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(235)))), ((int)(((byte)(247)))));
+            this.dgvFirmado.StateCommon.Background.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.dgvFirmado.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.dgvFirmado.TabIndex = 12;
             // 
             // kryptonGroupBox3
             // 
             this.kryptonGroupBox3.CaptionOverlap = 0D;
+            this.kryptonGroupBox3.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive;
+            this.kryptonGroupBox3.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox3.Location = new System.Drawing.Point(3, 5);
             this.kryptonGroupBox3.Name = "kryptonGroupBox3";
             // 
@@ -614,6 +591,7 @@
             this.dtpAnio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpAnio.Location = new System.Drawing.Point(376, 120);
             this.dtpAnio.Name = "dtpAnio";
+            this.dtpAnio.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Global;
             this.dtpAnio.Size = new System.Drawing.Size(60, 21);
             this.dtpAnio.TabIndex = 12;
             // 
@@ -651,10 +629,12 @@
             this.btnCancelarFirmado.Name = "btnCancelarFirmado";
             this.btnCancelarFirmado.Size = new System.Drawing.Size(32, 32);
             this.btnCancelarFirmado.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
+            this.btnCancelarFirmado.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnCancelarFirmado.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnCancelarFirmado.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnCancelarFirmado.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnCancelarFirmado.TabIndex = 8;
             this.toolTip1.SetToolTip(this.btnCancelarFirmado, "Cancelar");
             this.btnCancelarFirmado.Values.ImageStates.ImageCheckedNormal = null;
@@ -673,10 +653,12 @@
             this.btnGuardarFirmado.Name = "btnGuardarFirmado";
             this.btnGuardarFirmado.Size = new System.Drawing.Size(32, 32);
             this.btnGuardarFirmado.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
+            this.btnGuardarFirmado.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnGuardarFirmado.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnGuardarFirmado.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnGuardarFirmado.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnGuardarFirmado.TabIndex = 7;
             this.toolTip1.SetToolTip(this.btnGuardarFirmado, "Guardar");
             this.btnGuardarFirmado.Values.ImageStates.ImageCheckedNormal = null;
@@ -695,10 +677,12 @@
             this.btnNuevoFirmado.Name = "btnNuevoFirmado";
             this.btnNuevoFirmado.Size = new System.Drawing.Size(32, 32);
             this.btnNuevoFirmado.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
+            this.btnNuevoFirmado.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnNuevoFirmado.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnNuevoFirmado.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnNuevoFirmado.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnNuevoFirmado.TabIndex = 6;
             this.toolTip1.SetToolTip(this.btnNuevoFirmado, "Nuevo");
             this.btnNuevoFirmado.Values.ImageStates.ImageCheckedNormal = null;
@@ -789,9 +773,9 @@
             // kryptonPage3
             // 
             this.kryptonPage3.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage3.Controls.Add(this.metroTabControl1);
             this.kryptonPage3.Controls.Add(this.kryptonGroupBox2);
             this.kryptonPage3.Controls.Add(this.kryptonGroupBox1);
-            this.kryptonPage3.Controls.Add(this.tabControl1);
             this.kryptonPage3.Flags = 65534;
             this.kryptonPage3.LastVisibleSet = true;
             this.kryptonPage3.MinimumSize = new System.Drawing.Size(50, 50);
@@ -815,6 +799,70 @@
             this.kryptonPage4.ToolTipTitle = "Page ToolTip";
             this.kryptonPage4.UniqueName = "207CC92FB639448F449DC3AA0545F4B6";
             // 
+            // metroTabControl1
+            // 
+            this.metroTabControl1.AnimateEasingType = ReaLTaiizor.Enum.Metro.EasingType.CubeOut;
+            this.metroTabControl1.AnimateTime = 200;
+            this.metroTabControl1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.metroTabControl1.Controls.Add(this.metroTabPage1);
+            this.metroTabControl1.Controls.Add(this.metroTabPage2);
+            this.metroTabControl1.ControlsVisible = true;
+            this.metroTabControl1.IsDerivedStyle = true;
+            this.metroTabControl1.ItemSize = new System.Drawing.Size(100, 30);
+            this.metroTabControl1.Location = new System.Drawing.Point(12, 190);
+            this.metroTabControl1.MCursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTabControl1.Name = "metroTabControl1";
+            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroTabControl1.Size = new System.Drawing.Size(815, 440);
+            this.metroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.metroTabControl1.Speed = 100;
+            this.metroTabControl1.Style = ReaLTaiizor.Enum.Metro.Style.Light;
+            this.metroTabControl1.StyleManager = null;
+            this.metroTabControl1.TabIndex = 10;
+            this.metroTabControl1.TabStyle = ReaLTaiizor.Enum.Metro.TabStyle.Style2;
+            this.metroTabControl1.ThemeAuthor = "Taiizor";
+            this.metroTabControl1.ThemeName = "MetroLight";
+            this.metroTabControl1.UnselectedTextColor = System.Drawing.Color.Gray;
+            // 
+            // metroTabPage1
+            // 
+            this.metroTabPage1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.metroTabPage1.Controls.Add(this.dgvPersonal);
+            this.metroTabPage1.Font = null;
+            this.metroTabPage1.ImageIndex = 0;
+            this.metroTabPage1.ImageKey = null;
+            this.metroTabPage1.IsDerivedStyle = true;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 34);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Size = new System.Drawing.Size(807, 402);
+            this.metroTabPage1.Style = ReaLTaiizor.Enum.Metro.Style.Light;
+            this.metroTabPage1.StyleManager = null;
+            this.metroTabPage1.TabIndex = 0;
+            this.metroTabPage1.Text = "Busqueda";
+            this.metroTabPage1.ThemeAuthor = "Taiizor";
+            this.metroTabPage1.ThemeName = "MetroLight";
+            this.metroTabPage1.ToolTipText = null;
+            // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.metroTabPage2.Controls.Add(this.crvSalida);
+            this.metroTabPage2.Font = null;
+            this.metroTabPage2.ImageIndex = 0;
+            this.metroTabPage2.ImageKey = null;
+            this.metroTabPage2.IsDerivedStyle = true;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 34);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(807, 402);
+            this.metroTabPage2.Style = ReaLTaiizor.Enum.Metro.Style.Light;
+            this.metroTabPage2.StyleManager = null;
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "Reporte";
+            this.metroTabPage2.ThemeAuthor = "Taiizor";
+            this.metroTabPage2.ThemeName = "MetroLight";
+            this.metroTabPage2.ToolTipText = null;
+            // 
             // FrmSalidaPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -834,12 +882,10 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDockableNavigator1)).EndInit();
             this.kryptonDockableNavigator1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).EndInit();
             this.kryptonGroupBox2.Panel.ResumeLayout(false);
             this.kryptonGroupBox2.Panel.PerformLayout();
@@ -850,7 +896,6 @@
             this.kryptonGroupBox1.Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
             this.kryptonGroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox4.Panel)).EndInit();
             this.kryptonGroupBox4.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox4)).EndInit();
@@ -867,6 +912,9 @@
             this.kryptonPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage4)).EndInit();
             this.kryptonPage4.ResumeLayout(false);
+            this.metroTabControl1.ResumeLayout(false);
+            this.metroTabPage1.ResumeLayout(false);
+            this.metroTabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -893,9 +941,6 @@
         private System.Windows.Forms.ToolStripButton btnExportar;
         internal System.Windows.Forms.DataGridView dgvPersonal;
         private System.Windows.Forms.TextBox txtObservaciones;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage1;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crvSalida;
         private ComponentFactory.Krypton.Docking.KryptonDockableNavigator kryptonDockableNavigator1;
         private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage1;
@@ -931,5 +976,8 @@
         private ComponentFactory.Krypton.Docking.KryptonDockableNavigator kryptonDockableNavigator2;
         private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage3;
         private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage4;
+        private ReaLTaiizor.Controls.MetroTabControl metroTabControl1;
+        private ReaLTaiizor.Child.Metro.MetroTabPage metroTabPage1;
+        private ReaLTaiizor.Child.Metro.MetroTabPage metroTabPage2;
     }
 }
