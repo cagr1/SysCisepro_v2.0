@@ -2164,6 +2164,15 @@ namespace SysCisepro3.Main
             
         }
 
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
+            this.BringToFront();
+            FormDashboard.Instancia.MdiParent = this;
+            FormDashboard.Instancia.Show();
+            FormDashboard.Instancia.BringToFront();
+
+        }
+
         //private void MdiParentMain_MdiChildActivate(object sender, EventArgs e)
         //{
         //    if (this.ActiveMdiChild != null)

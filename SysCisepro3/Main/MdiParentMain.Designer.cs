@@ -293,7 +293,7 @@
             this.toolStripButtonUser = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCalc = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonNote = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.statusStrip.SuspendLayout();
@@ -395,7 +395,7 @@
             this.toolStripButtonUser,
             this.toolStripButtonCalc,
             this.toolStripButtonNote,
-            this.toolStripButton2});
+            this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -429,7 +429,8 @@
             this.rEVISIÓNDEFACTURACIÓNToolStripMenuItem,
             this.toolStripSeparator5,
             this.cONFIGURACIÓNToolStripMenuItem});
-            this.tsAdministracion.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsAdministracion.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tsAdministracion.ForeColor = System.Drawing.Color.White;
             this.tsAdministracion.Image = global::SysCisepro3.Properties.Resources.manage_accounts_24dp_FILL0_wght400_GRAD0_opsz24__1_;
             this.tsAdministracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tsAdministracion.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -649,12 +650,13 @@
             this.cONSULTASToolStripMenuItem,
             this.toolStripSeparator37,
             this.rEPORTESToolStripMenuItem});
-            this.tsActivosFijos.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsActivosFijos.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tsActivosFijos.ForeColor = System.Drawing.Color.White;
             this.tsActivosFijos.Image = global::SysCisepro3.Properties.Resources.wallet_20dp_FILL0_wght400_GRAD0_opsz20;
             this.tsActivosFijos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsActivosFijos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsActivosFijos.Name = "tsActivosFijos";
-            this.tsActivosFijos.Size = new System.Drawing.Size(128, 47);
+            this.tsActivosFijos.Size = new System.Drawing.Size(122, 47);
             this.tsActivosFijos.Text = "ACTIVOS FIJOS";
             this.tsActivosFijos.Click += new System.EventHandler(this.tsActivosFijos_Click);
             this.tsActivosFijos.MouseLeave += new System.EventHandler(this.tsActivosFijos_MouseLeave);
@@ -997,7 +999,8 @@
             this.tsFondos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fONDODECAJACHICAToolStripMenuItem,
             this.fONDOROTATIVOToolStripMenuItem});
-            this.tsFondos.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsFondos.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tsFondos.ForeColor = System.Drawing.Color.White;
             this.tsFondos.Image = global::SysCisepro3.Properties.Resources.payments_24dp_FILL0_wght400_GRAD0_opsz24__1_;
             this.tsFondos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsFondos.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -1181,12 +1184,13 @@
             this.eSTADODESITUACIONINICIALToolStripMenuItem,
             this.eSTABLECERSALDOSToolStripMenuItem,
             this.rEPORTESCONTABLESToolStripMenuItem});
-            this.tsContabilidad.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsContabilidad.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tsContabilidad.ForeColor = System.Drawing.Color.White;
             this.tsContabilidad.Image = global::SysCisepro3.Properties.Resources.account_balance_24dp_FILL0_wght400_GRAD0_opsz24__1_;
             this.tsContabilidad.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsContabilidad.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsContabilidad.Name = "tsContabilidad";
-            this.tsContabilidad.Size = new System.Drawing.Size(127, 47);
+            this.tsContabilidad.Size = new System.Drawing.Size(126, 47);
             this.tsContabilidad.Text = "CONTABILIDAD";
             this.tsContabilidad.MouseLeave += new System.EventHandler(this.tsContabilidad_MouseLeave);
             this.tsContabilidad.MouseHover += new System.EventHandler(this.tsContabilidad_MouseHover);
@@ -2129,12 +2133,13 @@
             this.iNFORMEDEPAGOtoolStripMenuItem,
             this.toolStripSeparator25,
             this.rEPORTESToolStripMenuItem1});
-            this.tsRecursoHumano.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsRecursoHumano.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tsRecursoHumano.ForeColor = System.Drawing.Color.White;
             this.tsRecursoHumano.Image = global::SysCisepro3.Properties.Resources.groups_24dp_FILL0_wght400_GRAD0_opsz24;
             this.tsRecursoHumano.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsRecursoHumano.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsRecursoHumano.Name = "tsRecursoHumano";
-            this.tsRecursoHumano.Size = new System.Drawing.Size(151, 47);
+            this.tsRecursoHumano.Size = new System.Drawing.Size(152, 47);
             this.tsRecursoHumano.Text = "RECURSO HUMANO";
             this.tsRecursoHumano.MouseLeave += new System.EventHandler(this.tsRecursoHumano_MouseLeave);
             this.tsRecursoHumano.MouseHover += new System.EventHandler(this.tsRecursoHumano_MouseHover);
@@ -2395,12 +2400,13 @@
             this.dEFINICIÓNDESANCIONESYOMULTASToolStripMenuItem,
             this.toolStripSeparator28,
             this.iNGRESOSSALIDASDELPERSONALToolStripMenuItem});
-            this.tsOperaciones.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsOperaciones.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tsOperaciones.ForeColor = System.Drawing.Color.White;
             this.tsOperaciones.Image = global::SysCisepro3.Properties.Resources.security_24dp_FILL0_wght400_GRAD0_opsz24__1_;
             this.tsOperaciones.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsOperaciones.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsOperaciones.Name = "tsOperaciones";
-            this.tsOperaciones.Size = new System.Drawing.Size(124, 47);
+            this.tsOperaciones.Size = new System.Drawing.Size(122, 47);
             this.tsOperaciones.Text = "OPERACIONES";
             this.tsOperaciones.MouseLeave += new System.EventHandler(this.tsOperaciones_MouseLeave);
             this.tsOperaciones.MouseHover += new System.EventHandler(this.tsOperaciones_MouseHover);
@@ -2532,7 +2538,8 @@
             this.aSIGNARPROVEEDORAITEMToolStripMenuItem,
             this.cOMPROBANTESToolStripMenuItem,
             this.rEPORTESToolStripMenuItem2});
-            this.tsBodega.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsBodega.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tsBodega.ForeColor = System.Drawing.Color.White;
             this.tsBodega.Image = global::SysCisepro3.Properties.Resources.storefront_20dp_FILL0_wght400_GRAD0_opsz20__1_;
             this.tsBodega.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsBodega.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -2688,6 +2695,7 @@
             this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripButton1.AutoSize = false;
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.ForeColor = System.Drawing.Color.White;
             this.toolStripButton1.Image = global::SysCisepro3.Properties.Resources.desktop_windows_24dp__1_;
             this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -2753,13 +2761,18 @@
             this.toolStripButtonNote.ToolTipText = "BLOC DE NOTAS";
             this.toolStripButtonNote.Click += new System.EventHandler(this.toolStripButtonNote_Click);
             // 
-            // toolStripButton2
+            // toolStripDropDownButton1
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 47);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripDropDownButton1.ForeColor = System.Drawing.Color.White;
+            this.toolStripDropDownButton1.Image = global::SysCisepro3.Properties.Resources.dashboard_24dp_FILL0_wght400_GRAD0_opsz24__1_;
+            this.toolStripDropDownButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(114, 47);
+            this.toolStripDropDownButton1.Text = "DASHBOARD";
+            this.toolStripDropDownButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
             // 
             // timer1
             // 
@@ -3076,9 +3089,8 @@
         private System.Windows.Forms.ToolStripMenuItem salidaPersonaltoolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rOLESYPERMISOSToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton toolStripButtonNote;
-        
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripMenuItem rEPORTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
     }
 }
 

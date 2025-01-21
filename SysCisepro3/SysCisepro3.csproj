@@ -448,6 +448,12 @@
       <DependentUpon>crCredencialSeportpac2.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\FormDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormDashboard.Designer.cs">
+      <DependentUpon>FormDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\rptSalidaPersonal.cs">
       <DependentUpon>rptSalidaPersonal.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -764,6 +770,9 @@
     <EmbeddedResource Include="Reportes\crCredencialSeportpac2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crCredencialSeportpac21.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FormDashboard.resx">
+      <DependentUpon>FormDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\rptSalidaPersonal.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

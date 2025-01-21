@@ -116,17 +116,6 @@ namespace SysCisepro3.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.137;Initial Catalog=SYSCISEPRO;Persist Security Info=True;U" +
-            "ser ID=syscisepro;Password=syscisepro")]
-        public string SysCiseproConnectionString {
-            get {
-                return ((string)(this["SysCiseproConnectionString"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("13, 71, 161")]
@@ -136,6 +125,17 @@ namespace SysCisepro3.Properties {
             }
             set {
                 this["ColorCisepro"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.137;Initial Catalog=SYSCISEPRO;Persist Security Info=True;U" +
+            "ser ID=syscisepro;Password=syscisepro")]
+        public string SysCiseproConnectionString {
+            get {
+                return ((string)(this["SysCiseproConnectionString"]));
             }
         }
     }

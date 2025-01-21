@@ -110,12 +110,6 @@
             Me.txtSubtotal0FacturaCompra = New System.Windows.Forms.TextBox()
             Me.txtSubTotalComprobanteCompra = New System.Windows.Forms.TextBox()
             Me.dgvAsientosDiario = New System.Windows.Forms.DataGridView()
-            Me.eliminarItem = New System.Windows.Forms.DataGridViewButtonColumn()
-            Me.CODIGO = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.CUENTA = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.VALOR = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.IVA = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.PORCENTAJE = New System.Windows.Forms.DataGridViewComboBoxColumn()
             Me.txtTotalComprobanteCompra = New System.Windows.Forms.TextBox()
             Me.txtSubtotal12FacturaCompra = New System.Windows.Forms.TextBox()
             Me.txtIvaComprobanteCompra = New System.Windows.Forms.TextBox()
@@ -156,8 +150,15 @@
             Me.KryptonLabel28 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel27 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonGroupBox5 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.cbxPtoEmision = New Krypton.Toolkit.KryptonComboBox()
             Me.KryptonGroupBox6 = New Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonGroupBox7 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.eliminarItem = New System.Windows.Forms.DataGridViewButtonColumn()
+            Me.CODIGO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.CUENTA = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.VALOR = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.IVA = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.PORCENTAJE = New System.Windows.Forms.DataGridViewComboBoxColumn()
             CType(Me.dgvDetalleComprobanteRetencion, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.GroupBox2.SuspendLayout()
             Me.gbConceptoCompra.SuspendLayout()
@@ -178,6 +179,7 @@
             CType(Me.KryptonGroupBox5.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox5.Panel.SuspendLayout()
             Me.KryptonGroupBox5.SuspendLayout()
+            CType(Me.cbxPtoEmision, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox6, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox6.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox6.Panel.SuspendLayout()
@@ -684,24 +686,26 @@
             Me.rbPtoEmision002.AutoSize = True
             Me.rbPtoEmision002.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbPtoEmision002.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbPtoEmision002.Location = New System.Drawing.Point(127, 4)
+            Me.rbPtoEmision002.Location = New System.Drawing.Point(394, 52)
             Me.rbPtoEmision002.Name = "rbPtoEmision002"
             Me.rbPtoEmision002.Size = New System.Drawing.Size(43, 17)
             Me.rbPtoEmision002.TabIndex = 2
             Me.rbPtoEmision002.Text = "002"
             Me.rbPtoEmision002.UseVisualStyleBackColor = False
+            Me.rbPtoEmision002.Visible = False
             '
             'rbPtoEmision001
             '
             Me.rbPtoEmision001.AutoSize = True
             Me.rbPtoEmision001.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbPtoEmision001.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbPtoEmision001.Location = New System.Drawing.Point(84, 4)
+            Me.rbPtoEmision001.Location = New System.Drawing.Point(351, 52)
             Me.rbPtoEmision001.Name = "rbPtoEmision001"
             Me.rbPtoEmision001.Size = New System.Drawing.Size(43, 17)
             Me.rbPtoEmision001.TabIndex = 1
             Me.rbPtoEmision001.Text = "001"
             Me.rbPtoEmision001.UseVisualStyleBackColor = False
+            Me.rbPtoEmision001.Visible = False
             '
             'ofdSeleccionarArchivo
             '
@@ -797,7 +801,7 @@
             '
             Me.KryptonGroupBox2.CaptionOverlap = 0R
             Me.KryptonGroupBox2.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox2.Location = New System.Drawing.Point(-1, 39)
+            Me.KryptonGroupBox2.Location = New System.Drawing.Point(-1, 40)
             Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
             '
             'KryptonGroupBox2.Panel
@@ -1054,58 +1058,6 @@
             Me.dgvAsientosDiario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvAsientosDiario.Size = New System.Drawing.Size(545, 183)
             Me.dgvAsientosDiario.TabIndex = 139
-            '
-            'eliminarItem
-            '
-            DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle14.BackColor = System.Drawing.Color.DarkRed
-            DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
-            DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-            DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White
-            Me.eliminarItem.DefaultCellStyle = DataGridViewCellStyle14
-            Me.eliminarItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.eliminarItem.HeaderText = "Supr"
-            Me.eliminarItem.Name = "eliminarItem"
-            Me.eliminarItem.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.eliminarItem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-            Me.eliminarItem.Text = "(X)"
-            Me.eliminarItem.ToolTipText = "Eliminar Fila"
-            Me.eliminarItem.UseColumnTextForButtonValue = True
-            Me.eliminarItem.Width = 40
-            '
-            'CODIGO
-            '
-            Me.CODIGO.HeaderText = "Codigo"
-            Me.CODIGO.Name = "CODIGO"
-            Me.CODIGO.Width = 95
-            '
-            'CUENTA
-            '
-            DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.CUENTA.DefaultCellStyle = DataGridViewCellStyle15
-            Me.CUENTA.HeaderText = "Cuenta"
-            Me.CUENTA.Name = "CUENTA"
-            Me.CUENTA.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.CUENTA.Width = 225
-            '
-            'VALOR
-            '
-            Me.VALOR.HeaderText = "Valor"
-            Me.VALOR.Name = "VALOR"
-            Me.VALOR.Width = 80
-            '
-            'IVA
-            '
-            Me.IVA.HeaderText = "IVA"
-            Me.IVA.Name = "IVA"
-            Me.IVA.Width = 35
-            '
-            'PORCENTAJE
-            '
-            Me.PORCENTAJE.HeaderText = "%"
-            Me.PORCENTAJE.Items.AddRange(New Object() {"0", "5", "12", "15"})
-            Me.PORCENTAJE.Name = "PORCENTAJE"
-            Me.PORCENTAJE.Width = 70
             '
             'txtTotalComprobanteCompra
             '
@@ -1513,18 +1465,29 @@
             '
             'KryptonGroupBox5.Panel
             '
+            Me.KryptonGroupBox5.Panel.Controls.Add(Me.cbxPtoEmision)
             Me.KryptonGroupBox5.Panel.Controls.Add(Me.KryptonLabel1)
-            Me.KryptonGroupBox5.Panel.Controls.Add(Me.rbPtoEmision001)
-            Me.KryptonGroupBox5.Panel.Controls.Add(Me.rbPtoEmision002)
-            Me.KryptonGroupBox5.Size = New System.Drawing.Size(182, 33)
+            Me.KryptonGroupBox5.Size = New System.Drawing.Size(207, 33)
             Me.KryptonGroupBox5.TabIndex = 157
             Me.KryptonGroupBox5.Values.Heading = ""
+            '
+            'cbxPtoEmision
+            '
+            Me.cbxPtoEmision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+            Me.cbxPtoEmision.DropDownWidth = 52
+            Me.cbxPtoEmision.IntegralHeight = False
+            Me.cbxPtoEmision.Items.AddRange(New Object() {"001", "002", "003", "004"})
+            Me.cbxPtoEmision.Location = New System.Drawing.Point(121, 2)
+            Me.cbxPtoEmision.Name = "cbxPtoEmision"
+            Me.cbxPtoEmision.Size = New System.Drawing.Size(63, 21)
+            Me.cbxPtoEmision.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near
+            Me.cbxPtoEmision.TabIndex = 3
             '
             'KryptonGroupBox6
             '
             Me.KryptonGroupBox6.CaptionOverlap = 0R
             Me.KryptonGroupBox6.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox6.Location = New System.Drawing.Point(187, 4)
+            Me.KryptonGroupBox6.Location = New System.Drawing.Point(208, 4)
             Me.KryptonGroupBox6.Name = "KryptonGroupBox6"
             '
             'KryptonGroupBox6.Panel
@@ -1540,7 +1503,7 @@
             '
             Me.KryptonGroupBox7.CaptionOverlap = 0R
             Me.KryptonGroupBox7.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox7.Location = New System.Drawing.Point(444, 4)
+            Me.KryptonGroupBox7.Location = New System.Drawing.Point(466, 4)
             Me.KryptonGroupBox7.Name = "KryptonGroupBox7"
             '
             'KryptonGroupBox7.Panel
@@ -1548,9 +1511,61 @@
             Me.KryptonGroupBox7.Panel.Controls.Add(Me.rbTipoEmisionIndisponibilidadSistema)
             Me.KryptonGroupBox7.Panel.Controls.Add(Me.KryptonLabel3)
             Me.KryptonGroupBox7.Panel.Controls.Add(Me.rbTipoEmisionNormal)
-            Me.KryptonGroupBox7.Size = New System.Drawing.Size(285, 33)
+            Me.KryptonGroupBox7.Size = New System.Drawing.Size(263, 33)
             Me.KryptonGroupBox7.TabIndex = 159
             Me.KryptonGroupBox7.Values.Heading = ""
+            '
+            'eliminarItem
+            '
+            DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle14.BackColor = System.Drawing.Color.DarkRed
+            DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
+            DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+            DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White
+            Me.eliminarItem.DefaultCellStyle = DataGridViewCellStyle14
+            Me.eliminarItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.eliminarItem.HeaderText = "Supr"
+            Me.eliminarItem.Name = "eliminarItem"
+            Me.eliminarItem.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.eliminarItem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+            Me.eliminarItem.Text = "(X)"
+            Me.eliminarItem.ToolTipText = "Eliminar Fila"
+            Me.eliminarItem.UseColumnTextForButtonValue = True
+            Me.eliminarItem.Width = 40
+            '
+            'CODIGO
+            '
+            Me.CODIGO.HeaderText = "Codigo"
+            Me.CODIGO.Name = "CODIGO"
+            Me.CODIGO.Width = 95
+            '
+            'CUENTA
+            '
+            DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.CUENTA.DefaultCellStyle = DataGridViewCellStyle15
+            Me.CUENTA.HeaderText = "Cuenta"
+            Me.CUENTA.Name = "CUENTA"
+            Me.CUENTA.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.CUENTA.Width = 225
+            '
+            'VALOR
+            '
+            Me.VALOR.HeaderText = "Valor"
+            Me.VALOR.Name = "VALOR"
+            Me.VALOR.Width = 80
+            '
+            'IVA
+            '
+            Me.IVA.HeaderText = "IVA"
+            Me.IVA.Name = "IVA"
+            Me.IVA.Width = 35
+            '
+            'PORCENTAJE
+            '
+            Me.PORCENTAJE.HeaderText = "%"
+            Me.PORCENTAJE.Items.AddRange(New Object() {"0", "5", "8", "12", "15"})
+            Me.PORCENTAJE.Name = "PORCENTAJE"
+            Me.PORCENTAJE.Width = 70
             '
             'FormRegistroComprobanteCompra
             '
@@ -1568,6 +1583,8 @@
             Me.Controls.Add(Me.KryptonGroupBox2)
             Me.Controls.Add(Me.gbConceptoCompra)
             Me.Controls.Add(Me.GroupBox2)
+            Me.Controls.Add(Me.rbPtoEmision001)
+            Me.Controls.Add(Me.rbPtoEmision002)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Name = "FormRegistroComprobanteCompra"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -1601,6 +1618,7 @@
             Me.KryptonGroupBox5.Panel.PerformLayout()
             CType(Me.KryptonGroupBox5, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox5.ResumeLayout(False)
+            CType(Me.cbxPtoEmision, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.KryptonGroupBox6.Panel, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox6.Panel.ResumeLayout(False)
             Me.KryptonGroupBox6.Panel.PerformLayout()
@@ -1725,14 +1743,15 @@
         Friend WithEvents KryptonLabel29 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel28 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel27 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonGroupBox5 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonGroupBox6 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonGroupBox7 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents cbxPtoEmision As Krypton.Toolkit.KryptonComboBox
         Friend WithEvents eliminarItem As DataGridViewButtonColumn
         Friend WithEvents CODIGO As DataGridViewTextBoxColumn
         Friend WithEvents CUENTA As DataGridViewTextBoxColumn
         Friend WithEvents VALOR As DataGridViewTextBoxColumn
         Friend WithEvents IVA As DataGridViewTextBoxColumn
         Friend WithEvents PORCENTAJE As DataGridViewComboBoxColumn
-        Friend WithEvents KryptonGroupBox5 As Krypton.Toolkit.KryptonGroupBox
-        Friend WithEvents KryptonGroupBox6 As Krypton.Toolkit.KryptonGroupBox
-        Friend WithEvents KryptonGroupBox7 As Krypton.Toolkit.KryptonGroupBox
     End Class
 End Namespace

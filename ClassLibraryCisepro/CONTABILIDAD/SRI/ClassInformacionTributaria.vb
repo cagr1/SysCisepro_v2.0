@@ -41,6 +41,28 @@ Namespace CONTABILIDAD.SRI
             Return comando
         End Function
 
+        Public Function ActualizarSecuencialFacturaInformacionTributaria3() As SqlCommand
+            Dim comando = New SqlCommand
+            With comando
+                .CommandType = CommandType.StoredProcedure
+                .CommandText = "sp_actualizarSecuencialFacturaInformacionTributaria3"
+                .Parameters.AddWithValue("@ID_INFORMACION", SqlDbType.BigInt).Value = Id
+                .Parameters.AddWithValue("@SECUENCIAL_FACTURA_IT", SqlDbType.Int).Value = SecuencialFactura
+            End With
+            Return comando
+        End Function
+
+        Public Function ActualizarSecuencialFacturaInformacionTributaria4() As SqlCommand
+            Dim comando = New SqlCommand
+            With comando
+                .CommandType = CommandType.StoredProcedure
+                .CommandText = "sp_actualizarSecuencialFacturaInformacionTributaria4"
+                .Parameters.AddWithValue("@ID_INFORMACION", SqlDbType.BigInt).Value = Id
+                .Parameters.AddWithValue("@SECUENCIAL_FACTURA_IT", SqlDbType.Int).Value = SecuencialFactura
+            End With
+            Return comando
+        End Function
+
         Public Function ActualizarSecuencialNotaCreditoInformacionTributaria() As SqlCommand
             Dim comando = New SqlCommand
             With comando
@@ -101,11 +123,54 @@ Namespace CONTABILIDAD.SRI
             Return comando
         End Function
 
+        Public Function ActualizarSecuencialComprobanteRetencionInformacionTributariaCommand3() As SqlCommand
+            Dim comando = New SqlCommand
+            With comando
+                .CommandType = CommandType.StoredProcedure
+                .CommandText = "sp_actualizarSecuencialComprobanteRetencionInformacionTributaria3"
+                .Parameters.AddWithValue("@ID_INFORMACION", SqlDbType.BigInt).Value = Id
+                .Parameters.AddWithValue("@SECUENCIAL_COMPROBANTE_RETENCION_IT", SqlDbType.Int).Value = SecuencialComprobanteRetencion
+            End With
+            Return comando
+        End Function
+
+        Public Function ActualizarSecuencialComprobanteRetencionInformacionTributariaCommand4() As SqlCommand
+            Dim comando = New SqlCommand
+            With comando
+                .CommandType = CommandType.StoredProcedure
+                .CommandText = "sp_actualizarSecuencialComprobanteRetencionInformacionTributaria4"
+                .Parameters.AddWithValue("@ID_INFORMACION", SqlDbType.BigInt).Value = Id
+                .Parameters.AddWithValue("@SECUENCIAL_COMPROBANTE_RETENCION_IT", SqlDbType.Int).Value = SecuencialComprobanteRetencion
+            End With
+            Return comando
+        End Function
+
         Public Function ActualizarSecuencialLiquidacionCompraInformacionTributariaCommand() As SqlCommand
             Dim comando = New SqlCommand
             With comando
                 .CommandType = CommandType.Text
                 .CommandText = "UPDATE INFORMACION_TRIBUTARIA set SECUENCIAL_LIQUIDACION_COMPRA_IT = @SECUENCIAL_LIQUIDACION_COMPRA_IT WHERE ID_INFORMACION=@ID_INFORMACION"
+                .Parameters.AddWithValue("@ID_INFORMACION", SqlDbType.BigInt).Value = Id
+                .Parameters.AddWithValue("@SECUENCIAL_LIQUIDACION_COMPRA_IT", SqlDbType.Int).Value = SecuencialLiquidacionCompra
+            End With
+            Return comando
+        End Function
+
+        Public Function ActualizarSecuencialLiquidacionCompraInformacionTributariaCommand3() As SqlCommand
+            Dim comando = New SqlCommand
+            With comando
+                .CommandType = CommandType.StoredProcedure
+                .CommandText = "sp_actualizarSecuencialLiquidacionCompra3"
+                .Parameters.AddWithValue("@ID_INFORMACION", SqlDbType.BigInt).Value = Id
+                .Parameters.AddWithValue("@SECUENCIAL_LIQUIDACION_COMPRA_IT", SqlDbType.Int).Value = SecuencialLiquidacionCompra
+            End With
+            Return comando
+        End Function
+        Public Function ActualizarSecuencialLiquidacionCompraInformacionTributariaCommand4() As SqlCommand
+            Dim comando = New SqlCommand
+            With comando
+                .CommandType = CommandType.StoredProcedure
+                .CommandText = "sp_actualizarSecuencialLiquidacionCompra4"
                 .Parameters.AddWithValue("@ID_INFORMACION", SqlDbType.BigInt).Value = Id
                 .Parameters.AddWithValue("@SECUENCIAL_LIQUIDACION_COMPRA_IT", SqlDbType.Int).Value = SecuencialLiquidacionCompra
             End With

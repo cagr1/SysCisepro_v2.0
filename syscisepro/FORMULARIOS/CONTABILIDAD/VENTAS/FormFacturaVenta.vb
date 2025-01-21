@@ -137,9 +137,10 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             LlenarComboConcepto()
             LlenarComboFormasPago()
             LlenarComboIva()
-            rbPtoEmision002.Checked = True
+            'rbPtoEmision002.Checked = True
             'rbProduccion.Checked = True
             'rbTipoEmisionNormal.Checked = True
+            cbxPtoEmision.SelectedIndex = 1
 
         End Sub
         Private Sub VerificarCbConvenio()
@@ -160,8 +161,9 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         End Sub
         Private Sub DeshabilitadoInicio()
             'gbPtoEmision.Enabled = True
-            rbPtoEmision001.Enabled = True
-            rbPtoEmision002.Enabled = True
+            'rbPtoEmision001.Enabled = True
+            'rbPtoEmision002.Enabled = True
+            cbxPtoEmision.Enabled = True
             'gbTipoAnbiente.Enabled = True
             rbPruebas.Enabled = True
             rbProduccion.Enabled = True
@@ -383,35 +385,48 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             txtNombreComercialCliente.Focus()
         End Sub
         Private Sub NumFactura()
+
+            Dim _ptoEmision As String
+            _ptoEmision = cbxPtoEmision.Text
             ' Número de factura
-            If lblPtoEmisionFacturaEmpresa.Text = "001" Then
-                _secuencialFactura = CLng(_objetoFacturaVenta.BuscarMayorNumeroFacturaVenta(_tipoCon)) + 1
-            ElseIf lblPtoEmisionFacturaEmpresa.Text = "002" Then
-                _secuencialFactura = CLng(_objetoFacturaVenta.BuscarMayorNumeroFacturaVentaIt(_tipoCon)) + 1
+            'If lblPtoEmisionFacturaEmpresa.Text = "001" Then
+            '    _secuencialFactura = CLng(_objetoFacturaVenta.BuscarMayorNumeroFacturaVenta(_tipoCon)) + 1
+            'ElseIf lblPtoEmisionFacturaEmpresa.Text = "002" Then
+            '    _secuencialFactura = CLng(_objetoFacturaVenta.BuscarMayorNumeroFacturaVentaIt(_tipoCon)) + 1
+            'Else
+            '    _secuencialFactura = CLng(_objetoFacturaVenta.BuscarMayorNumeroFacturaVentaIt(_tipoCon)) + 1
+            'End If
+
+            If _ptoEmision = "002" OrElse _ptoEmision = "003" OrElse _ptoEmision = "004" Then
+
+                Select Case _ptoEmision
+                    Case "002"
+                        _secuencialFactura = CLng(_objetoFacturaVenta.BuscarMayorNumeroFacturaVentaIt(_tipoCon)) + 1
+                    Case "003"
+                        _secuencialFactura = CLng(_objetoFacturaVenta.BuscarMayorNumeroFacturaVentaIt3(_tipoCon)) + 1
+                    Case "004"
+                        _secuencialFactura = CLng(_objetoFacturaVenta.BuscarMayorNumeroFacturaVentaIt4(_tipoCon)) + 1
+
+                End Select
+
             Else
-                _secuencialFactura = CLng(_objetoFacturaVenta.BuscarMayorNumeroFacturaVentaIt(_tipoCon)) + 1
+                _secuencialFactura = CLng(_objetoFacturaVenta.BuscarMayorNumeroFacturaVenta(_tipoCon)) + 1
             End If
 
-            ' Rellenar con ceros los nueve digitos del número secuencial de la factura
-            Select Case _secuencialFactura.Length
-                Case 1 : lblNumeroFacturaVenta.Text = "00000000" + _secuencialFactura
-                Case 2 : lblNumeroFacturaVenta.Text = "0000000" + _secuencialFactura
-                Case 3 : lblNumeroFacturaVenta.Text = "000000" + _secuencialFactura
-                Case 4 : lblNumeroFacturaVenta.Text = "00000" + _secuencialFactura
-                Case 5 : lblNumeroFacturaVenta.Text = "0000" + _secuencialFactura
-                Case 6 : lblNumeroFacturaVenta.Text = "000" + _secuencialFactura
-                Case 7 : lblNumeroFacturaVenta.Text = "00" + _secuencialFactura
-                Case 8 : lblNumeroFacturaVenta.Text = "0" + _secuencialFactura
-                Case 9 : lblNumeroFacturaVenta.Text = _secuencialFactura
-            End Select
+            Dim secuencial As Long = CLng(_secuencialFactura)
+            _secuencialFactura = secuencial.ToString("D9")
+
+            lblNumeroFacturaVenta.Text = _secuencialFactura
+
         End Sub
         Private Sub HabilitadoNuevo()
             'gbPtoEmision.Enabled = False
             'gbTipoAnbiente.Enabled = False
             'gbTipoEmision.Enabled = False
 
-            rbPtoEmision001.Enabled = False
-            rbPtoEmision002.Enabled = False
+            'rbPtoEmision001.Enabled = False
+            'rbPtoEmision002.Enabled = False
+            cbxPtoEmision.Enabled = False
             rbPruebas.Enabled = False
             rbProduccion.Enabled = False
             rbTipoEmisionNormal.Enabled = False
@@ -616,10 +631,10 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub rbTipoEmisionIndisponibilidadSistema_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbTipoEmisionIndisponibilidadSistema.CheckedChanged
             _tipoEmision = If(rbTipoEmisionIndisponibilidadSistema.Checked, 2, 1)
         End Sub
-        Private Sub rbPtoEmision001_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbPtoEmision001.CheckedChanged
+        Private Sub rbPtoEmision001_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs)
             lblPtoEmisionFacturaEmpresa.Text = If(rbPtoEmision001.Checked, "001", "002")
         End Sub
-        Private Sub rbPtoEmision002_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbPtoEmision002.CheckedChanged
+        Private Sub rbPtoEmision002_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs)
             lblPtoEmisionFacturaEmpresa.Text = If(rbPtoEmision002.Checked, "002", "001")
         End Sub
         Private Sub dtpFechaEmisionFacturaVenta_ValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dtpFechaEmisionFacturaVenta.ValueChanged
@@ -660,6 +675,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             LimpiarParametros()
             DeshabilitadoInicio()
             cmbIva.SelectedIndex = 1
+            cbxPtoEmision.SelectedIndex = 1
         End Sub
         Private Sub dgvDetalleFacturaVenta_EditingControlShowing(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewEditingControlShowingEventArgs) Handles dgvDetalleFacturaVenta.EditingControlShowing
             Dim itemName = TryCast(e.Control, TextBox)
@@ -817,7 +833,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                                     GuardarRegistroFacturaVenta() ' factura
                                     GuardarRegistroDetalleFacturaVenta() ' detalle de la factgura
 
-                                    If lblPtoEmisionFacturaEmpresa.Text = "002" Then ActualizarSecuencial() ' incrementa el secuencial de numeracion de factura
+                                    If (lblPtoEmisionFacturaEmpresa.Text = "002" OrElse lblPtoEmisionFacturaEmpresa.Text = "003" OrElse lblPtoEmisionFacturaEmpresa.Text = "004") Then ActualizarSecuencial() ' incrementa el secuencial de numeracion de factura
 
                                     GuardarPagosFacturaVenta() ' registra la deuda
 
@@ -991,11 +1007,26 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             Next
         End Sub
         Private Sub ActualizarSecuencial()
-            With _objetoInformacionTributaria
-                .Id = 1
-                .SecuencialFactura = CInt(lblNumeroFacturaVenta.Text)
-            End With
-            _sqlCommands.Add(_objetoInformacionTributaria.ActualizarSecuencialFacturaInformacionTributaria)
+            If cbxPtoEmision.SelectedItem.ToString() = "002" Then
+                With _objetoInformacionTributaria
+                    .Id = 1
+                    .SecuencialFactura = CInt(lblNumeroFacturaVenta.Text)
+                End With
+                _sqlCommands.Add(_objetoInformacionTributaria.ActualizarSecuencialFacturaInformacionTributaria)
+            ElseIf cbxPtoEmision.SelectedItem.ToString() = "003" Then
+                With _objetoInformacionTributaria
+                    .Id = 1
+                    .SecuencialFactura = CInt(lblNumeroFacturaVenta.Text)
+                End With
+                _sqlCommands.Add(_objetoInformacionTributaria.ActualizarSecuencialFacturaInformacionTributaria3)
+            ElseIf cbxPtoEmision.SelectedItem.ToString() = "004" Then
+                With _objetoInformacionTributaria
+                    .Id = 1
+                    .SecuencialFactura = CInt(lblNumeroFacturaVenta.Text)
+                End With
+                _sqlCommands.Add(_objetoInformacionTributaria.ActualizarSecuencialFacturaInformacionTributaria4)
+            End If
+
         End Sub
         Private Sub GuardarPagosFacturaVenta()
             With _objetoPagosFacturaVenta
@@ -1275,6 +1306,10 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
         Private Sub MenuStrip1_ItemClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
 
+        End Sub
+
+        Private Sub cbxPtoEmision_SelectedValueChanged(sender As Object, e As EventArgs) Handles cbxPtoEmision.SelectedValueChanged
+            lblPtoEmisionFacturaEmpresa.Text = cbxPtoEmision.SelectedItem.ToString()
         End Sub
     End Class
 End Namespace

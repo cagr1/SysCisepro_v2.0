@@ -51,6 +51,18 @@ Namespace CONTABILIDAD.COMPRAS.COMPROBANTES_COMPRA
             Return If(data.Rows.Count = 0, 0, If(IsDBNull(data.Rows(0)(0)), 0, CInt(data.Rows(0)(0))))
         End Function
 
+        Public Function BuscarMayorNumeroLiquidacionCompraIt3(ByVal tipoCon As TipoConexion) As Integer
+            Dim data = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "sp_BuscarMayorNumeroLiquidacionCompra3", True)
+            Return If(data.Rows.Count = 0, 0, If(IsDBNull(data.Rows(0)(0)), 0, CInt(data.Rows(0)(0))))
+        End Function
+
+
+
+        Public Function BuscarMayorNumeroLiquidacionCompraIt4(ByVal tipoCon As TipoConexion) As Integer
+            Dim data = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "sp_BuscarMayorNumeroLiquidacionCompra3", True)
+            Return If(data.Rows.Count = 0, 0, If(IsDBNull(data.Rows(0)(0)), 0, CInt(data.Rows(0)(0))))
+        End Function
+
         Public Function SeleccionarComrpobantesCompraXIdProveedor(ByVal tipoCon As TipoConexion, ByVal parametroBusqueda As String) As DataTable
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"ID_PROVEEDOR_GENERAL", SqlDbType.VarChar, parametroBusqueda})

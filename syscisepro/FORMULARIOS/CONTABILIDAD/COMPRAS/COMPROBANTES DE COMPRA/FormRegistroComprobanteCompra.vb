@@ -24,6 +24,7 @@ Imports System.Text
 Imports syscisepro.FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.PORCENTAJES_RETENCION
 Imports Krypton.Toolkit
+'Imports DocumentFormat.OpenXml.Wordprocessing
 
 
 
@@ -109,7 +110,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         Public TipoIdentificacionProveedor As String  ' tipo de identificacion del cliente RUC => 04 / CEDULA => 05 / PASAPORTE => 06 / CONSUMIDOR FINAL => 07 / IDENTIFICACION DELEXTERIOR = > 08
         Public PorcentajeIva As Integer = 0
         Public PorcentajeIva5 As Integer = 0
-
+        Public PorcentajeIva8 As Integer = 0
         Private _ptoEmisionRetencion As String = ""
         Private _ptoEmisionLiqCompra As String = ""
 
@@ -135,6 +136,17 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
         Private _valDebe As Decimal = 0.0
         Private _valHaber As Decimal = 0.0
+        'Manejo de multiples iva
+        Private _subtotalesPorIva As New Dictionary(Of Integer, Decimal)
+        Private _ivas As New Dictionary(Of Integer, Decimal)
+        Private ReadOnly _ivaCuentas As New Dictionary(Of Integer, String) From {
+            {5, "1010514"},
+            {8, "1010515"},
+            {12, "1010512"},
+            {15, "1010513"}
+        }
+
+
 
         Private Sub FormRegistroComprobanteCompra_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
             ' DEFINIR TIPO Y COLOR DE SISTEMA
@@ -171,8 +183,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             cmbBienServicio.SelectedIndex = 0
             rbProduccion.Checked = True
             rbTipoEmisionNormal.Checked = True
-            rbPtoEmision002.Checked = True
-
+            'rbPtoEmision002.Checked = True
+            cbxPtoEmision.SelectedIndex = 1
             VerificarConcepto()
             DeshabilitadoInicio()
 
@@ -231,6 +243,17 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
         End Sub
 
+        Private Sub InicializarDiccionarios()
+            _subtotalesPorIva.Clear()
+            _ivas.Clear()
+
+            Dim porcentajesIva As Integer() = {0, 5, 8, 12, 15}
+            For Each porcen In porcentajesIva
+                _subtotalesPorIva(porcen) = 0.0
+                _ivas(porcen) = 0.0
+            Next
+        End Sub
+
         Private Sub DeshabilitadoInicio()
 
             btnNuevo.Enabled = True
@@ -240,8 +263,9 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             btnReporte.Enabled = False
 
             'gbPtoEmision.Enabled = False
-            rbPtoEmision001.Enabled = False
-            rbPtoEmision002.Enabled = False
+            'rbPtoEmision001.Enabled = False
+            'rbPtoEmision002.Enabled = False
+            cbxPtoEmision.Enabled = False
             'gbTipoAnbiente.Enabled = False
             'rbProduccion.Enabled = False
             'rbPruebas.Enabled = False
@@ -340,7 +364,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         Private Sub LimpiarParametros()
             lblIdComprobanteCompra.Text = "..."
             cmbBienServicio.SelectedIndex = 0
-
+            cbxPtoEmision.SelectedIndex = 1
             '================== PROVEEDOR ======================================
             chkReq.Checked = False
             txtNombreComercialProveedorGeneral.Text = ""
@@ -378,6 +402,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             _dtProveedor = Nothing
             dgvAsientosDiario.Rows.Clear()
             dgvDetalleComprobanteRetencion.Rows.Clear()
+
         End Sub
 
         Private Sub HabilitadoNuevo()
@@ -388,8 +413,9 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             btnReporte.Enabled = False
 
             'gbPtoEmision.Enabled = True
-            rbPtoEmision001.Enabled = True
-            rbPtoEmision002.Enabled = True
+            ' rbPtoEmision001.Enabled = True
+            'rbPtoEmision002.Enabled = True
+            cbxPtoEmision.Enabled = True
             'gbTipoAnbiente.Enabled = False
             'rbProduccion.Enabled = True
             'rbPruebas.Enabled = True
@@ -480,8 +506,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         Private Sub cmbNombreParametroDocumentos_SelectedValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmbNombreParametroDocumentos.SelectedValueChanged
             If cmbNombreParametroDocumentos.SelectedValue Is Nothing Or TypeOf cmbNombreParametroDocumentos.SelectedValue Is DataRowView Then Return
             lblTipoDocumento.Text = _objetoParametroDocumentos.BuscarTipoParametroDocumentosXId(_tipoCon, cmbNombreParametroDocumentos.SelectedValue)
-            If _ptoEmisionLiqCompra = "002" And cmbNombreParametroDocumentos.SelectedValue = 3 Then VerificarNumeroSecuencialLiquidacionCompra()
-
+            'If _ptoEmisionLiqCompra = "002" And cmbNombreParametroDocumentos.SelectedValue = 3 Then VerificarNumeroSecuencialLiquidacionCompra()
+            If (_ptoEmisionLiqCompra = "002" OrElse _ptoEmisionLiqCompra = "003" OrElse _ptoEmisionLiqCompra = "004") And cmbNombreParametroDocumentos.SelectedValue = 3 Then VerificarNumeroSecuencialLiquidacionCompra()
             If cmbNombreParametroDocumentos.SelectedValue = 1 Then
                 chkActivoFijo.Checked = False
                 chkActivoFijo.Enabled = True
@@ -646,41 +672,69 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         End Sub
 
         Private Sub CalcularTotalesFactura()
+
+            InicializarDiccionarios()
             Dim subTotal12 As Decimal = 0.0
             Dim subTotal5 As Decimal = 0.0
             Dim subtotal0 As Decimal = 0.0
             Dim iva As Decimal = 0.0
-            Dim iva5 As Decimal = 0.0
+            'Dim iva5 As Decimal = 0.0
 
             For indiceSuma = 0 To dgvAsientosDiario.RowCount - 2
                 If dgvAsientosDiario.Rows(indiceSuma).Cells(3).Value Is Nothing Then Continue For
                 If dgvAsientosDiario.Rows(indiceSuma).Cells(3).Value = 0 Then Continue For
 
-                If dgvAsientosDiario.Rows(indiceSuma).Cells(4).Value = "S" Then
-                    If dgvAsientosDiario.Rows(indiceSuma).Cells(5).Value = 5 Then
-                        subTotal5 += CDec(dgvAsientosDiario.Rows(indiceSuma).Cells(3).Value)
-                        iva5 += Math.Round(CDec(dgvAsientosDiario.Rows(indiceSuma).Cells(3).Value) * (CDec(dgvAsientosDiario.Rows(indiceSuma).Cells(5).Value) / 100), 2, MidpointRounding.ToEven)
-                    Else
-                        subTotal12 += CDec(dgvAsientosDiario.Rows(indiceSuma).Cells(3).Value)
-                        iva += Math.Round(CDec(dgvAsientosDiario.Rows(indiceSuma).Cells(3).Value) * (PorcentajeIva / 100), 2, MidpointRounding.ToEven)
-                    End If
+                Dim valor As Decimal = CDec(dgvAsientosDiario.Rows(indiceSuma).Cells(3).Value) 'cambio2025
+                Dim porcentaje As Integer = CInt(dgvAsientosDiario.Rows(indiceSuma).Cells(5).Value) 'cambio2025
 
+                'If dgvAsientosDiario.Rows(indiceSuma).Cells(4).Value = "S" Then
+                '    If dgvAsientosDiario.Rows(indiceSuma).Cells(5).Value = 5 Then
+                '        subTotal5 += CDec(dgvAsientosDiario.Rows(indiceSuma).Cells(3).Value)
+                '        iva5 += Math.Round(CDec(dgvAsientosDiario.Rows(indiceSuma).Cells(3).Value) * (CDec(dgvAsientosDiario.Rows(indiceSuma).Cells(5).Value) / 100), 2, MidpointRounding.ToEven)
+                '    ElseIf dgvAsientosDiario.Rows(indiceSuma).Cells(5).Value = 8 Then
+                '        subTotal12 += CDec(dgvAsientosDiario.Rows(indiceSuma).Cells(3).Value)
+                '        iva += Math.Round(CDec(dgvAsientosDiario.Rows(indiceSuma).Cells(3).Value) * (8 / 100), 2, MidpointRounding.ToEven)
+                '    Else
+                '        subTotal12 += CDec(dgvAsientosDiario.Rows(indiceSuma).Cells(3).Value)
+                '        iva += Math.Round(CDec(dgvAsientosDiario.Rows(indiceSuma).Cells(3).Value) * (PorcentajeIva / 100), 2, MidpointRounding.ToEven)
+                '    End If
+
+                'Else
+                '    subtotal0 += CDec(dgvAsientosDiario.Rows(indiceSuma).Cells(3).Value)
+                'End If
+
+                'cambio 2025
+
+                If dgvAsientosDiario.Rows(indiceSuma).Cells(4).Value = "S" Then
+                    _subtotalesPorIva(porcentaje) += valor
+                    _ivas(porcentaje) += Math.Round(valor * (porcentaje / 100), 2, MidpointRounding.ToEven)
                 Else
-                    subtotal0 += CDec(dgvAsientosDiario.Rows(indiceSuma).Cells(3).Value)
+                    _subtotalesPorIva(0) += valor
                 End If
+
             Next
 
-            Dim subtotal = subTotal12 + subtotal0 + subTotal5
+            Dim subtotal As Decimal = _subtotalesPorIva.Values.Sum()
 
-            'Dim iva2 = Math.Round(subTotal12 * (PorcentajeIva / 100), 2, MidpointRounding.ToEven)
-            Dim total = subtotal + iva + iva5
+            ' Calcular IVA para cada porcentaje
+            Dim iva5 As Decimal = _ivas(5)
+            Dim iva8 As Decimal = _ivas(8)
+            Dim iva12 As Decimal = _ivas(12)
+            Dim iva15 As Decimal = _ivas(15)
 
-            txtSubtotal12FacturaCompra.Text = subTotal12
-            txtSubtotal5FacturaCompra.Text = subTotal5
-            txtSubtotal0FacturaCompra.Text = subtotal0
+            ' Calcular total
+            Dim total As Decimal = subtotal + iva5 + iva8 + iva12 + iva15
+
+            'txtSubtotal12FacturaCompra.Text = subTotal12
+            txtSubtotal12FacturaCompra.Text = (_subtotalesPorIva(8) + _subtotalesPorIva(12) + _subtotalesPorIva(15)).ToString()
+            'txtSubtotal5FacturaCompra.Text = subTotal5
+            txtSubtotal5FacturaCompra.Text = _subtotalesPorIva(5).ToString()
+            'txtSubtotal0FacturaCompra.Text = subtotal0
+            txtSubtotal0FacturaCompra.Text = _subtotalesPorIva(0).ToString()
             txtSubTotalComprobanteCompra.Text = subtotal
-            txtIvaComprobanteCompra.Text = iva
+            txtIvaComprobanteCompra.Text = iva8 + iva12 + iva15
             txtIva5ComprobanteCompra.Text = iva5
+
             txtTotalComprobanteCompra.Text = total
 
             CalcularTotalesRetencion()
@@ -740,59 +794,59 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         Private Sub txtNumAutoSRIComprobanteCompra_KeyPress(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyPressEventArgs)
             e.Handled = Not _validacionesNumeros.EsNumero(e.KeyChar)
         End Sub
-        Private Sub rbPtoEmision001_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbPtoEmision001.CheckedChanged
-            VerificarNumeroSecuencialRetencion()
-            VerificarNumeroSecuencialLiquidacionCompra()
-        End Sub
-        Private Sub rbPtoEmision002_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbPtoEmision002.CheckedChanged
-            VerificarNumeroSecuencialRetencion()
-            VerificarNumeroSecuencialLiquidacionCompra()
-        End Sub
+        'Private Sub rbPtoEmision001_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbPtoEmision001.CheckedChanged
+        '    VerificarNumeroSecuencialRetencion()
+        '    VerificarNumeroSecuencialLiquidacionCompra()
+        'End Sub
+        'Private Sub rbPtoEmision002_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbPtoEmision002.CheckedChanged
+        '    VerificarNumeroSecuencialRetencion()
+        '    VerificarNumeroSecuencialLiquidacionCompra()
+        'End Sub
         Private Sub VerificarNumeroSecuencialRetencion()
-            _ptoEmisionRetencion = If(rbPtoEmision001.Checked, "001", "002")
-            If _ptoEmisionRetencion = "002" Then
-                _secuencialRetencion = _objetoComprobantesRetencion.BuscarMayorNumeroComprobanteRetencionCompra(_tipoCon) + 1
-                Select Case _secuencialRetencion.Length
-                    Case 1 : _secuencialRetencion = "00000000" & _secuencialRetencion
-                    Case 2 : _secuencialRetencion = "0000000" & _secuencialRetencion
-                    Case 3 : _secuencialRetencion = "000000" & _secuencialRetencion
-                    Case 4 : _secuencialRetencion = "00000" & _secuencialRetencion
-                    Case 5 : _secuencialRetencion = "0000" & _secuencialRetencion
-                    Case 6 : _secuencialRetencion = "000" & _secuencialRetencion
-                    Case 7 : _secuencialRetencion = "00" & _secuencialRetencion
-                    Case 8 : _secuencialRetencion = "0" & _secuencialRetencion
-                    Case 9 : _secuencialRetencion = _secuencialRetencion
+
+
+            _ptoEmisionRetencion = cbxPtoEmision.SelectedItem.ToString()
+
+            If _ptoEmisionRetencion = "002" OrElse _ptoEmisionRetencion = "003" OrElse _ptoEmisionRetencion = "004" Then
+
+                Select Case _ptoEmisionRetencion
+                    Case "002"
+                        _secuencialRetencion = _objetoComprobantesRetencion.BuscarMayorNumeroComprobanteRetencionCompra(_tipoCon) + 1
+                    Case "003"
+                        _secuencialRetencion = _objetoComprobantesRetencion.BuscarMayorNumeroComprobanteRetencionCompra3(_tipoCon) + 1
+                    Case "004"
+                        _secuencialRetencion = _objetoComprobantesRetencion.BuscarMayorNumeroComprobanteRetencionCompra4(_tipoCon) + 1
                 End Select
+                Dim secuencial As Long = CLng(_secuencialRetencion)
+                _secuencialRetencion = secuencial.ToString("D9")
+
                 txtNumeroComprobanteRetencion.Text = _establecimientoRetencion.ToString & _ptoEmisionRetencion.ToString & _secuencialRetencion.ToString
             Else
                 txtNumeroComprobanteRetencion.Text = "001001000000001"
                 _secuencialRetencion = "0000000001"
             End If
+
+
+
         End Sub
         Private Sub VerificarNumeroSecuencialLiquidacionCompra()
-            _ptoEmisionLiqCompra = If(rbPtoEmision001.Checked, "001", "002")
+
+            _ptoEmisionLiqCompra = cbxPtoEmision.SelectedItem.ToString()
             If cmbNombreParametroDocumentos.SelectedValue = 3 Then
-                If _ptoEmisionLiqCompra = "002" Then
+                If _ptoEmisionLiqCompra = "002" OrElse _ptoEmisionLiqCompra = "003" OrElse _ptoEmisionLiqCompra = "004" Then
 
-                    If _ptoEmisionLiqCompra = "001" Then
-                        _secuencialLiqCompra = CLng(_objetoComprobantesCompra.BuscarMayorNumeroLiquidacionCompra(_tipoCon)) + 1
-                    ElseIf _ptoEmisionLiqCompra = "002" Then
-                        _secuencialLiqCompra = CLng(_objetoComprobantesCompra.BuscarMayorNumeroLiquidacionCompraIt(_tipoCon)) + 1
-                    Else
-                        _secuencialLiqCompra = CLng(_objetoComprobantesCompra.BuscarMayorNumeroLiquidacionCompraIt(_tipoCon)) + 1
-                    End If
-
-                    Select Case _secuencialLiqCompra.Length
-                        Case 1 : _secuencialLiqCompra = "00000000" + _secuencialLiqCompra
-                        Case 2 : _secuencialLiqCompra = "0000000" + _secuencialLiqCompra
-                        Case 3 : _secuencialLiqCompra = "000000" + _secuencialLiqCompra
-                        Case 4 : _secuencialLiqCompra = "00000" + _secuencialLiqCompra
-                        Case 5 : _secuencialLiqCompra = "0000" + _secuencialLiqCompra
-                        Case 6 : _secuencialLiqCompra = "000" + _secuencialLiqCompra
-                        Case 7 : _secuencialLiqCompra = "00" + _secuencialLiqCompra
-                        Case 8 : _secuencialLiqCompra = "0" + _secuencialLiqCompra
-                        Case 9 : _secuencialLiqCompra = _secuencialLiqCompra
+                    Select Case _ptoEmisionLiqCompra
+                        Case "002"
+                            _secuencialLiqCompra = CLng(_objetoComprobantesCompra.BuscarMayorNumeroLiquidacionCompraIt(_tipoCon)) + 1
+                        Case "003"
+                            _secuencialLiqCompra = CLng(_objetoComprobantesCompra.BuscarMayorNumeroLiquidacionCompraIt3(_tipoCon)) + 1
+                        Case "004"
+                            _secuencialLiqCompra = CLng(_objetoComprobantesCompra.BuscarMayorNumeroLiquidacionCompraIt4(_tipoCon)) + 1
                     End Select
+
+                    Dim secuencial As Long = CLng(_secuencialLiqCompra)
+                    _secuencialLiqCompra = secuencial.ToString("D9")
+
                     txtNumeroComprobanteCompra.Text = _establecimientoLiqCompra.ToString + _ptoEmisionLiqCompra.ToString + _secuencialLiqCompra.ToString
                     txtNumAutoSRIComprobanteCompra.Text = _numAutoLiqCompraEmpresaCisepro
                 Else
@@ -802,6 +856,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     txtNumAutoSRIComprobanteCompra.Text = _numAutoLiqCompraEmpresaCisepro
                 End If
             End If
+
         End Sub
 
         Private Sub txtNumAutoSRIComprobanteCompra_Validated(ByVal sender As System.Object, ByVal e As EventArgs)
@@ -1189,14 +1244,14 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     _claveAccesoRetencion = ValidationForms.GenerarClaveAccesoComprobantesElectronicos("07", dtpComprobanteRetencion.Value, RucEmpresaCisepro, If(rbPruebas.Checked, 1, 2), _establecimientoRetencion, _ptoEmisionRetencion, _secuencialRetencion, If(rbTipoEmisionNormal.Checked, 1, 2))
                     _claveAccesoLiqCompra = ValidationForms.GenerarClaveAccesoComprobantesElectronicos("03", dtpFechaEmisionComprobanteCompra.Value, RucEmpresaCisepro, If(rbPruebas.Checked, 1, 2), _establecimientoLiqCompra, _ptoEmisionLiqCompra, _secuencialLiqCompra, If(rbTipoEmisionNormal.Checked, 1, 2))
 
-                    If (_ptoEmisionRetencion = "002" And chkActivarRetencion.Checked And _claveAccesoRetencion.ToString.Length <> 49) Then
-                        'MsgBox("HUBO UN PROBLEMA AL GENERAR LA CLAVE DE ACCESO RETENCIÓN!")
+                    If ((_ptoEmisionRetencion = "002" OrElse _ptoEmisionRetencion = "003" OrElse _ptoEmisionRetencion = "004") And chkActivarRetencion.Checked And _claveAccesoRetencion.ToString.Length <> 49) Then
+
                         KryptonMessageBox.Show("Hubo un problema al generar la clave de acceso retención", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         Return
                     End If
 
-                    If (_ptoEmisionLiqCompra = "002" And cmbNombreParametroDocumentos.SelectedValue = 3 And _claveAccesoLiqCompra.ToString.Length <> 49) Then
-                        'MsgBox("HUBO UN PROBLEMA AL GENERAR LA CLAVE DE ACCESO LIQUIDACIÓN COMPRA!")
+                    If ((_ptoEmisionLiqCompra = "002" OrElse _ptoEmisionLiqCompra = "003" OrElse _ptoEmisionLiqCompra = "004") And cmbNombreParametroDocumentos.SelectedValue = 3 And _claveAccesoLiqCompra.ToString.Length <> 49) Then
+
                         KryptonMessageBox.Show("Hubo un problema al generar la clave de acceso liquidación compra", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         Return
                     End If
@@ -1212,12 +1267,12 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     GuardarComprobanteCompra()
 
                     If chkActivarRetencion.Checked Then
-                        If _ptoEmisionRetencion = "002" And chkActivarRetencion.Checked Then ActualizarSecuencial()
+                        If (_ptoEmisionRetencion = "002" OrElse _ptoEmisionRetencion = "003" OrElse _ptoEmisionRetencion = "004") And chkActivarRetencion.Checked Then ActualizarSecuencial()
                         GuardarComprobanteRetencion()
                         GuardarDetalleComprobanteRetencion()
                     End If
 
-                    If _ptoEmisionLiqCompra = "002" And cmbNombreParametroDocumentos.SelectedValue = 3 Then ActualizarSecuencialLiquidacion()
+                    If (_ptoEmisionLiqCompra = "002" OrElse _ptoEmisionLiqCompra = "003" OrElse _ptoEmisionLiqCompra = "004") And cmbNombreParametroDocumentos.SelectedValue = 3 Then ActualizarSecuencialLiquidacion()
 
                     GuardarPagosComprobantesCompra()
                     GuardarPagosComprobantesCompraxNotaCredito()
@@ -1230,9 +1285,9 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
                     NuevoRegistroAsientoDiarioCompra()
 
-                    If txtIvaComprobanteCompra.Text > 0 Then NuevoRegistroAsientoDiarioIva() ' SI LA COMPRA GRABA IVA
+                    If txtIvaComprobanteCompra.Text > 0 Then NuevoRegistroAsientoDiarioIva(ObtenerPorcentajeIvaCombinado(), CDec(txtIvaComprobanteCompra.Text)) ' SI LA COMPRA GRABA IVA
 
-                    If txtIva5ComprobanteCompra.Text > 0 Then NuevoRegistroAsientoDiarioIva5() ' SI LA COMPRA GRABA IVA 5%
+                    If txtIva5ComprobanteCompra.Text > 0 Then NuevoRegistroAsientoDiarioIva(5, CDec(txtIvaComprobanteCompra.Text)) ' SI LA COMPRA GRABA IVA 5%
 
                     If chkActivarRetencion.Checked Then
                         If txtTotalComprobanteRetencion.Text > 0 Then
@@ -1270,8 +1325,10 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     If res(0) Then
                         _estado = 0
 
-                        If _ptoEmisionRetencion = "002" And chkActivarRetencion.Checked Then ExportarXmlRetencion()
-                        If _ptoEmisionLiqCompra = "002" And cmbNombreParametroDocumentos.SelectedValue = 3 Then ExportarXmlLiquidacionCompra()
+                        'If _ptoEmisionRetencion = "002" And chkActivarRetencion.Checked Then ExportarXmlRetencion()
+                        If (_ptoEmisionRetencion = "002" OrElse _ptoEmisionRetencion = "003" OrElse _ptoEmisionRetencion = "004") And chkActivarRetencion.Checked Then ExportarXmlRetencion()
+                        'If _ptoEmisionLiqCompra = "002" And cmbNombreParametroDocumentos.SelectedValue = 3 Then ExportarXmlLiquidacionCompra()
+                        If (_ptoEmisionLiqCompra = "002" OrElse _ptoEmisionLiqCompra = "003" OrElse _ptoEmisionLiqCompra = "004") And cmbNombreParametroDocumentos.SelectedValue = 3 Then ExportarXmlLiquidacionCompra()
 
                         lblIdComprobanteCompra.Text = _objetoComprobantesCompra.IdComprobante
                         DeshabilitadoInicio()
@@ -1397,11 +1454,14 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 .Subtotal0Comprobante = txtSubtotal0FacturaCompra.Text
                 .DescuentoComprobante = txtDescuentoFacturaCompra.Text
                 .SubtotalComprobante = txtSubTotalComprobanteCompra.Text
-                .PorcentajeIvaComprobante = PorcentajeIva
+
+                '.PorcentajeIvaComprobante = PorcentajeIva
                 If txtIva5ComprobanteCompra.Text.Length > 0 Then
                     .IvaComprobante = txtIva5ComprobanteCompra.Text
+                    .PorcentajeIvaComprobante = 5
                 Else
                     .IvaComprobante = txtIvaComprobanteCompra.Text
+                    .PorcentajeIvaComprobante = ObtenerPorcentajeIvaCombinado()
                 End If
                 '.IvaComprobante = txtIvaComprobanteCompra.Text
                 .Iva5Comprobante = txtIva5ComprobanteCompra.Text
@@ -1418,6 +1478,27 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             _sqlCommands.Add(_objetoComprobantesCompra.NuevoDetalleOrdenComprobanteCompraCommand())
 
         End Sub
+
+        Private Function ObtenerPorcentajeIvaCombinado() As Integer
+            Dim ivaCombinado As Decimal = CDec(txtIvaComprobanteCompra.Text)
+            Dim subtotalCombinado As Decimal = CDec(txtSubtotal12FacturaCompra.Text)
+
+            If subtotalCombinado = 0 Then Return 0
+
+            Dim porcentajeIva As Decimal = (ivaCombinado / subtotalCombinado) * 100
+
+            ' Redondear al porcentaje de IVA más cercano (8%, 12%, 15%)
+            Select Case porcentajeIva
+                Case Is <= 8
+                    Return 8
+                Case Is <= 12
+                    Return 12
+                Case Else
+                    Return 15
+            End Select
+        End Function
+
+
         Private Sub Auditoria(ByVal accion As String)
             _objAuditoria.IdAuditoria += 1
             _objAuditoria.AccionAuditoria = accion
@@ -1425,19 +1506,49 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         End Sub
 
         Private Sub ActualizarSecuencial()
-            With _objetoInformacionTributaria
-                .Id = CInt(_dtEmpresa.Rows(0)(8).ToString())
-                .SecuencialComprobanteRetencion = CLng(_secuencialRetencion)
-            End With
-            _sqlCommands.Add(_objetoInformacionTributaria.ActualizarSecuencialComprobanteRetencionInformacionTributariaCommand())
+            If cbxPtoEmision.SelectedItem.ToString() = "002" Then
+
+                With _objetoInformacionTributaria
+                    .Id = CInt(_dtEmpresa.Rows(0)(8).ToString())
+                    .SecuencialComprobanteRetencion = CLng(_secuencialRetencion)
+                End With
+                _sqlCommands.Add(_objetoInformacionTributaria.ActualizarSecuencialComprobanteRetencionInformacionTributariaCommand())
+            ElseIf cbxPtoEmision.SelectedItem.ToString() = "003" Then
+                With _objetoInformacionTributaria
+                    .Id = CInt(_dtEmpresa.Rows(0)(8).ToString())
+                    .SecuencialComprobanteRetencion = CLng(_secuencialRetencion)
+                End With
+                _sqlCommands.Add(_objetoInformacionTributaria.ActualizarSecuencialComprobanteRetencionInformacionTributariaCommand3())
+            ElseIf cbxPtoEmision.SelectedItem.ToString() = "004" Then
+                With _objetoInformacionTributaria
+                    .Id = CInt(_dtEmpresa.Rows(0)(8).ToString())
+                    .SecuencialComprobanteRetencion = CLng(_secuencialRetencion)
+                End With
+                _sqlCommands.Add(_objetoInformacionTributaria.ActualizarSecuencialComprobanteRetencionInformacionTributariaCommand4())
+            End If
             Auditoria("REGISTRO COMPROBANTE DE COMPRA ID: " & _objetoComprobantesCompra.IdComprobante & ", CTUALIZAR SECUENCIAL RETENCIÓN N°: " & _objetoInformacionTributaria.SecuencialComprobanteRetencion)
         End Sub
         Private Sub ActualizarSecuencialLiquidacion()
-            With _objetoInformacionTributaria
-                .Id = CInt(_dtEmpresa.Rows(0)(8).ToString())
-                .SecuencialLiquidacionCompra = CLng(_secuencialLiqCompra)
-            End With
-            _sqlCommands.Add(_objetoInformacionTributaria.ActualizarSecuencialLiquidacionCompraInformacionTributariaCommand())
+            If cbxPtoEmision.SelectedItem.ToString() = "002" Then
+                With _objetoInformacionTributaria
+                    .Id = CInt(_dtEmpresa.Rows(0)(8).ToString())
+                    .SecuencialLiquidacionCompra = CLng(_secuencialLiqCompra)
+                End With
+                _sqlCommands.Add(_objetoInformacionTributaria.ActualizarSecuencialLiquidacionCompraInformacionTributariaCommand())
+            ElseIf cbxPtoEmision.SelectedItem.ToString() = "003" Then
+                With _objetoInformacionTributaria
+                    .Id = CInt(_dtEmpresa.Rows(0)(8).ToString())
+                    .SecuencialLiquidacionCompra = CLng(_secuencialLiqCompra)
+                End With
+                _sqlCommands.Add(_objetoInformacionTributaria.ActualizarSecuencialLiquidacionCompraInformacionTributariaCommand3())
+            ElseIf cbxPtoEmision.SelectedItem.ToString() = "004" Then
+                With _objetoInformacionTributaria
+                    .Id = CInt(_dtEmpresa.Rows(0)(8).ToString())
+                    .SecuencialLiquidacionCompra = CLng(_secuencialLiqCompra)
+                End With
+                _sqlCommands.Add(_objetoInformacionTributaria.ActualizarSecuencialLiquidacionCompraInformacionTributariaCommand4())
+            End If
+
             'Auditoria("REGISTRO COMPROBANTE DE COMPRA ID: " & _objetoComprobantesCompra.IdComprobante & ", CTUALIZAR SECUENCIAL RETENCIÓN N°: " & _objetoInformacionTributaria.SecuencialComprobanteRetencion)
         End Sub
         Private Sub GuardarComprobanteRetencion()
@@ -1451,7 +1562,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 .TipoCompVentaComprobanteRetencion = cmbNombreParametroDocumentos.Text
                 .NumCompVentaComprobanteRetencion = Trim(txtNumeroComprobanteCompra.Text)
                 .TotalComprobanteRetencion = txtTotalComprobanteRetencion.Text
-                If _ptoEmisionRetencion = "002" Then
+                If _ptoEmisionRetencion = "002" OrElse _ptoEmisionRetencion = "003" OrElse _ptoEmisionRetencion = "004" Then
                     .EstadoComprobanteRetencion = 101 'Comprobante de retencion electronico emitido por compra
                 Else
                     .EstadoComprobanteRetencion = 1 'Comprobante de retencion fisico emitido por compra
@@ -1477,7 +1588,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     .ImpuestoDetalleComprobanteRetencion = dgvDetalleComprobanteRetencion.Rows(+indice).Cells(3).Value.ToString.ToUpper
                     .PorcentajeComprobanteRetencion = dgvDetalleComprobanteRetencion.Rows(+indice).Cells(4).Value
                     .ValorDetalleComprobanteRetencion = dgvDetalleComprobanteRetencion.Rows(+indice).Cells(5).Value
-                    If _ptoEmisionRetencion = "002" Then
+                    If _ptoEmisionRetencion = "002" OrElse _ptoEmisionRetencion = "003" OrElse _ptoEmisionRetencion = "004" Then
                         .EstadoDetalleComprobanteRetencion = 101 'Comprobante de retencion electronico emitido por compra
                     Else
                         .EstadoDetalleComprobanteRetencion = 1 'Comprobante de retencion fisico emitido por compra
@@ -1587,19 +1698,17 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             GuardarNumeroRegistroAsientoComprobanteCompra()
         End Sub
 
-        Private Sub NuevoRegistroAsientoDiarioIva()
+        Private Sub NuevoRegistroAsientoDiarioIva(porcentajeIva As Integer, valorIva As Decimal)
+
+            If Not _ivaCuentas.ContainsKey(porcentajeIva) Then
+                KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "La cuenta para el código de IVA " & porcentajeIva & " no ha sido definida en la BD!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+            End If
+
             With _objetoAsientoLibroDiario
                 .IdAsiento = _idld
                 .FechaAsiento = dtpFechaEmisionComprobanteCompra.Value
-                If PorcentajeIva = 12 Then
-                    .CodigoCuentaAsiento = "1010512"
-                ElseIf PorcentajeIva = 15 Then
-                    .CodigoCuentaAsiento = "1010513"
-                End If
 
-                'ElseIf PorcentajeIva = 5 Then
-                '.CodigoCuentaAsiento = "1010514"
-
+                .CodigoCuentaAsiento = _ivaCuentas(porcentajeIva)
                 .NombreCuentaAsiento = _objetoPlanCuentas.BuscarDetallePlanCuentasXcodigo(_tipoCon, .CodigoCuentaAsiento).Trim
                 .ConceptoAsiento = "IVA PAGADO POR COMPRA"
                 .DetalleTransaccionAsiento = "ID CC: " & _objetoComprobantesCompra.IdComprobante & " PROVEEDOR: " & txtNombreComercialProveedorGeneral.Text.ToString & " " & cmbNombreParametroDocumentos.SelectedValue.ToString & " NRO: " & txtNumeroComprobanteCompra.Text.ToString & " MES: " & dtpFechaEmisionComprobanteCompra.Value.Month.ToString
@@ -1609,11 +1718,11 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 .CentroCostoAsiento = _objetoCentroCosto.BuscarDetalleCentroCostoXIdCentroCosto(_tipoCon, 2)
                 If cmbNombreParametroDocumentos.SelectedValue = 7 Then ' si es nota de credito
                     .ValorDebeAsiento = 0
-                    .ValorHaberAsiento = CDec(txtIvaComprobanteCompra.Text)
+                    .ValorHaberAsiento = valorIva  'CDec(txtIvaComprobanteCompra.Text)
                     .DebeHaberAsiento = 2  ' DEBE=1 / HABER=2 
                     _valHaber += .ValorHaberAsiento
                 Else
-                    .ValorDebeAsiento = CDec(txtIvaComprobanteCompra.Text)
+                    .ValorDebeAsiento = valorIva 'CDec(txtIvaComprobanteCompra.Text)
                     .ValorHaberAsiento = 0
                     .DebeHaberAsiento = 1  ' DEBE=1 / HABER=1 
                     _valDebe += .ValorDebeAsiento
@@ -1630,42 +1739,42 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 "DET: " & _objetoAsientoLibroDiario.DetalleTransaccionAsiento & ", DEB: " & _objetoAsientoLibroDiario.ValorDebeAsiento & ", HAB: " & _objetoAsientoLibroDiario.ValorHaberAsiento)
         End Sub
 
-        Private Sub NuevoRegistroAsientoDiarioIva5()
-            With _objetoAsientoLibroDiario
-                .IdAsiento = _idld
-                .FechaAsiento = dtpFechaEmisionComprobanteCompra.Value
+        'Private Sub NuevoRegistroAsientoDiarioIva5()
+        '    With _objetoAsientoLibroDiario
+        '        .IdAsiento = _idld
+        '        .FechaAsiento = dtpFechaEmisionComprobanteCompra.Value
 
-                .CodigoCuentaAsiento = "1010514"
+        '        .CodigoCuentaAsiento = "1010514"
 
-                .NombreCuentaAsiento = _objetoPlanCuentas.BuscarDetallePlanCuentasXcodigo(_tipoCon, .CodigoCuentaAsiento).Trim
-                .ConceptoAsiento = "IVA PAGADO POR COMPRA"
-                .DetalleTransaccionAsiento = "ID CC: " & _objetoComprobantesCompra.IdComprobante & " PROVEEDOR: " & txtNombreComercialProveedorGeneral.Text.ToString & " " & cmbNombreParametroDocumentos.SelectedValue.ToString & " NRO: " & txtNumeroComprobanteCompra.Text.ToString & " MES: " & dtpFechaEmisionComprobanteCompra.Value.Month.ToString
-                .ProvinciaAsiento = "EL ORO"
-                .CiudadAsiento = "MACHALA"
-                .ParroquiaAsiento = "MACHALA"
-                .CentroCostoAsiento = _objetoCentroCosto.BuscarDetalleCentroCostoXIdCentroCosto(_tipoCon, 2)
-                If cmbNombreParametroDocumentos.SelectedValue = 7 Then ' si es nota de credito
-                    .ValorDebeAsiento = 0
-                    .ValorHaberAsiento = CDec(txtIvaComprobanteCompra.Text)
-                    .DebeHaberAsiento = 2  ' DEBE=1 / HABER=2 
-                    _valHaber += .ValorHaberAsiento
-                Else
-                    .ValorDebeAsiento = CDec(txtIva5ComprobanteCompra.Text)
-                    .ValorHaberAsiento = 0
-                    .DebeHaberAsiento = 1  ' DEBE=1 / HABER=1 
-                    _valDebe += .ValorDebeAsiento
-                End If
-                .NumeroRegistroAsiento = _objetoNumeroRegistro.NumeroRegistro
-                .ConciliarAsiento = 1
-                .EstadoAsiento = 1
-                .IdLibroDiario = _objetoLibroDiario.IdLibroDiario
-                .EstadoMayorAsiento = 0
-            End With
-            _sqlCommands.Add(_objetoAsientoLibroDiario.NuevoRegistroAsientoLibroDiarioCommand())
-            _idld += 1
-            Auditoria("REGISTRO COMPROBANTE DE COMPRA ID: " & _objetoComprobantesCompra.IdComprobante & ", ASIENTO DIARIO N°: " & _objetoAsientoLibroDiario.NumeroRegistroAsiento & ", FECHA: " & _objetoAsientoLibroDiario.FechaAsiento &
-                "DET: " & _objetoAsientoLibroDiario.DetalleTransaccionAsiento & ", DEB: " & _objetoAsientoLibroDiario.ValorDebeAsiento & ", HAB: " & _objetoAsientoLibroDiario.ValorHaberAsiento)
-        End Sub
+        '        .NombreCuentaAsiento = _objetoPlanCuentas.BuscarDetallePlanCuentasXcodigo(_tipoCon, .CodigoCuentaAsiento).Trim
+        '        .ConceptoAsiento = "IVA PAGADO POR COMPRA"
+        '        .DetalleTransaccionAsiento = "ID CC: " & _objetoComprobantesCompra.IdComprobante & " PROVEEDOR: " & txtNombreComercialProveedorGeneral.Text.ToString & " " & cmbNombreParametroDocumentos.SelectedValue.ToString & " NRO: " & txtNumeroComprobanteCompra.Text.ToString & " MES: " & dtpFechaEmisionComprobanteCompra.Value.Month.ToString
+        '        .ProvinciaAsiento = "EL ORO"
+        '        .CiudadAsiento = "MACHALA"
+        '        .ParroquiaAsiento = "MACHALA"
+        '        .CentroCostoAsiento = _objetoCentroCosto.BuscarDetalleCentroCostoXIdCentroCosto(_tipoCon, 2)
+        '        If cmbNombreParametroDocumentos.SelectedValue = 7 Then ' si es nota de credito
+        '            .ValorDebeAsiento = 0
+        '            .ValorHaberAsiento = CDec(txtIvaComprobanteCompra.Text)
+        '            .DebeHaberAsiento = 2  ' DEBE=1 / HABER=2 
+        '            _valHaber += .ValorHaberAsiento
+        '        Else
+        '            .ValorDebeAsiento = CDec(txtIva5ComprobanteCompra.Text)
+        '            .ValorHaberAsiento = 0
+        '            .DebeHaberAsiento = 1  ' DEBE=1 / HABER=1 
+        '            _valDebe += .ValorDebeAsiento
+        '        End If
+        '        .NumeroRegistroAsiento = _objetoNumeroRegistro.NumeroRegistro
+        '        .ConciliarAsiento = 1
+        '        .EstadoAsiento = 1
+        '        .IdLibroDiario = _objetoLibroDiario.IdLibroDiario
+        '        .EstadoMayorAsiento = 0
+        '    End With
+        '    _sqlCommands.Add(_objetoAsientoLibroDiario.NuevoRegistroAsientoLibroDiarioCommand())
+        '    _idld += 1
+        '    Auditoria("REGISTRO COMPROBANTE DE COMPRA ID: " & _objetoComprobantesCompra.IdComprobante & ", ASIENTO DIARIO N°: " & _objetoAsientoLibroDiario.NumeroRegistroAsiento & ", FECHA: " & _objetoAsientoLibroDiario.FechaAsiento &
+        '        "DET: " & _objetoAsientoLibroDiario.DetalleTransaccionAsiento & ", DEB: " & _objetoAsientoLibroDiario.ValorDebeAsiento & ", HAB: " & _objetoAsientoLibroDiario.ValorHaberAsiento)
+        'End Sub
 
         ' retenciones
         Private Sub NuevoRegistroAsientoDiarioRetencion()
@@ -1926,14 +2035,22 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 xml += "<totalImpuesto>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=- DETALLE DE CADA IMPUESTO =-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<codigo>2</codigo>" & vbNewLine ' IVA => 2 / ICE => 3 / IRBPNR => 5
 
-                If PorcentajeIva = 14 Then xml += "<codigoPorcentaje>3</codigoPorcentaje>" & vbNewLine ' IVA: 0% => 0 / 12% => 2/ 14% => 3 / NO OBJETO DE IMPUESTO => 6 / EXCENTO DE IVA => 7
-                If PorcentajeIva = 12 Then xml += "<codigoPorcentaje>2</codigoPorcentaje>" & vbNewLine
-                If PorcentajeIva = 0 Then xml += "<codigoPorcentaje>0</codigoPorcentaje>" & vbNewLine
-                If PorcentajeIva = 15 Then xml += "<codigoPorcentaje>4</codigoPorcentaje>" & vbNewLine
+                'If PorcentajeIva = 14 Then xml += "<codigoPorcentaje>3</codigoPorcentaje>" & vbNewLine ' IVA: 0% => 0 / 12% => 2/ 14% => 3 / NO OBJETO DE IMPUESTO => 6 / EXCENTO DE IVA => 7
+                'If PorcentajeIva = 12 Then xml += "<codigoPorcentaje>2</codigoPorcentaje>" & vbNewLine
+                'If PorcentajeIva = 0 Then xml += "<codigoPorcentaje>0</codigoPorcentaje>" & vbNewLine
+                'If PorcentajeIva = 15 Then xml += "<codigoPorcentaje>4</codigoPorcentaje>" & vbNewLine
+                'If PorcentajeIva = 8 Then xml += "<codigoPorcentaje>8</codigoPorcentaje>" & vbNewLine
+
+                ' Obtener el porcentaje de IVA dinámicamente
+                Dim porcentajeIva As Integer = ObtenerPorcentajeIvaCombinado()
+                Dim codigoPorcentajeIva As String = ObtenerCodigoPorcentajeIva(porcentajeIva)
+                xml += "<codigoPorcentaje>" & codigoPorcentajeIva & "</codigoPorcentaje>" & vbNewLine
+
                 'xml += "<descuentoAdicional>0.00</descuentoAdicional>" & vbNewLine     'cambio 2024
                 baseImponibles = Math.Round(CDec(txtSubtotal12FacturaCompra.Text), 2, MidpointRounding.ToEven) - Math.Round(CDec(txtDescuentoFacturaCompra.Text), 2, MidpointRounding.ToEven) & vbNewLine
                 xml += "<baseImponible>" & baseImponibles & "</baseImponible>" & vbNewLine
-                xml += "<tarifa>" & PorcentajeIva & "</tarifa>" & vbNewLine
+                'xml += "<tarifa>" & PorcentajeIva & "</tarifa>" & vbNewLine
+                xml += "<tarifa>" & porcentajeIva & "</tarifa>" & vbNewLine
                 xml += "<valor>" & Math.Round(CDec(txtIvaComprobanteCompra.Text), 2, MidpointRounding.ToEven) & "</valor>" & vbNewLine
                 xml += "</totalImpuesto>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "</totalConImpuestos>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -1965,14 +2082,18 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                         xml += "<codigo>2</codigo>" & vbNewLine ' IVA => 2 / ICE => 3 / IRBPNR => 5
                         If dgvAsientosDiario.Rows(indiceDetalle).Cells(4).Value = "S" Then
 
-                            If PorcentajeIva = 15 Then xml += "<codigoPorcentaje>4</codigoPorcentaje>" & vbNewLine
-                            If PorcentajeIva = 14 Then xml += "<codigoPorcentaje>3</codigoPorcentaje>" & vbNewLine
-                            If PorcentajeIva = 12 Then xml += "<codigoPorcentaje>2</codigoPorcentaje>" & vbNewLine
-                            If PorcentajeIva = 0 Then xml += "<codigoPorcentaje>0</codigoPorcentaje>" & vbNewLine
+                            'If PorcentajeIva = 15 Then xml += "<codigoPorcentaje>4</codigoPorcentaje>" & vbNewLine
+                            'If PorcentajeIva = 14 Then xml += "<codigoPorcentaje>3</codigoPorcentaje>" & vbNewLine
+                            'If PorcentajeIva = 12 Then xml += "<codigoPorcentaje>2</codigoPorcentaje>" & vbNewLine
+                            'If PorcentajeIva = 0 Then xml += "<codigoPorcentaje>0</codigoPorcentaje>" & vbNewLine
 
-                            xml += "<tarifa>" & PorcentajeIva & "</tarifa>" & vbNewLine
+                            Dim codigoPorcentajeDetalle As String = ObtenerCodigoPorcentajeIva(porcentajeIva)
+                            xml += "<codigoPorcentaje>" & codigoPorcentajeDetalle & "</codigoPorcentaje>" & vbNewLine
+                            xml += "<tarifa>" & porcentajeIva & "</tarifa>" & vbNewLine
+                            'xml += "<tarifa>" & PorcentajeIva & "</tarifa>" & vbNewLine
                             xml += "<baseImponible>" & dgvAsientosDiario.Rows(indiceDetalle).Cells(3).Value & "</baseImponible>" & vbNewLine
-                            Dim valorIvaDetalle = (CDec(dgvAsientosDiario.Rows(indiceDetalle).Cells(3).Value) * PorcentajeIva) / 100
+                            'Dim valorIvaDetalle = (CDec(dgvAsientosDiario.Rows(indiceDetalle).Cells(3).Value) * porcentajeIva) / 100
+                            Dim valorIvaDetalle = (CDec(dgvAsientosDiario.Rows(indiceDetalle).Cells(3).Value) * porcentajeIva) / 100
                             xml += "<valor>" & Math.Round(valorIvaDetalle, 2, MidpointRounding.ToEven) & "</valor>" & vbNewLine
                         Else
                             xml += "<codigoPorcentaje>0</codigoPorcentaje>" & vbNewLine ' IVA: 0% => 0 / 12% => 2/ 14% => 3 / NO OBJETO DE IMPUESTO => 6 / EXCENTO DE IVA => 7
@@ -2020,8 +2141,22 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             End Try
         End Sub
 
-
-
+        Private Function ObtenerCodigoPorcentajeIva(porcentajeIva As Integer) As String
+            Select Case porcentajeIva
+                Case 14
+                    Return "3" ' IVA 14%
+                Case 12
+                    Return "2" ' IVA 12%
+                Case 8
+                    Return "8" ' IVA 8% 
+                Case 15
+                    Return "4" ' IVA 15%
+                Case 0
+                    Return "0" ' IVA 0%
+                Case Else
+                    Return "6" ' NO OBJETO DE IMPUESTO
+            End Select
+        End Function
 
 
         Private Sub btnOrdenCompra_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -2269,6 +2404,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     Case 5
                         dgvAsientosDiario.CurrentRow.Cells("IVA").Value = "S"
                         'PorcentajeIva = 5
+                    Case 8
+                        dgvAsientosDiario.CurrentRow.Cells("IVA").Value = "S"
                     Case 10
                         dgvAsientosDiario.CurrentRow.Cells("IVA").Value = "S"
                         'PorcentajeIva = 10
@@ -2353,6 +2490,11 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
             btnGuardar.Enabled = True
             btnGuardarEnFondoRotativo.Enabled = True
+        End Sub
+
+        Private Sub cbxPtoEmision_SelectedValueChanged(sender As Object, e As EventArgs) Handles cbxPtoEmision.SelectedValueChanged
+            VerificarNumeroSecuencialRetencion()
+            VerificarNumeroSecuencialLiquidacionCompra()
         End Sub
     End Class
 End Namespace

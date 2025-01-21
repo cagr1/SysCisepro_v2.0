@@ -50,10 +50,19 @@ Namespace CONTABILIDAD.COMPROBANTES_RETENCION
         End Function
 
         Public Function BuscarMayorNumeroComprobanteRetencionCompra(ByVal tipoCon As TipoConexion) As Integer
-            Dim data = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "BuscarMayorNumeroComprobanteRetencionCompra", True) 
+            Dim data = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "BuscarMayorNumeroComprobanteRetencionCompra", True)
             Return If(data.Rows.Count = 0, 0, If(IsDBNull(data.Rows(0)(0)), 0, CInt(data.Rows(0)(0))))
         End Function
 
+        Public Function BuscarMayorNumeroComprobanteRetencionCompra3(ByVal tipoCon As TipoConexion) As Integer
+            Dim data = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "sp_BuscarMayorNumeroComprobanteRetencionCompra3", True)
+            Return If(data.Rows.Count = 0, 0, If(IsDBNull(data.Rows(0)(0)), 0, CInt(data.Rows(0)(0))))
+        End Function
+
+        Public Function BuscarMayorNumeroComprobanteRetencionCompra4(ByVal tipoCon As TipoConexion) As Integer
+            Dim data = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "sp_BuscarMayorNumeroComprobanteRetencionCompra4", True)
+            Return If(data.Rows.Count = 0, 0, If(IsDBNull(data.Rows(0)(0)), 0, CInt(data.Rows(0)(0))))
+        End Function
         Public Function AnularComprobanteRetencionVentaByIdCompra() As SqlCommand
             Dim comando = New SqlCommand
             With comando

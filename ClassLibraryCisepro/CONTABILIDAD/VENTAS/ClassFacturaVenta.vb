@@ -181,6 +181,16 @@ Namespace CONTABILIDAD.VENTAS
             Return If(data.Rows.Count = 0, 0, If(IsDBNull(data.Rows(0)(0)), 0, CInt(data.Rows(0)(0))))
         End Function
 
+        Public Function BuscarMayorNumeroFacturaVentaIt3(ByVal tipoCon As TipoConexion) As Integer
+            Dim data = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "sp_BuscarMayorNumeroFacturaVentaIT3", True)
+            Return If(data.Rows.Count = 0, 0, If(IsDBNull(data.Rows(0)(0)), 0, CInt(data.Rows(0)(0))))
+        End Function
+
+        Public Function BuscarMayorNumeroFacturaVentaIt4(ByVal tipoCon As TipoConexion) As Integer
+            Dim data = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "sp_BuscarMayorNumeroFacturaVentaIT4", True)
+            Return If(data.Rows.Count = 0, 0, If(IsDBNull(data.Rows(0)(0)), 0, CInt(data.Rows(0)(0))))
+        End Function
+
         Public Function BuscarTotalFacturaVentaXRangoFechas(ByVal tipoCon As TipoConexion, ByVal parametroFechaInicial As DateTime, ByVal parametroFechaFinal As DateTime) As String
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"FECHA_INICIAL", SqlDbType.DateTime, parametroFechaInicial})

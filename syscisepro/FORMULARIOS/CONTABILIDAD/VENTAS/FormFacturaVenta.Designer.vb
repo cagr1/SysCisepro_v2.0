@@ -78,8 +78,6 @@
             Me.rbTipoEmisionIndisponibilidadSistema = New System.Windows.Forms.RadioButton()
             Me.rbTipoEmisionNormal = New System.Windows.Forms.RadioButton()
             Me.dgvFacturaVenta = New System.Windows.Forms.DataGridView()
-            Me.rbPtoEmision001 = New System.Windows.Forms.RadioButton()
-            Me.rbPtoEmision002 = New System.Windows.Forms.RadioButton()
             Me.cbxConvenio = New System.Windows.Forms.ComboBox()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
             Me.btnNuevo = New System.Windows.Forms.ToolStripMenuItem()
@@ -132,6 +130,9 @@
             Me.KryptonGroupBox6 = New Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonGroupBox7 = New Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonGroupBox8 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.cbxPtoEmision = New Krypton.Toolkit.KryptonComboBox()
+            Me.rbPtoEmision001 = New System.Windows.Forms.RadioButton()
+            Me.rbPtoEmision002 = New System.Windows.Forms.RadioButton()
             CType(Me.dgvDetalleFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
@@ -164,6 +165,7 @@
             CType(Me.KryptonGroupBox8.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox8.Panel.SuspendLayout()
             Me.KryptonGroupBox8.SuspendLayout()
+            CType(Me.cbxPtoEmision, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'cmbIva
@@ -653,32 +655,6 @@
             Me.dgvFacturaVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvFacturaVenta.Size = New System.Drawing.Size(268, 634)
             Me.dgvFacturaVenta.TabIndex = 89
-            '
-            'rbPtoEmision001
-            '
-            Me.rbPtoEmision001.AutoSize = True
-            Me.rbPtoEmision001.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.rbPtoEmision001.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.rbPtoEmision001.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbPtoEmision001.Location = New System.Drawing.Point(82, 5)
-            Me.rbPtoEmision001.Name = "rbPtoEmision001"
-            Me.rbPtoEmision001.Size = New System.Drawing.Size(43, 17)
-            Me.rbPtoEmision001.TabIndex = 2
-            Me.rbPtoEmision001.Text = "001"
-            Me.rbPtoEmision001.UseVisualStyleBackColor = False
-            '
-            'rbPtoEmision002
-            '
-            Me.rbPtoEmision002.AutoSize = True
-            Me.rbPtoEmision002.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.rbPtoEmision002.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.rbPtoEmision002.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbPtoEmision002.Location = New System.Drawing.Point(127, 5)
-            Me.rbPtoEmision002.Name = "rbPtoEmision002"
-            Me.rbPtoEmision002.Size = New System.Drawing.Size(43, 17)
-            Me.rbPtoEmision002.TabIndex = 3
-            Me.rbPtoEmision002.Text = "002"
-            Me.rbPtoEmision002.UseVisualStyleBackColor = False
             '
             'cbxConvenio
             '
@@ -1249,9 +1225,8 @@
             '
             'KryptonGroupBox6.Panel
             '
+            Me.KryptonGroupBox6.Panel.Controls.Add(Me.cbxPtoEmision)
             Me.KryptonGroupBox6.Panel.Controls.Add(Me.KryptonLabel1)
-            Me.KryptonGroupBox6.Panel.Controls.Add(Me.rbPtoEmision001)
-            Me.KryptonGroupBox6.Panel.Controls.Add(Me.rbPtoEmision002)
             Me.KryptonGroupBox6.Size = New System.Drawing.Size(183, 36)
             Me.KryptonGroupBox6.TabIndex = 197
             Me.KryptonGroupBox6.Values.Heading = ""
@@ -1288,6 +1263,44 @@
             Me.KryptonGroupBox8.TabIndex = 199
             Me.KryptonGroupBox8.Values.Heading = ""
             '
+            'cbxPtoEmision
+            '
+            Me.cbxPtoEmision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+            Me.cbxPtoEmision.DropDownWidth = 52
+            Me.cbxPtoEmision.IntegralHeight = False
+            Me.cbxPtoEmision.Items.AddRange(New Object() {"001", "002", "003", "004"})
+            Me.cbxPtoEmision.Location = New System.Drawing.Point(92, 4)
+            Me.cbxPtoEmision.Name = "cbxPtoEmision"
+            Me.cbxPtoEmision.Size = New System.Drawing.Size(63, 21)
+            Me.cbxPtoEmision.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near
+            Me.cbxPtoEmision.TabIndex = 200
+            '
+            'rbPtoEmision001
+            '
+            Me.rbPtoEmision001.AutoSize = True
+            Me.rbPtoEmision001.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.rbPtoEmision001.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbPtoEmision001.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbPtoEmision001.Location = New System.Drawing.Point(73, 45)
+            Me.rbPtoEmision001.Name = "rbPtoEmision001"
+            Me.rbPtoEmision001.Size = New System.Drawing.Size(43, 17)
+            Me.rbPtoEmision001.TabIndex = 200
+            Me.rbPtoEmision001.Text = "001"
+            Me.rbPtoEmision001.UseVisualStyleBackColor = False
+            '
+            'rbPtoEmision002
+            '
+            Me.rbPtoEmision002.AutoSize = True
+            Me.rbPtoEmision002.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.rbPtoEmision002.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbPtoEmision002.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbPtoEmision002.Location = New System.Drawing.Point(118, 45)
+            Me.rbPtoEmision002.Name = "rbPtoEmision002"
+            Me.rbPtoEmision002.Size = New System.Drawing.Size(43, 17)
+            Me.rbPtoEmision002.TabIndex = 201
+            Me.rbPtoEmision002.Text = "002"
+            Me.rbPtoEmision002.UseVisualStyleBackColor = False
+            '
             'FormFacturaVenta
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1307,6 +1320,8 @@
             Me.Controls.Add(Me.KryptonGroupBox2)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.Panel2)
+            Me.Controls.Add(Me.rbPtoEmision001)
+            Me.Controls.Add(Me.rbPtoEmision002)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormFacturaVenta"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -1354,6 +1369,7 @@
             Me.KryptonGroupBox8.Panel.PerformLayout()
             CType(Me.KryptonGroupBox8, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox8.ResumeLayout(False)
+            CType(Me.cbxPtoEmision, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -1389,8 +1405,6 @@
         Friend WithEvents rbProduccion As System.Windows.Forms.RadioButton
         Friend WithEvents dgvFacturaVenta As System.Windows.Forms.DataGridView
         Friend WithEvents lblCodigoFormasPago As System.Windows.Forms.Label
-        Friend WithEvents rbPtoEmision001 As System.Windows.Forms.RadioButton
-        Friend WithEvents rbPtoEmision002 As System.Windows.Forms.RadioButton
         Friend WithEvents cbxConvenio As System.Windows.Forms.ComboBox
         Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
         Friend WithEvents btnNuevo As System.Windows.Forms.ToolStripMenuItem
@@ -1452,5 +1466,8 @@
         Friend WithEvents KryptonGroupBox6 As Krypton.Toolkit.KryptonGroupBox
         Friend WithEvents KryptonGroupBox7 As Krypton.Toolkit.KryptonGroupBox
         Friend WithEvents KryptonGroupBox8 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents cbxPtoEmision As Krypton.Toolkit.KryptonComboBox
+        Friend WithEvents rbPtoEmision001 As RadioButton
+        Friend WithEvents rbPtoEmision002 As RadioButton
     End Class
 End Namespace

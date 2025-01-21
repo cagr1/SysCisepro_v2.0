@@ -36,15 +36,15 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=videomonitoreo;Initial Catalog=SYSSEPORTPAC;Persist Security Info=True;User ID=syscisepro;Password=syscisepro;TrustServerCertificate=True</Value>
     </Setting>
+    <Setting Name="ColorCisepro" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">13, 71, 161</Value>
+    </Setting>
     <Setting Name="SysCiseproConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
   &lt;ConnectionString&gt;Data Source=192.168.0.137;Initial Catalog=SYSCISEPRO;Persist Security Info=True;User ID=syscisepro;Password=syscisepro&lt;/ConnectionString&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=192.168.0.137;Initial Catalog=SYSCISEPRO;Persist Security Info=True;User ID=syscisepro;Password=syscisepro</Value>
-    </Setting>
-    <Setting Name="ColorCisepro" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">13, 71, 161</Value>
     </Setting>
   </Settings>
 </SettingsFile>
