@@ -319,7 +319,13 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                     Next
                     c += 1
                 Next
-                worksheet.Range("A" & (c - 1) & ":" & ic & indc).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                'worksheet.Range("A" & (c - 1) & ":" & ic & indc).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+
+                ' Agregar totales de dgvIngresos (DEBE y HABER)
+                worksheet.Cells(c, 1).Value = "TOTAL INGRESOS"
+                worksheet.Cells(c, 1).Font.Bold = True
+                worksheet.Cells(c, dgvIngresos.Columns("DEBE").Index + 1).Value = txtDeudorIngresos.Text
+                worksheet.Cells(c, dgvIngresos.Columns("HABER").Index + 1).Value = txtAcreedorIngresos.Text
 
 
                 'Aca se ingresa las columnas
@@ -350,48 +356,58 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                     Next
                     c += 1
                 Next
-                worksheet.Range("A" & (c - 1) & ":" & ic & indc).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                'worksheet.Range("A" & (c - 1) & ":" & ic & indc).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
 
+                ' Agregar totales de dgvEgresos (DEBE y HABER)
+                worksheet.Cells(c, 1).Value = "TOTAL EGRESOS"
+                worksheet.Cells(c, 1).Font.Bold = True
+                worksheet.Cells(c, dgvEgresos.Columns("DEBE").Index + 1).Value = txtDeudorEgresos.Text
+                worksheet.Cells(c, dgvEgresos.Columns("HABER").Index + 1).Value = txtAcreedorEgresos.Text
 
-                Dim dei = txtDeudorIngresos.Text
-                Dim aci = txtAcreedorIngresos.Text
-                Dim toi = txtIngresos.Text
-
-                Dim deg = txtDeudorEgresos.Text
-                Dim acg = txtAcreedorEgresos.Text
-                Dim tog = txtEgresos.Text
-
-                ' TOTALES, ETC
-                Dim foot = c + 2
-                worksheet.Cells(foot, 7).Value = "TOTAL INGRESOS DEUDOR"
-                worksheet.Cells(foot, 7).Font.Bold = True
-                worksheet.Cells(foot, 8).Value = dei
-
-                worksheet.Cells(foot + 1, 7).Value = "TOTAL INGRESOS ACREEDOR"
-                worksheet.Cells(foot + 1, 7).Font.Bold = True
-                worksheet.Cells(foot + 1, 8).Value = aci
-
-                worksheet.Cells(foot + 2, 7).Value = "TOTAL INGRESOS"
-                worksheet.Cells(foot + 2, 7).Font.Bold = True
-                worksheet.Cells(foot + 2, 8).Value = toi
-
-                worksheet.Cells(foot + 4, 7).Value = "TOTAL EGRESOS DEUDOR"
-                worksheet.Cells(foot + 4, 7).Font.Bold = True
-                worksheet.Cells(foot + 4, 8).Value = deg
-
-                worksheet.Cells(foot + 5, 7).Value = "TOTAL EGRESOS ACREEDOR"
-                worksheet.Cells(foot + 5, 7).Font.Bold = True
-                worksheet.Cells(foot + 5, 8).Value = acg
-
-                worksheet.Cells(foot + 6, 7).Value = "TOTAL EGRESOS"
-                worksheet.Cells(foot + 6, 7).Font.Bold = True
-                worksheet.Cells(foot + 6, 8).Value = tog
-
-                worksheet.Cells(foot + 8, 7).Value = "TOTAL REPORTE"
-                worksheet.Cells(foot + 8, 7).Font.Bold = True
-                worksheet.Cells(foot + 8, 8).Value = txtTotal.Text
-
+                ' Ajustar columnas
                 worksheet.Range("A1:" & ic & (dgvIngresos.RowCount + dgvEgresos.RowCount + 50)).Columns.AutoFit()
+
+
+
+                'Dim dei = txtDeudorIngresos.Text
+                'Dim aci = txtAcreedorIngresos.Text
+                'Dim toi = txtIngresos.Text
+
+                'Dim deg = txtDeudorEgresos.Text
+                'Dim acg = txtAcreedorEgresos.Text
+                'Dim tog = txtEgresos.Text
+
+                '' TOTALES, ETC
+                'Dim foot = c + 2
+                'worksheet.Cells(foot, 7).Value = "TOTAL INGRESOS DEUDOR"
+                'worksheet.Cells(foot, 7).Font.Bold = True
+                'worksheet.Cells(foot, 8).Value = dei
+
+                'worksheet.Cells(foot + 1, 7).Value = "TOTAL INGRESOS ACREEDOR"
+                'worksheet.Cells(foot + 1, 7).Font.Bold = True
+                'worksheet.Cells(foot + 1, 8).Value = aci
+
+                'worksheet.Cells(foot + 2, 7).Value = "TOTAL INGRESOS"
+                'worksheet.Cells(foot + 2, 7).Font.Bold = True
+                'worksheet.Cells(foot + 2, 8).Value = toi
+
+                'worksheet.Cells(foot + 4, 7).Value = "TOTAL EGRESOS DEUDOR"
+                'worksheet.Cells(foot + 4, 7).Font.Bold = True
+                'worksheet.Cells(foot + 4, 8).Value = deg
+
+                'worksheet.Cells(foot + 5, 7).Value = "TOTAL EGRESOS ACREEDOR"
+                'worksheet.Cells(foot + 5, 7).Font.Bold = True
+                'worksheet.Cells(foot + 5, 8).Value = acg
+
+                'worksheet.Cells(foot + 6, 7).Value = "TOTAL EGRESOS"
+                'worksheet.Cells(foot + 6, 7).Font.Bold = True
+                'worksheet.Cells(foot + 6, 8).Value = tog
+
+                'worksheet.Cells(foot + 8, 7).Value = "TOTAL REPORTE"
+                'worksheet.Cells(foot + 8, 7).Font.Bold = True
+                'worksheet.Cells(foot + 8, 8).Value = txtTotal.Text
+
+                'worksheet.Range("A1:" & ic & (dgvIngresos.RowCount + dgvEgresos.RowCount + 50)).Columns.AutoFit()
 
                 app.DisplayAlerts = False
                 app.Visible = True

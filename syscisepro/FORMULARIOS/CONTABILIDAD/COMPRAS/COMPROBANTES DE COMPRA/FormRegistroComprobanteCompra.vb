@@ -1084,7 +1084,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                             cue = porret.Rows(0)(2)
                         End If
                         Dim num As Decimal = CDbl(txtIvaComprobanteCompra.Text) + CDbl(txtIva5ComprobanteCompra.Text)
-                        Dim response = InputBox("INGRESE LA BASE IMPONIBLE", "COMPROBANTE RETENCIÓN", num)
+                        'Dim response = InputBox("INGRESE LA BASE IMPONIBLE", "COMPROBANTE RETENCIÓN", num)
+                        Dim response = KryptonInputBox.Show("Ingrese la base imponible", "Comprobante retención", num.ToString())
                         If IsNumeric(response) Then
                             Dim valiva = Math.Round((CDbl(response) * porcent) / 100, 2, MidpointRounding.AwayFromZero)
                             dgvDetalleComprobanteRetencion.Rows.Add(dtpComprobanteRetencion.Value.Year, _objetoConceptos.BuscarCodigoConceptoXIdConcepto(_tipoCon, CInt(cmbConcepto.SelectedValue)), CDec(response), cmbImpuesto.Text, porcent, Math.Round(valiva, 2, MidpointRounding.AwayFromZero), cod, cue)
@@ -1320,7 +1321,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
 
 
-                    Dim nombreU As String = "Regisgro de Comprobante de Compra por: " & UserName
+                    Dim nombreU As String = "Registro de Comprobante de Compra " & _objetoComprobantesCompra.IdComprobante.ToString() & " por : " & UserName
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
                         _estado = 0
@@ -1456,7 +1457,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 .SubtotalComprobante = txtSubTotalComprobanteCompra.Text
 
                 '.PorcentajeIvaComprobante = PorcentajeIva
-                If txtIva5ComprobanteCompra.Text.Length > 0 Then
+                If CDec(txtIva5ComprobanteCompra.Text) > 0 Then
                     .IvaComprobante = txtIva5ComprobanteCompra.Text
                     .PorcentajeIvaComprobante = 5
                 Else

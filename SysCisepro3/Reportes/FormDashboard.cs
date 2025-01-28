@@ -37,5 +37,10 @@ namespace SysCisepro3.Reportes
 
 
         }
+
+        private void WebBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            
+        }
     }
 }

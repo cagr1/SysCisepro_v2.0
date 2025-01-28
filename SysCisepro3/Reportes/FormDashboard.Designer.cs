@@ -38,6 +38,7 @@
             this.WebBrowser1.Name = "WebBrowser1";
             this.WebBrowser1.Size = new System.Drawing.Size(800, 450);
             this.WebBrowser1.TabIndex = 0;
+            this.WebBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.WebBrowser1_DocumentCompleted);
             // 
             // FormDashboard
             // 
@@ -51,7 +52,7 @@
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.StateActive.Border.Rounding = 5F;
-            this.Text = "FormDashboard";
+            this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.FormDashboard_Load);
             this.ResumeLayout(false);
 

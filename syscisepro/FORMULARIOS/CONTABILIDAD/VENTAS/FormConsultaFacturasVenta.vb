@@ -1064,6 +1064,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
                 Dim xPositionTable3 As Single = 25
                 Dim yPositonTable3 As Single = 500
+                Dim yTable3Height As Single = table3.TotalHeight
 
                 table3.WriteSelectedRows(0, -1, xPositionTable3, yPositonTable3, writer.DirectContent)
 
@@ -1130,9 +1131,10 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 table4.SetWidths(columnWidthsTable4)
 
                 Dim DynamicTable4Height As Single = table4.TotalHeight
-                Dim yPositionTable4 As Single = 430
+
                 Dim xPositionTable4 As Single = 20
-                Dim newYPositionTable4 As Single = yPositionTable4 - DynamicTable4Height
+                Dim yPositonTable4 As Single = table4.TotalHeight '108
+                Dim newYPositionTable4 As Single = yPositonTable3 - yTable3Height - 40 '387
 
                 table4.WriteSelectedRows(0, -1, xPositionTable4, newYPositionTable4, writer.DirectContent)
 
@@ -1144,7 +1146,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
 
                 Dim cell1Row1 As New PdfPCell(New Phrase("SUBTOTAL 15%", fuente8))
-                Dim cell2Row1 As New PdfPCell(New Phrase(baseImponibleDetalles, fuente8))
+                Dim cell2Row1 As New PdfPCell(New Phrase(baseImponibleFactura, fuente8))
                 cell2Row1.HorizontalAlignment = Element.ALIGN_RIGHT
                 table5.AddCell(cell1Row1)
                 table5.AddCell(cell2Row1)
@@ -1168,7 +1170,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 table5.AddCell(cell2Row4)
 
                 Dim cell1Row5 As New PdfPCell(New Phrase("SUBTOTAL SIN IMPUESTO", fuente8))
-                Dim cell2Row5 As New PdfPCell(New Phrase(baseImponibleDetalles, fuente8))
+                Dim cell2Row5 As New PdfPCell(New Phrase("0.00", fuente8))
                 cell2Row5.HorizontalAlignment = Element.ALIGN_RIGHT
                 table5.AddCell(cell1Row5)
                 table5.AddCell(cell2Row5)
@@ -1180,7 +1182,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 table5.AddCell(cell2Row6)
 
                 Dim cell1Row7 As New PdfPCell(New Phrase("IVA 15%", fuente8))
-                Dim cell2Row7 As New PdfPCell(New Phrase(valorDetalleImpuesto, fuente8))
+                Dim cell2Row7 As New PdfPCell(New Phrase(valorImpuesto, fuente8))
                 cell2Row7.HorizontalAlignment = Element.ALIGN_RIGHT
                 table5.AddCell(cell1Row7)
                 table5.AddCell(cell2Row7)
@@ -1219,8 +1221,9 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 table5.SetWidths(columnWidthsTable5)
 
                 Dim xPositionTable5 As Single = 353
-                Dim yTable5Height As Single = table5.TotalHeight
-                Dim yPositonTable5 As Single = newYPositionTable4 - DynamicTable4Height
+                Dim yTable5Height As Single = table5.TotalHeight '132
+                Dim yPositonTable5 As Single = newYPositionTable4 - yPositonTable4  '250
+
 
                 table5.WriteSelectedRows(0, -1, xPositionTable5, yPositonTable5, writer.DirectContent)
 
@@ -1263,7 +1266,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 table8.SetWidths(columnWidthsTable8)
 
                 Dim xPositionTable8 As Single = 353
-                Dim yPositonTable8 As Single = yPositonTable5 - yTable5Height - 5
+                Dim yTable8Height As Single = table8.TotalHeight '32
+                Dim yPositonTable8 As Single = yPositonTable5 - yTable5Height - 5 '213
 
                 table8.WriteSelectedRows(0, -1, xPositionTable8, yPositonTable8, writer.DirectContent)
 
@@ -1326,9 +1330,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 table6.SetWidths(columnWidthsTable6)
 
                 Dim xPositionTable6 As Single = 20
-                Dim yTable6Height As Single = table6.TotalHeight
-                Dim yPositonTable6 As Single = newYPositionTable4 - DynamicTable4Height - 5
-
+                Dim yTable6Height As Single = table6.TotalHeight '90
+                Dim yPositonTable6 As Single = newYPositionTable4 - yPositonTable4 - 5 '292
                 table6.WriteSelectedRows(0, -1, xPositionTable6, yPositonTable6, writer.DirectContent)
 
 
@@ -1359,7 +1362,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 table7.SetWidths(columnWidthsTable7)
 
                 Dim xPositionTable7 As Single = 20
-                Dim yPositonTable7 As Single = yPositonTable6 - yTable6Height - 5
+                Dim yTable7Height As Single = table7.TotalHeight '34
+                Dim yPositonTable7 As Single = yPositonTable6 - yTable6Height - 5 '253
 
                 table7.WriteSelectedRows(0, -1, xPositionTable7, yPositonTable7, writer.DirectContent)
 
