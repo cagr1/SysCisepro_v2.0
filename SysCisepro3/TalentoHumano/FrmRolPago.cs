@@ -27,6 +27,7 @@ using ClassLibraryCisepro3.Estaticas;
 using ClassLibraryCisepro3.EstructuraEmpresa;
 using SysCisepro3.Reportes;
 using CrystalDecisions.CrystalReports.Engine;
+using ClosedXML.Excel;
 
 namespace SysCisepro3.TalentoHumano
 {
@@ -3111,119 +3112,216 @@ namespace SysCisepro3.TalentoHumano
 
             try
             {
-                var fec = DateTime.Now;
-                var sfd = new SaveFileDialog
-                {
-                    Filter = @"Excel Files(.xls)|*.xls|Excel Files(.xlsx)|*.xlsx| Excel Files(*.xlsm)|*.xlsm",
-                    Title = @"EXPORTAR A EXCEL",
-                    FileName = ("ROL_DE_PAGO_" + cbxGrupo.Text + "_" + fec.Year + fec.Month + fec.Day + "_" + fec.Hour + fec.Minute + ".xls")
-                };
-                if (sfd.ShowDialog() != DialogResult.OK) return;
+                //var fec = DateTime.Now;
+                //var sfd = new SaveFileDialog
+                //{
+                //    Filter = @"Excel Files(.xls)|*.xls|Excel Files(.xlsx)|*.xlsx| Excel Files(*.xlsm)|*.xlsm",
+                //    Title = @"EXPORTAR A EXCEL",
+                //    FileName = ("ROL_DE_PAGO_" + cbxGrupo.Text + "_" + fec.Year + fec.Month + fec.Day + "_" + fec.Hour + fec.Minute + ".xls")
+                //};
+                //if (sfd.ShowDialog() != DialogResult.OK) return;
 
-                var app = new Office.Excel.Application();
-                var workbook = app.Workbooks.Add(Type.Missing);
+                //var app = new Office.Excel.Application();
+                //var workbook = app.Workbooks.Add(Type.Missing);
 
-                var worksheet = (Worksheet)workbook.Worksheets[1];
-                worksheet.Name = "ROL DE PAGO";
+                //var worksheet = (Worksheet)workbook.Worksheets[1];
+                //worksheet.Name = "ROL DE PAGO";
 
                 var l = -1;
                 for (var i = 0; i <= dgvDetallesRol.Columns.Count - 1; i++) if (i < 63 && dgvDetallesRol.Columns[i].Visible) l++;
-                var ic = ValidationForms.NumToCharExcel(l + 1); 
+                var ic = ValidationForms.NumToCharExcel(l + 1);
 
-                var rc = dgvDetallesRol.RowCount + 20;
+                //var rc = dgvDetallesRol.RowCount + 20;
 
-                worksheet.Range["A1:" + ic + rc].Font.Size = 10;
+                //worksheet.Range["A1:" + ic + rc].Font.Size = 10;
 
-                worksheet.Range["A1:" + ic + "1"].Merge();
-                worksheet.Range["A1:" + ic + "1"].Value = Validaciones.NombreCompany(TipoCon);
-                worksheet.Range["A1:" + ic + "1"].Font.Bold = true;
-                worksheet.Range["A1:" + ic + "1"].Cells.HorizontalAlignment = XlHAlign.xlHAlignLeft;
-                worksheet.Range["A1:" + ic + "1"].Interior.Color = Settings.Default.ColorCisepro;
-                worksheet.Range["A1:" + ic + "1"].Font.Color = Color.White;
-                worksheet.Range["A1:" + ic + "1"].Font.Size = 12;
+                //worksheet.Range["A1:" + ic + "1"].Merge();
+                //worksheet.Range["A1:" + ic + "1"].Value = Validaciones.NombreCompany(TipoCon);
+                //worksheet.Range["A1:" + ic + "1"].Font.Bold = true;
+                //worksheet.Range["A1:" + ic + "1"].Cells.HorizontalAlignment = XlHAlign.xlHAlignLeft;
+                //worksheet.Range["A1:" + ic + "1"].Interior.Color = Settings.Default.ColorCisepro;
+                //worksheet.Range["A1:" + ic + "1"].Font.Color = Color.White;
+                //worksheet.Range["A1:" + ic + "1"].Font.Size = 12;
 
-                worksheet.Range["A3:" + ic + "3"].Merge();
-                worksheet.Range["A3:" + ic + "3"].Value = "ROL DE PAGO " + cbxGrupo.Text + " : " + ValidationForms.MesEnLetras(dtpMesAnio.Value.Month) + "-" + dtpMesAnio.Value.Year + "                Fecha de Impresión: " + Usuario.Now(TipoCon);
-                worksheet.Range["A3:" + ic + "3"].Font.Size = 12;
+                //worksheet.Range["A3:" + ic + "3"].Merge();
+                //worksheet.Range["A3:" + ic + "3"].Value = "ROL DE PAGO " + cbxGrupo.Text + " : " + ValidationForms.MesEnLetras(dtpMesAnio.Value.Month) + "-" + dtpMesAnio.Value.Year + "                Fecha de Impresión: " + Usuario.Now(TipoCon);
+                //worksheet.Range["A3:" + ic + "3"].Font.Size = 12;
 
-                var head = 5;
+                //var head = 5;
 
-                var x = 1;
-                for (var i = 0; i <= dgvDetallesRol.Columns.Count - 1; i++)
+                //var x = 1;
+                //for (var i = 0; i <= dgvDetallesRol.Columns.Count - 1; i++)
+                //{
+                //    if (i == 43 || i > 63 || !dgvDetallesRol.Columns[i].Visible) continue;
+
+                //    worksheet.Cells[head, x] = dgvDetallesRol.Columns[i].HeaderText;
+                //    worksheet.Cells[head, x].Font.Bold = true;
+                //    worksheet.Cells[head, x].Borders.LineStyle = XlLineStyle.xlContinuous;
+                //    worksheet.Cells[head, x].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
+                //    worksheet.Cells[head, x].Font.Color = Color.White;
+
+
+                //    worksheet.Cells[head, x].Interior.Color = Settings.Default.ColorCisepro;
+                //    if (i > 11) worksheet.Cells[head, x].Orientation = 90;
+                //    x++;
+                //}
+
+                //worksheet.Cells[head, x] = @"FIRMA";
+                //worksheet.Cells[head, x].Font.Bold = true;
+                //worksheet.Cells[head, x].Borders.LineStyle = XlLineStyle.xlContinuous;
+                //worksheet.Cells[head, x].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
+                //worksheet.Cells[head, x].Font.Color = Color.White;
+                //worksheet.Cells[head, x].Interior.Color = Settings.Default.ColorCisepro;
+                //worksheet.Cells[head, x].Orientation = 90;
+                //x++;
+
+                //worksheet.Cells[head, x] = @"HUELLA";
+                //worksheet.Cells[head, x].Font.Bold = true;
+                //worksheet.Cells[head, x].Borders.LineStyle = XlLineStyle.xlContinuous;
+                //worksheet.Cells[head, x].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
+                //worksheet.Cells[head, x].Font.Color = Color.White;
+                //worksheet.Cells[head, x].Interior.Color = Settings.Default.ColorCisepro;
+                //worksheet.Cells[head, x].Orientation = 90;
+
+                //// datos celdas
+                //head++;
+                //foreach (DataGridViewRow row in dgvDetallesRol.Rows)
+                //{
+                //    var y = 1;
+                //    for (var j = 0; j <= dgvDetallesRol.Columns.Count - 1; j++)
+                //    {
+                //        if (j == 43 || j > 65 || !dgvDetallesRol.Columns[j].Visible) continue;
+
+                //        worksheet.Cells[head, y] = row.Cells[j].Value;
+
+                //        if ((row.Tag + "").Equals("2") || (row.Tag + "").Equals("3")) worksheet.Cells[head, y].Font.Bold = true;
+                //        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeLeft).LineStyle = XlLineStyle.xlContinuous;
+                //        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeRight).LineStyle = XlLineStyle.xlContinuous;
+                //        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeBottom).LineStyle = XlLineStyle.xlContinuous;
+                //        y++;
+                //    }
+
+                //    worksheet.Cells[head, x - 1].Borders(XlBordersIndex.xlEdgeLeft).LineStyle = XlLineStyle.xlContinuous;
+                //    worksheet.Cells[head, x - 1].Borders(XlBordersIndex.xlEdgeRight).LineStyle = XlLineStyle.xlContinuous;
+                //    worksheet.Cells[head, x - 1].Borders(XlBordersIndex.xlEdgeBottom).LineStyle = XlLineStyle.xlContinuous;
+
+                //    worksheet.Cells[head, x].Borders(XlBordersIndex.xlEdgeLeft).LineStyle = XlLineStyle.xlContinuous;
+                //    worksheet.Cells[head, x].Borders(XlBordersIndex.xlEdgeRight).LineStyle = XlLineStyle.xlContinuous;
+                //    worksheet.Cells[head, x].Borders(XlBordersIndex.xlEdgeBottom).LineStyle = XlLineStyle.xlContinuous;
+
+                //    head++;
+                //}
+
+                //var position = (Range)worksheet.Cells[2, 6];
+                //Clipboard.SetImage(ValidationForms.Logo(TipoCon));
+                //worksheet.Paste(position);
+
+                //worksheet.Range["A1:" + ic + rc].Columns.AutoFit();
+                //app.DisplayAlerts = false;
+                //app.Visible = true;
+                //workbook.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+
+                var fec = DateTime.Now;
+                var sfd = new SaveFileDialog
                 {
-                    if (i == 43 || i > 63 || !dgvDetallesRol.Columns[i].Visible) continue;
+                    Filter = @"Excel Files(.xlsx)|*.xlsx",
+                    Title = @"EXPORTAR A EXCEL",
+                    FileName = ("ROL_DE_PAGO_" + cbxGrupo.Text + "_" + fec.Year + fec.Month + fec.Day + "_" + fec.Hour + fec.Minute + ".xlsx")
+                };
 
-                    worksheet.Cells[head, x] = dgvDetallesRol.Columns[i].HeaderText;
-                    worksheet.Cells[head, x].Font.Bold = true;
-                    worksheet.Cells[head, x].Borders.LineStyle = XlLineStyle.xlContinuous;
-                    worksheet.Cells[head, x].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
-                    worksheet.Cells[head, x].Font.Color = Color.White;
+                if (sfd.ShowDialog() != DialogResult.OK) return;
 
-
-                    worksheet.Cells[head, x].Interior.Color = Settings.Default.ColorCisepro;
-                    if (i > 11) worksheet.Cells[head, x].Orientation = 90;
-                    x++;
-                }
-
-                worksheet.Cells[head, x] = @"FIRMA";
-                worksheet.Cells[head, x].Font.Bold = true;
-                worksheet.Cells[head, x].Borders.LineStyle = XlLineStyle.xlContinuous;
-                worksheet.Cells[head, x].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
-                worksheet.Cells[head, x].Font.Color = Color.White;
-                worksheet.Cells[head, x].Interior.Color = Settings.Default.ColorCisepro;
-                worksheet.Cells[head, x].Orientation = 90;
-                x++;
-
-                worksheet.Cells[head, x] = @"HUELLA";
-                worksheet.Cells[head, x].Font.Bold = true;
-                worksheet.Cells[head, x].Borders.LineStyle = XlLineStyle.xlContinuous;
-                worksheet.Cells[head, x].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
-                worksheet.Cells[head, x].Font.Color = Color.White;
-                worksheet.Cells[head, x].Interior.Color = Settings.Default.ColorCisepro;
-                worksheet.Cells[head, x].Orientation = 90;
-
-                // datos celdas
-                head++;
-                foreach (DataGridViewRow row in dgvDetallesRol.Rows)
+                using (var wb = new XLWorkbook())
                 {
-                    var y = 1;
-                    for (var j = 0; j <= dgvDetallesRol.Columns.Count - 1; j++)
+                    var ws = wb.AddWorksheet("ROL DE PAGO");
+
+                    
+
+                    // Encabezado
+                    ws.Cell("A1").Value = Validaciones.NombreCompany(TipoCon);
+                    ws.Range("A1:" + ic + "1").Merge();
+                    ws.Cell("A1").Style.Font.Bold = true;
+                    ws.Cell("A1").Style.Font.FontSize = 12;
+                    ws.Cell("A1").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Left;
+                    ws.Cell("A1").Style.Fill.BackgroundColor = XLColor.FromColor(Settings.Default.ColorCisepro);
+                    ws.Cell("A1").Style.Font.FontColor = XLColor.White;
+
+                    ws.Cell("A3").Value = "ROL DE PAGO " + cbxGrupo.Text + " : " + ValidationForms.MesEnLetras(dtpMesAnio.Value.Month) + "-" + dtpMesAnio.Value.Year + "                Fecha de Impresión: " + Usuario.Now(TipoCon);
+                    ws.Range("A3:" + ValidationForms.NumToCharExcel(dgvDetallesRol.Columns.Count) + "3").Merge();
+                    ws.Cell("A3").Style.Font.FontSize = 12;
+
+                    // Encabezado de columnas
+                    var rowIndex = 5; // fila de encabezado
+                    var col = 1; // columna de encabezado
+                    for (int colIndex = 0; colIndex < dgvDetallesRol.Columns.Count - 1; colIndex++)
                     {
-                        if (j == 43 || j > 65 || !dgvDetallesRol.Columns[j].Visible) continue;
+                        if (colIndex == 43 || colIndex > 63 || !dgvDetallesRol.Columns[colIndex].Visible) continue;
 
-                        worksheet.Cells[head, y] = row.Cells[j].Value;
+                        var headerCell = ws.Cell(rowIndex, col );
+                        headerCell.Value = dgvDetallesRol.Columns[colIndex].HeaderText;
+                        headerCell.Style.Font.Bold = true;
+                        headerCell.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                        headerCell.Style.Fill.BackgroundColor = XLColor.FromColor(Settings.Default.ColorCisepro);
+                        headerCell.Style.Font.FontColor = XLColor.White;
 
-                        if ((row.Tag + "").Equals("2") || (row.Tag + "").Equals("3")) worksheet.Cells[head, y].Font.Bold = true;
-                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeLeft).LineStyle = XlLineStyle.xlContinuous;
-                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeRight).LineStyle = XlLineStyle.xlContinuous;
-                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeBottom).LineStyle = XlLineStyle.xlContinuous;
-                        y++;
+                        if (colIndex > 11) headerCell.Style.Alignment.TextRotation = 90;
+                        col++;
                     }
 
-                    worksheet.Cells[head, x - 1].Borders(XlBordersIndex.xlEdgeLeft).LineStyle = XlLineStyle.xlContinuous;
-                    worksheet.Cells[head, x - 1].Borders(XlBordersIndex.xlEdgeRight).LineStyle = XlLineStyle.xlContinuous;
-                    worksheet.Cells[head, x - 1].Borders(XlBordersIndex.xlEdgeBottom).LineStyle = XlLineStyle.xlContinuous;
+                    // Datos de filas
+                    rowIndex++; // empezamos después del encabezado
+                    foreach (DataGridViewRow row in dgvDetallesRol.Rows)
+                    {
+                        int colIndex = 1;
+                        foreach (DataGridViewCell cell in row.Cells)
+                        {
+                            if (cell.ColumnIndex == 43 || cell.ColumnIndex > 63 || !dgvDetallesRol.Columns[cell.ColumnIndex].Visible) continue;
 
-                    worksheet.Cells[head, x].Borders(XlBordersIndex.xlEdgeLeft).LineStyle = XlLineStyle.xlContinuous;
-                    worksheet.Cells[head, x].Borders(XlBordersIndex.xlEdgeRight).LineStyle = XlLineStyle.xlContinuous;
-                    worksheet.Cells[head, x].Borders(XlBordersIndex.xlEdgeBottom).LineStyle = XlLineStyle.xlContinuous;
+                            var dataCell = ws.Cell(rowIndex, colIndex);
+                            dataCell.Value = XLCellValue.FromObject(cell.Value ?? String.Empty); // Controlamos valores nulos
 
-                    head++;
+                            if ((row.Tag + "").Equals("2") || (row.Tag + "").Equals("3"))
+                                dataCell.Style.Font.Bold = true;
+
+                            dataCell.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
+                            colIndex++;
+                        }
+                        rowIndex++;
+                    }
+
+                    // Logo en la celda correspondiente
+                    var newlogo = Validaciones.NombreLogo(TipoCon, System.Windows.Forms.Application.StartupPath);
+
+                    // Convertir la imagen a un stream de memoria
+                    using (var logoImage = Image.FromFile(newlogo))
+                    {
+                        // Convertir la imagen a un stream de memoria
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+                            // Guardar la imagen en el MemoryStream en formato PNG
+                            logoImage.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                            ms.Position = 0; // Asegurarse de que la posición del stream esté al inicio
+
+                            // Insertar la imagen desde el stream en la celda correspondiente
+                            ws.AddPicture(ms)
+                                .MoveTo(ws.Cell(2, 6)) // Coloca la imagen en la celda correcta (en este caso en la fila 2, columna 6)
+                                .WithSize(100, 100);   // Ajusta el tamaño según sea necesario
+                        }
+                    }
+
+                    // Ajuste automático de columnas
+                    ws.Columns().AdjustToContents();
+
+                    // Guardar archivo
+                    wb.SaveAs(sfd.FileName);
                 }
 
-                var position = (Range)worksheet.Cells[2, 6];
-                Clipboard.SetImage(ValidationForms.Logo(TipoCon));
-                worksheet.Paste(position);
 
-                worksheet.Range["A1:" + ic + rc].Columns.AutoFit();
-                app.DisplayAlerts = false;
-                app.Visible = true;
-                workbook.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
                 KryptonMessageBox.Show(@"ROL DE PAGO generado correctamente!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
-            catch
+            catch (Exception ex)
             {
-                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS! " + ex.Message.ToString(), "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
 

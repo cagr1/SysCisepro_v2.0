@@ -6,6 +6,8 @@ Imports ClassLibraryCisepro.ESTRUCTURA_EMPRESA
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports Krypton.Toolkit
+Imports ClosedXML.Excel
+Imports System.IO
 
 Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
     ''' <summary>
@@ -412,70 +414,163 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
                     Return
                 End If
 
+                'Dim fec = ValidationForms.FechaActual(_tipoCon)
+
+                'Dim app = New Microsoft.Office.Interop.Excel.Application()
+                'Dim workbook = app.Workbooks.Add(Type.Missing)
+                'Dim worksheet = workbook.Worksheets(1)
+                'worksheet.Name = "PLAN_CUENTAS"
+
+                'Dim ic = ValidationForms.NumToCharExcelFromVisibleColumnsDataGrid(dgvPlanDeCuentas)
+                'worksheet.Range("A1:" & ic & (dgvPlanDeCuentas.RowCount + 50)).Font.Size = 10
+
+                'worksheet.Range("A1:" & ic & "1").Merge()
+                'worksheet.Range("A1:" & ic & "1").Value = ValidationForms.NombreCompany(_tipoCon) & "  -  PLAN DE CUENTAS"
+                'worksheet.Range("A1:" & ic & "1").Font.Bold = True
+                'worksheet.Range("A1:" & ic & "1").Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                'worksheet.Range("A1:" & ic & "1").Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
+                'worksheet.Range("A1:" & ic & "1").Font.Color = Color.White
+                'worksheet.Range("A1:" & ic & "1").Font.Size = 12
+                ''Copete  
+                'worksheet.Range("A2:" & ic & "2").Merge()
+                'worksheet.Range("A2:" & ic & "2").Value = "PERÍODO: AL " & fec.ToLongDateString()
+                'worksheet.Range("A2:" & ic & "2").Font.Size = 12
+                ''Fecha  
+                'worksheet.Range("A3:" & ic & "3").Merge()
+                'worksheet.Range("A3:" & ic & "3").Value = "Fecha de Reporte: " & fec.ToLongDateString() & " " & fec.ToLongTimeString()
+                'worksheet.Range("A3:" & ic & "3").Font.Size = 12
+
+                ''Aca se ingresa las columnas
+                'Dim indc = 1
+                'Dim headin = 5
+                'For i = 0 To dgvPlanDeCuentas.Columns.Count - 1
+                '    If Not dgvPlanDeCuentas.Columns(i).Visible Then Continue For
+                '    worksheet.Cells(headin, indc) = dgvPlanDeCuentas.Columns(i).HeaderText
+                '    worksheet.Cells(headin, indc).Font.Bold = True
+                '    worksheet.Cells(headin, indc).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
+                '    worksheet.Cells(headin, indc).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                '    worksheet.Cells(headin, indc).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
+                '    worksheet.Cells(headin, indc).Font.Color = Color.White
+                '    indc += 1
+                'Next
+
+                ''Aca se ingresa el detalle recorrera la tabla celda por celda
+                'For i = 0 To dgvPlanDeCuentas.Rows.Count - 1
+                '    indc = 1
+                '    For j = 0 To dgvPlanDeCuentas.Columns.Count - 1
+
+                '        If Not dgvPlanDeCuentas.Columns(j).Visible Then Continue For
+
+                '        ' asigna valor a celda
+                '        worksheet.Cells(i + 1 + headin, indc) = dgvPlanDeCuentas.Rows(i).Cells(j).Value
+
+                '        ' definir bordes
+                '        worksheet.Cells(i + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
+                '        worksheet.Cells(i + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
+                '        If i = dgvPlanDeCuentas.RowCount - 1 Then worksheet.Cells(i + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                '        indc += 1
+                '    Next
+                'Next
+
+                'worksheet.Range("A1:" & ic & (dgvPlanDeCuentas.RowCount + 50)).Columns.AutoFit()
+
+                'app.DisplayAlerts = False
+                'app.Visible = True
+                'app.DisplayAlerts = True
+                'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
+
+                Dim saveFileDialog As New SaveFileDialog()
+                saveFileDialog.Filter = "Archivos de Excel (*.xlsx)|*.xlsx"
+                saveFileDialog.Title = "Guardar archivo Excel"
+                saveFileDialog.FileName = $"PlanCuentas_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx"
+
+
+                If saveFileDialog.ShowDialog() <> DialogResult.OK Then
+                    Exit Sub
+                End If
+
+
+
                 Dim fec = ValidationForms.FechaActual(_tipoCon)
+                Dim tituloReporte = ValidationForms.NombreCompany(_tipoCon) & " - " & "Plan de Cuentas"
 
-                Dim app = New Microsoft.Office.Interop.Excel.Application()
-                Dim workbook = app.Workbooks.Add(Type.Missing)
-                Dim worksheet = workbook.Worksheets(1)
-                worksheet.Name = "PLAN_CUENTAS"
-
+                ' Crear workbook y worksheet
+                Dim workbook As New XLWorkbook()
+                Dim worksheet = workbook.Worksheets.Add("COMPROBANTES_EGRESO")
+                Dim colorSistema As System.Drawing.Color = ValidationForms.GetColorSistema(_tipoCon)
+                Dim xlColor As XLColor = XLColor.FromColor(colorSistema)
+                ' Definir rango para el título
                 Dim ic = ValidationForms.NumToCharExcelFromVisibleColumnsDataGrid(dgvPlanDeCuentas)
-                worksheet.Range("A1:" & ic & (dgvPlanDeCuentas.RowCount + 50)).Font.Size = 10
-
                 worksheet.Range("A1:" & ic & "1").Merge()
-                worksheet.Range("A1:" & ic & "1").Value = ValidationForms.NombreCompany(_tipoCon) & "  -  PLAN DE CUENTAS"
-                worksheet.Range("A1:" & ic & "1").Font.Bold = True
-                worksheet.Range("A1:" & ic & "1").Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                worksheet.Range("A1:" & ic & "1").Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                worksheet.Range("A1:" & ic & "1").Font.Color = Color.White
-                worksheet.Range("A1:" & ic & "1").Font.Size = 12
-                'Copete  
-                worksheet.Range("A2:" & ic & "2").Merge()
-                worksheet.Range("A2:" & ic & "2").Value = "PERÍODO: AL " & fec.ToLongDateString()
-                worksheet.Range("A2:" & ic & "2").Font.Size = 12
-                'Fecha  
-                worksheet.Range("A3:" & ic & "3").Merge()
-                worksheet.Range("A3:" & ic & "3").Value = "Fecha de Reporte: " & fec.ToLongDateString() & " " & fec.ToLongTimeString()
-                worksheet.Range("A3:" & ic & "3").Font.Size = 12
+                worksheet.Cell(1, 1).Value = tituloReporte.ToString()
+                worksheet.Cell(1, 1).Style.Font.SetBold(True)
+                worksheet.Cell(1, 1).Style.Font.SetFontSize(12)
+                worksheet.Cell(1, 1).Style.Font.SetFontColor(XLColor.White)
+                worksheet.Cell(1, 1).Style.Fill.SetBackgroundColor(xlColor)
+                worksheet.Cell(1, 1).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center)
 
-                'Aca se ingresa las columnas
+                ' Copete
+                worksheet.Range("A2:" & ic & "2").Merge()
+                'worksheet.Cell(2, 1).Value = $"{cmbBancos.Text} CTA: {cmbCuentaBancos.Text}, PERÍODO: {dtpDesde.Value.ToLongDateString()} AL {dtpHasta.Value.ToLongDateString()}"
+                worksheet.Cell(2, 1).Value = $"PERÍODO: AL {fec.ToLongDateString()}"
+                worksheet.Cell(2, 1).Style.Font.SetFontSize(12)
+
+                ' Fecha
+                worksheet.Range("A3:" & ic & "3").Merge()
+                worksheet.Cell(3, 1).Value = $"Fecha de Reporte: {fec.ToLongDateString()} {fec.ToLongTimeString()}"
+                worksheet.Cell(3, 1).Style.Font.SetFontSize(12)
+
+                ' Encabezados de columnas
                 Dim indc = 1
                 Dim headin = 5
                 For i = 0 To dgvPlanDeCuentas.Columns.Count - 1
                     If Not dgvPlanDeCuentas.Columns(i).Visible Then Continue For
-                    worksheet.Cells(headin, indc) = dgvPlanDeCuentas.Columns(i).HeaderText
-                    worksheet.Cells(headin, indc).Font.Bold = True
-                    worksheet.Cells(headin, indc).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
-                    worksheet.Cells(headin, indc).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                    worksheet.Cells(headin, indc).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                    worksheet.Cells(headin, indc).Font.Color = Color.White
+                    worksheet.Cell(headin, indc).Value = dgvPlanDeCuentas.Columns(i).HeaderText
+                    worksheet.Cell(headin, indc).Style.Font.SetBold(True)
+                    worksheet.Cell(headin, indc).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center)
+                    worksheet.Cell(headin, indc).Style.Fill.SetBackgroundColor(xlColor)
+                    worksheet.Cell(headin, indc).Style.Font.SetFontColor(XLColor.White)
+                    worksheet.Cell(headin, indc).Style.Border.SetOutsideBorder(XLBorderStyleValues.Thin)
                     indc += 1
                 Next
 
-                'Aca se ingresa el detalle recorrera la tabla celda por celda
+                ' Detalle de datos
                 For i = 0 To dgvPlanDeCuentas.Rows.Count - 1
                     indc = 1
                     For j = 0 To dgvPlanDeCuentas.Columns.Count - 1
-
                         If Not dgvPlanDeCuentas.Columns(j).Visible Then Continue For
 
-                        ' asigna valor a celda
-                        worksheet.Cells(i + 1 + headin, indc) = dgvPlanDeCuentas.Rows(i).Cells(j).Value
+                        ' Asignar valor a la celda
+                        worksheet.Cell(i + 1 + headin, indc).Value = dgvPlanDeCuentas.Rows(i).Cells(j).Value.ToString()
 
-                        ' definir bordes
-                        worksheet.Cells(i + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
-                        worksheet.Cells(i + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
-                        If i = dgvPlanDeCuentas.RowCount - 1 Then worksheet.Cells(i + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                        ' Establecer bordes
+                        Dim cell = worksheet.Cell(i + 1 + headin, indc)
+                        cell.Style.Border.SetLeftBorder(XLBorderStyleValues.Thin)
+                        cell.Style.Border.SetRightBorder(XLBorderStyleValues.Thin)
+
+                        If i = dgvPlanDeCuentas.RowCount - 1 Then
+                            cell.Style.Border.SetBottomBorder(XLBorderStyleValues.Thin)
+                        End If
+
                         indc += 1
                     Next
                 Next
- 
-                worksheet.Range("A1:" & ic & (dgvPlanDeCuentas.RowCount + 50)).Columns.AutoFit()
 
-                app.DisplayAlerts = False
-                app.Visible = True
-                app.DisplayAlerts = True
-                'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
+                ' Ajustar columnas automáticamente
+                worksheet.Columns("A:" & ic).AdjustToContents()
+
+                ' Guardar el archivo en una ubicación temporal y abrirlo
+                Dim tempFilePath As String = Path.Combine(Path.GetTempPath(), saveFileDialog.FileName)
+                ' Guardar el archivo en una ubicación temporal
+                workbook.SaveAs(saveFileDialog.FileName)
+
+                ' Abrir el archivo Excel automáticamente
+                Process.Start(tempFilePath)
+
+                KryptonMessageBox.Show("Datos exportados correctamente", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+
+
+
             Catch
                 MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try

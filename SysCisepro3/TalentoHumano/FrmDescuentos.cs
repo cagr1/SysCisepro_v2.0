@@ -16,7 +16,8 @@ using SysCisepro3.Properties;
 using DataTable = System.Data.DataTable;
 using Office = Microsoft.Office.Interop;
 using Krypton.Toolkit;
-
+using ClosedXML.Excel;
+using System.IO;
 
 namespace SysCisepro3.TalentoHumano
 {
@@ -1768,49 +1769,143 @@ namespace SysCisepro3.TalentoHumano
 
             try
             {
-                var app = new Office.Excel.Application();
-                var workbook = app.Workbooks.Add(Type.Missing);
+                //var app = new Office.Excel.Application();
+                //var workbook = app.Workbooks.Add(Type.Missing);
 
-                var worksheet = (Worksheet)workbook.Worksheets[1];
-                worksheet.Name = "DESCUENTOS";
+                //var worksheet = (Worksheet)workbook.Worksheets[1];
+                //worksheet.Name = "DESCUENTOS";
 
+                //var l = -1;
+                //for (var i = 0; i <= ListView1.Columns.Count - 1; i++) if (i == 1 || ListView1.Columns[i].Width > 1) l++;
+                //var ic = ValidationForms.NumToCharExcel(l);
+
+                //var rc = ListView1.Items.Count + 20;
+
+                //worksheet.Range["A1:" + ic + rc].Font.Size = 10;
+
+                //worksheet.Range["A1:" + ic + "1"].Merge();
+                //worksheet.Range["A1:" + ic + "1"].Value = Validaciones.NombreCompany(TipoCon) + " - DESCUENTOS GENERAL";
+                //worksheet.Range["A1:" + ic + "1"].Font.Bold = true;
+                //worksheet.Range["A1:" + ic + "1"].Cells.HorizontalAlignment = XlHAlign.xlHAlignLeft;
+                //worksheet.Range["A1:" + ic + "1"].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                //worksheet.Range["A1:" + ic + "1"].Font.Color = Color.White;
+                //worksheet.Range["A1:" + ic + "1"].Font.Size = 12;
+
+                //worksheet.Range["A3:" + ic + "3"].Merge();
+                //worksheet.Range["A3:" + ic + "3"].Value = cbxFiltro.Text + " DEL " + dtpFechaDesde.Value.ToShortDateString() + " AL " + dtpFechaHasta.Value.ToShortDateString() + "                Fecha de Impresión: " + Usuario.Now(TipoCon);
+                //worksheet.Range["A3:" + ic + "3"].Font.Size = 12;
+
+                //var head = 5;
+                //var x = 1;
+                //for (var i = 0; i <= ListView1.Columns.Count - 1; i++)
+                //{
+                //    if (i != 1 && ListView1.Columns[i].Width < 1) continue;
+
+                //    worksheet.Cells[head, x] = ListView1.Columns[i].Text;
+                //    worksheet.Cells[head, x].Font.Bold = true;
+                //    worksheet.Cells[head, x].Borders.LineStyle = XlLineStyle.xlContinuous;
+                //    worksheet.Cells[head, x].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
+                //    worksheet.Cells[head, x].Font.Color = Color.White;
+
+                //    worksheet.Cells[head, x].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                //    x++;
+                //}
+
+                //// datos celdas
+                //head++;
+                //foreach (ListViewItem row in ListView1.Items)
+                //{
+                //    var y = 1;
+                //    for (var j = 0; j <= ListView1.Columns.Count - 1; j++)
+                //    {
+                //        if (j != 1 && ListView1.Columns[j].Width < 1) continue;
+
+                //        worksheet.Cells[head, y] = j == 2
+                //            ? Convert.ToDateTime(row.SubItems[j].Text).ToString("yyyy/MM/dd")
+                //            : row.SubItems[j].Text;
+
+                //        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeLeft).LineStyle = XlLineStyle.xlContinuous;
+                //        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeRight).LineStyle = XlLineStyle.xlContinuous;
+                //        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeBottom).LineStyle = XlLineStyle.xlContinuous;
+                //        y++;
+                //    }
+
+                //    head++;
+                //}
+
+                //head += 3;
+
+                //worksheet.Range["A" + head + ":F" + head].Merge();
+                //worksheet.Range["A" + head + ":F" + head].Value = Label1.Text;
+                //worksheet.Range["A" + head + ":F" + head].Font.Bold = true;
+                //worksheet.Range["A" + head + ":F" + head].Cells.HorizontalAlignment = XlHAlign.xlHAlignRight;
+                //worksheet.Range["A" + head + ":F" + head].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                //worksheet.Range["A" + head + ":F" + head].Font.Color = Color.White;
+                //worksheet.Range["A" + head + ":F" + head].Font.Size = 12;
+
+
+                //var position = (Range)worksheet.Cells[2, 7];
+                //Clipboard.SetImage(ValidationForms.Logo(TipoCon));
+                //worksheet.Paste(position);
+
+                //worksheet.Range["A1:" + ic + rc].Columns.AutoFit();
+                //app.DisplayAlerts = false;
+                //app.Visible = true;
+                //app.DisplayAlerts = true;
+
+                var fec = DateTime.Now;
+                var sfd = new SaveFileDialog
+                {
+                    Filter = @"Excel Files(.xlsx)|*.xlsx",
+                    Title = @"EXPORTAR A EXCEL",
+                    FileName = ("DESCUENTOS" + "_" + fec.Year + fec.Month + fec.Day + "_" + fec.Hour + fec.Minute + ".xlsx")
+                };
+
+                if (sfd.ShowDialog() != DialogResult.OK) return;
+
+                var wb = new XLWorkbook();
+                var ws = wb.Worksheets.Add("DESCUENTOS");
+
+                ws.Name = "DESCUENTOS";
+
+                // Calcular la última columna visible
                 var l = -1;
-                for (var i = 0; i <= ListView1.Columns.Count - 1; i++) if (i == 1 || ListView1.Columns[i].Width > 1) l++;
+                for (var i = 0; i <= ListView1.Columns.Count - 1; i++)
+                    if (i == 1 || ListView1.Columns[i].Width > 1) l++;
                 var ic = ValidationForms.NumToCharExcel(l);
 
                 var rc = ListView1.Items.Count + 20;
 
-                worksheet.Range["A1:" + ic + rc].Font.Size = 10;
+                ws.Range("A1:" + ic + rc).Style.Font.SetFontSize(10);
 
-                worksheet.Range["A1:" + ic + "1"].Merge();
-                worksheet.Range["A1:" + ic + "1"].Value = Validaciones.NombreCompany(TipoCon) + " - DESCUENTOS GENERAL";
-                worksheet.Range["A1:" + ic + "1"].Font.Bold = true;
-                worksheet.Range["A1:" + ic + "1"].Cells.HorizontalAlignment = XlHAlign.xlHAlignLeft;
-                worksheet.Range["A1:" + ic + "1"].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
-                worksheet.Range["A1:" + ic + "1"].Font.Color = Color.White;
-                worksheet.Range["A1:" + ic + "1"].Font.Size = 12;
+                // Fila 1: Título principal
+                ws.Range("A1:" + ic + "1").Merge().Value = Validaciones.NombreCompany(TipoCon).ToString() + " - DESCUENTOS GENERAL";
+                ws.Range("A1:" + ic + "1").Style.Font.SetBold().Font.SetFontColor(XLColor.White).Font.SetFontSize(12);
+                ws.Range("A1:" + ic + "1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Left);
+                ws.Range("A1:" + ic + "1").Style.Fill.SetBackgroundColor(XLColor.FromColor(ValidationForms.GetColorSistema(TipoCon)));
 
-                worksheet.Range["A3:" + ic + "3"].Merge();
-                worksheet.Range["A3:" + ic + "3"].Value = cbxFiltro.Text + " DEL " + dtpFechaDesde.Value.ToShortDateString() + " AL " + dtpFechaHasta.Value.ToShortDateString() + "                Fecha de Impresión: " + Usuario.Now(TipoCon);
-                worksheet.Range["A3:" + ic + "3"].Font.Size = 12;
+                // Fila 3: Subtítulo con fecha
+                ws.Range("A3:" + ic + "3").Merge().Value = cbxFiltro.Text + " DEL " + dtpFechaDesde.Value.ToShortDateString() + " AL " + dtpFechaHasta.Value.ToShortDateString() + "                Fecha de Impresión: " + Usuario.Now(TipoCon);
+                ws.Range("A3:" + ic + "3").Style.Font.SetFontSize(12);
 
+                // Encabezados de columnas
                 var head = 5;
                 var x = 1;
                 for (var i = 0; i <= ListView1.Columns.Count - 1; i++)
                 {
                     if (i != 1 && ListView1.Columns[i].Width < 1) continue;
 
-                    worksheet.Cells[head, x] = ListView1.Columns[i].Text;
-                    worksheet.Cells[head, x].Font.Bold = true;
-                    worksheet.Cells[head, x].Borders.LineStyle = XlLineStyle.xlContinuous;
-                    worksheet.Cells[head, x].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
-                    worksheet.Cells[head, x].Font.Color = Color.White;
-
-                    worksheet.Cells[head, x].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                    var headerCell = ws.Cell(head, x);
+                    headerCell.Value = ListView1.Columns[i].Text;
+                    headerCell.Style.Font.SetBold();
+                    headerCell.Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+                    headerCell.Style.Fill.SetBackgroundColor(XLColor.FromColor(ValidationForms.GetColorSistema(TipoCon)));
+                    headerCell.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
+                    headerCell.Style.Font.SetFontColor(XLColor.White);
                     x++;
                 }
 
-                // datos celdas
+                // Datos en celdas
                 head++;
                 foreach (ListViewItem row in ListView1.Items)
                 {
@@ -1819,38 +1914,50 @@ namespace SysCisepro3.TalentoHumano
                     {
                         if (j != 1 && ListView1.Columns[j].Width < 1) continue;
 
-                        worksheet.Cells[head, y] = j == 2
+                        var dataCell = ws.Cell(head, y);
+                        dataCell.Value = j == 2
                             ? Convert.ToDateTime(row.SubItems[j].Text).ToString("yyyy/MM/dd")
                             : row.SubItems[j].Text;
 
-                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeLeft).LineStyle = XlLineStyle.xlContinuous;
-                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeRight).LineStyle = XlLineStyle.xlContinuous;
-                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeBottom).LineStyle = XlLineStyle.xlContinuous;
+                        dataCell.Style.Border.LeftBorder = XLBorderStyleValues.Thin;
+                        dataCell.Style.Border.RightBorder = XLBorderStyleValues.Thin;
+                        dataCell.Style.Border.BottomBorder = XLBorderStyleValues.Thin;
                         y++;
                     }
-
                     head++;
                 }
 
                 head += 3;
 
-                worksheet.Range["A" + head + ":F" + head].Merge();
-                worksheet.Range["A" + head + ":F" + head].Value = Label1.Text;
-                worksheet.Range["A" + head + ":F" + head].Font.Bold = true;
-                worksheet.Range["A" + head + ":F" + head].Cells.HorizontalAlignment = XlHAlign.xlHAlignRight;
-                worksheet.Range["A" + head + ":F" + head].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
-                worksheet.Range["A" + head + ":F" + head].Font.Color = Color.White;
-                worksheet.Range["A" + head + ":F" + head].Font.Size = 12;
+                ws.Range("A" + head + ":F" + head).Merge().Value = Label1.Text;
+                ws.Range("A" + head + ":F" + head).Style.Font.SetBold().Font.SetFontColor(XLColor.White).Font.SetFontSize(12);
+                ws.Range("A" + head + ":F" + head).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Right);
+                ws.Range("A" + head + ":F" + head).Style.Fill.SetBackgroundColor(XLColor.FromColor(ValidationForms.GetColorSistema(TipoCon)));
+
+                // Logo en la celda correspondiente
+                var newlogo = Validaciones.NombreLogo(TipoCon, System.Windows.Forms.Application.StartupPath);
+
+                using (var logoImage = Image.FromFile(newlogo))
+                {
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        logoImage.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                        ms.Position = 0;
+
+                        ws.AddPicture(ms)
+                            .MoveTo(ws.Cell(2, 7))
+                            .WithSize(70, 70);
+                    }
+                }
+
+                // Ajuste automático de columnas
+                ws.Columns().AdjustToContents();
+
+                // Guardar el archivo en la ruta seleccionada por el usuario
+                wb.SaveAs(sfd.FileName);
 
 
-                var position = (Range)worksheet.Cells[2, 7];
-                Clipboard.SetImage(ValidationForms.Logo(TipoCon));
-                worksheet.Paste(position);
 
-                worksheet.Range["A1:" + ic + rc].Columns.AutoFit();
-                app.DisplayAlerts = false;
-                app.Visible = true;
-                app.DisplayAlerts = true;
                 KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch

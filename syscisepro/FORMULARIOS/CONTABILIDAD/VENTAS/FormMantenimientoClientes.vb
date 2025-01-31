@@ -1,7 +1,7 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
-Imports System.Drawing 
-Imports System.Windows.Forms 
+Imports System.Drawing
+Imports System.Windows.Forms
 Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS.AUDITORIA
 Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports ClassLibraryCisepro.DIVISION_GEOGRÁFICA
@@ -13,6 +13,8 @@ Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 Imports Krypton.Toolkit
+Imports ClosedXML.Excel
+Imports System.IO
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     ''' <summary>
@@ -117,14 +119,12 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
             dtpFechaDesde.Value = New DateTime(DateTime.Now.Year, 1, 1, 0, 0, 0)
             dtpFechaHasta.Value = dtpFechaDesde.Value.AddYears(1).AddDays(-1)
-
             GenerarAnios()
-            deshabilitadoInicio()
-
-            autocompletarNombreCiudades()
-            autocompletarConsorcioCliente()
-            llenarSupervisores()
-            llenarProvincia()
+            DeshabilitadoInicio()
+            AutocompletarNombreCiudades()
+            AutocompletarConsorcioCliente()
+            LlenarSupervisores()
+            LlenarProvincia()
 
             txtBuscarCliente.Focus()
         End Sub
@@ -390,8 +390,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         End Sub
         Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNuevo.Click
 
-            habilitadoNuevo()
-            limpiarParametros()
+            HabilitadoNuevo()
+            LimpiarParametros()
             _botonSeleccionado = 1
 
             ComboBox2.SelectedIndex = 0
@@ -618,17 +618,16 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             End Try
         End Sub
         Private Sub btnModificar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnModificar.Click
-            habilitadoModificar()
+            HabilitadoModificar()
             _botonSeleccionado = 2
         End Sub
         Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCancelar.Click
             ComboBox2.SelectedIndex = 0
 
             LimpiarParametros()
-            deshabilitadoInicio()
+            DeshabilitadoInicio()
 
-            autocompletarConsorcioCliente()
-
+            AutocompletarConsorcioCliente()
             DataGridView1.Rows.Clear()
 
             txtBuscarCliente.Focus()
@@ -751,70 +750,178 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         End Sub
         Private Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
             Try
+                If dgvAsientosDiario.Rows.Count = 0 Then
+
+                    KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    Return
+                End If
+
+
+
+                'Dim fec = ValidationForms.FechaActual(_tipoCon)
+
+                'Dim app = New Excel.Application()
+                'Dim workbook = app.Workbooks.Add(Type.Missing)
+                'Dim worksheet = workbook.Worksheets(1)
+                'worksheet.Name = "CLIENTES"
+
+                'Dim ic = ValidationForms.NumToCharExcelFromVisibleColumnsDataGrid(dgvAsientosDiario)
+                'worksheet.Range("A1:" & ic & (dgvAsientosDiario.RowCount + 50)).Font.Size = 10
+
+                'worksheet.Range("A1:" & ic & "1").Merge()
+                'worksheet.Range("A1:" & ic & "1").Value = ValidationForms.NombreCompany(_tipoCon) & "  -  " & titulo
+                'worksheet.Range("A1:" & ic & "1").Font.Bold = True
+                'worksheet.Range("A1:" & ic & "1").Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                'worksheet.Range("A1:" & ic & "1").Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
+                'worksheet.Range("A1:" & ic & "1").Font.Color = Color.White
+                'worksheet.Range("A1:" & ic & "1").Font.Size = 12
+                ''Copete  
+                'worksheet.Range("A2:" & ic & "2").Merge()
+                'worksheet.Range("A2:" & ic & "2").Value = "PERÍODO: TODOS LOS CLIENTES"
+                'worksheet.Range("A2:" & ic & "2").Font.Size = 12
+                ''Fecha  
+                'worksheet.Range("A3:" & ic & "3").Merge()
+                'worksheet.Range("A3:" & ic & "3").Value = "Fecha de Reporte: " & fec.ToLongDateString() & " " & fec.ToLongTimeString()
+                'worksheet.Range("A3:" & ic & "3").Font.Size = 12
+
+                ''Aca se ingresa las columnas
+                'Dim indc = 1
+                'Dim headin = 5
+                'For i = 0 To dgvAsientosDiario.Columns.Count - 1
+                '    If Not dgvAsientosDiario.Columns(i).Visible Then Continue For
+                '    worksheet.Cells(headin, indc) = dgvAsientosDiario.Columns(i).HeaderText
+                '    worksheet.Cells(headin, indc).Font.Bold = True
+                '    worksheet.Cells(headin, indc).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
+                '    worksheet.Cells(headin, indc).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                '    worksheet.Cells(headin, indc).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
+                '    worksheet.Cells(headin, indc).Font.Color = Color.White
+                '    indc += 1
+                'Next
+
+                ''Aca se ingresa el detalle recorrera la tabla celda por celda
+                'For i = 0 To dgvAsientosDiario.Rows.Count - 1
+                '    indc = 1
+                '    For j = 0 To dgvAsientosDiario.Columns.Count - 1
+
+                '        If Not dgvAsientosDiario.Columns(j).Visible Then Continue For
+
+                '        ' asigna valor a celda
+                '        worksheet.Cells(i + 1 + headin, indc) = dgvAsientosDiario.Rows(i).Cells(j).Value
+
+                '        ' definir bordes
+                '        worksheet.Cells(i + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
+                '        worksheet.Cells(i + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
+                '        If i = dgvAsientosDiario.RowCount - 1 Then worksheet.Cells(i + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                '        indc += 1
+                '    Next
+                'Next
+
+                'worksheet.Range("A1:" & ic & (dgvAsientosDiario.RowCount + 50)).Columns.AutoFit()
+
+                'app.DisplayAlerts = False
+                'app.Visible = True
+                'app.DisplayAlerts = True
+                'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
+
+                Dim saveFileDialog As New SaveFileDialog()
+                saveFileDialog.Filter = "Archivos de Excel (*.xlsx)|*.xlsx"
+                saveFileDialog.Title = "Guardar archivo Excel"
+                saveFileDialog.FileName = $"{titulo}_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx"
+
+
+                If saveFileDialog.ShowDialog() <> DialogResult.OK Then
+                    Exit Sub
+                End If
+
+
+
                 Dim fec = ValidationForms.FechaActual(_tipoCon)
+                Dim tituloReporte = ValidationForms.NombreCompany(_tipoCon) & " - " & titulo
 
-                Dim app = New Excel.Application()
-                Dim workbook = app.Workbooks.Add(Type.Missing)
-                Dim worksheet = workbook.Worksheets(1)
-                worksheet.Name = "CLIENTES"
+                ' Crear workbook y worksheet
+                Dim workbook As New XLWorkbook()
+                Dim worksheet = workbook.Worksheets.Add("Lista_Clientes")
+                Dim colorSistema As System.Drawing.Color = ValidationForms.GetColorSistema(_tipoCon)
+                Dim xlColor As XLColor = XLColor.FromColor(colorSistema)
 
+                ' Definir rango para el título
                 Dim ic = ValidationForms.NumToCharExcelFromVisibleColumnsDataGrid(dgvAsientosDiario)
-                worksheet.Range("A1:" & ic & (dgvAsientosDiario.RowCount + 50)).Font.Size = 10
-
                 worksheet.Range("A1:" & ic & "1").Merge()
-                worksheet.Range("A1:" & ic & "1").Value = ValidationForms.NombreCompany(_tipoCon) & "  -  " & titulo
-                worksheet.Range("A1:" & ic & "1").Font.Bold = True
-                worksheet.Range("A1:" & ic & "1").Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                worksheet.Range("A1:" & ic & "1").Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                worksheet.Range("A1:" & ic & "1").Font.Color = color.White
-                worksheet.Range("A1:" & ic & "1").Font.Size = 12
-                'Copete  
-                worksheet.Range("A2:" & ic & "2").Merge()
-                worksheet.Range("A2:" & ic & "2").Value = "PERÍODO: TODOS LOS CLIENTES"
-                worksheet.Range("A2:" & ic & "2").Font.Size = 12
-                'Fecha  
-                worksheet.Range("A3:" & ic & "3").Merge()
-                worksheet.Range("A3:" & ic & "3").Value = "Fecha de Reporte: " & fec.ToLongDateString() & " " & fec.ToLongTimeString()
-                worksheet.Range("A3:" & ic & "3").Font.Size = 12
+                worksheet.Cell(1, 1).Value = tituloReporte.ToString()
+                worksheet.Cell(1, 1).Style.Font.SetBold(True)
+                worksheet.Cell(1, 1).Style.Font.SetFontSize(12)
+                worksheet.Cell(1, 1).Style.Font.SetFontColor(XLColor.White)
+                worksheet.Cell(1, 1).Style.Fill.SetBackgroundColor(xlColor)
+                worksheet.Cell(1, 1).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center)
 
-                'Aca se ingresa las columnas
+                ' Copete
+                worksheet.Range("A2:" & ic & "2").Merge()
+                'worksheet.Cell(2, 1).Value = $"{cmbBancos.Text} CTA: {cmbCuentaBancos.Text}, PERÍODO: {dtpDesde.Value.ToLongDateString()} AL {dtpHasta.Value.ToLongDateString()}"
+                worksheet.Cell(2, 1).Value = $"PERÍODO: AL {fec.ToLongDateString()}"
+                worksheet.Cell(2, 1).Style.Font.SetFontSize(12)
+
+                ' Fecha
+                worksheet.Range("A3:" & ic & "3").Merge()
+                worksheet.Cell(3, 1).Value = $"Fecha de Reporte: {fec.ToLongDateString()} {fec.ToLongTimeString()}"
+                worksheet.Cell(3, 1).Style.Font.SetFontSize(12)
+
+                ' Encabezados de columnas
                 Dim indc = 1
                 Dim headin = 5
                 For i = 0 To dgvAsientosDiario.Columns.Count - 1
                     If Not dgvAsientosDiario.Columns(i).Visible Then Continue For
-                    worksheet.Cells(headin, indc) = dgvAsientosDiario.Columns(i).HeaderText
-                    worksheet.Cells(headin, indc).Font.Bold = True
-                    worksheet.Cells(headin, indc).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
-                    worksheet.Cells(headin, indc).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                    worksheet.Cells(headin, indc).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                    worksheet.Cells(headin, indc).Font.Color = Color.White
+                    worksheet.Cell(headin, indc).Value = dgvAsientosDiario.Columns(i).HeaderText
+                    worksheet.Cell(headin, indc).Style.Font.SetBold(True)
+                    worksheet.Cell(headin, indc).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center)
+                    worksheet.Cell(headin, indc).Style.Fill.SetBackgroundColor(xlColor)
+                    worksheet.Cell(headin, indc).Style.Font.SetFontColor(XLColor.White)
+                    worksheet.Cell(headin, indc).Style.Border.SetOutsideBorder(XLBorderStyleValues.Thin)
                     indc += 1
                 Next
 
-                'Aca se ingresa el detalle recorrera la tabla celda por celda
+                ' Detalle de datos
                 For i = 0 To dgvAsientosDiario.Rows.Count - 1
                     indc = 1
                     For j = 0 To dgvAsientosDiario.Columns.Count - 1
-
                         If Not dgvAsientosDiario.Columns(j).Visible Then Continue For
 
-                        ' asigna valor a celda
-                        worksheet.Cells(i + 1 + headin, indc) = dgvAsientosDiario.Rows(i).Cells(j).Value
+                        ' Obtener el valor de la celda
+                        Dim cellValue = dgvAsientosDiario.Rows(i).Cells(j).Value
 
-                        ' definir bordes
-                        worksheet.Cells(i + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
-                        worksheet.Cells(i + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
-                        If i = dgvAsientosDiario.RowCount - 1 Then worksheet.Cells(i + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                        ' Validar si el valor de la celda no es Nothing
+                        If cellValue IsNot Nothing Then
+                            worksheet.Cell(i + 1 + headin, indc).Value = cellValue.ToString()
+                        Else
+                            worksheet.Cell(i + 1 + headin, indc).Value = String.Empty ' Valor predeterminado si la celda es Nothing
+                        End If
+
+                        ' Establecer bordes
+                        Dim cell = worksheet.Cell(i + 1 + headin, indc)
+                        cell.Style.Border.SetLeftBorder(XLBorderStyleValues.Thin)
+                        cell.Style.Border.SetRightBorder(XLBorderStyleValues.Thin)
+
+                        If i = dgvAsientosDiario.RowCount - 1 Then
+                            cell.Style.Border.SetBottomBorder(XLBorderStyleValues.Thin)
+                        End If
+
                         indc += 1
                     Next
                 Next
 
-                worksheet.Range("A1:" & ic & (dgvAsientosDiario.RowCount + 50)).Columns.AutoFit()
+                ' Ajustar columnas automáticamente
+                worksheet.Columns("A:" & ic).AdjustToContents()
 
-                app.DisplayAlerts = False
-                app.Visible = True
-                app.DisplayAlerts = True
-                'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
+                ' Guardar el archivo en una ubicación temporal y abrirlo
+                Dim tempFilePath As String = Path.Combine(Path.GetTempPath(), saveFileDialog.FileName)
+                ' Guardar el archivo en una ubicación temporal
+                workbook.SaveAs(saveFileDialog.FileName)
+
+                ' Abrir el archivo Excel automáticamente
+                Process.Start(tempFilePath)
+
+                KryptonMessageBox.Show("Datos exportados correctamente", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+
+
             Catch ex As Exception
                 MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
@@ -822,7 +929,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub btnAnular_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAnular.Click
             If lblIdClienteGeneral.Text <> "..." Then
 
-                If MessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                'If MessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 ActualizarEstadoClienteGeneral()
@@ -834,11 +942,16 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     LimpiarParametros()
 
                     CargarClienteGeneral()
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             Else
-                MsgBox("PARA ANULAR, PRIMERO SELECCIONE UN CLIENTE.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("PARA ANULAR, PRIMERO SELECCIONE UN CLIENTE.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Para anular, primero seleccione un cliente.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
         Private Sub ActualizarEstadoClienteGeneral()
@@ -851,7 +964,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             If ValidarParametros() Then
 
-                If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LOS CAMBIOS?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                'If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LOS CAMBIOS?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LOS CAMBIOS?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
                 txtBuscarCliente.Text = txtApellidoNombreComercial.Text.Trim
                 _sqlCommands.Clear()
 

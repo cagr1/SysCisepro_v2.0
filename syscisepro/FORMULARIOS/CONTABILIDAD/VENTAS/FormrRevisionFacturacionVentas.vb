@@ -307,132 +307,239 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
         Private Sub ExportarDatosExcel(ByVal dataGridViewExp As DataGridView, ByVal titulo As String)
             Try
-                Dim mExcel As New Excel.Application
-                mExcel.Cursor = Excel.XlMousePointer.xlWait
-                mExcel.Visible = True
-                Dim objLibroExcel As Excel.Workbook = mExcel.Workbooks.Add
-                Dim objHojaExcel As Excel.Worksheet = objLibroExcel.Worksheets(1)
-                With objHojaExcel
-                    .Visible = Excel.XlSheetVisibility.xlSheetVisible
-                    .Activate()
-                    'Encabezado  
-                    .Range("A1:L1").Merge()
-                    .Range("A1:L1").Value = ValidationForms.NombreCompany(_tipoCon)
-                    .Range("A1:L1").Font.Bold = True
-                    .Range("A1:L1").Font.Size = 15
 
-                    'Copete  
-                    .Range("A2:L2").Merge()
-                    .Range("A2:L2").Value = titulo
-                    .Range("A2:L2").Font.Bold = True
-                    .Range("A2:L2").Font.Size = 12
+                If dgvRevisionFacturacion.Rows.Count = 0 Then
 
-                    Const primeraLetra As Char = "A"
-                    Const primerNumero As Short = 3
-                    Dim Letra As Char, UltimaLetra As Char
-                    Dim Numero As Integer, UltimoNumero As Integer
-                    Dim cod_letra As Byte = Asc(primeraLetra) - 1
-                    Dim sepDec As String = Application.CurrentCulture.NumberFormat.NumberDecimalSeparator
-                    Dim sepMil As String = Application.CurrentCulture.NumberFormat.NumberGroupSeparator
-                    'Establecer formatos de las columnas de la hija de cálculo  
-                    Dim strColumna As String = ""
-                    Dim LetraIzq As String = ""
-                    Dim cod_LetraIzq As Byte = Asc(primeraLetra) - 1
-                    Letra = primeraLetra
-                    Numero = primerNumero
-                    Dim objCelda As Excel.Range
-                    For Each c As DataGridViewColumn In dataGridViewExp.Columns
-                        If c.Visible Then
-                            If Letra = "Z" Then
-                                Letra = primeraLetra
-                                cod_letra = Asc(primeraLetra)
-                                cod_LetraIzq += 1
-                                LetraIzq = Chr(cod_LetraIzq)
-                            Else
-                                cod_letra += 1
-                                Letra = Chr(cod_letra)
-                            End If
-                            strColumna = LetraIzq + Letra + Numero.ToString
-                            objCelda = .Range(strColumna, Type.Missing)
-                            objCelda.Value = c.HeaderText
-                            objCelda.EntireColumn.Font.Size = 8
-                            'objCelda.EntireColumn.NumberFormat = c.DefaultCellStyle.Format  
-                            If c.ValueType Is GetType(Decimal) OrElse c.ValueType Is GetType(Double) Then
-                                objCelda.EntireColumn.NumberFormat = "#" + sepMil + "0" + sepDec + "00"
-                            End If
+                    KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    Return
+                End If
+
+                'Dim mExcel As New Excel.Application
+                'mExcel.Cursor = Excel.XlMousePointer.xlWait
+                'mExcel.Visible = True
+                'Dim objLibroExcel As Excel.Workbook = mExcel.Workbooks.Add
+                'Dim objHojaExcel As Excel.Worksheet = objLibroExcel.Worksheets(1)
+                'With objHojaExcel
+                '    .Visible = Excel.XlSheetVisibility.xlSheetVisible
+                '    .Activate()
+                '    'Encabezado  
+                '    .Range("A1:L1").Merge()
+                '    .Range("A1:L1").Value = ValidationForms.NombreCompany(_tipoCon)
+                '    .Range("A1:L1").Font.Bold = True
+                '    .Range("A1:L1").Font.Size = 15
+
+                '    'Copete  
+                '    .Range("A2:L2").Merge()
+                '    .Range("A2:L2").Value = titulo
+                '    .Range("A2:L2").Font.Bold = True
+                '    .Range("A2:L2").Font.Size = 12
+
+                '    Const primeraLetra As Char = "A"
+                '    Const primerNumero As Short = 3
+                '    Dim Letra As Char, UltimaLetra As Char
+                '    Dim Numero As Integer, UltimoNumero As Integer
+                '    Dim cod_letra As Byte = Asc(primeraLetra) - 1
+                '    Dim sepDec As String = Application.CurrentCulture.NumberFormat.NumberDecimalSeparator
+                '    Dim sepMil As String = Application.CurrentCulture.NumberFormat.NumberGroupSeparator
+                '    'Establecer formatos de las columnas de la hija de cálculo  
+                '    Dim strColumna As String = ""
+                '    Dim LetraIzq As String = ""
+                '    Dim cod_LetraIzq As Byte = Asc(primeraLetra) - 1
+                '    Letra = primeraLetra
+                '    Numero = primerNumero
+                '    Dim objCelda As Excel.Range
+                '    For Each c As DataGridViewColumn In dataGridViewExp.Columns
+                '        If c.Visible Then
+                '            If Letra = "Z" Then
+                '                Letra = primeraLetra
+                '                cod_letra = Asc(primeraLetra)
+                '                cod_LetraIzq += 1
+                '                LetraIzq = Chr(cod_LetraIzq)
+                '            Else
+                '                cod_letra += 1
+                '                Letra = Chr(cod_letra)
+                '            End If
+                '            strColumna = LetraIzq + Letra + Numero.ToString
+                '            objCelda = .Range(strColumna, Type.Missing)
+                '            objCelda.Value = c.HeaderText
+                '            objCelda.EntireColumn.Font.Size = 8
+                '            'objCelda.EntireColumn.NumberFormat = c.DefaultCellStyle.Format  
+                '            If c.ValueType Is GetType(Decimal) OrElse c.ValueType Is GetType(Double) Then
+                '                objCelda.EntireColumn.NumberFormat = "#" + sepMil + "0" + sepDec + "00"
+                '            End If
+                '        End If
+                '    Next
+
+                '    Dim objRangoEncab As Excel.Range = .Range(primeraLetra + Numero.ToString, LetraIzq + Letra + Numero.ToString)
+                '    objRangoEncab.BorderAround(1, Excel.XlBorderWeight.xlMedium)
+                '    UltimaLetra = Letra
+                '    Dim UltimaLetraIzq As String = LetraIzq
+
+                '    'CARGA DE DATOS  
+                '    Dim i As Integer = Numero + 1
+
+                '    For Each reg As DataGridViewRow In dataGridViewExp.Rows
+                '        LetraIzq = ""
+                '        cod_LetraIzq = Asc(primeraLetra) - 1
+                '        Letra = primeraLetra
+                '        cod_letra = Asc(primeraLetra) - 1
+                '        For Each c As DataGridViewColumn In dataGridViewExp.Columns
+                '            If c.Visible Then
+                '                If Letra = "Z" Then
+                '                    Letra = primeraLetra
+                '                    cod_letra = Asc(primeraLetra)
+                '                    cod_LetraIzq += 1
+                '                    LetraIzq = Chr(cod_LetraIzq)
+                '                Else
+                '                    cod_letra += 1
+                '                    Letra = Chr(cod_letra)
+                '                End If
+                '                strColumna = LetraIzq + Letra
+                '                ' acá debería realizarse la carga  
+                '                .Cells(i, strColumna) = IIf(IsDBNull(reg.ToString), "", reg.Cells(c.Index).Value)
+                '                '.Cells(i, strColumna) = IIf(IsDBNull(reg.(c.DataPropertyName)), c.DefaultCellStyle.NullValue, reg(c.DataPropertyName))  
+                '                '.Range(strColumna + i, strColumna + i).In()  
+
+                '            End If
+                '        Next
+                '        Dim objRangoReg As Excel.Range = .Range(primeraLetra + i.ToString, strColumna + i.ToString)
+                '        objRangoReg.Rows.BorderAround()
+                '        objRangoReg.Select()
+                '        i += 1
+                '    Next
+                '    UltimoNumero = i
+
+                '    'Dibujar las líneas de las columnas  
+                '    LetraIzq = ""
+                '    cod_LetraIzq = Asc("A")
+                '    cod_letra = Asc(primeraLetra)
+                '    Letra = primeraLetra
+                '    For Each c As DataGridViewColumn In dataGridViewExp.Columns
+                '        If c.Visible Then
+                '            objCelda = .Range(LetraIzq + Letra + primerNumero.ToString, LetraIzq + Letra + (UltimoNumero - 1).ToString)
+                '            objCelda.BorderAround()
+                '            If Letra = "Z" Then
+                '                Letra = primeraLetra
+                '                cod_letra = Asc(primeraLetra)
+                '                LetraIzq = Chr(cod_LetraIzq)
+                '                cod_LetraIzq += 1
+                '            Else
+                '                cod_letra += 1
+                '                Letra = Chr(cod_letra)
+                '            End If
+                '        End If
+                '    Next
+
+                '    'Dibujar el border exterior grueso  
+                '    Dim objRango As Excel.Range = .Range(primeraLetra + primerNumero.ToString, UltimaLetraIzq + UltimaLetra + (UltimoNumero - 1).ToString)
+                '    objRango.Select()
+                '    objRango.Columns.AutoFit()
+                '    objRango.Columns.BorderAround(1, Excel.XlBorderWeight.xlMedium)
+                'End With
+
+                'mExcel.Cursor = Excel.XlMousePointer.xlDefault
+
+
+                Dim saveFileDialog As New SaveFileDialog()
+                saveFileDialog.Filter = "Archivos de Excel (*.xlsx)|*.xlsx"
+                saveFileDialog.Title = "Guardar archivo Excel"
+                saveFileDialog.FileName = $"{titulo}_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx"
+
+
+                If saveFileDialog.ShowDialog() <> DialogResult.OK Then
+                    Exit Sub
+                End If
+
+
+
+                Dim fec = ValidationForms.FechaActual(_tipoCon)
+                Dim tituloReporte = ValidationForms.NombreCompany(_tipoCon) & " - " & titulo
+
+                ' Crear workbook y worksheet
+                Dim workbook As New XLWorkbook()
+                Dim worksheet = workbook.Worksheets.Add("COMPROBANTES_EGRESO")
+                Dim colorSistema As System.Drawing.Color = ValidationForms.GetColorSistema(_tipoCon)
+                Dim xlColor As XLColor = XLColor.FromColor(colorSistema)
+
+                ' Definir rango para el título
+                Dim ic = ValidationForms.NumToCharExcelFromVisibleColumnsDataGrid(dgvRevisionFacturacion)
+                worksheet.Range("A1:" & ic & "1").Merge()
+                worksheet.Cell(1, 1).Value = tituloReporte.ToString()
+                worksheet.Cell(1, 1).Style.Font.SetBold(True)
+                worksheet.Cell(1, 1).Style.Font.SetFontSize(12)
+                worksheet.Cell(1, 1).Style.Font.SetFontColor(XLColor.White)
+                worksheet.Cell(1, 1).Style.Fill.SetBackgroundColor(xlColor)
+                worksheet.Cell(1, 1).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center)
+
+                ' Copete
+                worksheet.Range("A2:" & ic & "2").Merge()
+                'worksheet.Cell(2, 1).Value = $"{cmbBancos.Text} CTA: {cmbCuentaBancos.Text}, PERÍODO: {dtpDesde.Value.ToLongDateString()} AL {dtpHasta.Value.ToLongDateString()}"
+                worksheet.Cell(2, 1).Value = $"PERÍODO: AL {fec.ToLongDateString()}"
+                worksheet.Cell(2, 1).Style.Font.SetFontSize(12)
+
+                ' Fecha
+                worksheet.Range("A3:" & ic & "3").Merge()
+                worksheet.Cell(3, 1).Value = $"Fecha de Reporte: {fec.ToLongDateString()} {fec.ToLongTimeString()}"
+                worksheet.Cell(3, 1).Style.Font.SetFontSize(12)
+
+                ' Encabezados de columnas
+                Dim indc = 1
+                Dim headin = 5
+                For i = 0 To dgvRevisionFacturacion.Columns.Count - 1
+                    If Not dgvRevisionFacturacion.Columns(i).Visible Then Continue For
+                    worksheet.Cell(headin, indc).Value = dgvRevisionFacturacion.Columns(i).HeaderText
+                    worksheet.Cell(headin, indc).Style.Font.SetBold(True)
+                    worksheet.Cell(headin, indc).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center)
+                    worksheet.Cell(headin, indc).Style.Fill.SetBackgroundColor(xlColor)
+                    worksheet.Cell(headin, indc).Style.Font.SetFontColor(XLColor.White)
+                    worksheet.Cell(headin, indc).Style.Border.SetOutsideBorder(XLBorderStyleValues.Thin)
+                    indc += 1
+                Next
+
+                ' Detalle de datos
+                For i = 0 To dgvRevisionFacturacion.Rows.Count - 1
+                    indc = 1
+                    For j = 0 To dgvRevisionFacturacion.Columns.Count - 1
+                        If Not dgvRevisionFacturacion.Columns(j).Visible Then Continue For
+
+                        ' Obtener el valor de la celda
+                        Dim cellValue = dgvRevisionFacturacion.Rows(i).Cells(j).Value
+
+                        ' Validar si el valor de la celda no es Nothing
+                        If cellValue IsNot Nothing Then
+                            worksheet.Cell(i + 1 + headin, indc).Value = cellValue.ToString()
+                        Else
+                            worksheet.Cell(i + 1 + headin, indc).Value = String.Empty ' Valor predeterminado si la celda es Nothing
                         End If
-                    Next
 
-                    Dim objRangoEncab As Excel.Range = .Range(primeraLetra + Numero.ToString, LetraIzq + Letra + Numero.ToString)
-                    objRangoEncab.BorderAround(1, Excel.XlBorderWeight.xlMedium)
-                    UltimaLetra = Letra
-                    Dim UltimaLetraIzq As String = LetraIzq
+                        ' Establecer bordes
+                        Dim cell = worksheet.Cell(i + 1 + headin, indc)
+                        cell.Style.Border.SetLeftBorder(XLBorderStyleValues.Thin)
+                        cell.Style.Border.SetRightBorder(XLBorderStyleValues.Thin)
 
-                    'CARGA DE DATOS  
-                    Dim i As Integer = Numero + 1
-
-                    For Each reg As DataGridViewRow In dataGridViewExp.Rows
-                        LetraIzq = ""
-                        cod_LetraIzq = Asc(primeraLetra) - 1
-                        Letra = primeraLetra
-                        cod_letra = Asc(primeraLetra) - 1
-                        For Each c As DataGridViewColumn In dataGridViewExp.Columns
-                            If c.Visible Then
-                                If Letra = "Z" Then
-                                    Letra = primeraLetra
-                                    cod_letra = Asc(primeraLetra)
-                                    cod_LetraIzq += 1
-                                    LetraIzq = Chr(cod_LetraIzq)
-                                Else
-                                    cod_letra += 1
-                                    Letra = Chr(cod_letra)
-                                End If
-                                strColumna = LetraIzq + Letra
-                                ' acá debería realizarse la carga  
-                                .Cells(i, strColumna) = IIf(IsDBNull(reg.ToString), "", reg.Cells(c.Index).Value)
-                                '.Cells(i, strColumna) = IIf(IsDBNull(reg.(c.DataPropertyName)), c.DefaultCellStyle.NullValue, reg(c.DataPropertyName))  
-                                '.Range(strColumna + i, strColumna + i).In()  
-
-                            End If
-                        Next
-                        Dim objRangoReg As Excel.Range = .Range(primeraLetra + i.ToString, strColumna + i.ToString)
-                        objRangoReg.Rows.BorderAround()
-                        objRangoReg.Select()
-                        i += 1
-                    Next
-                    UltimoNumero = i
-
-                    'Dibujar las líneas de las columnas  
-                    LetraIzq = ""
-                    cod_LetraIzq = Asc("A")
-                    cod_letra = Asc(primeraLetra)
-                    Letra = primeraLetra
-                    For Each c As DataGridViewColumn In dataGridViewExp.Columns
-                        If c.Visible Then
-                            objCelda = .Range(LetraIzq + Letra + primerNumero.ToString, LetraIzq + Letra + (UltimoNumero - 1).ToString)
-                            objCelda.BorderAround()
-                            If Letra = "Z" Then
-                                Letra = primeraLetra
-                                cod_letra = Asc(primeraLetra)
-                                LetraIzq = Chr(cod_LetraIzq)
-                                cod_LetraIzq += 1
-                            Else
-                                cod_letra += 1
-                                Letra = Chr(cod_letra)
-                            End If
+                        If i = dgvRevisionFacturacion.RowCount - 1 Then
+                            cell.Style.Border.SetBottomBorder(XLBorderStyleValues.Thin)
                         End If
+
+                        indc += 1
                     Next
+                Next
 
-                    'Dibujar el border exterior grueso  
-                    Dim objRango As Excel.Range = .Range(primeraLetra + primerNumero.ToString, UltimaLetraIzq + UltimaLetra + (UltimoNumero - 1).ToString)
-                    objRango.Select()
-                    objRango.Columns.AutoFit()
-                    objRango.Columns.BorderAround(1, Excel.XlBorderWeight.xlMedium)
-                End With
+                ' Ajustar columnas automáticamente
+                worksheet.Columns("A:" & ic).AdjustToContents()
 
-                mExcel.Cursor = Excel.XlMousePointer.xlDefault
+                ' Guardar el archivo en una ubicación temporal y abrirlo
+                Dim tempFilePath As String = Path.Combine(Path.GetTempPath(), saveFileDialog.FileName)
+                ' Guardar el archivo en una ubicación temporal
+                workbook.SaveAs(saveFileDialog.FileName)
+
+                ' Abrir el archivo Excel automáticamente
+                Process.Start(tempFilePath)
+
+                KryptonMessageBox.Show("Datos exportados correctamente", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Catch ex As Exception
-                MsgBox("EXPORTAR REVISIÓN DE FACTURACIÓN." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("EXPORTAR REVISIÓN DE FACTURACIÓN." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Error al exportar los datos! " & ex.Message.ToString, "Mensaje de error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
 
 

@@ -3,6 +3,8 @@ Imports ClassLibraryCisepro.ENUMS
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports Krypton.Toolkit
+Imports ClosedXML.Excel
+Imports System.IO
 
 Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
     ''' <summary>
@@ -267,105 +269,105 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             Try
                 Dim fec = ValidationForms.FechaActual(_tipoCon)
 
-                Dim app = New Microsoft.Office.Interop.Excel.Application()
-                Dim workbook = app.Workbooks.Add(Type.Missing)
-                Dim worksheet = workbook.Worksheets(1)
-                worksheet.Name = "BALANCE_PYG"
+                'Dim app = New Microsoft.Office.Interop.Excel.Application()
+                'Dim workbook = app.Workbooks.Add(Type.Missing)
+                'Dim worksheet = workbook.Worksheets(1)
+                'worksheet.Name = "BALANCE_PYG"
 
-                Dim ic = ValidationForms.NumToCharExcelFromVisibleColumnsDataGrid(dgvIngresos)
-                worksheet.Range("A1:" & ic & (dgvIngresos.RowCount + dgvEgresos.RowCount + 50)).Font.Size = 10
+                'Dim ic = ValidationForms.NumToCharExcelFromVisibleColumnsDataGrid(dgvIngresos)
+                'worksheet.Range("A1:" & ic & (dgvIngresos.RowCount + dgvEgresos.RowCount + 50)).Font.Size = 10
 
-                worksheet.Range("A1:" & ic & "1").Merge()
-                worksheet.Range("A1:" & ic & "1").Value = ValidationForms.NombreCompany(_tipoCon) & "  -  " & titulo
-                worksheet.Range("A1:" & ic & "1").Font.Bold = True
-                worksheet.Range("A1:" & ic & "1").Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                worksheet.Range("A1:" & ic & "1").Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                worksheet.Range("A1:" & ic & "1").Font.Color = Color.White
-                worksheet.Range("A1:" & ic & "1").Font.Size = 12
-                'Copete  
-                worksheet.Range("A2:" & ic & "2").Merge()
-                worksheet.Range("A2:" & ic & "2").Value = "PERÍODO: " & dtpFechaDesde.Value.ToLongDateString() & "  AL " & dtpFechaHasta.Value.ToLongDateString()
-                worksheet.Range("A2:" & ic & "2").Font.Size = 12
-                'Fecha  
-                worksheet.Range("A3:" & ic & "3").Merge()
-                worksheet.Range("A3:" & ic & "3").Value = "Fecha de Reporte: " & fec.ToLongDateString() & " " & fec.ToLongTimeString()
-                worksheet.Range("A3:" & ic & "3").Font.Size = 12
+                'worksheet.Range("A1:" & ic & "1").Merge()
+                'worksheet.Range("A1:" & ic & "1").Value = ValidationForms.NombreCompany(_tipoCon) & "  -  " & titulo
+                'worksheet.Range("A1:" & ic & "1").Font.Bold = True
+                'worksheet.Range("A1:" & ic & "1").Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                'worksheet.Range("A1:" & ic & "1").Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
+                'worksheet.Range("A1:" & ic & "1").Font.Color = Color.White
+                'worksheet.Range("A1:" & ic & "1").Font.Size = 12
+                ''Copete  
+                'worksheet.Range("A2:" & ic & "2").Merge()
+                'worksheet.Range("A2:" & ic & "2").Value = "PERÍODO: " & dtpFechaDesde.Value.ToLongDateString() & "  AL " & dtpFechaHasta.Value.ToLongDateString()
+                'worksheet.Range("A2:" & ic & "2").Font.Size = 12
+                ''Fecha  
+                'worksheet.Range("A3:" & ic & "3").Merge()
+                'worksheet.Range("A3:" & ic & "3").Value = "Fecha de Reporte: " & fec.ToLongDateString() & " " & fec.ToLongTimeString()
+                'worksheet.Range("A3:" & ic & "3").Font.Size = 12
 
-                'Aca se ingresa las columnas
-                Dim indc = 1
-                Dim headin = 5
-                For i = 0 To dgvIngresos.Columns.Count - 1
-                    If Not dgvIngresos.Columns(i).Visible Then Continue For
-                    worksheet.Cells(headin, indc) = dgvIngresos.Columns(i).HeaderText
-                    worksheet.Cells(headin, indc).Font.Bold = True
-                    worksheet.Cells(headin, indc).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
-                    worksheet.Cells(headin, indc).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                    worksheet.Cells(headin, indc).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                    worksheet.Cells(headin, indc).Font.Color = Color.White
-                    indc += 1
-                Next
+                ''Aca se ingresa las columnas
+                'Dim indc = 1
+                'Dim headin = 5
+                'For i = 0 To dgvIngresos.Columns.Count - 1
+                '    If Not dgvIngresos.Columns(i).Visible Then Continue For
+                '    worksheet.Cells(headin, indc) = dgvIngresos.Columns(i).HeaderText
+                '    worksheet.Cells(headin, indc).Font.Bold = True
+                '    worksheet.Cells(headin, indc).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
+                '    worksheet.Cells(headin, indc).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                '    worksheet.Cells(headin, indc).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
+                '    worksheet.Cells(headin, indc).Font.Color = Color.White
+                '    indc += 1
+                'Next
 
-                'Aca se ingresa el detalle recorrera la tabla celda por celda
-                Dim c = headin + 1
-                For o = 0 To dgvIngresos.Rows.Count - 1
-                    If Not dgvIngresos.Rows(o).Visible Then Continue For
-                    indc = 1
-                    For j = 0 To dgvIngresos.Columns.Count - 1
-                        If Not dgvIngresos.Columns(j).Visible Then Continue For
-                        worksheet.Cells(c, indc) = dgvIngresos.Rows(o).Cells(j).Value
-                        worksheet.Cells(c, indc).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
-                        worksheet.Cells(c, indc).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
-                        indc += 1
-                    Next
-                    c += 1
-                Next
-                'worksheet.Range("A" & (c - 1) & ":" & ic & indc).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                ''Aca se ingresa el detalle recorrera la tabla celda por celda
+                'Dim c = headin + 1
+                'For o = 0 To dgvIngresos.Rows.Count - 1
+                '    If Not dgvIngresos.Rows(o).Visible Then Continue For
+                '    indc = 1
+                '    For j = 0 To dgvIngresos.Columns.Count - 1
+                '        If Not dgvIngresos.Columns(j).Visible Then Continue For
+                '        worksheet.Cells(c, indc) = dgvIngresos.Rows(o).Cells(j).Value
+                '        worksheet.Cells(c, indc).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
+                '        worksheet.Cells(c, indc).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
+                '        indc += 1
+                '    Next
+                '    c += 1
+                'Next
+                ''worksheet.Range("A" & (c - 1) & ":" & ic & indc).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
 
-                ' Agregar totales de dgvIngresos (DEBE y HABER)
-                worksheet.Cells(c, 1).Value = "TOTAL INGRESOS"
-                worksheet.Cells(c, 1).Font.Bold = True
-                worksheet.Cells(c, dgvIngresos.Columns("DEBE").Index + 1).Value = txtDeudorIngresos.Text
-                worksheet.Cells(c, dgvIngresos.Columns("HABER").Index + 1).Value = txtAcreedorIngresos.Text
+                '' Agregar totales de dgvIngresos (DEBE y HABER)
+                'worksheet.Cells(c, 1).Value = "TOTAL INGRESOS"
+                'worksheet.Cells(c, 1).Font.Bold = True
+                'worksheet.Cells(c, dgvIngresos.Columns("DEBE").Index + 1).Value = txtDeudorIngresos.Text
+                'worksheet.Cells(c, dgvIngresos.Columns("HABER").Index + 1).Value = txtAcreedorIngresos.Text
 
 
-                'Aca se ingresa las columnas
-                indc = 1 
-                c += 1
-                For i = 0 To dgvEgresos.Columns.Count - 1
-                    If Not dgvEgresos.Columns(i).Visible Then Continue For
-                    worksheet.Cells(c, indc) = dgvEgresos.Columns(i).HeaderText
-                    worksheet.Cells(c, indc).Font.Bold = True
-                    worksheet.Cells(c, indc).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
-                    worksheet.Cells(c, indc).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                    worksheet.Cells(c, indc).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                    worksheet.Cells(c, indc).Font.Color = Color.White
-                    indc += 1
-                Next
-                
-                'Aca se ingresa el detalle recorrera la tabla celda por celda
-                c += 1
-                For o = 0 To dgvEgresos.Rows.Count - 1
-                    If Not dgvEgresos.Rows(o).Visible Then Continue For
-                    indc = 1
-                    For j = 0 To dgvEgresos.Columns.Count - 1
-                        If Not dgvEgresos.Columns(j).Visible Then Continue For
-                        worksheet.Cells(c, indc) = dgvEgresos.Rows(o).Cells(j).Value
-                        worksheet.Cells(c, indc).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
-                        worksheet.Cells(c, indc).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
-                        indc += 1
-                    Next
-                    c += 1
-                Next
-                'worksheet.Range("A" & (c - 1) & ":" & ic & indc).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                ''Aca se ingresa las columnas
+                'indc = 1 
+                'c += 1
+                'For i = 0 To dgvEgresos.Columns.Count - 1
+                '    If Not dgvEgresos.Columns(i).Visible Then Continue For
+                '    worksheet.Cells(c, indc) = dgvEgresos.Columns(i).HeaderText
+                '    worksheet.Cells(c, indc).Font.Bold = True
+                '    worksheet.Cells(c, indc).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
+                '    worksheet.Cells(c, indc).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                '    worksheet.Cells(c, indc).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
+                '    worksheet.Cells(c, indc).Font.Color = Color.White
+                '    indc += 1
+                'Next
 
-                ' Agregar totales de dgvEgresos (DEBE y HABER)
-                worksheet.Cells(c, 1).Value = "TOTAL EGRESOS"
-                worksheet.Cells(c, 1).Font.Bold = True
-                worksheet.Cells(c, dgvEgresos.Columns("DEBE").Index + 1).Value = txtDeudorEgresos.Text
-                worksheet.Cells(c, dgvEgresos.Columns("HABER").Index + 1).Value = txtAcreedorEgresos.Text
+                ''Aca se ingresa el detalle recorrera la tabla celda por celda
+                'c += 1
+                'For o = 0 To dgvEgresos.Rows.Count - 1
+                '    If Not dgvEgresos.Rows(o).Visible Then Continue For
+                '    indc = 1
+                '    For j = 0 To dgvEgresos.Columns.Count - 1
+                '        If Not dgvEgresos.Columns(j).Visible Then Continue For
+                '        worksheet.Cells(c, indc) = dgvEgresos.Rows(o).Cells(j).Value
+                '        worksheet.Cells(c, indc).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
+                '        worksheet.Cells(c, indc).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
+                '        indc += 1
+                '    Next
+                '    c += 1
+                'Next
+                ''worksheet.Range("A" & (c - 1) & ":" & ic & indc).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
 
-                ' Ajustar columnas
-                worksheet.Range("A1:" & ic & (dgvIngresos.RowCount + dgvEgresos.RowCount + 50)).Columns.AutoFit()
+                '' Agregar totales de dgvEgresos (DEBE y HABER)
+                'worksheet.Cells(c, 1).Value = "TOTAL EGRESOS"
+                'worksheet.Cells(c, 1).Font.Bold = True
+                'worksheet.Cells(c, dgvEgresos.Columns("DEBE").Index + 1).Value = txtDeudorEgresos.Text
+                'worksheet.Cells(c, dgvEgresos.Columns("HABER").Index + 1).Value = txtAcreedorEgresos.Text
+
+                '' Ajustar columnas
+                'worksheet.Range("A1:" & ic & (dgvIngresos.RowCount + dgvEgresos.RowCount + 50)).Columns.AutoFit()
 
 
 
@@ -409,14 +411,98 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
                 'worksheet.Range("A1:" & ic & (dgvIngresos.RowCount + dgvEgresos.RowCount + 50)).Columns.AutoFit()
 
-                app.DisplayAlerts = False
-                app.Visible = True
-                app.DisplayAlerts = True
+                'app.DisplayAlerts = False
+                'app.Visible = True
+                'app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
+
+                Dim saveFileDialog As New SaveFileDialog With {
+                        .Filter = "Excel Files|*.xlsx",
+                        .Title = "Guardar Reporte",
+                        .FileName = $"{"EstadoGeneral_PYG_"}_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx"
+                    }
+
+                If saveFileDialog.ShowDialog() <> DialogResult.OK Then Exit Sub
+
+                Using workbook As New XLWorkbook()
+                    Dim worksheet = workbook.Worksheets.Add("BALANCE_PYG")
+                    Dim ic = ValidationForms.NumToCharExcelFromVisibleColumnsDataGrid(dgvIngresos)
+                    Dim row As Integer = 1
+
+                    ' Encabezado
+                    worksheet.Range("A1:" & ic & "1").Merge().Value = ValidationForms.NombreCompany(_tipoCon).ToString() & " - " & titulo
+                    worksheet.Range("A1:" & ic & "1").Style.Font.SetBold(True).Font.SetFontSize(12).Fill.SetBackgroundColor(XLColor.FromColor(ValidationForms.GetColorSistema(_tipoCon))).Font.SetFontColor(XLColor.White)
+                    worksheet.Range("A1:" & ic & "1").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center
+                    row += 1
+
+                    ' Período
+                    worksheet.Cell(row, 1).Value = "PERÍODO: " & dtpFechaDesde.Value.ToLongDateString() & " AL " & dtpFechaHasta.Value.ToLongDateString()
+                    row += 1
+
+                    ' Fecha de Reporte
+                    worksheet.Cell(row, 1).Value = "Fecha de Reporte: " & fec.ToLongDateString() & " " & fec.ToLongTimeString()
+                    row += 2
+
+                    ' Exportar DataGridView Ingresos
+                    row = ExportarDataGridView(worksheet, dgvIngresos, row, "TOTAL INGRESOS", txtDeudorIngresos.Text, txtAcreedorIngresos.Text, txtIngresos.Text)
+
+
+                    ' Exportar DataGridView Egresos
+                    row = ExportarDataGridView(worksheet, dgvEgresos, row, "TOTAL EGRESOS", txtDeudorEgresos.Text, txtAcreedorEgresos.Text, txtEgresos.Text)
+
+                    ' Guardar Archivo
+                    workbook.SaveAs(saveFileDialog.FileName)
+                End Using
+
+                KryptonMessageBox.Show("Datos exportados correctamente!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+                KryptonMessageBox.Show("Hubo un problema al exportar datos! " & ex.Message.ToString(), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try 
         End Sub
+
+        Private Function ExportarDataGridView(ByVal worksheet As IXLWorksheet, ByVal dgv As DataGridView, ByVal startRow As Integer, ByVal totalLabel As String, ByVal totalDebe As String, ByVal totalHaber As String, ByVal total As String) As Integer
+            Dim colIndex As Integer = 1
+
+            ' Encabezado
+            For Each column As DataGridViewColumn In dgv.Columns
+                If column.Visible Then
+                    worksheet.Cell(startRow, colIndex).Value = column.HeaderText
+                    worksheet.Cell(startRow, colIndex).Style.Font.SetBold(True).Fill.SetBackgroundColor(XLColor.FromColor(ValidationForms.GetColorSistema(_tipoCon))).Font.SetFontColor(XLColor.White).Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center)
+                    colIndex += 1
+                End If
+            Next
+            startRow += 1
+
+            ' Datos
+            For Each row As DataGridViewRow In dgv.Rows
+                If row.Visible Then
+                    colIndex = 1
+                    For Each cell As DataGridViewCell In row.Cells
+                        If dgv.Columns(cell.ColumnIndex).Visible Then
+                            worksheet.Cell(startRow, colIndex).Value = If(cell.Value IsNot Nothing, cell.Value.ToString(), "")
+                            colIndex += 1
+                        End If
+                    Next
+                    startRow += 1
+                End If
+            Next
+
+            ' Totales
+            worksheet.Cell(startRow, 1).Value = totalLabel
+            worksheet.Cell(startRow, 1).Style.Font.SetBold(True)
+            worksheet.Cell(startRow, dgv.Columns("DEBE").Index + 1).Value = totalDebe.ToString()
+            worksheet.Cell(startRow, dgv.Columns("HABER").Index + 1).Value = totalHaber.ToString()
+            worksheet.Cell(startRow, dgv.Columns("SALDO").Index + 1).Value = total.ToString()
+            startRow += 1
+
+            ' Ajustar columnas
+            worksheet.Columns().AdjustToContents()
+
+            Return startRow
+        End Function
+
+
 
         Private Sub FormEstadoPerdidasYGanancias_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
             ' DEFINIR TIPO Y COLOR DE SISTEMA
@@ -685,6 +771,17 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         End Sub
 
         Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button1.Click
+            If dgvIngresos.Rows.Count = 0 Then
+                KryptonMessageBox.Show("Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                Return
+            End If
+
+            If dgvIngresos.Rows.Count = 0 Then
+                KryptonMessageBox.Show("Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                Return
+            End If
+
+
             ExportarDatosExcelDobleGrid(dgvIngresos, dgvEgresos, "ESTADO DE PERDIDAS Y GANANCIAS")
         End Sub
 

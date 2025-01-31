@@ -8,6 +8,8 @@ Imports Krypton.Toolkit
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO.REPORTES
+Imports ClosedXML.Excel
+Imports System.IO
 
 
 Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
@@ -274,83 +276,184 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
         Private Sub ExportarDatosExcel(ByVal titulo As String, ByVal sname As String, ByVal desde As DateTime, ByVal hasta As DateTime)
             Try
-                Dim fec = ValidationForms.FechaActual(_tipoCon)
-                Dim app = New Microsoft.Office.Interop.Excel.Application()
-                Dim workbook = app.Workbooks.Add(Type.Missing)
-                Dim worksheet = workbook.Worksheets(1)
-                worksheet.Name = sname
+                'Dim fec = ValidationForms.FechaActual(_tipoCon)
+                'Dim app = New Microsoft.Office.Interop.Excel.Application()
+                'Dim workbook = app.Workbooks.Add(Type.Missing)
+                'Dim worksheet = workbook.Worksheets(1)
+                'worksheet.Name = sname
 
-                Dim ic = ValidationForms.NumToCharExcelFromVisibleColumnsDataGrid(dgvAsientosDiario)
-                worksheet.Range("A1:" & ic & (dgvAsientosDiario.RowCount + 50)).Font.Size = 10
+                'Dim ic = ValidationForms.NumToCharExcelFromVisibleColumnsDataGrid(dgvAsientosDiario)
+                'worksheet.Range("A1:" & ic & (dgvAsientosDiario.RowCount + 50)).Font.Size = 10
 
-                worksheet.Range("A1:" & ic & "1").Merge()
-                worksheet.Range("A1:" & ic & "1").Value = ValidationForms.NombreCompany(_tipoCon) & "  -  " & titulo
-                worksheet.Range("A1:" & ic & "1").Font.Bold = True
-                worksheet.Range("A1:" & ic & "1").Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                worksheet.Range("A1:" & ic & "1").Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                worksheet.Range("A1:" & ic & "1").Font.Color = Color.White
-                worksheet.Range("A1:" & ic & "1").Font.Size = 12
-                'Copete  
-                worksheet.Range("A2:" & ic & "2").Merge()
-                worksheet.Range("A2:" & ic & "2").Value = "PERÍODO: " & desde.ToLongDateString().ToUpper() & "  AL " & hasta.ToLongDateString().ToUpper()
-                worksheet.Range("A2:" & ic & "2").Font.Size = 12
-                'Fecha  
-                worksheet.Range("A3:" & ic & "3").Merge()
-                worksheet.Range("A3:" & ic & "3").Value = "Fecha de Reporte: " & fec.ToLongDateString().ToUpper() & " " & fec.ToLongTimeString()
-                worksheet.Range("A3:" & ic & "3").Font.Size = 12
+                'worksheet.Range("A1:" & ic & "1").Merge()
+                'worksheet.Range("A1:" & ic & "1").Value = ValidationForms.NombreCompany(_tipoCon) & "  -  " & titulo
+                'worksheet.Range("A1:" & ic & "1").Font.Bold = True
+                'worksheet.Range("A1:" & ic & "1").Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                'worksheet.Range("A1:" & ic & "1").Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
+                'worksheet.Range("A1:" & ic & "1").Font.Color = Color.White
+                'worksheet.Range("A1:" & ic & "1").Font.Size = 12
+                ''Copete  
+                'worksheet.Range("A2:" & ic & "2").Merge()
+                'worksheet.Range("A2:" & ic & "2").Value = "PERÍODO: " & desde.ToLongDateString().ToUpper() & "  AL " & hasta.ToLongDateString().ToUpper()
+                'worksheet.Range("A2:" & ic & "2").Font.Size = 12
+                ''Fecha  
+                'worksheet.Range("A3:" & ic & "3").Merge()
+                'worksheet.Range("A3:" & ic & "3").Value = "Fecha de Reporte: " & fec.ToLongDateString().ToUpper() & " " & fec.ToLongTimeString()
+                'worksheet.Range("A3:" & ic & "3").Font.Size = 12
 
-                'Aca se ingresa las columnas
-                Dim indc = 1
-                Dim headin = 5
-                For i = 0 To dgvAsientosDiario.Columns.Count - 1
-                    If Not dgvAsientosDiario.Columns(i).Visible Then Continue For
-                    worksheet.Cells(headin, indc) = dgvAsientosDiario.Columns(i).HeaderText
-                    worksheet.Cells(headin, indc).Font.Bold = True
-                    worksheet.Cells(headin, indc).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
-                    worksheet.Cells(headin, indc).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                    worksheet.Cells(headin, indc).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                    worksheet.Cells(headin, indc).Font.Color = Color.White
-                    indc += 1
-                Next
+                ''Aca se ingresa las columnas
+                'Dim indc = 1
+                'Dim headin = 5
+                'For i = 0 To dgvAsientosDiario.Columns.Count - 1
+                '    If Not dgvAsientosDiario.Columns(i).Visible Then Continue For
+                '    worksheet.Cells(headin, indc) = dgvAsientosDiario.Columns(i).HeaderText
+                '    worksheet.Cells(headin, indc).Font.Bold = True
+                '    worksheet.Cells(headin, indc).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
+                '    worksheet.Cells(headin, indc).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                '    worksheet.Cells(headin, indc).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
+                '    worksheet.Cells(headin, indc).Font.Color = Color.White
+                '    indc += 1
+                'Next
 
-                ''Aca se ingresa el detalle recorrera la tabla celda por celda                
-                Dim c = 0
-                For o = 0 To dgvAsientosDiario.Rows.Count - 1
-                    If Not dgvAsientosDiario.Rows(o).Visible Then Continue For
-                    indc = 1
-                    For j = 0 To dgvAsientosDiario.Columns.Count - 1
-                        If Not dgvAsientosDiario.Columns(j).Visible Then Continue For
-                        worksheet.Cells(c + 1 + headin, indc) = dgvAsientosDiario.Rows(o).Cells(j).Value
-                        worksheet.Cells(c + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
-                        worksheet.Cells(c + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
+                '''Aca se ingresa el detalle recorrera la tabla celda por celda                
+                'Dim c = 0
+                'For o = 0 To dgvAsientosDiario.Rows.Count - 1
+                '    If Not dgvAsientosDiario.Rows(o).Visible Then Continue For
+                '    indc = 1
+                '    For j = 0 To dgvAsientosDiario.Columns.Count - 1
+                '        If Not dgvAsientosDiario.Columns(j).Visible Then Continue For
+                '        worksheet.Cells(c + 1 + headin, indc) = dgvAsientosDiario.Rows(o).Cells(j).Value
+                '        worksheet.Cells(c + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
+                '        worksheet.Cells(c + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
+                '        indc += 1
+                '    Next
+                '    c += 1
+                'Next
+                'worksheet.Range("A" & (c + headin) & ":" & ic & indc).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+
+
+                '' TOTALES, ETC
+                'Dim foot = headin + dgvAsientosDiario.RowCount + 3
+                'worksheet.Cells(foot, 7).Value = "TOTAL DEBE"
+                'worksheet.Cells(foot, 7).Font.Bold = True
+                'worksheet.Cells(foot, 8).Value = txtTotalDebe.Text
+
+                'worksheet.Cells(foot + 1, 7).Value = "TOTAL HABER"
+                'worksheet.Cells(foot + 1, 7).Font.Bold = True
+                'worksheet.Cells(foot + 1, 8).Value = txtTotalHaber.Text
+
+                'worksheet.Range("A1:" & ic & (dgvAsientosDiario.RowCount + 50)).Columns.AutoFit()
+
+                'Dim position = CType(worksheet.Cells(2, 7), Excel.Range)
+                'Clipboard.SetImage(ValidationForms.Logo(_tipoCon))
+                'worksheet.paste(position)
+
+                'app.DisplayAlerts = False
+                'app.Visible = True
+                'app.DisplayAlerts = True
+
+
+                Dim saveFileDialog As New SaveFileDialog()
+                saveFileDialog.Filter = "Archivos de Excel (*.xlsx)|*.xlsx"
+                saveFileDialog.Title = "Guardar archivo Excel"
+                saveFileDialog.FileName = $"{sname}_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx"
+
+
+                If saveFileDialog.ShowDialog() <> DialogResult.OK Then
+                    Exit Sub
+                End If
+
+                ' Crear el archivo Excel usando ClosedXML
+                Using workbook As New XLWorkbook()
+                    Dim worksheet = workbook.Worksheets.Add(sname)
+
+                    ' Configurar el título
+                    Dim ic = ValidationForms.NumToCharExcelFromVisibleColumnsDataGrid(dgvAsientosDiario)
+                    worksheet.Range($"A1:{ic}1").Merge()
+                    worksheet.Cell(1, 1).Value = $"{ValidationForms.NombreCompany(_tipoCon)}  -  {titulo}"
+                    With worksheet.Range($"A1:{ic}1")
+                        .Style.Font.Bold = True
+                        .Style.Font.FontSize = 12
+                        .Style.Font.FontColor = XLColor.White
+                        .Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center
+                        .Style.Fill.BackgroundColor = XLColor.FromColor(ValidationForms.GetColorSistema(_tipoCon))
+                    End With
+
+                    ' Configurar el subtítulo
+                    worksheet.Range($"A2:{ic}2").Merge()
+                    worksheet.Cell(2, 1).Value = $"PERÍODO: {desde.ToLongDateString().ToUpper()} AL {hasta.ToLongDateString().ToUpper()}"
+                    worksheet.Cell(2, 1).Style.Font.FontSize = 12
+
+                    ' Configurar la fecha del reporte
+                    worksheet.Range($"A3:{ic}3").Merge()
+                    worksheet.Cell(3, 1).Value = $"Fecha de Reporte: {ValidationForms.FechaActual(_tipoCon).ToLongDateString().ToUpper()} {ValidationForms.FechaActual(_tipoCon).ToLongTimeString()}"
+                    worksheet.Cell(3, 1).Style.Font.FontSize = 12
+
+                    ' Configurar encabezados de las columnas
+                    Dim headin = 5
+                    Dim indc = 1
+                    For i = 0 To dgvAsientosDiario.Columns.Count - 1
+                        If Not dgvAsientosDiario.Columns(i).Visible Then Continue For
+                        worksheet.Cell(headin, indc).Value = dgvAsientosDiario.Columns(i).HeaderText
+                        With worksheet.Cell(headin, indc).Style
+                            .Font.Bold = True
+                            .Alignment.Horizontal = XLAlignmentHorizontalValues.Center
+                            .Fill.BackgroundColor = XLColor.FromColor(ValidationForms.GetColorSistema(_tipoCon))
+                            .Font.FontColor = XLColor.White
+                            .Border.OutsideBorder = XLBorderStyleValues.Thin
+                        End With
                         indc += 1
                     Next
-                    c += 1
-                Next
-                worksheet.Range("A" & (c + headin) & ":" & ic & indc).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
 
+                    ' Insertar los datos del DataGridView
+                    Dim c = 0
+                    For o = 0 To dgvAsientosDiario.Rows.Count - 1
+                        If Not dgvAsientosDiario.Rows(o).Visible Then Continue For
+                        indc = 1
+                        For j = 0 To dgvAsientosDiario.Columns.Count - 1
+                            If Not dgvAsientosDiario.Columns(j).Visible Then Continue For
+                            Dim valorCelda As Object = dgvAsientosDiario.Rows(o).Cells(j).Value
+                            Dim celda = worksheet.Cell(c + 1 + headin, indc)
+                            celda.Value = If(valorCelda IsNot Nothing AndAlso Not IsDBNull(valorCelda), valorCelda.ToString(), "")
 
-                ' TOTALES, ETC
-                Dim foot = headin + dgvAsientosDiario.RowCount + 3
-                worksheet.Cells(foot, 7).Value = "TOTAL DEBE"
-                worksheet.Cells(foot, 7).Font.Bold = True
-                worksheet.Cells(foot, 8).Value = txtTotalDebe.Text
+                            ' Aplicar bordes
+                            celda.Style.Border.TopBorder = XLBorderStyleValues.Thin
+                            celda.Style.Border.BottomBorder = XLBorderStyleValues.Thin
+                            celda.Style.Border.LeftBorder = XLBorderStyleValues.Thin
+                            celda.Style.Border.RightBorder = XLBorderStyleValues.Thin
 
-                worksheet.Cells(foot + 1, 7).Value = "TOTAL HABER"
-                worksheet.Cells(foot + 1, 7).Font.Bold = True
-                worksheet.Cells(foot + 1, 8).Value = txtTotalHaber.Text
+                            indc += 1
+                        Next
+                        c += 1
+                    Next
 
-                worksheet.Range("A1:" & ic & (dgvAsientosDiario.RowCount + 50)).Columns.AutoFit()
+                    ' Insertar totales
+                    Dim foot = headin + dgvAsientosDiario.RowCount + 3
+                    worksheet.Cell(foot, 7).Value = "TOTAL DEBE"
+                    worksheet.Cell(foot, 7).Style.Font.Bold = True
+                    worksheet.Cell(foot, 8).Value = txtTotalDebe.Text
 
-                Dim position = CType(worksheet.Cells(2, 7), Excel.Range)
-                Clipboard.SetImage(ValidationForms.Logo(_tipoCon))
-                worksheet.paste(position)
+                    worksheet.Cell(foot + 1, 7).Value = "TOTAL HABER"
+                    worksheet.Cell(foot + 1, 7).Style.Font.Bold = True
+                    worksheet.Cell(foot + 1, 8).Value = txtTotalHaber.Text
 
-                app.DisplayAlerts = False
-                app.Visible = True
-                app.DisplayAlerts = True
+                    ' Ajustar ancho de columnas automáticamente
+                    worksheet.ColumnsUsed().AdjustToContents()
+
+                    ' Definir la ruta temporal
+                    Dim tempFilePath As String = Path.Combine(Path.GetTempPath(), saveFileDialog.FileName)
+                    ' Guardar el archivo en una ubicación temporal
+                    workbook.SaveAs(saveFileDialog.FileName)
+
+                    ' Abrir el archivo Excel automáticamente
+                    Process.Start(tempFilePath)
+
+                    KryptonMessageBox.Show("Archivo exportado correctamente.", "Éxito", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                End Using
+
             Catch ex As Exception
-                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("EXPORTAR ASIENTOS DIARIO" & vbNewLine & ex.Message, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
@@ -410,7 +513,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
 
                     Dim nombreU As String = "AJUSTE EN BUSQUEDA LIBRO DIARIO " & UserName
-                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
                         btnBuscarAsiento.PerformClick()
                         KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)

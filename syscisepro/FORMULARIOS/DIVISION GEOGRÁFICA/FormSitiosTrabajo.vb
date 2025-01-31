@@ -8,6 +8,8 @@ Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports Krypton.Toolkit
+Imports ClosedXML.Excel
+Imports System.IO
 
 Namespace FORMULARIOS.DIVISION_GEOGRÁFICA
     ''' <summary>
@@ -357,7 +359,7 @@ Namespace FORMULARIOS.DIVISION_GEOGRÁFICA
                 Return Convert.ToInt32(nriver.Trim)
             Catch ex As Exception
                 Return 0
-            End Try 
+            End Try
         End Function
 
         Private Sub ToolStripMenuItem5_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnActualizarSitio.Click
@@ -408,35 +410,36 @@ Namespace FORMULARIOS.DIVISION_GEOGRÁFICA
 
             'If MessageBox.Show("Seguro que desea anular este Sitio de Trabajo?", "ANULAR SITIO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
             If KryptonMessageBox.Show("Seguro que desea anular este Sitio de Trabajo?", "ANULAR SITIO", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) = DialogResult.Yes Then
-                    _sqlCommands.Clear()
+                _sqlCommands.Clear()
+                With _objetoSitio
+                    .Id = Label28.Text
+                    .Estado = 0
+                End With
+                _sqlCommands.Add(_objetoSitio.ModificarEstadoSitioTrabajoCommand())
 
-                    With _objetoSitio
-                        .Id = Label28.Text
-                        .Estado = 0
-                    End With
-                    _sqlCommands.Add(_objetoSitio.ModificarEstadoSitioTrabajoCommand())
+                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                If res(0) Then
+                    _botonSeleccionadoSitio = 0
+                    btnCargarSitios.Enabled = True ' cargar
+                    btnNuevoSitio.Enabled = True ' nuevo
+                    btnGuardarSitio.Enabled = False ' guardar
+                    btnActualizarSitio.Enabled = ListView1.SelectedItems.Count > 0 ' catualizar
+                    btnAnularSitio.Enabled = ListView1.SelectedItems.Count > 0 ' anular
+                    btnCancelarSitio.Enabled = False ' cancelar
+                    btnExportarSitio.Enabled = ListView1.Items.Count > 0 ' exportar
 
-                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
-                    If res(0) Then
-                        _botonSeleccionadoSitio = 0
-
-                        btnCargarSitios.Enabled = True ' cargar
-                        btnNuevoSitio.Enabled = True ' nuevo
-                        btnGuardarSitio.Enabled = False ' guardar
-                        btnActualizarSitio.Enabled = ListView1.SelectedItems.Count > 0 ' catualizar
-                        btnAnularSitio.Enabled = ListView1.SelectedItems.Count > 0 ' anular
-                        btnCancelarSitio.Enabled = False ' cancelar
-                        btnExportarSitio.Enabled = ListView1.Items.Count > 0 ' exportar
-
-                        CargarSitiosClienteGeneral("", 0)
-                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
-                    Else
-                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
-                        Return
-                    End If
-                    'End If
-                    'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                    CargarSitiosClienteGeneral("", 0)
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
+                'End If
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+            End If
+            'End If
+            'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
         End Sub
 
         Private Sub ToolStripMenuItem7_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCancelarSitio.Click
@@ -445,7 +448,6 @@ Namespace FORMULARIOS.DIVISION_GEOGRÁFICA
             txtNombreSitio.Clear()
             txtDireccion.Clear()
             txtReferencia.Clear()
-
             txtLatitud.Clear()
             txtLongitud.Clear()
 
@@ -602,65 +604,146 @@ Namespace FORMULARIOS.DIVISION_GEOGRÁFICA
 
         Private Sub ExportarDatosExcel(ByVal listViewExp As ListView, ByVal titulo As String)
             Try
-                Dim app As Excel._Application = New Excel.Application()
-                Dim workbook As Excel._Workbook = app.Workbooks.Add(Type.Missing)
-                Dim worksheet As Excel._Worksheet = workbook.ActiveSheet
 
-                worksheet.Name = "SITIOS TRABAJO"
+                If listViewExp.Columns.Count = 0 Then
+                    KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    Return
+                End If
+
+                'Dim app As Excel._Application = New Excel.Application()
+                'Dim workbook As Excel._Workbook = app.Workbooks.Add(Type.Missing)
+                'Dim worksheet As Excel._Worksheet = workbook.ActiveSheet
+
+                'worksheet.Name = "SITIOS TRABAJO"
 
                 Dim ic = "Z"
 
-                worksheet.Range("A1:" & ic & listViewExp.Items.Count + listViewExp.Items.Count + 25).Font.Size = 10
+                'worksheet.Range("A1:" & ic & listViewExp.Items.Count + listViewExp.Items.Count + 25).Font.Size = 10
 
-                worksheet.Range("A1:" & ic & "1").Merge()
-                worksheet.Range("A1:" & ic & "1").Value = ValidationForms.NombreCompany(_tipoCon)
-                worksheet.Range("A1:" & ic & "1").Font.Bold = True
-                worksheet.Range("A1:" & ic & "1").Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                worksheet.Range("A1:" & ic & "1").Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                worksheet.Range("A1:" & ic & "1").Font.Color = Color.White
-                worksheet.Range("A1:" & ic & "1").Font.Size = 12
-                'Copete  
-                worksheet.Range("A2:" & ic & "2").Merge()
-                worksheet.Range("A2:" & ic & "2").Value = titulo
-                worksheet.Range("A2:" & ic & "2").Font.Size = 12
-                'Fecha  
-                worksheet.Range("A3:" & ic & "3").Merge()
-                worksheet.Range("A3:" & ic & "3").Value = "Fecha de Impresión: " + Date.Now
-                worksheet.Range("A3:" & ic & "3").Font.Size = 12
+                'worksheet.Range("A1:" & ic & "1").Merge()
+                'worksheet.Range("A1:" & ic & "1").Value = ValidationForms.NombreCompany(_tipoCon)
+                'worksheet.Range("A1:" & ic & "1").Font.Bold = True
+                'worksheet.Range("A1:" & ic & "1").Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                'worksheet.Range("A1:" & ic & "1").Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
+                'worksheet.Range("A1:" & ic & "1").Font.Color = Color.White
+                'worksheet.Range("A1:" & ic & "1").Font.Size = 12
+                ''Copete  
+                'worksheet.Range("A2:" & ic & "2").Merge()
+                'worksheet.Range("A2:" & ic & "2").Value = titulo
+                'worksheet.Range("A2:" & ic & "2").Font.Size = 12
+                ''Fecha  
+                'worksheet.Range("A3:" & ic & "3").Merge()
+                'worksheet.Range("A3:" & ic & "3").Value = "Fecha de Impresión: " + Date.Now
+                'worksheet.Range("A3:" & ic & "3").Font.Size = 12
 
-                Dim head = 4
+                'Dim head = 4
 
-                For i = 1 To listViewExp.Columns.Count
-                    worksheet.Cells(1 + head, i) = listViewExp.Columns(i - 1).Text
-                    worksheet.Cells(1 + head, i).Font.Bold = True
-                    worksheet.Cells(1 + head, i).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
-                    worksheet.Cells(1 + head, i).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                    worksheet.Cells(1 + head, i).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                    worksheet.Cells(1 + head, i).Font.Color = Color.White
+                'For i = 1 To listViewExp.Columns.Count
+                '    worksheet.Cells(1 + head, i) = listViewExp.Columns(i - 1).Text
+                '    worksheet.Cells(1 + head, i).Font.Bold = True
+                '    worksheet.Cells(1 + head, i).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
+                '    worksheet.Cells(1 + head, i).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                '    worksheet.Cells(1 + head, i).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
+                '    worksheet.Cells(1 + head, i).Font.Color = Color.White
+                'Next
+
+                'Dim dataGridViewExpRowCount = 0
+                'For Each row As ListViewItem In listViewExp.Items
+                '    For j = 0 To listViewExp.Columns.Count - 1
+                '        worksheet.Cells(dataGridViewExpRowCount + 2 + head, j + 1) = row.SubItems(j).Text
+
+                '        ' definir bordes
+                '        worksheet.Cells(dataGridViewExpRowCount + 2 + head, j + 1).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
+                '        worksheet.Cells(dataGridViewExpRowCount + 2 + head, j + 1).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
+                '        If dataGridViewExpRowCount = listViewExp.Items.Count - 1 Then
+                '            worksheet.Cells(dataGridViewExpRowCount + 2 + head, j + 1).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                '        End If
+                '    Next
+                '    dataGridViewExpRowCount += 1
+                'Next
+
+                'worksheet.Range("A1:" & ic & listViewExp.Items.Count + listViewExp.Items.Count + 25).Columns.AutoFit()
+
+                'app.DisplayAlerts = False
+                'app.Visible = True
+                'app.DisplayAlerts = True
+
+                Dim fec As DateTime = DateTime.Now
+                Dim sfd As New SaveFileDialog With {
+                .Filter = "Excel Files(.xlsx)|*.xlsx",
+                .Title = "EXPORTAR A EXCEL",
+                .FileName = "SITIOS_TRABAJO_" & fec.ToString("yyyyMMdd_HHmm") & ".xlsx"
+                    }
+
+                If sfd.ShowDialog() <> DialogResult.OK Then Return
+
+                Dim wb As New XLWorkbook()
+                Dim ws As IXLWorksheet = wb.Worksheets.Add("SITIOS TRABAJO")
+
+                ' Rango de ajuste
+                'Dim ic As String = ValidationForms.NumToCharExcel(listViewExp.Columns.Count - 1)
+                Dim totalFilas As Integer = listViewExp.Items.Count + 25
+
+                ' Formato general
+                ws.Range("A1:" & ic & totalFilas).Style.Font.SetFontSize(10)
+
+                ' Encabezado con nombre de la empresa
+                ws.Range("A1:" & ic & "1").Merge().Value = ValidationForms.NombreCompany(_tipoCon).ToString()
+                ws.Range("A1:" & ic & "1").Style.Font.SetBold().Font.SetFontSize(12).Font.SetFontColor(XLColor.White)
+                ws.Range("A1:" & ic & "1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center)
+                ws.Range("A1:" & ic & "1").Style.Fill.SetBackgroundColor(XLColor.FromColor(ValidationForms.GetColorSistema(_tipoCon)))
+
+                ' Título del reporte
+                ws.Range("A2:" & ic & "2").Merge().Value = titulo
+                ws.Range("A2:" & ic & "2").Style.Font.SetFontSize(12)
+
+                ' Fecha de impresión
+                ws.Range("A3:" & ic & "3").Merge().Value = "Fecha de Impresión: " & DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
+                ws.Range("A3:" & ic & "3").Style.Font.SetFontSize(12)
+
+                ' Encabezados de columnas
+                Dim filaActual As Integer = 4
+                Dim colIndex As Integer = 1
+                For Each col As ColumnHeader In listViewExp.Columns
+                    Dim headerCell As IXLCell = ws.Cell(filaActual + 1, colIndex)
+                    headerCell.Value = col.Text
+                    headerCell.Style.Font.SetBold()
+                    headerCell.Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center)
+                    headerCell.Style.Fill.SetBackgroundColor(XLColor.FromColor(ValidationForms.GetColorSistema(_tipoCon)))
+                    headerCell.Style.Font.SetFontColor(XLColor.White)
+                    headerCell.Style.Border.OutsideBorder = XLBorderStyleValues.Thin
+                    colIndex += 1
                 Next
 
-                Dim dataGridViewExpRowCount = 0
-                For Each row As ListViewItem In listViewExp.Items
-                    For j = 0 To listViewExp.Columns.Count - 1
-                        worksheet.Cells(dataGridViewExpRowCount + 2 + head, j + 1) = row.SubItems(j).Text
+                ' Datos de las filas
+                Dim dataGridViewExpRowCount As Integer = 0
 
-                        ' definir bordes
-                        worksheet.Cells(dataGridViewExpRowCount + 2 + head, j + 1).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
-                        worksheet.Cells(dataGridViewExpRowCount + 2 + head, j + 1).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
+                For Each row As ListViewItem In listViewExp.Items
+
+                    For j = 0 To listViewExp.Columns.Count - 1
+                        Dim dataCell As IXLCell = ws.Cell(dataGridViewExpRowCount + 2 + filaActual, j + 1)
+                        dataCell.Value = row.SubItems(j).Text
+                        dataCell.Style.Border.LeftBorder = XLBorderStyleValues.Thin
+                        dataCell.Style.Border.RightBorder = XLBorderStyleValues.Thin
+
                         If dataGridViewExpRowCount = listViewExp.Items.Count - 1 Then
-                            worksheet.Cells(dataGridViewExpRowCount + 2 + head, j + 1).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                            dataCell.Style.Border.BottomBorder = XLBorderStyleValues.Thin
                         End If
                     Next
+
                     dataGridViewExpRowCount += 1
                 Next
 
-                worksheet.Range("A1:" & ic & listViewExp.Items.Count + listViewExp.Items.Count + 25).Columns.AutoFit()
+                ' Ajustar automáticamente las columnas
+                ws.Columns().AdjustToContents()
 
-                app.DisplayAlerts = False
-                app.Visible = True
-                app.DisplayAlerts = True
+                ' Guardar el archivo
+                wb.SaveAs(sfd.FileName)
+
+                KryptonMessageBox.Show("Datos exportados correctamente!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR!: " & vbNewLine & ex.Message)
+
+                KryptonMessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR!: " & vbNewLine & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
