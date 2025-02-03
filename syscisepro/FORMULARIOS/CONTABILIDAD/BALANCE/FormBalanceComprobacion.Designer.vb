@@ -128,17 +128,19 @@
             'dtpFinal
             '
             Me.dtpFinal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFinal.Location = New System.Drawing.Point(286, 6)
+            Me.dtpFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFinal.Location = New System.Drawing.Point(291, 7)
             Me.dtpFinal.Name = "dtpFinal"
-            Me.dtpFinal.Size = New System.Drawing.Size(162, 21)
+            Me.dtpFinal.Size = New System.Drawing.Size(109, 21)
             Me.dtpFinal.TabIndex = 210
             '
             'dtpInicio
             '
             Me.dtpInicio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpInicio.Location = New System.Drawing.Point(62, 6)
+            Me.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpInicio.Location = New System.Drawing.Point(89, 6)
             Me.dtpInicio.Name = "dtpInicio"
-            Me.dtpInicio.Size = New System.Drawing.Size(160, 21)
+            Me.dtpInicio.Size = New System.Drawing.Size(109, 21)
             Me.dtpInicio.TabIndex = 209
             '
             'tvBalanceComprobacion

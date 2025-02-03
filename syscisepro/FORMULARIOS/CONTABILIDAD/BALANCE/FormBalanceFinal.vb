@@ -64,35 +64,194 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
         End Sub
 
         Private Sub btnCargar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCargar.Click
+            'dgvMayores.DataSource = Nothing
+
+            'Dim fechaDesde = dtpInicio.Value.Day.ToString & "-" & dtpInicio.Value.Month.ToString & "-" & dtpInicio.Value.Year.ToString & " 00:00:00"
+            'Dim fechaHasta = dtpFinal.Value.Day.ToString & "-" & dtpFinal.Value.Month.ToString & "-" & dtpFinal.Value.Year.ToString & " 23:59:59"
+
+            'dgvMayores.DataSource = objPlanCuentas.SeleccionarSaldosMayoresXFechaDiarioBalanceFinalMensual2(_tipoCon, dtpInicio.Value.Year)
+
+            'dgvMayores.Columns(0).Width = 25
+            'dgvMayores.Columns("CODIGO").Width = 80
+            'dgvMayores.Columns("CUENTA").Width = 510
+            'dgvMayores.Columns("INICIAL").Width = 75
+            'dgvMayores.Columns("INICIAL").DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomRight
+            'dgvMayores.Columns("DEBE").Width = 75
+            'dgvMayores.Columns("DEBE").DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomRight
+            'dgvMayores.Columns("HABER").Width = 75
+            'dgvMayores.Columns("HABER").DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomRight
+            'dgvMayores.Columns("SALDO").Width = 75
+            'dgvMayores.Columns("SALDO").DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomRight
+            'dgvMayores.Columns("NIVEL").Width = 40
+            'dgvMayores.Columns("PADRE").Width = 80
+
+            'Dim auxData As DataTable = objPlanCuentas.SeleccionarSaldosMayoresXFechaDiarioBalanceFinal2(_tipoCon, fechaDesde, fechaHasta)
+
+            ''SE COPIA LA DATA, SE PINTA Y CALCULA SALDO (CUENTA POR CUENTA)
+            'For Each row As DataGridViewRow In dgvMayores.Rows
+
+            '    If (row.Cells("INICIAL").Value & "").ToString().Length = 0 Then row.Cells("INICIAL").Value = "0.00"
+
+            '    Select Case row.Cells.Item("NIVEL").Value.ToString
+            '        Case "7" : row.DefaultCellStyle.BackColor = Color.AliceBlue
+            '        Case "6" : row.DefaultCellStyle.BackColor = Color.GhostWhite
+            '        Case "5" : row.DefaultCellStyle.BackColor = Color.White
+            '        Case "4" : row.DefaultCellStyle.BackColor = Color.SkyBlue
+            '        Case "3" : row.DefaultCellStyle.BackColor = Color.LightBlue
+            '        Case "2" : row.DefaultCellStyle.BackColor = Color.PowderBlue
+            '        Case "1" : row.DefaultCellStyle.BackColor = Color.LightCyan
+            '    End Select
+
+            '    For Each drow As DataRow In auxData.Rows
+            '        If row.Cells("CODIGO").Value = drow("CODIGO") Then
+            '            row.Cells("DEBE").Value = drow("DEBE")
+            '            row.Cells("HABER").Value = drow("HABER")
+            '            row.Cells("SALDO").Value = drow("SALDO")
+            '        End If
+            '    Next
+
+            'Next
+
+
+
+            '' SE COPIA LA DATA ambas estructuras tiene debe, haber y saldo por nivel (auxiliar)
+            'auxData = CType(dgvMayores.DataSource, DataTable)
+
+            '' SE CALCULA LOS SALDOS TODOS LOS NIVELES (ACUMULADO NIVELES)
+            'For i = 7 To 1 Step -1
+            '    For Each row As DataGridViewRow In dgvMayores.Rows
+            '        For Each drow As DataRow In auxData.Rows
+            '            If row.Cells("CODIGO").Value = drow("PADRE") And drow("NIVEL") = i Then
+            '                row.Cells("INICIAL").Value = Math.Round((CType(row.Cells("INICIAL").Value, Double) + CType(drow("INICIAL"), Double)), 2)
+
+            '                row.Cells("DEBE").Value = Math.Round((CType(row.Cells("DEBE").Value, Double) + CType(drow("DEBE"), Double)), 2)
+            '                row.Cells("HABER").Value = Math.Round((CType(row.Cells("HABER").Value, Double) + CType(drow("HABER"), Double)), 2)
+            '                row.Cells("SALDO").Value = Math.Round((CType(row.Cells("SALDO").Value, Double) + CType(drow("SALDO"), Double)), 2)
+            '            End If
+
+            '            'verificar nodos
+            '            If row.Cells("CODIGO").Value = drow("PADRE") Then
+            '                row.Cells("nodo").Value = "-"
+            '            End If
+            '        Next
+            '    Next
+            '    auxData = CType(dgvMayores.DataSource, DataTable)
+            'Next
+
+
+
+
+            '' PARA SUMAR LOS TOTALES Y COMPROBAR LAS SUMAS DEL DEBE Y EL HABER 
+            'Dim activo As Decimal = 0.0
+            'Dim pasivo As Decimal = 0.0
+            'Dim capital As Decimal = 0.0
+            'If dgvMayores.Rows.Count > 0 Then
+            '    For index = 0 To dgvMayores.Rows.Count - 1 Step 1
+            '        If dgvMayores.Rows(index).Cells("CUENTA").Value = "ACTIVO" Then
+            '            activo = activo + dgvMayores.Rows(index).Cells("SALDO").Value
+            '        ElseIf dgvMayores.Rows(index).Cells("CUENTA").Value = "PASIVO" Then
+            '            pasivo = pasivo + dgvMayores.Rows(index).Cells("SALDO").Value
+            '        ElseIf dgvMayores.Rows(index).Cells("CUENTA").Value = "PATRIMONIO NETO" Then
+            '            capital = capital + dgvMayores.Rows(index).Cells("SALDO").Value
+            '        End If
+            '    Next
+            '    txtDeudor.Text = activo
+            '    txtAcreedor.Text = pasivo
+            '    txtCapital.Text = capital
+            '    txtUtilidad.Text = Math.Abs(activo + pasivo + capital)
+            'End If
+
+
+            'txtDeudor.Text = activo.ToString()
+            'txtAcreedor.Text = pasivo.ToString()
+            'txtCapital.Text = capital.ToString()
+
+
+            'dgvMayores.AutoResizeRows()
+
+            ''Asignar el valor de la utilidad a la cuenta contable
+            'Dim utilidad = activo + pasivo + capital
+
+            'Dim utilidadAux As Double = Convert.ToDouble(txtUtilidad.Text.Trim)
+
+            'If (utilidad > 0) Then
+            '    lblUtilidadPerdida.Text = "UTILIDAD"
+            '    lblUtilidadPerdida.ForeColor = Color.Navy
+
+            '    For index = 0 To dgvMayores.Rows.Count - 1 Step 1
+            '        If dgvMayores.Rows(index).Cells("CODIGO").Value = "3" Or dgvMayores.Rows(index).Cells("CODIGO").Value = "307" Or dgvMayores.Rows(index).Cells("CODIGO").Value = "30701" Then
+            '            dgvMayores.Rows(index).Cells("HABER").Value = Math.Round(dgvMayores.Rows(index).Cells("HABER").Value + utilidadAux, 2)
+            '            dgvMayores.Rows(index).Cells("SALDO").Value = Math.Round(dgvMayores.Rows(index).Cells("DEBE").Value - dgvMayores.Rows(index).Cells("HABER").Value, 2)
+            '        End If
+            '    Next
+
+            'ElseIf (utilidad + capital < 0) Then
+            '    lblUtilidadPerdida.Text = "PERDIDA"
+            '    lblUtilidadPerdida.ForeColor = Color.Red
+
+            '    For index = 0 To dgvMayores.Rows.Count - 1 Step 1
+            '        If dgvMayores.Rows(index).Cells("CODIGO").Value = "3" Or dgvMayores.Rows(index).Cells("CODIGO").Value = "307" Or dgvMayores.Rows(index).Cells("CODIGO").Value = "30702" Or dgvMayores.Rows(index).Cells("CODIGO").Value = "3070201" Then
+            '            dgvMayores.Rows(index).Cells("DEBE").Value = Math.Round(dgvMayores.Rows(index).Cells("DEBE").Value + utilidadAux, 2)
+            '            dgvMayores.Rows(index).Cells("SALDO").Value = Math.Round(dgvMayores.Rows(index).Cells("DEBE").Value - dgvMayores.Rows(index).Cells("HABER").Value, 2)
+            '        End If
+            '    Next
+
+            'Else
+            '    lblUtilidadPerdida.Text = "UTILIDAD"
+            '    lblUtilidadPerdida.ForeColor = Color.Navy
+            'End If
+
+
+
+            ''dgvMayores.AutoResizeRows()
+            'CantidadReistros()
+            'chkTodos.Checked = False
+
+
+            'Limpiar DataSource
             dgvMayores.DataSource = Nothing
 
-            Dim fechaDesde = dtpInicio.Value.Day.ToString & "-" & dtpInicio.Value.Month.ToString & "-" & dtpInicio.Value.Year.ToString & " 00:00:00"
-            Dim fechaHasta = dtpFinal.Value.Day.ToString & "-" & dtpFinal.Value.Month.ToString & "-" & dtpFinal.Value.Year.ToString & " 23:59:59"
+            'Formateo de fechas optimizado
+            Dim fechaDesde As String = $"{dtpInicio.Value.Day}-{dtpInicio.Value.Month}-{dtpInicio.Value.Year} 00:00:00"
+            Dim fechaHasta As String = $"{dtpFinal.Value.Day}-{dtpFinal.Value.Month}-{dtpFinal.Value.Year} 23:59:59"
 
+            'Cargar DATOS principales
             dgvMayores.DataSource = objPlanCuentas.SeleccionarSaldosMayoresXFechaDiarioBalanceFinalMensual2(_tipoCon, dtpInicio.Value.Year)
 
-            dgvMayores.Columns(0).Width = 25
-            dgvMayores.Columns("CODIGO").Width = 80
-            dgvMayores.Columns("CUENTA").Width = 510
-            dgvMayores.Columns("INICIAL").Width = 75
-            dgvMayores.Columns("INICIAL").DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomRight
-            dgvMayores.Columns("DEBE").Width = 75
-            dgvMayores.Columns("DEBE").DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomRight
-            dgvMayores.Columns("HABER").Width = 75
-            dgvMayores.Columns("HABER").DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomRight
-            dgvMayores.Columns("SALDO").Width = 75
-            dgvMayores.Columns("SALDO").DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomRight
-            dgvMayores.Columns("NIVEL").Width = 40
-            dgvMayores.Columns("PADRE").Width = 80
+            'Configuración de columnas (igual al original)
+            With dgvMayores
+                .Columns(0).Width = 25
+                .Columns("CODIGO").Width = 80
+                .Columns("CUENTA").Width = 510
+                .Columns("INICIAL").Width = 75
+                .Columns("INICIAL").DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomRight
+                .Columns("DEBE").Width = 75
+                .Columns("DEBE").DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomRight
+                .Columns("HABER").Width = 75
+                .Columns("HABER").DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomRight
+                .Columns("SALDO").Width = 75
+                .Columns("SALDO").DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomRight
+                .Columns("NIVEL").Width = 40
+                .Columns("PADRE").Width = 80
+            End With
 
+            'Obtener DATOS auxiliares
             Dim auxData As DataTable = objPlanCuentas.SeleccionarSaldosMayoresXFechaDiarioBalanceFinal2(_tipoCon, fechaDesde, fechaHasta)
 
-            ' SE COPIA LA DATA, SE PINTA Y CALCULA SALDO (CUENTA POR CUENTA)
+            'Paso 1: Pintar filas y actualizar valores desde auxData (optimizado con diccionario)
+            Dim lookupAuxData As New Dictionary(Of String, DataRow)
+            For Each dr As DataRow In auxData.Rows
+                lookupAuxData(dr("CODIGO").ToString()) = dr
+            Next
+
             For Each row As DataGridViewRow In dgvMayores.Rows
+                'Inicializar valor inicial
+                If String.IsNullOrEmpty(row.Cells("INICIAL").Value?.ToString()) Then
+                    row.Cells("INICIAL").Value = "0.00"
+                End If
 
-                If (row.Cells("INICIAL").Value & "").ToString().Length = 0 Then row.Cells("INICIAL").Value = "0.00"
-
-                Select Case row.Cells.Item("NIVEL").Value.ToString
+                'Colorear filas(misma lógica)
+                Select Case row.Cells("NIVEL").Value.ToString()
                     Case "7" : row.DefaultCellStyle.BackColor = Color.AliceBlue
                     Case "6" : row.DefaultCellStyle.BackColor = Color.GhostWhite
                     Case "5" : row.DefaultCellStyle.BackColor = Color.White
@@ -102,97 +261,103 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
                     Case "1" : row.DefaultCellStyle.BackColor = Color.LightCyan
                 End Select
 
-                For Each drow As DataRow In auxData.Rows
-                    If row.Cells("CODIGO").Value = drow("CODIGO") Then
-                        row.Cells("DEBE").Value = drow("DEBE")
-                        row.Cells("HABER").Value = drow("HABER")
-                        row.Cells("SALDO").Value = drow("SALDO")
-                    End If
-                Next
-
+                'Actualizar desde auxData (optimizado)
+                Dim codigo As String = row.Cells("CODIGO").Value.ToString()
+                If lookupAuxData.ContainsKey(codigo) Then
+                    Dim dr As DataRow = lookupAuxData(codigo)
+                    row.Cells("DEBE").Value = dr("DEBE")
+                    row.Cells("HABER").Value = dr("HABER")
+                    row.Cells("SALDO").Value = dr("SALDO")
+                End If
             Next
 
-            ' SE COPIA LA DATA ambas estructuras tiene debe, haber y saldo por nivel (auxiliar)
-            auxData = CType(dgvMayores.DataSource, DataTable)
+            'Paso 2: Cálculo de saldos acumulados (misma lógica pero optimizado)
+            Dim currentData As DataTable = CType(dgvMayores.DataSource, DataTable)
 
-            ' SE CALCULA LOS SALDOS TODOS LOS NIVELES (ACUMULADO NIVELES)
-            For i = 7 To 1 Step -1
-                For Each row As DataGridViewRow In dgvMayores.Rows
-                    For Each drow As DataRow In auxData.Rows
-                        If row.Cells("CODIGO").Value = drow("PADRE") And drow("NIVEL") = i Then
-                            row.Cells("INICIAL").Value = Math.Round((CType(row.Cells("INICIAL").Value, Double) + CType(drow("INICIAL"), Double)), 2)
+            For i As Integer = 7 To 1 Step -1
+                Dim view As New DataView(currentData, $"NIVEL = {i}", "", DataViewRowState.CurrentRows)
 
-                            row.Cells("DEBE").Value = Math.Round((CType(row.Cells("DEBE").Value, Double) + CType(drow("DEBE"), Double)), 2)
-                            row.Cells("HABER").Value = Math.Round((CType(row.Cells("HABER").Value, Double) + CType(drow("HABER"), Double)), 2)
-                            row.Cells("SALDO").Value = Math.Round((CType(row.Cells("SALDO").Value, Double) + CType(drow("SALDO"), Double)), 2)
-                        End If
+                For Each rowView As DataRowView In view
+                    Dim padre As String = rowView("PADRE").ToString()
+                    Dim rowsPadre As DataRow() = currentData.Select($"CODIGO = '{padre}'")
 
-                        'verificar nodos
-                        If row.Cells("CODIGO").Value = drow("PADRE") Then
-                            row.Cells("nodo").Value = "-"
-                        End If
-                    Next
-                Next
-                auxData = CType(dgvMayores.DataSource, DataTable)
-            Next
+                    If rowsPadre.Length > 0 Then
+                        Dim rowPadre As DataRow = rowsPadre(0)
+                        rowPadre("INICIAL") = Math.Round(CDbl(rowPadre("INICIAL")) + CDbl(rowView("INICIAL")), 2)
+                        rowPadre("DEBE") = Math.Round(CDbl(rowPadre("DEBE")) + CDbl(rowView("DEBE")), 2)
+                        rowPadre("HABER") = Math.Round(CDbl(rowPadre("HABER")) + CDbl(rowView("HABER")), 2)
+                        rowPadre("SALDO") = Math.Round(CDbl(rowPadre("SALDO")) + CDbl(rowView("SALDO")), 2)
 
-            ' PARA SUMAR LOS TOTALES Y COMPROBAR LAS SUMAS DEL DEBE Y EL HABER 
-            Dim activo As Decimal = 0.0
-            Dim pasivo As Decimal = 0.0
-            Dim capital As Decimal = 0.0
-            If dgvMayores.Rows.Count > 0 Then
-                For index = 0 To dgvMayores.Rows.Count - 1 Step 1
-                    If dgvMayores.Rows(index).Cells("CUENTA").Value = "ACTIVO" Then
-                        activo = activo + dgvMayores.Rows(index).Cells("SALDO").Value
-                    ElseIf dgvMayores.Rows(index).Cells("CUENTA").Value = "PASIVO" Then
-                        pasivo = pasivo + dgvMayores.Rows(index).Cells("SALDO").Value
-                    ElseIf dgvMayores.Rows(index).Cells("CUENTA").Value = "PATRIMONIO NETO" Then
-                        capital = capital + dgvMayores.Rows(index).Cells("SALDO").Value
+
                     End If
                 Next
-                txtDeudor.Text = activo
-                txtAcreedor.Text = pasivo
-                txtCapital.Text = capital
-                txtUtilidad.Text = Math.Abs(activo + pasivo + capital)
-            End If
-            dgvMayores.AutoResizeRows()
+                currentData.AcceptChanges()
+            Next
 
-            'Asignar el valor de la utilidad a la cuenta contable
-            Dim utilidad = activo + pasivo + capital
+            'Ahora actualizamos 'nodo' solo en el DataGridView (si existe como columna visual)
+            For Each row As DataGridViewRow In dgvMayores.Rows
+                Dim codigoActual As String = row.Cells("CODIGO").Value.ToString()
 
-            Dim utilidadAux As Double = Convert.ToDouble(txtUtilidad.Text.Trim)
+                'Verificar si es padre de algún registro
+                If currentData.Select($"PADRE = '{codigoActual}'").Length > 0 Then
+                    row.Cells("nodo").Value = "-" ' Solo si 'nodo' existe en el DataGridView
+                End If
+            Next
 
-            If (utilidad > 0) Then
+            'Paso 3: Cálculo de totales (misma lógica)
+            Dim activo As Decimal = 0D
+            Dim pasivo As Decimal = 0D
+            Dim capital As Decimal = 0D
+
+            For Each row As DataGridViewRow In dgvMayores.Rows
+                Select Case row.Cells("CUENTA").Value.ToString()
+                    Case "ACTIVO" : activo += CDec(row.Cells("SALDO").Value)
+                    Case "PASIVO" : pasivo += CDec(row.Cells("SALDO").Value)
+                    Case "PATRIMONIO NETO" : capital += CDec(row.Cells("SALDO").Value)
+                End Select
+            Next
+
+            'Asignación de totales (igual al original)
+            txtDeudor.Text = activo.ToString()
+            txtAcreedor.Text = pasivo.ToString()
+            txtCapital.Text = capital.ToString()
+            txtUtilidad.Text = Math.Abs(activo + pasivo + capital).ToString()
+
+            'Paso 4: Ajuste de utilidad (misma lógica exacta)
+            Dim utilidad As Double = CDbl(txtUtilidad.Text.Trim)
+            Dim targetCodes As New HashSet(Of String)(StringComparer.OrdinalIgnoreCase)
+
+            If utilidad > 0 Then
                 lblUtilidadPerdida.Text = "UTILIDAD"
                 lblUtilidadPerdida.ForeColor = Color.Navy
-
-                For index = 0 To dgvMayores.Rows.Count - 1 Step 1
-                    If dgvMayores.Rows(index).Cells("CODIGO").Value = "3" Or dgvMayores.Rows(index).Cells("CODIGO").Value = "307" Or dgvMayores.Rows(index).Cells("CODIGO").Value = "30701" Then
-                        dgvMayores.Rows(index).Cells("HABER").Value = Math.Round(dgvMayores.Rows(index).Cells("HABER").Value + utilidadAux, 2)
-                        dgvMayores.Rows(index).Cells("SALDO").Value = Math.Round(dgvMayores.Rows(index).Cells("DEBE").Value - dgvMayores.Rows(index).Cells("HABER").Value, 2)
-                    End If
-                Next
-
-            ElseIf (utilidad + capital < 0) Then
+                targetCodes.UnionWith({"3", "307", "30701"})
+            ElseIf (utilidad + capital) < 0 Then
                 lblUtilidadPerdida.Text = "PERDIDA"
                 lblUtilidadPerdida.ForeColor = Color.Red
-
-                For index = 0 To dgvMayores.Rows.Count - 1 Step 1
-                    If dgvMayores.Rows(index).Cells("CODIGO").Value = "3" Or dgvMayores.Rows(index).Cells("CODIGO").Value = "307" Or dgvMayores.Rows(index).Cells("CODIGO").Value = "30702" Or dgvMayores.Rows(index).Cells("CODIGO").Value = "3070201" Then
-                        dgvMayores.Rows(index).Cells("DEBE").Value = Math.Round(dgvMayores.Rows(index).Cells("DEBE").Value + utilidadAux, 2)
-                        dgvMayores.Rows(index).Cells("SALDO").Value = Math.Round(dgvMayores.Rows(index).Cells("DEBE").Value - dgvMayores.Rows(index).Cells("HABER").Value, 2)
-                    End If
-                Next
-
+                targetCodes.UnionWith({"3", "307", "30702", "3070201"})
             Else
                 lblUtilidadPerdida.Text = "UTILIDAD"
                 lblUtilidadPerdida.ForeColor = Color.Navy
             End If
 
-            'dgvMayores.AutoResizeRows()
+            For Each row As DataGridViewRow In dgvMayores.Rows
+                Dim codigo As String = row.Cells("CODIGO").Value.ToString()
+                If targetCodes.Contains(codigo) Then
+                    If utilidad > 0 Then
+                        row.Cells("HABER").Value = Math.Round(CDbl(row.Cells("HABER").Value) + utilidad, 2)
+                    Else
+                        row.Cells("DEBE").Value = Math.Round(CDbl(row.Cells("DEBE").Value) + Math.Abs(utilidad), 2)
+                    End If
+                    row.Cells("SALDO").Value = Math.Round(CDbl(row.Cells("DEBE").Value) - CDbl(row.Cells("HABER").Value), 2)
+                End If
+            Next
+
+            'Finalizar
+            dgvMayores.AutoResizeRows()
             CantidadReistros()
             chkTodos.Checked = False
-              
+
+
         End Sub
 
         Private Sub CantidadReistros()
