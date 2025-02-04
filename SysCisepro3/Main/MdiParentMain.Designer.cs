@@ -228,6 +228,7 @@
             this.eSTADODEPÉRDIDASYGANANCIASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gENERALToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dETALLADOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cOMPARATIVOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bALANCEFINALToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsRecursoHumano = new System.Windows.Forms.ToolStripDropDownButton();
             this.rEGISTROPROYECTOCONTRATACIONtoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -2086,7 +2087,8 @@
             // 
             this.eSTADODEPÉRDIDASYGANANCIASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gENERALToolStripMenuItem,
-            this.dETALLADOToolStripMenuItem});
+            this.dETALLADOToolStripMenuItem,
+            this.cOMPARATIVOToolStripMenuItem});
             this.eSTADODEPÉRDIDASYGANANCIASToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.finance_mode_24dp_FILL0_wght400_GRAD0_opsz24;
             this.eSTADODEPÉRDIDASYGANANCIASToolStripMenuItem.Name = "eSTADODEPÉRDIDASYGANANCIASToolStripMenuItem";
             this.eSTADODEPÉRDIDASYGANANCIASToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
@@ -2096,7 +2098,7 @@
             // 
             this.gENERALToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24;
             this.gENERALToolStripMenuItem.Name = "gENERALToolStripMenuItem";
-            this.gENERALToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.gENERALToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gENERALToolStripMenuItem.Text = "GENERAL";
             this.gENERALToolStripMenuItem.Click += new System.EventHandler(this.gENERALToolStripMenuItem_Click);
             // 
@@ -2104,9 +2106,13 @@
             // 
             this.dETALLADOToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24;
             this.dETALLADOToolStripMenuItem.Name = "dETALLADOToolStripMenuItem";
-            this.dETALLADOToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.dETALLADOToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dETALLADOToolStripMenuItem.Text = "DETALLADO";
             this.dETALLADOToolStripMenuItem.Click += new System.EventHandler(this.dETALLADOToolStripMenuItem_Click);
+            // 
+            // cOMPARATIVOToolStripMenuItem
+            // 
+           
             // 
             // bALANCEFINALToolStripMenuItem
             // 
@@ -3091,6 +3097,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonNote;
         private System.Windows.Forms.ToolStripMenuItem rEPORTToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem cOMPARATIVOToolStripMenuItem;
     }
 }
 

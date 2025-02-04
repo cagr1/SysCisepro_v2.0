@@ -1517,15 +1517,55 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                     If dgvDetalleComprobate.Rows(indice).Cells(7).Value.ToString().Trim().Length > 0 Then
                         Try
-                            Dim data As DataTable = _objDetCompEgr.BuscarSerieRepetida(_tipoCon, dgvDetalleComprobate.Rows(indice).Cells(7).Value.ToString(), idkardex)
-                            If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
-                                Dim last As DataRow = data.Rows(data.Rows.Count - 1)
-                                If Convert.ToInt32(last("ID_ACTIVIDAD")) = 1 Then
-                                    Dim serieText As String = dgvDetalleComprobate.Rows(indice).Cells(7).Value.ToString()
-                                    KryptonMessageBox.Show("LA SERIE " & serieText & " YA FUE UTILIZADA EN UN INGRESO", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
-                                    Return
+                            'Dim data As DataTable = _objDetCompEgr.BuscarSerieRepetida(_tipoCon, dgvDetalleComprobate.Rows(indice).Cells(7).Value.ToString(), idkardex)
+
+                            ' Extraer el valor de la serie
+                            Dim serieText As String = dgvDetalleComprobate.Rows(indice).Cells(7).Value.ToString().Trim()
+
+                            ' Procesar serie
+                            Dim valorSerie As String = ""
+                            If serieText.Contains("SERIE:") Then
+                                ' Obtener solo el valor de la serie, eliminando cualquier texto extra
+                                valorSerie = serieText.Split(":"c)(1).Trim()
+
+                                ' Verificar si la serie es válida o vacía
+                                If valorSerie = "-" OrElse valorSerie = "" Then
+                                    Continue For ' Si la serie es vacía o solo "-", se omite la comparación
                                 End If
                             End If
+
+
+                            ' Verificar si la serie ya fue utilizada
+                            If valorSerie <> "" Then
+                                Dim data As DataTable = _objDetCompEgr.BuscarSerieRepetida(_tipoCon, valorSerie, idkardex)
+                                If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
+                                    Dim valorRepetido As String = If(IsDBNull(data.Rows(0)(2)), "", data.Rows(0)(2).ToString().Trim()) ' Usar data(0)(2)
+
+                                    If valorRepetido <> "-" AndAlso valorRepetido <> "" Then
+                                        Dim last As DataRow = data.Rows(data.Rows.Count - 1)
+                                        If Convert.ToInt32(last("ID_ACTIVIDAD")) = 1 Then
+                                            KryptonMessageBox.Show("LA SERIE " & valorSerie & " YA FUE UTILIZADA EN UN INGRESO", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                                            Return
+                                        End If
+                                    End If
+                                End If
+                            End If
+
+
+                            'If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
+                            '    Dim valorSerie As String = If(IsDBNull(data.Rows(0)(0)), "", data.Rows(0)(0).ToString().Trim())
+
+
+                            '    If valorSerie <> "-" AndAlso valorSerie <> "" Then
+                            '        Dim last As DataRow = data.Rows(data.Rows.Count - 1)
+                            '        If Convert.ToInt32(last("ID_ACTIVIDAD")) = 1 Then
+                            '            Dim serieText As String = dgvDetalleComprobate.Rows(indice).Cells(7).Value.ToString()
+                            '            KryptonMessageBox.Show("LA SERIE " & serieText & " YA FUE UTILIZADA EN UN INGRESO", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                            '            Return
+                            '        End If
+                            '    End If
+
+                            'End If
                         Catch ex As Exception
                             KryptonMessageBox.Show("Ocurrió un problema al buscar la serie. por favor, contácte al administrador!!!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                             Return
@@ -1585,7 +1625,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
 
                     Dim IdDetKarIngreso As String = _objDetalleKardex.BuscarMayorIdDetalleKardexxIdKardex(_tipoCon, dgvDetalleComprobate.Rows(indice).Cells(2).Value)
-                    Dim UltimoMovimiento As DataTable = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, dgvDetalleComprobanteIngreso.Rows(indice).Cells(2).Value, IdDetKarIngreso)
+                    Dim UltimoMovimiento As DataTable = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, dgvDetalleComprobate.Rows(indice).Cells(2).Value, IdDetKarIngreso)
 
                     If Not (Convert.ToInt32(dgvDetalleComprobate.Rows(indice).Cells(2).Value) = 0) Then
                         With _objDetalleKardex
@@ -1593,7 +1633,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                             .IdActividad = 1
                             .IdConcepto = cmbConceptos.SelectedValue
                             .CantidadIngreso = CInt(dgvDetalleComprobate.Rows(indice).Cells(8).Value)
-                            .ValorUnitarioIngreso = CDec(CDbl(UltimoMovimiento.Rows(0)(14).ToString()))
+                            .ValorUnitarioIngreso = Convert.ToDecimal(UltimoMovimiento.Rows(0)(14))
                             .ValorTotalIngreso = CDec(dgvDetalleComprobate.Rows(indice).Cells(9).Value) * CDec(dgvDetalleComprobate.Rows(indice).Cells(8).Value)
                             .CantidadEgreso = 0.0
                             .ValorUnitarioEgreso = 0.0

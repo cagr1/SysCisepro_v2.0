@@ -34,6 +34,7 @@ using System.Drawing.Text;
 
 
 
+
 namespace SysCisepro3.Main
 {
     public partial class MdiParentMain : KryptonForm
@@ -2172,6 +2173,8 @@ namespace SysCisepro3.Main
             FormDashboard.Instancia.BringToFront();
 
         }
+
+      
 
         //private void MdiParentMain_MdiChildActivate(object sender, EventArgs e)
         //{

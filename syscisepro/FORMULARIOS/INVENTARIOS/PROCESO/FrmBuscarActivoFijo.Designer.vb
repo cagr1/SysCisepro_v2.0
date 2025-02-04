@@ -1,7 +1,8 @@
 ﻿Namespace FORMULARIOS.INVENTARIOS.PROCESO
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FrmBuscarActivoFijo
-        Inherits System.Windows.Forms.Form
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
 
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
@@ -25,23 +26,15 @@
         Private Sub InitializeComponent()
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Me.Label1 = New System.Windows.Forms.Label()
+            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.txtParametrobusqueda = New System.Windows.Forms.TextBox()
             Me.dgvActivosFijos = New System.Windows.Forms.DataGridView()
             Me.cbmTipoActivo = New System.Windows.Forms.ComboBox()
-            Me.Label2 = New System.Windows.Forms.Label()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvActivosFijos, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
-            '
-            'Label1
-            '
-            Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(5, 7)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(51, 14)
-            Me.Label1.TabIndex = 13
-            Me.Label1.Text = "BUSCAR:"
             '
             'txtParametrobusqueda
             '
@@ -49,9 +42,9 @@
             Me.txtParametrobusqueda.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtParametrobusqueda.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtParametrobusqueda.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            Me.txtParametrobusqueda.Location = New System.Drawing.Point(59, 2)
+            Me.txtParametrobusqueda.Location = New System.Drawing.Point(84, 2)
             Me.txtParametrobusqueda.Name = "txtParametrobusqueda"
-            Me.txtParametrobusqueda.Size = New System.Drawing.Size(453, 23)
+            Me.txtParametrobusqueda.Size = New System.Drawing.Size(428, 23)
             Me.txtParametrobusqueda.TabIndex = 11
             '
             'dgvActivosFijos
@@ -62,24 +55,41 @@
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvActivosFijos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
             Me.dgvActivosFijos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-            Me.dgvActivosFijos.BackgroundColor = System.Drawing.Color.White
+            Me.dgvActivosFijos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
             Me.dgvActivosFijos.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvActivosFijos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            Me.dgvActivosFijos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.0!)
+            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvActivosFijos.DefaultCellStyle = DataGridViewCellStyle2
+            Me.dgvActivosFijos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+            Me.dgvActivosFijos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvActivosFijos.DefaultCellStyle = DataGridViewCellStyle3
             Me.dgvActivosFijos.GridColor = System.Drawing.Color.LightSteelBlue
             Me.dgvActivosFijos.Location = New System.Drawing.Point(3, 28)
             Me.dgvActivosFijos.MultiSelect = False
             Me.dgvActivosFijos.Name = "dgvActivosFijos"
             Me.dgvActivosFijos.ReadOnly = True
+            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle4.Font = New System.Drawing.Font("Roboto", 8.0!)
+            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvActivosFijos.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
             Me.dgvActivosFijos.RowHeadersVisible = False
+            Me.dgvActivosFijos.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Roboto", 8.0!)
             Me.dgvActivosFijos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvActivosFijos.Size = New System.Drawing.Size(752, 265)
             Me.dgvActivosFijos.TabIndex = 12
@@ -88,7 +98,6 @@
             '
             Me.cbmTipoActivo.BackColor = System.Drawing.Color.White
             Me.cbmTipoActivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbmTipoActivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmTipoActivo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmTipoActivo.ForeColor = System.Drawing.Color.Black
             Me.cbmTipoActivo.FormattingEnabled = True
@@ -98,40 +107,50 @@
             Me.cbmTipoActivo.Size = New System.Drawing.Size(185, 21)
             Me.cbmTipoActivo.TabIndex = 14
             '
-            'Label2
+            'KryptonLabel1
             '
-            Me.Label2.AutoSize = True
-            Me.Label2.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.Location = New System.Drawing.Point(531, 7)
-            Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(33, 14)
-            Me.Label2.TabIndex = 15
-            Me.Label2.Text = "TIPO:"
+            Me.KryptonLabel1.Location = New System.Drawing.Point(12, 2)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(46, 20)
+            Me.KryptonLabel1.TabIndex = 16
+            Me.KryptonLabel1.Values.Text = "Buscar"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(518, 2)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(34, 20)
+            Me.KryptonLabel2.TabIndex = 17
+            Me.KryptonLabel2.Values.Text = "Tipo"
             '
             'FrmBuscarActivoFijo
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(758, 296)
-            Me.Controls.Add(Me.Label2)
+            Me.Controls.Add(Me.KryptonLabel2)
+            Me.Controls.Add(Me.KryptonLabel1)
             Me.Controls.Add(Me.cbmTipoActivo)
-            Me.Controls.Add(Me.Label1)
             Me.Controls.Add(Me.txtParametrobusqueda)
             Me.Controls.Add(Me.dgvActivosFijos)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Name = "FrmBuscarActivoFijo"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "BUSCAR ACTIVO FIJO (Doble click para seleccionar)"
             CType(Me.dgvActivosFijos, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
         End Sub
-        Friend WithEvents Label1 As System.Windows.Forms.Label
         Friend WithEvents txtParametrobusqueda As System.Windows.Forms.TextBox
         Friend WithEvents dgvActivosFijos As System.Windows.Forms.DataGridView
         Friend WithEvents cbmTipoActivo As System.Windows.Forms.ComboBox
-        Friend WithEvents Label2 As System.Windows.Forms.Label
+        Friend WithEvents KryptonLabel1 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

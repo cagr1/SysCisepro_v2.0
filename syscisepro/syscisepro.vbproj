@@ -60,7 +60,7 @@
     <OptionExplicit>On</OptionExplicit>
   </PropertyGroup>
   <PropertyGroup>
-    <OptionCompare>Binary</OptionCompare>
+    <OptionCompare>Text</OptionCompare>
   </PropertyGroup>
   <PropertyGroup>
     <OptionStrict>Off</OptionStrict>
@@ -1096,22 +1096,22 @@
     <Compile Include="FORMULARIOS\CONTABILIDAD\MAYORIZACION\FormSaldosMayores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\CONTABILIDAD\PORCENTAJES RETENCION\PERDIDAS Y GANANCIAS\FormEstadoPerdidasYGanancias.Designer.vb">
+    <Compile Include="FORMULARIOS\CONTABILIDAD\PERDIDAS Y GANANCIAS\FormEstadoPerdidasYGanancias.Designer.vb">
       <DependentUpon>FormEstadoPerdidasYGanancias.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\CONTABILIDAD\PORCENTAJES RETENCION\PERDIDAS Y GANANCIAS\FormEstadoPerdidasYGanancias.vb">
+    <Compile Include="FORMULARIOS\CONTABILIDAD\PERDIDAS Y GANANCIAS\FormEstadoPerdidasYGanancias.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\CONTABILIDAD\PORCENTAJES RETENCION\PERDIDAS Y GANANCIAS\FrmBalancePerdidasYGananciasComparativo.Designer.vb">
+    <Compile Include="FORMULARIOS\CONTABILIDAD\PERDIDAS Y GANANCIAS\FrmBalancePerdidasYGananciasComparativo.Designer.vb">
       <DependentUpon>FrmBalancePerdidasYGananciasComparativo.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\CONTABILIDAD\PORCENTAJES RETENCION\PERDIDAS Y GANANCIAS\FrmBalancePerdidasYGananciasComparativo.vb">
+    <Compile Include="FORMULARIOS\CONTABILIDAD\PERDIDAS Y GANANCIAS\FrmBalancePerdidasYGananciasComparativo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\CONTABILIDAD\PORCENTAJES RETENCION\PERDIDAS Y GANANCIAS\FrmReportePerdidasYGanancias.Designer.vb">
+    <Compile Include="FORMULARIOS\CONTABILIDAD\PERDIDAS Y GANANCIAS\FrmReportePerdidasYGanancias.Designer.vb">
       <DependentUpon>FrmReportePerdidasYGanancias.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\CONTABILIDAD\PORCENTAJES RETENCION\PERDIDAS Y GANANCIAS\FrmReportePerdidasYGanancias.vb">
+    <Compile Include="FORMULARIOS\CONTABILIDAD\PERDIDAS Y GANANCIAS\FrmReportePerdidasYGanancias.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMULARIOS\CONTABILIDAD\PORCENTAJES RETENCION\FrmBuscarPlanCuentas.Designer.vb">
@@ -2856,13 +2856,13 @@
     <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\MAYORIZACION\FormSaldosMayores.resx">
       <DependentUpon>FormSaldosMayores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\PORCENTAJES RETENCION\PERDIDAS Y GANANCIAS\FormEstadoPerdidasYGanancias.resx">
+    <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\PERDIDAS Y GANANCIAS\FormEstadoPerdidasYGanancias.resx">
       <DependentUpon>FormEstadoPerdidasYGanancias.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\PORCENTAJES RETENCION\PERDIDAS Y GANANCIAS\FrmBalancePerdidasYGananciasComparativo.resx">
+    <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\PERDIDAS Y GANANCIAS\FrmBalancePerdidasYGananciasComparativo.resx">
       <DependentUpon>FrmBalancePerdidasYGananciasComparativo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\PORCENTAJES RETENCION\PERDIDAS Y GANANCIAS\FrmReportePerdidasYGanancias.resx">
+    <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\PERDIDAS Y GANANCIAS\FrmReportePerdidasYGanancias.resx">
       <DependentUpon>FrmReportePerdidasYGanancias.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\PORCENTAJES RETENCION\FrmBuscarPlanCuentas.resx">

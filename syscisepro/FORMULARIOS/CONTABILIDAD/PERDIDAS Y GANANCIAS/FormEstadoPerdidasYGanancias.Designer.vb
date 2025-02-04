@@ -64,17 +64,20 @@
             Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnReporte = New System.Windows.Forms.ToolStripMenuItem()
             Me.KryptonGroupBox1 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel1 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel2 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel3 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel1 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonGroupBox2 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel4 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel5 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel6 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonGroupBox3 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonLabel7 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel8 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel9 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonNavigator1 = New ComponentFactory.Krypton.Navigator.KryptonNavigator()
+            Me.KryptonPage1 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             CType(Me.dgvEgresos, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvIngresos, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.ContextMenuStripClicDerecho.SuspendLayout()
@@ -92,6 +95,11 @@
             CType(Me.KryptonGroupBox3.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox3.Panel.SuspendLayout()
             Me.KryptonGroupBox3.SuspendLayout()
+            CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonNavigator1.SuspendLayout()
+            CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonPage1.SuspendLayout()
+            CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'txtTotal
@@ -123,7 +131,7 @@
             Me.txtEgresos.BackColor = System.Drawing.Color.White
             Me.txtEgresos.Enabled = False
             Me.txtEgresos.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtEgresos.Location = New System.Drawing.Point(531, 203)
+            Me.txtEgresos.Location = New System.Drawing.Point(536, 206)
             Me.txtEgresos.Name = "txtEgresos"
             Me.txtEgresos.Size = New System.Drawing.Size(139, 26)
             Me.txtEgresos.TabIndex = 279
@@ -134,7 +142,7 @@
             Me.txtIngresos.BackColor = System.Drawing.Color.White
             Me.txtIngresos.Enabled = False
             Me.txtIngresos.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtIngresos.Location = New System.Drawing.Point(536, 209)
+            Me.txtIngresos.Location = New System.Drawing.Point(536, 203)
             Me.txtIngresos.Name = "txtIngresos"
             Me.txtIngresos.Size = New System.Drawing.Size(139, 26)
             Me.txtIngresos.TabIndex = 277
@@ -145,7 +153,7 @@
             Me.txtAcreedorEgresos.BackColor = System.Drawing.Color.White
             Me.txtAcreedorEgresos.Enabled = False
             Me.txtAcreedorEgresos.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtAcreedorEgresos.Location = New System.Drawing.Point(258, 203)
+            Me.txtAcreedorEgresos.Location = New System.Drawing.Point(263, 203)
             Me.txtAcreedorEgresos.Name = "txtAcreedorEgresos"
             Me.txtAcreedorEgresos.Size = New System.Drawing.Size(88, 26)
             Me.txtAcreedorEgresos.TabIndex = 274
@@ -156,7 +164,7 @@
             Me.txtDeudorEgresos.BackColor = System.Drawing.Color.White
             Me.txtDeudorEgresos.Enabled = False
             Me.txtDeudorEgresos.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtDeudorEgresos.Location = New System.Drawing.Point(78, 203)
+            Me.txtDeudorEgresos.Location = New System.Drawing.Point(78, 206)
             Me.txtDeudorEgresos.Name = "txtDeudorEgresos"
             Me.txtDeudorEgresos.Size = New System.Drawing.Size(88, 26)
             Me.txtDeudorEgresos.TabIndex = 273
@@ -167,7 +175,7 @@
             Me.txtAcreedorIngresos.BackColor = System.Drawing.Color.White
             Me.txtAcreedorIngresos.Enabled = False
             Me.txtAcreedorIngresos.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtAcreedorIngresos.Location = New System.Drawing.Point(263, 209)
+            Me.txtAcreedorIngresos.Location = New System.Drawing.Point(263, 207)
             Me.txtAcreedorIngresos.Name = "txtAcreedorIngresos"
             Me.txtAcreedorIngresos.Size = New System.Drawing.Size(88, 26)
             Me.txtAcreedorIngresos.TabIndex = 270
@@ -178,7 +186,7 @@
             Me.txtDeudorIngresos.BackColor = System.Drawing.Color.White
             Me.txtDeudorIngresos.Enabled = False
             Me.txtDeudorIngresos.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtDeudorIngresos.Location = New System.Drawing.Point(83, 209)
+            Me.txtDeudorIngresos.Location = New System.Drawing.Point(83, 207)
             Me.txtDeudorIngresos.Name = "txtDeudorIngresos"
             Me.txtDeudorIngresos.Size = New System.Drawing.Size(88, 26)
             Me.txtDeudorIngresos.TabIndex = 269
@@ -271,7 +279,7 @@
             DataGridViewCellStyle10.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvIngresos.RowsDefaultCellStyle = DataGridViewCellStyle10
             Me.dgvIngresos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvIngresos.Size = New System.Drawing.Size(757, 206)
+            Me.dgvIngresos.Size = New System.Drawing.Size(764, 200)
             Me.dgvIngresos.TabIndex = 226
             '
             'nodo
@@ -344,7 +352,6 @@
             'cbNivel
             '
             Me.cbNivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbNivel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbNivel.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbNivel.FormattingEnabled = True
             Me.cbNivel.Items.AddRange(New Object() {" -- TODOS --", "1", "2", "3", "4", "5", "6"})
@@ -422,7 +429,7 @@
             '
             Me.KryptonGroupBox1.CaptionOverlap = 0R
             Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox1.Location = New System.Drawing.Point(4, 35)
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(6, 3)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
             'KryptonGroupBox1.Panel
@@ -434,25 +441,9 @@
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.dtpFechaHasta)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.dtpFechaDesde)
-            Me.KryptonGroupBox1.Size = New System.Drawing.Size(783, 57)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(780, 54)
             Me.KryptonGroupBox1.TabIndex = 291
             Me.KryptonGroupBox1.Values.Heading = "Busqueda"
-            '
-            'KryptonLabel1
-            '
-            Me.KryptonLabel1.Location = New System.Drawing.Point(9, 4)
-            Me.KryptonLabel1.Name = "KryptonLabel1"
-            Me.KryptonLabel1.Size = New System.Drawing.Size(45, 20)
-            Me.KryptonLabel1.TabIndex = 0
-            Me.KryptonLabel1.Values.Text = "Desde"
-            '
-            'KryptonLabel2
-            '
-            Me.KryptonLabel2.Location = New System.Drawing.Point(236, 3)
-            Me.KryptonLabel2.Name = "KryptonLabel2"
-            Me.KryptonLabel2.Size = New System.Drawing.Size(41, 20)
-            Me.KryptonLabel2.TabIndex = 1
-            Me.KryptonLabel2.Values.Text = "Hasta"
             '
             'KryptonLabel3
             '
@@ -462,11 +453,27 @@
             Me.KryptonLabel3.TabIndex = 2
             Me.KryptonLabel3.Values.Text = "Niveles"
             '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(236, 3)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(41, 20)
+            Me.KryptonLabel2.TabIndex = 1
+            Me.KryptonLabel2.Values.Text = "Hasta"
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(9, 4)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(45, 20)
+            Me.KryptonLabel1.TabIndex = 0
+            Me.KryptonLabel1.Values.Text = "Desde"
+            '
             'KryptonGroupBox2
             '
             Me.KryptonGroupBox2.CaptionOverlap = 0R
             Me.KryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox2.Location = New System.Drawing.Point(5, 96)
+            Me.KryptonGroupBox2.Location = New System.Drawing.Point(6, 60)
             Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
             '
             'KryptonGroupBox2.Panel
@@ -478,17 +485,20 @@
             Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtIngresos)
             Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtDeudorIngresos)
             Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtAcreedorIngresos)
-            Me.KryptonGroupBox2.Size = New System.Drawing.Size(782, 262)
+            Me.KryptonGroupBox2.Size = New System.Drawing.Size(780, 260)
             Me.KryptonGroupBox2.TabIndex = 292
             Me.KryptonGroupBox2.Values.Heading = "Ingresos"
             '
-            'KryptonLabel4
+            'KryptonLabel6
             '
-            Me.KryptonLabel4.Location = New System.Drawing.Point(26, 209)
-            Me.KryptonLabel4.Name = "KryptonLabel4"
-            Me.KryptonLabel4.Size = New System.Drawing.Size(51, 20)
-            Me.KryptonLabel4.TabIndex = 1
-            Me.KryptonLabel4.Values.Text = "Deudor"
+            Me.KryptonLabel6.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl
+            Me.KryptonLabel6.Location = New System.Drawing.Point(426, 207)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(71, 22)
+            Me.KryptonLabel6.StateNormal.LongText.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.KryptonLabel6.StateNormal.ShortText.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.KryptonLabel6.TabIndex = 271
+            Me.KryptonLabel6.Values.Text = "Ingresos"
             '
             'KryptonLabel5
             '
@@ -498,22 +508,19 @@
             Me.KryptonLabel5.TabIndex = 270
             Me.KryptonLabel5.Values.Text = "Acreedor"
             '
-            'KryptonLabel6
+            'KryptonLabel4
             '
-            Me.KryptonLabel6.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl
-            Me.KryptonLabel6.Location = New System.Drawing.Point(426, 209)
-            Me.KryptonLabel6.Name = "KryptonLabel6"
-            Me.KryptonLabel6.Size = New System.Drawing.Size(75, 24)
-            Me.KryptonLabel6.StateNormal.LongText.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.KryptonLabel6.StateNormal.ShortText.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.KryptonLabel6.TabIndex = 271
-            Me.KryptonLabel6.Values.Text = "Ingresos"
+            Me.KryptonLabel4.Location = New System.Drawing.Point(26, 209)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(51, 20)
+            Me.KryptonLabel4.TabIndex = 1
+            Me.KryptonLabel4.Values.Text = "Deudor"
             '
             'KryptonGroupBox3
             '
             Me.KryptonGroupBox3.CaptionOverlap = 0R
             Me.KryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox3.Location = New System.Drawing.Point(5, 366)
+            Me.KryptonGroupBox3.Location = New System.Drawing.Point(6, 327)
             Me.KryptonGroupBox3.Name = "KryptonGroupBox3"
             '
             'KryptonGroupBox3.Panel
@@ -525,7 +532,7 @@
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel9)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtDeudorEgresos)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtAcreedorEgresos)
-            Me.KryptonGroupBox3.Size = New System.Drawing.Size(782, 262)
+            Me.KryptonGroupBox3.Size = New System.Drawing.Size(775, 262)
             Me.KryptonGroupBox3.TabIndex = 293
             Me.KryptonGroupBox3.Values.Heading = "Egresos"
             '
@@ -534,10 +541,10 @@
             Me.KryptonLabel7.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel
             Me.KryptonLabel7.Location = New System.Drawing.Point(426, 209)
             Me.KryptonLabel7.Name = "KryptonLabel7"
-            Me.KryptonLabel7.Size = New System.Drawing.Size(71, 24)
+            Me.KryptonLabel7.Size = New System.Drawing.Size(67, 22)
             Me.KryptonLabel7.StateNormal.LongText.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.KryptonLabel7.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.KryptonLabel7.StateNormal.ShortText.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.KryptonLabel7.StateNormal.ShortText.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.KryptonLabel7.TabIndex = 271
             Me.KryptonLabel7.Values.Text = "Egresos"
             '
@@ -557,15 +564,64 @@
             Me.KryptonLabel9.TabIndex = 1
             Me.KryptonLabel9.Values.Text = "Deudor"
             '
+            'KryptonNavigator1
+            '
+            Me.KryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None
+            Me.KryptonNavigator1.Button.CloseButtonAction = ComponentFactory.Krypton.Navigator.CloseButtonAction.RemovePageAndDispose
+            Me.KryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide
+            Me.KryptonNavigator1.Button.ContextButtonAction = ComponentFactory.Krypton.Navigator.ContextButtonAction.SelectPage
+            Me.KryptonNavigator1.Button.ContextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
+            Me.KryptonNavigator1.Button.ContextMenuMapImage = ComponentFactory.Krypton.Navigator.MapKryptonPageImage.Small
+            Me.KryptonNavigator1.Button.ContextMenuMapText = ComponentFactory.Krypton.Navigator.MapKryptonPageText.TextTitle
+            Me.KryptonNavigator1.Button.NextButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
+            Me.KryptonNavigator1.Button.NextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
+            Me.KryptonNavigator1.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
+            Me.KryptonNavigator1.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
+            Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 32)
+            Me.KryptonNavigator1.Name = "KryptonNavigator1"
+            Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarTabGroup
+            Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
+            Me.KryptonNavigator1.SelectedIndex = 0
+            Me.KryptonNavigator1.Size = New System.Drawing.Size(791, 624)
+            Me.KryptonNavigator1.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.KryptonNavigator1.TabIndex = 294
+            Me.KryptonNavigator1.Text = "KryptonNavigator1"
+            '
+            'KryptonPage1
+            '
+            Me.KryptonPage1.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage1.Controls.Add(Me.KryptonGroupBox3)
+            Me.KryptonPage1.Controls.Add(Me.KryptonGroupBox2)
+            Me.KryptonPage1.Controls.Add(Me.KryptonGroupBox1)
+            Me.KryptonPage1.Flags = 65534
+            Me.KryptonPage1.LastVisibleSet = True
+            Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
+            Me.KryptonPage1.Name = "KryptonPage1"
+            Me.KryptonPage1.Size = New System.Drawing.Size(789, 597)
+            Me.KryptonPage1.Text = "General"
+            Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
+            Me.KryptonPage1.UniqueName = "7FFBC1C00EEF478B3F89240E9045C7F5"
+            '
+            'KryptonPage2
+            '
+            Me.KryptonPage2.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage2.Flags = 65534
+            Me.KryptonPage2.LastVisibleSet = True
+            Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
+            Me.KryptonPage2.Name = "KryptonPage2"
+            Me.KryptonPage2.Size = New System.Drawing.Size(248, 149)
+            Me.KryptonPage2.Text = "Comparativo"
+            Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
+            Me.KryptonPage2.UniqueName = "0DF740431DB546AAFB85B2916D7DE92D"
+            '
             'FormEstadoPerdidasYGanancias
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.ClientSize = New System.Drawing.Size(791, 640)
-            Me.Controls.Add(Me.KryptonGroupBox3)
-            Me.Controls.Add(Me.KryptonGroupBox2)
-            Me.Controls.Add(Me.KryptonGroupBox1)
+            Me.ClientSize = New System.Drawing.Size(791, 656)
+            Me.Controls.Add(Me.KryptonNavigator1)
             Me.Controls.Add(Me.txtTotal)
             Me.Controls.Add(Me.Label22)
             Me.Controls.Add(Me.MenuStrip1)
@@ -601,6 +657,11 @@
             Me.KryptonGroupBox3.Panel.PerformLayout()
             CType(Me.KryptonGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox3.ResumeLayout(False)
+            CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonNavigator1.ResumeLayout(False)
+            CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonPage1.ResumeLayout(False)
+            CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -645,5 +706,8 @@
         Friend WithEvents KryptonLabel7 As ComponentFactory.Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel8 As ComponentFactory.Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel9 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonNavigator1 As ComponentFactory.Krypton.Navigator.KryptonNavigator
+        Friend WithEvents KryptonPage1 As ComponentFactory.Krypton.Navigator.KryptonPage
+        Friend WithEvents KryptonPage2 As ComponentFactory.Krypton.Navigator.KryptonPage
     End Class
 End Namespace

@@ -23,6 +23,7 @@ Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports Krypton.Toolkit
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+Imports ClassLibraryCisepro.INVENTARIOS
 'Imports DocumentFormat.OpenXml.Office2010.Excel
 
 
@@ -778,7 +779,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 txtIdComprobante.Text = txtNroComprobante.Text
                 tbComprobanteIngresoBodega.SelectedIndex = 2
                 tsmNuevo.Enabled = True
-                    tsmGuardar.Enabled = False
+                tsmGuardar.Enabled = False
                 tsmCancelar.Enabled = False
                 TmsEliminar.Enabled = False
                 TmsActualizar.Enabled = False
@@ -1699,7 +1700,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         End Sub
 
         Private Sub txtSerie_TextChanged(sender As Object, e As EventArgs) Handles txtSerie.TextChanged
-            'Dim idkardex = Convert.ToInt32(lblIdKardex.Text)
+            Dim idkardex = Convert.ToInt32(lblIdKardex.Text)
 
             'If txtSerie.Text.Trim().Length > 0 Then
             '    Try
@@ -1717,6 +1718,35 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             '    End Try
             'End If
+            ' Asegurarnos que la serie no esté vacía o sea "-"
+            Dim serieText As String = txtSerie.Text.Trim()
+
+            If serieText.Length > 0 AndAlso serieText <> "-" Then
+                Try
+                    ' Hacer la búsqueda de la serie repetida
+                    Dim data As DataTable = _objDetCompIng.BuscarSerieRepetida(_tipoCon, serieText, idkardex)
+                    If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
+                        ' Obtener el valor de la serie a comparar
+                        Dim valorSerie As String = If(IsDBNull(data.Rows(0)(2)), "", data.Rows(0)(2).ToString().Trim())
+
+                        ' Verificar si la serie ya fue utilizada
+                        If valorSerie <> "" AndAlso valorSerie <> "-" Then
+                            Dim last As DataRow = data.Rows(data.Rows.Count - 1)
+                            If Convert.ToInt32(last("ID_ACTIVIDAD")) = 1 Then
+                                KryptonMessageBox.Show("La serie " & serieText & " ya fue utilizada en un ingreso", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                                txtSerie.Clear() ' Limpiar el campo si ya está registrada
+                                Return
+                            End If
+                        End If
+                    End If
+                Catch ex As Exception
+                    KryptonMessageBox.Show("Ocurrió un problema al buscar la serie. Por favor, contácte al administrador.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                End Try
+            End If
+
+
+
+
 
         End Sub
 
