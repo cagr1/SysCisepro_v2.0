@@ -188,6 +188,7 @@
             Me.tcLiquidar.Dock = System.Windows.Forms.DockStyle.Fill
             Me.tcLiquidar.Location = New System.Drawing.Point(0, 32)
             Me.tcLiquidar.Name = "tcLiquidar"
+            Me.tcLiquidar.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.tcLiquidar.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
             Me.tcLiquidar.SelectedIndex = 0
             Me.tcLiquidar.Size = New System.Drawing.Size(945, 543)
@@ -213,7 +214,7 @@
             Me.KryptonPage1.LastVisibleSet = True
             Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage1.Name = "KryptonPage1"
-            Me.KryptonPage1.Size = New System.Drawing.Size(943, 516)
+            Me.KryptonPage1.Size = New System.Drawing.Size(943, 514)
             Me.KryptonPage1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.KryptonPage1.Text = "Liquidar"
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
@@ -368,7 +369,7 @@
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvLiquidacionFondoCajaChica.DefaultCellStyle = DataGridViewCellStyle3
             Me.dgvLiquidacionFondoCajaChica.GridColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvLiquidacionFondoCajaChica.Location = New System.Drawing.Point(0, 66)
+            Me.dgvLiquidacionFondoCajaChica.Location = New System.Drawing.Point(0, 74)
             Me.dgvLiquidacionFondoCajaChica.MultiSelect = False
             Me.dgvLiquidacionFondoCajaChica.Name = "dgvLiquidacionFondoCajaChica"
             Me.dgvLiquidacionFondoCajaChica.ReadOnly = True
@@ -376,7 +377,7 @@
             DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvLiquidacionFondoCajaChica.RowsDefaultCellStyle = DataGridViewCellStyle4
             Me.dgvLiquidacionFondoCajaChica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvLiquidacionFondoCajaChica.Size = New System.Drawing.Size(941, 412)
+            Me.dgvLiquidacionFondoCajaChica.Size = New System.Drawing.Size(941, 404)
             Me.dgvLiquidacionFondoCajaChica.TabIndex = 49
             '
             'KryptonGroupBox1

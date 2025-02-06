@@ -351,6 +351,7 @@
             Me.tcAuxiliares.Dock = System.Windows.Forms.DockStyle.Fill
             Me.tcAuxiliares.Location = New System.Drawing.Point(0, 32)
             Me.tcAuxiliares.Name = "tcAuxiliares"
+            Me.tcAuxiliares.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.tcAuxiliares.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
             Me.tcAuxiliares.SelectedIndex = 0
             Me.tcAuxiliares.Size = New System.Drawing.Size(922, 631)
@@ -367,7 +368,7 @@
             Me.KryptonPage1.LastVisibleSet = True
             Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage1.Name = "KryptonPage1"
-            Me.KryptonPage1.Size = New System.Drawing.Size(920, 604)
+            Me.KryptonPage1.Size = New System.Drawing.Size(920, 602)
             Me.KryptonPage1.Text = "Mayores"
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage1.UniqueName = "21E19C2E67CA4541098720E93A94B53D"

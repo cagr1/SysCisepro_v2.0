@@ -364,6 +364,7 @@
             Me.tcDatos.Dock = System.Windows.Forms.DockStyle.Fill
             Me.tcDatos.Location = New System.Drawing.Point(0, 32)
             Me.tcDatos.Name = "tcDatos"
+            Me.tcDatos.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.tcDatos.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
             Me.tcDatos.SelectedIndex = 0
             Me.tcDatos.Size = New System.Drawing.Size(765, 447)
@@ -379,7 +380,7 @@
             Me.KryptonPage1.LastVisibleSet = True
             Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage1.Name = "KryptonPage1"
-            Me.KryptonPage1.Size = New System.Drawing.Size(763, 420)
+            Me.KryptonPage1.Size = New System.Drawing.Size(763, 418)
             Me.KryptonPage1.Text = "Datos"
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage1.UniqueName = "17EEDA42A0174407678C24A1A2486B82"

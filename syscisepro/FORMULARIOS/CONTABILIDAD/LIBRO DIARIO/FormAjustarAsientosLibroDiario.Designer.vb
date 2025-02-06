@@ -420,7 +420,6 @@
             Me.cmbCuentasContables.BackColor = System.Drawing.Color.White
             Me.cmbCuentasContables.DropDownHeight = 200
             Me.cmbCuentasContables.DropDownWidth = 500
-            Me.cmbCuentasContables.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbCuentasContables.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCuentasContables.FormattingEnabled = True
             Me.cmbCuentasContables.IntegralHeight = False
@@ -434,7 +433,6 @@
             Me.cmbConcepto.BackColor = System.Drawing.Color.White
             Me.cmbConcepto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbConcepto.DropDownWidth = 300
-            Me.cmbConcepto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbConcepto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbConcepto.FormattingEnabled = True
             Me.cmbConcepto.Items.AddRange(New Object() {"COMPROBANTE ASIENTO DE DIARIO", "COMPROBANTE DIARIO DE AJUSTE", "COMPROBANTE DIARIO DE CRUCE DE CTAS", "COMPROBANTE DIARIO DE COMPRA", "COMPROBANTE DIARIO DE GASTO", "COMPROBANTE DIARIO DE NOTA DE CRÉDITO", "COMPROBANTE DIARIO DE VENTA", "COMPROBANTE DE EGRESO", "COMPROBANTE DE INGRESO", "COMPROBANTE DE INGRESO CUENTAS POR PAGAR", "COMPROBANTE DE INGRESO CUENTAS POR COBRAR", "NOTA DE CRÉDITO", "NOTA DE DEBITO", "CAJA CHICA", "FONDO ROTATIVO"})
@@ -770,7 +768,7 @@
             '
             'btnBuscarPersonal
             '
-            Me.btnBuscarPersonal.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.btnBuscarPersonal.BackColor = System.Drawing.Color.Transparent
             Me.btnBuscarPersonal.FlatAppearance.BorderSize = 0
             Me.btnBuscarPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnBuscarPersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

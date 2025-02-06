@@ -195,6 +195,7 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
             autocompletarNombreProveedor()
             rbGeneral.Checked = True
             ChkTodos.ForeColor = Color.FromArgb(30, 57, 91)
+            Me.MaximumSize = MdiParent.ClientSize
         End Sub
         Private Sub txtNombreComercialProveedorGeneral_KeyDown(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs) Handles txtNombreComercialProveedorGeneral.KeyDown
             If e.KeyCode = Keys.Enter Then

@@ -983,7 +983,7 @@
             Me.dgvAsientoDiarioIngreso.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             Me.dgvAsientoDiarioIngreso.RowHeadersVisible = False
             Me.dgvAsientoDiarioIngreso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientoDiarioIngreso.Size = New System.Drawing.Size(407, 103)
+            Me.dgvAsientoDiarioIngreso.Size = New System.Drawing.Size(407, 101)
             Me.dgvAsientoDiarioIngreso.TabIndex = 119
             '
             'lblIdComprobanteIngresoBanco
@@ -1036,7 +1036,7 @@
             Me.dgvComprobanteIngreso.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             Me.dgvComprobanteIngreso.RowHeadersVisible = False
             Me.dgvComprobanteIngreso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobanteIngreso.Size = New System.Drawing.Size(406, 86)
+            Me.dgvComprobanteIngreso.Size = New System.Drawing.Size(406, 84)
             Me.dgvComprobanteIngreso.TabIndex = 118
             '
             'rbNroFactura
@@ -1237,7 +1237,7 @@
             DataGridViewCellStyle13.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvPagosFacturaVenta.RowsDefaultCellStyle = DataGridViewCellStyle13
             Me.dgvPagosFacturaVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvPagosFacturaVenta.Size = New System.Drawing.Size(407, 116)
+            Me.dgvPagosFacturaVenta.Size = New System.Drawing.Size(407, 114)
             Me.dgvPagosFacturaVenta.TabIndex = 0
             '
             'dgvDetalleRetencionVenta
@@ -1278,7 +1278,7 @@
             Me.dgvDetalleRetencionVenta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             Me.dgvDetalleRetencionVenta.RowHeadersVisible = False
             Me.dgvDetalleRetencionVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleRetencionVenta.Size = New System.Drawing.Size(408, 95)
+            Me.dgvDetalleRetencionVenta.Size = New System.Drawing.Size(408, 93)
             Me.dgvDetalleRetencionVenta.TabIndex = 111
             '
             'lblNumeroFactura
@@ -1686,7 +1686,7 @@
             Me.dgvDetalleComprobanteRetencion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             Me.dgvDetalleComprobanteRetencion.RowHeadersVisible = False
             Me.dgvDetalleComprobanteRetencion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleComprobanteRetencion.Size = New System.Drawing.Size(408, 86)
+            Me.dgvDetalleComprobanteRetencion.Size = New System.Drawing.Size(408, 84)
             Me.dgvDetalleComprobanteRetencion.TabIndex = 111
             '
             'dgvComprobanteRetencion
@@ -1741,7 +1741,7 @@
             DataGridViewCellStyle34.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvPagosComprobantesCompra.RowsDefaultCellStyle = DataGridViewCellStyle34
             Me.dgvPagosComprobantesCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvPagosComprobantesCompra.Size = New System.Drawing.Size(408, 116)
+            Me.dgvPagosComprobantesCompra.Size = New System.Drawing.Size(408, 114)
             Me.dgvPagosComprobantesCompra.TabIndex = 0
             '
             'lblIdComprobanteEgreso
@@ -1796,7 +1796,7 @@
             Me.dgvComprobanteEgresoBancos.RowHeadersVisible = False
             Me.dgvComprobanteEgresoBancos.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
             Me.dgvComprobanteEgresoBancos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobanteEgresoBancos.Size = New System.Drawing.Size(409, 86)
+            Me.dgvComprobanteEgresoBancos.Size = New System.Drawing.Size(409, 84)
             Me.dgvComprobanteEgresoBancos.TabIndex = 118
             '
             'lblNumeroRegistroEgreso
@@ -1872,6 +1872,7 @@
             Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 32)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
+            Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
             Me.KryptonNavigator1.SelectedIndex = 0
             Me.KryptonNavigator1.Size = New System.Drawing.Size(1013, 626)
@@ -1897,7 +1898,7 @@
             Me.KryptonPage1.LastVisibleSet = True
             Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage1.Name = "KryptonPage1"
-            Me.KryptonPage1.Size = New System.Drawing.Size(1011, 599)
+            Me.KryptonPage1.Size = New System.Drawing.Size(1011, 597)
             Me.KryptonPage1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.KryptonPage1.Text = "Compras"
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
@@ -1984,7 +1985,7 @@
             'KryptonGroupBox6.Panel
             '
             Me.KryptonGroupBox6.Panel.Controls.Add(Me.dgvAsientoDiarioEgreso)
-            Me.KryptonGroupBox6.Size = New System.Drawing.Size(413, 119)
+            Me.KryptonGroupBox6.Size = New System.Drawing.Size(413, 117)
             Me.KryptonGroupBox6.TabIndex = 122
             Me.KryptonGroupBox6.Values.Heading = "Asiento Diario"
             '
@@ -2027,7 +2028,7 @@
             Me.dgvAsientoDiarioEgreso.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             Me.dgvAsientoDiarioEgreso.RowHeadersVisible = False
             Me.dgvAsientoDiarioEgreso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientoDiarioEgreso.Size = New System.Drawing.Size(409, 95)
+            Me.dgvAsientoDiarioEgreso.Size = New System.Drawing.Size(409, 93)
             Me.dgvAsientoDiarioEgreso.TabIndex = 119
             '
             'KryptonGroupBox5
@@ -2043,7 +2044,7 @@
             'KryptonGroupBox5.Panel
             '
             Me.KryptonGroupBox5.Panel.Controls.Add(Me.dgvComprobanteEgresoBancos)
-            Me.KryptonGroupBox5.Size = New System.Drawing.Size(413, 110)
+            Me.KryptonGroupBox5.Size = New System.Drawing.Size(413, 108)
             Me.KryptonGroupBox5.TabIndex = 114
             Me.KryptonGroupBox5.Values.Heading = "Comprobante Egreso"
             '
@@ -2060,7 +2061,7 @@
             'KryptonGroupBox4.Panel
             '
             Me.KryptonGroupBox4.Panel.Controls.Add(Me.dgvPagosComprobantesCompra)
-            Me.KryptonGroupBox4.Size = New System.Drawing.Size(412, 140)
+            Me.KryptonGroupBox4.Size = New System.Drawing.Size(412, 138)
             Me.KryptonGroupBox4.TabIndex = 113
             Me.KryptonGroupBox4.Values.Heading = "Pagos por Comprobante"
             '
@@ -2077,7 +2078,7 @@
             'KryptonGroupBox3.Panel
             '
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.dgvDetalleComprobanteRetencion)
-            Me.KryptonGroupBox3.Size = New System.Drawing.Size(412, 110)
+            Me.KryptonGroupBox3.Size = New System.Drawing.Size(412, 108)
             Me.KryptonGroupBox3.TabIndex = 111
             Me.KryptonGroupBox3.Values.Heading = "Detalle Retencion"
             '
@@ -2246,7 +2247,7 @@
             Me.KryptonPage2.LastVisibleSet = True
             Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage2.Name = "KryptonPage2"
-            Me.KryptonPage2.Size = New System.Drawing.Size(1011, 599)
+            Me.KryptonPage2.Size = New System.Drawing.Size(1011, 597)
             Me.KryptonPage2.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.KryptonPage2.Text = "Ventas"
             Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
@@ -2368,7 +2369,7 @@
             '
             Me.KryptonGroupBox14.Panel.Controls.Add(Me.dgvAsientoDiarioIngreso)
             Me.KryptonGroupBox14.Panel.Controls.Add(Me.DataGridView5)
-            Me.KryptonGroupBox14.Size = New System.Drawing.Size(411, 127)
+            Me.KryptonGroupBox14.Size = New System.Drawing.Size(411, 125)
             Me.KryptonGroupBox14.TabIndex = 118
             Me.KryptonGroupBox14.Values.Heading = "Asiento Diario"
             '
@@ -2410,7 +2411,7 @@
             Me.DataGridView5.RowHeadersVisible = False
             Me.DataGridView5.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
             Me.DataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.DataGridView5.Size = New System.Drawing.Size(407, 103)
+            Me.DataGridView5.Size = New System.Drawing.Size(407, 101)
             Me.DataGridView5.TabIndex = 118
             '
             'KryptonGroupBox11
@@ -2426,7 +2427,7 @@
             'KryptonGroupBox11.Panel
             '
             Me.KryptonGroupBox11.Panel.Controls.Add(Me.dgvComprobanteIngreso)
-            Me.KryptonGroupBox11.Size = New System.Drawing.Size(410, 110)
+            Me.KryptonGroupBox11.Size = New System.Drawing.Size(410, 108)
             Me.KryptonGroupBox11.TabIndex = 117
             Me.KryptonGroupBox11.Values.Heading = "Comprobante Ingreso"
             '
@@ -2443,7 +2444,7 @@
             'KryptonGroupBox12.Panel
             '
             Me.KryptonGroupBox12.Panel.Controls.Add(Me.dgvPagosFacturaVenta)
-            Me.KryptonGroupBox12.Size = New System.Drawing.Size(411, 140)
+            Me.KryptonGroupBox12.Size = New System.Drawing.Size(411, 138)
             Me.KryptonGroupBox12.TabIndex = 116
             Me.KryptonGroupBox12.Values.Heading = "Pagos Factura"
             '
@@ -2460,7 +2461,7 @@
             'KryptonGroupBox13.Panel
             '
             Me.KryptonGroupBox13.Panel.Controls.Add(Me.dgvDetalleRetencionVenta)
-            Me.KryptonGroupBox13.Size = New System.Drawing.Size(412, 119)
+            Me.KryptonGroupBox13.Size = New System.Drawing.Size(412, 117)
             Me.KryptonGroupBox13.TabIndex = 115
             Me.KryptonGroupBox13.Values.Heading = "Detalle Retencion"
             '

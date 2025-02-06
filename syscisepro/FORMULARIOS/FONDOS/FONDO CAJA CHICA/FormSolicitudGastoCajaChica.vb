@@ -281,7 +281,9 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
 
             LlenarComboCajasChicas()
 
-            cbmCajasChicas.SelectedValue = 1 ' MACHALA
+            'cbmCajasChicas.SelectedValue = 1 ' MACHALA
+
+
 
             LlenarComboParametrosDocumentos()
             cbmParametrosDocumentos.SelectedValue = 6
@@ -397,17 +399,22 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
 
         Private Sub LlenarComboCajasChicas()
             Try
+                RemoveHandler cbmCajasChicas.SelectedValueChanged, AddressOf cbmCajasChicas_SelectedValueChanged
+
                 cbmCajasChicas.DataSource = _objCajasChicas.SeleccionarCajasChicas(_tipoCon)
                 cbmCajasChicas.DisplayMember = "DETALLE_CAJA_CHICA"
                 cbmCajasChicas.ValueMember = "ID_CAJA_CHICA"
                 cbmCajasChicas.DropDownWidth = 300
                 If (CType(cbmCajasChicas.DataSource, DataTable).Rows.Count > 0) Then cbmCajasChicas.SelectedIndex = 0
+
+                AddHandler cbmCajasChicas.SelectedValueChanged, AddressOf cbmCajasChicas_SelectedValueChanged
             Catch
                 cbmCajasChicas.DataSource = Nothing
             End Try
         End Sub
         Private Sub cbmCajasChicas_SelectedValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cbmCajasChicas.SelectedValueChanged
             If cbmCajasChicas.SelectedValue Is Nothing Or TypeOf cbmCajasChicas.SelectedValue Is DataRowView Then Return
+
 
             lblMontoAsignado.Text = _objCajasChicas.BuscarMontoAsignadoCajaChicaXidCajaChica(_tipoCon, cbmCajasChicas.SelectedValue)
             lblMontoCajaChica.Text = _objAuxiliarCajaChica.BuscarMontoCajaChicaXidCajaChica(_tipoCon, cbmCajasChicas.SelectedValue)
@@ -429,6 +436,68 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
 
             txtActividad.Text = _objCajasChicas.BuscarCuentaContableXIdCajaChica(_tipoCon, cbmCajasChicas.SelectedValue)
             txtCodigoHaber.Text = txtActividad.Text
+
+            Dim selectedValue As Integer = cbmCajasChicas.SelectedValue
+
+
+            Select Case selectedValue
+                Case "1" 'caja chica machala
+                    cbmProvincia.SelectedIndex = 2
+                    cbmCanton.SelectedItem = "MACHALA"
+                    cbmParroquia.SelectedItem = "MACHALA"
+
+                Case "6" 'caja chica guayaquil
+                    cbmProvincia.Text = cbmProvincia.FindStringExact("GUAYAS")
+                    cbmCanton.SelectedItem = "GUAYAQUIL"
+                    cbmParroquia.SelectedItem = "GUAYAQUIL"
+
+                Case "15" 'caja chica lago agrio
+                    cbmProvincia.SelectedItem = "SUCUMBIOS"
+                    cbmCanton.SelectedItem = "LAGO AGRIO"
+                    cbmParroquia.SelectedItem = "LAGO AGRIO"
+
+                Case "16" 'caja chica lago agrio 2
+                    cbmProvincia.SelectedItem = "SUCUMBIOS"
+                    cbmCanton.SelectedItem = "LAGO AGRIO"
+                    cbmParroquia.SelectedItem = "LAGO AGRIO"
+
+                Case "11" 'caja chica cuenca
+                    cbmProvincia.SelectedItem = "AZUAY"
+                    cbmCanton.SelectedItem = "CUENCA"
+                    cbmParroquia.SelectedItem = "CUENCA"
+
+                Case "14" ' caja chica quito
+                    cbmProvincia.SelectedItem = "PICHINCHA"
+                    cbmCanton.SelectedItem = "QUITO"
+
+                Case "10" ' caja chica naranjal
+                    cbmProvincia.SelectedItem = "GUAYAS"
+                    cbmCanton.SelectedItem = "NARANJAL"
+                    cbmParroquia.SelectedItem = "NARANJAL"
+
+                Case "9" ' caja chica minas
+                    cbmProvincia.SelectedItem = "AZUAY"
+                    cbmCanton.SelectedItem = "CAMILO PONCE ENRIQUEZ"
+                    cbmParroquia.SelectedItem = "CAMILO PONCE ENRIQUEZ"
+
+                Case "17" ' caja chica loja
+                    cbmProvincia.SelectedItem = "LOJA"
+                    cbmCanton.SelectedItem = "LOJA"
+                    cbmParroquia.SelectedItem = "LOJA"
+
+                Case "8" ' caja chica zamora
+                    cbmProvincia.SelectedItem = "ZAMORA CHINCHIPE"
+                    cbmCanton.SelectedItem = "ZAMORA"
+                    cbmParroquia.SelectedItem = "ZAMORA"
+
+                Case "2" ' caja chica zaruma
+                    cbmProvincia.SelectedItem = "EL ORO"
+                    cbmCanton.SelectedItem = "ZARUMA"
+                    cbmParroquia.SelectedItem = "ZARUMA"
+
+            End Select
+
+
         End Sub
 
         Private Sub LlenarComboConceptosMachala()

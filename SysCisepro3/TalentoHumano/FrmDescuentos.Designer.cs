@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDescuentos));
             this.dgvSecuencial = new System.Windows.Forms.DataGridView();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -72,7 +72,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.kryptonNavigator1 = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
             this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.btnDetalle = new Krypton.Toolkit.KryptonButton();
             this.kryptonLabel15 = new Krypton.Toolkit.KryptonLabel();
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.txtFiltro = new System.Windows.Forms.TextBox();
@@ -80,9 +79,6 @@
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
             this.kryptonLabel16 = new Krypton.Toolkit.KryptonLabel();
             this.cbxFiltro = new System.Windows.Forms.ComboBox();
-            this.btnResumen = new Krypton.Toolkit.KryptonButton();
-            this.btnBodega = new Krypton.Toolkit.KryptonButton();
-            this.btnOtros = new Krypton.Toolkit.KryptonButton();
             this.metroTabControl1 = new ReaLTaiizor.Controls.MetroTabControl();
             this.metroTabPage1 = new ReaLTaiizor.Child.Metro.MetroTabPage();
             this.ListView1 = new System.Windows.Forms.ListView();
@@ -153,6 +149,13 @@
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kryptonGroupBox1 = new Krypton.Toolkit.KryptonGroupBox();
+            this.btnExcel = new Krypton.Toolkit.KryptonDropButton();
+            this.kmcExcelMenu = new Krypton.Toolkit.KryptonContextMenu();
+            this.kryptonContextMenuItems1 = new Krypton.Toolkit.KryptonContextMenuItems();
+            this.kryptonContextMenuItem1 = new Krypton.Toolkit.KryptonContextMenuItem();
+            this.kryptonContextMenuItem2 = new Krypton.Toolkit.KryptonContextMenuItem();
+            this.kryptonContextMenuItem3 = new Krypton.Toolkit.KryptonContextMenuItem();
+            this.kryptonContextMenuItem4 = new Krypton.Toolkit.KryptonContextMenuItem();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblCuota = new System.Windows.Forms.Label();
             this.kryptonLabel14 = new Krypton.Toolkit.KryptonLabel();
@@ -216,19 +219,19 @@
             this.dgvSecuencial.AllowUserToAddRows = false;
             this.dgvSecuencial.AllowUserToDeleteRows = false;
             this.dgvSecuencial.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvSecuencial.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvSecuencial.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvSecuencial.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.dgvSecuencial.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSecuencial.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSecuencial.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSecuencial.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvSecuencial.GridColor = System.Drawing.SystemColors.Control;
             this.dgvSecuencial.Location = new System.Drawing.Point(12, 131);
             this.dgvSecuencial.MultiSelect = false;
@@ -611,7 +614,7 @@
             this.kryptonNavigator1.Header.HeaderStyleSecondary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary;
             this.kryptonNavigator1.Location = new System.Drawing.Point(2, 3);
             this.kryptonNavigator1.Name = "kryptonNavigator1";
-            this.kryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarTabGroup;
+            this.kryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup;
             this.kryptonNavigator1.PageBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient;
             this.kryptonNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
             this.kryptonPage1,
@@ -628,7 +631,7 @@
             // kryptonPage1
             // 
             this.kryptonPage1.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
-            this.kryptonPage1.Controls.Add(this.btnDetalle);
+            this.kryptonPage1.Controls.Add(this.btnExcel);
             this.kryptonPage1.Controls.Add(this.kryptonLabel15);
             this.kryptonPage1.Controls.Add(this.dtpFechaHasta);
             this.kryptonPage1.Controls.Add(this.txtFiltro);
@@ -636,9 +639,6 @@
             this.kryptonPage1.Controls.Add(this.dtpFechaDesde);
             this.kryptonPage1.Controls.Add(this.kryptonLabel16);
             this.kryptonPage1.Controls.Add(this.cbxFiltro);
-            this.kryptonPage1.Controls.Add(this.btnResumen);
-            this.kryptonPage1.Controls.Add(this.btnBodega);
-            this.kryptonPage1.Controls.Add(this.btnOtros);
             this.kryptonPage1.Controls.Add(this.metroTabControl1);
             this.kryptonPage1.Controls.Add(this.kryptonGroupBox1);
             this.kryptonPage1.Controls.Add(this.toolStrip1);
@@ -646,28 +646,11 @@
             this.kryptonPage1.LastVisibleSet = true;
             this.kryptonPage1.MinimumSize = new System.Drawing.Size(50, 50);
             this.kryptonPage1.Name = "kryptonPage1";
-            this.kryptonPage1.Size = new System.Drawing.Size(692, 608);
+            this.kryptonPage1.Size = new System.Drawing.Size(692, 606);
             this.kryptonPage1.Text = "Mantenimiento";
             this.kryptonPage1.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage1.ToolTipTitle = "Page ToolTip";
             this.kryptonPage1.UniqueName = "79F6FF793ED448D9EDBAB550F137FCDF";
-            // 
-            // btnDetalle
-            // 
-            this.btnDetalle.AutoSize = true;
-            this.btnDetalle.Location = new System.Drawing.Point(311, 248);
-            this.btnDetalle.Name = "btnDetalle";
-            this.btnDetalle.Size = new System.Drawing.Size(70, 28);
-            this.btnDetalle.StateCommon.Border.Draw = Krypton.Toolkit.InheritBool.False;
-            this.btnDetalle.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnDetalle.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.btnDetalle.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.btnDetalle.TabIndex = 255;
-            this.btnDetalle.Values.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
-            this.btnDetalle.Values.Text = "Detalle";
-            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click_1);
             // 
             // kryptonLabel15
             // 
@@ -737,57 +720,6 @@
             this.cbxFiltro.Name = "cbxFiltro";
             this.cbxFiltro.Size = new System.Drawing.Size(172, 21);
             this.cbxFiltro.TabIndex = 259;
-            // 
-            // btnResumen
-            // 
-            this.btnResumen.AutoSize = true;
-            this.btnResumen.Location = new System.Drawing.Point(577, 249);
-            this.btnResumen.Name = "btnResumen";
-            this.btnResumen.Size = new System.Drawing.Size(86, 28);
-            this.btnResumen.StateCommon.Border.Draw = Krypton.Toolkit.InheritBool.False;
-            this.btnResumen.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnResumen.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.btnResumen.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.btnResumen.TabIndex = 223;
-            this.btnResumen.Values.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
-            this.btnResumen.Values.Text = "Resumen";
-            this.btnResumen.Click += new System.EventHandler(this.btnResumen_Click);
-            // 
-            // btnBodega
-            // 
-            this.btnBodega.AutoSize = true;
-            this.btnBodega.Location = new System.Drawing.Point(389, 248);
-            this.btnBodega.Name = "btnBodega";
-            this.btnBodega.Size = new System.Drawing.Size(86, 28);
-            this.btnBodega.StateCommon.Border.Draw = Krypton.Toolkit.InheritBool.False;
-            this.btnBodega.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnBodega.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.btnBodega.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.btnBodega.TabIndex = 222;
-            this.btnBodega.Values.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
-            this.btnBodega.Values.Text = "Bodega";
-            this.btnBodega.Click += new System.EventHandler(this.btnBodega_Click);
-            // 
-            // btnOtros
-            // 
-            this.btnOtros.AutoSize = true;
-            this.btnOtros.Location = new System.Drawing.Point(484, 248);
-            this.btnOtros.Name = "btnOtros";
-            this.btnOtros.Size = new System.Drawing.Size(86, 28);
-            this.btnOtros.StateCommon.Border.Draw = Krypton.Toolkit.InheritBool.False;
-            this.btnOtros.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnOtros.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.btnOtros.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.btnOtros.TabIndex = 221;
-            this.btnOtros.Values.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
-            this.btnOtros.Values.Text = "Otros";
-            this.btnOtros.Click += new System.EventHandler(this.btnOtros_Click);
             // 
             // metroTabControl1
             // 
@@ -1181,8 +1113,8 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(235)))), ((int)(((byte)(247)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
@@ -1215,9 +1147,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 8.25F);
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Roboto", 8.25F);
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 8.25F);
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(663, 318);
@@ -1395,6 +1327,53 @@
             this.kryptonGroupBox1.Size = new System.Drawing.Size(675, 172);
             this.kryptonGroupBox1.TabIndex = 216;
             this.kryptonGroupBox1.Values.Heading = "Datos Personal";
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.AutoSize = true;
+            this.btnExcel.ButtonStyle = Krypton.Toolkit.ButtonStyle.Alternate;
+            this.btnExcel.KryptonContextMenu = this.kmcExcelMenu;
+            this.btnExcel.Location = new System.Drawing.Point(346, 246);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(90, 28);
+            this.btnExcel.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.btnExcel.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnExcel.StateCommon.Border.Rounding = 1F;
+            this.btnExcel.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.btnExcel.TabIndex = 220;
+            this.btnExcel.Values.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
+            this.btnExcel.Values.Text = "Excel";
+            // 
+            // kmcExcelMenu
+            // 
+            this.kmcExcelMenu.Items.AddRange(new Krypton.Toolkit.KryptonContextMenuItemBase[] {
+            this.kryptonContextMenuItems1});
+            // 
+            // kryptonContextMenuItems1
+            // 
+            this.kryptonContextMenuItems1.Items.AddRange(new Krypton.Toolkit.KryptonContextMenuItemBase[] {
+            this.kryptonContextMenuItem1,
+            this.kryptonContextMenuItem2,
+            this.kryptonContextMenuItem3,
+            this.kryptonContextMenuItem4});
+            // 
+            // kryptonContextMenuItem1
+            // 
+            this.kryptonContextMenuItem1.Text = "Detalle";
+            // 
+            // kryptonContextMenuItem2
+            // 
+            this.kryptonContextMenuItem2.Text = "Bodega";
+            // 
+            // kryptonContextMenuItem3
+            // 
+            this.kryptonContextMenuItem3.Text = "Otros";
+            // 
+            // kryptonContextMenuItem4
+            // 
+            this.kryptonContextMenuItem4.Text = "Resumen";
             // 
             // textBox2
             // 
@@ -1649,7 +1628,7 @@
             this.kryptonPage2.LastVisibleSet = true;
             this.kryptonPage2.MinimumSize = new System.Drawing.Size(50, 50);
             this.kryptonPage2.Name = "kryptonPage2";
-            this.kryptonPage2.Size = new System.Drawing.Size(692, 608);
+            this.kryptonPage2.Size = new System.Drawing.Size(692, 606);
             this.kryptonPage2.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.kryptonPage2.StateCommon.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPage2.Text = "Personal Retirado";
@@ -1689,7 +1668,7 @@
             this.kryptonPage3.LastVisibleSet = true;
             this.kryptonPage3.MinimumSize = new System.Drawing.Size(50, 50);
             this.kryptonPage3.Name = "kryptonPage3";
-            this.kryptonPage3.Size = new System.Drawing.Size(692, 608);
+            this.kryptonPage3.Size = new System.Drawing.Size(692, 606);
             this.kryptonPage3.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.kryptonPage3.StateCommon.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPage3.Text = "Detalles Descuento Bodega";
@@ -1894,9 +1873,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
-        private Krypton.Toolkit.KryptonButton btnResumen;
-        private Krypton.Toolkit.KryptonButton btnBodega;
-        private Krypton.Toolkit.KryptonButton btnOtros;
         private System.Windows.Forms.Label lblCuota;
         private Krypton.Toolkit.KryptonLabel kryptonLabel14;
         private Krypton.Toolkit.KryptonLabel Label6;
@@ -1919,7 +1895,6 @@
         internal System.Windows.Forms.TextBox txtValor;
         internal System.Windows.Forms.ComboBox cbxEstado;
         private System.Windows.Forms.TextBox textBox2;
-        private Krypton.Toolkit.KryptonButton btnDetalle;
         private Krypton.Toolkit.KryptonLabel kryptonLabel15;
         internal System.Windows.Forms.DateTimePicker dtpFechaHasta;
         internal System.Windows.Forms.TextBox txtFiltro;
@@ -1933,5 +1908,12 @@
         private Krypton.Toolkit.KryptonLabel kryptonLabel20;
         private Krypton.Toolkit.KryptonLabel kryptonLabel19;
         private Krypton.Toolkit.KryptonLabel label16;
+        private Krypton.Toolkit.KryptonDropButton btnExcel;
+        private Krypton.Toolkit.KryptonContextMenu kmcExcelMenu;
+        private Krypton.Toolkit.KryptonContextMenuItems kryptonContextMenuItems1;
+        private Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem1;
+        private Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem2;
+        private Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem3;
+        private Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem4;
     }
 }

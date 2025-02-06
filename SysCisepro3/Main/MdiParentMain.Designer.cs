@@ -381,7 +381,6 @@
             this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
-            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tslLogo,
             this.tsAdministracion,
@@ -2112,7 +2111,8 @@
             // 
             // cOMPARATIVOToolStripMenuItem
             // 
-           
+            this.cOMPARATIVOToolStripMenuItem.Name = "cOMPARATIVOToolStripMenuItem";
+            this.cOMPARATIVOToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             // 
             // bALANCEFINALToolStripMenuItem
             // 

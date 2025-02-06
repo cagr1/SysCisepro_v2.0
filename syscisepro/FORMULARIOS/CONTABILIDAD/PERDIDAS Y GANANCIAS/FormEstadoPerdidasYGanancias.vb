@@ -5,6 +5,8 @@ Imports syscisepro.DATOS
 Imports Krypton.Toolkit
 Imports ClosedXML.Excel
 Imports System.IO
+Imports ComponentFactory.Krypton.Toolkit
+
 
 Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
     ''' <summary>
@@ -175,7 +177,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
 
-                    KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    Krypton.Toolkit.KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -269,157 +271,12 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             Try
                 Dim fec = ValidationForms.FechaActual(_tipoCon)
 
-                'Dim app = New Microsoft.Office.Interop.Excel.Application()
-                'Dim workbook = app.Workbooks.Add(Type.Missing)
-                'Dim worksheet = workbook.Worksheets(1)
-                'worksheet.Name = "BALANCE_PYG"
 
-                'Dim ic = ValidationForms.NumToCharExcelFromVisibleColumnsDataGrid(dgvIngresos)
-                'worksheet.Range("A1:" & ic & (dgvIngresos.RowCount + dgvEgresos.RowCount + 50)).Font.Size = 10
-
-                'worksheet.Range("A1:" & ic & "1").Merge()
-                'worksheet.Range("A1:" & ic & "1").Value = ValidationForms.NombreCompany(_tipoCon) & "  -  " & titulo
-                'worksheet.Range("A1:" & ic & "1").Font.Bold = True
-                'worksheet.Range("A1:" & ic & "1").Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                'worksheet.Range("A1:" & ic & "1").Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                'worksheet.Range("A1:" & ic & "1").Font.Color = Color.White
-                'worksheet.Range("A1:" & ic & "1").Font.Size = 12
-                ''Copete  
-                'worksheet.Range("A2:" & ic & "2").Merge()
-                'worksheet.Range("A2:" & ic & "2").Value = "PERÍODO: " & dtpFechaDesde.Value.ToLongDateString() & "  AL " & dtpFechaHasta.Value.ToLongDateString()
-                'worksheet.Range("A2:" & ic & "2").Font.Size = 12
-                ''Fecha  
-                'worksheet.Range("A3:" & ic & "3").Merge()
-                'worksheet.Range("A3:" & ic & "3").Value = "Fecha de Reporte: " & fec.ToLongDateString() & " " & fec.ToLongTimeString()
-                'worksheet.Range("A3:" & ic & "3").Font.Size = 12
-
-                ''Aca se ingresa las columnas
-                'Dim indc = 1
-                'Dim headin = 5
-                'For i = 0 To dgvIngresos.Columns.Count - 1
-                '    If Not dgvIngresos.Columns(i).Visible Then Continue For
-                '    worksheet.Cells(headin, indc) = dgvIngresos.Columns(i).HeaderText
-                '    worksheet.Cells(headin, indc).Font.Bold = True
-                '    worksheet.Cells(headin, indc).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
-                '    worksheet.Cells(headin, indc).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                '    worksheet.Cells(headin, indc).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                '    worksheet.Cells(headin, indc).Font.Color = Color.White
-                '    indc += 1
-                'Next
-
-                ''Aca se ingresa el detalle recorrera la tabla celda por celda
-                'Dim c = headin + 1
-                'For o = 0 To dgvIngresos.Rows.Count - 1
-                '    If Not dgvIngresos.Rows(o).Visible Then Continue For
-                '    indc = 1
-                '    For j = 0 To dgvIngresos.Columns.Count - 1
-                '        If Not dgvIngresos.Columns(j).Visible Then Continue For
-                '        worksheet.Cells(c, indc) = dgvIngresos.Rows(o).Cells(j).Value
-                '        worksheet.Cells(c, indc).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
-                '        worksheet.Cells(c, indc).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
-                '        indc += 1
-                '    Next
-                '    c += 1
-                'Next
-                ''worksheet.Range("A" & (c - 1) & ":" & ic & indc).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
-
-                '' Agregar totales de dgvIngresos (DEBE y HABER)
-                'worksheet.Cells(c, 1).Value = "TOTAL INGRESOS"
-                'worksheet.Cells(c, 1).Font.Bold = True
-                'worksheet.Cells(c, dgvIngresos.Columns("DEBE").Index + 1).Value = txtDeudorIngresos.Text
-                'worksheet.Cells(c, dgvIngresos.Columns("HABER").Index + 1).Value = txtAcreedorIngresos.Text
-
-
-                ''Aca se ingresa las columnas
-                'indc = 1 
-                'c += 1
-                'For i = 0 To dgvEgresos.Columns.Count - 1
-                '    If Not dgvEgresos.Columns(i).Visible Then Continue For
-                '    worksheet.Cells(c, indc) = dgvEgresos.Columns(i).HeaderText
-                '    worksheet.Cells(c, indc).Font.Bold = True
-                '    worksheet.Cells(c, indc).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
-                '    worksheet.Cells(c, indc).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                '    worksheet.Cells(c, indc).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                '    worksheet.Cells(c, indc).Font.Color = Color.White
-                '    indc += 1
-                'Next
-
-                ''Aca se ingresa el detalle recorrera la tabla celda por celda
-                'c += 1
-                'For o = 0 To dgvEgresos.Rows.Count - 1
-                '    If Not dgvEgresos.Rows(o).Visible Then Continue For
-                '    indc = 1
-                '    For j = 0 To dgvEgresos.Columns.Count - 1
-                '        If Not dgvEgresos.Columns(j).Visible Then Continue For
-                '        worksheet.Cells(c, indc) = dgvEgresos.Rows(o).Cells(j).Value
-                '        worksheet.Cells(c, indc).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
-                '        worksheet.Cells(c, indc).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
-                '        indc += 1
-                '    Next
-                '    c += 1
-                'Next
-                ''worksheet.Range("A" & (c - 1) & ":" & ic & indc).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
-
-                '' Agregar totales de dgvEgresos (DEBE y HABER)
-                'worksheet.Cells(c, 1).Value = "TOTAL EGRESOS"
-                'worksheet.Cells(c, 1).Font.Bold = True
-                'worksheet.Cells(c, dgvEgresos.Columns("DEBE").Index + 1).Value = txtDeudorEgresos.Text
-                'worksheet.Cells(c, dgvEgresos.Columns("HABER").Index + 1).Value = txtAcreedorEgresos.Text
-
-                '' Ajustar columnas
-                'worksheet.Range("A1:" & ic & (dgvIngresos.RowCount + dgvEgresos.RowCount + 50)).Columns.AutoFit()
-
-
-
-                'Dim dei = txtDeudorIngresos.Text
-                'Dim aci = txtAcreedorIngresos.Text
-                'Dim toi = txtIngresos.Text
-
-                'Dim deg = txtDeudorEgresos.Text
-                'Dim acg = txtAcreedorEgresos.Text
-                'Dim tog = txtEgresos.Text
-
-                '' TOTALES, ETC
-                'Dim foot = c + 2
-                'worksheet.Cells(foot, 7).Value = "TOTAL INGRESOS DEUDOR"
-                'worksheet.Cells(foot, 7).Font.Bold = True
-                'worksheet.Cells(foot, 8).Value = dei
-
-                'worksheet.Cells(foot + 1, 7).Value = "TOTAL INGRESOS ACREEDOR"
-                'worksheet.Cells(foot + 1, 7).Font.Bold = True
-                'worksheet.Cells(foot + 1, 8).Value = aci
-
-                'worksheet.Cells(foot + 2, 7).Value = "TOTAL INGRESOS"
-                'worksheet.Cells(foot + 2, 7).Font.Bold = True
-                'worksheet.Cells(foot + 2, 8).Value = toi
-
-                'worksheet.Cells(foot + 4, 7).Value = "TOTAL EGRESOS DEUDOR"
-                'worksheet.Cells(foot + 4, 7).Font.Bold = True
-                'worksheet.Cells(foot + 4, 8).Value = deg
-
-                'worksheet.Cells(foot + 5, 7).Value = "TOTAL EGRESOS ACREEDOR"
-                'worksheet.Cells(foot + 5, 7).Font.Bold = True
-                'worksheet.Cells(foot + 5, 8).Value = acg
-
-                'worksheet.Cells(foot + 6, 7).Value = "TOTAL EGRESOS"
-                'worksheet.Cells(foot + 6, 7).Font.Bold = True
-                'worksheet.Cells(foot + 6, 8).Value = tog
-
-                'worksheet.Cells(foot + 8, 7).Value = "TOTAL REPORTE"
-                'worksheet.Cells(foot + 8, 7).Font.Bold = True
-                'worksheet.Cells(foot + 8, 8).Value = txtTotal.Text
-
-                'worksheet.Range("A1:" & ic & (dgvIngresos.RowCount + dgvEgresos.RowCount + 50)).Columns.AutoFit()
-
-                'app.DisplayAlerts = False
-                'app.Visible = True
-                'app.DisplayAlerts = True
-                'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
 
                 Dim saveFileDialog As New SaveFileDialog With {
                         .Filter = "Excel Files|*.xlsx",
                         .Title = "Guardar Reporte",
-                        .FileName = $"{"EstadoGeneral_PYG_"}_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx"
+                        .FileName = $"{titulo}_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx"
                     }
 
                 If saveFileDialog.ShowDialog() <> DialogResult.OK Then Exit Sub
@@ -450,14 +307,20 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                     ' Exportar DataGridView Egresos
                     row = ExportarDataGridView(worksheet, dgvEgresos, row, "TOTAL EGRESOS", txtDeudorEgresos.Text, txtAcreedorEgresos.Text, txtEgresos.Text)
 
+                    ' Guardar el archivo en una ubicación temporal y abrirlo
+                    Dim tempFilePath As String = Path.Combine(Path.GetTempPath(), saveFileDialog.FileName)
+
                     ' Guardar Archivo
                     workbook.SaveAs(saveFileDialog.FileName)
+
+                    ' Abrir Archivo
+                    Process.Start(saveFileDialog.FileName)
                 End Using
 
-                KryptonMessageBox.Show("Datos exportados correctamente!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Krypton.Toolkit.KryptonMessageBox.Show("Datos exportados correctamente!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Catch ex As Exception
 
-                KryptonMessageBox.Show("Hubo un problema al exportar datos! " & ex.Message.ToString(), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Krypton.Toolkit.KryptonMessageBox.Show("Hubo un problema al exportar datos! " & ex.Message.ToString(), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try 
         End Sub
 
@@ -509,17 +372,17 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             Select Case _tipoCon
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
-                    MenuStrip1.ForeColor = Color.White
+
                     dgvEgresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvIngresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    MenuStrip1.ForeColor = Color.White
+
                     dgvEgresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvIngresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    MenuStrip1.ForeColor = Color.White
+
                     dgvEgresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvIngresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
@@ -528,13 +391,29 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             Me.dgvIngresos.ContextMenuStrip = Me.ContextMenuStripClicDerecho
             Me.dgvEgresos.ContextMenuStrip = Me.ContextMenuStripClicDerechoEgresos
             cbNivel.SelectedIndex = 0
+
+            'make dtpFechaDesdeCom a year ago
+
+            Me.MaximumSize = MdiParent.ClientSize
+            btnCargar.Padding = New Padding(5)
+
+
+
+
+
+            Dim ctxMenu As ComponentFactory.Krypton.Toolkit.KryptonContextMenu = btnExcel.KryptonContextMenu
+
+            If ctxMenu IsNot Nothing Then
+                AsignarEventosMenu(ctxMenu.Items)
+            End If
+
         End Sub
 
-        Private Sub btnBuscarMensual_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscarMensual.Click
+        Private Sub btnBuscarMensual_Click(ByVal sender As System.Object, ByVal e As EventArgs)
             dgvEgresos.DataSource = Nothing
             dgvIngresos.DataSource = Nothing
 
-            cargaIngresosMensual(True)
+            CargaIngresosMensual(True)
             '=== PARA SUMAR LOS TOTALES Y COMPROBAR LAS SUMAS DEL DEBE Y EL HABER =====================================================================================================================================
             Dim deudor As Decimal = 0.0
             Dim acreedor As Decimal = 0.0
@@ -549,7 +428,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 txtAcreedorIngresos.Text = acreedor
             End If
 
-            cargarEgresosMensual(True)
+            CargarEgresosMensual(True)
             '=== PARA SUMAR LOS TOTALES Y COMPROBAR LAS SUMAS DEL DEBE Y EL HABER =====================================================================================================================================
             deudor = 0.0
             acreedor = 0.0
@@ -606,11 +485,11 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         '    'LbCount2.Text = v2 & " REGISTRO(S)"
         'End Sub
 
-        Private Sub btnExportarIngresos_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem1.Click
+        Private Sub btnExportarIngresos_Click(ByVal sender As System.Object, ByVal e As EventArgs)
             ExportarDatosExcel(dgvIngresos, "INGRESOS")
         End Sub
 
-        Private Sub btnExportarEgresos_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem2.Click
+        Private Sub btnExportarEgresos_Click(ByVal sender As System.Object, ByVal e As EventArgs)
             ExportarDatosExcel(dgvEgresos, "EGRESOS")
         End Sub
 
@@ -726,7 +605,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 End If
             Catch ex As Exception
                 'MsgBox(ex.Message.ToString)
-                KryptonMessageBox.Show("ERROR: " & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Krypton.Toolkit.KryptonMessageBox.Show("ERROR: " & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -766,18 +645,18 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 End If
             Catch ex As Exception
                 'MsgBox(ex.Message.ToString)
-                KryptonMessageBox.Show("ERROR: " & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Krypton.Toolkit.KryptonMessageBox.Show("ERROR: " & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
-        Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button1.Click
+        Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As EventArgs)
             If dgvIngresos.Rows.Count = 0 Then
-                KryptonMessageBox.Show("Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                Krypton.Toolkit.KryptonMessageBox.Show("Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             If dgvIngresos.Rows.Count = 0 Then
-                KryptonMessageBox.Show("Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                Krypton.Toolkit.KryptonMessageBox.Show("Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -785,7 +664,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             ExportarDatosExcelDobleGrid(dgvIngresos, dgvEgresos, "ESTADO DE PERDIDAS Y GANANCIAS")
         End Sub
 
-        Private Sub btnReporte_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporte.Click
+        Private Sub btnReporte_Click(ByVal sender As System.Object, ByVal e As EventArgs)
 
             Dim fpg As New FrmReportePerdidasYGanancias("REPORTE_PERDIDAS_GANANCIAS")
 
@@ -928,8 +807,248 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             FiltrarNiveles(cbNivel.SelectedIndex)
         End Sub
 
-        Private Sub MenuStrip1_ItemClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+        Private Sub MenuStrip1_ItemClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolStripItemClickedEventArgs)
 
         End Sub
+
+        Private Sub dtpFechaDesdeMes_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaDesdeMes.ValueChanged
+            Dim nuevoMes As Integer = dtpFechaDesdeMes.Value.Month
+            Dim nuevoAnio As Integer = dtpFechaDesdeMes.Value.Year
+            dtpFechaHastaMes.Value = New DateTime(nuevoAnio - 1, nuevoMes, 1)
+
+            Dim mes1 As Integer = dtpFechaDesdeMes.Value.Month
+            Dim anio1 As Integer = dtpFechaDesdeMes.Value.Year
+            Dim mes2 As Integer = dtpFechaHastaMes.Value.Month
+            Dim anio2 As Integer = dtpFechaHastaMes.Value.Year
+
+            CargaIngresosMensualComparativo(mes1, anio1, mes2, anio2)
+
+        End Sub
+
+
+
+        Private Sub chbxMensual_CheckedChanged(sender As Object, e As EventArgs)
+            dtpFechaDesdeMes.Enabled = True
+            dtpFechaHastaMes.Enabled = True
+
+        End Sub
+
+        Private Sub chkbxAnual_CheckedChanged(sender As Object, e As EventArgs)
+            dtpFechaDesdeMes.Enabled = False
+            dtpFechaHastaMes.Enabled = False
+
+        End Sub
+
+        Private Sub CargaIngresosMensualComparativo(ByVal mes1 As Integer, ByVal anio1 As Integer, ByVal mes2 As Integer, ByVal anio2 As Integer)
+
+            dgvComparacion.DataSource = Nothing
+
+
+
+        End Sub
+
+        Private Sub KryptonRibbon1_SelectedTabChanged(sender As Object, e As EventArgs)
+
+        End Sub
+
+
+        Private Sub btnCargar_Click(sender As Object, e As EventArgs) Handles btnCargar.Click
+            dgvEgresos.DataSource = Nothing
+            dgvIngresos.DataSource = Nothing
+
+            CargaIngresosMensual(True)
+            '=== PARA SUMAR LOS TOTALES Y COMPROBAR LAS SUMAS DEL DEBE Y EL HABER =====================================================================================================================================
+            Dim deudor As Decimal = 0.0
+            Dim acreedor As Decimal = 0.0
+            If dgvIngresos.Rows.Count > 0 Then
+                For index = 0 To dgvIngresos.Rows.Count - 1 Step 1
+                    If dgvIngresos.Rows(index).Cells("NIVEL").Value = 1 Then
+                        deudor = deudor + dgvIngresos.Rows(index).Cells("DEBE").Value
+                        acreedor = acreedor + dgvIngresos.Rows(index).Cells("HABER").Value
+                    End If
+                Next
+                txtDeudorIngresos.Text = deudor
+                txtAcreedorIngresos.Text = acreedor
+            End If
+
+            CargarEgresosMensual(True)
+            '=== PARA SUMAR LOS TOTALES Y COMPROBAR LAS SUMAS DEL DEBE Y EL HABER =====================================================================================================================================
+            deudor = 0.0
+            acreedor = 0.0
+            If dgvEgresos.Rows.Count > 0 Then
+                For index = 0 To dgvEgresos.Rows.Count - 1 Step 1
+                    If dgvEgresos.Rows(index).Cells("NIVEL").Value = 1 Then
+                        deudor = deudor + dgvEgresos.Rows(index).Cells("DEBE").Value
+                        acreedor = acreedor + dgvEgresos.Rows(index).Cells("HABER").Value
+                    End If
+                Next
+                txtDeudorEgresos.Text = deudor
+                txtAcreedorEgresos.Text = acreedor
+            End If
+
+            '=== PARA SABER LAS GANANCIAS =============================================================================================================================================================================
+            Dim txdi As Double = If(txtDeudorIngresos.Text.Trim().Length = 0, 0, Convert.ToDouble(txtDeudorIngresos.Text.Trim()))
+            Dim txai As Double = If(txtAcreedorIngresos.Text.Trim().Length = 0, 0, Convert.ToDouble(txtAcreedorIngresos.Text.Trim()))
+            txtIngresos.Text = Math.Round(Math.Abs(txdi - txai), 2)
+
+            Dim txde As Double = If(txtDeudorEgresos.Text.Trim().Length = 0, 0, Convert.ToDouble(txtDeudorEgresos.Text.Trim()))
+            Dim txae As Double = If(txtAcreedorEgresos.Text.Trim().Length = 0, 0, Convert.ToDouble(txtAcreedorEgresos.Text.Trim()))
+            txtEgresos.Text = Math.Round(Math.Abs(txde - txae), 2)
+
+            Dim ti As Double = If(txtIngresos.Text.Trim().Length = 0, 0, Convert.ToDouble(txtIngresos.Text.Trim()))
+            Dim te As Double = If(txtEgresos.Text.Trim().Length = 0, 0, Convert.ToDouble(txtEgresos.Text.Trim()))
+            txtTotal.Text = Math.Round(Math.Abs(ti - te), 2)
+
+            'CantidadReistros()
+            chkTodos.Checked = False
+        End Sub
+
+        Private Sub btnReporteNew_Click(sender As Object, e As EventArgs) Handles btnReporteNew.Click
+            Dim fpg As New FrmReportePerdidasYGanancias("REPORTE_PERDIDAS_GANANCIAS")
+
+            Dim nivel1 As New List(Of Object)
+            Dim nivel2 As New List(Of Object)
+            Dim nivel3 As New List(Of Object)
+
+            ' ingresos capturos elementos para ingresos n1, n2 y n3
+            For Each row As DataGridViewRow In dgvIngresos.Rows
+                Dim element As Object = {row.Cells("CODIGO").Value, row.Cells("CODIGO").Value & " - " & row.Cells("CUENTA").Value, row.Cells("SALDO").Value, row.Cells("PADRE").Value}
+
+                If row.Cells("NIVEL").Value = 1 Then
+                    nivel1.Add(element)
+                End If
+                If row.Cells("NIVEL").Value = 2 Then
+                    nivel2.Add(element)
+                End If
+                If row.Cells("NIVEL").Value = 3 Then
+                    nivel3.Add(element)
+                End If
+            Next
+
+            ' lleno data source reporte
+            Dim tn1 As Double = 0.0
+            Dim tn2 As Double = 0.0
+            Dim tn3 As Double = 0.0
+
+            For i1 = 0 To nivel1.Count - 1 Step 1
+                fpg.Datos.Rows.Add(nivel1(i1)(1), "", 1)
+                tn1 += nivel1(i1)(2)
+                For i2 = 0 To nivel2.Count - 1 Step 1
+                    fpg.Datos.Rows.Add("        " & nivel2(i2)(1), "", 1)
+                    tn2 += nivel2(i2)(2)
+                    For i3 = 0 To nivel3.Count - 1 Step 1
+                        If nivel3(i3)(3) = nivel2(i2)(0) Then
+                            fpg.Datos.Rows.Add("            " & nivel3(i3)(1), nivel3(i3)(2), 0)
+                            tn3 += nivel3(i3)(2)
+                        End If
+                    Next
+                    fpg.Datos.Rows.Add("        TOTAL  " & nivel2(i2)(1), tn2, 2)
+                Next
+                fpg.Datos.Rows.Add("TOTAL  " & nivel1(i1)(1), tn1, 2)
+            Next
+
+            ' egresos capturos elementos para ingresos n1, n2 y n3
+            nivel1.Clear()
+            nivel2.Clear()
+            nivel3.Clear()
+            For Each row As DataGridViewRow In dgvEgresos.Rows
+                Dim element As Object = {row.Cells("CODIGO").Value, row.Cells("CODIGO").Value & " - " & row.Cells("CUENTA").Value, row.Cells("SALDO").Value, row.Cells("PADRE").Value}
+                If row.Cells("NIVEL").Value = 1 Then
+                    nivel1.Add(element)
+                End If
+
+                If row.Cells("NIVEL").Value = 2 Then
+                    nivel2.Add(element)
+                End If
+
+                If row.Cells("NIVEL").Value = 3 Then
+                    nivel3.Add(element)
+                End If
+            Next
+
+            ' fila de espacio
+            fpg.Datos.Rows.Add("", "")
+
+            tn1 = 0
+            tn2 = 0
+            tn3 = 0
+            For i1 = 0 To nivel1.Count - 1 Step 1
+                fpg.Datos.Rows.Add(nivel1(i1)(1), "", 1)
+                tn1 += nivel1(i1)(2)
+                For i2 = 0 To nivel2.Count - 1 Step 1
+                    fpg.Datos.Rows.Add("        " & nivel2(i2)(1), "", 1)
+                    tn2 += nivel2(i2)(2)
+                    For i3 = 0 To nivel3.Count - 1 Step 1
+                        If nivel3(i3)(3) = nivel2(i2)(0) Then
+                            fpg.Datos.Rows.Add("            " & nivel3(i3)(1), nivel3(i3)(2), 0)
+                            tn3 += nivel3(i3)(2)
+                        End If
+                    Next
+                    fpg.Datos.Rows.Add("        TOTAL  " & nivel2(i2)(1), tn2, 2)
+                Next
+                fpg.Datos.Rows.Add("TOTAL  " & nivel1(i1)(1), tn1, 2)
+            Next
+
+            ' final
+            fpg.Datos.Rows.Add("", "")
+            fpg.Datos.Rows.Add("TOTAL  INGRESOS  -  EGRESOS", txtTotal.Text, 1)
+
+            fpg.FInicio = dtpFechaDesde.Value.ToShortDateString & " 00:00:00"
+            fpg.FFin = dtpFechaHasta.Value.ToShortDateString & " 23:59:59"
+            fpg.Footer = "FECHA DE IMPRESIÓN: " & _objEstado.SeleccionarFechaActual(True)
+            fpg.ShowDialog()
+
+        End Sub
+
+        Private Sub kmcExcelMenu_Item_Click(sender As Object, e As EventArgs)
+            Dim item As ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem = TryCast(sender, ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem)
+
+
+
+            Select Case item.Text
+                Case "General"
+                    If dgvIngresos.Rows.Count = 0 Then
+                        Krypton.Toolkit.KryptonMessageBox.Show("Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                        Return
+                    End If
+
+                    If dgvIngresos.Rows.Count = 0 Then
+                        Krypton.Toolkit.KryptonMessageBox.Show("Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                        Return
+                    End If
+
+                    ExportarDatosExcelDobleGrid(dgvIngresos, dgvEgresos, "ESTADO_PyG")
+                Case "Ingresos"
+
+                    ExportarDatosExcel(dgvIngresos, "PyG_INGRESOS")
+
+                Case "Egresos"
+
+                    ExportarDatosExcel(dgvEgresos, "PyG_EGRESOS")
+
+            End Select
+
+        End Sub
+
+        Private Sub AsignarEventosMenu(ByVal items As IEnumerable)
+            For Each obj In items
+                ' Intentamos convertir el objeto a KryptonContextMenuItem
+                Dim menuItem As ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem = TryCast(obj, ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem)
+                If menuItem IsNot Nothing Then
+                    ' Asignamos el evento Click
+                    AddHandler menuItem.Click, AddressOf kmcExcelMenu_Item_Click
+                Else
+                    ' En algunos casos, el objeto puede ser una colección (por ejemplo, KryptonContextMenuItems)
+                    Dim subItems As ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems = TryCast(obj, ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems)
+                    If subItems IsNot Nothing Then
+                        ' Recorremos recursivamente los items de la colección
+                        AsignarEventosMenu(subItems.Items)
+                    End If
+                End If
+            Next
+        End Sub
+
+
+
     End Class
 End Namespace

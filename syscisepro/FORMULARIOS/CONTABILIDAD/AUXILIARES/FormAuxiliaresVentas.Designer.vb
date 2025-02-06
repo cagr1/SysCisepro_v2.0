@@ -394,8 +394,8 @@
             Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.btnExportar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnExportar.Name = "btnExportar"
-            Me.btnExportar.Size = New System.Drawing.Size(142, 28)
-            Me.btnExportar.Text = "EXPORTAR VENTAS"
+            Me.btnExportar.Size = New System.Drawing.Size(84, 28)
+            Me.btnExportar.Text = "VENTAS"
             '
             'ToolStripMenuItem1
             '
@@ -403,8 +403,8 @@
             Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(164, 28)
-            Me.ToolStripMenuItem1.Text = "EXPORTAR RETENCIÓN"
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(106, 28)
+            Me.ToolStripMenuItem1.Text = "RETENCIÓN"
             '
             'ToolStripMenuItem2
             '
@@ -412,8 +412,8 @@
             Me.ToolStripMenuItem2.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.ToolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-            Me.ToolStripMenuItem2.Size = New System.Drawing.Size(147, 28)
-            Me.ToolStripMenuItem2.Text = "EXPORTAR ASIENTO"
+            Me.ToolStripMenuItem2.Size = New System.Drawing.Size(89, 28)
+            Me.ToolStripMenuItem2.Text = "ASIENTO"
             '
             'KryptonNavigator1
             '
@@ -422,6 +422,7 @@
             Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 32)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
+            Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1})
             Me.KryptonNavigator1.SelectedIndex = 0
             Me.KryptonNavigator1.Size = New System.Drawing.Size(736, 641)
@@ -447,7 +448,7 @@
             Me.KryptonPage1.LastVisibleSet = True
             Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage1.Name = "KryptonPage1"
-            Me.KryptonPage1.Size = New System.Drawing.Size(734, 614)
+            Me.KryptonPage1.Size = New System.Drawing.Size(734, 612)
             Me.KryptonPage1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage1.Text = "Comprobantes"
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"

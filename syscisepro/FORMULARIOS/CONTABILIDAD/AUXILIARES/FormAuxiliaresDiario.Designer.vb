@@ -311,7 +311,7 @@
             DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvJornalizacion.RowsDefaultCellStyle = DataGridViewCellStyle4
             Me.dgvJornalizacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvJornalizacion.Size = New System.Drawing.Size(571, 126)
+            Me.dgvJornalizacion.Size = New System.Drawing.Size(571, 124)
             Me.dgvJornalizacion.TabIndex = 232
             '
             'dgvAsientos
@@ -353,7 +353,7 @@
             DataGridViewCellStyle8.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvAsientos.RowsDefaultCellStyle = DataGridViewCellStyle8
             Me.dgvAsientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientos.Size = New System.Drawing.Size(420, 278)
+            Me.dgvAsientos.Size = New System.Drawing.Size(420, 276)
             Me.dgvAsientos.TabIndex = 224
             '
             'dgvDiarios
@@ -470,6 +470,7 @@
             Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 32)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
+            Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1})
             Me.KryptonNavigator1.SelectedIndex = 0
             Me.KryptonNavigator1.Size = New System.Drawing.Size(592, 564)
@@ -500,7 +501,7 @@
             Me.KryptonPage1.LastVisibleSet = True
             Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage1.Name = "KryptonPage1"
-            Me.KryptonPage1.Size = New System.Drawing.Size(590, 537)
+            Me.KryptonPage1.Size = New System.Drawing.Size(590, 535)
             Me.KryptonPage1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage1.Text = "Diario"
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
@@ -519,7 +520,7 @@
             'KryptonGroupBox3.Panel
             '
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.dgvJornalizacion)
-            Me.KryptonGroupBox3.Size = New System.Drawing.Size(575, 150)
+            Me.KryptonGroupBox3.Size = New System.Drawing.Size(575, 148)
             Me.KryptonGroupBox3.TabIndex = 256
             Me.KryptonGroupBox3.Values.Heading = "Jornalizacion"
             '
@@ -576,7 +577,7 @@
             'KryptonGroupBox2.Panel
             '
             Me.KryptonGroupBox2.Panel.Controls.Add(Me.dgvAsientos)
-            Me.KryptonGroupBox2.Size = New System.Drawing.Size(424, 302)
+            Me.KryptonGroupBox2.Size = New System.Drawing.Size(424, 300)
             Me.KryptonGroupBox2.TabIndex = 227
             Me.KryptonGroupBox2.Values.Heading = "Asiento"
             '

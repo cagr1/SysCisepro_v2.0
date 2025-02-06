@@ -359,7 +359,7 @@
             DataGridViewCellStyle8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvAsiento.RowsDefaultCellStyle = DataGridViewCellStyle8
             Me.dgvAsiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsiento.Size = New System.Drawing.Size(813, 244)
+            Me.dgvAsiento.Size = New System.Drawing.Size(813, 242)
             Me.dgvAsiento.TabIndex = 245
             '
             'rbFondo
@@ -458,8 +458,8 @@
             Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(187, 28)
-            Me.ToolStripMenuItem1.Text = "EXPORTAR LIQUIDACIONES"
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(129, 28)
+            Me.ToolStripMenuItem1.Text = "LIQUIDACIONES"
             '
             'ToolStripMenuItem2
             '
@@ -467,8 +467,8 @@
             Me.ToolStripMenuItem2.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.ToolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-            Me.ToolStripMenuItem2.Size = New System.Drawing.Size(147, 28)
-            Me.ToolStripMenuItem2.Text = "EXPORTAR ASIENTO"
+            Me.ToolStripMenuItem2.Size = New System.Drawing.Size(89, 28)
+            Me.ToolStripMenuItem2.Text = "ASIENTO"
             '
             'ToolStripMenuItem3
             '
@@ -476,8 +476,8 @@
             Me.ToolStripMenuItem3.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.ToolStripMenuItem3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-            Me.ToolStripMenuItem3.Size = New System.Drawing.Size(170, 28)
-            Me.ToolStripMenuItem3.Text = "EXPORTAR SOLICITUDES"
+            Me.ToolStripMenuItem3.Size = New System.Drawing.Size(112, 28)
+            Me.ToolStripMenuItem3.Text = "SOLICITUDES"
             '
             'dtpFinal
             '
@@ -504,6 +504,7 @@
             Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 32)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
+            Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
             Me.KryptonNavigator1.SelectedIndex = 0
             Me.KryptonNavigator1.Size = New System.Drawing.Size(837, 528)
@@ -529,7 +530,7 @@
             Me.KryptonPage1.LastVisibleSet = True
             Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage1.Name = "KryptonPage1"
-            Me.KryptonPage1.Size = New System.Drawing.Size(835, 501)
+            Me.KryptonPage1.Size = New System.Drawing.Size(835, 499)
             Me.KryptonPage1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage1.Text = "Fondos"
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
@@ -582,7 +583,7 @@
             'KryptonGroupBox2.Panel
             '
             Me.KryptonGroupBox2.Panel.Controls.Add(Me.dgvAsiento)
-            Me.KryptonGroupBox2.Size = New System.Drawing.Size(817, 272)
+            Me.KryptonGroupBox2.Size = New System.Drawing.Size(817, 270)
             Me.KryptonGroupBox2.TabIndex = 235
             Me.KryptonGroupBox2.Values.Heading = "Asiento"
             '

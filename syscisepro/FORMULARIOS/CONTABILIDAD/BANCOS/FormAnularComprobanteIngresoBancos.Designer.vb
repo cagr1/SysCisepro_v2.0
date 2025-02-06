@@ -63,7 +63,6 @@
             Me.cmbCuentaBancos.BackColor = System.Drawing.Color.White
             Me.cmbCuentaBancos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbCuentaBancos.DropDownWidth = 130
-            Me.cmbCuentaBancos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbCuentaBancos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCuentaBancos.FormattingEnabled = True
             Me.cmbCuentaBancos.Location = New System.Drawing.Point(209, 30)
@@ -76,7 +75,6 @@
             Me.cmbBancos.BackColor = System.Drawing.Color.White
             Me.cmbBancos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbBancos.DropDownWidth = 140
-            Me.cmbBancos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbBancos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbBancos.FormattingEnabled = True
             Me.cmbBancos.Location = New System.Drawing.Point(15, 29)
