@@ -1359,22 +1359,13 @@
             'tbComprobanteIngresoBodega
             '
             Me.tbComprobanteIngresoBodega.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None
-            Me.tbComprobanteIngresoBodega.Button.CloseButtonAction = ComponentFactory.Krypton.Navigator.CloseButtonAction.RemovePageAndDispose
             Me.tbComprobanteIngresoBodega.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide
-            Me.tbComprobanteIngresoBodega.Button.ContextButtonAction = ComponentFactory.Krypton.Navigator.ContextButtonAction.SelectPage
-            Me.tbComprobanteIngresoBodega.Button.ContextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
-            Me.tbComprobanteIngresoBodega.Button.ContextMenuMapImage = ComponentFactory.Krypton.Navigator.MapKryptonPageImage.Small
-            Me.tbComprobanteIngresoBodega.Button.ContextMenuMapText = ComponentFactory.Krypton.Navigator.MapKryptonPageText.TextTitle
-            Me.tbComprobanteIngresoBodega.Button.NextButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
-            Me.tbComprobanteIngresoBodega.Button.NextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
-            Me.tbComprobanteIngresoBodega.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
-            Me.tbComprobanteIngresoBodega.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
             Me.tbComprobanteIngresoBodega.Dock = System.Windows.Forms.DockStyle.Fill
             Me.tbComprobanteIngresoBodega.Location = New System.Drawing.Point(0, 32)
             Me.tbComprobanteIngresoBodega.Name = "tbComprobanteIngresoBodega"
-            Me.tbComprobanteIngresoBodega.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarTabGroup
+            Me.tbComprobanteIngresoBodega.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.tbComprobanteIngresoBodega.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2, Me.KryptonPage3})
-            Me.tbComprobanteIngresoBodega.SelectedIndex = 1
+            Me.tbComprobanteIngresoBodega.SelectedIndex = 0
             Me.tbComprobanteIngresoBodega.Size = New System.Drawing.Size(952, 628)
             Me.tbComprobanteIngresoBodega.TabIndex = 194
             Me.tbComprobanteIngresoBodega.Text = "KryptonNavigator1"
@@ -1388,7 +1379,7 @@
             Me.KryptonPage1.LastVisibleSet = True
             Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage1.Name = "KryptonPage1"
-            Me.KryptonPage1.Size = New System.Drawing.Size(950, 601)
+            Me.KryptonPage1.Size = New System.Drawing.Size(950, 599)
             Me.KryptonPage1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage1.Text = "Registro"
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"

@@ -85,7 +85,7 @@
             Me.cmbParroquia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbParroquia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbParroquia.FormattingEnabled = True
-            Me.cmbParroquia.Location = New System.Drawing.Point(1032, 3)
+            Me.cmbParroquia.Location = New System.Drawing.Point(1032, 8)
             Me.cmbParroquia.Name = "cmbParroquia"
             Me.cmbParroquia.Size = New System.Drawing.Size(175, 21)
             Me.cmbParroquia.TabIndex = 27
@@ -96,7 +96,7 @@
             Me.cmbCanton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbCanton.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCanton.FormattingEnabled = True
-            Me.cmbCanton.Location = New System.Drawing.Point(803, 3)
+            Me.cmbCanton.Location = New System.Drawing.Point(803, 9)
             Me.cmbCanton.Name = "cmbCanton"
             Me.cmbCanton.Size = New System.Drawing.Size(156, 21)
             Me.cmbCanton.TabIndex = 26
@@ -107,7 +107,7 @@
             Me.cmbProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbProvincia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbProvincia.FormattingEnabled = True
-            Me.cmbProvincia.Location = New System.Drawing.Point(571, 5)
+            Me.cmbProvincia.Location = New System.Drawing.Point(571, 10)
             Me.cmbProvincia.Name = "cmbProvincia"
             Me.cmbProvincia.Size = New System.Drawing.Size(167, 21)
             Me.cmbProvincia.TabIndex = 25
@@ -119,7 +119,7 @@
             Me.dgvLiquidacionFondoRotativo.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvLiquidacionFondoRotativo.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvLiquidacionFondoRotativo.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvLiquidacionFondoRotativo.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
             Me.dgvLiquidacionFondoRotativo.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvLiquidacionFondoRotativo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvLiquidacionFondoRotativo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -131,13 +131,13 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvLiquidacionFondoRotativo.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvLiquidacionFondoRotativo.Location = New System.Drawing.Point(2, 49)
+            Me.dgvLiquidacionFondoRotativo.Location = New System.Drawing.Point(2, 81)
             Me.dgvLiquidacionFondoRotativo.Name = "dgvLiquidacionFondoRotativo"
             Me.dgvLiquidacionFondoRotativo.ReadOnly = True
             Me.dgvLiquidacionFondoRotativo.RowHeadersVisible = False
             Me.dgvLiquidacionFondoRotativo.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Roboto", 8.25!)
             Me.dgvLiquidacionFondoRotativo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvLiquidacionFondoRotativo.Size = New System.Drawing.Size(1207, 424)
+            Me.dgvLiquidacionFondoRotativo.Size = New System.Drawing.Size(1207, 415)
             Me.dgvLiquidacionFondoRotativo.TabIndex = 14
             '
             'txtTotalLiquidacion
@@ -169,7 +169,7 @@
             Me.txtIdLiquidacion.BackColor = System.Drawing.Color.White
             Me.txtIdLiquidacion.Enabled = False
             Me.txtIdLiquidacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtIdLiquidacion.Location = New System.Drawing.Point(36, 4)
+            Me.txtIdLiquidacion.Location = New System.Drawing.Point(36, 9)
             Me.txtIdLiquidacion.Name = "txtIdLiquidacion"
             Me.txtIdLiquidacion.ReadOnly = True
             Me.txtIdLiquidacion.Size = New System.Drawing.Size(76, 21)
@@ -278,7 +278,7 @@
             Me.cmbCentroCosto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCentroCosto.FormattingEnabled = True
-            Me.cmbCentroCosto.Location = New System.Drawing.Point(346, 4)
+            Me.cmbCentroCosto.Location = New System.Drawing.Point(345, 8)
             Me.cmbCentroCosto.Name = "cmbCentroCosto"
             Me.cmbCentroCosto.Size = New System.Drawing.Size(154, 21)
             Me.cmbCentroCosto.TabIndex = 28
@@ -297,7 +297,7 @@
             Me.GroupBox1.Controls.Add(Me.txtCantidadGastosFondoRotativo)
             Me.GroupBox1.Controls.Add(Me.txtCantidadFondoRotativo)
             Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(4, 476)
+            Me.GroupBox1.Location = New System.Drawing.Point(4, 502)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(807, 50)
             Me.GroupBox1.TabIndex = 30
@@ -308,7 +308,7 @@
             Me.dtpFechaLiquidacion.CalendarFont = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaLiquidacion.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaLiquidacion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaLiquidacion.Location = New System.Drawing.Point(165, 3)
+            Me.dtpFechaLiquidacion.Location = New System.Drawing.Point(164, 9)
             Me.dtpFechaLiquidacion.Name = "dtpFechaLiquidacion"
             Me.dtpFechaLiquidacion.Size = New System.Drawing.Size(87, 22)
             Me.dtpFechaLiquidacion.TabIndex = 31
@@ -321,7 +321,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1222, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1220, 32)
             Me.MenuStrip1.TabIndex = 188
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -382,14 +382,14 @@
             Me.crvLiquidacion.Location = New System.Drawing.Point(0, 0)
             Me.crvLiquidacion.Name = "crvLiquidacion"
             Me.crvLiquidacion.ShowLogo = False
-            Me.crvLiquidacion.Size = New System.Drawing.Size(1220, 528)
+            Me.crvLiquidacion.Size = New System.Drawing.Size(1220, 558)
             Me.crvLiquidacion.TabIndex = 1
             Me.crvLiquidacion.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             '
             'KryptonGroupBox1
             '
             Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
-            Me.KryptonGroupBox1.Location = New System.Drawing.Point(0, 0)
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(0, 32)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
             'KryptonGroupBox1.Panel
@@ -412,7 +412,7 @@
             '
             'KryptonLabel7
             '
-            Me.KryptonLabel7.Location = New System.Drawing.Point(966, 6)
+            Me.KryptonLabel7.Location = New System.Drawing.Point(965, 11)
             Me.KryptonLabel7.Name = "KryptonLabel7"
             Me.KryptonLabel7.Size = New System.Drawing.Size(63, 20)
             Me.KryptonLabel7.TabIndex = 74
@@ -420,7 +420,7 @@
             '
             'KryptonLabel6
             '
-            Me.KryptonLabel6.Location = New System.Drawing.Point(257, 5)
+            Me.KryptonLabel6.Location = New System.Drawing.Point(257, 9)
             Me.KryptonLabel6.Name = "KryptonLabel6"
             Me.KryptonLabel6.Size = New System.Drawing.Size(82, 20)
             Me.KryptonLabel6.TabIndex = 73
@@ -428,7 +428,7 @@
             '
             'KryptonLabel5
             '
-            Me.KryptonLabel5.Location = New System.Drawing.Point(747, 6)
+            Me.KryptonLabel5.Location = New System.Drawing.Point(747, 11)
             Me.KryptonLabel5.Name = "KryptonLabel5"
             Me.KryptonLabel5.Size = New System.Drawing.Size(50, 20)
             Me.KryptonLabel5.TabIndex = 72
@@ -436,7 +436,7 @@
             '
             'KryptonLabel3
             '
-            Me.KryptonLabel3.Location = New System.Drawing.Point(505, 6)
+            Me.KryptonLabel3.Location = New System.Drawing.Point(505, 11)
             Me.KryptonLabel3.Name = "KryptonLabel3"
             Me.KryptonLabel3.Size = New System.Drawing.Size(60, 20)
             Me.KryptonLabel3.TabIndex = 66
@@ -444,7 +444,7 @@
             '
             'KryptonLabel2
             '
-            Me.KryptonLabel2.Location = New System.Drawing.Point(117, 6)
+            Me.KryptonLabel2.Location = New System.Drawing.Point(116, 10)
             Me.KryptonLabel2.Name = "KryptonLabel2"
             Me.KryptonLabel2.Size = New System.Drawing.Size(42, 20)
             Me.KryptonLabel2.TabIndex = 57
@@ -452,7 +452,7 @@
             '
             'KryptonLabel1
             '
-            Me.KryptonLabel1.Location = New System.Drawing.Point(9, 5)
+            Me.KryptonLabel1.Location = New System.Drawing.Point(3, 9)
             Me.KryptonLabel1.Name = "KryptonLabel1"
             Me.KryptonLabel1.Size = New System.Drawing.Size(21, 20)
             Me.KryptonLabel1.TabIndex = 0
@@ -463,11 +463,14 @@
             Me.TabControl1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None
             Me.TabControl1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide
             Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.TabControl1.Location = New System.Drawing.Point(0, 32)
+            Me.TabControl1.Location = New System.Drawing.Point(0, 0)
             Me.TabControl1.Name = "TabControl1"
+            Me.TabControl1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.TabControl1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
             Me.TabControl1.SelectedIndex = 0
-            Me.TabControl1.Size = New System.Drawing.Size(1222, 555)
+            Me.TabControl1.Size = New System.Drawing.Size(1222, 587)
+            Me.TabControl1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
+            Me.TabControl1.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
             Me.TabControl1.TabIndex = 191
             Me.TabControl1.Text = "KryptonNavigator1"
             '
@@ -475,15 +478,14 @@
             '
             Me.KryptonPage1.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
             Me.KryptonPage1.Controls.Add(Me.GroupBox1)
+            Me.KryptonPage1.Controls.Add(Me.MenuStrip1)
             Me.KryptonPage1.Controls.Add(Me.KryptonGroupBox1)
             Me.KryptonPage1.Controls.Add(Me.dgvLiquidacionFondoRotativo)
             Me.KryptonPage1.Flags = 65534
             Me.KryptonPage1.LastVisibleSet = True
             Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage1.Name = "KryptonPage1"
-            Me.KryptonPage1.Size = New System.Drawing.Size(1220, 528)
-            Me.KryptonPage1.StateCommon.Panel.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.KryptonPage1.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.KryptonPage1.Size = New System.Drawing.Size(1220, 558)
             Me.KryptonPage1.Text = "Liquidacion"
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage1.UniqueName = "6F935103EEFC4EA74B92ACC754567A7E"
@@ -499,14 +501,14 @@
             Me.KryptonPage2.LastVisibleSet = True
             Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage2.Name = "KryptonPage2"
-            Me.KryptonPage2.Size = New System.Drawing.Size(1220, 528)
+            Me.KryptonPage2.Size = New System.Drawing.Size(1220, 558)
             Me.KryptonPage2.Text = "Reporte"
             Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage2.UniqueName = "F082EB6A25914D2AC189495E4ECDFC26"
             '
             'btnReporte
             '
-            Me.btnReporte.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.btnReporte.BackColor = System.Drawing.Color.Transparent
             Me.btnReporte.FlatAppearance.BorderSize = 0
             Me.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
@@ -539,10 +541,9 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(1222, 587)
             Me.Controls.Add(Me.TabControl1)
-            Me.Controls.Add(Me.MenuStrip1)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -567,11 +568,11 @@
             Me.TabControl1.ResumeLayout(False)
             CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonPage1.ResumeLayout(False)
+            Me.KryptonPage1.PerformLayout()
             CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonPage2.ResumeLayout(False)
             Me.KryptonPage2.PerformLayout()
             Me.ResumeLayout(False)
-            Me.PerformLayout()
 
         End Sub
         Friend WithEvents dgvLiquidacionFondoRotativo As System.Windows.Forms.DataGridView

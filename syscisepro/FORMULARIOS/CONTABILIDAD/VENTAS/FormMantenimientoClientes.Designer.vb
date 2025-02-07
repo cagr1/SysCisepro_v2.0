@@ -1692,6 +1692,7 @@
             Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 0)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
+            Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.TabControl1, Me.KryptonPage2, Me.KryptonPage3, Me.KryptonPage4, Me.KryptonPage5, Me.KryptonPage6})
             Me.KryptonNavigator1.SelectedIndex = 0
             Me.KryptonNavigator1.Size = New System.Drawing.Size(680, 696)
@@ -1717,7 +1718,7 @@
             Me.TabControl1.LastVisibleSet = True
             Me.TabControl1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.TabControl1.Name = "TabControl1"
-            Me.TabControl1.Size = New System.Drawing.Size(678, 669)
+            Me.TabControl1.Size = New System.Drawing.Size(678, 667)
             Me.TabControl1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.TabControl1.Text = "Datos"
             Me.TabControl1.ToolTipTitle = "Page ToolTip"

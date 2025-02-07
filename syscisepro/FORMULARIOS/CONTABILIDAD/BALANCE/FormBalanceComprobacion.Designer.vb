@@ -151,7 +151,7 @@
             Me.tvBalanceComprobacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tvBalanceComprobacion.Location = New System.Drawing.Point(0, 0)
             Me.tvBalanceComprobacion.Name = "tvBalanceComprobacion"
-            Me.tvBalanceComprobacion.Size = New System.Drawing.Size(831, 538)
+            Me.tvBalanceComprobacion.Size = New System.Drawing.Size(831, 536)
             Me.tvBalanceComprobacion.TabIndex = 0
             '
             'ContextMenuStripClicDerecho
@@ -308,7 +308,7 @@
             Me.KryptonPage2.LastVisibleSet = True
             Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage2.Name = "KryptonPage2"
-            Me.KryptonPage2.Size = New System.Drawing.Size(831, 538)
+            Me.KryptonPage2.Size = New System.Drawing.Size(831, 536)
             Me.KryptonPage2.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage2.Text = "Arbol"
             Me.KryptonPage2.ToolTipTitle = "Page ToolTip"

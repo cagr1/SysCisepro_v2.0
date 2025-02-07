@@ -110,6 +110,12 @@
             Me.txtSubtotal0FacturaCompra = New System.Windows.Forms.TextBox()
             Me.txtSubTotalComprobanteCompra = New System.Windows.Forms.TextBox()
             Me.dgvAsientosDiario = New System.Windows.Forms.DataGridView()
+            Me.eliminarItem = New System.Windows.Forms.DataGridViewButtonColumn()
+            Me.CODIGO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.CUENTA = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.VALOR = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.IVA = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.PORCENTAJE = New System.Windows.Forms.DataGridViewComboBoxColumn()
             Me.txtTotalComprobanteCompra = New System.Windows.Forms.TextBox()
             Me.txtSubtotal12FacturaCompra = New System.Windows.Forms.TextBox()
             Me.txtIvaComprobanteCompra = New System.Windows.Forms.TextBox()
@@ -153,12 +159,6 @@
             Me.cbxPtoEmision = New Krypton.Toolkit.KryptonComboBox()
             Me.KryptonGroupBox6 = New Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonGroupBox7 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.eliminarItem = New System.Windows.Forms.DataGridViewButtonColumn()
-            Me.CODIGO = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.CUENTA = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.VALOR = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.IVA = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.PORCENTAJE = New System.Windows.Forms.DataGridViewComboBoxColumn()
             CType(Me.dgvDetalleComprobanteRetencion, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.GroupBox2.SuspendLayout()
             Me.gbConceptoCompra.SuspendLayout()
@@ -1059,6 +1059,58 @@
             Me.dgvAsientosDiario.Size = New System.Drawing.Size(545, 183)
             Me.dgvAsientosDiario.TabIndex = 139
             '
+            'eliminarItem
+            '
+            DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle14.BackColor = System.Drawing.Color.DarkRed
+            DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
+            DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+            DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White
+            Me.eliminarItem.DefaultCellStyle = DataGridViewCellStyle14
+            Me.eliminarItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.eliminarItem.HeaderText = "Supr"
+            Me.eliminarItem.Name = "eliminarItem"
+            Me.eliminarItem.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.eliminarItem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+            Me.eliminarItem.Text = "(X)"
+            Me.eliminarItem.ToolTipText = "Eliminar Fila"
+            Me.eliminarItem.UseColumnTextForButtonValue = True
+            Me.eliminarItem.Width = 40
+            '
+            'CODIGO
+            '
+            Me.CODIGO.HeaderText = "Codigo"
+            Me.CODIGO.Name = "CODIGO"
+            Me.CODIGO.Width = 95
+            '
+            'CUENTA
+            '
+            DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.CUENTA.DefaultCellStyle = DataGridViewCellStyle15
+            Me.CUENTA.HeaderText = "Cuenta"
+            Me.CUENTA.Name = "CUENTA"
+            Me.CUENTA.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.CUENTA.Width = 225
+            '
+            'VALOR
+            '
+            Me.VALOR.HeaderText = "Valor"
+            Me.VALOR.Name = "VALOR"
+            Me.VALOR.Width = 80
+            '
+            'IVA
+            '
+            Me.IVA.HeaderText = "IVA"
+            Me.IVA.Name = "IVA"
+            Me.IVA.Width = 35
+            '
+            'PORCENTAJE
+            '
+            Me.PORCENTAJE.HeaderText = "%"
+            Me.PORCENTAJE.Items.AddRange(New Object() {"0", "5", "8", "12", "15"})
+            Me.PORCENTAJE.Name = "PORCENTAJE"
+            Me.PORCENTAJE.Width = 70
+            '
             'txtTotalComprobanteCompra
             '
             Me.txtTotalComprobanteCompra.BackColor = System.Drawing.Color.White
@@ -1514,58 +1566,6 @@
             Me.KryptonGroupBox7.Size = New System.Drawing.Size(263, 33)
             Me.KryptonGroupBox7.TabIndex = 159
             Me.KryptonGroupBox7.Values.Heading = ""
-            '
-            'eliminarItem
-            '
-            DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle14.BackColor = System.Drawing.Color.DarkRed
-            DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
-            DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-            DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White
-            Me.eliminarItem.DefaultCellStyle = DataGridViewCellStyle14
-            Me.eliminarItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.eliminarItem.HeaderText = "Supr"
-            Me.eliminarItem.Name = "eliminarItem"
-            Me.eliminarItem.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.eliminarItem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-            Me.eliminarItem.Text = "(X)"
-            Me.eliminarItem.ToolTipText = "Eliminar Fila"
-            Me.eliminarItem.UseColumnTextForButtonValue = True
-            Me.eliminarItem.Width = 40
-            '
-            'CODIGO
-            '
-            Me.CODIGO.HeaderText = "Codigo"
-            Me.CODIGO.Name = "CODIGO"
-            Me.CODIGO.Width = 95
-            '
-            'CUENTA
-            '
-            DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.CUENTA.DefaultCellStyle = DataGridViewCellStyle15
-            Me.CUENTA.HeaderText = "Cuenta"
-            Me.CUENTA.Name = "CUENTA"
-            Me.CUENTA.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.CUENTA.Width = 225
-            '
-            'VALOR
-            '
-            Me.VALOR.HeaderText = "Valor"
-            Me.VALOR.Name = "VALOR"
-            Me.VALOR.Width = 80
-            '
-            'IVA
-            '
-            Me.IVA.HeaderText = "IVA"
-            Me.IVA.Name = "IVA"
-            Me.IVA.Width = 35
-            '
-            'PORCENTAJE
-            '
-            Me.PORCENTAJE.HeaderText = "%"
-            Me.PORCENTAJE.Items.AddRange(New Object() {"0", "5", "8", "12", "15"})
-            Me.PORCENTAJE.Name = "PORCENTAJE"
-            Me.PORCENTAJE.Width = 70
             '
             'FormRegistroComprobanteCompra
             '

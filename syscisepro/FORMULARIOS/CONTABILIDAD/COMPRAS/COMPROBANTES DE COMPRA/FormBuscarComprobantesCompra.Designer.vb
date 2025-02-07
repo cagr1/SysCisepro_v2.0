@@ -188,7 +188,7 @@
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvComprobantesCompra.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvComprobantesCompra.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvComprobantesCompra.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
             Me.dgvComprobantesCompra.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvComprobantesCompra.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvComprobantesCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -200,7 +200,7 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvComprobantesCompra.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvComprobantesCompra.Location = New System.Drawing.Point(5, 90)
+            Me.dgvComprobantesCompra.Location = New System.Drawing.Point(5, 122)
             Me.dgvComprobantesCompra.MultiSelect = False
             Me.dgvComprobantesCompra.Name = "dgvComprobantesCompra"
             Me.dgvComprobantesCompra.ReadOnly = True
@@ -210,7 +210,7 @@
             Me.dgvComprobantesCompra.RowsDefaultCellStyle = DataGridViewCellStyle3
             Me.dgvComprobantesCompra.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Roboto", 8.25!)
             Me.dgvComprobantesCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobantesCompra.Size = New System.Drawing.Size(1220, 394)
+            Me.dgvComprobantesCompra.Size = New System.Drawing.Size(1220, 420)
             Me.dgvComprobantesCompra.TabIndex = 96
             '
             'rbTodos
@@ -293,7 +293,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1244, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1242, 32)
             Me.MenuStrip1.TabIndex = 183
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -365,7 +365,7 @@
             Me.PDFLIQUIDACIONToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.pdf
             Me.PDFLIQUIDACIONToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.PDFLIQUIDACIONToolStripMenuItem.Name = "PDFLIQUIDACIONToolStripMenuItem"
-            Me.PDFLIQUIDACIONToolStripMenuItem.Size = New System.Drawing.Size(159, 30)
+            Me.PDFLIQUIDACIONToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
             Me.PDFLIQUIDACIONToolStripMenuItem.Text = "LIQUIDACION"
             '
             'PDFRETENCIONToolStripMenuItem
@@ -373,7 +373,7 @@
             Me.PDFRETENCIONToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.pdf
             Me.PDFRETENCIONToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.PDFRETENCIONToolStripMenuItem.Name = "PDFRETENCIONToolStripMenuItem"
-            Me.PDFRETENCIONToolStripMenuItem.Size = New System.Drawing.Size(159, 30)
+            Me.PDFRETENCIONToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
             Me.PDFRETENCIONToolStripMenuItem.Text = "RETENCION"
             '
             'ofdSeleccionarArchivo
@@ -424,18 +424,21 @@
             '
             Me.PdfViewer1.Location = New System.Drawing.Point(-1, 0)
             Me.PdfViewer1.Name = "PdfViewer1"
-            Me.PdfViewer1.Size = New System.Drawing.Size(944, 555)
+            Me.PdfViewer1.Size = New System.Drawing.Size(1240, 555)
             Me.PdfViewer1.TabIndex = 0
             '
             'KryptonNavigator1
             '
             Me.KryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None
             Me.KryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide
-            Me.KryptonNavigator1.Location = New System.Drawing.Point(6, 49)
+            Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 0)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
+            Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2, Me.KryptonPage3})
             Me.KryptonNavigator1.SelectedIndex = 0
-            Me.KryptonNavigator1.Size = New System.Drawing.Size(1238, 584)
+            Me.KryptonNavigator1.Size = New System.Drawing.Size(1244, 645)
+            Me.KryptonNavigator1.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
             Me.KryptonNavigator1.TabIndex = 184
             Me.KryptonNavigator1.Text = "KryptonNavigator1"
             '
@@ -443,14 +446,15 @@
             '
             Me.KryptonPage1.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
             Me.KryptonPage1.Controls.Add(Me.KryptonGroupBox3)
+            Me.KryptonPage1.Controls.Add(Me.MenuStrip1)
             Me.KryptonPage1.Controls.Add(Me.dgvComprobantesCompra)
             Me.KryptonPage1.Controls.Add(Me.KryptonGroupBox1)
             Me.KryptonPage1.Flags = 65534
             Me.KryptonPage1.LastVisibleSet = True
             Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage1.Name = "KryptonPage1"
-            Me.KryptonPage1.Size = New System.Drawing.Size(1236, 557)
-            Me.KryptonPage1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.KryptonPage1.Size = New System.Drawing.Size(1242, 616)
+            Me.KryptonPage1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
             Me.KryptonPage1.Text = "Consultas"
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage1.UniqueName = "60A89A382CC14AB266BE4180ACB5260B"
@@ -459,7 +463,7 @@
             '
             Me.KryptonGroupBox3.CaptionOverlap = 0R
             Me.KryptonGroupBox3.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
-            Me.KryptonGroupBox3.Location = New System.Drawing.Point(11, 490)
+            Me.KryptonGroupBox3.Location = New System.Drawing.Point(11, 548)
             Me.KryptonGroupBox3.Name = "KryptonGroupBox3"
             '
             'KryptonGroupBox3.Panel
@@ -620,7 +624,7 @@
             '
             Me.KryptonGroupBox1.CaptionOverlap = 0R
             Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
-            Me.KryptonGroupBox1.Location = New System.Drawing.Point(9, 9)
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(5, 35)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
             'KryptonGroupBox1.Panel
@@ -703,8 +707,9 @@
             Me.KryptonPage2.LastVisibleSet = True
             Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage2.Name = "KryptonPage2"
-            Me.KryptonPage2.Size = New System.Drawing.Size(1236, 557)
+            Me.KryptonPage2.Size = New System.Drawing.Size(1242, 616)
             Me.KryptonPage2.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.KryptonPage2.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
             Me.KryptonPage2.Text = "Rutas de Documentos"
             Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage2.UniqueName = "405B3CD29AE442AC3988A040680630DA"
@@ -752,8 +757,9 @@
             Me.KryptonPage3.LastVisibleSet = True
             Me.KryptonPage3.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage3.Name = "KryptonPage3"
-            Me.KryptonPage3.Size = New System.Drawing.Size(1236, 557)
+            Me.KryptonPage3.Size = New System.Drawing.Size(1242, 616)
             Me.KryptonPage3.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.KryptonPage3.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
             Me.KryptonPage3.Text = "Reporte"
             Me.KryptonPage3.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage3.UniqueName = "E7A068A9D4EC4B4A40A25EDDE0DE1F87"
@@ -765,7 +771,6 @@
             Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(1244, 645)
             Me.Controls.Add(Me.KryptonNavigator1)
-            Me.Controls.Add(Me.MenuStrip1)
             Me.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
@@ -784,6 +789,7 @@
             Me.KryptonNavigator1.ResumeLayout(False)
             CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonPage1.ResumeLayout(False)
+            Me.KryptonPage1.PerformLayout()
             CType(Me.KryptonGroupBox3.Panel, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox3.Panel.ResumeLayout(False)
             Me.KryptonGroupBox3.Panel.PerformLayout()
@@ -804,7 +810,6 @@
             CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonPage3.ResumeLayout(False)
             Me.ResumeLayout(False)
-            Me.PerformLayout()
 
         End Sub
         Friend WithEvents txtNombreComercialProveedorGeneral As System.Windows.Forms.TextBox

@@ -211,6 +211,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
                     indc += 1
                 Next
 
+                Dim columnasContable As String() = {"DEBE", "HABER", "SALDO"}
                 ' Detalle de datos
                 Dim c = 0
                 For i = 0 To dgvAsientosDiario.Rows.Count - 1
@@ -222,14 +223,23 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
 
                         ' Verificar si el valor de la celda no es null antes de asignarlo
                         Dim cellValue = dgvAsientosDiario.Rows(i).Cells(j).Value
-                        If cellValue IsNot Nothing Then
-                            worksheet.Cell(c + headin + 1, indc).Value = cellValue.ToString()
+                        Dim cell = worksheet.Cell(i + 1 + headin, indc)
+                        Dim columnName As String = dgvAsientosDiario.Columns(j).HeaderText
+
+
+                        If cellValue IsNot Nothing AndAlso IsNumeric(cellValue) Then
+                            If columnasContable.Contains(columnName) Then
+                                cell.Value = CDbl(cellValue)
+                                cell.Style.NumberFormat.Format = "#,##0.00"
+                            Else
+                                cell.Value = CDbl(cellValue)
+                            End If
                         Else
-                            worksheet.Cell(c + headin + 1, indc).Value = ""
+                            cell.Value = If(cellValue IsNot Nothing, cellValue.ToString(), String.Empty)
                         End If
 
                         ' Establecer bordes
-                        Dim cell = worksheet.Cell(c + headin + 1, indc)
+
                         cell.Style.Border.SetLeftBorder(XLBorderStyleValues.Thin)
                         cell.Style.Border.SetRightBorder(XLBorderStyleValues.Thin)
 

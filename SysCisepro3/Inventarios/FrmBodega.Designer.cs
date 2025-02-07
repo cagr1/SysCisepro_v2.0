@@ -47,12 +47,12 @@
             this.cbmUbicación = new System.Windows.Forms.ComboBox();
             this.tcBodega = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
             this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.crvBodegas = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.msKardex.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBodega)).BeginInit();
@@ -265,16 +265,34 @@
             // tcBodega
             // 
             this.tcBodega.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None;
+            this.tcBodega.Button.CloseButtonAction = ComponentFactory.Krypton.Navigator.CloseButtonAction.RemovePageAndDispose;
             this.tcBodega.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide;
+            this.tcBodega.Button.ContextButtonAction = ComponentFactory.Krypton.Navigator.ContextButtonAction.SelectPage;
+            this.tcBodega.Button.ContextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic;
+            this.tcBodega.Button.ContextMenuMapImage = ComponentFactory.Krypton.Navigator.MapKryptonPageImage.Small;
+            this.tcBodega.Button.ContextMenuMapText = ComponentFactory.Krypton.Navigator.MapKryptonPageText.TextTitle;
+            this.tcBodega.Button.NextButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction;
+            this.tcBodega.Button.NextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic;
+            this.tcBodega.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction;
+            this.tcBodega.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic;
             this.tcBodega.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tcBodega.Group.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient;
+            this.tcBodega.Group.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlClient;
+            this.tcBodega.Header.HeaderStyleBar = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary;
+            this.tcBodega.Header.HeaderStylePrimary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Primary;
+            this.tcBodega.Header.HeaderStyleSecondary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary;
             this.tcBodega.Location = new System.Drawing.Point(0, 0);
             this.tcBodega.Name = "tcBodega";
+            this.tcBodega.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup;
+            this.tcBodega.PageBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient;
             this.tcBodega.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
             this.kryptonPage1,
             this.kryptonPage2});
+            this.tcBodega.Panel.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelClient;
             this.tcBodega.SelectedIndex = 0;
             this.tcBodega.Size = new System.Drawing.Size(927, 475);
             this.tcBodega.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.tcBodega.StateNormal.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.tcBodega.TabIndex = 2;
             this.tcBodega.Text = "kryptonNavigator1";
             // 
@@ -299,10 +317,51 @@
             this.kryptonPage1.LastVisibleSet = true;
             this.kryptonPage1.MinimumSize = new System.Drawing.Size(50, 50);
             this.kryptonPage1.Name = "kryptonPage1";
-            this.kryptonPage1.Size = new System.Drawing.Size(925, 448);
+            this.kryptonPage1.Size = new System.Drawing.Size(925, 446);
             this.kryptonPage1.Text = "Mantenimiento";
+            this.kryptonPage1.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage1.ToolTipTitle = "Page ToolTip";
             this.kryptonPage1.UniqueName = "F8A390BEFCE04F1B408009AB155EA7CA";
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(14, 91);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(58, 20);
+            this.kryptonLabel5.TabIndex = 184;
+            this.kryptonLabel5.Values.Text = "Telefono";
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(446, 65);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(78, 20);
+            this.kryptonLabel4.TabIndex = 183;
+            this.kryptonLabel4.Values.Text = "Observacion";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(446, 39);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(64, 20);
+            this.kryptonLabel3.TabIndex = 182;
+            this.kryptonLabel3.Values.Text = "Ubicacion";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(14, 65);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(59, 20);
+            this.kryptonLabel2.TabIndex = 181;
+            this.kryptonLabel2.Values.Text = "Custodio";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(14, 39);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(56, 20);
+            this.kryptonLabel1.TabIndex = 180;
+            this.kryptonLabel1.Values.Text = "Nombre";
             // 
             // kryptonPage2
             // 
@@ -314,52 +373,14 @@
             this.kryptonPage2.Name = "kryptonPage2";
             this.kryptonPage2.Size = new System.Drawing.Size(949, 209);
             this.kryptonPage2.Text = "Reporte";
+            this.kryptonPage2.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage2.ToolTipTitle = "Page ToolTip";
             this.kryptonPage2.UniqueName = "5F728D65400A4EA2C4A34798F65448A5";
-            // 
-            // kryptonLabel1
-            // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(14, 39);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(56, 20);
-            this.kryptonLabel1.TabIndex = 180;
-            this.kryptonLabel1.Values.Text = "Nombre";
-            // 
-            // kryptonLabel2
-            // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(14, 65);
-            this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(59, 20);
-            this.kryptonLabel2.TabIndex = 181;
-            this.kryptonLabel2.Values.Text = "Custodio";
-            // 
-            // kryptonLabel3
-            // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(446, 39);
-            this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(64, 20);
-            this.kryptonLabel3.TabIndex = 182;
-            this.kryptonLabel3.Values.Text = "Ubicacion";
-            // 
-            // kryptonLabel4
-            // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(446, 65);
-            this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(78, 20);
-            this.kryptonLabel4.TabIndex = 183;
-            this.kryptonLabel4.Values.Text = "Observacion";
-            // 
-            // kryptonLabel5
-            // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(14, 91);
-            this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(58, 20);
-            this.kryptonLabel5.TabIndex = 184;
-            this.kryptonLabel5.Values.Text = "Telefono";
             // 
             // crvBodegas
             // 
             this.crvBodegas.ActiveViewIndex = -1;
+            this.crvBodegas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crvBodegas.Cursor = System.Windows.Forms.Cursors.Default;
             this.crvBodegas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crvBodegas.Location = new System.Drawing.Point(0, 0);

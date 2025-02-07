@@ -409,75 +409,10 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
         Private Sub btnExportar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnExportar.Click
             Try
                 If dgvPlanDeCuentas.Rows.Count = 0 Then
-                    'MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
-                'Dim fec = ValidationForms.FechaActual(_tipoCon)
-
-                'Dim app = New Microsoft.Office.Interop.Excel.Application()
-                'Dim workbook = app.Workbooks.Add(Type.Missing)
-                'Dim worksheet = workbook.Worksheets(1)
-                'worksheet.Name = "PLAN_CUENTAS"
-
-                'Dim ic = ValidationForms.NumToCharExcelFromVisibleColumnsDataGrid(dgvPlanDeCuentas)
-                'worksheet.Range("A1:" & ic & (dgvPlanDeCuentas.RowCount + 50)).Font.Size = 10
-
-                'worksheet.Range("A1:" & ic & "1").Merge()
-                'worksheet.Range("A1:" & ic & "1").Value = ValidationForms.NombreCompany(_tipoCon) & "  -  PLAN DE CUENTAS"
-                'worksheet.Range("A1:" & ic & "1").Font.Bold = True
-                'worksheet.Range("A1:" & ic & "1").Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                'worksheet.Range("A1:" & ic & "1").Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                'worksheet.Range("A1:" & ic & "1").Font.Color = Color.White
-                'worksheet.Range("A1:" & ic & "1").Font.Size = 12
-                ''Copete  
-                'worksheet.Range("A2:" & ic & "2").Merge()
-                'worksheet.Range("A2:" & ic & "2").Value = "PERÍODO: AL " & fec.ToLongDateString()
-                'worksheet.Range("A2:" & ic & "2").Font.Size = 12
-                ''Fecha  
-                'worksheet.Range("A3:" & ic & "3").Merge()
-                'worksheet.Range("A3:" & ic & "3").Value = "Fecha de Reporte: " & fec.ToLongDateString() & " " & fec.ToLongTimeString()
-                'worksheet.Range("A3:" & ic & "3").Font.Size = 12
-
-                ''Aca se ingresa las columnas
-                'Dim indc = 1
-                'Dim headin = 5
-                'For i = 0 To dgvPlanDeCuentas.Columns.Count - 1
-                '    If Not dgvPlanDeCuentas.Columns(i).Visible Then Continue For
-                '    worksheet.Cells(headin, indc) = dgvPlanDeCuentas.Columns(i).HeaderText
-                '    worksheet.Cells(headin, indc).Font.Bold = True
-                '    worksheet.Cells(headin, indc).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
-                '    worksheet.Cells(headin, indc).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                '    worksheet.Cells(headin, indc).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                '    worksheet.Cells(headin, indc).Font.Color = Color.White
-                '    indc += 1
-                'Next
-
-                ''Aca se ingresa el detalle recorrera la tabla celda por celda
-                'For i = 0 To dgvPlanDeCuentas.Rows.Count - 1
-                '    indc = 1
-                '    For j = 0 To dgvPlanDeCuentas.Columns.Count - 1
-
-                '        If Not dgvPlanDeCuentas.Columns(j).Visible Then Continue For
-
-                '        ' asigna valor a celda
-                '        worksheet.Cells(i + 1 + headin, indc) = dgvPlanDeCuentas.Rows(i).Cells(j).Value
-
-                '        ' definir bordes
-                '        worksheet.Cells(i + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
-                '        worksheet.Cells(i + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
-                '        If i = dgvPlanDeCuentas.RowCount - 1 Then worksheet.Cells(i + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
-                '        indc += 1
-                '    Next
-                'Next
-
-                'worksheet.Range("A1:" & ic & (dgvPlanDeCuentas.RowCount + 50)).Columns.AutoFit()
-
-                'app.DisplayAlerts = False
-                'app.Visible = True
-                'app.DisplayAlerts = True
-                'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
 
                 Dim saveFileDialog As New SaveFileDialog()
                 saveFileDialog.Filter = "Archivos de Excel (*.xlsx)|*.xlsx"
@@ -541,10 +476,18 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
                         If Not dgvPlanDeCuentas.Columns(j).Visible Then Continue For
 
                         ' Asignar valor a la celda
-                        worksheet.Cell(i + 1 + headin, indc).Value = dgvPlanDeCuentas.Rows(i).Cells(j).Value.ToString()
-
+                        Dim cellValue = dgvPlanDeCuentas.Rows(i).Cells(j).Value
                         ' Establecer bordes
                         Dim cell = worksheet.Cell(i + 1 + headin, indc)
+
+                        If cellValue IsNot Nothing AndAlso IsNumeric(cellValue) Then
+                            cell.Value = CDbl(cellValue)
+
+                        Else
+                            cell.Value = If(cellValue IsNot Nothing, cellValue.ToString(), String.Empty)
+                        End If
+
+
                         cell.Style.Border.SetLeftBorder(XLBorderStyleValues.Thin)
                         cell.Style.Border.SetRightBorder(XLBorderStyleValues.Thin)
 
@@ -571,8 +514,8 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
 
 
 
-            Catch
-                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Catch ex As Exception
+                KryptonMessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
     End Class

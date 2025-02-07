@@ -122,10 +122,12 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
 
         Private Sub LlenarComboProvincias()
             Try
+                RemoveHandler cmbProvincia.SelectedIndexChanged, AddressOf cmbProvincia_SelectedIndexChanged
                 cmbProvincia.DataSource = _objetoProvincias.SeleccionarTodosLosRegistrosProvincias(_tipoCon)
                 cmbProvincia.DisplayMember = "NOMBRE_PROVINCIAS"
                 cmbProvincia.ValueMember = "ID_PROVINCIAS"
                 If (CType(cmbProvincia.DataSource, DataTable).Rows.Count > 0) Then cmbProvincia.SelectedValue = 7
+                AddHandler cmbProvincia.SelectedIndexChanged, AddressOf cmbProvincia_SelectedIndexChanged
             Catch
                 cmbProvincia.DataSource = Nothing
             End Try
@@ -134,6 +136,33 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
         Private Sub cmbProvincia_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmbProvincia.SelectedIndexChanged
             If cmbProvincia.SelectedValue Is Nothing Or TypeOf cmbProvincia.SelectedValue Is DataRowView Then Return
             LlenarComboCiudad()
+
+
+            Dim selectedValue As Integer = cmbProvincia.SelectedValue
+
+            Select Case selectedValue
+                Case 7 'El Oro
+                    cmbCanton.SelectedValue = 58
+                    cmbParroquia.SelectedValue = 287
+                Case 10 'Guayas
+                    cmbCanton.SelectedValue = 84
+                    cmbParroquia.SelectedValue = 418
+                Case 1 'Cuenca
+                    cmbCanton.SelectedValue = 1
+                    cmbParroquia.SelectedValue = 921
+                Case 19 'Pichincha
+                    cmbCanton.SelectedValue = 185
+                    cmbParroquia.SelectedValue = 736
+                Case 12 'Loja
+                    cmbCanton.SelectedValue = 109
+                    cmbParroquia.SelectedValue = 490
+                Case 24 'Zamora
+                    cmbCanton.SelectedValue = 218
+                    cmbParroquia.SelectedValue = 917
+                Case 22 'Sucumbios
+                    cmbCanton.SelectedValue = 196
+            End Select
+
         End Sub
 
         Private Sub LlenarComboCiudad()
@@ -497,6 +526,10 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
         End Sub
 
         Private Sub btnReporte_Click(sender As Object, e As EventArgs) Handles btnReporte.Click
+
+        End Sub
+
+        Private Sub KryptonPage1_Click(sender As Object, e As EventArgs) Handles KryptonPage1.Click
 
         End Sub
     End Class

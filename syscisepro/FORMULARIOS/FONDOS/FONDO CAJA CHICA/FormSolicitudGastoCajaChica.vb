@@ -442,58 +442,57 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
 
             Select Case selectedValue
                 Case "1" 'caja chica machala
-                    cbmProvincia.SelectedIndex = 2
-                    cbmCanton.SelectedItem = "MACHALA"
-                    cbmParroquia.SelectedItem = "MACHALA"
+                    cbmProvincia.SelectedValue = 7
+                    cbmCanton.SelectedValue = 58
+                    cbmParroquia.SelectedValue = 287
 
                 Case "6" 'caja chica guayaquil
-                    cbmProvincia.Text = cbmProvincia.FindStringExact("GUAYAS")
-                    cbmCanton.SelectedItem = "GUAYAQUIL"
-                    cbmParroquia.SelectedItem = "GUAYAQUIL"
+                    cbmProvincia.SelectedValue = 10
+                    cbmCanton.SelectedValue = 84
+                    cbmParroquia.SelectedValue = 418
 
                 Case "15" 'caja chica lago agrio
-                    cbmProvincia.SelectedItem = "SUCUMBIOS"
-                    cbmCanton.SelectedItem = "LAGO AGRIO"
-                    cbmParroquia.SelectedItem = "LAGO AGRIO"
+                    cbmProvincia.SelectedValue = 22
+                    cbmCanton.SelectedValue = 196
 
                 Case "16" 'caja chica lago agrio 2
-                    cbmProvincia.SelectedItem = "SUCUMBIOS"
-                    cbmCanton.SelectedItem = "LAGO AGRIO"
-                    cbmParroquia.SelectedItem = "LAGO AGRIO"
+                    cbmProvincia.SelectedValue = 22
+                    cbmCanton.SelectedValue = 196
+
 
                 Case "11" 'caja chica cuenca
-                    cbmProvincia.SelectedItem = "AZUAY"
-                    cbmCanton.SelectedItem = "CUENCA"
-                    cbmParroquia.SelectedItem = "CUENCA"
+                    cbmProvincia.SelectedValue = 1
+                    cbmCanton.SelectedValue = 1
+                    cbmParroquia.SelectedValue = 921
 
                 Case "14" ' caja chica quito
-                    cbmProvincia.SelectedItem = "PICHINCHA"
-                    cbmCanton.SelectedItem = "QUITO"
+                    cbmProvincia.SelectedValue = 19
+                    cbmCanton.SelectedValue = 185
+                    cbmParroquia.SelectedValue = 736
 
                 Case "10" ' caja chica naranjal
-                    cbmProvincia.SelectedItem = "GUAYAS"
-                    cbmCanton.SelectedItem = "NARANJAL"
-                    cbmParroquia.SelectedItem = "NARANJAL"
+                    cbmProvincia.SelectedValue = 10
+                    cbmCanton.SelectedValue = 87
+
 
                 Case "9" ' caja chica minas
-                    cbmProvincia.SelectedItem = "AZUAY"
-                    cbmCanton.SelectedItem = "CAMILO PONCE ENRIQUEZ"
-                    cbmParroquia.SelectedItem = "CAMILO PONCE ENRIQUEZ"
+                    cbmProvincia.SelectedValue = 1
+
 
                 Case "17" ' caja chica loja
-                    cbmProvincia.SelectedItem = "LOJA"
-                    cbmCanton.SelectedItem = "LOJA"
-                    cbmParroquia.SelectedItem = "LOJA"
+                    cbmProvincia.SelectedValue = 12
+                    cbmCanton.SelectedValue = 109
+                    cbmParroquia.SelectedValue = 490
 
                 Case "8" ' caja chica zamora
-                    cbmProvincia.SelectedItem = "ZAMORA CHINCHIPE"
-                    cbmCanton.SelectedItem = "ZAMORA"
-                    cbmParroquia.SelectedItem = "ZAMORA"
+                    cbmProvincia.SelectedValue = 24
+                    cbmCanton.SelectedValue = 218
+                    cbmParroquia.SelectedValue = 917
 
                 Case "2" ' caja chica zaruma
-                    cbmProvincia.SelectedItem = "EL ORO"
-                    cbmCanton.SelectedItem = "ZARUMA"
-                    cbmParroquia.SelectedItem = "ZARUMA"
+                    cbmProvincia.SelectedValue = 7
+                    cbmCanton.SelectedValue = 64
+                    cbmParroquia.SelectedValue = 327
 
             End Select
 

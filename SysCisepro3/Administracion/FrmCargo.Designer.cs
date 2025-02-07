@@ -28,14 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tcNivelOGrupoOcupacional = new System.Windows.Forms.TabControl();
             this.tpGrupoONivelOcupacional = new System.Windows.Forms.TabPage();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.tpSeries = new System.Windows.Forms.TabPage();
+            this.Label6 = new System.Windows.Forms.Label();
+            this.Label2 = new System.Windows.Forms.Label();
+            this.Label3 = new System.Windows.Forms.Label();
+            this.tpCargos = new System.Windows.Forms.TabPage();
+            this.Label4 = new System.Windows.Forms.Label();
+            this.Label8 = new System.Windows.Forms.Label();
+            this.Label5 = new System.Windows.Forms.Label();
+            this.lblSerieCargo = new System.Windows.Forms.Label();
             this.MenuStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnCargarGerencia = new System.Windows.Forms.ToolStripButton();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
@@ -43,25 +54,20 @@
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnReportes = new System.Windows.Forms.ToolStripButton();
-            this.lblDescripcion = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.dgGrupoOcupacional = new System.Windows.Forms.DataGridView();
-            this.tpSeries = new System.Windows.Forms.TabPage();
             this.MenuStrip2 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.btnNuevaSerie = new System.Windows.Forms.ToolStripMenuItem();
             this.btnGuardarSerie = new System.Windows.Forms.ToolStripMenuItem();
             this.btnModificarSerie = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCancelarSerie = new System.Windows.Forms.ToolStripMenuItem();
-            this.Label6 = new System.Windows.Forms.Label();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.cbmGrupo = new System.Windows.Forms.ComboBox();
-            this.Label2 = new System.Windows.Forms.Label();
-            this.Label3 = new System.Windows.Forms.Label();
             this.txtDescripcionSerie = new System.Windows.Forms.TextBox();
             this.txtCodigoSerie = new System.Windows.Forms.TextBox();
             this.dgSeries = new System.Windows.Forms.DataGridView();
-            this.tpCargos = new System.Windows.Forms.TabPage();
             this.MenuStrip3 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.btnNuevoCargo = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,33 +80,27 @@
             this.txtDescripcionCargo = new System.Windows.Forms.TextBox();
             this.txtCodigoCargo = new System.Windows.Forms.TextBox();
             this.dgCargo = new System.Windows.Forms.DataGridView();
-            this.Label4 = new System.Windows.Forms.Label();
-            this.Label8 = new System.Windows.Forms.Label();
-            this.Label5 = new System.Windows.Forms.Label();
-            this.lblSerieCargo = new System.Windows.Forms.Label();
             this.kryptonNavigator1 = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
             this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.kryptonPage3 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonPage3 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.tcNivelOGrupoOcupacional.SuspendLayout();
             this.tpGrupoONivelOcupacional.SuspendLayout();
+            this.tpSeries.SuspendLayout();
+            this.tpCargos.SuspendLayout();
             this.MenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgGrupoOcupacional)).BeginInit();
-            this.tpSeries.SuspendLayout();
             this.MenuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgSeries)).BeginInit();
-            this.tpCargos.SuspendLayout();
             this.MenuStrip3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCargo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
@@ -132,9 +132,117 @@
             this.tpGrupoONivelOcupacional.Location = new System.Drawing.Point(4, 22);
             this.tpGrupoONivelOcupacional.Name = "tpGrupoONivelOcupacional";
             this.tpGrupoONivelOcupacional.Padding = new System.Windows.Forms.Padding(3);
-            this.tpGrupoONivelOcupacional.Size = new System.Drawing.Size(394, 333);
+            this.tpGrupoONivelOcupacional.Size = new System.Drawing.Size(123, 50);
             this.tpGrupoONivelOcupacional.TabIndex = 0;
             this.tpGrupoONivelOcupacional.Text = "A. GRUPO OCUPACIONAL";
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Location = new System.Drawing.Point(200, 37);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(80, 13);
+            this.lblDescripcion.TabIndex = 48;
+            this.lblDescripcion.Text = "DESCRIPCIÓN:";
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(46, 37);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(21, 13);
+            this.lblCodigo.TabIndex = 47;
+            this.lblCodigo.Text = "ID:";
+            // 
+            // tpSeries
+            // 
+            this.tpSeries.BackColor = System.Drawing.Color.White;
+            this.tpSeries.Controls.Add(this.Label6);
+            this.tpSeries.Controls.Add(this.Label2);
+            this.tpSeries.Controls.Add(this.Label3);
+            this.tpSeries.Location = new System.Drawing.Point(4, 22);
+            this.tpSeries.Name = "tpSeries";
+            this.tpSeries.Padding = new System.Windows.Forms.Padding(3);
+            this.tpSeries.Size = new System.Drawing.Size(123, 50);
+            this.tpSeries.TabIndex = 1;
+            this.tpSeries.Text = "B. SERIES";
+            // 
+            // Label6
+            // 
+            this.Label6.AutoSize = true;
+            this.Label6.Location = new System.Drawing.Point(516, 44);
+            this.Label6.Name = "Label6";
+            this.Label6.Size = new System.Drawing.Size(48, 13);
+            this.Label6.TabIndex = 57;
+            this.Label6.Text = "GRUPO:";
+            // 
+            // Label2
+            // 
+            this.Label2.AutoSize = true;
+            this.Label2.Location = new System.Drawing.Point(130, 44);
+            this.Label2.Name = "Label2";
+            this.Label2.Size = new System.Drawing.Size(80, 13);
+            this.Label2.TabIndex = 55;
+            this.Label2.Text = "DESCRIPCIÓN:";
+            // 
+            // Label3
+            // 
+            this.Label3.AutoSize = true;
+            this.Label3.Location = new System.Drawing.Point(5, 44);
+            this.Label3.Name = "Label3";
+            this.Label3.Size = new System.Drawing.Size(21, 13);
+            this.Label3.TabIndex = 54;
+            this.Label3.Text = "ID:";
+            // 
+            // tpCargos
+            // 
+            this.tpCargos.BackColor = System.Drawing.Color.White;
+            this.tpCargos.Controls.Add(this.Label4);
+            this.tpCargos.Controls.Add(this.Label8);
+            this.tpCargos.Controls.Add(this.Label5);
+            this.tpCargos.Controls.Add(this.lblSerieCargo);
+            this.tpCargos.Location = new System.Drawing.Point(4, 22);
+            this.tpCargos.Name = "tpCargos";
+            this.tpCargos.Padding = new System.Windows.Forms.Padding(3);
+            this.tpCargos.Size = new System.Drawing.Size(123, 50);
+            this.tpCargos.TabIndex = 2;
+            this.tpCargos.Text = "C. CARGOS";
+            // 
+            // Label4
+            // 
+            this.Label4.AutoSize = true;
+            this.Label4.Location = new System.Drawing.Point(370, 40);
+            this.Label4.Name = "Label4";
+            this.Label4.Size = new System.Drawing.Size(80, 13);
+            this.Label4.TabIndex = 62;
+            this.Label4.Text = "DESCRIPCIÓN:";
+            // 
+            // Label8
+            // 
+            this.Label8.AutoSize = true;
+            this.Label8.Location = new System.Drawing.Point(641, 41);
+            this.Label8.Name = "Label8";
+            this.Label8.Size = new System.Drawing.Size(52, 13);
+            this.Label8.TabIndex = 68;
+            this.Label8.Text = "SUELDO:";
+            // 
+            // Label5
+            // 
+            this.Label5.AutoSize = true;
+            this.Label5.Location = new System.Drawing.Point(7, 40);
+            this.Label5.Name = "Label5";
+            this.Label5.Size = new System.Drawing.Size(34, 13);
+            this.Label5.TabIndex = 61;
+            this.Label5.Text = "CÓD:";
+            // 
+            // lblSerieCargo
+            // 
+            this.lblSerieCargo.AutoSize = true;
+            this.lblSerieCargo.Location = new System.Drawing.Point(112, 40);
+            this.lblSerieCargo.Name = "lblSerieCargo";
+            this.lblSerieCargo.Size = new System.Drawing.Size(38, 13);
+            this.lblSerieCargo.TabIndex = 65;
+            this.lblSerieCargo.Text = "SERIE:";
             // 
             // MenuStrip1
             // 
@@ -218,24 +326,6 @@
             this.btnReportes.Text = "REPORTE";
             this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(200, 37);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(80, 13);
-            this.lblDescripcion.TabIndex = 48;
-            this.lblDescripcion.Text = "DESCRIPCIÓN:";
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(46, 37);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(21, 13);
-            this.lblCodigo.TabIndex = 47;
-            this.lblCodigo.Text = "ID:";
-            // 
             // txtDescripcion
             // 
             this.txtDescripcion.BackColor = System.Drawing.Color.White;
@@ -263,20 +353,20 @@
             this.dgGrupoOcupacional.AllowUserToAddRows = false;
             this.dgGrupoOcupacional.AllowUserToDeleteRows = false;
             this.dgGrupoOcupacional.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgGrupoOcupacional.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgGrupoOcupacional.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgGrupoOcupacional.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.dgGrupoOcupacional.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgGrupoOcupacional.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgGrupoOcupacional.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgGrupoOcupacional.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgGrupoOcupacional.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgGrupoOcupacional.Location = new System.Drawing.Point(12, 86);
             this.dgGrupoOcupacional.MultiSelect = false;
             this.dgGrupoOcupacional.Name = "dgGrupoOcupacional";
@@ -286,19 +376,6 @@
             this.dgGrupoOcupacional.Size = new System.Drawing.Size(443, 148);
             this.dgGrupoOcupacional.TabIndex = 44;
             this.dgGrupoOcupacional.SelectionChanged += new System.EventHandler(this.dgGrupoOcupacional_SelectionChanged);
-            // 
-            // tpSeries
-            // 
-            this.tpSeries.BackColor = System.Drawing.Color.White;
-            this.tpSeries.Controls.Add(this.Label6);
-            this.tpSeries.Controls.Add(this.Label2);
-            this.tpSeries.Controls.Add(this.Label3);
-            this.tpSeries.Location = new System.Drawing.Point(4, 22);
-            this.tpSeries.Name = "tpSeries";
-            this.tpSeries.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSeries.Size = new System.Drawing.Size(311, 333);
-            this.tpSeries.TabIndex = 1;
-            this.tpSeries.Text = "B. SERIES";
             // 
             // MenuStrip2
             // 
@@ -320,12 +397,22 @@
             this.MenuStrip2.Text = "msIngresoBodega";
             this.MenuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuStrip2_ItemClicked);
             // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(79, 28);
+            this.toolStripButton3.Text = "BUSCAR";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // btnNuevaSerie
             // 
             this.btnNuevaSerie.Image = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
             this.btnNuevaSerie.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnNuevaSerie.Name = "btnNuevaSerie";
-            this.btnNuevaSerie.Size = new System.Drawing.Size(82, 28);
+            this.btnNuevaSerie.Size = new System.Drawing.Size(82, 31);
             this.btnNuevaSerie.Text = "NUEVO";
             this.btnNuevaSerie.Click += new System.EventHandler(this.btnNuevaSerie_Click);
             // 
@@ -335,7 +422,7 @@
             this.btnGuardarSerie.Image = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.btnGuardarSerie.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnGuardarSerie.Name = "btnGuardarSerie";
-            this.btnGuardarSerie.Size = new System.Drawing.Size(97, 28);
+            this.btnGuardarSerie.Size = new System.Drawing.Size(97, 31);
             this.btnGuardarSerie.Text = "GUARDAR";
             this.btnGuardarSerie.Click += new System.EventHandler(this.btnGuardarSerie_Click);
             // 
@@ -345,7 +432,7 @@
             this.btnModificarSerie.Image = global::SysCisepro3.Properties.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.btnModificarSerie.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnModificarSerie.Name = "btnModificarSerie";
-            this.btnModificarSerie.Size = new System.Drawing.Size(112, 28);
+            this.btnModificarSerie.Size = new System.Drawing.Size(112, 31);
             this.btnModificarSerie.Text = "ACTUALIZAR";
             this.btnModificarSerie.Click += new System.EventHandler(this.btnModificarSerie_Click);
             // 
@@ -355,18 +442,18 @@
             this.btnCancelarSerie.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
             this.btnCancelarSerie.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCancelarSerie.Name = "btnCancelarSerie";
-            this.btnCancelarSerie.Size = new System.Drawing.Size(103, 28);
+            this.btnCancelarSerie.Size = new System.Drawing.Size(103, 31);
             this.btnCancelarSerie.Text = "CANCELAR";
             this.btnCancelarSerie.Click += new System.EventHandler(this.btnCancelarSerie_Click);
             // 
-            // Label6
+            // toolStripMenuItem5
             // 
-            this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(516, 44);
-            this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(48, 13);
-            this.Label6.TabIndex = 57;
-            this.Label6.Text = "GRUPO:";
+            this.toolStripMenuItem5.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.toolStripMenuItem5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(90, 31);
+            this.toolStripMenuItem5.Text = "REPORTE";
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.btnReporteSerie_Click);
             // 
             // cbmGrupo
             // 
@@ -379,24 +466,6 @@
             this.cbmGrupo.Name = "cbmGrupo";
             this.cbmGrupo.Size = new System.Drawing.Size(176, 21);
             this.cbmGrupo.TabIndex = 56;
-            // 
-            // Label2
-            // 
-            this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(130, 44);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(80, 13);
-            this.Label2.TabIndex = 55;
-            this.Label2.Text = "DESCRIPCIÓN:";
-            // 
-            // Label3
-            // 
-            this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(5, 44);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(21, 13);
-            this.Label3.TabIndex = 54;
-            this.Label3.Text = "ID:";
             // 
             // txtDescripcionSerie
             // 
@@ -426,20 +495,20 @@
             this.dgSeries.AllowUserToDeleteRows = false;
             this.dgSeries.AllowUserToResizeColumns = false;
             this.dgSeries.AllowUserToResizeRows = false;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgSeries.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgSeries.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgSeries.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.dgSeries.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgSeries.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgSeries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgSeries.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgSeries.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgSeries.Location = new System.Drawing.Point(13, 99);
             this.dgSeries.MultiSelect = false;
             this.dgSeries.Name = "dgSeries";
@@ -449,20 +518,6 @@
             this.dgSeries.Size = new System.Drawing.Size(442, 150);
             this.dgSeries.TabIndex = 51;
             this.dgSeries.SelectionChanged += new System.EventHandler(this.dgSeries_SelectionChanged);
-            // 
-            // tpCargos
-            // 
-            this.tpCargos.BackColor = System.Drawing.Color.White;
-            this.tpCargos.Controls.Add(this.Label4);
-            this.tpCargos.Controls.Add(this.Label8);
-            this.tpCargos.Controls.Add(this.Label5);
-            this.tpCargos.Controls.Add(this.lblSerieCargo);
-            this.tpCargos.Location = new System.Drawing.Point(4, 22);
-            this.tpCargos.Name = "tpCargos";
-            this.tpCargos.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCargos.Size = new System.Drawing.Size(123, 50);
-            this.tpCargos.TabIndex = 2;
-            this.tpCargos.Text = "C. CARGOS";
             // 
             // MenuStrip3
             // 
@@ -497,7 +552,7 @@
             this.btnNuevoCargo.Image = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
             this.btnNuevoCargo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnNuevoCargo.Name = "btnNuevoCargo";
-            this.btnNuevoCargo.Size = new System.Drawing.Size(82, 28);
+            this.btnNuevoCargo.Size = new System.Drawing.Size(82, 31);
             this.btnNuevoCargo.Text = "NUEVO";
             this.btnNuevoCargo.Click += new System.EventHandler(this.btnNuevoCargo_Click);
             // 
@@ -507,7 +562,7 @@
             this.btnGuardarCargo.Image = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.btnGuardarCargo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnGuardarCargo.Name = "btnGuardarCargo";
-            this.btnGuardarCargo.Size = new System.Drawing.Size(97, 28);
+            this.btnGuardarCargo.Size = new System.Drawing.Size(97, 31);
             this.btnGuardarCargo.Text = "GUARDAR";
             this.btnGuardarCargo.Click += new System.EventHandler(this.btnGuardarCargo_Click);
             // 
@@ -517,7 +572,7 @@
             this.btnModificarCargo.Image = global::SysCisepro3.Properties.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.btnModificarCargo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnModificarCargo.Name = "btnModificarCargo";
-            this.btnModificarCargo.Size = new System.Drawing.Size(112, 28);
+            this.btnModificarCargo.Size = new System.Drawing.Size(112, 31);
             this.btnModificarCargo.Text = "ACTUALIZAR";
             this.btnModificarCargo.Click += new System.EventHandler(this.btnModificarCargo_Click);
             // 
@@ -527,7 +582,7 @@
             this.btnCancelarCargo.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
             this.btnCancelarCargo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCancelarCargo.Name = "btnCancelarCargo";
-            this.btnCancelarCargo.Size = new System.Drawing.Size(103, 28);
+            this.btnCancelarCargo.Size = new System.Drawing.Size(103, 31);
             this.btnCancelarCargo.Text = "CANCELAR";
             this.btnCancelarCargo.Click += new System.EventHandler(this.btnCancelarCargo_Click);
             // 
@@ -536,7 +591,7 @@
             this.btnReporteCargo.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.btnReporteCargo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReporteCargo.Name = "btnReporteCargo";
-            this.btnReporteCargo.Size = new System.Drawing.Size(90, 28);
+            this.btnReporteCargo.Size = new System.Drawing.Size(90, 31);
             this.btnReporteCargo.Text = "REPORTE";
             this.btnReporteCargo.Click += new System.EventHandler(this.btnReporteCargo_Click);
             // 
@@ -591,20 +646,20 @@
             this.dgCargo.AllowUserToDeleteRows = false;
             this.dgCargo.AllowUserToResizeColumns = false;
             this.dgCargo.AllowUserToResizeRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgCargo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgCargo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgCargo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.dgCargo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgCargo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgCargo.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgCargo.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgCargo.GridColor = System.Drawing.Color.LightSteelBlue;
             this.dgCargo.Location = new System.Drawing.Point(13, 107);
             this.dgCargo.MultiSelect = false;
@@ -615,42 +670,6 @@
             this.dgCargo.Size = new System.Drawing.Size(454, 154);
             this.dgCargo.TabIndex = 58;
             this.dgCargo.SelectionChanged += new System.EventHandler(this.dgCargo_SelectionChanged);
-            // 
-            // Label4
-            // 
-            this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(370, 40);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(80, 13);
-            this.Label4.TabIndex = 62;
-            this.Label4.Text = "DESCRIPCIÓN:";
-            // 
-            // Label8
-            // 
-            this.Label8.AutoSize = true;
-            this.Label8.Location = new System.Drawing.Point(641, 41);
-            this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(52, 13);
-            this.Label8.TabIndex = 68;
-            this.Label8.Text = "SUELDO:";
-            // 
-            // Label5
-            // 
-            this.Label5.AutoSize = true;
-            this.Label5.Location = new System.Drawing.Point(7, 40);
-            this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(34, 13);
-            this.Label5.TabIndex = 61;
-            this.Label5.Text = "CÓD:";
-            // 
-            // lblSerieCargo
-            // 
-            this.lblSerieCargo.AutoSize = true;
-            this.lblSerieCargo.Location = new System.Drawing.Point(112, 40);
-            this.lblSerieCargo.Name = "lblSerieCargo";
-            this.lblSerieCargo.Size = new System.Drawing.Size(38, 13);
-            this.lblSerieCargo.TabIndex = 65;
-            this.lblSerieCargo.Text = "SERIE:";
             // 
             // kryptonNavigator1
             // 
@@ -672,7 +691,7 @@
             this.kryptonNavigator1.Header.HeaderStyleSecondary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary;
             this.kryptonNavigator1.Location = new System.Drawing.Point(-1, -3);
             this.kryptonNavigator1.Name = "kryptonNavigator1";
-            this.kryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarTabGroup;
+            this.kryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup;
             this.kryptonNavigator1.PageBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient;
             this.kryptonNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
             this.kryptonPage1,
@@ -697,13 +716,29 @@
             this.kryptonPage1.LastVisibleSet = true;
             this.kryptonPage1.MinimumSize = new System.Drawing.Size(50, 50);
             this.kryptonPage1.Name = "kryptonPage1";
-            this.kryptonPage1.Size = new System.Drawing.Size(576, 269);
+            this.kryptonPage1.Size = new System.Drawing.Size(576, 267);
             this.kryptonPage1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.kryptonPage1.StateCommon.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPage1.Text = "Grupo Ocupacional";
             this.kryptonPage1.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage1.ToolTipTitle = "Page ToolTip";
             this.kryptonPage1.UniqueName = "A76B54B8C78343155EB4F5889B43B01B";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(120, 52);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(74, 20);
+            this.kryptonLabel2.TabIndex = 185;
+            this.kryptonLabel2.Values.Text = "Descripcion";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(13, 54);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(22, 20);
+            this.kryptonLabel1.TabIndex = 184;
+            this.kryptonLabel1.Values.Text = "ID";
             // 
             // kryptonPage2
             // 
@@ -727,6 +762,30 @@
             this.kryptonPage2.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage2.ToolTipTitle = "Page ToolTip";
             this.kryptonPage2.UniqueName = "4F178C407EF04D21D883D50450EC4273";
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(120, 69);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(45, 20);
+            this.kryptonLabel5.TabIndex = 188;
+            this.kryptonLabel5.Values.Text = "Grupo";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(118, 42);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(74, 20);
+            this.kryptonLabel3.TabIndex = 187;
+            this.kryptonLabel3.Values.Text = "Descripcion";
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(13, 44);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(22, 20);
+            this.kryptonLabel4.TabIndex = 186;
+            this.kryptonLabel4.Values.Text = "ID";
             // 
             // kryptonPage3
             // 
@@ -753,64 +812,13 @@
             this.kryptonPage3.ToolTipTitle = "Page ToolTip";
             this.kryptonPage3.UniqueName = "27D9A2A52CC141AA72BC25B06034551D";
             // 
-            // kryptonLabel1
+            // kryptonLabel9
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(13, 54);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(22, 20);
-            this.kryptonLabel1.TabIndex = 184;
-            this.kryptonLabel1.Values.Text = "ID";
-            // 
-            // kryptonLabel2
-            // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(120, 52);
-            this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(74, 20);
-            this.kryptonLabel2.TabIndex = 185;
-            this.kryptonLabel2.Values.Text = "Descripcion";
-            // 
-            // kryptonLabel3
-            // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(118, 42);
-            this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(74, 20);
-            this.kryptonLabel3.TabIndex = 187;
-            this.kryptonLabel3.Values.Text = "Descripcion";
-            // 
-            // kryptonLabel4
-            // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(13, 44);
-            this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(22, 20);
-            this.kryptonLabel4.TabIndex = 186;
-            this.kryptonLabel4.Values.Text = "ID";
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(79, 28);
-            this.toolStripButton3.Text = "BUSCAR";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_;
-            this.toolStripMenuItem5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(90, 28);
-            this.toolStripMenuItem5.Text = "REPORTE";
-            this.toolStripMenuItem5.Click += new System.EventHandler(this.btnReporteSerie_Click);
-            // 
-            // kryptonLabel5
-            // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(120, 69);
-            this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(45, 20);
-            this.kryptonLabel5.TabIndex = 188;
-            this.kryptonLabel5.Values.Text = "Grupo";
+            this.kryptonLabel9.Location = new System.Drawing.Point(299, 71);
+            this.kryptonLabel9.Name = "kryptonLabel9";
+            this.kryptonLabel9.Size = new System.Drawing.Size(48, 20);
+            this.kryptonLabel9.TabIndex = 192;
+            this.kryptonLabel9.Values.Text = "Sueldo";
             // 
             // kryptonLabel6
             // 
@@ -836,14 +844,6 @@
             this.kryptonLabel8.TabIndex = 189;
             this.kryptonLabel8.Values.Text = "Codigo";
             // 
-            // kryptonLabel9
-            // 
-            this.kryptonLabel9.Location = new System.Drawing.Point(299, 71);
-            this.kryptonLabel9.Name = "kryptonLabel9";
-            this.kryptonLabel9.Size = new System.Drawing.Size(48, 20);
-            this.kryptonLabel9.TabIndex = 192;
-            this.kryptonLabel9.Values.Text = "Sueldo";
-            // 
             // FrmCargo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -867,16 +867,16 @@
             this.tcNivelOGrupoOcupacional.ResumeLayout(false);
             this.tpGrupoONivelOcupacional.ResumeLayout(false);
             this.tpGrupoONivelOcupacional.PerformLayout();
+            this.tpSeries.ResumeLayout(false);
+            this.tpSeries.PerformLayout();
+            this.tpCargos.ResumeLayout(false);
+            this.tpCargos.PerformLayout();
             this.MenuStrip1.ResumeLayout(false);
             this.MenuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgGrupoOcupacional)).EndInit();
-            this.tpSeries.ResumeLayout(false);
-            this.tpSeries.PerformLayout();
             this.MenuStrip2.ResumeLayout(false);
             this.MenuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgSeries)).EndInit();
-            this.tpCargos.ResumeLayout(false);
-            this.tpCargos.PerformLayout();
             this.MenuStrip3.ResumeLayout(false);
             this.MenuStrip3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCargo)).EndInit();

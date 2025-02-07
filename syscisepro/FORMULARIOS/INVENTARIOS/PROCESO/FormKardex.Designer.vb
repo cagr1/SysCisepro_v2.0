@@ -52,6 +52,8 @@
             Me.KryptonPage1 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.dgvDetalleKardex = New System.Windows.Forms.DataGridView()
             Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.txtSitio = New System.Windows.Forms.TextBox()
+            Me.KryptonLabel13 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel12 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
@@ -66,8 +68,6 @@
             Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.crvKardex = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-            Me.KryptonLabel13 = New Krypton.Toolkit.KryptonLabel()
-            Me.txtSitio = New System.Windows.Forms.TextBox()
             Me.msKardex.SuspendLayout()
             CType(Me.dgvKardex, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -313,6 +313,7 @@
             Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 0)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
+            Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
             Me.KryptonNavigator1.SelectedIndex = 0
             Me.KryptonNavigator1.Size = New System.Drawing.Size(994, 638)
@@ -334,7 +335,7 @@
             Me.KryptonPage1.LastVisibleSet = True
             Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage1.Name = "KryptonPage1"
-            Me.KryptonPage1.Size = New System.Drawing.Size(992, 611)
+            Me.KryptonPage1.Size = New System.Drawing.Size(992, 609)
             Me.KryptonPage1.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage1.Text = "Detalle Item"
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
@@ -398,6 +399,23 @@
             Me.KryptonGroupBox1.Size = New System.Drawing.Size(485, 234)
             Me.KryptonGroupBox1.TabIndex = 197
             Me.KryptonGroupBox1.Values.Heading = "Datos de Comprobante"
+            '
+            'txtSitio
+            '
+            Me.txtSitio.BackColor = System.Drawing.Color.White
+            Me.txtSitio.Enabled = False
+            Me.txtSitio.Location = New System.Drawing.Point(71, 185)
+            Me.txtSitio.Name = "txtSitio"
+            Me.txtSitio.Size = New System.Drawing.Size(388, 22)
+            Me.txtSitio.TabIndex = 210
+            '
+            'KryptonLabel13
+            '
+            Me.KryptonLabel13.Location = New System.Drawing.Point(3, 186)
+            Me.KryptonLabel13.Name = "KryptonLabel13"
+            Me.KryptonLabel13.Size = New System.Drawing.Size(34, 20)
+            Me.KryptonLabel13.TabIndex = 209
+            Me.KryptonLabel13.Values.Text = "Sitio"
             '
             'KryptonLabel12
             '
@@ -519,23 +537,6 @@
             Me.crvKardex.Size = New System.Drawing.Size(992, 611)
             Me.crvKardex.TabIndex = 4
             Me.crvKardex.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
-            '
-            'KryptonLabel13
-            '
-            Me.KryptonLabel13.Location = New System.Drawing.Point(3, 186)
-            Me.KryptonLabel13.Name = "KryptonLabel13"
-            Me.KryptonLabel13.Size = New System.Drawing.Size(34, 20)
-            Me.KryptonLabel13.TabIndex = 209
-            Me.KryptonLabel13.Values.Text = "Sitio"
-            '
-            'txtSitio
-            '
-            Me.txtSitio.BackColor = System.Drawing.Color.White
-            Me.txtSitio.Enabled = False
-            Me.txtSitio.Location = New System.Drawing.Point(71, 185)
-            Me.txtSitio.Name = "txtSitio"
-            Me.txtSitio.Size = New System.Drawing.Size(388, 22)
-            Me.txtSitio.TabIndex = 210
             '
             'FormKardex
             '

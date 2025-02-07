@@ -174,97 +174,143 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         End Sub
 
         Private Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
+
+
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-
                     Krypton.Toolkit.KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
                 Dim fec = ValidationForms.FechaActual(_tipoCon)
 
-                Dim app = New Microsoft.Office.Interop.Excel.Application()
-                Dim workbook = app.Workbooks.Add(Type.Missing)
-                Dim worksheet = workbook.Worksheets(1)
-                worksheet.Name = "BALANCE_PYG"
+                ' Crear un nuevo libro de trabajo y una hoja
+                Dim workbook = New XLWorkbook()
+                Dim worksheet = workbook.Worksheets.Add("BALANCE_PYG")
 
                 Dim ic = ValidationForms.NumToCharExcelFromVisibleColumnsDataGrid(dgvAsientosDiario)
-                worksheet.Range("A1:" & ic & (dgvAsientosDiario.RowCount + 50)).Font.Size = 10
+                worksheet.Range("A1:" & ic & (dgvAsientosDiario.RowCount + 50)).Style.Font.FontSize = 10
 
+                ' Título
                 worksheet.Range("A1:" & ic & "1").Merge()
-                worksheet.Range("A1:" & ic & "1").Value = ValidationForms.NombreCompany(_tipoCon) & "  -  " & titulo
-                worksheet.Range("A1:" & ic & "1").Font.Bold = True
-                worksheet.Range("A1:" & ic & "1").Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                worksheet.Range("A1:" & ic & "1").Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                worksheet.Range("A1:" & ic & "1").Font.Color = Color.White
-                worksheet.Range("A1:" & ic & "1").Font.Size = 12
-                'Copete  
+                worksheet.Range("A1:" & ic & "1").Value = ValidationForms.NombreCompany(_tipoCon).ToString() & "  -  " & titulo
+                worksheet.Range("A1:" & ic & "1").Style.Font.Bold = True
+                worksheet.Range("A1:" & ic & "1").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center
+                worksheet.Range("A1:" & ic & "1").Style.Fill.BackgroundColor = XLColor.FromColor(ValidationForms.GetColorSistema(_tipoCon))
+                worksheet.Range("A1:" & ic & "1").Style.Font.FontColor = XLColor.White
+                worksheet.Range("A1:" & ic & "1").Style.Font.FontSize = 12
+
+                ' Copete
                 worksheet.Range("A2:" & ic & "2").Merge()
                 worksheet.Range("A2:" & ic & "2").Value = "PERÍODO: " & dtpFechaDesde.Value.ToLongDateString() & "  AL " & dtpFechaHasta.Value.ToLongDateString()
-                worksheet.Range("A2:" & ic & "2").Font.Size = 12
-                'Fecha  
+                worksheet.Range("A2:" & ic & "2").Style.Font.FontSize = 12
+
+                ' Fecha
                 worksheet.Range("A3:" & ic & "3").Merge()
                 worksheet.Range("A3:" & ic & "3").Value = "Fecha de Reporte: " & fec.ToLongDateString() & " " & fec.ToLongTimeString()
-                worksheet.Range("A3:" & ic & "3").Font.Size = 12
+                worksheet.Range("A3:" & ic & "3").Style.Font.FontSize = 12
 
-                'Aca se ingresa las columnas
+                ' Encabezados de columnas
                 Dim indc = 1
                 Dim headin = 5
                 For i = 0 To dgvAsientosDiario.Columns.Count - 1
                     If Not dgvAsientosDiario.Columns(i).Visible Then Continue For
-                    worksheet.Cells(headin, indc) = dgvAsientosDiario.Columns(i).HeaderText
-                    worksheet.Cells(headin, indc).Font.Bold = True
-                    worksheet.Cells(headin, indc).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
-                    worksheet.Cells(headin, indc).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                    worksheet.Cells(headin, indc).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                    worksheet.Cells(headin, indc).Font.Color = Color.White
+                    worksheet.Cell(headin, indc).Value = dgvAsientosDiario.Columns(i).HeaderText
+                    worksheet.Cell(headin, indc).Style.Font.Bold = True
+                    worksheet.Cell(headin, indc).Style.Border.OutsideBorder = XLBorderStyleValues.Thin
+                    worksheet.Cell(headin, indc).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center
+                    worksheet.Cell(headin, indc).Style.Fill.BackgroundColor = XLColor.FromColor(ValidationForms.GetColorSistema(_tipoCon))
+                    worksheet.Cell(headin, indc).Style.Font.FontColor = XLColor.White
                     indc += 1
                 Next
 
-                'Aca se ingresa el detalle recorrera la tabla celda por celda
+                ' Detalle de la tabla
+
+                Dim columnasContable As String() = {"DEBE", "HABER", "SALDO"}
                 Dim c = 0
                 For o = 0 To dgvAsientosDiario.Rows.Count - 1
                     If Not dgvAsientosDiario.Rows(o).Visible Then Continue For
                     indc = 1
                     For j = 0 To dgvAsientosDiario.Columns.Count - 1
                         If Not dgvAsientosDiario.Columns(j).Visible Then Continue For
-                        worksheet.Cells(c + 1 + headin, indc) = dgvAsientosDiario.Rows(o).Cells(j).Value
-                        worksheet.Cells(c + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
-                        worksheet.Cells(c + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
+
+                        Dim cellValue = dgvAsientosDiario.Rows(o).Cells(j).Value
+                        Dim cell = worksheet.Cell(c + 1 + headin, indc)
+                        Dim columnName As String = dgvAsientosDiario.Columns(j).HeaderText
+
+                        ' Aplicar formato según el tipo de columna
+                        If cellValue IsNot Nothing AndAlso IsNumeric(cellValue) Then
+                            If columnasContable.Contains(columnName) Then
+                                ' Formato contable para DEBE, HABER y SALDO
+                                cell.Value = CDbl(cellValue)
+                                cell.Style.NumberFormat.Format = "#,##0.00"
+                            Else
+                                ' Formato numérico estándar para otras columnas numéricas
+                                cell.Value = CDbl(cellValue)
+                            End If
+                        Else
+                            ' Formato de texto para valores no numéricos
+                            cell.Value = If(cellValue IsNot Nothing, cellValue.ToString(), String.Empty)
+                        End If
+
+                        ' Aplicar bordes a la celda
+                        cell.Style.Border.SetLeftBorder(XLBorderStyleValues.Thin)
+                        cell.Style.Border.SetRightBorder(XLBorderStyleValues.Thin)
+
+                        ' Aplicar borde inferior solo en la última fila
+                        If o = dgvAsientosDiario.Rows.Count - 1 Then
+                            cell.Style.Border.SetBottomBorder(XLBorderStyleValues.Thin)
+                        End If
+
+
+
+
                         indc += 1
                     Next
                     c += 1
                 Next
-                worksheet.Range("A" & (c + headin) & ":" & ic & indc).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
 
+                ' Bordes inferiores
+                worksheet.Range("A" & (c + headin) & ":" & ic & indc).Style.Border.BottomBorder = XLBorderStyleValues.Thin
 
+                ' Totales
                 Dim deu As String = If(titulo.ToUpper().Contains("INGRESOS"), txtDeudorIngresos.Text, txtDeudorEgresos.Text)
                 Dim ace As String = If(titulo.ToUpper().Contains("INGRESOS"), txtAcreedorIngresos.Text, txtAcreedorEgresos.Text)
                 Dim tot As String = If(titulo.ToUpper().Contains("INGRESOS"), txtIngresos.Text, txtEgresos.Text)
 
-                ' TOTALES, ETC
                 Dim foot = headin + c + 3
-                worksheet.Cells(foot, 7).Value = "TOTAL DEUDOR"
-                worksheet.Cells(foot, 7).Font.Bold = True
-                worksheet.Cells(foot, 8).Value = deu
+                worksheet.Cell(foot, 7).Value = "TOTAL DEUDOR"
+                worksheet.Cell(foot, 7).Style.Font.Bold = True
+                worksheet.Cell(foot, 8).Value = Convert.ToDecimal(deu)
 
-                worksheet.Cells(foot + 1, 7).Value = "TOTAL ACREEDOR"
-                worksheet.Cells(foot + 1, 7).Font.Bold = True
-                worksheet.Cells(foot + 1, 8).Value = ace
+                worksheet.Cell(foot + 1, 7).Value = "TOTAL ACREEDOR"
+                worksheet.Cell(foot + 1, 7).Style.Font.Bold = True
+                worksheet.Cell(foot + 1, 8).Value = Convert.ToDecimal(ace)
 
-                worksheet.Cells(foot + 2, 7).Value = "TOTAL PYG"
-                worksheet.Cells(foot + 2, 7).Font.Bold = True
-                worksheet.Cells(foot + 2, 8).Value = tot
+                worksheet.Cell(foot + 2, 7).Value = "TOTAL PYG"
+                worksheet.Cell(foot + 2, 7).Style.Font.Bold = True
+                worksheet.Cell(foot + 2, 8).Value = Convert.ToDecimal(tot)
 
-                worksheet.Range("A1:" & ic & (dgvAsientosDiario.RowCount + 50)).Columns.AutoFit()
+                ' Ajustar columnas
+                Dim range As IXLRange = worksheet.Range("A1:" & ic & (dgvAsientosDiario.RowCount + 50))
+                worksheet.Columns("A:" & ic).AdjustToContents()
 
-                app.DisplayAlerts = False
-                app.Visible = True
-                app.DisplayAlerts = True
-                'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
+                ' Guardar el archivo
+                Dim saveFileDialog As New SaveFileDialog()
+                saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx"
+                saveFileDialog.FileName = $"{titulo}_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx"
+
+                If saveFileDialog.ShowDialog() = DialogResult.OK Then
+                    workbook.SaveAs(saveFileDialog.FileName)
+                    Process.Start(saveFileDialog.FileName)
+                End If
+
+                Krypton.Toolkit.KryptonMessageBox.Show("Datos exportados correctamente!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Krypton.Toolkit.KryptonMessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
+
+
         End Sub
 
         Private Sub ExportarDatosExcelDobleGrid(ByVal dgvIngresos As DataGridView, ByVal dgvEgresos As DataGridView, ByVal titulo As String)
@@ -326,7 +372,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
         Private Function ExportarDataGridView(ByVal worksheet As IXLWorksheet, ByVal dgv As DataGridView, ByVal startRow As Integer, ByVal totalLabel As String, ByVal totalDebe As String, ByVal totalHaber As String, ByVal total As String) As Integer
             Dim colIndex As Integer = 1
-
+            Dim columnasContables As String() = {"DEBE", "HABER", "SALDO"}
             ' Encabezado
             For Each column As DataGridViewColumn In dgv.Columns
                 If column.Visible Then
@@ -343,7 +389,22 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                     colIndex = 1
                     For Each cell As DataGridViewCell In row.Cells
                         If dgv.Columns(cell.ColumnIndex).Visible Then
-                            worksheet.Cell(startRow, colIndex).Value = If(cell.Value IsNot Nothing, cell.Value.ToString(), "")
+                            Dim valor As Object = cell.Value
+                            Dim cellExcel = worksheet.Cell(startRow, colIndex)
+                            Dim colName = dgv.Columns(cell.ColumnIndex).HeaderText
+
+                            If columnasContables.Contains(colName) AndAlso IsNumeric(valor) Then
+                                cellExcel.Value = Convert.ToDouble(valor)
+                                cellExcel.Style.NumberFormat.Format = "#,##0.00"
+                            ElseIf IsNumeric(valor) Then
+                                cellExcel.Value = Convert.ToDouble(valor)
+                            Else
+                                cellExcel.Value = If(valor IsNot Nothing, valor.ToString(), "")
+                            End If
+
+
+
+
                             colIndex += 1
                         End If
                     Next
@@ -354,9 +415,15 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             ' Totales
             worksheet.Cell(startRow, 1).Value = totalLabel
             worksheet.Cell(startRow, 1).Style.Font.SetBold(True)
-            worksheet.Cell(startRow, dgv.Columns("DEBE").Index + 1).Value = totalDebe.ToString()
-            worksheet.Cell(startRow, dgv.Columns("HABER").Index + 1).Value = totalHaber.ToString()
-            worksheet.Cell(startRow, dgv.Columns("SALDO").Index + 1).Value = total.ToString()
+            worksheet.Cell(startRow, dgv.Columns("DEBE").Index + 1).Value = Convert.ToDecimal(totalDebe)
+            worksheet.Cell(startRow, dgv.Columns("DEBE").Index + 1).Style.NumberFormat.Format = "#,##0.00"
+
+            worksheet.Cell(startRow, dgv.Columns("HABER").Index + 1).Value = Convert.ToDecimal(totalHaber)
+            worksheet.Cell(startRow, dgv.Columns("HABER").Index + 1).Style.NumberFormat.Format = "#,##0.00"
+
+            worksheet.Cell(startRow, dgv.Columns("SALDO").Index + 1).Value = Convert.ToDecimal(total)
+            worksheet.Cell(startRow, dgv.Columns("SALDO").Index + 1).Style.NumberFormat.Format = "#,##0.00"
+
             startRow += 1
 
             ' Ajustar columnas
@@ -1048,7 +1115,8 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             Next
         End Sub
 
+        Private Sub btnExcel_Click(sender As Object, e As EventArgs) Handles btnExcel.Click
 
-
+        End Sub
     End Class
 End Namespace

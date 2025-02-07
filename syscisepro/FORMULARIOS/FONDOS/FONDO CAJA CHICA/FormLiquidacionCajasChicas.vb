@@ -72,11 +72,15 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
 
         Private Sub LlenarComboCajasChicas()
             Try
+                RemoveHandler cbmCajasChicas.SelectedValueChanged, AddressOf cbmCajasChicas_SelectedValueChanged
+
                 cbmCajasChicas.DataSource = _objCajasChicas.SeleccionarCajasChicas(_tipoCon)
                 cbmCajasChicas.DisplayMember = "DETALLE_CAJA_CHICA"
                 cbmCajasChicas.ValueMember = "ID_CAJA_CHICA"
                 cbmCajasChicas.DropDownWidth = 300
                 If (CType(cbmCajasChicas.DataSource, DataTable).Rows.Count > 0) Then cbmCajasChicas.SelectedIndex = 0
+
+                AddHandler cbmCajasChicas.SelectedValueChanged, AddressOf cbmCajasChicas_SelectedValueChanged
             Catch
                 cbmCajasChicas.DataSource = Nothing
             End Try
@@ -461,6 +465,67 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             Catch ex As Exception
                 crvLiquidacion.ReportSource = Nothing
             End Try
+        End Sub
+
+        Private Sub cbmCajasChicas_SelectedValueChanged(sender As Object, e As EventArgs) Handles cbmCajasChicas.SelectedValueChanged
+            Dim selectedValue As Integer = cbmCajasChicas.SelectedValue
+
+
+            Select Case selectedValue
+                Case "1" 'caja chica machala
+                    cbmProvincia.SelectedValue = 7
+                    cbmCanton.SelectedValue = 58
+                    cbmParroquia.SelectedValue = 287
+
+                Case "6" 'caja chica guayaquil
+                    cbmProvincia.SelectedValue = 10
+                    cbmCanton.SelectedValue = 84
+                    cbmParroquia.SelectedValue = 418
+
+                Case "15" 'caja chica lago agrio
+                    cbmProvincia.SelectedValue = 22
+                    cbmCanton.SelectedValue = 196
+
+                Case "16" 'caja chica lago agrio 2
+                    cbmProvincia.SelectedValue = 22
+                    cbmCanton.SelectedValue = 196
+
+
+                Case "11" 'caja chica cuenca
+                    cbmProvincia.SelectedValue = 1
+                    cbmCanton.SelectedValue = 1
+                    cbmParroquia.SelectedValue = 921
+
+                Case "14" ' caja chica quito
+                    cbmProvincia.SelectedValue = 19
+                    cbmCanton.SelectedValue = 185
+                    cbmParroquia.SelectedValue = 736
+
+                Case "10" ' caja chica naranjal
+                    cbmProvincia.SelectedValue = 10
+                    cbmCanton.SelectedValue = 87
+
+
+                Case "9" ' caja chica minas
+                    cbmProvincia.SelectedValue = 1
+
+
+                Case "17" ' caja chica loja
+                    cbmProvincia.SelectedValue = 12
+                    cbmCanton.SelectedValue = 109
+                    cbmParroquia.SelectedValue = 490
+
+                Case "8" ' caja chica zamora
+                    cbmProvincia.SelectedValue = 24
+                    cbmCanton.SelectedValue = 218
+                    cbmParroquia.SelectedValue = 917
+
+                Case "2" ' caja chica zaruma
+                    cbmProvincia.SelectedValue = 7
+                    cbmCanton.SelectedValue = 64
+                    cbmParroquia.SelectedValue = 327
+
+            End Select
         End Sub
     End Class
 End Namespace

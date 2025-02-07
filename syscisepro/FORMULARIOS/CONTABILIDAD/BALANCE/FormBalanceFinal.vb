@@ -382,61 +382,6 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
                     Return
                 End If
 
-                'Dim fec = ValidationForms.FechaActual(_tipoCon)
-
-                'Dim app = New Microsoft.Office.Interop.Excel.Application()
-                'Dim workbook = app.Workbooks.Add(Type.Missing)
-                'Dim worksheet = workbook.Worksheets(1)
-                'worksheet.Name = "BALANCE"
-
-                'Dim ic = ValidationForms.NumToCharExcelFromVisibleColumnsDataGrid(dgvAsientosDiario)
-                'worksheet.Range("A1:" & ic & (dgvAsientosDiario.RowCount + 50)).Font.Size = 10
-
-                'worksheet.Range("A1:" & ic & "1").Merge()
-                'worksheet.Range("A1:" & ic & "1").Value = ValidationForms.NombreCompany(_tipoCon) & "  -  " & titulo
-                'worksheet.Range("A1:" & ic & "1").Font.Bold = True
-                'worksheet.Range("A1:" & ic & "1").Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                'worksheet.Range("A1:" & ic & "1").Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                'worksheet.Range("A1:" & ic & "1").Font.Color = Color.White
-                'worksheet.Range("A1:" & ic & "1").Font.Size = 12
-                ''Copete  
-                'worksheet.Range("A2:" & ic & "2").Merge()
-                'worksheet.Range("A2:" & ic & "2").Value = "PERÍODO: " & dtpInicio.Value.ToLongDateString() & "  AL " & dtpFinal.Value.ToLongDateString()
-                'worksheet.Range("A2:" & ic & "2").Font.Size = 12
-                ''Fecha  
-                'worksheet.Range("A3:" & ic & "3").Merge()
-                'worksheet.Range("A3:" & ic & "3").Value = "Fecha de Reporte: " & fec.ToLongDateString() & " " & fec.ToLongTimeString()
-                'worksheet.Range("A3:" & ic & "3").Font.Size = 12
-
-                ''Aca se ingresa las columnas
-                'Dim indc = 1
-                'Dim headin = 5
-                'For i = 0 To dgvAsientosDiario.Columns.Count - 1
-                '    If Not dgvAsientosDiario.Columns(i).Visible Then Continue For
-                '    worksheet.Cells(headin, indc) = dgvAsientosDiario.Columns(i).HeaderText
-                '    worksheet.Cells(headin, indc).Font.Bold = True
-                '    worksheet.Cells(headin, indc).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
-                '    worksheet.Cells(headin, indc).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                '    worksheet.Cells(headin, indc).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                '    worksheet.Cells(headin, indc).Font.Color = Color.White
-                '    indc += 1
-                'Next
-
-                ''Aca se ingresa el detalle recorrera la tabla celda por celda
-                'Dim c = 0
-                'For o = 0 To dgvAsientosDiario.Rows.Count - 1
-                '    If Not dgvAsientosDiario.Rows(o).Visible Then Continue For
-                '    indc = 1
-                '    For j = 0 To dgvAsientosDiario.Columns.Count - 1
-                '        If Not dgvAsientosDiario.Columns(j).Visible Then Continue For
-                '        worksheet.Cells(c + 1 + headin, indc) = dgvAsientosDiario.Rows(o).Cells(j).Value
-                '        worksheet.Cells(c + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
-                '        worksheet.Cells(c + 1 + headin, indc).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
-                '        indc += 1
-                '    Next
-                '    c += 1
-                'Next
-                'worksheet.Range("A" & (c + headin) & ":" & ic & indc).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
 
 
                 '' TOTALES, ETC
@@ -524,6 +469,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
                     indc += 1
                 Next
 
+                Dim columnasContable As String() = {"DEBE", "HABER", "SALDO"}
                 ' Detalle de datos
                 For i = 0 To dgvAsientosDiario.Rows.Count - 1
                     indc = 1
@@ -532,16 +478,27 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
 
                         ' Obtener el valor de la celda
                         Dim cellValue = dgvAsientosDiario.Rows(i).Cells(j).Value
-
+                        Dim cell = worksheet.Cell(i + 1 + headin, indc)
+                        Dim columnName As String = dgvAsientosDiario.Columns(j).HeaderText
                         ' Validar si el valor de la celda no es Nothing
-                        If cellValue IsNot Nothing Then
-                            worksheet.Cell(i + 1 + headin, indc).Value = cellValue.ToString()
+                        If cellValue IsNot Nothing AndAlso IsNumeric(cellValue) Then
+                            If columnasContable.Contains(columnName) Then
+                                cell.Value = CDbl(cellValue)
+                                cell.Style.NumberFormat.Format = "#,##0.00"
+
+                            Else
+
+                                cell.Value = CDbl(cellValue)
+                            End If
+
                         Else
-                            worksheet.Cell(i + 1 + headin, indc).Value = String.Empty ' Valor predeterminado si la celda es Nothing
+
+                            cell.Value = If(cellValue IsNot Nothing, cellValue.ToString(), String.Empty)
+
                         End If
 
                         ' Establecer bordes
-                        Dim cell = worksheet.Cell(i + 1 + headin, indc)
+                        'Dim cell = worksheet.Cell(i + 1 + headin, indc)
                         cell.Style.Border.SetLeftBorder(XLBorderStyleValues.Thin)
                         cell.Style.Border.SetRightBorder(XLBorderStyleValues.Thin)
 

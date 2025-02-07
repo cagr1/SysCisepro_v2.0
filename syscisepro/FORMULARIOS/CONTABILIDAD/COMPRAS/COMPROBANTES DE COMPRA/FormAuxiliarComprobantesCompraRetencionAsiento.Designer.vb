@@ -138,7 +138,7 @@
             Me.lblTipoComprobanteCompra.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.lblTipoComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblTipoComprobanteCompra.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.lblTipoComprobanteCompra.Location = New System.Drawing.Point(370, 43)
+            Me.lblTipoComprobanteCompra.Location = New System.Drawing.Point(370, 77)
             Me.lblTipoComprobanteCompra.Name = "lblTipoComprobanteCompra"
             Me.lblTipoComprobanteCompra.Size = New System.Drawing.Size(16, 13)
             Me.lblTipoComprobanteCompra.TabIndex = 95
@@ -151,7 +151,7 @@
             Me.lblEstadoComprobanteCompra.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.lblEstadoComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblEstadoComprobanteCompra.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.lblEstadoComprobanteCompra.Location = New System.Drawing.Point(198, 44)
+            Me.lblEstadoComprobanteCompra.Location = New System.Drawing.Point(198, 78)
             Me.lblEstadoComprobanteCompra.Name = "lblEstadoComprobanteCompra"
             Me.lblEstadoComprobanteCompra.Size = New System.Drawing.Size(16, 13)
             Me.lblEstadoComprobanteCompra.TabIndex = 94
@@ -163,7 +163,7 @@
             Me.lblIdComprobanteCompra.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.lblIdComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblIdComprobanteCompra.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.lblIdComprobanteCompra.Location = New System.Drawing.Point(79, 43)
+            Me.lblIdComprobanteCompra.Location = New System.Drawing.Point(79, 77)
             Me.lblIdComprobanteCompra.Name = "lblIdComprobanteCompra"
             Me.lblIdComprobanteCompra.Size = New System.Drawing.Size(16, 13)
             Me.lblIdComprobanteCompra.TabIndex = 29
@@ -263,7 +263,7 @@
             Me.lblNumeroComprobanteRetencion.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.lblNumeroComprobanteRetencion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblNumeroComprobanteRetencion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.lblNumeroComprobanteRetencion.Location = New System.Drawing.Point(139, 287)
+            Me.lblNumeroComprobanteRetencion.Location = New System.Drawing.Point(139, 316)
             Me.lblNumeroComprobanteRetencion.Name = "lblNumeroComprobanteRetencion"
             Me.lblNumeroComprobanteRetencion.Size = New System.Drawing.Size(16, 13)
             Me.lblNumeroComprobanteRetencion.TabIndex = 98
@@ -313,7 +313,7 @@
             Me.dgvDetalleComprobanteRetencion.RowsDefaultCellStyle = DataGridViewCellStyle10
             Me.dgvDetalleComprobanteRetencion.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvDetalleComprobanteRetencion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleComprobanteRetencion.Size = New System.Drawing.Size(707, 90)
+            Me.dgvDetalleComprobanteRetencion.Size = New System.Drawing.Size(709, 90)
             Me.dgvDetalleComprobanteRetencion.TabIndex = 53
             '
             'lblIdComprobanteRetencion
@@ -322,7 +322,7 @@
             Me.lblIdComprobanteRetencion.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.lblIdComprobanteRetencion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblIdComprobanteRetencion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.lblIdComprobanteRetencion.Location = New System.Drawing.Point(80, 287)
+            Me.lblIdComprobanteRetencion.Location = New System.Drawing.Point(80, 316)
             Me.lblIdComprobanteRetencion.Name = "lblIdComprobanteRetencion"
             Me.lblIdComprobanteRetencion.Size = New System.Drawing.Size(16, 13)
             Me.lblIdComprobanteRetencion.TabIndex = 69
@@ -355,7 +355,7 @@
             Me.lblNumeroRegistro.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.lblNumeroRegistro.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblNumeroRegistro.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.lblNumeroRegistro.Location = New System.Drawing.Point(104, 413)
+            Me.lblNumeroRegistro.Location = New System.Drawing.Point(104, 442)
             Me.lblNumeroRegistro.Name = "lblNumeroRegistro"
             Me.lblNumeroRegistro.Size = New System.Drawing.Size(13, 13)
             Me.lblNumeroRegistro.TabIndex = 1
@@ -406,7 +406,7 @@
             Me.dgvAsientoDiario.RowsDefaultCellStyle = DataGridViewCellStyle15
             Me.dgvAsientoDiario.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvAsientoDiario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientoDiario.Size = New System.Drawing.Size(705, 174)
+            Me.dgvAsientoDiario.Size = New System.Drawing.Size(708, 174)
             Me.dgvAsientoDiario.TabIndex = 0
             '
             'gbRangoFechas
@@ -433,7 +433,7 @@
             'dtpFechaHasta
             '
             Me.dtpFechaHasta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaHasta.Location = New System.Drawing.Point(357, 8)
+            Me.dtpFechaHasta.Location = New System.Drawing.Point(357, 35)
             Me.dtpFechaHasta.Name = "dtpFechaHasta"
             Me.dtpFechaHasta.Size = New System.Drawing.Size(207, 21)
             Me.dtpFechaHasta.TabIndex = 1
@@ -441,7 +441,7 @@
             'dtpFechaDesde
             '
             Me.dtpFechaDesde.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaDesde.Location = New System.Drawing.Point(66, 8)
+            Me.dtpFechaDesde.Location = New System.Drawing.Point(66, 36)
             Me.dtpFechaDesde.Name = "dtpFechaDesde"
             Me.dtpFechaDesde.Size = New System.Drawing.Size(210, 21)
             Me.dtpFechaDesde.TabIndex = 0
@@ -454,7 +454,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(731, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(729, 32)
             Me.MenuStrip1.TabIndex = 189
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -499,11 +499,12 @@
             Me.KryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None
             Me.KryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide
             Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 32)
+            Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 0)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
+            Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1})
             Me.KryptonNavigator1.SelectedIndex = 0
-            Me.KryptonNavigator1.Size = New System.Drawing.Size(731, 641)
+            Me.KryptonNavigator1.Size = New System.Drawing.Size(731, 673)
             Me.KryptonNavigator1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonNavigator1.TabIndex = 190
             Me.KryptonNavigator1.Text = "KryptonNavigator1"
@@ -512,6 +513,7 @@
             '
             Me.KryptonPage1.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
             Me.KryptonPage1.Controls.Add(Me.Label5)
+            Me.KryptonPage1.Controls.Add(Me.MenuStrip1)
             Me.KryptonPage1.Controls.Add(Me.Label3)
             Me.KryptonPage1.Controls.Add(Me.lblNumeroRegistro)
             Me.KryptonPage1.Controls.Add(Me.lblNumeroComprobanteRetencion)
@@ -531,7 +533,7 @@
             Me.KryptonPage1.LastVisibleSet = True
             Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage1.Name = "KryptonPage1"
-            Me.KryptonPage1.Size = New System.Drawing.Size(729, 614)
+            Me.KryptonPage1.Size = New System.Drawing.Size(729, 644)
             Me.KryptonPage1.Text = "Comprobante"
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage1.UniqueName = "9820F029FB6845807CAF64C983B69907"
@@ -542,7 +544,7 @@
             Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.Label5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.Label5.Location = New System.Drawing.Point(119, 287)
+            Me.Label5.Location = New System.Drawing.Point(119, 316)
             Me.Label5.Name = "Label5"
             Me.Label5.Size = New System.Drawing.Size(12, 13)
             Me.Label5.TabIndex = 110
@@ -554,7 +556,7 @@
             Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.Label3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.Label3.Location = New System.Drawing.Point(151, 43)
+            Me.Label3.Location = New System.Drawing.Point(151, 77)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(41, 13)
             Me.Label3.TabIndex = 109
@@ -564,13 +566,13 @@
             '
             Me.KryptonGroupBox3.CaptionOverlap = 0R
             Me.KryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
-            Me.KryptonGroupBox3.Location = New System.Drawing.Point(8, 408)
+            Me.KryptonGroupBox3.Location = New System.Drawing.Point(8, 437)
             Me.KryptonGroupBox3.Name = "KryptonGroupBox3"
             '
             'KryptonGroupBox3.Panel
             '
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.dgvAsientoDiario)
-            Me.KryptonGroupBox3.Size = New System.Drawing.Size(709, 198)
+            Me.KryptonGroupBox3.Size = New System.Drawing.Size(712, 198)
             Me.KryptonGroupBox3.TabIndex = 4
             Me.KryptonGroupBox3.Values.Heading = "Asiento Diario"
             '
@@ -578,13 +580,13 @@
             '
             Me.KryptonGroupBox2.CaptionOverlap = 0R
             Me.KryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
-            Me.KryptonGroupBox2.Location = New System.Drawing.Point(7, 282)
+            Me.KryptonGroupBox2.Location = New System.Drawing.Point(7, 313)
             Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
             '
             'KryptonGroupBox2.Panel
             '
             Me.KryptonGroupBox2.Panel.Controls.Add(Me.dgvDetalleComprobanteRetencion)
-            Me.KryptonGroupBox2.Size = New System.Drawing.Size(711, 114)
+            Me.KryptonGroupBox2.Size = New System.Drawing.Size(713, 114)
             Me.KryptonGroupBox2.TabIndex = 3
             Me.KryptonGroupBox2.Values.Heading = "Retencion"
             '
@@ -592,7 +594,7 @@
             '
             Me.KryptonGroupBox1.CaptionOverlap = 0R
             Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
-            Me.KryptonGroupBox1.Location = New System.Drawing.Point(8, 38)
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(8, 72)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
             'KryptonGroupBox1.Panel
@@ -604,7 +606,7 @@
             '
             'KryptonLabel2
             '
-            Me.KryptonLabel2.Location = New System.Drawing.Point(310, 9)
+            Me.KryptonLabel2.Location = New System.Drawing.Point(310, 36)
             Me.KryptonLabel2.Name = "KryptonLabel2"
             Me.KryptonLabel2.Size = New System.Drawing.Size(41, 20)
             Me.KryptonLabel2.TabIndex = 1
@@ -612,7 +614,7 @@
             '
             'KryptonLabel1
             '
-            Me.KryptonLabel1.Location = New System.Drawing.Point(15, 9)
+            Me.KryptonLabel1.Location = New System.Drawing.Point(15, 37)
             Me.KryptonLabel1.Name = "KryptonLabel1"
             Me.KryptonLabel1.Size = New System.Drawing.Size(45, 20)
             Me.KryptonLabel1.TabIndex = 0
@@ -625,7 +627,6 @@
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(731, 673)
             Me.Controls.Add(Me.KryptonNavigator1)
-            Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbRangoFechas)
             Me.Controls.Add(Me.gbAsientoDiario)
             Me.Controls.Add(Me.gbRetencion)
@@ -668,7 +669,6 @@
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox1.ResumeLayout(False)
             Me.ResumeLayout(False)
-            Me.PerformLayout()
 
         End Sub
         Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
