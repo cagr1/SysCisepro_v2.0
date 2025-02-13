@@ -37,7 +37,18 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 End Select
             End Set
         End Property
-        
+
+        Private SelectedRange As Integer
+        Private FechaDesde As Date
+        Private FechaHasta As Date
+        Private ShowColumns As Integer
+        Private Anterior As Boolean
+        Private CambioAnterior As Boolean
+        Private PorcentajeAnterior As Boolean
+        Private Previo As Boolean
+        Private CambioPrevio As Boolean
+        Private PorcentajePrevio As Boolean
+
         ReadOnly _objEstado As New ClassPerdidasYGanancia
 
         Private Sub CargaIngresosMensual(ByVal all As Boolean)
@@ -465,7 +476,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             btnCargar.Padding = New Padding(5)
 
 
-
+            dtpFechaDesdeMes.Value = New Date(Now.Year, Now.Month, 1)
 
 
             Dim ctxMenu As ComponentFactory.Krypton.Toolkit.KryptonContextMenu = btnExcel.KryptonContextMenu
@@ -879,38 +890,27 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         End Sub
 
         Private Sub dtpFechaDesdeMes_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaDesdeMes.ValueChanged
-            Dim nuevoMes As Integer = dtpFechaDesdeMes.Value.Month
-            Dim nuevoAnio As Integer = dtpFechaDesdeMes.Value.Year
-            dtpFechaHastaMes.Value = New DateTime(nuevoAnio - 1, nuevoMes, 1)
 
-            Dim mes1 As Integer = dtpFechaDesdeMes.Value.Month
-            Dim anio1 As Integer = dtpFechaDesdeMes.Value.Year
-            Dim mes2 As Integer = dtpFechaHastaMes.Value.Month
-            Dim anio2 As Integer = dtpFechaHastaMes.Value.Year
 
-            CargaIngresosMensualComparativo(mes1, anio1, mes2, anio2)
+            UpdateCbxDates()
 
         End Sub
 
 
 
         Private Sub chbxMensual_CheckedChanged(sender As Object, e As EventArgs)
-            dtpFechaDesdeMes.Enabled = True
-            dtpFechaHastaMes.Enabled = True
+
 
         End Sub
 
         Private Sub chkbxAnual_CheckedChanged(sender As Object, e As EventArgs)
-            dtpFechaDesdeMes.Enabled = False
-            dtpFechaHastaMes.Enabled = False
+
 
         End Sub
 
         Private Sub CargaIngresosMensualComparativo(ByVal mes1 As Integer, ByVal anio1 As Integer, ByVal mes2 As Integer, ByVal anio2 As Integer)
 
             dgvComparacion.DataSource = Nothing
-
-
 
         End Sub
 
@@ -1118,5 +1118,162 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         Private Sub btnExcel_Click(sender As Object, e As EventArgs) Handles btnExcel.Click
 
         End Sub
+
+        Private Sub btnCuztomize_Click(sender As Object, e As EventArgs) Handles btnCuztomize.Click
+            Dim frm As New FormReportEstadoPyG()
+
+            frm.SelectedRange = cbxDates.SelectedIndex
+            frm.FechaDesde = dtpFechaDesdeMes.Value
+            frm.FechaHasta = dtpFechaHastaMes.Value
+            frm.ShowColumns = cbxShowColumns.SelectedIndex
+            frm.Anterior = Anterior
+            frm.CambioAnterior = CambioAnterior
+            frm.PorcentajeAnterior = PorcentajeAnterior
+            frm.Previo = Previo
+            frm.CambioPrevio = CambioPrevio
+            frm.PorcentajePrevio = PorcentajePrevio
+
+            If frm.ShowDialog() = DialogResult.OK Then
+                SelectedRange = frm.SelectedRange
+                FechaDesde = frm.FechaDesde
+                FechaHasta = frm.FechaHasta
+                ShowColumns = frm.ShowColumns
+                Anterior = frm.Anterior
+                CambioAnterior = frm.CambioAnterior
+                PorcentajeAnterior = frm.PorcentajeAnterior
+                Previo = frm.Previo
+                CambioPrevio = frm.CambioPrevio
+                PorcentajePrevio = frm.PorcentajePrevio
+
+                cbxDates.SelectedIndex = SelectedRange
+                dtpFechaDesdeMes.Value = FechaDesde
+                dtpFechaHastaMes.Value = FechaHasta
+                cbxShowColumns.SelectedIndex = ShowColumns
+
+            End If
+
+
+
+        End Sub
+
+        Private Sub cbxDates_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxDates.SelectedIndexChanged
+            Dim selectedRange As String = cbxDates.SelectedItem.ToString()
+
+            Select Case selectedRange.Trim()
+                Case "Mensual"
+                    ' Desde el primer día del mes actual
+                    dtpFechaDesdeMes.Value = New Date(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month, 1)
+                    dtpFechaHastaMes.Value = New Date(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month, Date.DaysInMonth(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month))
+
+                Case "Trimestral"
+                    ' Desde el primer día del mes, restando 2 meses (para cubrir 3 meses en total)
+                    dtpFechaDesdeMes.Value = New Date(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month, 1).AddMonths(-2)
+
+                Case "Semestral"
+                    ' Desde el primer día del mes, restando 5 meses (para cubrir 6 meses en total)
+                    dtpFechaDesdeMes.Value = New Date(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month, 1).AddMonths(-5)
+
+                Case "Anual"
+                    ' Desde el primer día del mes, restando 1 año
+                    dtpFechaDesdeMes.Value = New Date(dtpFechaHastaMes.Value.Year - 1, dtpFechaHastaMes.Value.Month, dtpFechaHastaMes.Value.Day)
+
+
+                Case "Custom"
+                    ' No hacer cambios en las fechas, el usuario las define manualmente
+            End Select
+
+            ' Actualizar cbxShowColumns
+            UpdateCbxShowColumns()
+
+            callReport()
+
+        End Sub
+
+        Private Sub UpdateCbxShowColumns()
+            Dim fechaDesde As Date = dtpFechaDesdeMes.Value
+            Dim fechaHasta As Date = dtpFechaHastaMes.Value
+            Dim rangeInMonths As Integer = (fechaHasta.Year - fechaDesde.Year) * 12 + (fechaHasta.Month - fechaDesde.Month)
+
+
+
+            ' Siempre permitir "Mensual"
+            cbxShowColumns.SelectedItem = 0
+
+            ' Permitir "Trimestral" si el rango es de al menos 3 meses
+            If rangeInMonths >= 3 Then
+                cbxShowColumns.SelectedItem = 1
+            End If
+
+            ' Permitir "Semestral" si el rango es de al menos 6 meses
+            If rangeInMonths >= 6 Then
+                cbxShowColumns.SelectedItem = 2
+            End If
+
+            ' Permitir "Anual" si el rango es de al menos 12 meses
+            If rangeInMonths >= 12 Then
+                cbxShowColumns.SelectedItem = 3
+            End If
+
+            ' Seleccionar la primera opción por defecto
+            If cbxShowColumns.Items.Count > 0 Then
+                cbxShowColumns.SelectedIndex = 0
+            End If
+        End Sub
+
+        Private Sub callReport()
+
+            Dim rangoBusqueda As String = cbxDates.SelectedItem.ToString()
+            Dim ordenColumnas As String = cbxShowColumns.SelectedItem.ToString()
+            Dim fechaInicio As DateTime = dtpFechaDesdeMes.Value
+            Dim fechaFin As DateTime = dtpFechaHastaMes.Value
+
+
+
+
+        End Sub
+
+        Private Sub UpdateCbxDates()
+            Dim fechaDesde As Date = dtpFechaDesdeMes.Value
+            Dim fechaHasta As Date = dtpFechaHastaMes.Value
+
+            RemoveHandler cbxDates.SelectedIndexChanged, AddressOf cbxDates_SelectedIndexChanged
+
+            'Verificar si el rango de fechas coincide con un periodo estandar
+            If IsMonthlyRange(fechaDesde, fechaHasta) Then
+                cbxDates.SelectedIndex = 0
+            ElseIf IsQuarterlyRange(fechaDesde, fechaHasta) Then
+                cbxDates.SelectedIndex = 1
+            ElseIf IsSemestralRange(fechaDesde, fechaHasta) Then
+                cbxDates.SelectedIndex = 3
+            ElseIf IsAnnualRange(fechaDesde, fechaHasta) Then
+                cbxDates.SelectedIndex = 4
+            Else
+                cbxDates.SelectedIndex = 5
+            End If
+
+            AddHandler cbxDates.SelectedIndexChanged, AddressOf cbxDates_SelectedIndexChanged
+
+        End Sub
+
+        Private Function IsMonthlyRange(ByVal fechadesde As Date, ByVal fechashasta As Date) As Boolean
+            Return fechadesde.Day = 1 AndAlso fechashasta = fechadesde.AddMonths(1).AddDays(-1)
+        End Function
+
+        Private Function IsQuarterlyRange(fechaDesde As Date, fechaHasta As Date) As Boolean
+            Return fechaDesde.Day = 1 AndAlso fechaHasta = fechaDesde.AddMonths(3).AddDays(-1)
+        End Function
+
+        Private Function IsSemestralRange(fechaDesde As Date, fechaHasta As Date) As Boolean
+            Return fechaDesde.Day = 1 AndAlso fechaHasta = fechaDesde.AddMonths(6).AddDays(-1)
+        End Function
+
+        Private Function IsAnnualRange(fechaDesde As Date, fechaHasta As Date) As Boolean
+            Return fechaDesde.Day = 1 AndAlso fechaHasta = fechaDesde.AddYears(1).AddDays(-1)
+        End Function
+
+
+
+
+
     End Class
 End Namespace

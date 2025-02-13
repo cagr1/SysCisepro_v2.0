@@ -1600,10 +1600,10 @@
     <Compile Include="FORMULARIOS\INVENTARIOS\PROCESO\FrmBuscarPuestoTrabajo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\KryptonInputBoxForm.Designer.vb">
-      <DependentUpon>KryptonInputBoxForm.vb</DependentUpon>
+    <Compile Include="FORMULARIOS\FormReportEstadoPyG.Designer.vb">
+      <DependentUpon>FormReportEstadoPyG.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\KryptonInputBoxForm.vb">
+    <Compile Include="FORMULARIOS\FormReportEstadoPyG.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMULARIOS\OPERACIONES\FrmAgregarPersonalReporte.Designer.vb">
@@ -3122,8 +3122,8 @@
     <EmbeddedResource Include="FORMULARIOS\INVENTARIOS\PROCESO\FrmBuscarPuestoTrabajo.resx">
       <DependentUpon>FrmBuscarPuestoTrabajo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\KryptonInputBoxForm.resx">
-      <DependentUpon>KryptonInputBoxForm.vb</DependentUpon>
+    <EmbeddedResource Include="FORMULARIOS\FormReportEstadoPyG.resx">
+      <DependentUpon>FormReportEstadoPyG.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\OPERACIONES\FrmAgregarPersonalReporte.resx">
       <DependentUpon>FrmAgregarPersonalReporte.vb</DependentUpon>

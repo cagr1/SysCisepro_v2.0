@@ -80,6 +80,7 @@
             Me.btnReporteNew = New ComponentFactory.Krypton.Toolkit.KryptonButton()
             Me.btnCargar = New ComponentFactory.Krypton.Toolkit.KryptonButton()
             Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.btnCuztomize = New Krypton.Toolkit.KryptonButton()
             Me.dgvComparacion = New Krypton.Toolkit.KryptonDataGridView()
             Me.nodoCom = New Krypton.Toolkit.KryptonDataGridViewButtonColumn()
             Me.KryptonGroupBox4 = New Krypton.Toolkit.KryptonGroupBox()
@@ -324,17 +325,19 @@
             'dtpFechaDesde
             '
             Me.dtpFechaDesde.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaDesde.Location = New System.Drawing.Point(60, 3)
+            Me.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaDesde.Location = New System.Drawing.Point(66, 4)
             Me.dtpFechaDesde.Name = "dtpFechaDesde"
-            Me.dtpFechaDesde.Size = New System.Drawing.Size(163, 21)
+            Me.dtpFechaDesde.Size = New System.Drawing.Size(105, 21)
             Me.dtpFechaDesde.TabIndex = 0
             '
             'dtpFechaHasta
             '
             Me.dtpFechaHasta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaHasta.Location = New System.Drawing.Point(285, 4)
+            Me.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaHasta.Location = New System.Drawing.Point(234, 4)
             Me.dtpFechaHasta.Name = "dtpFechaHasta"
-            Me.dtpFechaHasta.Size = New System.Drawing.Size(160, 21)
+            Me.dtpFechaHasta.Size = New System.Drawing.Size(105, 21)
             Me.dtpFechaHasta.TabIndex = 1
             '
             'ContextMenuStripClicDerecho
@@ -428,7 +431,7 @@
             '
             'KryptonLabel2
             '
-            Me.KryptonLabel2.Location = New System.Drawing.Point(236, 3)
+            Me.KryptonLabel2.Location = New System.Drawing.Point(185, 3)
             Me.KryptonLabel2.Name = "KryptonLabel2"
             Me.KryptonLabel2.Size = New System.Drawing.Size(41, 20)
             Me.KryptonLabel2.TabIndex = 1
@@ -546,8 +549,8 @@
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
             Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
-            Me.KryptonNavigator1.SelectedIndex = 0
-            Me.KryptonNavigator1.Size = New System.Drawing.Size(791, 670)
+            Me.KryptonNavigator1.SelectedIndex = 1
+            Me.KryptonNavigator1.Size = New System.Drawing.Size(819, 670)
             Me.KryptonNavigator1.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonNavigator1.TabIndex = 294
             Me.KryptonNavigator1.Text = "KryptonNavigator1"
@@ -567,7 +570,7 @@
             Me.KryptonPage1.LastVisibleSet = True
             Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage1.Name = "KryptonPage1"
-            Me.KryptonPage1.Size = New System.Drawing.Size(789, 641)
+            Me.KryptonPage1.Size = New System.Drawing.Size(817, 641)
             Me.KryptonPage1.Text = "General"
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage1.UniqueName = "7FFBC1C00EEF478B3F89240E9045C7F5"
@@ -627,16 +630,25 @@
             'KryptonPage2
             '
             Me.KryptonPage2.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage2.Controls.Add(Me.btnCuztomize)
             Me.KryptonPage2.Controls.Add(Me.dgvComparacion)
             Me.KryptonPage2.Controls.Add(Me.KryptonGroupBox4)
             Me.KryptonPage2.Flags = 65534
             Me.KryptonPage2.LastVisibleSet = True
             Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage2.Name = "KryptonPage2"
-            Me.KryptonPage2.Size = New System.Drawing.Size(789, 595)
+            Me.KryptonPage2.Size = New System.Drawing.Size(817, 641)
             Me.KryptonPage2.Text = "Comparativo"
             Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage2.UniqueName = "0DF740431DB546AAFB85B2916D7DE92D"
+            '
+            'btnCuztomize
+            '
+            Me.btnCuztomize.Location = New System.Drawing.Point(126, 12)
+            Me.btnCuztomize.Name = "btnCuztomize"
+            Me.btnCuztomize.Size = New System.Drawing.Size(130, 25)
+            Me.btnCuztomize.TabIndex = 255
+            Me.btnCuztomize.Values.Text = "Personalizar Reporte"
             '
             'dgvComparacion
             '
@@ -679,7 +691,7 @@
             Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel10)
             Me.KryptonGroupBox4.Panel.Controls.Add(Me.dtpFechaDesdeMes)
             Me.KryptonGroupBox4.Panel.Controls.Add(Me.dtpFechaHastaMes)
-            Me.KryptonGroupBox4.Size = New System.Drawing.Size(754, 69)
+            Me.KryptonGroupBox4.Size = New System.Drawing.Size(799, 69)
             Me.KryptonGroupBox4.TabIndex = 230
             Me.KryptonGroupBox4.Values.Heading = "Busqueda"
             Me.KryptonGroupBox4.Values.Image = Global.syscisepro.My.Resources.Resources.calendar_month_24dp_FILL0_wght400_GRAD0_opsz24__2_
@@ -688,10 +700,10 @@
             '
             Me.cbxDates.AlwaysActive = False
             Me.cbxDates.DropDownWidth = 150
-            Me.cbxDates.Items.AddRange(New Object() {"Este Mes", "Trimestre FIscal", "Trimestre Fiscal a la fecha", "Anual Fiscal"})
+            Me.cbxDates.Items.AddRange(New Object() {"Mensual", "Trimestral", "Anual ", "Personalizado"})
             Me.cbxDates.Location = New System.Drawing.Point(10, 8)
             Me.cbxDates.Name = "cbxDates"
-            Me.cbxDates.Size = New System.Drawing.Size(91, 21)
+            Me.cbxDates.Size = New System.Drawing.Size(76, 21)
             Me.cbxDates.TabIndex = 233
             Me.cbxDates.Text = "Fechas"
             '
@@ -700,13 +712,13 @@
             Me.cbxShowColumns.AlwaysActive = False
             Me.cbxShowColumns.DropDownWidth = 121
             Me.cbxShowColumns.IntegralHeight = False
-            Me.cbxShowColumns.Items.AddRange(New Object() {"Mensual", "Trimestral", "Cuatrimestral", "Semestral", "Anual"})
-            Me.cbxShowColumns.Location = New System.Drawing.Point(401, 8)
+            Me.cbxShowColumns.Items.AddRange(New Object() {"Mensual", "Trimestral", "Semestral", "Anual"})
+            Me.cbxShowColumns.Location = New System.Drawing.Point(409, 8)
             Me.cbxShowColumns.Name = "cbxShowColumns"
-            Me.cbxShowColumns.Size = New System.Drawing.Size(121, 21)
+            Me.cbxShowColumns.Size = New System.Drawing.Size(131, 21)
             Me.cbxShowColumns.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near
             Me.cbxShowColumns.TabIndex = 232
-            Me.cbxShowColumns.Text = "Orden Columnas"
+            Me.cbxShowColumns.Text = "Ordenar Columnas"
             '
             'KryptonLabel11
             '
@@ -775,7 +787,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.ClientSize = New System.Drawing.Size(791, 670)
+            Me.ClientSize = New System.Drawing.Size(819, 670)
             Me.Controls.Add(Me.KryptonNavigator1)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -885,5 +897,6 @@
         Friend WithEvents KryptonContextMenuItem2 As ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem
         Friend WithEvents KryptonContextMenuItem3 As ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem
         Friend WithEvents KryptonContextMenuItems1 As ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems
+        Friend WithEvents btnCuztomize As Krypton.Toolkit.KryptonButton
     End Class
 End Namespace

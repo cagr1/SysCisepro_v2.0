@@ -86,7 +86,7 @@ Namespace CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
             Return ComandosSql.SeleccionarQueryToDataTable(tipoCon, base, False) 
         End Function
-          
+
         Private Function Mes(ByVal m As Integer) As String
             Dim ms = ""
             Select Case m
@@ -105,6 +105,10 @@ Namespace CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             End Select
             Return ms
         End Function
-         
+
+
+
+
+
     End Class
 End Namespace
