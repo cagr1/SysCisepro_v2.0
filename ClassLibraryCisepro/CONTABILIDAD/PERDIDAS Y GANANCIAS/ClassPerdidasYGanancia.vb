@@ -107,7 +107,28 @@ Namespace CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         End Function
 
 
+        Public Function SeleccionarEstadoPerdidasGananciasComparativoDinamico(ByVal tipoCon As TipoConexion, ByVal FechaInicial As DateTime, ByVal FechaFinal As DateTime, ByVal RangoBusqueda As String, ByVal OrdenColumns As String, ByVal chkAnterior As Boolean, ByVal chkPrevio As Boolean, cambio As Boolean, variacion As Boolean) As DataTable
+            Dim pars = New List(Of Object())
 
+            Dim chkAnteriorInt As Integer = If(chkAnterior, 1, 0)
+            Dim chkPrevioInt As Integer = If(chkPrevio, 1, 0)
+            Dim cambioInt As Integer = If(cambio, 1, 0)
+            Dim variacionInt As Integer = If(variacion, 1, 0)
+
+            pars.Add(New Object() {"@FechaInicio", SqlDbType.DateTime, FechaInicial})
+            pars.Add(New Object() {"@FechaFin", SqlDbType.DateTime, FechaFinal})
+            pars.Add(New Object() {"@RangoBusqueda", SqlDbType.VarChar, RangoBusqueda})
+            pars.Add(New Object() {"@OrdenColumns", SqlDbType.VarChar, OrdenColumns})
+            pars.Add(New Object() {"@chkAnterior", SqlDbType.Bit, chkAnteriorInt})
+            pars.Add(New Object() {"@chkPrevio", SqlDbType.Bit, chkPrevioInt})
+            pars.Add(New Object() {"@chkCambio", SqlDbType.Bit, cambioInt})
+            pars.Add(New Object() {"@chkVariacion", SqlDbType.Bit, variacionInt})
+
+
+            Dim tabla = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_SeleccionarEstadoPyGComparativo", True, pars)
+
+            Return tabla
+        End Function
 
 
     End Class

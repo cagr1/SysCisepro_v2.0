@@ -32,14 +32,14 @@ Partial Class FormReportEstadoPyG
         Me.chkCambioPrevio = New ComponentFactory.Krypton.Toolkit.KryptonCheckBox()
         Me.chkPrevio = New ComponentFactory.Krypton.Toolkit.KryptonCheckBox()
         Me.KryptonGroupBox2 = New Krypton.Toolkit.KryptonGroupBox()
+        Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+        Me.cbxDates = New ComponentFactory.Krypton.Toolkit.KryptonComboBox()
         Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
         Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
         Me.dtpFechaDesdeMes = New Krypton.Toolkit.KryptonDateTimePicker()
         Me.dtpFechaHastaMes = New Krypton.Toolkit.KryptonDateTimePicker()
-        Me.cbxDates = New ComponentFactory.Krypton.Toolkit.KryptonComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnAcpetar = New System.Windows.Forms.Button()
-        Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
         CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.KryptonGroupBox1.Panel.SuspendLayout()
@@ -90,7 +90,7 @@ Partial Class FormReportEstadoPyG
         '
         Me.cbxShowColumns.AlwaysActive = False
         Me.cbxShowColumns.DropDownWidth = 150
-        Me.cbxShowColumns.Items.AddRange(New Object() {"Mes", "Trimestre ", "Semestre", "Anual "})
+        Me.cbxShowColumns.Items.AddRange(New Object() {"Mensual", "Trimestral ", "Semestral", "Anual "})
         Me.cbxShowColumns.Location = New System.Drawing.Point(137, 20)
         Me.cbxShowColumns.Name = "cbxShowColumns"
         Me.cbxShowColumns.Size = New System.Drawing.Size(111, 21)
@@ -106,6 +106,7 @@ Partial Class FormReportEstadoPyG
         '
         'chkPorcAnterior
         '
+        Me.chkPorcAnterior.Enabled = False
         Me.chkPorcAnterior.Images.CheckedNormal = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
         Me.chkPorcAnterior.Images.CheckedPressed = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
         Me.chkPorcAnterior.Images.CheckedTracking = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
@@ -119,6 +120,7 @@ Partial Class FormReportEstadoPyG
         '
         'chkCambioAnterior
         '
+        Me.chkCambioAnterior.Enabled = False
         Me.chkCambioAnterior.Images.CheckedNormal = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
         Me.chkCambioAnterior.Images.CheckedPressed = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
         Me.chkCambioAnterior.Images.CheckedTracking = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
@@ -132,6 +134,7 @@ Partial Class FormReportEstadoPyG
         '
         'chkPorcPrevio
         '
+        Me.chkPorcPrevio.Enabled = False
         Me.chkPorcPrevio.Images.CheckedNormal = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
         Me.chkPorcPrevio.Images.CheckedPressed = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
         Me.chkPorcPrevio.Images.CheckedTracking = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
@@ -145,6 +148,7 @@ Partial Class FormReportEstadoPyG
         '
         'chkCambioPrevio
         '
+        Me.chkCambioPrevio.Enabled = False
         Me.chkCambioPrevio.Images.CheckedNormal = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
         Me.chkCambioPrevio.Images.CheckedPressed = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
         Me.chkCambioPrevio.Images.CheckedTracking = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
@@ -188,6 +192,24 @@ Partial Class FormReportEstadoPyG
         Me.KryptonGroupBox2.TabIndex = 253
         Me.KryptonGroupBox2.Values.Heading = "Rango de Reporte"
         '
+        'KryptonLabel2
+        '
+        Me.KryptonLabel2.Location = New System.Drawing.Point(14, 10)
+        Me.KryptonLabel2.Name = "KryptonLabel2"
+        Me.KryptonLabel2.Size = New System.Drawing.Size(47, 20)
+        Me.KryptonLabel2.TabIndex = 237
+        Me.KryptonLabel2.Values.Text = "Fechas"
+        '
+        'cbxDates
+        '
+        Me.cbxDates.AlwaysActive = False
+        Me.cbxDates.DropDownWidth = 150
+        Me.cbxDates.Items.AddRange(New Object() {"Mensual", "Trimestral", "Semestral", "Anual ", "Personalizado"})
+        Me.cbxDates.Location = New System.Drawing.Point(65, 10)
+        Me.cbxDates.Name = "cbxDates"
+        Me.cbxDates.Size = New System.Drawing.Size(101, 21)
+        Me.cbxDates.TabIndex = 236
+        '
         'KryptonLabel11
         '
         Me.KryptonLabel11.Location = New System.Drawing.Point(159, 37)
@@ -228,16 +250,6 @@ Partial Class FormReportEstadoPyG
         Me.dtpFechaHastaMes.Size = New System.Drawing.Size(86, 21)
         Me.dtpFechaHastaMes.TabIndex = 233
         '
-        'cbxDates
-        '
-        Me.cbxDates.AlwaysActive = False
-        Me.cbxDates.DropDownWidth = 150
-        Me.cbxDates.Items.AddRange(New Object() {"Mensual", "Trimestral", "Semestral", "Anual ", "Personalizado"})
-        Me.cbxDates.Location = New System.Drawing.Point(65, 10)
-        Me.cbxDates.Name = "cbxDates"
-        Me.cbxDates.Size = New System.Drawing.Size(101, 21)
-        Me.cbxDates.TabIndex = 236
-        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(58, Byte), Integer))
@@ -267,14 +279,6 @@ Partial Class FormReportEstadoPyG
         Me.btnAcpetar.TabIndex = 255
         Me.btnAcpetar.Text = "ACEPTAR"
         Me.btnAcpetar.UseVisualStyleBackColor = False
-        '
-        'KryptonLabel2
-        '
-        Me.KryptonLabel2.Location = New System.Drawing.Point(14, 10)
-        Me.KryptonLabel2.Name = "KryptonLabel2"
-        Me.KryptonLabel2.Size = New System.Drawing.Size(47, 20)
-        Me.KryptonLabel2.TabIndex = 237
-        Me.KryptonLabel2.Values.Text = "Fechas"
         '
         'FormReportEstadoPyG
         '

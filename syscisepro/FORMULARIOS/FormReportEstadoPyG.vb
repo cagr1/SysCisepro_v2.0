@@ -1,4 +1,5 @@
 ﻿Imports ClassLibraryCisepro.ENUMS
+Imports Krypton.Toolkit
 
 Public Class FormReportEstadoPyG
 
@@ -69,27 +70,68 @@ Public Class FormReportEstadoPyG
     End Sub
 
     Private Sub chkAnterior_CheckedChanged(sender As Object, e As EventArgs) Handles chkAnterior.CheckedChanged
-        chkCambioAnterior.Enabled = True
-        chkPorcAnterior.Enabled = True
+        If chkAnterior.Checked Then
+            chkCambioAnterior.Enabled = True
+            chkPorcAnterior.Enabled = True
+        Else
+            chkCambioAnterior.Enabled = False
+            chkPorcAnterior.Enabled = False
+        End If
     End Sub
 
     Private Sub chkPrevio_CheckedChanged(sender As Object, e As EventArgs) Handles chkPrevio.CheckedChanged
-        chkCambioPrevio.Enabled = True
-        chkPorcPrevio.Enabled = True
+        If chkPrevio.Checked Then
+            chkCambioPrevio.Enabled = True
+            chkPorcPrevio.Enabled = True
+        Else
+            chkCambioPrevio.Enabled = False
+            chkPorcPrevio.Enabled = False
+        End If
+
+
     End Sub
 
     Private Sub btnAcpetar_Click(sender As Object, e As EventArgs) Handles btnAcpetar.Click
+
+
+        If chkPrevio.Checked AndAlso chkAnterior.Checked Then
+            KryptonMessageBox.Show("No se puede seleccionar ambos periodos", "Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            Return
+        End If
+
+        Dim Rango As String
+
         ' Guardar los valores antes de cerrar
         SelectedRange = cbxDates.SelectedIndex
+
         FechaDesde = dtpFechaDesdeMes.Value
         FechaHasta = dtpFechaHastaMes.Value
         ShowColumns = cbxShowColumns.SelectedIndex
-        Previo = chkPrevio.Checked
-        Anterior = chkAnterior.Checked
-        CambioPrevio = chkCambioPrevio.Checked
-        PorcentajePrevio = chkPorcPrevio.Checked
-        CambioAnterior = chkCambioPrevio.Checked
-        PorcentajeAnterior = chkPorcPrevio.Checked
+
+
+        If chkPrevio.Checked Then
+            Anterior = False
+            CambioAnterior = False
+            PorcentajeAnterior = False
+            CambioPrevio = chkCambioPrevio.Checked
+            PorcentajePrevio = chkPorcPrevio.Checked
+            Previo = True
+        ElseIf chkAnterior.Checked Then
+            Anterior = True
+            CambioAnterior = chkCambioAnterior.Checked
+            PorcentajeAnterior = chkPorcAnterior.Checked
+            Previo = False
+            CambioPrevio = False
+            PorcentajePrevio = False
+        Else
+            Anterior = False
+            CambioAnterior = False
+            PorcentajeAnterior = False
+            Previo = False
+            CambioPrevio = False
+            PorcentajePrevio = False
+        End If
+
 
         ' Cerrar con resultado OK
         Me.DialogResult = DialogResult.OK

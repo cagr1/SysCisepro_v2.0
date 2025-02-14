@@ -666,7 +666,7 @@
             Me.dgvComparacion.Name = "dgvComparacion"
             Me.dgvComparacion.RowHeadersVisible = False
             Me.dgvComparacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComparacion.Size = New System.Drawing.Size(767, 362)
+            Me.dgvComparacion.Size = New System.Drawing.Size(795, 506)
             Me.dgvComparacion.StateNormal.Background.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvComparacion.TabIndex = 252
             '
@@ -700,7 +700,7 @@
             '
             Me.cbxDates.AlwaysActive = False
             Me.cbxDates.DropDownWidth = 150
-            Me.cbxDates.Items.AddRange(New Object() {"Mensual", "Trimestral", "Anual ", "Personalizado"})
+            Me.cbxDates.Items.AddRange(New Object() {"Mensual", "Trimestral", "Semestral", "Anual ", "Personalizado"})
             Me.cbxDates.Location = New System.Drawing.Point(10, 8)
             Me.cbxDates.Name = "cbxDates"
             Me.cbxDates.Size = New System.Drawing.Size(76, 21)

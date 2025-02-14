@@ -407,6 +407,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
                     ' Insertar los datos del DataGridView
                     Dim c = 0
+                    Dim columnasContables As String() = {"DEBE", "HABER"}
                     For o = 0 To dgvAsientosDiario.Rows.Count - 1
                         If Not dgvAsientosDiario.Rows(o).Visible Then Continue For
                         indc = 1
@@ -414,7 +415,18 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                             If Not dgvAsientosDiario.Columns(j).Visible Then Continue For
                             Dim valorCelda As Object = dgvAsientosDiario.Rows(o).Cells(j).Value
                             Dim celda = worksheet.Cell(c + 1 + headin, indc)
-                            celda.Value = If(valorCelda IsNot Nothing AndAlso Not IsDBNull(valorCelda), valorCelda.ToString(), "")
+                            Dim columnname As String = dgvAsientosDiario.Columns(j).HeaderText
+
+                            If valorCelda IsNot Nothing AndAlso IsNumeric(valorCelda) Then
+                                If columnasContables.Contains(columnname) Then
+                                    celda.Value = CDbl(valorCelda)
+                                    celda.Style.NumberFormat.Format = "#,##0.00"
+                                Else
+                                    celda.Value = CDbl(valorCelda)
+                                End If
+                            Else
+                                celda.Value = If(valorCelda IsNot Nothing AndAlso Not IsDBNull(valorCelda), valorCelda.ToString(), "")
+                            End If
 
                             ' Aplicar bordes
                             celda.Style.Border.TopBorder = XLBorderStyleValues.Thin
@@ -511,8 +523,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                         Return
                     End If
 
-
-                    Dim nombreU As String = "AJUSTE EN BUSQUEDA LIBRO DIARIO " & UserName
+                    'insertar en nombreU el usario y la modificacion que se realizo
+                    Dim nombreU As String = "Ajuste en libro Diario No " & dgvAsientosDiario.Rows(0).Cells(8).Value.ToString() & " por " & UserName
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
                         btnBuscarAsiento.PerformClick()

@@ -129,11 +129,9 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>434, 17</value>
   </metadata>
-  <data name="kryptonLabel13.Values.Text" xml:space="preserve">
-    <value>La siguiente nómina representa una lista de aspirantes a quienes se ha entregado equipo de seguridad y no se presen_
-taron a laborar de tal manera que no aparecen en el rol de pagos correspondientes. Ni registran descuento alguno por
-dicho equipo. Este equipo debe ser reingresado a bodega.</value>
-  </data>
+  <metadata name="kmcExcelMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>531, 17</value>
+  </metadata>
   <metadata name="Column9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -197,9 +195,11 @@ dicho equipo. Este equipo debe ser reingresado a bodega.</value>
   <metadata name="Column17.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="kmcExcelMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>531, 17</value>
-  </metadata>
+  <data name="kryptonLabel13.Values.Text" xml:space="preserve">
+    <value>La siguiente nómina representa una lista de aspirantes a quienes se ha entregado equipo de seguridad y no se presen_
+taron a laborar de tal manera que no aparecen en el rol de pagos correspondientes. Ni registran descuento alguno por
+dicho equipo. Este equipo debe ser reingresado a bodega.</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>58</value>
   </metadata>

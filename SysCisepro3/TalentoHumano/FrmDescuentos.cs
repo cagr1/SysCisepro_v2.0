@@ -1770,11 +1770,9 @@ namespace SysCisepro3.TalentoHumano
             }
         }
 
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
 
-
-
-
-
-
+        }
     }
 }

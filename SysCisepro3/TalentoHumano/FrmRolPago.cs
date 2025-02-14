@@ -28,6 +28,7 @@ using ClassLibraryCisepro3.EstructuraEmpresa;
 using SysCisepro3.Reportes;
 using CrystalDecisions.CrystalReports.Engine;
 using ClosedXML.Excel;
+using System.Diagnostics;
 
 namespace SysCisepro3.TalentoHumano
 {
@@ -3279,6 +3280,32 @@ namespace SysCisepro3.TalentoHumano
 
                             var dataCell = ws.Cell(rowIndex, colIndex);
                             dataCell.Value = XLCellValue.FromObject(cell.Value ?? String.Empty); // Controlamos valores nulos
+                            object cellValue = cell.Value ?? string.Empty;
+
+                            string columnheader = dgvDetallesRol.Columns[cell.ColumnIndex].HeaderText;
+
+                            if (columnheader.Contains("ID") || columnheader == "C.I." )
+                            {
+                                // Tratar los ID como texto para preservar ceros iniciales
+                                dataCell.Value = cellValue.ToString();
+                            }
+
+                            else if (cellValue is double || cellValue is float || cellValue is decimal)
+                            {
+                                // Mantener números decimales en formato numérico
+                                dataCell.Value = Convert.ToDouble(cellValue);
+                            }
+                            else if (double.TryParse(cellValue.ToString(), out double numValue))
+                            {
+                                // Si es un número pero viene como string, convertirlo
+                                dataCell.Value = numValue;
+                            }
+                            else
+                            {
+                                // Cualquier otro caso, tratarlo como texto
+                                dataCell.Value = cellValue.ToString();
+                            }
+
 
                             if ((row.Tag + "").Equals("2") || (row.Tag + "").Equals("3"))
                                 dataCell.Style.Font.Bold = true;
@@ -3312,8 +3339,11 @@ namespace SysCisepro3.TalentoHumano
                     // Ajuste automático de columnas
                     ws.Columns().AdjustToContents();
 
-                    // Guardar archivo
+                    // Guardar el archivo en la ruta seleccionada por el usuario
                     wb.SaveAs(sfd.FileName);
+
+                    // Abrimos el archivo
+                    Process.Start(sfd.FileName);
                 }
 
 
