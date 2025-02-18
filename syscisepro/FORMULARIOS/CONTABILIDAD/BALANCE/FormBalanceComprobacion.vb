@@ -212,10 +212,31 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
                 Next
 
                 Dim columnasContable As String() = {"DEBE", "HABER", "SALDO"}
+                Dim quitarCeros As Boolean = chkTodos.Checked
+                Dim filaExcel As Integer = 1 + headin
                 ' Detalle de datos
+
+
                 Dim c = 0
                 For i = 0 To dgvAsientosDiario.Rows.Count - 1
                     If dgvAsientosDiario.Rows(i).IsNewRow Then Continue For ' Evita la fila vacía
+
+                    If quitarCeros Then
+                        Dim todosCeros As Boolean = True
+                        For Each columna In columnasContable
+                            Dim colIndex = dgvAsientosDiario.Columns.Cast(Of DataGridViewColumn).FirstOrDefault(Function(col) col.HeaderText = columna)?.Index
+                            If colIndex IsNot Nothing AndAlso colIndex >= 0 Then
+                                Dim valor = dgvAsientosDiario.Rows(i).Cells(colIndex.Value).Value
+                                If valor IsNot Nothing AndAlso IsNumeric(valor) AndAlso CDbl(valor) <> 0 Then
+                                    todosCeros = False
+                                    Exit For
+                                End If
+                            End If
+                        Next
+                        If todosCeros Then Continue For ' Omitir la fila si todas las columnas contables son 0
+                    End If
+
+
                     indc = 1
                     For j = 0 To dgvAsientosDiario.Columns.Count - 1
                         If Not dgvAsientosDiario.Columns(j).Visible Then Continue For
@@ -223,7 +244,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
 
                         ' Verificar si el valor de la celda no es null antes de asignarlo
                         Dim cellValue = dgvAsientosDiario.Rows(i).Cells(j).Value
-                        Dim cell = worksheet.Cell(i + 1 + headin, indc)
+                        Dim cell = worksheet.Cell(c + 1 + headin, indc)
                         Dim columnName As String = dgvAsientosDiario.Columns(j).HeaderText
 
 

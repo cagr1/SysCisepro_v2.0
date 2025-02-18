@@ -387,6 +387,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         Private Function ExportarDataGridView(ByVal worksheet As IXLWorksheet, ByVal dgv As DataGridView, ByVal startRow As Integer, ByVal totalLabel As String, ByVal totalDebe As String, ByVal totalHaber As String, ByVal total As String) As Integer
             Dim colIndex As Integer = 1
             Dim columnasContables As String() = {"DEBE", "HABER", "SALDO"}
+            Dim quitarCeros As Boolean = chkTodos.Checked
             ' Encabezado
             For Each column As DataGridViewColumn In dgv.Columns
                 If column.Visible Then
@@ -400,30 +401,48 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             ' Datos
             For Each row As DataGridViewRow In dgv.Rows
                 If row.Visible Then
-                    colIndex = 1
-                    For Each cell As DataGridViewCell In row.Cells
-                        If dgv.Columns(cell.ColumnIndex).Visible Then
-                            Dim valor As Object = cell.Value
-                            Dim cellExcel = worksheet.Cell(startRow, colIndex)
-                            Dim colName = dgv.Columns(cell.ColumnIndex).HeaderText
 
-                            If columnasContables.Contains(colName) AndAlso IsNumeric(valor) Then
-                                cellExcel.Value = Convert.ToDouble(valor)
-                                cellExcel.Style.NumberFormat.Format = "#,##0.00"
-                            ElseIf IsNumeric(valor) Then
-                                cellExcel.Value = Convert.ToDouble(valor)
-                            Else
-                                cellExcel.Value = If(valor IsNot Nothing, valor.ToString(), "")
+                    Dim omitirFila As Boolean = quitarCeros
+
+                    If quitarCeros Then
+                        omitirFila = True
+                        For Each colName In columnasContables
+                            Dim colIndexCheck As Integer = dgv.Columns(colName).Index
+                            Dim cellValue = row.Cells(colIndexCheck).Value
+                            If cellValue IsNot Nothing AndAlso IsNumeric(cellValue) AndAlso CDbl(cellValue) <> 0 Then
+                                omitirFila = False
+                                Exit For
                             End If
+                        Next
+                    End If
+
+                    If omitirFila Then Continue For
+
+
+                    colIndex = 1
+                        For Each cell As DataGridViewCell In row.Cells
+                            If dgv.Columns(cell.ColumnIndex).Visible Then
+                                Dim valor As Object = cell.Value
+                                Dim cellExcel = worksheet.Cell(startRow, colIndex)
+                                Dim colName = dgv.Columns(cell.ColumnIndex).HeaderText
+
+                                If columnasContables.Contains(colName) AndAlso IsNumeric(valor) Then
+                                    cellExcel.Value = Convert.ToDouble(valor)
+                                    cellExcel.Style.NumberFormat.Format = "#,##0.00"
+                                ElseIf IsNumeric(valor) Then
+                                    cellExcel.Value = Convert.ToDouble(valor)
+                                Else
+                                    cellExcel.Value = If(valor IsNot Nothing, valor.ToString(), "")
+                                End If
 
 
 
 
-                            colIndex += 1
-                        End If
-                    Next
-                    startRow += 1
-                End If
+                                colIndex += 1
+                            End If
+                        Next
+                        startRow += 1
+                    End If
             Next
 
             ' Totales
@@ -895,8 +914,8 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
         Private Sub dtpFechaDesdeMes_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaDesdeMes.ValueChanged
 
-
             UpdateCbxDates()
+            callReport()
 
         End Sub
 
@@ -912,11 +931,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
         End Sub
 
-        Private Sub CargaIngresosMensualComparativo(ByVal mes1 As Integer, ByVal anio1 As Integer, ByVal mes2 As Integer, ByVal anio2 As Integer)
 
-            dgvComparacion.DataSource = Nothing
-
-        End Sub
 
         Private Sub KryptonRibbon1_SelectedTabChanged(sender As Object, e As EventArgs)
 
@@ -1240,41 +1255,154 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
         Private Sub callReport()
 
-            Dim EstadoPyG As DataTable
+            Try
 
-            dgvComparacion.DataSource = Nothing
+                Dim EstadoPyG As DataTable
 
-            FechaDesdeT = New Date(FechaDesdeT.Year, FechaDesdeT.Month, FechaDesdeT.Day, 0, 0, 0)
-            FechaHastaT = New Date(FechaHastaT.Year, FechaHastaT.Month, FechaHastaT.Day, 23, 59, 59)
+                dgvComparacion.DataSource = Nothing
 
-            If cbxShowColumns.SelectedIndex = 0 Then
-                Columnas = "Mensual"
-            ElseIf cbxShowColumns.SelectedIndex = 1 Then
-                Columnas = "Trimestral"
-            ElseIf cbxShowColumns.SelectedIndex = 2 Then
-                Columnas = "Semestral"
-            ElseIf cbxShowColumns.SelectedIndex = 3 Then
-                Columnas = "Anual"
-            End If
+                FechaDesdeT = New Date(FechaDesdeT.Year, FechaDesdeT.Month, FechaDesdeT.Day, 0, 0, 0)
+                FechaHastaT = New Date(FechaHastaT.Year, FechaHastaT.Month, FechaHastaT.Day, 23, 59, 59)
+
+                If cbxShowColumns.SelectedIndex = 0 Then
+                    Columnas = "Mensual"
+                ElseIf cbxShowColumns.SelectedIndex = 1 Then
+                    Columnas = "Trimestral"
+                ElseIf cbxShowColumns.SelectedIndex = 2 Then
+                    Columnas = "Semestral"
+                ElseIf cbxShowColumns.SelectedIndex = 3 Then
+                    Columnas = "Anual"
+                End If
 
 
-            If Anterior Then
-                Previo = False
-                EstadoPyG = _objEstado.SeleccionarEstadoPerdidasGananciasComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioAnterior, PorcentajeAnterior)
-            ElseIf Previo Then
-                Anterior = False
-                EstadoPyG = _objEstado.SeleccionarEstadoPerdidasGananciasComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioPrevio, PorcentajePrevio)
-            Else
+                If Anterior Then
+                    Previo = False
+                    EstadoPyG = _objEstado.SeleccionarEstadoPerdidasGananciasComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioAnterior, PorcentajeAnterior)
+                ElseIf Previo Then
+                    Anterior = False
+                    EstadoPyG = _objEstado.SeleccionarEstadoPerdidasGananciasComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioPrevio, PorcentajePrevio)
+                Else
 
-                EstadoPyG = _objEstado.SeleccionarEstadoPerdidasGananciasComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioAnterior, PorcentajeAnterior)
+                    EstadoPyG = _objEstado.SeleccionarEstadoPerdidasGananciasComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioAnterior, PorcentajeAnterior)
 
-            End If
-            If EstadoPyG IsNot Nothing AndAlso EstadoPyG.Rows.Count > 0 Then
+                End If
+                If EstadoPyG IsNot Nothing AndAlso EstadoPyG.Rows.Count > 0 Then
 
-                dgvComparacion.DataSource = EstadoPyG
-                dgvComparacion.Columns(0).Width = 25 : dgvComparacion.Columns("Codigo").Width = 80 : dgvComparacion.Columns("Cuenta").Width = 150
-            End If
+                    dgvComparacion.DataSource = EstadoPyG
+                    dgvComparacion.Columns(0).Width = 25
+                    dgvComparacion.Columns("Codigo").Width = 80
+                    dgvComparacion.Columns("Cuenta").Width = 180
 
+                    Dim AnchoFijo As Integer = TextRenderer.MeasureText("-10000000.00", dgvComparacion.Font).Width + 5
+
+                    For Each col As DataGridViewColumn In dgvComparacion.Columns
+
+                        ' Si la columna no es Codigo, Cuenta, Nivel o Padre, alinearla a la derecha
+                        If col.Name <> "Codigo" AndAlso col.Name <> "Cuenta" AndAlso col.Name <> "Nivel" AndAlso col.Name <> "Padre" Then
+                            col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+                        End If
+
+
+                        If col.Name.StartsWith("Cambio") Or col.Name.StartsWith("Variacion") Then
+                            col.DefaultCellStyle.Format = "N2"
+                            col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+                            col.Width = AnchoFijo
+                        End If
+                    Next
+
+                    AddHandler dgvComparacion.CellFormatting,
+                      Sub(sender As Object, e As DataGridViewCellFormattingEventArgs)
+                          Dim dgv As DataGridView = DirectCast(sender, DataGridView)
+                          Dim columnName As String = dgv.Columns(e.ColumnIndex).Name
+
+                          If columnName.StartsWith("Cambio") Or columnName.StartsWith("Variacion") Then
+                              If e.Value IsNot Nothing AndAlso Not IsDBNull(e.Value) Then
+                                  Dim valorStr As String = e.Value.ToString()
+                                  Dim valor As Decimal
+
+                                  ' Para Variacion, eliminar el % antes de convertir
+                                  If columnName.StartsWith("Variacion") AndAlso valorStr.EndsWith("%") Then
+                                      valorStr = valorStr.Replace("%", "")
+                                  End If
+
+                                  ' Intentar convertir el valor a número
+                                  If Decimal.TryParse(valorStr, valor) Then
+                                      If valor > 0 Then
+                                          e.CellStyle.ForeColor = Color.Green
+                                      ElseIf valor < 0 Then
+                                          e.CellStyle.ForeColor = Color.Red
+                                      End If
+                                  End If
+                              End If
+                          End If
+                      End Sub
+
+                    For Each row As DataGridViewRow In dgvComparacion.Rows
+                        Select Case row.Cells("NIVEL").Value.ToString()
+                            Case "7"
+                                row.DefaultCellStyle.BackColor = Color.Lavender ' Suave lila
+                            Case "6"
+                                row.DefaultCellStyle.BackColor = Color.Thistle ' Lila claro
+                            Case "5"
+                                row.DefaultCellStyle.BackColor = Color.MistyRose ' Rosa pálido
+                            Case "4"
+                                row.DefaultCellStyle.BackColor = Color.LightSalmon ' Naranja suave
+                            Case "3"
+                                row.DefaultCellStyle.BackColor = Color.PeachPuff ' Durazno claro
+                            Case "2"
+                                row.DefaultCellStyle.BackColor = Color.Moccasin ' Amarillo crema
+                            Case "1"
+                                row.DefaultCellStyle.BackColor = Color.LemonChiffon ' Amarillo pastel
+                        End Select
+                    Next
+
+
+
+                    ' Volver a obtener la data actual de dgvComparacion
+                    Dim auxData = CType(dgvComparacion.DataSource, DataTable)
+
+                    ' Acumular saldos (sumar nodos) desde el nivel inferior hacia el superior
+                    For level As Integer = 7 To 1 Step -1
+                        For Each parentRow As DataGridViewRow In dgvComparacion.Rows
+                            Dim parentCodigo As String = parentRow.Cells("Codigo").Value.ToString()
+                            For Each childRow As DataRow In auxData.Select("Padre = '" & parentCodigo & "' AND Nivel = '" & level & "'")
+                                For Each col As DataGridViewColumn In dgvComparacion.Columns
+                                    If Not (col.Name = "Codigo" OrElse col.Name = "Cuenta" OrElse col.Name = "Nivel" OrElse col.Name = "Padre" OrElse col.Name = "nodoCom") Then
+                                        Dim parentVal As Double = 0, childVal As Double = 0
+                                        If parentRow.Cells(col.Name).Value IsNot Nothing AndAlso Not IsDBNull(parentRow.Cells(col.Name).Value) Then
+                                            Double.TryParse(parentRow.Cells(col.Name).Value.ToString(), parentVal)
+                                        End If
+                                        Dim childObj = childRow(col.Name)
+                                        If childObj IsNot Nothing AndAlso Not IsDBNull(childObj) Then
+                                            Double.TryParse(childObj.ToString(), childVal)
+                                        End If
+                                        parentRow.Cells(col.Name).Value = Math.Round(parentVal + childVal, 2)
+                                    End If
+                                Next
+                                If dgvComparacion.Columns.Contains("nodoCom") Then
+                                    parentRow.Cells("nodoCom").Value = "-"
+                                End If
+                            Next
+                        Next
+                        auxData = CType(dgvComparacion.DataSource, DataTable)
+                    Next
+
+                    For Each row As DataGridViewRow In dgvComparacion.Rows
+                        Dim nivel As Integer = 0
+                        If Integer.TryParse(row.Cells("Nivel").Value.ToString(), nivel) Then
+                            If nivel > 3 Then
+                                row.Visible = False
+                            ElseIf nivel = 3 AndAlso dgvComparacion.Columns.Contains("nodoCom") Then
+                                row.Cells("nodoCom").Value = "+"
+                            End If
+                        End If
+                    Next
+
+                End If
+
+            Catch Ex As Exception
+                Krypton.Toolkit.KryptonMessageBox.Show("ERROR: " & Ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
 
 
         End Sub
@@ -1320,6 +1448,45 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
         Private Sub cbxShowColumns_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxShowColumns.SelectedIndexChanged
             callReport()
+        End Sub
+
+        Private Sub dtpFechaHastaMes_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaHastaMes.ValueChanged
+
+        End Sub
+
+        Private Sub dgvComparacion_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvComparacion.CellClick
+            Try
+                If dgvComparacion.Columns(e.ColumnIndex).Name = "nodoCom" AndAlso Not dgvComparacion.Rows(e.RowIndex).IsNewRow Then
+                    Dim currentCodigo As String = dgvComparacion.CurrentRow.Cells("Codigo").Value.ToString()
+                    Dim codigoLength As Integer = currentCodigo.Length
+
+                    If dgvComparacion.CurrentRow.Cells("nodoCom").Value.ToString() = "-" Then
+                        ' Si el nodo está expandido, lo contraemos
+                        For i As Integer = 0 To dgvComparacion.Rows.Count - 1
+                            Dim padreStr As String = dgvComparacion.Rows(i).Cells("Padre").Value.ToString()
+                            If padreStr.Length >= codigoLength AndAlso padreStr.Substring(0, codigoLength) = currentCodigo Then
+                                dgvComparacion.Rows(i).Visible = False
+                                If dgvComparacion.Rows(i).Cells("nodoCom").Value IsNot Nothing AndAlso dgvComparacion.Rows(i).Cells("nodoCom").Value.ToString() = "-" Then
+                                    dgvComparacion.Rows(i).Cells("nodoCom").Value = "+"
+                                End If
+                            End If
+                        Next
+                        dgvComparacion.CurrentRow.Cells("nodoCom").Value = "+"
+                    ElseIf dgvComparacion.CurrentRow.Cells("nodoCom").Value.ToString() = "+" Then
+                        ' Si el nodo está contraído, lo expandemos
+                        For i As Integer = 0 To dgvComparacion.Rows.Count - 1
+                            If dgvComparacion.Rows(i).Cells("Padre").Value.ToString() = currentCodigo Then
+                                dgvComparacion.Rows(i).Visible = True
+                            End If
+                        Next
+                        dgvComparacion.CurrentRow.Cells("nodoCom").Value = "-"
+                    Else
+                        dgvComparacion.CurrentRow.Cells("nodoCom").Value = ""
+                    End If
+                End If
+            Catch ex As Exception
+                Krypton.Toolkit.KryptonMessageBox.Show("ERROR: " & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
         End Sub
     End Class
 End Namespace

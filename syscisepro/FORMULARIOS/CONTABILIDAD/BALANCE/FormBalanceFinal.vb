@@ -36,9 +36,22 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
                 End Select
             End Set
         End Property
-          
+
         Dim objPlanCuentas As New ClassPlanDeCuentas
-         
+
+        Private SelectedRangeT As Integer
+        Private Rango As String
+        Private FechaDesdeT As DateTime
+        Private FechaHastaT As DateTime
+        Private ShowColumnsT As Integer
+        Private Columnas As String
+        Private Anterior As Boolean
+        Private CambioAnterior As Boolean
+        Private PorcentajeAnterior As Boolean
+        Private Previo As Boolean
+        Private CambioPrevio As Boolean
+        Private PorcentajePrevio As Boolean
+
         Private Sub FormBalanceFinal_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
             ' DEFINIR TIPO Y COLOR DE SISTEMA
             Select Case _tipoCon
@@ -61,6 +74,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
             dgvMayores.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvMayores.ContextMenuStrip = Me.ContextMenuStripClicDerecho
             cbNivel.SelectedIndex = 0
+            cbxDates.SelectedIndex = 3
         End Sub
 
         Private Sub btnCargar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCargar.Click
@@ -469,16 +483,35 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
                     indc += 1
                 Next
 
+                Dim quitarCeros As Boolean = chkTodos.Checked
                 Dim columnasContable As String() = {"DEBE", "HABER", "SALDO"}
+                Dim filaExcel As Integer = 1 + headin
                 ' Detalle de datos
                 For i = 0 To dgvAsientosDiario.Rows.Count - 1
+                    'Verificar si las columansContables esan en cero
+                    Dim omitirFila As Boolean = True
+
+                    For Each colName In columnasContable
+                        Dim colIndex As Integer = dgvAsientosDiario.Columns(colName).Index
+                        Dim cellValue = dgvAsientosDiario.Rows(i).Cells(colIndex).Value
+                        If cellValue IsNot Nothing AndAlso IsNumeric(cellValue) AndAlso CDbl(cellValue) <> 0 Then
+                            omitirFila = False
+                            Exit For
+                        End If
+                    Next
+
+                    ' Si la fila debe omitirse, saltar a la siguiente iteración
+                    If quitarCeros AndAlso omitirFila Then Continue For
+
+
+
                     indc = 1
                     For j = 0 To dgvAsientosDiario.Columns.Count - 1
                         If Not dgvAsientosDiario.Columns(j).Visible Then Continue For
 
                         ' Obtener el valor de la celda
                         Dim cellValue = dgvAsientosDiario.Rows(i).Cells(j).Value
-                        Dim cell = worksheet.Cell(i + 1 + headin, indc)
+                        Dim cell = worksheet.Cell(filaExcel, indc)
                         Dim columnName As String = dgvAsientosDiario.Columns(j).HeaderText
                         ' Validar si el valor de la celda no es Nothing
                         If cellValue IsNot Nothing AndAlso IsNumeric(cellValue) Then
@@ -508,6 +541,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
 
                         indc += 1
                     Next
+                    filaExcel += 1
                 Next
 
                 ' TOTALES
@@ -733,6 +767,224 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
 
         Private Sub txtCapital_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtCapital.TextChanged
 
+        End Sub
+
+        Private Sub cbxDates_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxDates.SelectedIndexChanged
+            Dim selectedRange As String = cbxDates.SelectedItem.ToString()
+
+            Select Case selectedRange.Trim()
+                Case "Mensual"
+                    ' Desde el primer día del mes actual
+                    dtpFechaDesdeMes.Value = New Date(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month, 1)
+                    dtpFechaHastaMes.Value = New Date(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month, Date.DaysInMonth(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month))
+                    Rango = "Mensual"
+                    FechaDesdeT = dtpFechaDesdeMes.Value
+                    FechaHastaT = dtpFechaHastaMes.Value
+                Case "Trimestral"
+                    ' Desde el primer día del mes, restando 2 meses (para cubrir 3 meses en total)
+                    dtpFechaDesdeMes.Value = New Date(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month, 1).AddMonths(-2)
+                    Rango = "Trimestral"
+                    FechaDesdeT = dtpFechaDesdeMes.Value
+                    FechaHastaT = dtpFechaHastaMes.Value
+
+                Case "Semestral"
+                    ' Desde el primer día del mes, restando 5 meses (para cubrir 6 meses en total)
+                    dtpFechaDesdeMes.Value = New Date(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month, 1).AddMonths(-5)
+                    Rango = "Semestral"
+                    FechaDesdeT = dtpFechaDesdeMes.Value
+                    FechaHastaT = dtpFechaHastaMes.Value
+
+                Case "Anual"
+                    ' Desde el primer día del mes, restando 1 año
+                    dtpFechaDesdeMes.Value = New Date(dtpFechaHastaMes.Value.Year - 1, dtpFechaHastaMes.Value.Month, dtpFechaHastaMes.Value.Day)
+                    Rango = "Anual"
+                    FechaDesdeT = dtpFechaDesdeMes.Value
+                    FechaHastaT = dtpFechaHastaMes.Value
+
+
+                Case "Custom"
+                    ' No hacer cambios en las fechas, el usuario las define manualmente
+            End Select
+
+            ' Actualizar cbxShowColumns
+            'UpdateCbxShowColumns()
+
+            callReport()
+
+        End Sub
+
+        Private Sub callReport()
+
+            Dim Balance As DataTable
+
+            dgvComparacion.DataSource = Nothing
+
+            FechaDesdeT = New Date(FechaDesdeT.Year, FechaDesdeT.Month, FechaDesdeT.Day, 0, 0, 0)
+            FechaHastaT = New Date(FechaHastaT.Year, FechaHastaT.Month, FechaHastaT.Day, 23, 59, 59)
+
+            If cbxShowColumns.SelectedIndex = 0 Then
+                Columnas = "Mensual"
+            ElseIf cbxShowColumns.SelectedIndex = 1 Then
+                Columnas = "Trimestral"
+            ElseIf cbxShowColumns.SelectedIndex = 2 Then
+                Columnas = "Semestral"
+            ElseIf cbxShowColumns.SelectedIndex = 3 Then
+                Columnas = "Anual"
+            End If
+
+
+            If Anterior Then
+                Previo = False
+                Balance = objPlanCuentas.SeleccionarBalnceFinalComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioAnterior, PorcentajeAnterior)
+            ElseIf Previo Then
+                Anterior = False
+                Balance = objPlanCuentas.SeleccionarBalnceFinalComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioPrevio, PorcentajePrevio)
+            Else
+
+                Balance = objPlanCuentas.SeleccionarBalnceFinalComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioAnterior, PorcentajeAnterior)
+
+            End If
+            If Balance IsNot Nothing AndAlso Balance.Rows.Count > 0 Then
+
+                dgvComparacion.DataSource = Balance
+                dgvComparacion.Columns(0).Width = 25
+                dgvComparacion.Columns("Codigo").Width = 80
+                dgvComparacion.Columns("Cuenta").Width = 180
+
+                Dim AnchoFijo As Integer = TextRenderer.MeasureText("-10000000.00", dgvComparacion.Font).Width + 5
+
+                For Each col As DataGridViewColumn In dgvComparacion.Columns
+
+                    ' Si la columna no es Codigo, Cuenta, Nivel o Padre, alinearla a la derecha
+                    If col.Name <> "Codigo" AndAlso col.Name <> "Cuenta" AndAlso col.Name <> "Nivel" AndAlso col.Name <> "Padre" Then
+                        col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+                    End If
+
+
+                    If col.Name.StartsWith("Cambio") Or col.Name.StartsWith("Variacion") Then
+                        col.DefaultCellStyle.Format = "N2"
+                        col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+                        col.Width = AnchoFijo
+                    End If
+                Next
+
+                AddHandler dgvComparacion.CellFormatting, Sub(sender As Object, e As DataGridViewCellFormattingEventArgs)
+                                                              Dim dgv As DataGridView = DirectCast(sender, DataGridView)
+                                                              Dim columnName As String = dgv.Columns(e.ColumnIndex).Name
+
+                                                              If columnName.StartsWith("Cambio") Or columnName.StartsWith("Variacion") Then
+                                                                  If e.Value IsNot Nothing AndAlso Not IsDBNull(e.Value) Then
+                                                                      Dim valorStr As String = e.Value.ToString()
+                                                                      Dim valor As Decimal
+
+                                                                      ' Para Variacion, eliminar el % antes de convertir
+                                                                      If columnName.StartsWith("Variacion") AndAlso valorStr.EndsWith("%") Then
+                                                                          valorStr = valorStr.Replace("%", "")
+                                                                      End If
+
+                                                                      ' Intentar convertir el valor a número
+                                                                      If Decimal.TryParse(valorStr, valor) Then
+                                                                          If valor > 0 Then
+                                                                              e.CellStyle.ForeColor = Color.Green
+                                                                          ElseIf valor < 0 Then
+                                                                              e.CellStyle.ForeColor = Color.Red
+                                                                          End If
+                                                                      End If
+                                                                  End If
+                                                              End If
+                                                          End Sub
+
+            End If
+
+
+
+        End Sub
+
+        Private Sub UpdateCbxDates()
+            Dim fechaDesde As Date = dtpFechaDesdeMes.Value
+            Dim fechaHasta As Date = dtpFechaHastaMes.Value
+
+            RemoveHandler cbxDates.SelectedIndexChanged, AddressOf cbxDates_SelectedIndexChanged
+
+            'Verificar si el rango de fechas coincide con un periodo estandar
+            If IsMonthlyRange(fechaDesde, fechaHasta) Then
+                cbxDates.SelectedIndex = 0
+            ElseIf IsQuarterlyRange(fechaDesde, fechaHasta) Then
+                cbxDates.SelectedIndex = 1
+            ElseIf IsSemestralRange(fechaDesde, fechaHasta) Then
+                cbxDates.SelectedIndex = 2
+            ElseIf IsAnnualRange(fechaDesde, fechaHasta) Then
+                cbxDates.SelectedIndex = 3
+            Else
+                cbxDates.SelectedIndex = 4
+            End If
+
+            AddHandler cbxDates.SelectedIndexChanged, AddressOf cbxDates_SelectedIndexChanged
+
+        End Sub
+
+        Private Function IsMonthlyRange(ByVal fechadesde As Date, ByVal fechashasta As Date) As Boolean
+            Return fechadesde.Day = 1 AndAlso fechashasta = fechadesde.AddMonths(1).AddDays(-1)
+        End Function
+
+        Private Function IsQuarterlyRange(fechaDesde As Date, fechaHasta As Date) As Boolean
+            Return fechaDesde.Day = 1 AndAlso fechaHasta = fechaDesde.AddMonths(3).AddDays(-1)
+        End Function
+
+        Private Function IsSemestralRange(fechaDesde As Date, fechaHasta As Date) As Boolean
+            Return fechaDesde.Day = 1 AndAlso fechaHasta = fechaDesde.AddMonths(6).AddDays(-1)
+        End Function
+
+        Private Function IsAnnualRange(fechaDesde As Date, fechaHasta As Date) As Boolean
+            Return fechaDesde.Day = 1 AndAlso fechaHasta = fechaDesde.AddYears(1).AddDays(-1)
+        End Function
+
+        Private Sub btnCuztomize_Click(sender As Object, e As EventArgs) Handles btnCuztomize.Click
+            Dim frm As New FormReportEstadoPyG()
+
+            frm.SelectedRange = cbxDates.SelectedIndex
+            frm.FechaDesde = dtpFechaDesdeMes.Value
+            frm.FechaHasta = dtpFechaHastaMes.Value
+            frm.ShowColumns = cbxShowColumns.SelectedIndex
+            frm.Anterior = Anterior
+            frm.CambioAnterior = CambioAnterior
+            frm.PorcentajeAnterior = PorcentajeAnterior
+            frm.Previo = Previo
+            frm.CambioPrevio = CambioPrevio
+            frm.PorcentajePrevio = PorcentajePrevio
+
+            If frm.ShowDialog() = DialogResult.OK Then
+                SelectedRangeT = frm.SelectedRange
+                FechaDesdeT = frm.FechaDesde
+                FechaHastaT = frm.FechaHasta
+                ShowColumnsT = frm.ShowColumns
+                Anterior = frm.Anterior
+                CambioAnterior = frm.CambioAnterior
+                PorcentajeAnterior = frm.PorcentajeAnterior
+                Previo = frm.Previo
+                CambioPrevio = frm.CambioPrevio
+                PorcentajePrevio = frm.PorcentajePrevio
+
+                cbxDates.SelectedIndex = SelectedRangeT
+                dtpFechaDesdeMes.Value = FechaDesdeT
+                dtpFechaHastaMes.Value = FechaHastaT
+                cbxShowColumns.SelectedIndex = ShowColumnsT
+
+            End If
+
+
+        End Sub
+
+        Private Sub dtpFechaDesdeMes_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaDesdeMes.ValueChanged
+
+            UpdateCbxDates()
+            callReport()
+
+
+        End Sub
+
+        Private Sub cbxShowColumns_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxShowColumns.SelectedIndexChanged
+            callReport()
         End Sub
     End Class
 End Namespace
