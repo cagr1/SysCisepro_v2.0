@@ -1211,7 +1211,7 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                     archivo.writeline("<aplicConvDobTrib>NA</aplicConvDobTrib>")
                     archivo.writeline("<pagExtSujRetNorLeg>NA</pagExtSujRetNorLeg>")
                     archivo.writeline("</pagoExterior>")
-                    If Convert.ToDecimal(dgvComprasATS.Rows(indiceCompras).Cells(13).Value) > Convert.ToDecimal(999.99) Then
+                    If Convert.ToDecimal(dgvComprasATS.Rows(indiceCompras).Cells(13).Value) > Convert.ToDecimal(499.99) Then
                         archivo.writeline("<formasDePago>")
                         archivo.writeline("<formaPago>01</formaPago>")
                         archivo.writeline("</formasDePago>")

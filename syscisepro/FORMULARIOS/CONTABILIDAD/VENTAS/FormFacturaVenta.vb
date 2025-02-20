@@ -908,7 +908,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                             Dim nombreU As String = "FACTURA " & UserName
                             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                             If res(0) Then
-                                If lblPtoEmisionFacturaEmpresa.Text = "002" Then ExportarXml()
+                                If lblPtoEmisionFacturaEmpresa.Text = "002" OrElse lblPtoEmisionFacturaEmpresa.Text = "003" OrElse lblPtoEmisionFacturaEmpresa.Text = "004" Then ExportarXml()
                                 DeshabilitadoInicio() ' bloquea los campos
                                 KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                             Else

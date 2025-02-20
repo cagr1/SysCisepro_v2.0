@@ -82,7 +82,10 @@
             Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.btnCuztomize = New Krypton.Toolkit.KryptonButton()
             Me.dgvComparacion = New Krypton.Toolkit.KryptonDataGridView()
+            Me.nodoCom = New Krypton.Toolkit.KryptonDataGridViewButtonColumn()
             Me.KryptonGroupBox4 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.chkOcultar = New ComponentFactory.Krypton.Toolkit.KryptonCheckBox()
+            Me.btnExportarComparacion = New Krypton.Toolkit.KryptonButton()
             Me.cbxDates = New ComponentFactory.Krypton.Toolkit.KryptonComboBox()
             Me.cbxShowColumns = New Krypton.Toolkit.KryptonComboBox()
             Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
@@ -95,8 +98,6 @@
             Me.KryptonRibbonGroupTriple1 = New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple()
             Me.KryptonRibbonGroup1 = New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup()
             Me.KryptonContextMenuItems1 = New ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems()
-            Me.KryptonButton1 = New Krypton.Toolkit.KryptonButton()
-            Me.nodoCom = New Krypton.Toolkit.KryptonDataGridViewButtonColumn()
             CType(Me.dgvEgresos, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvIngresos, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.ContextMenuStripClicDerecho.SuspendLayout()
@@ -700,9 +701,15 @@
             Me.dgvComparacion.Name = "dgvComparacion"
             Me.dgvComparacion.RowHeadersVisible = False
             Me.dgvComparacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComparacion.Size = New System.Drawing.Size(795, 506)
+            Me.dgvComparacion.Size = New System.Drawing.Size(795, 544)
             Me.dgvComparacion.StateNormal.Background.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvComparacion.TabIndex = 252
+            '
+            'nodoCom
+            '
+            Me.nodoCom.HeaderText = "+"
+            Me.nodoCom.Name = "nodoCom"
+            Me.nodoCom.Width = 30
             '
             'KryptonGroupBox4
             '
@@ -713,7 +720,8 @@
             '
             'KryptonGroupBox4.Panel
             '
-            Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonButton1)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.chkOcultar)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.btnExportarComparacion)
             Me.KryptonGroupBox4.Panel.Controls.Add(Me.cbxDates)
             Me.KryptonGroupBox4.Panel.Controls.Add(Me.cbxShowColumns)
             Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel11)
@@ -724,6 +732,40 @@
             Me.KryptonGroupBox4.TabIndex = 230
             Me.KryptonGroupBox4.Values.Heading = "Busqueda"
             Me.KryptonGroupBox4.Values.Image = Global.syscisepro.My.Resources.Resources.calendar_month_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            '
+            'chkOcultar
+            '
+            Me.chkOcultar.Images.CheckedNormal = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chkOcultar.Images.CheckedPressed = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chkOcultar.Images.CheckedTracking = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chkOcultar.Location = New System.Drawing.Point(561, 11)
+            Me.chkOcultar.Name = "chkOcultar"
+            Me.chkOcultar.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue
+            Me.chkOcultar.Size = New System.Drawing.Size(91, 18)
+            Me.chkOcultar.StateCommon.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chkOcultar.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
+            Me.chkOcultar.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
+            Me.chkOcultar.TabIndex = 252
+            Me.chkOcultar.Values.Text = "Quitar $0.00"
+            '
+            'btnExportarComparacion
+            '
+            Me.btnExportarComparacion.Location = New System.Drawing.Point(680, 3)
+            Me.btnExportarComparacion.Name = "btnExportarComparacion"
+            Me.btnExportarComparacion.Size = New System.Drawing.Size(30, 30)
+            Me.btnExportarComparacion.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.[False]
+            Me.btnExportarComparacion.StateCommon.Border.Draw = Krypton.Toolkit.InheritBool.[False]
+            Me.btnExportarComparacion.StateCommon.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnExportarComparacion.TabIndex = 234
+            Me.btnExportarComparacion.Values.ImageStates.ImageCheckedNormal = Nothing
+            Me.btnExportarComparacion.Values.ImageStates.ImageCheckedPressed = Nothing
+            Me.btnExportarComparacion.Values.ImageStates.ImageCheckedTracking = Nothing
+            Me.btnExportarComparacion.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarComparacion.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarComparacion.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarComparacion.Values.Text = ""
             '
             'cbxDates
             '
@@ -813,31 +855,6 @@
             'KryptonRibbonGroup1
             '
             Me.KryptonRibbonGroup1.Items.AddRange(New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer() {Me.KryptonRibbonGroupTriple1})
-            '
-            'KryptonButton1
-            '
-            Me.KryptonButton1.Location = New System.Drawing.Point(556, 3)
-            Me.KryptonButton1.Name = "KryptonButton1"
-            Me.KryptonButton1.Size = New System.Drawing.Size(30, 30)
-            Me.KryptonButton1.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.[False]
-            Me.KryptonButton1.StateCommon.Border.Draw = Krypton.Toolkit.InheritBool.[False]
-            Me.KryptonButton1.StateCommon.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
-            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
-            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
-            Me.KryptonButton1.TabIndex = 234
-            Me.KryptonButton1.Values.ImageStates.ImageCheckedNormal = Nothing
-            Me.KryptonButton1.Values.ImageStates.ImageCheckedPressed = Nothing
-            Me.KryptonButton1.Values.ImageStates.ImageCheckedTracking = Nothing
-            Me.KryptonButton1.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.icons8_excel_48
-            Me.KryptonButton1.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.icons8_excel_48
-            Me.KryptonButton1.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.icons8_excel_48
-            Me.KryptonButton1.Values.Text = ""
-            '
-            'nodoCom
-            '
-            Me.nodoCom.HeaderText = "+"
-            Me.nodoCom.Name = "nodoCom"
-            Me.nodoCom.Width = 30
             '
             'FormEstadoPerdidasYGanancias
             '
@@ -954,7 +971,8 @@
         Friend WithEvents KryptonContextMenuItem3 As ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem
         Friend WithEvents KryptonContextMenuItems1 As ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems
         Friend WithEvents btnCuztomize As Krypton.Toolkit.KryptonButton
-        Friend WithEvents KryptonButton1 As Krypton.Toolkit.KryptonButton
+        Friend WithEvents btnExportarComparacion As Krypton.Toolkit.KryptonButton
         Friend WithEvents nodoCom As Krypton.Toolkit.KryptonDataGridViewButtonColumn
+        Friend WithEvents chkOcultar As ComponentFactory.Krypton.Toolkit.KryptonCheckBox
     End Class
 End Namespace

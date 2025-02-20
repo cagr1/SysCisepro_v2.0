@@ -1252,6 +1252,12 @@
     <Compile Include="FORMULARIOS\CONTABILIDAD\VENTAS\FrmFacturadoPorClienteAnual.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FORMULARIOS\DIVISION GEOGRÁFICA\FormGrupo.Designer.vb">
+      <DependentUpon>FormGrupo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\DIVISION GEOGRÁFICA\FormGrupo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FORMULARIOS\ESTRUCTURA ADMINISTRATIVA\FormMantenimientoUsuario.Designer.vb">
       <DependentUpon>FormMantenimientoUsuario.vb</DependentUpon>
     </Compile>
@@ -2934,6 +2940,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\VENTAS\FrmFacturadoPorClienteAnual.resx">
       <DependentUpon>FrmFacturadoPorClienteAnual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\DIVISION GEOGRÁFICA\FormGrupo.resx">
+      <DependentUpon>FormGrupo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\ESTRUCTURA ADMINISTRATIVA\FormMantenimientoUsuario.resx">
       <DependentUpon>FormMantenimientoUsuario.vb</DependentUpon>
