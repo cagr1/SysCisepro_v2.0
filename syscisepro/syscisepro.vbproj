@@ -994,6 +994,12 @@
     <Compile Include="FORMULARIOS\CONTABILIDAD\CUENTAS POR COBRAR\FrmCuentasPorCobrarGeneralClienteNoConvenio.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FORMULARIOS\CONTABILIDAD\CUENTAS POR COBRAR\FrmPendienteFacturacion.Designer.vb">
+      <DependentUpon>FrmPendienteFacturacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\CONTABILIDAD\CUENTAS POR COBRAR\FrmPendienteFacturacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FORMULARIOS\CONTABILIDAD\CUENTAS POR PAGAR\FormCuentasPorPagar.Designer.vb">
       <DependentUpon>FormCuentasPorPagar.vb</DependentUpon>
     </Compile>
@@ -2810,6 +2816,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\CUENTAS POR COBRAR\FrmCuentasPorCobrarGeneralClienteNoConvenio.resx">
       <DependentUpon>FrmCuentasPorCobrarGeneralClienteNoConvenio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\CUENTAS POR COBRAR\FrmPendienteFacturacion.resx">
+      <DependentUpon>FrmPendienteFacturacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\CUENTAS POR PAGAR\FormCuentasPorPagar.resx">
       <DependentUpon>FormCuentasPorPagar.vb</DependentUpon>

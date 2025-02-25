@@ -5,6 +5,7 @@ Imports ClassLibraryCisepro.ENUMS
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports Krypton.Toolkit
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
     Public Class FrmCuentasPorCobrarGeneralClienteNoConvenio
@@ -334,6 +335,10 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
                 KryptonMessageBox.Show("Metodo exportar datos" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
-         
+
+        Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+            Dim frm As New FrmPendienteFacturacion
+            frm.ShowDialog()
+        End Sub
     End Class
 End Namespace

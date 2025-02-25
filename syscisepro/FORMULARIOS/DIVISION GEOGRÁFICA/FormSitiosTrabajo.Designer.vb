@@ -88,6 +88,7 @@
             Me.btnAnularSitio = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnCancelarSitio = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnExportarSitio = New System.Windows.Forms.ToolStripMenuItem()
+            Me.btnSitios = New System.Windows.Forms.ToolStripMenuItem()
             Me.ListView1 = New System.Windows.Forms.ListView()
             Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
             Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -337,7 +338,7 @@
             Me.crvSitios.Location = New System.Drawing.Point(0, 0)
             Me.crvSitios.Name = "crvSitios"
             Me.crvSitios.ShowLogo = False
-            Me.crvSitios.Size = New System.Drawing.Size(825, 669)
+            Me.crvSitios.Size = New System.Drawing.Size(842, 667)
             Me.crvSitios.TabIndex = 0
             Me.crvSitios.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             '
@@ -742,12 +743,12 @@
             'MenuStrip1
             '
             Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnCargarSitios, Me.btnNuevoSitio, Me.btnGuardarSitio, Me.btnActualizarSitio, Me.btnAnularSitio, Me.btnCancelarSitio, Me.btnExportarSitio})
+            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnCargarSitios, Me.btnNuevoSitio, Me.btnGuardarSitio, Me.btnActualizarSitio, Me.btnAnularSitio, Me.btnCancelarSitio, Me.btnExportarSitio, Me.btnSitios})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(842, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(842, 51)
             Me.MenuStrip1.TabIndex = 182
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -818,6 +819,14 @@
             Me.btnExportarSitio.Name = "btnExportarSitio"
             Me.btnExportarSitio.Size = New System.Drawing.Size(99, 28)
             Me.btnExportarSitio.Text = "EXPORTAR"
+            '
+            'btnSitios
+            '
+            Me.btnSitios.Image = Global.syscisepro.My.Resources.Resources.group_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnSitios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.btnSitios.Name = "btnSitios"
+            Me.btnSitios.Size = New System.Drawing.Size(88, 28)
+            Me.btnSitios.Text = "GRUPOS"
             '
             'ListView1
             '
@@ -1355,7 +1364,7 @@
             Me.KryptonPage2.LastVisibleSet = True
             Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage2.Name = "KryptonPage2"
-            Me.KryptonPage2.Size = New System.Drawing.Size(842, 669)
+            Me.KryptonPage2.Size = New System.Drawing.Size(842, 667)
             Me.KryptonPage2.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage2.Text = "Detalles Puesto"
             Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
@@ -1517,7 +1526,7 @@
             Me.KryptonPage3.LastVisibleSet = True
             Me.KryptonPage3.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage3.Name = "KryptonPage3"
-            Me.KryptonPage3.Size = New System.Drawing.Size(825, 669)
+            Me.KryptonPage3.Size = New System.Drawing.Size(842, 667)
             Me.KryptonPage3.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage3.Text = "Reporte"
             Me.KryptonPage3.ToolTipTitle = "Page ToolTip"
@@ -1716,5 +1725,6 @@
         Friend WithEvents DateTimePicker6 As DateTimePicker
         Friend WithEvents DateTimePicker7 As DateTimePicker
         Friend WithEvents KryptonLabel33 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents btnSitios As ToolStripMenuItem
     End Class
 End Namespace

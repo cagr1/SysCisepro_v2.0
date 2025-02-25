@@ -17,6 +17,7 @@ Namespace FORMULARIOS.DIVISION_GEOGRÁFICA
     ''' </summary>
     Public Class FormSitiosTrabajo
         Private _tipoCon As TipoConexion
+        Public UserName As String
         Property TipoCox As Integer
             Private Get
                 Select Case _tipoCon
@@ -978,6 +979,13 @@ Namespace FORMULARIOS.DIVISION_GEOGRÁFICA
         End Sub
 
         Private Sub cbxHorasPuesto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxHorasPuesto.SelectedIndexChanged
+
+        End Sub
+
+        Private Sub btnSitios_Click(sender As Object, e As EventArgs) Handles btnSitios.Click
+            Dim frm As New FormGrupo
+            frm.Usuario = UserName
+            frm.ShowDialog()
 
         End Sub
     End Class

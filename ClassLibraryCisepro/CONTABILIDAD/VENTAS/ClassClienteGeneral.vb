@@ -79,6 +79,13 @@ Namespace CONTABILIDAD.VENTAS
             Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "cargarClienteGeneralFacturasPorCobrar", True, pars)
         End Function
 
+        Public Function CargarClienteGeneralSinFacturasPorRangoFecha(ByVal tipoCon As TipoConexion, ByVal desde As DateTime, ByVal hasta As DateTime) As DataTable
+            Dim pars = New List(Of Object())
+            pars.Add(New Object() {"@FECHA_INICIAL", SqlDbType.DateTime, desde})
+            pars.Add(New Object() {"@FECHA_FINAL", SqlDbType.DateTime, hasta})
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_cargarClienteGeneralSinFacturasPorCobrarPorRangoFecha", True, pars)
+        End Function
+
         Public Function BuscarFiltradoPorRazonSocialClienteVigilanciaFisica(ByVal tipoCon As TipoConexion, ByVal parametroBusqueda As String) As DataTable
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"NOMPRE_RAZON_SOCIAL_CLIENTE_GENERAL", SqlDbType.VarChar, parametroBusqueda})

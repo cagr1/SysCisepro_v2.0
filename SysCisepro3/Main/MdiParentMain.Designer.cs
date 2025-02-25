@@ -211,6 +211,7 @@
             this.toolStripSeparator41 = new System.Windows.Forms.ToolStripSeparator();
             this.dETALLEDECUENTASCLIENTESINCONVENIOtoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dETALLEDECUENTASCLIENTECONVENIOtoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator24 = new System.Windows.Forms.ToolStripSeparator();
             this.aUXILIARESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aUXILIARESCOMPRASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cONSULTACOMPRASASIENTOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -228,7 +229,6 @@
             this.eSTADODEPÉRDIDASYGANANCIASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gENERALToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dETALLADOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cOMPARATIVOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bALANCEFINALToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsRecursoHumano = new System.Windows.Forms.ToolStripDropDownButton();
             this.rEGISTROPROYECTOCONTRATACIONtoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -1909,7 +1909,8 @@
             this.dETALLEDECUENTASPORCOBRARToolStripMenuItem,
             this.toolStripSeparator41,
             this.dETALLEDECUENTASCLIENTESINCONVENIOtoolStripMenuItem,
-            this.dETALLEDECUENTASCLIENTECONVENIOtoolStripMenuItem});
+            this.dETALLEDECUENTASCLIENTECONVENIOtoolStripMenuItem,
+            this.toolStripSeparator24});
             this.cUENTASPORCOBRARToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cUENTASPORCOBRARToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.add_card_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.cUENTASPORCOBRARToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -1953,6 +1954,11 @@
             this.dETALLEDECUENTASCLIENTECONVENIOtoolStripMenuItem.Size = new System.Drawing.Size(313, 22);
             this.dETALLEDECUENTASCLIENTECONVENIOtoolStripMenuItem.Text = "DETALLE DE CUENTAS CLIENTE / CONVENIO";
             this.dETALLEDECUENTASCLIENTECONVENIOtoolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
+            // 
+            // toolStripSeparator24
+            // 
+            this.toolStripSeparator24.Name = "toolStripSeparator24";
+            this.toolStripSeparator24.Size = new System.Drawing.Size(310, 6);
             // 
             // aUXILIARESToolStripMenuItem
             // 
@@ -2086,8 +2092,7 @@
             // 
             this.eSTADODEPÉRDIDASYGANANCIASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gENERALToolStripMenuItem,
-            this.dETALLADOToolStripMenuItem,
-            this.cOMPARATIVOToolStripMenuItem});
+            this.dETALLADOToolStripMenuItem});
             this.eSTADODEPÉRDIDASYGANANCIASToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.finance_mode_24dp_FILL0_wght400_GRAD0_opsz24;
             this.eSTADODEPÉRDIDASYGANANCIASToolStripMenuItem.Name = "eSTADODEPÉRDIDASYGANANCIASToolStripMenuItem";
             this.eSTADODEPÉRDIDASYGANANCIASToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
@@ -2097,7 +2102,7 @@
             // 
             this.gENERALToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24;
             this.gENERALToolStripMenuItem.Name = "gENERALToolStripMenuItem";
-            this.gENERALToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gENERALToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.gENERALToolStripMenuItem.Text = "GENERAL";
             this.gENERALToolStripMenuItem.Click += new System.EventHandler(this.gENERALToolStripMenuItem_Click);
             // 
@@ -2105,14 +2110,9 @@
             // 
             this.dETALLADOToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24;
             this.dETALLADOToolStripMenuItem.Name = "dETALLADOToolStripMenuItem";
-            this.dETALLADOToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dETALLADOToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.dETALLADOToolStripMenuItem.Text = "DETALLADO";
             this.dETALLADOToolStripMenuItem.Click += new System.EventHandler(this.dETALLADOToolStripMenuItem_Click);
-            // 
-            // cOMPARATIVOToolStripMenuItem
-            // 
-            this.cOMPARATIVOToolStripMenuItem.Name = "cOMPARATIVOToolStripMenuItem";
-            this.cOMPARATIVOToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             // 
             // bALANCEFINALToolStripMenuItem
             // 
@@ -3097,7 +3097,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonNote;
         private System.Windows.Forms.ToolStripMenuItem rEPORTToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripMenuItem cOMPARATIVOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator24;
     }
 }
 

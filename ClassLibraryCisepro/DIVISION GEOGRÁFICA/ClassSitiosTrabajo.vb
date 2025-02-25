@@ -302,6 +302,18 @@ Namespace DIVISION_GEOGRÁFICA
             Return comando
         End Function
 
+        Public Function EditarGruposSitioTrabajoCommand(ByVal NombreActual As String, ByVal NuevoNombre As String) As SqlCommand
+            Dim comando = New SqlCommand
+            With comando
+                .CommandType = CommandType.StoredProcedure
+                .CommandText = "sp_EditarGrupoSitioTrabajo"
+                .Parameters.AddWithValue("@NombreActual", SqlDbType.NVarChar).Value = NombreActual
+                .Parameters.AddWithValue("@NuevoNombre", SqlDbType.NVarChar).Value = NuevoNombre
+
+            End With
+            Return comando
+        End Function
+
         Public Function GuardarGruposSitioTrabajoCommand(ByVal grupo As String) As SqlCommand
             Dim comando = New SqlCommand
             With comando

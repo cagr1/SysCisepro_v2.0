@@ -1654,7 +1654,7 @@ namespace SysCisepro3.Main
         }
         private void sITIOSDETRABAJOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.DIVISION_GEOGRÁFICA.FormSitiosTrabajo { MdiParent = this, TipoCox = TipoCox }; 
+            Form f = new syscisepro.FORMULARIOS.DIVISION_GEOGRÁFICA.FormSitiosTrabajo { MdiParent = this, TipoCox = TipoCox,UserName = ObjUsuario.Datos  }; 
             f.Show();
         }
         private void pROGRAMACIÓNGENERALToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2174,7 +2174,9 @@ namespace SysCisepro3.Main
 
         }
 
-      
+       
+
+
 
         //private void MdiParentMain_MdiChildActivate(object sender, EventArgs e)
         //{

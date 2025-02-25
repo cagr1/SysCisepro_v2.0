@@ -333,5 +333,9 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
                 KryptonMessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
+
+        Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs)
+
+        End Sub
     End Class
 End Namespace
