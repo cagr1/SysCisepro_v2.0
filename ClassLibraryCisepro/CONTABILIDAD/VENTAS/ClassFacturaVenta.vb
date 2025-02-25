@@ -15,6 +15,7 @@ Namespace CONTABILIDAD.VENTAS
         Public IdEmpresa As Integer
         Public NumeroFactura As String
         Public FechaEmisionFactura As DateTime
+        Public PlazoFactura As DateTime
         Public GuiaRemisionFactura As String
         Public IdCliente As Int64
         Public TipoPagoFactura As String
@@ -255,6 +256,7 @@ Namespace CONTABILIDAD.VENTAS
                 .Parameters.AddWithValue("@IVA_FACTURA_VENTA", SqlDbType.Decimal).Value = IvaFactura
                 .Parameters.AddWithValue("@TOTAL_FACTURA_VENTA", SqlDbType.Decimal).Value = TotalFactura
                 .Parameters.AddWithValue("@ESTADO_FACTURA_VENTA", SqlDbType.Int).Value = EstadoFactura
+                .Parameters.AddWithValue("@PLAZO_FACTURA_VENTA", SqlDbType.DateTime).Value = PlazoFactura
             End With
             Return comando
         End Function
@@ -292,6 +294,7 @@ Namespace CONTABILIDAD.VENTAS
                 .Parameters.AddWithValue("@IVA_FACTURA_VENTA", SqlDbType.Decimal).Value = IvaFactura
                 .Parameters.AddWithValue("@TOTAL_FACTURA_VENTA", SqlDbType.Decimal).Value = TotalFactura
                 .Parameters.AddWithValue("@ESTADO_FACTURA_VENTA", SqlDbType.Int).Value = EstadoFactura
+                .Parameters.AddWithValue("@PLAZO_FACTURA_VENTA", SqlDbType.DateTime).Value = PlazoFactura
             End With
             Return comando
         End Function

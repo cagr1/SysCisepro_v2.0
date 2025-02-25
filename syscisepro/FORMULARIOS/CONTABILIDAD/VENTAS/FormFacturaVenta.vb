@@ -542,7 +542,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     lblLlevaContabilidad.Text = cli.Rows(0)(7)
                     txtDireccionFacturacionCliente.Text = cli.Rows(0)(8)
                     txtTelefonoClienteGeneral.Text = cli.Rows(0)(11)
-
+                    lblEmpresaCliente.Text = If(cli.Rows(0)(20) Is DBNull.Value, "", cli.Rows(0)(20))
                     ' CARGAR DIRECCIONES CLIENTE
                     Try
                         cmbDirecciones.DataSource = _objetoDireccionesFacturacion.BuscarDireccionesFacturacionClienteXIdClienteEnVentas(_tipoCon, lblIdClienteGeneral.Text)
@@ -965,7 +965,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 .PorcentajeIvaFactura = _porcentajeIva
                 .IvaFactura = txtIva.Text
                 .TotalFactura = txtTotal.Text
-                If lblPtoEmisionFacturaEmpresa.Text = "002" Then
+                If lblPtoEmisionFacturaEmpresa.Text = "002" OrElse lblPtoEmisionFacturaEmpresa.Text = "003" Then
                     .EstadoFactura = 2
                 Else
                     .EstadoFactura = 1

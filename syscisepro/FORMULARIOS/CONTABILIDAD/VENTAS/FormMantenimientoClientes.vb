@@ -132,6 +132,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub DeshabilitadoInicio()
             'gbDatosClienteGeneral.Enabled = False
             cmbTipoCliente.Enabled = False
+            cmbTipoEmpresa.Enabled = False
             cmbTipoIdentificacion.Enabled = False
             txtNombreRazonSocialClienteGeneral.Enabled = False
             txtApellidoNombreComercial.Enabled = False
@@ -328,7 +329,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dtpFechaIngresoClienteGeneral.Value = dgvClienteGeneral.CurrentRow.Cells.Item(16).Value
                 cmbTipoCliente.Text = dgvClienteGeneral.CurrentRow.Cells.Item(17).Value
                 txtObservaciones.Text = dgvClienteGeneral.CurrentRow.Cells.Item(18).Value
-
+                cmbTipoEmpresa.Text = If(dgvClienteGeneral.CurrentRow.Cells.Item(20).Value Is DBNull.Value, "", dgvClienteGeneral.CurrentRow.Cells.Item(20).Value)
                 Label23.Text = dgvClienteGeneral.CurrentRow.Cells.Item(0).Value
                 ComboBox1.Text = dgvClienteGeneral.CurrentRow.Cells.Item(2).Value
                 TextBox1.Text = dgvClienteGeneral.CurrentRow.Cells.Item(3).Value
@@ -399,7 +400,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             cmbTipoCliente.SelectedIndex = 0
             rbNoContribuyenteEspecial.Checked = True
             rbNOLlevaContabilidad.Checked = True
-
+            cmbTipoEmpresa.SelectedIndex = 0
             DataGridView1.Rows.Clear()
 
             txtRucCiClienteGeneral.Focus()
@@ -407,6 +408,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub HabilitadoNuevo()
             'gbDatosClienteGeneral.Enabled = True
             cmbTipoCliente.Enabled = True
+            cmbTipoEmpresa.Enabled = True
             cmbTipoIdentificacion.Enabled = True
             txtNombreRazonSocialClienteGeneral.Enabled = True
             txtApellidoNombreComercial.Enabled = True
@@ -457,6 +459,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub HabilitadoModificar()
             'gbDatosClienteGeneral.Enabled = True
             cmbTipoCliente.Enabled = True
+            cmbTipoEmpresa.Enabled = True
             cmbTipoIdentificacion.Enabled = True
             txtNombreRazonSocialClienteGeneral.Enabled = True
             txtApellidoNombreComercial.Enabled = True
@@ -611,6 +614,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvClienteGeneral.Columns(18).Width = 200
                 dgvClienteGeneral.Columns(19).HeaderText = "EST"
                 dgvClienteGeneral.Columns(19).Visible = False
+                dgvClienteGeneral.Columns(20).HeaderText = "TIPO EMPRESA"
+                dgvClienteGeneral.Columns(20).Width = 80
                 dgvClienteGeneral.ReadOnly = True
                 dgvClienteGeneral.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
@@ -1033,6 +1038,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 .TipoCliente = cmbTipoCliente.Text
                 .ObservacionesCliente = txtObservaciones.Text
                 .EstadoCliente = 1
+                .TipoEmpresa = cmbTipoEmpresa.Text
             End With
             _sqlCommands.Add(_objetoClienteGeneral.NuevoRegistroClienteGeneral)
 

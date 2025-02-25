@@ -243,6 +243,8 @@
             Me.KryptonLabel38 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonPage6 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.KryptonLabel43 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel52 = New Krypton.Toolkit.KryptonLabel()
+            Me.cmbTipoEmpresa = New System.Windows.Forms.ComboBox()
             CType(Me.dgvClienteGeneral, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.gbConvenioBancario.SuspendLayout()
             CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -501,7 +503,7 @@
             Me.txtTelefono1ClienteGeneral.BackColor = System.Drawing.Color.White
             Me.txtTelefono1ClienteGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtTelefono1ClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTelefono1ClienteGeneral.Location = New System.Drawing.Point(95, 73)
+            Me.txtTelefono1ClienteGeneral.Location = New System.Drawing.Point(95, 75)
             Me.txtTelefono1ClienteGeneral.Name = "txtTelefono1ClienteGeneral"
             Me.txtTelefono1ClienteGeneral.Size = New System.Drawing.Size(103, 21)
             Me.txtTelefono1ClienteGeneral.TabIndex = 0
@@ -547,7 +549,7 @@
             '
             Me.dtpFechaIngresoClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaIngresoClienteGeneral.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-            Me.dtpFechaIngresoClienteGeneral.Location = New System.Drawing.Point(95, 19)
+            Me.dtpFechaIngresoClienteGeneral.Location = New System.Drawing.Point(95, 4)
             Me.dtpFechaIngresoClienteGeneral.Name = "dtpFechaIngresoClienteGeneral"
             Me.dtpFechaIngresoClienteGeneral.Size = New System.Drawing.Size(103, 21)
             Me.dtpFechaIngresoClienteGeneral.TabIndex = 1
@@ -560,7 +562,7 @@
             Me.cmbTipoCliente.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbTipoCliente.FormattingEnabled = True
             Me.cmbTipoCliente.Items.AddRange(New Object() {"ALARMA", "GUARDIANIA", "ALARMA Y GUARDIANIA"})
-            Me.cmbTipoCliente.Location = New System.Drawing.Point(95, 46)
+            Me.cmbTipoCliente.Location = New System.Drawing.Point(95, 52)
             Me.cmbTipoCliente.Name = "cmbTipoCliente"
             Me.cmbTipoCliente.Size = New System.Drawing.Size(103, 21)
             Me.cmbTipoCliente.TabIndex = 2
@@ -1792,6 +1794,8 @@
             '
             'KryptonGroupBox4.Panel
             '
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.cmbTipoEmpresa)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel52)
             Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel14)
             Me.KryptonGroupBox4.Panel.Controls.Add(Me.txtTelefono2ClienteGeneral)
             Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel9)
@@ -1815,7 +1819,7 @@
             '
             'KryptonLabel9
             '
-            Me.KryptonLabel9.Location = New System.Drawing.Point(3, 18)
+            Me.KryptonLabel9.Location = New System.Drawing.Point(3, 4)
             Me.KryptonLabel9.Name = "KryptonLabel9"
             Me.KryptonLabel9.Size = New System.Drawing.Size(86, 20)
             Me.KryptonLabel9.StateNormal.ShortText.Color1 = System.Drawing.Color.SeaGreen
@@ -2587,6 +2591,28 @@
             Me.KryptonLabel43.TabIndex = 182
             Me.KryptonLabel43.Values.Text = "Buscar"
             '
+            'KryptonLabel52
+            '
+            Me.KryptonLabel52.Location = New System.Drawing.Point(3, 24)
+            Me.KryptonLabel52.Name = "KryptonLabel52"
+            Me.KryptonLabel52.Size = New System.Drawing.Size(84, 20)
+            Me.KryptonLabel52.StateNormal.ShortText.Color1 = System.Drawing.Color.SeaGreen
+            Me.KryptonLabel52.TabIndex = 21
+            Me.KryptonLabel52.Values.Text = "Tipo Empresa"
+            '
+            'cmbTipoEmpresa
+            '
+            Me.cmbTipoEmpresa.BackColor = System.Drawing.Color.White
+            Me.cmbTipoEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+            Me.cmbTipoEmpresa.DropDownWidth = 140
+            Me.cmbTipoEmpresa.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbTipoEmpresa.FormattingEnabled = True
+            Me.cmbTipoEmpresa.Items.AddRange(New Object() {"PUBLICA", "PRIVADA"})
+            Me.cmbTipoEmpresa.Location = New System.Drawing.Point(95, 28)
+            Me.cmbTipoEmpresa.Name = "cmbTipoEmpresa"
+            Me.cmbTipoEmpresa.Size = New System.Drawing.Size(103, 21)
+            Me.cmbTipoEmpresa.TabIndex = 22
+            '
             'FormMantenimientoClientes
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2897,5 +2923,7 @@
         Friend WithEvents KryptonLabel46 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel45 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel44 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents cmbTipoEmpresa As ComboBox
+        Friend WithEvents KryptonLabel52 As Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

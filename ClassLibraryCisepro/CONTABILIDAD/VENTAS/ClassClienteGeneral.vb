@@ -31,6 +31,7 @@ Namespace CONTABILIDAD.VENTAS
         Public TipoCliente As String
         Public ObservacionesCliente As String
         Public EstadoCliente As Integer
+        Public TipoEmpresa As String
 
 
         Public Function BuscarMayorIdClienteGeneral(ByVal tipoCon As TipoConexion) As Integer
@@ -157,6 +158,7 @@ Namespace CONTABILIDAD.VENTAS
                 .Parameters.AddWithValue("@TIPO_CLIENTE_GENERAL", SqlDbType.NVarChar).Value = TipoCliente
                 .Parameters.AddWithValue("@OBSERVACIONES_CLIENTE_GENERAL", SqlDbType.NVarChar).Value = ObservacionesCliente
                 .Parameters.AddWithValue("@ESTADO_CLIENTE_GENERAL", SqlDbType.Int).Value = EstadoCliente
+                .Parameters.AddWithValue("@TIPO_EMPRESA_CLIENTE", SqlDbType.NVarChar).Value = TipoEmpresa
             End With
             Return comando
         End Function
@@ -186,6 +188,7 @@ Namespace CONTABILIDAD.VENTAS
                 .Parameters.AddWithValue("@TIPO_CLIENTE_GENERAL", SqlDbType.NVarChar).Value = TipoCliente
                 .Parameters.AddWithValue("@OBSERVACIONES_CLIENTE_GENERAL", SqlDbType.NVarChar).Value = ObservacionesCliente
                 .Parameters.AddWithValue("@ESTADO_CLIENTE_GENERAL", SqlDbType.Int).Value = EstadoCliente
+                .Parameters.AddWithValue("@TIPO_EMPRESA_CLIENTE", SqlDbType.NVarChar).Value = TipoEmpresa
             End With
             Return comando
         End Function

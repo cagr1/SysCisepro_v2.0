@@ -128,11 +128,15 @@
             Me.DEBE = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.HABER = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.KryptonGroupBox6 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.cbxPtoEmision = New Krypton.Toolkit.KryptonComboBox()
             Me.KryptonGroupBox7 = New Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonGroupBox8 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.cbxPtoEmision = New Krypton.Toolkit.KryptonComboBox()
             Me.rbPtoEmision001 = New System.Windows.Forms.RadioButton()
             Me.rbPtoEmision002 = New System.Windows.Forms.RadioButton()
+            Me.KryptonLabel17 = New Krypton.Toolkit.KryptonLabel()
+            Me.dtpPlazo = New System.Windows.Forms.DateTimePicker()
+            Me.KryptonLabel20 = New Krypton.Toolkit.KryptonLabel()
+            Me.lblEmpresaCliente = New System.Windows.Forms.Label()
             CType(Me.dgvDetalleFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
@@ -157,6 +161,7 @@
             CType(Me.KryptonGroupBox6.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox6.Panel.SuspendLayout()
             Me.KryptonGroupBox6.SuspendLayout()
+            CType(Me.cbxPtoEmision, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox7, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox7.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox7.Panel.SuspendLayout()
@@ -165,7 +170,6 @@
             CType(Me.KryptonGroupBox8.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox8.Panel.SuspendLayout()
             Me.KryptonGroupBox8.SuspendLayout()
-            CType(Me.cbxPtoEmision, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'cmbIva
@@ -900,6 +904,10 @@
             '
             'KryptonGroupBox3.Panel
             '
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.lblEmpresaCliente)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel20)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.dtpPlazo)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel17)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.cmbDirecciones)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel11)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel10)
@@ -1231,6 +1239,18 @@
             Me.KryptonGroupBox6.TabIndex = 197
             Me.KryptonGroupBox6.Values.Heading = ""
             '
+            'cbxPtoEmision
+            '
+            Me.cbxPtoEmision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+            Me.cbxPtoEmision.DropDownWidth = 52
+            Me.cbxPtoEmision.IntegralHeight = False
+            Me.cbxPtoEmision.Items.AddRange(New Object() {"001", "002", "003", "004"})
+            Me.cbxPtoEmision.Location = New System.Drawing.Point(92, 4)
+            Me.cbxPtoEmision.Name = "cbxPtoEmision"
+            Me.cbxPtoEmision.Size = New System.Drawing.Size(63, 21)
+            Me.cbxPtoEmision.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near
+            Me.cbxPtoEmision.TabIndex = 200
+            '
             'KryptonGroupBox7
             '
             Me.KryptonGroupBox7.CaptionOverlap = 0R
@@ -1263,18 +1283,6 @@
             Me.KryptonGroupBox8.TabIndex = 199
             Me.KryptonGroupBox8.Values.Heading = ""
             '
-            'cbxPtoEmision
-            '
-            Me.cbxPtoEmision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbxPtoEmision.DropDownWidth = 52
-            Me.cbxPtoEmision.IntegralHeight = False
-            Me.cbxPtoEmision.Items.AddRange(New Object() {"001", "002", "003", "004"})
-            Me.cbxPtoEmision.Location = New System.Drawing.Point(92, 4)
-            Me.cbxPtoEmision.Name = "cbxPtoEmision"
-            Me.cbxPtoEmision.Size = New System.Drawing.Size(63, 21)
-            Me.cbxPtoEmision.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near
-            Me.cbxPtoEmision.TabIndex = 200
-            '
             'rbPtoEmision001
             '
             Me.rbPtoEmision001.AutoSize = True
@@ -1300,6 +1308,43 @@
             Me.rbPtoEmision002.TabIndex = 201
             Me.rbPtoEmision002.Text = "002"
             Me.rbPtoEmision002.UseVisualStyleBackColor = False
+            '
+            'KryptonLabel17
+            '
+            Me.KryptonLabel17.Location = New System.Drawing.Point(382, 32)
+            Me.KryptonLabel17.Name = "KryptonLabel17"
+            Me.KryptonLabel17.Size = New System.Drawing.Size(40, 20)
+            Me.KryptonLabel17.TabIndex = 50
+            Me.KryptonLabel17.Values.Text = "Plazo"
+            '
+            'dtpPlazo
+            '
+            Me.dtpPlazo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpPlazo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpPlazo.Location = New System.Drawing.Point(429, 32)
+            Me.dtpPlazo.Name = "dtpPlazo"
+            Me.dtpPlazo.Size = New System.Drawing.Size(83, 21)
+            Me.dtpPlazo.TabIndex = 51
+            '
+            'KryptonLabel20
+            '
+            Me.KryptonLabel20.Location = New System.Drawing.Point(516, 32)
+            Me.KryptonLabel20.Name = "KryptonLabel20"
+            Me.KryptonLabel20.Size = New System.Drawing.Size(57, 20)
+            Me.KryptonLabel20.TabIndex = 52
+            Me.KryptonLabel20.Values.Text = "Empresa"
+            '
+            'lblEmpresaCliente
+            '
+            Me.lblEmpresaCliente.AutoSize = True
+            Me.lblEmpresaCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.lblEmpresaCliente.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblEmpresaCliente.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.lblEmpresaCliente.Location = New System.Drawing.Point(579, 35)
+            Me.lblEmpresaCliente.Name = "lblEmpresaCliente"
+            Me.lblEmpresaCliente.Size = New System.Drawing.Size(16, 13)
+            Me.lblEmpresaCliente.TabIndex = 53
+            Me.lblEmpresaCliente.Text = "..."
             '
             'FormFacturaVenta
             '
@@ -1359,6 +1404,7 @@
             Me.KryptonGroupBox6.Panel.PerformLayout()
             CType(Me.KryptonGroupBox6, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox6.ResumeLayout(False)
+            CType(Me.cbxPtoEmision, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.KryptonGroupBox7.Panel, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox7.Panel.ResumeLayout(False)
             Me.KryptonGroupBox7.Panel.PerformLayout()
@@ -1369,7 +1415,6 @@
             Me.KryptonGroupBox8.Panel.PerformLayout()
             CType(Me.KryptonGroupBox8, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox8.ResumeLayout(False)
-            CType(Me.cbxPtoEmision, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -1469,5 +1514,9 @@
         Friend WithEvents cbxPtoEmision As Krypton.Toolkit.KryptonComboBox
         Friend WithEvents rbPtoEmision001 As RadioButton
         Friend WithEvents rbPtoEmision002 As RadioButton
+        Friend WithEvents dtpPlazo As DateTimePicker
+        Friend WithEvents KryptonLabel17 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents lblEmpresaCliente As Label
+        Friend WithEvents KryptonLabel20 As Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace
