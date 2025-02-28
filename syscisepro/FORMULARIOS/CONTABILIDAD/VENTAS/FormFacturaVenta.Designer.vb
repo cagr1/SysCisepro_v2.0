@@ -101,6 +101,11 @@
             Me.lblRucEmpresa = New System.Windows.Forms.Label()
             Me.lblEstablecimientoFacturaEmpresa = New System.Windows.Forms.Label()
             Me.KryptonGroupBox3 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.cbxPlazo = New System.Windows.Forms.ComboBox()
+            Me.lblEmpresaCliente = New System.Windows.Forms.Label()
+            Me.KryptonLabel20 = New Krypton.Toolkit.KryptonLabel()
+            Me.dtpPlazo = New System.Windows.Forms.DateTimePicker()
+            Me.KryptonLabel17 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel9 = New Krypton.Toolkit.KryptonLabel()
@@ -133,10 +138,7 @@
             Me.KryptonGroupBox8 = New Krypton.Toolkit.KryptonGroupBox()
             Me.rbPtoEmision001 = New System.Windows.Forms.RadioButton()
             Me.rbPtoEmision002 = New System.Windows.Forms.RadioButton()
-            Me.KryptonLabel17 = New Krypton.Toolkit.KryptonLabel()
-            Me.dtpPlazo = New System.Windows.Forms.DateTimePicker()
-            Me.KryptonLabel20 = New Krypton.Toolkit.KryptonLabel()
-            Me.lblEmpresaCliente = New System.Windows.Forms.Label()
+            Me.KryptonPage3 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             CType(Me.dgvDetalleFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
@@ -170,6 +172,7 @@
             CType(Me.KryptonGroupBox8.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox8.Panel.SuspendLayout()
             Me.KryptonGroupBox8.SuspendLayout()
+            CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'cmbIva
@@ -865,7 +868,7 @@
             Me.lblNumeroFacturaVenta.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.lblNumeroFacturaVenta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblNumeroFacturaVenta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.lblNumeroFacturaVenta.Location = New System.Drawing.Point(523, 26)
+            Me.lblNumeroFacturaVenta.Location = New System.Drawing.Point(520, 26)
             Me.lblNumeroFacturaVenta.Name = "lblNumeroFacturaVenta"
             Me.lblNumeroFacturaVenta.Size = New System.Drawing.Size(16, 13)
             Me.lblNumeroFacturaVenta.TabIndex = 9
@@ -904,6 +907,7 @@
             '
             'KryptonGroupBox3.Panel
             '
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.cbxPlazo)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.lblEmpresaCliente)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel20)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.dtpPlazo)
@@ -926,6 +930,55 @@
             Me.KryptonGroupBox3.Size = New System.Drawing.Size(730, 84)
             Me.KryptonGroupBox3.TabIndex = 192
             Me.KryptonGroupBox3.Values.Heading = "Datos Cliente"
+            '
+            'cbxPlazo
+            '
+            Me.cbxPlazo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbxPlazo.FormattingEnabled = True
+            Me.cbxPlazo.Items.AddRange(New Object() {"0", "7 ", "15 ", "30 ", "45 ", "60 ", "90 "})
+            Me.cbxPlazo.Location = New System.Drawing.Point(428, 32)
+            Me.cbxPlazo.Name = "cbxPlazo"
+            Me.cbxPlazo.Size = New System.Drawing.Size(84, 21)
+            Me.cbxPlazo.TabIndex = 54
+            Me.cbxPlazo.Text = "En dias"
+            '
+            'lblEmpresaCliente
+            '
+            Me.lblEmpresaCliente.AutoSize = True
+            Me.lblEmpresaCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.lblEmpresaCliente.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblEmpresaCliente.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.lblEmpresaCliente.Location = New System.Drawing.Point(579, 35)
+            Me.lblEmpresaCliente.Name = "lblEmpresaCliente"
+            Me.lblEmpresaCliente.Size = New System.Drawing.Size(16, 13)
+            Me.lblEmpresaCliente.TabIndex = 53
+            Me.lblEmpresaCliente.Text = "..."
+            '
+            'KryptonLabel20
+            '
+            Me.KryptonLabel20.Location = New System.Drawing.Point(516, 32)
+            Me.KryptonLabel20.Name = "KryptonLabel20"
+            Me.KryptonLabel20.Size = New System.Drawing.Size(57, 20)
+            Me.KryptonLabel20.TabIndex = 52
+            Me.KryptonLabel20.Values.Text = "Empresa"
+            '
+            'dtpPlazo
+            '
+            Me.dtpPlazo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpPlazo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpPlazo.Location = New System.Drawing.Point(656, 32)
+            Me.dtpPlazo.Name = "dtpPlazo"
+            Me.dtpPlazo.Size = New System.Drawing.Size(60, 21)
+            Me.dtpPlazo.TabIndex = 51
+            Me.dtpPlazo.Visible = False
+            '
+            'KryptonLabel17
+            '
+            Me.KryptonLabel17.Location = New System.Drawing.Point(382, 32)
+            Me.KryptonLabel17.Name = "KryptonLabel17"
+            Me.KryptonLabel17.Size = New System.Drawing.Size(40, 20)
+            Me.KryptonLabel17.TabIndex = 50
+            Me.KryptonLabel17.Values.Text = "Plazo"
             '
             'KryptonLabel11
             '
@@ -1309,42 +1362,17 @@
             Me.rbPtoEmision002.Text = "002"
             Me.rbPtoEmision002.UseVisualStyleBackColor = False
             '
-            'KryptonLabel17
+            'KryptonPage3
             '
-            Me.KryptonLabel17.Location = New System.Drawing.Point(382, 32)
-            Me.KryptonLabel17.Name = "KryptonLabel17"
-            Me.KryptonLabel17.Size = New System.Drawing.Size(40, 20)
-            Me.KryptonLabel17.TabIndex = 50
-            Me.KryptonLabel17.Values.Text = "Plazo"
-            '
-            'dtpPlazo
-            '
-            Me.dtpPlazo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpPlazo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpPlazo.Location = New System.Drawing.Point(429, 32)
-            Me.dtpPlazo.Name = "dtpPlazo"
-            Me.dtpPlazo.Size = New System.Drawing.Size(83, 21)
-            Me.dtpPlazo.TabIndex = 51
-            '
-            'KryptonLabel20
-            '
-            Me.KryptonLabel20.Location = New System.Drawing.Point(516, 32)
-            Me.KryptonLabel20.Name = "KryptonLabel20"
-            Me.KryptonLabel20.Size = New System.Drawing.Size(57, 20)
-            Me.KryptonLabel20.TabIndex = 52
-            Me.KryptonLabel20.Values.Text = "Empresa"
-            '
-            'lblEmpresaCliente
-            '
-            Me.lblEmpresaCliente.AutoSize = True
-            Me.lblEmpresaCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.lblEmpresaCliente.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEmpresaCliente.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.lblEmpresaCliente.Location = New System.Drawing.Point(579, 35)
-            Me.lblEmpresaCliente.Name = "lblEmpresaCliente"
-            Me.lblEmpresaCliente.Size = New System.Drawing.Size(16, 13)
-            Me.lblEmpresaCliente.TabIndex = 53
-            Me.lblEmpresaCliente.Text = "..."
+            Me.KryptonPage3.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage3.Flags = 65534
+            Me.KryptonPage3.LastVisibleSet = True
+            Me.KryptonPage3.MinimumSize = New System.Drawing.Size(50, 50)
+            Me.KryptonPage3.Name = "KryptonPage3"
+            Me.KryptonPage3.Size = New System.Drawing.Size(100, 100)
+            Me.KryptonPage3.Text = "KryptonPage3"
+            Me.KryptonPage3.ToolTipTitle = "Page ToolTip"
+            Me.KryptonPage3.UniqueName = "21A206A48749458D3BAF3F0AA6D152CE"
             '
             'FormFacturaVenta
             '
@@ -1415,6 +1443,7 @@
             Me.KryptonGroupBox8.Panel.PerformLayout()
             CType(Me.KryptonGroupBox8, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox8.ResumeLayout(False)
+            CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -1518,5 +1547,7 @@
         Friend WithEvents KryptonLabel17 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents lblEmpresaCliente As Label
         Friend WithEvents KryptonLabel20 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonPage3 As ComponentFactory.Krypton.Navigator.KryptonPage
+        Friend WithEvents cbxPlazo As ComboBox
     End Class
 End Namespace

@@ -22,6 +22,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     ''' </summary>
     Public Class FormMantenimientoClientes
         Private _tipoCon As TipoConexion
+
         Property TipoCox As Integer
             Private Get
                 Select Case _tipoCon
@@ -1006,7 +1007,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                And txtnroResContEspecial.Text <> "" And txtDireccionUbicacionClienteGeneral.Text <> "" And txtDireccionFacturacionClienteGeneral.Text <> "" _
                And txtConsorcioGrupo.Text <> "" And txtCiudad.Text <> "" And txtTelefono1ClienteGeneral.Text <> "" And txtTelefono2ClienteGeneral.Text <> "" _
                And txtEmailClienteGeneral.Text <> "" And txtContactoClienteGeneral.Text <> "" And txtObservaciones.Text <> "" And cmbTipoIdentificacion.Text <> "" _
-               And cmbTipoCliente.Text <> ""
+               And cmbTipoCliente.Text <> "" And cmbTipoEmpresa.Text <> ""
         End Function
         Private Sub GuardarClienteGeneral()
             With _objetoClienteGeneral
@@ -1116,6 +1117,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 .TipoCliente = cmbTipoCliente.Text
                 .ObservacionesCliente = txtObservaciones.Text
                 .EstadoCliente = 1
+                .TipoEmpresa = cmbTipoEmpresa.Text
             End With
             _sqlCommands.Add(_objetoClienteGeneral.ModificarRegistroClienteGeneral)
 

@@ -18,6 +18,7 @@ Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports System.Text
 Imports Krypton.Toolkit
+Imports ComponentFactory.Krypton.Navigator
 
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
@@ -175,6 +176,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             cmbDirecciones.Enabled = False
             'gbFecha.Enabled = False
             dtpFechaEmisionFacturaVenta.Enabled = False
+            dtpPlazo.Enabled = False
+            cbxPlazo.Enabled = False
             'gbSon.Enabled = False
             txtSon.Enabled = False
             'gbFormaPago.Enabled = False
@@ -383,6 +386,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
             ObservacionesFecha()
             txtNombreComercialCliente.Focus()
+            cbxPlazo.SelectedIndex = 3
+            cmbTipoPagoFactura.SelectedIndex = 6
         End Sub
         Private Sub NumFactura()
 
@@ -439,6 +444,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             cmbDirecciones.Enabled = True
             'gbFecha.Enabled = True
             dtpFechaEmisionFacturaVenta.Enabled = True
+            dtpPlazo.Enabled = True
+            cbxPlazo.Enabled = True
             txtSon.Enabled = True
             'gbFormaPago.Enabled = True
             rbContado.Enabled = True
@@ -747,12 +754,35 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub dgvDetalleFacturaVenta_CellValueChanged(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvDetalleFacturaVenta.CellValueChanged
             If dgvDetalleFacturaVenta.RowCount = 0 Or dgvDetalleFacturaVenta.CurrentRow Is Nothing Then Return
             Try
+                Dim cantidad As Decimal
+                Dim valorUnitario As Decimal
+                Dim valorDescuento As Decimal
+                Dim valorTotal As Decimal
 
-                Dim cantidad = If(dgvDetalleFacturaVenta.CurrentRow.Cells(3).Value.ToString().Trim().Length = 0, 0, CDec(dgvDetalleFacturaVenta.CurrentRow.Cells(3).Value))
-                Dim valorUnitario = If(dgvDetalleFacturaVenta.CurrentRow.Cells(4).Value.ToString().Trim().Length = 0, 0, CDec(dgvDetalleFacturaVenta.CurrentRow.Cells(4).Value))
-                    Dim valorDescuento = If(dgvDetalleFacturaVenta.CurrentRow.Cells(5).Value.ToString().Trim().Length = 0, 0, CDec(dgvDetalleFacturaVenta.CurrentRow.Cells(5).Value))
-                    Dim valorTotal = (cantidad * valorUnitario) - valorDescuento  ' calcula el valor total del item
-                    dgvDetalleFacturaVenta.CurrentRow.Cells(6).Value = valorTotal ' asigna el valor a la casilla
+                If dgvDetalleFacturaVenta.CurrentRow.Cells(3).Value Is Nothing OrElse dgvDetalleFacturaVenta.CurrentRow.Cells(3).Value.ToString() = 0 Then
+                    cantidad = 0
+                Else
+                    cantidad = CDec(dgvDetalleFacturaVenta.CurrentRow.Cells(3).Value)
+                End If
+
+                If dgvDetalleFacturaVenta.CurrentRow.Cells(4).Value Is Nothing OrElse dgvDetalleFacturaVenta.CurrentRow.Cells(4).Value.ToString().Trim().Length = 0 Then
+                    valorUnitario = 0
+                Else
+                    ' Si no es nulo, intenta convertirlo a Decimal
+                    Decimal.TryParse(dgvDetalleFacturaVenta.CurrentRow.Cells(4).Value.ToString(), valorUnitario)
+                End If
+
+
+                If dgvDetalleFacturaVenta.CurrentRow.Cells(5).Value Is Nothing OrElse dgvDetalleFacturaVenta.CurrentRow.Cells(5).Value.ToString().Trim().Length = 0 Then
+                    valorDescuento = 0
+                Else
+                    ' Si no es nulo, intenta convertirlo a Decimal
+                    Decimal.TryParse(dgvDetalleFacturaVenta.CurrentRow.Cells(5).Value.ToString(), valorDescuento)
+                End If
+
+
+                valorTotal = (cantidad * valorUnitario) - valorDescuento  ' calcula el valor total del item
+                dgvDetalleFacturaVenta.CurrentRow.Cells(6).Value = valorTotal ' asigna el valor a la casilla
 
             Catch
                 If dgvDetalleFacturaVenta.CurrentRow Is Nothing Then Return
@@ -970,6 +1000,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 Else
                     .EstadoFactura = 1
                 End If
+                .PlazoFactura = dtpPlazo.Value
             End With
             _sqlCommands.Add(_objetoFacturaVenta.NuevoRegistroFacturaVenta)
 
@@ -1311,5 +1342,26 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub cbxPtoEmision_SelectedValueChanged(sender As Object, e As EventArgs) Handles cbxPtoEmision.SelectedValueChanged
             lblPtoEmisionFacturaEmpresa.Text = cbxPtoEmision.SelectedItem.ToString()
         End Sub
+
+        Private Sub cbxPlazo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxPlazo.SelectedIndexChanged
+            If cbxPlazo.SelectedItem IsNot Nothing Then
+                Dim dias As Integer
+                If Integer.TryParse(cbxPlazo.SelectedItem.ToString(), dias) Then
+                    dtpPlazo.Value = DateTime.Now.AddDays(dias)
+                End If
+            End If
+        End Sub
+
+        'Private Sub ButtonSpecLeft_Click(sender As Object, e As EventArgs)
+        '    If (navigatorLeft.NavigatorMode = NavigatorMode.HeaderBarCheckButtonGroup) Then
+        '        navigatorLeft.NavigatorMode = NavigatorMode.HeaderBarCheckButtonOnly
+        '        ButtonSpecLeft.TypeRestricted = PaletteNavButtonSpecStyle.ArrowRight
+        '    Else
+        '        navigatorLeft.NavigatorMode = NavigatorMode.HeaderBarCheckButtonGroup
+        '        ButtonSpecLeft.TypeRestricted = PaletteNavButtonSpecStyle.ArrowLeft
+
+        '    End If
+
+        'End Sub
     End Class
 End Namespace

@@ -86,6 +86,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
             cmbTipoProveedorGeneral.Enabled = False
             cmbContabilidadProveedorGeneral.Enabled = False
             cmbContribuyenteEspecial.Enabled = False
+            txtDocContriEspProveedor.Enabled = False
             txtDireccionProveedorGeneral.Enabled = False
             txtNombreCiudad.Enabled = False
             txtTelefono1ProveedorGeneral.Enabled = False
@@ -119,6 +120,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
             cbxTipo.SelectedIndex = 0
             cbxCiruc.SelectedIndex = 0
             cmbContabilidadProveedorGeneral.Text = ""
+            txtDocContriEspProveedor.Text = ""
             cmbContribuyenteEspecial.Text = ""
             txtDireccionProveedorGeneral.Text = ""
             txtTelefono1ProveedorGeneral.Text = ""
@@ -136,6 +138,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
             cbxTipo.Enabled = True
             cmbContabilidadProveedorGeneral.Enabled = True
             cmbContribuyenteEspecial.Enabled = True
+            txtDocContriEspProveedor.Enabled = True
             txtDireccionProveedorGeneral.Enabled = True
             txtNombreCiudad.Enabled = True
             txtTelefono1ProveedorGeneral.Enabled = True
@@ -176,6 +179,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
             cmbTipoProveedorGeneral.Enabled = True
             cmbContabilidadProveedorGeneral.Enabled = True
             cmbContribuyenteEspecial.Enabled = True
+            txtDocContriEspProveedor.Enabled = True
             txtDireccionProveedorGeneral.Enabled = True
             txtTelefono1ProveedorGeneral.Enabled = True
             txtTelefono2ProveedorGeneral.Enabled = True
@@ -334,7 +338,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
             e.Handled = Not _validacionesNumeros.EsNumero(e.KeyChar)
         End Sub
         Private Function ValidacionParametros() As Boolean
-            Return txtFechaProveedorGeneral.Text <> "" And txtRucCiProveedorGeneral.Text <> "" And txtRazonSocial.Text <> "" And txtNombreComercialProveedorGeneral.Text <> "" And cmbTipoProveedorGeneral.Text <> "" And cmbContabilidadProveedorGeneral.Text <> "" And cmbContribuyenteEspecial.Text <> "" And txtDireccionProveedorGeneral.Text <> "" And txtTelefono1ProveedorGeneral.Text <> ""
+            Return txtFechaProveedorGeneral.Text <> "" And txtRucCiProveedorGeneral.Text <> "" And txtRazonSocial.Text <> "" And txtNombreComercialProveedorGeneral.Text <> "" And cmbTipoProveedorGeneral.Text <> "" And cmbContabilidadProveedorGeneral.Text <> "" And cmbContribuyenteEspecial.Text <> "" And txtDireccionProveedorGeneral.Text <> "" And txtTelefono1ProveedorGeneral.Text <> "" And txtDocContriEspProveedor.Text <> ""
         End Function
         Private Sub btnGuardarProveedorGeneral_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarProveedorGeneral.Click
             If cbxCiruc.SelectedIndex = 0 And txtRucCiProveedorGeneral.Text.Trim.Length <> 10 Then
@@ -366,15 +370,24 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                 'If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
                 _sqlCommands.Clear()
 
-                Dim nombreU As String = ""
+
                 Select Case (_botonSeleccionado)
                     Case 1
                         GuargarRegistroProveedorGeneralNuevo()
-                        nombreU = "Creó un nuevo proveedor general. RUC: " + txtRucCiProveedorGeneral.Text & " por " & UserName
+
                     Case 2
                         GuargarRegistroProveedorGeneralModificar()
-                        nombreU = "Modificó un proveedor general. RUC: " + txtRucCiProveedorGeneral.Text & " por " & UserName
+
                 End Select
+
+                Dim nombreU As String = ""
+
+                If _botonSeleccionado = 1 Then
+                    nombreU = nombreU = "Creó un nuevo proveedor general. RUC: " + txtRucCiProveedorGeneral.Text & " por " & UserName
+                ElseIf _botonSeleccionado = 2 Then
+                    nombreU = "Modificó un proveedor general. RUC: " + txtRucCiProveedorGeneral.Text & " por " & UserName
+
+                End If
 
 
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
@@ -435,6 +448,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                 .EstadoProveedorGeneral = 1
                 .TipoIdeProveedorGeneral = If(cbxCiruc.SelectedIndex = 1, "RUC", If(cbxCiruc.SelectedIndex = 2, "PAS", "CED"))
                 .TipoPersonaProveedorGeneral = If(cbxTipo.SelectedIndex = 0, "PN", "SA")
+                .DocumentoContriEspeProveedorGeneral = txtDocContriEspProveedor.Text
                 '.NuevoRegistroProveedorGeneral(_tipoCon)
             End With
             _sqlCommands.Add(_objetoProveedorGeneral.NuevoRegistroProveedorGeneral)
@@ -473,6 +487,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                 .EstadoProveedorGeneral = 1
                 .TipoIdeProveedorGeneral = If(cbxCiruc.SelectedIndex = 1, "RUC", If(cbxCiruc.SelectedIndex = 2, "PAS", "CED"))
                 .TipoPersonaProveedorGeneral = If(cbxTipo.SelectedIndex = 0, "PN", "SA")
+                .DocumentoContriEspeProveedorGeneral = txtDocContriEspProveedor.Text
                 '.ModificarRegistroProveedorGeneral(_tipoCon)
             End With
             _sqlCommands.Add(_objetoProveedorGeneral.ModificarRegistroProveedorGeneral)

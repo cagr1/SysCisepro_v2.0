@@ -555,6 +555,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 txtCiudadProveedorGeneral.Text = _objetoCiudad.BuscarNombreCiudadXIdCiudad(_tipoCon, _dtProveedor.Rows(0)(9).ToString())
                 txtTelefonoProveedorGeneral.Text = _dtProveedor.Rows(0)(10).ToString()
                 txtEmailProveedorGeneral.Text = _dtProveedor.Rows(0)(12).ToString()
+                txtNumAutoContEspFacturaCompra.Text = If(_dtProveedor.Rows(0)(14) Is DBNull.Value, "0000", _dtProveedor.Rows(0)(14).ToString())
+                'txtNumAutoContEspFacturaCompra.Text = _dtProveedor.Rows(0)(14).ToString()
             Catch
                 gbRUCProveedor.Text = "CI / RUC / PASAPORTE"
                 lblIdProveedorGeneral.Text = "..."

@@ -3132,7 +3132,7 @@ namespace SysCisepro3.TalentoHumano
                 for (var i = 0; i <= dgvDetallesRol.Columns.Count - 1; i++) if (i < 63 && dgvDetallesRol.Columns[i].Visible) l++;
                 var ic = ValidationForms.NumToCharExcel(l + 1);
 
-                //var rc = dgvDetallesRol.RowCount + 20;
+                var rc = dgvDetallesRol.RowCount + 20;
 
                 //worksheet.Range["A1:" + ic + rc].Font.Size = 10;
 
@@ -3269,6 +3269,21 @@ namespace SysCisepro3.TalentoHumano
                         col++;
                     }
 
+                    ws.Cell(rowIndex, col).Value = "FIRMA";
+                    ws.Cell(rowIndex, col).Style.Font.Bold = true;
+                    ws.Cell(rowIndex, col).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                    ws.Cell(rowIndex, col).Style.Fill.BackgroundColor = XLColor.FromColor(Settings.Default.ColorCisepro);
+                    ws.Cell(rowIndex, col).Style.Font.FontColor = XLColor.White;
+                    ws.Cell(rowIndex, col).Style.Alignment.TextRotation = 90;
+                    col++;
+
+                    ws.Cell(rowIndex, col).Value = "HUELLA";
+                    ws.Cell(rowIndex, col).Style.Font.Bold = true;
+                    ws.Cell(rowIndex, col).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                    ws.Cell(rowIndex, col).Style.Fill.BackgroundColor = XLColor.FromColor(Settings.Default.ColorCisepro);
+                    ws.Cell(rowIndex, col).Style.Font.FontColor = XLColor.White;
+                    ws.Cell(rowIndex, col).Style.Alignment.TextRotation = 90;
+
                     // Datos de filas
                     rowIndex++; // empezamos después del encabezado
                     foreach (DataGridViewRow row in dgvDetallesRol.Rows)
@@ -3276,7 +3291,7 @@ namespace SysCisepro3.TalentoHumano
                         int colIndex = 1;
                         foreach (DataGridViewCell cell in row.Cells)
                         {
-                            if (cell.ColumnIndex == 43 || cell.ColumnIndex > 63 || !dgvDetallesRol.Columns[cell.ColumnIndex].Visible) continue;
+                            if (cell.ColumnIndex == 43 || cell.ColumnIndex > 65 || !dgvDetallesRol.Columns[cell.ColumnIndex].Visible) continue;
 
                             var dataCell = ws.Cell(rowIndex, colIndex);
                             dataCell.Value = XLCellValue.FromObject(cell.Value ?? String.Empty); // Controlamos valores nulos
@@ -3294,6 +3309,7 @@ namespace SysCisepro3.TalentoHumano
                             {
                                 // Mantener números decimales en formato numérico
                                 dataCell.Value = Convert.ToDouble(cellValue);
+                               dataCell.Style.NumberFormat.Format = "#,##0.00";
                             }
                             else if (double.TryParse(cellValue.ToString(), out double numValue))
                             {
@@ -3332,7 +3348,7 @@ namespace SysCisepro3.TalentoHumano
                             // Insertar la imagen desde el stream en la celda correspondiente
                             ws.AddPicture(ms)
                                 .MoveTo(ws.Cell(2, 6)) // Coloca la imagen en la celda correcta (en este caso en la fila 2, columna 6)
-                                .WithSize(100, 100);   // Ajusta el tamaño según sea necesario
+                                .WithSize(80, 80);   // Ajusta el tamaño según sea necesario
                         }
                     }
 

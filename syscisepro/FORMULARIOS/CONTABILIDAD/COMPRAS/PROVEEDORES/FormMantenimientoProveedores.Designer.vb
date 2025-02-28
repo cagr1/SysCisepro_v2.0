@@ -68,6 +68,8 @@
             Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
             Me.dgvProveedoresGeneral = New System.Windows.Forms.DataGridView()
+            Me.KryptonLabel16 = New Krypton.Toolkit.KryptonLabel()
+            Me.txtDocContriEspProveedor = New System.Windows.Forms.TextBox()
             Me.msKardex.SuspendLayout()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,9 +103,9 @@
             Me.txtRucCiProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtRucCiProveedorGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtRucCiProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtRucCiProveedorGeneral.Location = New System.Drawing.Point(489, 1)
+            Me.txtRucCiProveedorGeneral.Location = New System.Drawing.Point(490, 1)
             Me.txtRucCiProveedorGeneral.Name = "txtRucCiProveedorGeneral"
-            Me.txtRucCiProveedorGeneral.Size = New System.Drawing.Size(94, 21)
+            Me.txtRucCiProveedorGeneral.Size = New System.Drawing.Size(99, 21)
             Me.txtRucCiProveedorGeneral.TabIndex = 5
             '
             'txtRazonSocial
@@ -157,9 +159,9 @@
             Me.cmbContribuyenteEspecial.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbContribuyenteEspecial.FormattingEnabled = True
             Me.cmbContribuyenteEspecial.Items.AddRange(New Object() {"SI", "NO"})
-            Me.cmbContribuyenteEspecial.Location = New System.Drawing.Point(489, 83)
+            Me.cmbContribuyenteEspecial.Location = New System.Drawing.Point(490, 83)
             Me.cmbContribuyenteEspecial.Name = "cmbContribuyenteEspecial"
-            Me.cmbContribuyenteEspecial.Size = New System.Drawing.Size(100, 21)
+            Me.cmbContribuyenteEspecial.Size = New System.Drawing.Size(99, 21)
             Me.cmbContribuyenteEspecial.TabIndex = 15
             '
             'txtDireccionProveedorGeneral
@@ -177,9 +179,9 @@
             Me.txtTelefono1ProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtTelefono1ProveedorGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtTelefono1ProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTelefono1ProveedorGeneral.Location = New System.Drawing.Point(489, 28)
+            Me.txtTelefono1ProveedorGeneral.Location = New System.Drawing.Point(490, 28)
             Me.txtTelefono1ProveedorGeneral.Name = "txtTelefono1ProveedorGeneral"
-            Me.txtTelefono1ProveedorGeneral.Size = New System.Drawing.Size(100, 21)
+            Me.txtTelefono1ProveedorGeneral.Size = New System.Drawing.Size(99, 21)
             Me.txtTelefono1ProveedorGeneral.TabIndex = 19
             '
             'txtTelefono2ProveedorGeneral
@@ -187,9 +189,9 @@
             Me.txtTelefono2ProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtTelefono2ProveedorGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtTelefono2ProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTelefono2ProveedorGeneral.Location = New System.Drawing.Point(489, 57)
+            Me.txtTelefono2ProveedorGeneral.Location = New System.Drawing.Point(490, 57)
             Me.txtTelefono2ProveedorGeneral.Name = "txtTelefono2ProveedorGeneral"
-            Me.txtTelefono2ProveedorGeneral.Size = New System.Drawing.Size(100, 21)
+            Me.txtTelefono2ProveedorGeneral.Size = New System.Drawing.Size(99, 21)
             Me.txtTelefono2ProveedorGeneral.TabIndex = 21
             '
             'txtEmailProveedorGeneral
@@ -197,9 +199,9 @@
             Me.txtEmailProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtEmailProveedorGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
             Me.txtEmailProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtEmailProveedorGeneral.Location = New System.Drawing.Point(419, 140)
+            Me.txtEmailProveedorGeneral.Location = New System.Drawing.Point(284, 135)
             Me.txtEmailProveedorGeneral.Name = "txtEmailProveedorGeneral"
-            Me.txtEmailProveedorGeneral.Size = New System.Drawing.Size(170, 21)
+            Me.txtEmailProveedorGeneral.Size = New System.Drawing.Size(142, 21)
             Me.txtEmailProveedorGeneral.TabIndex = 23
             '
             'cbxTipo
@@ -209,7 +211,7 @@
             Me.cbxTipo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbxTipo.FormattingEnabled = True
             Me.cbxTipo.Items.AddRange(New Object() {"PERSONA NATURAL", "SOCIEDAD"})
-            Me.cbxTipo.Location = New System.Drawing.Point(489, 107)
+            Me.cbxTipo.Location = New System.Drawing.Point(490, 132)
             Me.cbxTipo.Name = "cbxTipo"
             Me.cbxTipo.Size = New System.Drawing.Size(100, 21)
             Me.cbxTipo.TabIndex = 29
@@ -232,11 +234,12 @@
             Me.lblIdCiudad.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblIdCiudad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblIdCiudad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.lblIdCiudad.Location = New System.Drawing.Point(333, 143)
+            Me.lblIdCiudad.Location = New System.Drawing.Point(90, 143)
             Me.lblIdCiudad.Name = "lblIdCiudad"
             Me.lblIdCiudad.Size = New System.Drawing.Size(13, 13)
             Me.lblIdCiudad.TabIndex = 26
             Me.lblIdCiudad.Text = ".."
+            Me.lblIdCiudad.Visible = False
             '
             'txtNombreCiudad
             '
@@ -245,7 +248,7 @@
             Me.txtNombreCiudad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombreCiudad.Location = New System.Drawing.Point(122, 135)
             Me.txtNombreCiudad.Name = "txtNombreCiudad"
-            Me.txtNombreCiudad.Size = New System.Drawing.Size(194, 21)
+            Me.txtNombreCiudad.Size = New System.Drawing.Size(103, 21)
             Me.txtNombreCiudad.TabIndex = 25
             '
             'txtBuscarProveedor
@@ -345,6 +348,8 @@
             '
             'KryptonGroupBox1.Panel
             '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtDocContriEspProveedor)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel16)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel15)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.lblIdCiudad)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel14)
@@ -380,7 +385,7 @@
             '
             'KryptonLabel15
             '
-            Me.KryptonLabel15.Location = New System.Drawing.Point(373, 141)
+            Me.KryptonLabel15.Location = New System.Drawing.Point(238, 135)
             Me.KryptonLabel15.Name = "KryptonLabel15"
             Me.KryptonLabel15.Size = New System.Drawing.Size(40, 20)
             Me.KryptonLabel15.TabIndex = 201
@@ -396,7 +401,7 @@
             '
             'KryptonLabel13
             '
-            Me.KryptonLabel13.Location = New System.Drawing.Point(443, 108)
+            Me.KryptonLabel13.Location = New System.Drawing.Point(443, 133)
             Me.KryptonLabel13.Name = "KryptonLabel13"
             Me.KryptonLabel13.Size = New System.Drawing.Size(34, 20)
             Me.KryptonLabel13.TabIndex = 199
@@ -526,6 +531,24 @@
             Me.dgvProveedoresGeneral.Size = New System.Drawing.Size(596, 224)
             Me.dgvProveedoresGeneral.TabIndex = 190
             '
+            'KryptonLabel16
+            '
+            Me.KryptonLabel16.Location = New System.Drawing.Point(431, 109)
+            Me.KryptonLabel16.Name = "KryptonLabel16"
+            Me.KryptonLabel16.Size = New System.Drawing.Size(52, 20)
+            Me.KryptonLabel16.TabIndex = 202
+            Me.KryptonLabel16.Values.Text = "No Doc"
+            '
+            'txtDocContriEspProveedor
+            '
+            Me.txtDocContriEspProveedor.BackColor = System.Drawing.Color.White
+            Me.txtDocContriEspProveedor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtDocContriEspProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDocContriEspProveedor.Location = New System.Drawing.Point(491, 108)
+            Me.txtDocContriEspProveedor.Name = "txtDocContriEspProveedor"
+            Me.txtDocContriEspProveedor.Size = New System.Drawing.Size(99, 21)
+            Me.txtDocContriEspProveedor.TabIndex = 203
+            '
             'FormMantenimientoProveedores
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -598,5 +621,7 @@
         Friend WithEvents KryptonLabel14 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel13 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents dgvProveedoresGeneral As DataGridView
+        Friend WithEvents txtDocContriEspProveedor As TextBox
+        Friend WithEvents KryptonLabel16 As Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

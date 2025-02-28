@@ -25,6 +25,7 @@ Namespace CONTABILIDAD.COMPRAS.PROVEEDORES
         Public Telefono2ProveedorGeneral As String
         Public EmailProveedorGeneral As String
         Public EstadoProveedorGeneral As Integer
+        Public DocumentoContriEspeProveedorGeneral As Integer
 
         Public TipoIdeProveedorGeneral As String
         Public TipoPersonaProveedorGeneral As String
@@ -117,8 +118,9 @@ Namespace CONTABILIDAD.COMPRAS.PROVEEDORES
                 .Parameters.AddWithValue("@ID_CIUDAD", SqlDbType.Int).Value = idCiudadProveedorGeneral
                 .Parameters.AddWithValue("@TELEFONO_1_PROVEEDOR_GENERAL", SqlDbType.NVarChar).Value = telefono1ProveedorGeneral
                 .Parameters.AddWithValue("@TELEFONO_2_PROVEEDOR_GENERAL", SqlDbType.NVarChar).Value = telefono2ProveedorGeneral
-                .Parameters.AddWithValue("@EMAIL_PROVEEDOR_GENERAL", SqlDbType.NVarChar).Value = emailProveedorGeneral
+                .Parameters.AddWithValue("@EMAIL_PROVEEDOR_GENERAL", SqlDbType.NVarChar).Value = EmailProveedorGeneral
                 .Parameters.AddWithValue("@ESTADO_PROVEEDOR_GENERAL", SqlDbType.Int).Value = EstadoProveedorGeneral
+                .Parameters.AddWithValue("@DOCUMENTO_CONTRI_ESPE_PROVEEDOR_GENERAL", SqlDbType.Int).Value = DocumentoContriEspeProveedorGeneral
             End With
             Return comando
         End Function
@@ -164,8 +166,9 @@ Namespace CONTABILIDAD.COMPRAS.PROVEEDORES
                 .Parameters.AddWithValue("@ID_CIUDAD", SqlDbType.Int).Value = idCiudadProveedorGeneral
                 .Parameters.AddWithValue("@TELEFONO_1_PROVEEDOR_GENERAL", SqlDbType.NVarChar).Value = telefono1ProveedorGeneral
                 .Parameters.AddWithValue("@TELEFONO_2_PROVEEDOR_GENERAL", SqlDbType.NVarChar).Value = telefono2ProveedorGeneral
-                .Parameters.AddWithValue("@EMAIL_PROVEEDOR_GENERAL", SqlDbType.NVarChar).Value = emailProveedorGeneral
-                .Parameters.AddWithValue("@ESTADO_PROVEEDOR_GENERAL", SqlDbType.Int).Value = estadoProveedorGeneral
+                .Parameters.AddWithValue("@EMAIL_PROVEEDOR_GENERAL", SqlDbType.NVarChar).Value = EmailProveedorGeneral
+                .Parameters.AddWithValue("@ESTADO_PROVEEDOR_GENERAL", SqlDbType.Int).Value = EstadoProveedorGeneral
+                .Parameters.AddWithValue("@DOCUMENTO_CONTRI_ESPE_PROVEEDOR_GENERAL", SqlDbType.Int).Value = DocumentoContriEspeProveedorGeneral
             End With
             Return comando
         End Function
