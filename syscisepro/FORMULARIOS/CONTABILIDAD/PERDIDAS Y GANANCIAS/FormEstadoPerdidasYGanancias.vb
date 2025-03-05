@@ -1363,7 +1363,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
 
 
-                    ' Acumular saldos (sumar nodos) desde el nivel inferior hacia el superior
+                    'Acumular saldos(sumar nodos) desde el nivel inferior hacia el superior
                     For level As Integer = 7 To 1 Step -1
                         For Each parentRow As DataGridViewRow In dgvComparacion.Rows
                             Dim parentCodigo As String = parentRow.Cells("Codigo").Value.ToString()
@@ -1398,18 +1398,49 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                         auxData = CType(dgvComparacion.DataSource, DataTable)
                     Next
 
-                    'CalcularVariacion()
+                    ' --- Paso 1: Calcular Cambio y Variacion para cuentas padres ---
+                    For Each row As DataGridViewRow In dgvComparacion.Rows
+                        If Integer.Parse(row.Cells("Nivel").Value.ToString()) < 5 Then
+                            ' Recorrer todas las columnas "CambioX"
+                            For Each col As DataGridViewColumn In dgvComparacion.Columns
+                                If col.Name.StartsWith("Cambio") Then
+                                    Dim cambioNumber As String = col.Name.Replace("Cambio", "").Trim()
+                                    Dim indexCambio As Integer = col.Index
 
-                    'For Each row As DataGridViewRow In dgvComparacion.Rows
-                    '    Dim nivel As Integer = 0
-                    '    If Integer.TryParse(row.Cells("Nivel").Value.ToString(), nivel) Then
-                    '        If nivel > 3 Then
-                    '            row.Visible = False
-                    '        ElseIf nivel = 3 AndAlso dgvComparacion.Columns.Contains("nodoCom") Then
-                    '            row.Cells("nodoCom").Value = "+"
-                    '        End If
-                    '    End If
-                    'Next
+                                    ' Las dos columnas anteriores son los periodos a comparar
+                                    Dim periodoActualCol As DataGridViewColumn = dgvComparacion.Columns(indexCambio - 2)
+                                    Dim periodoAnteriorCol As DataGridViewColumn = dgvComparacion.Columns(indexCambio - 1)
+
+                                    ' Obtener valores
+                                    Dim valorActual As Double = 0
+                                    If row.Cells(periodoActualCol.Name).Value IsNot Nothing AndAlso Not IsDBNull(row.Cells(periodoActualCol.Name).Value) Then
+                                        Double.TryParse(row.Cells(periodoActualCol.Name).Value.ToString(), valorActual)
+                                    End If
+
+                                    Dim valorAnterior As Double = 0
+                                    If row.Cells(periodoAnteriorCol.Name).Value IsNot Nothing AndAlso Not IsDBNull(row.Cells(periodoAnteriorCol.Name).Value) Then
+                                        Double.TryParse(row.Cells(periodoAnteriorCol.Name).Value.ToString(), valorAnterior)
+                                    End If
+
+                                    ' Calcular diferencia
+                                    Dim cambio As Double = Math.Abs(valorActual) - Math.Abs(valorAnterior)
+                                    row.Cells(col.Name).Value = Math.Round(cambio, 2)
+
+                                    ' Calcular variación si existe la columna
+                                    Dim variacionColName As String = "Variacion" & cambioNumber
+                                    If dgvComparacion.Columns.Contains(variacionColName) Then
+                                        Dim variacion As Double = If(valorAnterior <> 0, ((cambio * 100) / Math.Abs(valorAnterior)), 0)
+                                        row.Cells(variacionColName).Value = Math.Round(variacion, 2)
+                                    End If
+                                End If
+                            Next
+                        End If
+                    Next
+
+
+
+
+                    'CalcularVariacion()
 
                 End If
 
@@ -1570,41 +1601,49 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 Return
             End If
 
-            ' Obtener las columnas dinámicas (excluyendo fijas)
-            Dim columnasDinamicas As New List(Of String)
+            ' 1. Definir columnas fijas y excluir Cambio/Variacion
+            Dim columnasFijas As New List(Of String) From {"Codigo", "Cuenta", "Nivel", "Padre", "nodoCom"}
+            Dim columnasPeriodos As New List(Of String)
+
+            ' 2. Filtrar columnas: solo las de períodos (ej: "ENE 2024", "JUL - DIC 2023")
             For Each col As DataGridViewColumn In dgvComparacion.Columns
-                If Not {"Codigo", "Cuenta", "Nivel", "Padre", "nodoCom"}.Contains(col.Name) Then
-                    columnasDinamicas.Add(col.Name)
+                If Not columnasFijas.Contains(col.Name) AndAlso
+           Not col.Name.StartsWith("Cambio") AndAlso
+           Not col.Name.StartsWith("Variacion") Then
+                    columnasPeriodos.Add(col.Name)
                 End If
             Next
 
-            ' Ocultar o mostrar filas según el estado del CheckBox
+            ' 3. Evaluar filas
             For Each row As DataGridViewRow In dgvComparacion.Rows
                 Dim todasCero As Boolean = True
 
-                ' Verificar si todas las columnas dinámicas tienen valor 0.00
-                For Each colName As String In columnasDinamicas
+                For Each colName As String In columnasPeriodos
                     If row.Cells(colName).Value IsNot Nothing AndAlso Not IsDBNull(row.Cells(colName).Value) Then
                         Dim valor As Double = 0
-                        Double.TryParse(row.Cells(colName).Value.ToString(), valor)
-                        If valor <> 0 Then
+                        Dim valorStr As String = row.Cells(colName).Value.ToString()
+
+                        ' 4. Convertir con formato invariante para evitar errores culturales
+                        If Double.TryParse(valorStr, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, valor) Then
+                            If Math.Abs(valor) > 0.0001 Then ' Tolerancia para redondeos
+                                todasCero = False
+                                Exit For
+                            End If
+                        Else
+                            ' 5. Si no es numérico, no se oculta (ej: texto o formato incorrecto)
                             todasCero = False
                             Exit For
                         End If
                     End If
                 Next
 
-                ' Ocultar o mostrar la fila según el estado del CheckBox
-                If chkOcultar.Checked Then
-                    row.Visible = Not todasCero ' Ocultar si todas las columnas son 0.00
-                Else
-                    row.Visible = True ' Mostrar todas las filas
-                End If
+                ' 6. Ocultar/mostrar según el CheckBox
+                row.Visible = If(chkOcultar.Checked, Not todasCero, True)
             Next
         End Sub
 
         Private Sub btnExportarComparacion_Click(sender As Object, e As EventArgs) Handles btnExportarComparacion.Click
-            ExportarDatosCompracion(dgvComparacion, "EstadoPyG_Compativo")
+            ExportarDatosCompracion(dgvComparacion, "EstadoPyG_Comparativo")
         End Sub
 
         Private Sub ExportarDatosCompracion(ByVal dgvComparacion As DataGridView, ByVal titulo As String)

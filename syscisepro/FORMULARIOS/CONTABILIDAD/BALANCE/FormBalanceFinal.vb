@@ -815,87 +815,186 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
 
         Private Sub callReport()
 
-            Dim Balance As DataTable
+            Try
 
-            dgvComparacion.DataSource = Nothing
+                Dim Balance As DataTable
 
-            FechaDesdeT = New Date(FechaDesdeT.Year, FechaDesdeT.Month, FechaDesdeT.Day, 0, 0, 0)
-            FechaHastaT = New Date(FechaHastaT.Year, FechaHastaT.Month, FechaHastaT.Day, 23, 59, 59)
+                dgvComparacion.DataSource = Nothing
 
-            If cbxShowColumns.SelectedIndex = 0 Then
-                Columnas = "Mensual"
-            ElseIf cbxShowColumns.SelectedIndex = 1 Then
-                Columnas = "Trimestral"
-            ElseIf cbxShowColumns.SelectedIndex = 2 Then
-                Columnas = "Semestral"
-            ElseIf cbxShowColumns.SelectedIndex = 3 Then
-                Columnas = "Anual"
-            End If
+                FechaDesdeT = New Date(FechaDesdeT.Year, FechaDesdeT.Month, FechaDesdeT.Day, 0, 0, 0)
+                FechaHastaT = New Date(FechaHastaT.Year, FechaHastaT.Month, FechaHastaT.Day, 23, 59, 59)
 
-
-            If Anterior Then
-                Previo = False
-                Balance = objPlanCuentas.SeleccionarBalnceFinalComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioAnterior, PorcentajeAnterior)
-            ElseIf Previo Then
-                Anterior = False
-                Balance = objPlanCuentas.SeleccionarBalnceFinalComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioPrevio, PorcentajePrevio)
-            Else
-
-                Balance = objPlanCuentas.SeleccionarBalnceFinalComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioAnterior, PorcentajeAnterior)
-
-            End If
-            If Balance IsNot Nothing AndAlso Balance.Rows.Count > 0 Then
-
-                dgvComparacion.DataSource = Balance
-                dgvComparacion.Columns(0).Width = 25
-                dgvComparacion.Columns("Codigo").Width = 80
-                dgvComparacion.Columns("Cuenta").Width = 180
-
-                Dim AnchoFijo As Integer = TextRenderer.MeasureText("-10000000.00", dgvComparacion.Font).Width + 5
-
-                For Each col As DataGridViewColumn In dgvComparacion.Columns
-
-                    ' Si la columna no es Codigo, Cuenta, Nivel o Padre, alinearla a la derecha
-                    If col.Name <> "Codigo" AndAlso col.Name <> "Cuenta" AndAlso col.Name <> "Nivel" AndAlso col.Name <> "Padre" Then
-                        col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-                    End If
+                If cbxShowColumns.SelectedIndex = 0 Then
+                    Columnas = "Mensual"
+                ElseIf cbxShowColumns.SelectedIndex = 1 Then
+                    Columnas = "Trimestral"
+                ElseIf cbxShowColumns.SelectedIndex = 2 Then
+                    Columnas = "Semestral"
+                ElseIf cbxShowColumns.SelectedIndex = 3 Then
+                    Columnas = "Anual"
+                End If
 
 
-                    If col.Name.StartsWith("Cambio") Or col.Name.StartsWith("Variacion") Then
-                        col.DefaultCellStyle.Format = "N2"
-                        col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-                        col.Width = AnchoFijo
-                    End If
-                Next
+                If Anterior Then
+                    Previo = False
+                    Balance = objPlanCuentas.SeleccionarBalnceFinalComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioAnterior, PorcentajeAnterior)
+                ElseIf Previo Then
+                    Anterior = False
+                    Balance = objPlanCuentas.SeleccionarBalnceFinalComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioPrevio, PorcentajePrevio)
+                Else
 
-                AddHandler dgvComparacion.CellFormatting, Sub(sender As Object, e As DataGridViewCellFormattingEventArgs)
-                                                              Dim dgv As DataGridView = DirectCast(sender, DataGridView)
-                                                              Dim columnName As String = dgv.Columns(e.ColumnIndex).Name
+                    Balance = objPlanCuentas.SeleccionarBalnceFinalComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioAnterior, PorcentajeAnterior)
 
-                                                              If columnName.StartsWith("Cambio") Or columnName.StartsWith("Variacion") Then
-                                                                  If e.Value IsNot Nothing AndAlso Not IsDBNull(e.Value) Then
-                                                                      Dim valorStr As String = e.Value.ToString()
-                                                                      Dim valor As Decimal
+                End If
+                If Balance IsNot Nothing AndAlso Balance.Rows.Count > 0 Then
 
-                                                                      ' Para Variacion, eliminar el % antes de convertir
-                                                                      If columnName.StartsWith("Variacion") AndAlso valorStr.EndsWith("%") Then
-                                                                          valorStr = valorStr.Replace("%", "")
-                                                                      End If
+                    dgvComparacion.DataSource = Balance
+                    dgvComparacion.Columns(0).Width = 25
+                    dgvComparacion.Columns("Codigo").Width = 80
+                    dgvComparacion.Columns("Cuenta").Width = 180
 
-                                                                      ' Intentar convertir el valor a número
-                                                                      If Decimal.TryParse(valorStr, valor) Then
-                                                                          If valor > 0 Then
-                                                                              e.CellStyle.ForeColor = Color.Green
-                                                                          ElseIf valor < 0 Then
-                                                                              e.CellStyle.ForeColor = Color.Red
-                                                                          End If
-                                                                      End If
-                                                                  End If
-                                                              End If
-                                                          End Sub
+                    Dim AnchoFijo As Integer = TextRenderer.MeasureText("-10000000.00", dgvComparacion.Font).Width + 5
 
-            End If
+                    For Each col As DataGridViewColumn In dgvComparacion.Columns
 
+                        ' Si la columna no es Codigo, Cuenta, Nivel o Padre, alinearla a la derecha
+                        If col.Name <> "Codigo" AndAlso col.Name <> "Cuenta" AndAlso col.Name <> "Nivel" AndAlso col.Name <> "Padre" Then
+                            col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+                        End If
+
+
+                        If col.Name.StartsWith("Cambio") Or col.Name.StartsWith("Variacion") Then
+                            col.DefaultCellStyle.Format = "N2"
+                            col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+                            col.Width = AnchoFijo
+                        End If
+                    Next
+
+                    AddHandler dgvComparacion.CellFormatting,
+                          Sub(sender As Object, e As DataGridViewCellFormattingEventArgs)
+                              'Dim dgv As DataGridView = DirectCast(sender, DataGridView)
+                              Dim columnName As String = dgvComparacion.Columns(e.ColumnIndex).Name
+
+                              If columnName.StartsWith("Cambio") OrElse columnName.StartsWith("Variacion") Then
+                                  If e.Value IsNot Nothing AndAlso Not IsDBNull(e.Value) Then
+                                      ' Dim valorStr As String = e.Value.ToString()
+                                      Dim valor As Decimal = 0
+                                      ' Intentar convertir el valor a número
+                                      If Decimal.TryParse(e.Value.ToString(), valor) Then
+                                          If valor > 0 Then
+                                              e.CellStyle.ForeColor = Color.Green
+                                          ElseIf valor < 0 Then
+                                              e.CellStyle.ForeColor = Color.Red
+                                          End If
+                                      End If
+                                  End If
+                              End If
+                          End Sub
+
+                    For Each row As DataGridViewRow In dgvComparacion.Rows
+                        Select Case row.Cells("NIVEL").Value.ToString()
+                            Case "7"
+                                row.DefaultCellStyle.BackColor = Color.Lavender ' Suave lila
+                            Case "6"
+                                row.DefaultCellStyle.BackColor = Color.Thistle ' Lila claro
+                            Case "5"
+                                row.DefaultCellStyle.BackColor = Color.MistyRose ' Rosa pálido
+                            Case "4"
+                                row.DefaultCellStyle.BackColor = Color.LightSalmon ' Naranja suave
+                            Case "3"
+                                row.DefaultCellStyle.BackColor = Color.PeachPuff ' Durazno claro
+                            Case "2"
+                                row.DefaultCellStyle.BackColor = Color.Moccasin ' Amarillo crema
+                            Case "1"
+                                row.DefaultCellStyle.BackColor = Color.LemonChiffon ' Amarillo pastel
+                        End Select
+                    Next
+
+
+                    ' Volver a obtener la data actual de dgvComparacion
+                    Dim auxData = CType(dgvComparacion.DataSource, DataTable)
+
+
+
+                    'Acumular saldos(sumar nodos) desde el nivel inferior hacia el superior
+                    For level As Integer = 7 To 1 Step -1
+                        For Each parentRow As DataGridViewRow In dgvComparacion.Rows
+                            Dim parentCodigo As String = parentRow.Cells("Codigo").Value.ToString()
+                            Dim parentNivel As Integer = Integer.Parse(parentRow.Cells("Nivel").Value.ToString())
+
+                            If parentNivel < level Then
+                                For Each childRow As DataRow In auxData.Select("Padre = '" & parentCodigo & "' AND Nivel = '" & level & "'")
+                                    For Each col As DataGridViewColumn In dgvComparacion.Columns
+                                        If Not (col.Name = "Codigo" OrElse col.Name = "Cuenta" OrElse col.Name = "Nivel" OrElse col.Name = "Padre" OrElse col.Name = "nodoCom" OrElse col.Name.Contains("Variacion")) Then
+                                            Dim parentVal As Double = 0, childVal As Double = 0
+
+                                            If parentRow.Cells(col.Name).Value IsNot Nothing AndAlso Not IsDBNull(parentRow.Cells(col.Name).Value) Then
+                                                Double.TryParse(parentRow.Cells(col.Name).Value.ToString(), parentVal)
+                                            End If
+
+                                            Dim childObj = childRow(col.Name)
+                                            If childObj IsNot Nothing AndAlso Not IsDBNull(childObj) Then
+                                                Double.TryParse(childObj.ToString(), childVal)
+                                            End If
+
+                                            parentRow.Cells(col.Name).Value = Math.Round(parentVal + childVal, 2)
+                                        End If
+                                    Next
+
+                                    If dgvComparacion.Columns.Contains("nodoCom") Then
+                                        parentRow.Cells("nodoCom").Value = "-"
+                                    End If
+                                Next
+                            End If
+                        Next
+
+                        auxData = CType(dgvComparacion.DataSource, DataTable)
+                    Next
+
+                    ' --- Paso 1: Calcular Cambio y Variacion para cuentas padres ---
+                    For Each row As DataGridViewRow In dgvComparacion.Rows
+                        If Integer.Parse(row.Cells("Nivel").Value.ToString()) < 5 Then
+                            ' Recorrer todas las columnas "CambioX"
+                            For Each col As DataGridViewColumn In dgvComparacion.Columns
+                                If col.Name.StartsWith("Cambio") Then
+                                    Dim cambioNumber As String = col.Name.Replace("Cambio", "").Trim()
+                                    Dim indexCambio As Integer = col.Index
+
+                                    ' Las dos columnas anteriores son los periodos a comparar
+                                    Dim periodoActualCol As DataGridViewColumn = dgvComparacion.Columns(indexCambio - 2)
+                                    Dim periodoAnteriorCol As DataGridViewColumn = dgvComparacion.Columns(indexCambio - 1)
+
+                                    ' Obtener valores
+                                    Dim valorActual As Double = 0
+                                    If row.Cells(periodoActualCol.Name).Value IsNot Nothing AndAlso Not IsDBNull(row.Cells(periodoActualCol.Name).Value) Then
+                                        Double.TryParse(row.Cells(periodoActualCol.Name).Value.ToString(), valorActual)
+                                    End If
+
+                                    Dim valorAnterior As Double = 0
+                                    If row.Cells(periodoAnteriorCol.Name).Value IsNot Nothing AndAlso Not IsDBNull(row.Cells(periodoAnteriorCol.Name).Value) Then
+                                        Double.TryParse(row.Cells(periodoAnteriorCol.Name).Value.ToString(), valorAnterior)
+                                    End If
+
+                                    ' Calcular diferencia
+                                    Dim cambio As Double = Math.Abs(valorActual) - Math.Abs(valorAnterior)
+                                    row.Cells(col.Name).Value = Math.Round(cambio, 2)
+
+                                    ' Calcular variación si existe la columna
+                                    Dim variacionColName As String = "Variacion" & cambioNumber
+                                    If dgvComparacion.Columns.Contains(variacionColName) Then
+                                        Dim variacion As Double = If(valorAnterior <> 0, ((cambio * 100) / Math.Abs(valorAnterior)), 0)
+                                        row.Cells(variacionColName).Value = Math.Round(variacion, 2)
+                                    End If
+                                End If
+                            Next
+                        End If
+                    Next
+
+                End If
+
+            Catch Ex As Exception
+                Krypton.Toolkit.KryptonMessageBox.Show("ERROR: " & Ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
 
 
         End Sub
@@ -985,6 +1084,193 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
 
         Private Sub cbxShowColumns_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxShowColumns.SelectedIndexChanged
             callReport()
+        End Sub
+
+        Private Sub chkOcultar_CheckedChanged(sender As Object, e As EventArgs) Handles chkOcultar.CheckedChanged
+            If dgvComparacion.Rows.Count = 0 Then
+                Krypton.Toolkit.KryptonMessageBox.Show("Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                Return
+            End If
+
+            ' 1. Definir columnas fijas y excluir Cambio/Variacion
+            Dim columnasFijas As New List(Of String) From {"Codigo", "Cuenta", "Nivel", "Padre", "nodoCom"}
+            Dim columnasPeriodos As New List(Of String)
+
+            ' 2. Filtrar columnas: solo las de períodos (ej: "ENE 2024", "JUL - DIC 2023")
+            For Each col As DataGridViewColumn In dgvComparacion.Columns
+                If Not columnasFijas.Contains(col.Name) AndAlso
+           Not col.Name.StartsWith("Cambio") AndAlso
+           Not col.Name.StartsWith("Variacion") Then
+                    columnasPeriodos.Add(col.Name)
+                End If
+            Next
+
+            ' 3. Evaluar filas
+            For Each row As DataGridViewRow In dgvComparacion.Rows
+                Dim todasCero As Boolean = True
+
+                For Each colName As String In columnasPeriodos
+                    If row.Cells(colName).Value IsNot Nothing AndAlso Not IsDBNull(row.Cells(colName).Value) Then
+                        Dim valor As Double = 0
+                        Dim valorStr As String = row.Cells(colName).Value.ToString()
+
+                        ' 4. Convertir con formato invariante para evitar errores culturales
+                        If Double.TryParse(valorStr, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, valor) Then
+                            If Math.Abs(valor) > 0.0001 Then ' Tolerancia para redondeos
+                                todasCero = False
+                                Exit For
+                            End If
+                        Else
+                            ' 5. Si no es numérico, no se oculta (ej: texto o formato incorrecto)
+                            todasCero = False
+                            Exit For
+                        End If
+                    End If
+                Next
+
+                ' 6. Ocultar/mostrar según el CheckBox
+                row.Visible = If(chkOcultar.Checked, Not todasCero, True)
+            Next
+        End Sub
+
+        Private Sub btnExportarComparacion_Click(sender As Object, e As EventArgs) Handles btnExportarComparacion.Click
+            ExportarDatosCompracion(dgvComparacion, "BalanceFinal_Comparativo")
+        End Sub
+
+
+        Private Sub ExportarDatosCompracion(ByVal dgvComparacion As DataGridView, ByVal titulo As String)
+            Try
+                If dgvComparacion.Rows.Count = 0 Then
+                    Krypton.Toolkit.KryptonMessageBox.Show("Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    Return
+                End If
+
+
+
+                Dim fec = ValidationForms.FechaActual(_tipoCon)
+
+
+
+                'Crear un nuevo libro y hoja
+                Dim workbook = New XLWorkbook()
+                Dim worksheet = workbook.Worksheets.Add("Comparación")
+
+                Dim ic = ValidationForms.NumToCharExcelFromVisibleColumnsDataGrid(dgvComparacion)
+                worksheet.Range("A1:" & ic & (dgvComparacion.RowCount + 50)).Style.Font.FontSize = 10
+
+
+                'Encabezado
+
+                worksheet.Range("A1:" & ic & "1").Merge()
+                worksheet.Range("A1:" & ic & "1").Value = ValidationForms.NombreCompany(_tipoCon).ToString() & "  -  " & titulo
+                worksheet.Range("A1:" & ic & "1").Style.Font.Bold = True
+                worksheet.Range("A1:" & ic & "1").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center
+                worksheet.Range("A1:" & ic & "1").Style.Fill.BackgroundColor = XLColor.FromColor(ValidationForms.GetColorSistema(_tipoCon))
+                worksheet.Range("A1:" & ic & "1").Style.Font.FontColor = XLColor.White
+                worksheet.Range("A1:" & ic & "1").Style.Font.FontSize = 12
+
+                ' Copete
+                worksheet.Range("A2:" & ic & "2").Merge()
+                worksheet.Range("A2:" & ic & "2").Value = "PERÍODO: " & dtpFechaDesdeMes.Value.ToLongDateString() & "  AL " & dtpFechaHastaMes.Value.ToLongDateString()
+                worksheet.Range("A2:" & ic & "2").Style.Font.FontSize = 12
+
+                ' Fecha
+                worksheet.Range("A3:" & ic & "3").Merge()
+                worksheet.Range("A3:" & ic & "3").Value = "Fecha de Reporte: " & fec.ToLongDateString() & " " & fec.ToLongTimeString()
+                worksheet.Range("A3:" & ic & "3").Style.Font.FontSize = 12
+
+                'Encabezados de Columnas 
+                Dim indc = 1
+                Dim headin = 5
+                For i = 0 To dgvComparacion.Columns.Count - 1
+                    If Not dgvComparacion.Columns(i).Visible Then Continue For
+                    worksheet.Cell(headin, indc).Value = dgvComparacion.Columns(i).HeaderText
+                    worksheet.Cell(headin, indc).Style.Font.Bold = True
+                    worksheet.Cell(headin, indc).Style.Border.OutsideBorder = XLBorderStyleValues.Thin
+                    worksheet.Cell(headin, indc).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center
+                    worksheet.Cell(headin, indc).Style.Fill.BackgroundColor = XLColor.FromColor(ValidationForms.GetColorSistema(_tipoCon))
+                    worksheet.Cell(headin, indc).Style.Font.FontColor = XLColor.White
+                    indc += 1
+                Next
+
+
+                ' Detalle de la tabla
+                Dim columnasTexto As String() = {"Cuenta"} ' Solo "Cuenta" es texto
+                Dim columnasNumericas As String() = {"Codigo", "Nivel", "Padre"} ' Estas son numéricas
+                Dim c = 0
+                For o = 0 To dgvComparacion.Rows.Count - 1
+                    ' Omitir filas ocultas si el CheckBox está marcado
+                    If chkOcultar.Checked AndAlso Not dgvComparacion.Rows(o).Visible Then Continue For
+
+                    indc = 1
+                    For j = 0 To dgvComparacion.Columns.Count - 1
+                        If Not dgvComparacion.Columns(j).Visible Then Continue For
+
+                        Dim cellValue = dgvComparacion.Rows(o).Cells(j).Value
+                        Dim cell = worksheet.Cell(c + 1 + headin, indc)
+                        Dim columnName As String = dgvComparacion.Columns(j).HeaderText
+
+                        ' Aplicar formato según el tipo de columna
+                        If columnasNumericas.Contains(columnName) Then
+                            ' Columnas numéricas específicas ("Codigo", "Nivel", "Padre")
+                            If cellValue IsNot Nothing AndAlso IsNumeric(cellValue) Then
+                                cell.Value = CDbl(cellValue) ' Asegurar que el valor sea numérico
+                            Else
+                                cell.Value = 0 ' Valor por defecto si no es numérico
+                            End If
+                        ElseIf columnasTexto.Contains(columnName) Then
+                            ' Columna de texto ("Cuenta")
+                            cell.Value = If(cellValue IsNot Nothing, cellValue.ToString(), String.Empty)
+                        Else
+                            ' Formato contable para el resto de columnas
+                            If cellValue IsNot Nothing AndAlso IsNumeric(cellValue) Then
+                                cell.Value = CDbl(cellValue)
+                                cell.Style.NumberFormat.Format = "#,##0.00" ' Formato contable
+                            Else
+                                cell.Value = If(cellValue IsNot Nothing, cellValue.ToString(), String.Empty)
+                            End If
+                        End If
+
+                        ' Aplicar bordes a la celda
+                        cell.Style.Border.SetLeftBorder(XLBorderStyleValues.Thin)
+                        cell.Style.Border.SetRightBorder(XLBorderStyleValues.Thin)
+
+                        ' Aplicar borde inferior solo en la última fila
+                        If o = dgvComparacion.Rows.Count - 1 Then
+                            cell.Style.Border.SetBottomBorder(XLBorderStyleValues.Thin)
+                        End If
+
+                        indc += 1
+                    Next
+                    c += 1
+                Next
+
+
+                ' Bordes inferiores
+                worksheet.Range("A" & (c + headin) & ":" & ic & indc).Style.Border.BottomBorder = XLBorderStyleValues.Thin
+
+                ' Ajustar columnas
+                Dim range As IXLRange = worksheet.Range("A1:" & ic & (dgvComparacion.RowCount + 50))
+                worksheet.Columns("A:" & ic).AdjustToContents()
+
+                ' Guardar el archivo
+                Dim saveFileDialog As New SaveFileDialog()
+                saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx"
+                saveFileDialog.FileName = $"{titulo}_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx"
+
+                If saveFileDialog.ShowDialog() = DialogResult.OK Then
+                    workbook.SaveAs(saveFileDialog.FileName)
+                    Process.Start(saveFileDialog.FileName)
+                End If
+
+                Krypton.Toolkit.KryptonMessageBox.Show("Datos exportados correctamente!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+
+
+
+
+            Catch ex As Exception
+                Krypton.Toolkit.KryptonMessageBox.Show("ERROR: " & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
         End Sub
     End Class
 End Namespace

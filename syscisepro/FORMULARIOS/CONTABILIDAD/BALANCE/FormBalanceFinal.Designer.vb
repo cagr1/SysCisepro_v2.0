@@ -60,7 +60,9 @@
             Me.KryptonLabel2 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel1 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonPage3 = New ComponentFactory.Krypton.Navigator.KryptonPage()
-            Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.dgvComparacion = New Krypton.Toolkit.KryptonDataGridView()
+            Me.nodoCom = New Krypton.Toolkit.KryptonDataGridViewButtonColumn()
+            Me.btnCuztomize = New Krypton.Toolkit.KryptonButton()
             Me.KryptonGroupBox4 = New Krypton.Toolkit.KryptonGroupBox()
             Me.cbxDates = New ComponentFactory.Krypton.Toolkit.KryptonComboBox()
             Me.cbxShowColumns = New Krypton.Toolkit.KryptonComboBox()
@@ -68,9 +70,9 @@
             Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
             Me.dtpFechaDesdeMes = New Krypton.Toolkit.KryptonDateTimePicker()
             Me.dtpFechaHastaMes = New Krypton.Toolkit.KryptonDateTimePicker()
-            Me.btnCuztomize = New Krypton.Toolkit.KryptonButton()
-            Me.dgvComparacion = New Krypton.Toolkit.KryptonDataGridView()
-            Me.nodoCom = New Krypton.Toolkit.KryptonDataGridViewButtonColumn()
+            Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.chkOcultar = New ComponentFactory.Krypton.Toolkit.KryptonCheckBox()
+            Me.btnExportarComparacion = New Krypton.Toolkit.KryptonButton()
             CType(Me.dgvMayores, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.GroupBox2.SuspendLayout()
             Me.ContextMenuStripClicDerecho.SuspendLayout()
@@ -85,15 +87,15 @@
             Me.KryptonGroupBox1.SuspendLayout()
             CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonPage3.SuspendLayout()
-            CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.KryptonPage2.SuspendLayout()
+            CType(Me.dgvComparacion, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox4.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox4.Panel.SuspendLayout()
             Me.KryptonGroupBox4.SuspendLayout()
             CType(Me.cbxDates, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.cbxShowColumns, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.dgvComparacion, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonPage2.SuspendLayout()
             Me.SuspendLayout()
             '
             'chkTodos
@@ -367,29 +369,13 @@
             'tcAuxiliares
             '
             Me.tcAuxiliares.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None
-            Me.tcAuxiliares.Button.CloseButtonAction = ComponentFactory.Krypton.Navigator.CloseButtonAction.RemovePageAndDispose
             Me.tcAuxiliares.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide
-            Me.tcAuxiliares.Button.ContextButtonAction = ComponentFactory.Krypton.Navigator.ContextButtonAction.SelectPage
-            Me.tcAuxiliares.Button.ContextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
-            Me.tcAuxiliares.Button.ContextMenuMapImage = ComponentFactory.Krypton.Navigator.MapKryptonPageImage.Small
-            Me.tcAuxiliares.Button.ContextMenuMapText = ComponentFactory.Krypton.Navigator.MapKryptonPageText.TextTitle
-            Me.tcAuxiliares.Button.NextButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
-            Me.tcAuxiliares.Button.NextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
-            Me.tcAuxiliares.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
-            Me.tcAuxiliares.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
             Me.tcAuxiliares.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.tcAuxiliares.Group.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient
-            Me.tcAuxiliares.Group.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlClient
-            Me.tcAuxiliares.Header.HeaderStyleBar = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary
-            Me.tcAuxiliares.Header.HeaderStylePrimary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Primary
-            Me.tcAuxiliares.Header.HeaderStyleSecondary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary
             Me.tcAuxiliares.Location = New System.Drawing.Point(0, 32)
             Me.tcAuxiliares.Name = "tcAuxiliares"
             Me.tcAuxiliares.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
-            Me.tcAuxiliares.PageBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient
             Me.tcAuxiliares.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage3, Me.KryptonPage2})
-            Me.tcAuxiliares.Panel.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelClient
-            Me.tcAuxiliares.SelectedIndex = 0
+            Me.tcAuxiliares.SelectedIndex = 1
             Me.tcAuxiliares.Size = New System.Drawing.Size(922, 631)
             Me.tcAuxiliares.TabIndex = 291
             Me.tcAuxiliares.Text = "KryptonNavigator1"
@@ -406,15 +392,12 @@
             Me.KryptonPage1.Name = "KryptonPage1"
             Me.KryptonPage1.Size = New System.Drawing.Size(920, 602)
             Me.KryptonPage1.Text = "Mayores"
-            Me.KryptonPage1.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage1.UniqueName = "21E19C2E67CA4541098720E93A94B53D"
             '
             'KryptonGroupBox1
             '
-            Me.KryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption
             Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox
             Me.KryptonGroupBox1.Location = New System.Drawing.Point(0, 2)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
@@ -467,25 +450,43 @@
             Me.KryptonPage3.Name = "KryptonPage3"
             Me.KryptonPage3.Size = New System.Drawing.Size(920, 602)
             Me.KryptonPage3.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.KryptonPage3.StateNormal.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
             Me.KryptonPage3.Text = "Comparativo"
-            Me.KryptonPage3.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip
             Me.KryptonPage3.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage3.UniqueName = "B29FDC7AF5D5473543A218A3C1F082DA"
             '
-            'KryptonPage2
+            'dgvComparacion
             '
-            Me.KryptonPage2.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
-            Me.KryptonPage2.Controls.Add(Me.tvBalanceComprobacion)
-            Me.KryptonPage2.Flags = 65534
-            Me.KryptonPage2.LastVisibleSet = True
-            Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
-            Me.KryptonPage2.Name = "KryptonPage2"
-            Me.KryptonPage2.Size = New System.Drawing.Size(920, 602)
-            Me.KryptonPage2.Text = "Arbol"
-            Me.KryptonPage2.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip
-            Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
-            Me.KryptonPage2.UniqueName = "FF643023690441A3F980E845C980F1C1"
+            Me.dgvComparacion.AllowUserToAddRows = False
+            Me.dgvComparacion.AllowUserToDeleteRows = False
+            Me.dgvComparacion.AllowUserToOrderColumns = True
+            Me.dgvComparacion.BorderStyle = System.Windows.Forms.BorderStyle.None
+            Me.dgvComparacion.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nodoCom})
+            Me.dgvComparacion.GridStyles.Style = Krypton.Toolkit.DataGridViewStyle.Sheet
+            Me.dgvComparacion.GridStyles.StyleBackground = Krypton.Toolkit.PaletteBackStyle.GridBackgroundSheet
+            Me.dgvComparacion.GridStyles.StyleColumn = Krypton.Toolkit.GridStyle.Sheet
+            Me.dgvComparacion.GridStyles.StyleDataCells = Krypton.Toolkit.GridStyle.Sheet
+            Me.dgvComparacion.GridStyles.StyleRow = Krypton.Toolkit.GridStyle.Sheet
+            Me.dgvComparacion.Location = New System.Drawing.Point(14, 93)
+            Me.dgvComparacion.Name = "dgvComparacion"
+            Me.dgvComparacion.RowHeadersVisible = False
+            Me.dgvComparacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+            Me.dgvComparacion.Size = New System.Drawing.Size(799, 506)
+            Me.dgvComparacion.StateNormal.Background.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvComparacion.TabIndex = 257
+            '
+            'nodoCom
+            '
+            Me.nodoCom.HeaderText = "+"
+            Me.nodoCom.Name = "nodoCom"
+            Me.nodoCom.Width = 30
+            '
+            'btnCuztomize
+            '
+            Me.btnCuztomize.Location = New System.Drawing.Point(132, 14)
+            Me.btnCuztomize.Name = "btnCuztomize"
+            Me.btnCuztomize.Size = New System.Drawing.Size(130, 23)
+            Me.btnCuztomize.TabIndex = 256
+            Me.btnCuztomize.Values.Text = "Personalizar Reporte"
             '
             'KryptonGroupBox4
             '
@@ -496,6 +497,8 @@
             '
             'KryptonGroupBox4.Panel
             '
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.btnExportarComparacion)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.chkOcultar)
             Me.KryptonGroupBox4.Panel.Controls.Add(Me.cbxDates)
             Me.KryptonGroupBox4.Panel.Controls.Add(Me.cbxShowColumns)
             Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel11)
@@ -571,39 +574,50 @@
             Me.dtpFechaHastaMes.Size = New System.Drawing.Size(86, 21)
             Me.dtpFechaHastaMes.TabIndex = 229
             '
-            'btnCuztomize
+            'KryptonPage2
             '
-            Me.btnCuztomize.Location = New System.Drawing.Point(132, 14)
-            Me.btnCuztomize.Name = "btnCuztomize"
-            Me.btnCuztomize.Size = New System.Drawing.Size(130, 23)
-            Me.btnCuztomize.TabIndex = 256
-            Me.btnCuztomize.Values.Text = "Personalizar Reporte"
+            Me.KryptonPage2.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage2.Controls.Add(Me.tvBalanceComprobacion)
+            Me.KryptonPage2.Flags = 65534
+            Me.KryptonPage2.LastVisibleSet = True
+            Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
+            Me.KryptonPage2.Name = "KryptonPage2"
+            Me.KryptonPage2.Size = New System.Drawing.Size(920, 602)
+            Me.KryptonPage2.Text = "Arbol"
+            Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
+            Me.KryptonPage2.UniqueName = "FF643023690441A3F980E845C980F1C1"
             '
-            'dgvComparacion
+            'chkOcultar
             '
-            Me.dgvComparacion.AllowUserToAddRows = False
-            Me.dgvComparacion.AllowUserToDeleteRows = False
-            Me.dgvComparacion.AllowUserToOrderColumns = True
-            Me.dgvComparacion.BorderStyle = System.Windows.Forms.BorderStyle.None
-            Me.dgvComparacion.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nodoCom})
-            Me.dgvComparacion.GridStyles.Style = Krypton.Toolkit.DataGridViewStyle.Sheet
-            Me.dgvComparacion.GridStyles.StyleBackground = Krypton.Toolkit.PaletteBackStyle.GridBackgroundSheet
-            Me.dgvComparacion.GridStyles.StyleColumn = Krypton.Toolkit.GridStyle.Sheet
-            Me.dgvComparacion.GridStyles.StyleDataCells = Krypton.Toolkit.GridStyle.Sheet
-            Me.dgvComparacion.GridStyles.StyleRow = Krypton.Toolkit.GridStyle.Sheet
-            Me.dgvComparacion.Location = New System.Drawing.Point(14, 93)
-            Me.dgvComparacion.Name = "dgvComparacion"
-            Me.dgvComparacion.RowHeadersVisible = False
-            Me.dgvComparacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComparacion.Size = New System.Drawing.Size(799, 506)
-            Me.dgvComparacion.StateNormal.Background.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.dgvComparacion.TabIndex = 257
+            Me.chkOcultar.Images.CheckedNormal = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chkOcultar.Images.CheckedPressed = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chkOcultar.Images.CheckedTracking = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chkOcultar.Location = New System.Drawing.Point(567, 10)
+            Me.chkOcultar.Name = "chkOcultar"
+            Me.chkOcultar.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue
+            Me.chkOcultar.Size = New System.Drawing.Size(91, 18)
+            Me.chkOcultar.StateCommon.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chkOcultar.TabIndex = 253
+            Me.chkOcultar.Values.Text = "Quitar $0.00"
             '
-            'nodoCom
+            'btnExportarComparacion
             '
-            Me.nodoCom.HeaderText = "+"
-            Me.nodoCom.Name = "nodoCom"
-            Me.nodoCom.Width = 30
+            Me.btnExportarComparacion.Location = New System.Drawing.Point(678, 3)
+            Me.btnExportarComparacion.Name = "btnExportarComparacion"
+            Me.btnExportarComparacion.Size = New System.Drawing.Size(30, 30)
+            Me.btnExportarComparacion.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.[False]
+            Me.btnExportarComparacion.StateCommon.Border.Draw = Krypton.Toolkit.InheritBool.[False]
+            Me.btnExportarComparacion.StateCommon.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnExportarComparacion.TabIndex = 254
+            Me.btnExportarComparacion.Values.ImageStates.ImageCheckedNormal = Nothing
+            Me.btnExportarComparacion.Values.ImageStates.ImageCheckedPressed = Nothing
+            Me.btnExportarComparacion.Values.ImageStates.ImageCheckedTracking = Nothing
+            Me.btnExportarComparacion.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarComparacion.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarComparacion.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarComparacion.Values.Text = ""
             '
             'FormBalanceFinal
             '
@@ -641,8 +655,7 @@
             Me.KryptonGroupBox1.ResumeLayout(False)
             CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonPage3.ResumeLayout(False)
-            CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.KryptonPage2.ResumeLayout(False)
+            CType(Me.dgvComparacion, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.KryptonGroupBox4.Panel, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox4.Panel.ResumeLayout(False)
             Me.KryptonGroupBox4.Panel.PerformLayout()
@@ -650,7 +663,8 @@
             Me.KryptonGroupBox4.ResumeLayout(False)
             CType(Me.cbxDates, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.cbxShowColumns, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.dgvComparacion, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonPage2.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -697,5 +711,7 @@
         Friend WithEvents btnCuztomize As Krypton.Toolkit.KryptonButton
         Friend WithEvents dgvComparacion As Krypton.Toolkit.KryptonDataGridView
         Friend WithEvents nodoCom As Krypton.Toolkit.KryptonDataGridViewButtonColumn
+        Friend WithEvents chkOcultar As ComponentFactory.Krypton.Toolkit.KryptonCheckBox
+        Friend WithEvents btnExportarComparacion As Krypton.Toolkit.KryptonButton
     End Class
 End Namespace
