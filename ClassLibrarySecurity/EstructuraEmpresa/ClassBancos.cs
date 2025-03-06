@@ -17,10 +17,10 @@ namespace ClassLibraryCisepro3.EstructuraEmpresa
         {
             var pars = new List<object[]>
             {
-                new object[] { "FILBAN", SqlDbType.VarChar, filban } ,
-                new object[] { "FILTRO", SqlDbType.VarChar, filtro } 
+                new object[] { "FILBAN", SqlDbType.NVarChar, filban } ,
+                new object[] { "FILTRO", SqlDbType.NVarChar, filtro } 
             };
-            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select pe.id_personal, pe.cedula, pe.apellidos + ' ' + pe.nombres nombres, cg.descripcion, ar.nombre_area, cp.id_banco, ba.banco, cp.num_cuenta, cp.tipo from cuentas_personal cp join banco_roles ba on cp.id_banco=ba.id_banco join personal pe on cp.id_personal = pe.id_personal join cargo_ocupacional cg on pe.id_cargo_ocupacional = cg.id_cargo_ocupacional join area_general ar on pe.id_area = ar.id_area_general where pe.estado_personal = 1 and ba.banco like ('%'+@FILBAN+'%') and (pe.cedula like ('%'+@FILTRO+'%') or pe.apellidos like ('%'+@FILTRO+'%') or pe.nombres like ('%'+@FILTRO+'%') or  cp.num_cuenta like ('%'+@FILTRO+'%')) order by ba.id_banco desc, pe.apellidos, pe.nombres;", false, pars);
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_seleccionarRegistrosBancosCuentasPersonal", true, pars);
         }
 
         public DataTable SeleccionarRegistroBancoPorIdPersonal(TipoConexion tipoCon, int idp)

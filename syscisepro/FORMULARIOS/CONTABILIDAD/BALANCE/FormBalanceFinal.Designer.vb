@@ -375,7 +375,7 @@
             Me.tcAuxiliares.Name = "tcAuxiliares"
             Me.tcAuxiliares.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.tcAuxiliares.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage3, Me.KryptonPage2})
-            Me.tcAuxiliares.SelectedIndex = 1
+            Me.tcAuxiliares.SelectedIndex = 0
             Me.tcAuxiliares.Size = New System.Drawing.Size(922, 631)
             Me.tcAuxiliares.TabIndex = 291
             Me.tcAuxiliares.Text = "KryptonNavigator1"

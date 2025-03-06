@@ -6,6 +6,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.CUENTAS_POR_PAGAR
 Imports ClassLibraryCisepro.ENUMS
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
     ''' <summary>
@@ -65,35 +66,115 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
                 MsgBox("CARGAR DATOS PROVEEDOR." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
-        Public Sub cargarCuentasPorPagarGeneral(ByVal all As Boolean)
+        Public Sub cargarCuentasPorPagarGeneral(ByVal idProveedor As String)
 
-            If all Then
-                dgvCuentasPorPagar.DataSource = objetoCuentasPorPagar.BuscarCuentasPorPagarGeneralXRangoFecha(_tipoCon, fechaDesde, fechaHasta)
+            Try
+                dgvCuentasPorPagar.Rows.Clear()
+                Dim data As DataTable
+                Dim tot(5) As Decimal
+
+                Dim auxProv As String = String.Empty
+
+                Dim columnas As String() = {"Id", "RUC", "Proveedor", "Factura", "F. Emision",
+                               "Facturado", "Retenido", "Abonado", "A Pagar", "Saldo"}
+
+                For Each colName As String In columnas
+                    dgvCuentasPorPagar.Columns.Add(colName, colName)
+                Next
+
+
+                data = objetoCuentasPorPagar.BuscarCuentasPorPagarGeneralXRangoFechaDetalle(_tipoCon, fechaDesde, fechaHasta, idProveedor)
+
+                If data.Rows.Count > 0 Then
+
+                    auxProv = data.Rows(0)("Id").ToString()
+
+                    For Each row As DataRow In data.Rows
+                        'verificar cambio de proveedor
+                        If auxProv <> row("Id").ToString() Then
+                            dgvCuentasPorPagar.Rows.Add("", "Total", "", "", "", tot(0), tot(1), tot(2), tot(3), tot(4))
+
+                            AplicarEstiloTotal(dgvCuentasPorPagar.Rows(dgvCuentasPorPagar.Rows.Count - 1))
+                            ' Resetear totales por proveedor
+                            Array.Clear(tot, 0, tot.Length)
+                            auxProv = row("Id").ToString()
+                        End If
+
+                        ' Agregar fila normal
+                        dgvCuentasPorPagar.Rows.Add(
+                            row("Id"), row("RUC"), row("Proveedor"), row("Factura"),
+                            CDate(row("F. Emision")).ToString("dd/MM/yyyy"),
+                            CDec(row("Facturado")).ToString("N2"),
+                            CDec(row("Retenido")).ToString("N2"),
+                            CDec(row("XPagar")).ToString("N2"),
+                            CDec(row("Abonado")).ToString("N2"),
+                            CDec(row("Saldo")).ToString("N2")
+                        )
+
+
+                        'Acumular totales
+                        tot(0) += CDec(row("Facturado"))
+                        tot(1) += CDec(row("Retenido"))
+                        tot(2) += CDec(row("XPagar"))
+                        tot(3) += CDec(row("Abonado"))
+                        tot(4) += CDec(row("Saldo"))
+
+
+
+                    Next
+
+                    dgvCuentasPorPagar.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+                    dgvCuentasPorPagar.ReadOnly = True
+
+
+
+                Else
+                    KryptonMessageBox.Show("No hay registros que mostrar", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    Return
+                End If
+
+
+                dgvCuentasPorPagar.Columns(0).Width = 50
+                dgvCuentasPorPagar.Columns(1).Width = 90
+                dgvCuentasPorPagar.Columns(2).Width = 450
+                dgvCuentasPorPagar.Columns(7).Width = 90
+
+                dgvCuentasPorPagar.Columns(3).HeaderText = "FACTURADO"
+                dgvCuentasPorPagar.Columns(4).HeaderText = "RETENIDO"
+                dgvCuentasPorPagar.Columns(5).HeaderText = "A PAGAR"
+                dgvCuentasPorPagar.Columns(6).HeaderText = "ABONADO"
+                dgvCuentasPorPagar.Columns(7).HeaderText = "SALDO"
+
+
+
+                dgvCuentasPorPagar.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+                dgvCuentasPorPagar.ReadOnly = True
+            Catch ex As Exception
+
+                KryptonMessageBox.Show("Error al cargar cuentas por pagar general", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
+        End Sub
+
+        Private Sub AplicarEstiloTotal(row As DataGridViewRow, Optional esTotalGeneral As Boolean = False)
+            row.DefaultCellStyle.Font = New Font("Segoe UI", 9, FontStyle.Bold)
+
+            If esTotalGeneral Then
+                row.DefaultCellStyle.BackColor = Color.LightSteelBlue
             Else
-                dgvCuentasPorPagar.DataSource = objetoCuentasPorPagar.BuscarCuentasPorPagarGeneralXRangoFechaNoCero(_tipoCon, fechaDesde, fechaHasta)
+                row.DefaultCellStyle.BackColor = Color.Lavender
             End If
 
-            dgvCuentasPorPagar.Columns(0).Width = 50
-            dgvCuentasPorPagar.Columns(1).Width = 90
-            dgvCuentasPorPagar.Columns(2).Width = 450  
-            dgvCuentasPorPagar.Columns(7).Width = 90
-
-            dgvCuentasPorPagar.Columns(3).HeaderText = "FACTURADO"
-            dgvCuentasPorPagar.Columns(4).HeaderText = "RETENIDO"
-            dgvCuentasPorPagar.Columns(5).HeaderText = "A PAGAR"
-            dgvCuentasPorPagar.Columns(6).HeaderText = "ABONADO"
-            dgvCuentasPorPagar.Columns(7).HeaderText = "SALDO"
-             
-            dgvCuentasPorPagar.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
-            dgvCuentasPorPagar.ReadOnly = True
-
+            For Each cell As DataGridViewCell In row.Cells
+                cell.ReadOnly = True
+            Next
         End Sub
 
         Public Sub cargarCuentasPorPagarPorProveedor(ByVal all As Boolean)
             If txtNombreComercialProveedorGeneral.Text.Trim().Length = 0 Then
                 Return
             End If
-
+            dgvCuentasPorPagar.Rows.Clear()
+            dgvCuentasPorPagar.Columns.Clear()
             If all Then
                 dgvCuentasPorPagar.DataSource = objetoCuentasPorPagar.BuscarCuentasPorPagarXIdProveedorRangoFecha(_tipoCon, lblIdProveedorGeneral.Text, fechaDesde, fechaHasta)
             Else
@@ -106,32 +187,43 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
 
         End Sub
         Public Sub sumarCuentasPorPagarGeneral()
-            Dim totalFacturado As Decimal = 0
-            Dim totalRetenido As Decimal = 0
-            Dim totalAPagar As Decimal = 0
-            Dim totalAbonado As Decimal = 0
-            Dim totalSaldo As Decimal = 0
+            'Dim totalFacturado As Decimal = 0
+            'Dim totalRetenido As Decimal = 0
+            'Dim totalAPagar As Decimal = 0
+            'Dim totalAbonado As Decimal = 0
+            'Dim totalSaldo As Decimal = 0
+
+            Dim totGeneral(5) As Decimal
 
             If dgvCuentasPorPagar.RowCount > 0 Then
                 For indice = 0 To dgvCuentasPorPagar.RowCount - 1
-                    totalFacturado = totalFacturado + dgvCuentasPorPagar.Rows(indice).Cells.Item("FACTURADO").Value
-                    totalRetenido = totalRetenido + dgvCuentasPorPagar.Rows(indice).Cells.Item("RETENIDO").Value
-                    totalAPagar = totalAPagar + dgvCuentasPorPagar.Rows(indice).Cells.Item("PAGAR").Value
-                    totalAbonado = totalAbonado + dgvCuentasPorPagar.Rows(indice).Cells.Item("ABONADO").Value
-                    totalSaldo = totalSaldo + dgvCuentasPorPagar.Rows(indice).Cells.Item("SALDO").Value
+                    'totalFacturado = totalFacturado + dgvCuentasPorPagar.Rows(indice).Cells.Item("FACTURADO").Value
+                    'totalRetenido = totalRetenido + dgvCuentasPorPagar.Rows(indice).Cells.Item("RETENIDO").Value
+                    'totalAPagar = totalAPagar + dgvCuentasPorPagar.Rows(indice).Cells.Item("PAGAR").Value
+                    'totalAbonado = totalAbonado + dgvCuentasPorPagar.Rows(indice).Cells.Item("ABONADO").Value
+                    'totalSaldo = totalSaldo + dgvCuentasPorPagar.Rows(indice).Cells.Item("SALDO").Value
 
-                    If dgvCuentasPorPagar.Rows(indice).Cells.Item("SALDO").Value > 0 Then
-                        dgvCuentasPorPagar.Rows(indice).Cells("SALDO").Style.BackColor = Color.IndianRed
-                    End If
+                    'Acumular totales generales
+                    totGeneral(0) += dgvCuentasPorPagar.Rows(indice).Cells.Item("Facturado").Value
+                    totGeneral(1) += dgvCuentasPorPagar.Rows(indice).Cells.Item("Retenido").Value
+                    totGeneral(2) += dgvCuentasPorPagar.Rows(indice).Cells.Item("Abonado").Value
+                    totGeneral(3) += dgvCuentasPorPagar.Rows(indice).Cells.Item("A Pagar").Value
+                    totGeneral(4) += dgvCuentasPorPagar.Rows(indice).Cells.Item("Saldo").Value
+
+
+
+                    'If dgvCuentasPorPagar.Rows(indice).Cells.Item("SA").Value > 0 Then
+                    '    dgvCuentasPorPagar.Rows(indice).Cells("SALDO").Style.BackColor = Color.IndianRed
+                    'End If
 
                 Next
                 txtTotalSubtotal.Text = "0.00"
                 txtTotalIVA.Text = "0.00"
-                txtTotalFacturas.Text = totalFacturado
-                txtTotalRetencion.Text = totalRetenido
-                txtTotalACobrar.Text = totalAPagar
-                txtTotalAbonado.Text = totalAbonado
-                txtTotalCuentasPorPagar.Text = totalSaldo
+                txtTotalFacturas.Text = totGeneral(0)
+                txtTotalRetencion.Text = totGeneral(1)
+                txtTotalACobrar.Text = totGeneral(2)
+                txtTotalAbonado.Text = totGeneral(3)
+                txtTotalCuentasPorPagar.Text = totGeneral(4)
             End If
         End Sub
 
@@ -212,8 +304,11 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
 
             dgvCuentasPorPagar.DataSource = Nothing
 
+
+
+
             If rbGeneral.Checked = True Then
-                cargarCuentasPorPagarGeneral(ChkTodos.Checked)
+                cargarCuentasPorPagarGeneral(If(rbGeneral.Checked, 0, lblIdProveedorGeneral.Text))
                 sumarCuentasPorPagarGeneral()
             Else
                 cargarCuentasPorPagarPorProveedor(ChkTodos.Checked)

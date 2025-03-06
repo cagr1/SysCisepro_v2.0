@@ -150,7 +150,7 @@
             '
             Me.MetroTabControl1.AnimateEasingType = ReaLTaiizor.[Enum].Metro.EasingType.CubeOut
             Me.MetroTabControl1.AnimateTime = 200
-            Me.MetroTabControl1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.MetroTabControl1.BackgroundColor = System.Drawing.Color.White
             Me.MetroTabControl1.Controls.Add(Me.MetroTabPage1)
             Me.MetroTabControl1.Controls.Add(Me.MetroTabPage2)
             Me.MetroTabControl1.ControlsVisible = True

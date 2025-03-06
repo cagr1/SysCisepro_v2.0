@@ -14,6 +14,7 @@ using Microsoft.Office;
 using System.IO;
 using Krypton.Toolkit;
 using ClosedXML.Excel;
+using System.Diagnostics;
 
 namespace SysCisepro3.TalentoHumano
 {
@@ -475,6 +476,30 @@ namespace SysCisepro3.TalentoHumano
 
                             var dataCell = ws.Cell(head, y);
                             dataCell.Value = row.Cells[j].Value != null ? row.Cells[j].Value.ToString() : string.Empty;
+                            if (dgvPersonal.Columns[j].HeaderText == "FEC. NACIM." || dgvPersonal.Columns[j].HeaderText == "F. INGRESO" || dgvPersonal.Columns[j].HeaderText == "SALIDA")
+                            {
+                                if (DateTime.TryParse(dataCell.Value.ToString(), out DateTime dateValue))
+                                {
+                                    dataCell.Value = dateValue;
+                                    dataCell.Style.DateFormat.Format = "dd/MM/yyyy";
+                                }
+                            }
+
+                            if (dgvPersonal.Columns[j].HeaderText == "SUELDO" ||
+                                   dgvPersonal.Columns[j].HeaderText == "ÚLT. ROL P." ||
+                                   dgvPersonal.Columns[j].HeaderText == "EDAD" ||
+                                   dgvPersonal.Columns[j].HeaderText == "ESTATURA")
+                            {
+                                if (decimal.TryParse(dataCell.Value.ToString(), out decimal numericValue))
+                                {
+                                    dataCell.Value = numericValue;
+                                    dataCell.Style.NumberFormat.Format = "#,##0.00"; // Formato contable
+                                }
+                            }
+
+                           
+
+
                             if ((row.Tag + "").Equals("2") || (row.Tag + "").Equals("3"))
                                 dataCell.Style.Font.Bold = true;
 
@@ -497,7 +522,7 @@ namespace SysCisepro3.TalentoHumano
 
                                 var picture = ws.AddPicture(ms)
                                                 .MoveTo(ws.Cell(2, 7)) // Coloca la imagen en la celda correspondiente
-                                                .WithSize(70, 70);   // Ajusta el tamaño según sea necesario
+                                                .WithSize(60, 60);   // Ajusta el tamaño según sea necesario
                             }
                         }
                     }
@@ -505,8 +530,14 @@ namespace SysCisepro3.TalentoHumano
                     // Ajustar el tamaño de las columnas automáticamente
                     ws.Columns().AdjustToContents();
 
-                    // Guardar el archivo de Excel
-                    wb.SaveAs(sfd.FileName);
+                   
+                        // Guardar el archivo de Excel
+                        wb.SaveAs(sfd.FileName);
+                        Process.Start(sfd.FileName);
+                    
+
+                   
+                    
                 }
 
 
@@ -712,6 +743,8 @@ namespace SysCisepro3.TalentoHumano
 
                 // Mostrar el archivo
                 wb.SaveAs(sfd.FileName);
+                //abrir el archivo
+                Process.Start(sfd.FileName);
 
                 KryptonMessageBox.Show(@"DATOS DEL PERSONAL generado correctamente!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }

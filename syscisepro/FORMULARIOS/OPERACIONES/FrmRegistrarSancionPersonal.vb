@@ -727,8 +727,8 @@ Namespace FORMULARIOS.OPERACIONES
                         txtPersonal.Text = frm.dgvCustodios.CurrentRow.Cells.Item(5).Value & " " & frm.dgvCustodios.CurrentRow.Cells.Item(4).Value
                         Try
                             Dim cr = _objPersonal.BuscarPersonalXIdPersonal(_tipoCon, frm.dgvCustodios.CurrentRow.Cells.Item(0).Value)
-                            txtCargo.Text = cr.Rows(0)(60)
-                            txtArea.Text = cr.Rows(0)(66)
+                            txtCargo.Text = cr.Rows(0)(61)
+                            txtArea.Text = cr.Rows(0)(67)
                         Catch
                             txtCargo.Clear()
                             txtArea.Clear()
@@ -748,8 +748,8 @@ Namespace FORMULARIOS.OPERACIONES
                             txtUbicacionPuesto.Text = p(1).ToString()
                             txtCliente.Text = p(2).ToString
                         Else
-                            If data.Rows(0).Item(44).ToString.Trim().Length > 0 Then
-                                Dim p = data.Rows(0).Item(44).ToString.Trim().Split("|")
+                            If data.Rows(0).Item(45).ToString.Trim().Length > 0 Then
+                                Dim p = data.Rows(0).Item(45).ToString.Trim().Split("|")
                                 txtIdPuesto.Text = p(0).ToString
                                 txtUbicacionPuesto.Text = p(1).ToString()
                                 txtCliente.Text = p(2).ToString
@@ -949,7 +949,32 @@ Namespace FORMULARIOS.OPERACIONES
 
         End Sub
 
-        Private Sub dgvNormal_SelectionChanged(sender As Object, e As EventArgs)
+
+
+        Private Sub KryptonButton2_Click(sender As Object, e As EventArgs)
+            ExportarDatosExcel2(dgvSanciones, "ASIGNACION DE PUESTOS DE TRABAJO")
+        End Sub
+
+
+        Private Sub HeaderCheckbox_CheckedChanged(sender As Object, e As EventArgs)
+            Dim headerCheckbox As CheckBox = CType(sender, CheckBox)
+            Dim isChecked As Boolean = headerCheckbox.Checked
+            For Each row As DataGridViewRow In dgvNormal.Rows
+                row.Cells("Check").Value = headerCheckbox.Checked
+            Next
+        End Sub
+
+
+
+        Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnNormalF.Click
+            ExportarDatosExcel(ListView1, "ASIGNACION DE PUESTOS DE TRABAJO")
+        End Sub
+
+        Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+            ExportarDatosExcel2(dgvSanciones, "ASIGNACION DE PUESTOS DE TRABAJO")
+        End Sub
+
+        Private Sub dgvNormal_SelectionChanged(sender As Object, e As EventArgs) Handles dgvNormal.SelectionChanged
             If dgvNormal.Rows.Count > 0 Then
                 Try
                     txtIdSancion.Text = dgvNormal.CurrentRow.Cells.Item(1).Value.ToString()
@@ -966,7 +991,7 @@ Namespace FORMULARIOS.OPERACIONES
                     txtObservacion.Text = dgvNormal.CurrentRow.Cells.Item(12).Value.ToString()
                     txtMultador.Text = dgvNormal.CurrentRow.Cells.Item(14).Value.ToString()
 
-                    dtpFecha.Tag = dgvNormal.CurrentRow.Cells.Item(13).Value
+                    dtpFecha.Value = dgvNormal.CurrentRow.Cells.Item(4).Value
 
                     btnNuevo.Enabled = True
                     btnGuardar.Enabled = False
@@ -992,29 +1017,6 @@ Namespace FORMULARIOS.OPERACIONES
                     Exit Try
                 End Try
             End If
-        End Sub
-
-        Private Sub KryptonButton2_Click(sender As Object, e As EventArgs)
-            ExportarDatosExcel2(dgvSanciones, "ASIGNACION DE PUESTOS DE TRABAJO")
-        End Sub
-
-
-        Private Sub HeaderCheckbox_CheckedChanged(sender As Object, e As EventArgs)
-            Dim headerCheckbox As CheckBox = CType(sender, CheckBox)
-            Dim isChecked As Boolean = headerCheckbox.Checked
-            For Each row As DataGridViewRow In dgvNormal.Rows
-                row.Cells("Check").Value = headerCheckbox.Checked
-            Next
-        End Sub
-
-
-
-        Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnNormalF.Click
-            ExportarDatosExcel(ListView1, "ASIGNACION DE PUESTOS DE TRABAJO")
-        End Sub
-
-        Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-            ExportarDatosExcel2(dgvSanciones, "ASIGNACION DE PUESTOS DE TRABAJO")
         End Sub
     End Class
 

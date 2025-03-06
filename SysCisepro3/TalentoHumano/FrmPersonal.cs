@@ -1086,7 +1086,7 @@ namespace SysCisepro3.TalentoHumano
             _objCuentaPersonal.IdBanco = Convert.ToInt32(CuentaPersonal["id_banco"]); 
             _objCuentaPersonal.IdPersonal = Convert.ToInt32(_objPersonal.IdPersonal);
             _objCuentaPersonal.NumCuenta = txtNumCuenta.Text;
-            _objCuentaPersonal.Tipo = "AHO";
+            _objCuentaPersonal.Tipo = cbxTipoCuenta.SelectedItem.ToString();
             _sqlCommands.Add(_objCuentaPersonal.RegistrarNuevoCuentaBancoPersonalCommand());
 
             _sqlCommands.Add(_objSecuencialContratos.ActualizarSecuencialContrato(dtpFechaIngreso.Value.Year));
