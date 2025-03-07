@@ -139,12 +139,6 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
                 dgvCuentasPorPagar.Columns(2).Width = 450
                 dgvCuentasPorPagar.Columns(7).Width = 90
 
-                dgvCuentasPorPagar.Columns(3).HeaderText = "FACTURADO"
-                dgvCuentasPorPagar.Columns(4).HeaderText = "RETENIDO"
-                dgvCuentasPorPagar.Columns(5).HeaderText = "A PAGAR"
-                dgvCuentasPorPagar.Columns(6).HeaderText = "ABONADO"
-                dgvCuentasPorPagar.Columns(7).HeaderText = "SALDO"
-
 
 
                 dgvCuentasPorPagar.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
@@ -160,8 +154,6 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
 
             If esTotalGeneral Then
                 row.DefaultCellStyle.BackColor = Color.LightSteelBlue
-            Else
-                row.DefaultCellStyle.BackColor = Color.Lavender
             End If
 
             For Each cell As DataGridViewCell In row.Cells
