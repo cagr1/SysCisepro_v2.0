@@ -64,7 +64,7 @@
     </StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\logo_c.ico</ApplicationIcon>
+    <ApplicationIcon>logo_c.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -1794,6 +1794,7 @@
     <None Include="Resources\align_horizontal_right_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\align_vertical_bottom_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\cancel_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
+    <Content Include="logo_c.ico" />
     <Content Include="Resources\charticon.png" />
     <None Include="Resources\tick.png" />
     <None Include="Resources\user-group-icon.png" />

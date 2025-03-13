@@ -21,6 +21,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Collections;
 using System.ComponentModel;
+using CrystalDecisions.ReportAppServer.ReportDefModel;
 //using ComponentFactory.Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
@@ -1600,7 +1601,28 @@ namespace SysCisepro3.TalentoHumano
                     for (int j = 0; j < dgv.Columns.Count; j++)
                     {
                         if (!dgv.Columns[j].Visible) continue;
-                        worksheet.Cell(head, y).Value = row.Cells[j].Value.ToString();
+                        var cellValue = row.Cells[j].Value;
+                        var headerText = dgv.Columns[j].HeaderText.ToUpper();
+                        
+                        if (headerText == "ID" || headerText == "CEDULA" || headerText == "NOMINA")
+                        {
+                            worksheet.Cell(head, y).Value = cellValue?.ToString() ?? string.Empty;
+                        }
+                        else
+                        {
+                            if (IsNumeric(cellValue))
+                            {
+                                worksheet.Cell(head, y).Value = Convert.ToDouble(cellValue);
+                                worksheet.Cell(head, y).Style.NumberFormat.Format = "#,##0.00";
+                            }
+                            else
+                            {
+                                worksheet.Cell(head, y).Value = cellValue?.ToString() ?? string.Empty;
+                            }
+                        }
+
+                        
+                        
                         worksheet.Cell(head, y).Style.Border.SetOutsideBorder(XLBorderStyleValues.Thin);
                         y++;
                     }
@@ -1654,6 +1676,12 @@ namespace SysCisepro3.TalentoHumano
                 KryptonMessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!" + Environment.NewLine + ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
 
+        }
+
+        private bool IsNumeric(object value)
+        {
+            if (value == null) return false;
+            return double.TryParse(value.ToString(), out _);
         }
 
         private void ExportToExcel2(ListView lv, string nombreArchivo)
@@ -1721,7 +1749,18 @@ namespace SysCisepro3.TalentoHumano
                     for (int j = 0; j < lv.Columns.Count; j++)
                     {
                         var dataCell = ws.Cell(head, y);
-                        dataCell.Value = item.SubItems[j].Text;
+                        string cellValue = item.SubItems[j].Text;
+
+                        if (double.TryParse(cellValue, out double result))
+                        {
+                            dataCell.Value = result;
+                        }
+                        else
+                        {
+                            dataCell.Value = cellValue;
+                        }
+
+                        //dataCell.Value = item.SubItems[j].Text;
                         dataCell.Style.Border.LeftBorder = XLBorderStyleValues.Thin;
                         dataCell.Style.Border.RightBorder = XLBorderStyleValues.Thin;
                         dataCell.Style.Border.BottomBorder = XLBorderStyleValues.Thin;

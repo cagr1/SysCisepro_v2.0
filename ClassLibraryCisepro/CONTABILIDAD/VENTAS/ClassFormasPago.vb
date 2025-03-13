@@ -9,11 +9,11 @@ Namespace CONTABILIDAD.VENTAS
             Return ComandosSql.SeleccionarQueryToDataTable(tipoCon, "SeleccionarRegistrosFormasPago", True) 
         End Function
 
-        Public Function BuscarCodigoFormasPagoXdetalle(ByVal tipoCon As TipoConexion, ByVal parametroBusqueda As String) As Integer
+        Public Function BuscarCodigoFormasPagoXdetalle(ByVal tipoCon As TipoConexion, ByVal parametroBusqueda As String) As String
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"DETALLE_FORMA_PAGO", SqlDbType.NVarChar, parametroBusqueda})
             Dim data = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "buscarCodigoFormasPagoXdetalle", True, pars)
-            Return If(data.Rows.Count = 0, 0, If(IsDBNull(data.Rows(0)(0)), 0, CInt(data.Rows(0)(0))))
+            Return If(data.Rows.Count = 0, "0", If(IsDBNull(data.Rows(0)(0)), "0", data.Rows(0)(0).ToString()))
         End Function
 
         Public Function BuscarDetalleFormaPago(ByVal tipoCon As TipoConexion, ByVal parametroBusqueda As Integer) As DataTable

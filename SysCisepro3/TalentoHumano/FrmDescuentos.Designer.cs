@@ -134,27 +134,6 @@
             this.columnHeader46 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.metroTabPage4 = new ReaLTaiizor.Child.Metro.MetroTabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kryptonGroupBox1 = new Krypton.Toolkit.KryptonGroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblCuota = new System.Windows.Forms.Label();
@@ -190,6 +169,27 @@
             this.kryptonLabel21 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel20 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel19 = new Krypton.Toolkit.KryptonLabel();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSecuencial)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -784,7 +784,7 @@
             this.metroTabControl1.Location = new System.Drawing.Point(11, 241);
             this.metroTabControl1.MCursor = System.Windows.Forms.Cursors.Hand;
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 3;
             this.metroTabControl1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroTabControl1.Size = new System.Drawing.Size(671, 364);
             this.metroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -1203,135 +1203,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(663, 318);
             this.dataGridView1.TabIndex = 226;
             // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "ID";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 40;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "CÉDULA";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Width = 80;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "NÓMINA";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Width = 250;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "P. QUIROGRAF.";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "P. HIPOTECARIO";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "EXT. SALUD";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "ANTICIPO EMERG.";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "DESC. CAPASEG";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "ANTI. VARIOS";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "DESC. EMPRESA";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "DESC. COMECSA";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "DESC. COMISARIATO";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "DESC. BODEGA";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            // 
-            // Column20
-            // 
-            this.Column20.HeaderText = "DESC. ALMUERZOS";
-            this.Column20.Name = "Column20";
-            this.Column20.ReadOnly = true;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "PENSION ALIM.";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            // 
-            // Column18
-            // 
-            this.Column18.HeaderText = "PENSION ALIM. (XIII)";
-            this.Column18.Name = "Column18";
-            this.Column18.ReadOnly = true;
-            // 
-            // Column19
-            // 
-            this.Column19.HeaderText = "PENSION ALIM. (XIV)";
-            this.Column19.Name = "Column19";
-            this.Column19.ReadOnly = true;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "MULTAS";
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            // 
-            // Column21
-            // 
-            this.Column21.HeaderText = "DIAS NO LAB.";
-            this.Column21.Name = "Column21";
-            this.Column21.ReadOnly = true;
-            // 
-            // Column16
-            // 
-            this.Column16.HeaderText = "OTROS";
-            this.Column16.Name = "Column16";
-            this.Column16.ReadOnly = true;
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "TOTAL";
-            this.Column17.Name = "Column17";
-            this.Column17.ReadOnly = true;
-            // 
             // kryptonGroupBox1
             // 
             this.kryptonGroupBox1.CaptionOverlap = 0D;
@@ -1710,6 +1581,135 @@
             this.kryptonLabel19.TabIndex = 226;
             this.kryptonLabel19.Values.Text = "Buscar";
             // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "ID";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 40;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "CEDULA";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 80;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "NOMINA";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 250;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "P. QUIROGRAF.";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "P. HIPOTECARIO";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "EXT. SALUD";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "ANTICIPO EMERG.";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "DESC. CAPASEG";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "ANTI. VARIOS";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "DESC. EMPRESA";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "DESC. COMECSA";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "DESC. COMISARIATO";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "DESC. BODEGA";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // Column20
+            // 
+            this.Column20.HeaderText = "DESC. ALMUERZOS";
+            this.Column20.Name = "Column20";
+            this.Column20.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "PENSION ALIM.";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Column18
+            // 
+            this.Column18.HeaderText = "PENSION ALIM. (XIII)";
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            // 
+            // Column19
+            // 
+            this.Column19.HeaderText = "PENSION ALIM. (XIV)";
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "MULTAS";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            // 
+            // Column21
+            // 
+            this.Column21.HeaderText = "DIAS NO LAB.";
+            this.Column21.Name = "Column21";
+            this.Column21.ReadOnly = true;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "OTROS";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "TOTAL";
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            // 
             // FrmDescuentos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1853,27 +1853,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader45;
         private System.Windows.Forms.ColumnHeader columnHeader46;
         public System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.Label lblCuota;
         private Krypton.Toolkit.KryptonLabel kryptonLabel14;
         private Krypton.Toolkit.KryptonLabel Label6;
@@ -1916,5 +1895,26 @@
         private Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem2;
         private Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem3;
         private Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
     }
 }

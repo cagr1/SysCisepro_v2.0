@@ -253,6 +253,32 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.REPORTES
             'tabla1.AddCell(separatorCell)
 
 
+            Dim fechaEmisionCC As New Phrase()
+            fechaEmisionCC.Add(New Chunk("Fecha Emision CC ", fuente8Bold))
+            fechaEmisionCC.Add(New Chunk(comproTable.Rows(0)("FECHA_EMISION_COMPROBANTE_COMPRA").ToString(), fuente8))
+
+            Dim fechaEmisionCCCell As New PdfPCell(fechaEmisionCC) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER
+                                   }
+
+
+            tabla1.AddCell(fechaEmisionCCCell)
+
+
+            Dim fechaAutorizacion As New Phrase()
+            fechaAutorizacion.Add(New Chunk("Fecha Autorización SRI ", fuente8Bold))
+            fechaAutorizacion.Add(New Chunk(comproTable.Rows(0)("FECHA_AUTO_SRI_COMPROBANTE_COMPRA").ToString(), fuente8))
+
+            Dim fechaAutorizacionCell As New PdfPCell(fechaAutorizacion) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER
+                                }
+
+            tabla1.AddCell(fechaAutorizacionCell)
+
             Dim numAutorizacionContent As New Phrase()
             numAutorizacionContent.Add(New Chunk("Nro. Autorización SRI ", fuente8Bold))
             numAutorizacionContent.Add(New Chunk(comproTable.Rows(0)("NUM_AUTO_SRI_COMPROBANTE_COMPRA").ToString(), fuente8))
@@ -266,19 +292,15 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.REPORTES
 
             tabla1.AddCell(numAutorizacionCell)
 
-            Dim fechaAutorizacion As New Phrase()
-            fechaAutorizacion.Add(New Chunk("Fecha Autorización SRI ", fuente8Bold))
-            fechaAutorizacion.Add(New Chunk(comproTable.Rows(0)("FECHA_AUTO_SRI_COMPROBANTE_COMPRA").ToString(), fuente8))
+            'made a entire empty row
 
-            Dim fechaAutorizacionCell As New PdfPCell(fechaAutorizacion) With {
+            Dim emptyCell3 As New PdfPCell(New Phrase(" ")) With {
                                     .HorizontalAlignment = Element.ALIGN_LEFT,
                                     .VerticalAlignment = Element.ALIGN_MIDDLE,
                                     .Border = PdfPCell.NO_BORDER,
                                     .Colspan = 2
-                                }
-
-            tabla1.AddCell(fechaAutorizacionCell)
-            tabla1.AddCell(emptyCell2)
+                                 }
+            tabla1.AddCell(emptyCell3)
 
             Dim ObservacionContent As New Phrase()
             ObservacionContent.Add(New Chunk("Observación   ", fuente8Bold))
@@ -378,14 +400,15 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.REPORTES
 
             tabla3.AddCell(TituloTabla3)
 
-            Dim emptyCellTable3 As New PdfPCell(New Phrase(" ")) With {
-                                    .HorizontalAlignment = Element.ALIGN_LEFT,
-                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
-                                    .Border = PdfPCell.NO_BORDER,
-                                    .Colspan = 2
-                                 }
+            'Dim emptyCellTable3 As New PdfPCell(New Phrase(" ")) With {
+            '                        .HorizontalAlignment = Element.ALIGN_LEFT,
+            '                        .VerticalAlignment = Element.ALIGN_MIDDLE,
+            '                        .Border = PdfPCell.NO_BORDER,
+            '                        .Colspan = 2
+            '                     }
 
-            tabla3.AddCell(emptyCellTable3)
+            'tabla3.AddCell(emptyCellTable3)
+
             Dim retencionTable As DataTable = ds.Tables("COMPROBANTE_RETENCION_COMPRA")
 
 
@@ -463,7 +486,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.REPORTES
 
             tabla3.AddCell(FechaAutorizacionSRICell)
 
-            tabla3.WriteSelectedRows(0, -1, 10, 360, writer.DirectContent)
+            tabla3.WriteSelectedRows(0, -1, 10, 340, writer.DirectContent)
 
             Dim table4 As New PdfPTable(6)
             table4.TotalWidth = 380
@@ -532,15 +555,15 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.REPORTES
                                 }
             table5.AddCell(TituloTabla5)
 
-            Dim emptyCell4Table5 As New PdfPCell(New Phrase(" ")) With {
-                                    .HorizontalAlignment = Element.ALIGN_LEFT,
-                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
-                                    .Border = PdfPCell.NO_BORDER,
-                                    .Colspan = 4,
-                                    .PaddingTop = 10
-                                 }
+            'Dim emptyCell4Table5 As New PdfPCell(New Phrase(" ")) With {
+            '                        .HorizontalAlignment = Element.ALIGN_LEFT,
+            '                        .VerticalAlignment = Element.ALIGN_MIDDLE,
+            '                        .Border = PdfPCell.NO_BORDER,
+            '                        .Colspan = 4,
+            '                        .PaddingTop = 10
+            '                     }
 
-            table5.AddCell(emptyCell4Table5)
+            'table5.AddCell(emptyCell4Table5)
 
             table5.AddCell(New Phrase("Codigo", fuente8Bold))
             table5.AddCell(New Phrase("Cuenta", fuente8Bold))

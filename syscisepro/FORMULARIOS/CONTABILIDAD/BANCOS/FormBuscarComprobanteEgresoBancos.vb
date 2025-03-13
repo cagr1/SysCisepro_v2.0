@@ -453,8 +453,28 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     For j = 0 To dgvAsientosDiario.Columns.Count - 1
                         If Not dgvAsientosDiario.Columns(j).Visible Then Continue For
 
+                        Dim cellValue As String = dgvAsientosDiario.Rows(i).Cells(j).Value.ToString()
+
+                        'Validar si la columna es "VALOR" y si el valor es numérico
+                        If dgvAsientosDiario.Columns(j).Name = "VALOR" Then
+                            Dim numericValue As Double
+                            If Double.TryParse(cellValue, numericValue) Then
+                                ' Si es numérico, asignar el valor numérico
+                                worksheet.Cell(i + 1 + headin, indc).Value = numericValue
+                                ' Aplicar formato contable a la celda
+                                worksheet.Cell(i + 1 + headin, indc).Style.NumberFormat.Format = "#,##0.00"
+                            Else
+                                ' Si no es numérico, asignar 0 y aplicar formato contable
+                                worksheet.Cell(i + 1 + headin, indc).Value = 0
+                                worksheet.Cell(i + 1 + headin, indc).Style.NumberFormat.Format = "#,##0.00"
+                            End If
+                        Else
+                            ' Si no es la columna "VALOR", asignar el valor como texto
+                            worksheet.Cell(i + 1 + headin, indc).Value = cellValue
+                        End If
+
                         ' Asignar valor a la celda
-                        worksheet.Cell(i + 1 + headin, indc).Value = dgvAsientosDiario.Rows(i).Cells(j).Value.ToString()
+                        'worksheet.Cell(i + 1 + headin, indc).Value = dgvAsientosDiario.Rows(i).Cells(j).Value.ToString()
 
                         ' Establecer bordes
                         Dim cell = worksheet.Cell(i + 1 + headin, indc)

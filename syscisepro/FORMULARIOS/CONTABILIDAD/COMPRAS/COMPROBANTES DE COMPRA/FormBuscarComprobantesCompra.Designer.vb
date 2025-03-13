@@ -365,7 +365,7 @@
             Me.PDFLIQUIDACIONToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.pdf
             Me.PDFLIQUIDACIONToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.PDFLIQUIDACIONToolStripMenuItem.Name = "PDFLIQUIDACIONToolStripMenuItem"
-            Me.PDFLIQUIDACIONToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
+            Me.PDFLIQUIDACIONToolStripMenuItem.Size = New System.Drawing.Size(159, 30)
             Me.PDFLIQUIDACIONToolStripMenuItem.Text = "LIQUIDACION"
             '
             'PDFRETENCIONToolStripMenuItem
@@ -373,7 +373,7 @@
             Me.PDFRETENCIONToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.pdf
             Me.PDFRETENCIONToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.PDFRETENCIONToolStripMenuItem.Name = "PDFRETENCIONToolStripMenuItem"
-            Me.PDFRETENCIONToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
+            Me.PDFRETENCIONToolStripMenuItem.Size = New System.Drawing.Size(159, 30)
             Me.PDFRETENCIONToolStripMenuItem.Text = "RETENCION"
             '
             'ofdSeleccionarArchivo
