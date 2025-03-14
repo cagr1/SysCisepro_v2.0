@@ -54,6 +54,8 @@
             Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.txtDocContriEspProveedor = New System.Windows.Forms.TextBox()
+            Me.KryptonLabel16 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel15 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel14 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel13 = New Krypton.Toolkit.KryptonLabel()
@@ -68,8 +70,6 @@
             Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
             Me.dgvProveedoresGeneral = New System.Windows.Forms.DataGridView()
-            Me.KryptonLabel16 = New Krypton.Toolkit.KryptonLabel()
-            Me.txtDocContriEspProveedor = New System.Windows.Forms.TextBox()
             Me.msKardex.SuspendLayout()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -223,7 +223,7 @@
             Me.cbxCiruc.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbxCiruc.FormattingEnabled = True
             Me.cbxCiruc.Items.AddRange(New Object() {"CI", "RUC", "PASAPORTE"})
-            Me.cbxCiruc.Location = New System.Drawing.Point(374, 3)
+            Me.cbxCiruc.Location = New System.Drawing.Point(374, 2)
             Me.cbxCiruc.Name = "cbxCiruc"
             Me.cbxCiruc.Size = New System.Drawing.Size(103, 21)
             Me.cbxCiruc.TabIndex = 27
@@ -383,6 +383,24 @@
             Me.KryptonGroupBox1.TabIndex = 189
             Me.KryptonGroupBox1.Values.Heading = "Datos"
             '
+            'txtDocContriEspProveedor
+            '
+            Me.txtDocContriEspProveedor.BackColor = System.Drawing.Color.White
+            Me.txtDocContriEspProveedor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtDocContriEspProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDocContriEspProveedor.Location = New System.Drawing.Point(491, 108)
+            Me.txtDocContriEspProveedor.Name = "txtDocContriEspProveedor"
+            Me.txtDocContriEspProveedor.Size = New System.Drawing.Size(99, 21)
+            Me.txtDocContriEspProveedor.TabIndex = 203
+            '
+            'KryptonLabel16
+            '
+            Me.KryptonLabel16.Location = New System.Drawing.Point(431, 109)
+            Me.KryptonLabel16.Name = "KryptonLabel16"
+            Me.KryptonLabel16.Size = New System.Drawing.Size(52, 20)
+            Me.KryptonLabel16.TabIndex = 202
+            Me.KryptonLabel16.Values.Text = "No Doc"
+            '
             'KryptonLabel15
             '
             Me.KryptonLabel15.Location = New System.Drawing.Point(238, 135)
@@ -530,24 +548,6 @@
             Me.dgvProveedoresGeneral.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvProveedoresGeneral.Size = New System.Drawing.Size(596, 224)
             Me.dgvProveedoresGeneral.TabIndex = 190
-            '
-            'KryptonLabel16
-            '
-            Me.KryptonLabel16.Location = New System.Drawing.Point(431, 109)
-            Me.KryptonLabel16.Name = "KryptonLabel16"
-            Me.KryptonLabel16.Size = New System.Drawing.Size(52, 20)
-            Me.KryptonLabel16.TabIndex = 202
-            Me.KryptonLabel16.Values.Text = "No Doc"
-            '
-            'txtDocContriEspProveedor
-            '
-            Me.txtDocContriEspProveedor.BackColor = System.Drawing.Color.White
-            Me.txtDocContriEspProveedor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtDocContriEspProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtDocContriEspProveedor.Location = New System.Drawing.Point(491, 108)
-            Me.txtDocContriEspProveedor.Name = "txtDocContriEspProveedor"
-            Me.txtDocContriEspProveedor.Size = New System.Drawing.Size(99, 21)
-            Me.txtDocContriEspProveedor.TabIndex = 203
             '
             'FormMantenimientoProveedores
             '

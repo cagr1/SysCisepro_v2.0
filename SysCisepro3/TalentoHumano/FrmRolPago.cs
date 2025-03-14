@@ -3867,11 +3867,11 @@ namespace SysCisepro3.TalentoHumano
 
         private void btnCambiar_Click(object sender, EventArgs e)
         {
-            if (!cbxGrupo.Text.Trim().Equals("GENERAL"))
-            {
-                KryptonMessageBox.Show(@"ESTA OPCIÓN SÓLO ES VÁLIDA PARA ROL DE PAGOS GENERAL!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
-                return;
-            }
+            //if (!cbxGrupo.Text.Trim().Equals("GENERAL"))
+            //{
+            //    KryptonMessageBox.Show(@"ESTA OPCIÓN SÓLO ES VÁLIDA PARA ROL DE PAGOS GENERAL!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+            //    return;
+            //}
             if (dgvDetallesRol.CurrentRow == null) return;
             if (dgvDetallesRol.RowCount == 0 || dgvDetallesRol.SelectedRows.Count == 0) return;
 

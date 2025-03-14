@@ -542,7 +542,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                 Next
 
                 iva = Math.Round(subTotal12 * (piva / 100), 2)
-                total = Math.Round(subTotal12 + iva + subtotal0 + desc, 2)
+                total = Math.Round(subTotal12 + iva + subtotal0 - desc, 2)
 
                 txtSubtotal0OrdenCompra.Text = subtotal0
                 txtSubtotal12OrdenCompra.Text = subTotal12

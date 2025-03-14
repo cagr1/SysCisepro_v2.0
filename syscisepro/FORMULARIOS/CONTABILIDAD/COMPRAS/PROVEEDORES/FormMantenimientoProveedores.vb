@@ -528,9 +528,9 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                 txtDireccionProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(8).Value
                 lblIdCiudad.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(9).Value
 
-                If (dgvProveedoresGeneral.CurrentRow.Cells.Item(14).Value.Equals("CED")) Then
+                If (dgvProveedoresGeneral.CurrentRow.Cells.Item(15).Value.Equals("CED")) Then
                     cbxCiruc.SelectedIndex = 0
-                ElseIf (dgvProveedoresGeneral.CurrentRow.Cells.Item(14).Value.Equals("RUC")) Then
+                ElseIf (dgvProveedoresGeneral.CurrentRow.Cells.Item(15).Value.Equals("RUC")) Then
                     cbxCiruc.SelectedIndex = 1
                 Else
                     cbxCiruc.SelectedIndex = 2

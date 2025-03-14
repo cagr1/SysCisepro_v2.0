@@ -29,7 +29,7 @@ namespace SysCisepro3.Operaciones
         private void FrmBuscarPuestoTrabajo_Load(object sender, EventArgs e)
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
-            BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //BackColor = ValidationForms.GetColorSistema(TipoCon);
             
             
             switch (TipoCon)
