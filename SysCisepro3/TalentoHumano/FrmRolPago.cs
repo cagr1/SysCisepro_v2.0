@@ -3878,7 +3878,7 @@ namespace SysCisepro3.TalentoHumano
             if (dgvDetallesRol.SelectedRows[0].Cells[1].Value == null || dgvDetallesRol.SelectedRows[0].Cells[1].Value.ToString().Trim().Length == 0) return;
             if (Convert.ToInt32(dgvDetallesRol.SelectedRows[0].Cells[1].Value) == 0) return;
 
-            if (dgvDetallesRol.SelectedRows[0].Cells[75].Value.ToString().Trim().Equals("0"))
+            if (dgvDetallesRol.SelectedRows[0].Cells[76].Value.ToString().Trim().Equals("0"))
             {
                 KryptonMessageBox.Show(@"ESTA OPCIÓN SÓLO ES VÁLIDA PARA REGISTROS DEL PERSONAL ACTIVO!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
                 return;
@@ -3892,13 +3892,20 @@ namespace SysCisepro3.TalentoHumano
             {
                 if (_frmBuscarPuestoTrabajo.ShowDialog() != DialogResult.OK) return;
                 var row = dgvDetallesRol.CurrentRow;
-                dgvDetallesRol.Rows.Remove(dgvDetallesRol.CurrentRow);
+                //dgvDetallesRol.Rows.Remove(dgvDetallesRol.CurrentRow);
 
                 var xx = dgvDetallesRol.Rows.Cast<DataGridViewRow>().TakeWhile(r => !r.Cells[3].Value.ToString().Trim().Equals(_frmBuscarPuestoTrabajo.ListView1.SelectedItems[0].SubItems[18].Text.Trim()) || !r.Cells[4].Value.ToString().Trim().Equals(_frmBuscarPuestoTrabajo.ListView1.SelectedItems[0].SubItems[2].Text.Trim())).Count();
 
-                var indret = (from DataGridViewRow rox in dgvDetallesRol.Rows where (rox.Cells[0].Value + "").Trim().Equals("RETIRADOS") select rox.Index).FirstOrDefault();
+                //var indret = (from DataGridViewRow rox in dgvDetallesRol.Rows where (rox.Cells[0].Value + "").Trim().Equals("RETIRADOS") select rox.Index).FirstOrDefault();
 
-                if (xx >= indret) xx = indret - 4;
+                //if (xx >= indret) xx = indret - 4;
+
+                var retirados = dgvDetallesRol.Rows.Cast<DataGridViewRow>().FirstOrDefault(rowx => (rowx.Cells[0].Value + "").Trim().Equals("RETIRADOS"));
+
+                if (retirados != null)
+                {
+                    if (xx >= retirados.Index) xx = retirados.Index - 4;
+                }
 
                 row.Cells[3].Value = _frmBuscarPuestoTrabajo.ListView1.SelectedItems[0].SubItems[18].Text;
                 row.Cells[4].Value = _frmBuscarPuestoTrabajo.ListView1.SelectedItems[0].SubItems[2].Text.Trim();
@@ -3924,16 +3931,18 @@ namespace SysCisepro3.TalentoHumano
                     row.Cells[31].Value = 0; // adic
                 }
 
-                dgvDetallesRol.Rows.Insert(xx, row);
+                //dgvDetallesRol.Rows.Insert(xx, row);
 
                 dgvDetallesRol.Refresh();
 
-                ReajusarIndice(0, 1);
+                //ReajusarIndice(0, 1);
+                var currenIndex = row.Index;
+                CalcularDatosFilaRol(currenIndex);
 
-                CalcularDatosFilaRol(xx);
-
-                dgvDetallesRol.Rows[xx].Selected = true;
-                dgvDetallesRol.FirstDisplayedScrollingRowIndex = xx;
+                //dgvDetallesRol.Rows[xx].Selected = true;
+                dgvDetallesRol.Rows[currenIndex].Selected = true;
+                //dgvDetallesRol.FirstDisplayedScrollingRowIndex = xx;
+                dgvDetallesRol.FirstDisplayedScrollingRowIndex = currenIndex;
 
                 SumatoriasRol();
             }
@@ -4033,7 +4042,7 @@ namespace SysCisepro3.TalentoHumano
                                                 
 
                         copia.Cells[1].Value = dataper.Rows[0][0].ToString();
-                        //copia.Cells[2].Value = n;
+                        copia.Cells[2].Value = n;
                         copia.Cells[3].Value = _frmAgregarPersonalRol.txtCliente.Text.Trim();
                         copia.Cells[4].Value = _frmAgregarPersonalRol.txtUbicacionPuesto.Text.Trim();
                         copia.Cells[5].Value = _frmAgregarPersonalRol.txtPersonal.Text.Trim();
@@ -4083,7 +4092,7 @@ namespace SysCisepro3.TalentoHumano
                             copia.Cells[71].Value = 0;// XIII FON EXT
                         }
                         //cambio 
-                        copia.Cells[65].Value = dataper.Rows[0][74].ToString(); // extra
+                        copia.Cells[65].Value = dataper.Rows[0][73].ToString(); // extra
 
                         copia.Cells[66].Value = dataper.Rows[0][69].ToString().Equals("1"); // FON RES
                         copia.Cells[67].Value = dataper.Rows[0][70].ToString().Equals("1"); // XIII

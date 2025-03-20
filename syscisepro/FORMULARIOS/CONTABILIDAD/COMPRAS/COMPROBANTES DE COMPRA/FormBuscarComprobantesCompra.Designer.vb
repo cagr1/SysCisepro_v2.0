@@ -83,6 +83,7 @@
             Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonPage3 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.btnPrueba = New System.Windows.Forms.Button()
             CType(Me.dgvComprobantesCompra, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
             CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -430,7 +431,16 @@
             'KryptonNavigator1
             '
             Me.KryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None
+            Me.KryptonNavigator1.Button.CloseButtonAction = ComponentFactory.Krypton.Navigator.CloseButtonAction.RemovePageAndDispose
             Me.KryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide
+            Me.KryptonNavigator1.Button.ContextButtonAction = ComponentFactory.Krypton.Navigator.ContextButtonAction.SelectPage
+            Me.KryptonNavigator1.Button.ContextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
+            Me.KryptonNavigator1.Button.ContextMenuMapImage = ComponentFactory.Krypton.Navigator.MapKryptonPageImage.Small
+            Me.KryptonNavigator1.Button.ContextMenuMapText = ComponentFactory.Krypton.Navigator.MapKryptonPageText.TextTitle
+            Me.KryptonNavigator1.Button.NextButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
+            Me.KryptonNavigator1.Button.NextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
+            Me.KryptonNavigator1.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
+            Me.KryptonNavigator1.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
             Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 0)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
@@ -445,6 +455,7 @@
             'KryptonPage1
             '
             Me.KryptonPage1.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage1.Controls.Add(Me.btnPrueba)
             Me.KryptonPage1.Controls.Add(Me.KryptonGroupBox3)
             Me.KryptonPage1.Controls.Add(Me.MenuStrip1)
             Me.KryptonPage1.Controls.Add(Me.dgvComprobantesCompra)
@@ -764,6 +775,16 @@
             Me.KryptonPage3.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage3.UniqueName = "E7A068A9D4EC4B4A40A25EDDE0DE1F87"
             '
+            'btnPrueba
+            '
+            Me.btnPrueba.Location = New System.Drawing.Point(945, 64)
+            Me.btnPrueba.Name = "btnPrueba"
+            Me.btnPrueba.Size = New System.Drawing.Size(75, 23)
+            Me.btnPrueba.TabIndex = 187
+            Me.btnPrueba.Text = "Prueba"
+            Me.btnPrueba.UseVisualStyleBackColor = True
+            Me.btnPrueba.Visible = False
+            '
             'FormBuscarComprobantesCompra
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -868,5 +889,6 @@
         Friend WithEvents KryptonLabel9 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents txtSubTotalCompras As TextBox
         Friend WithEvents txtIvaCompras As TextBox
+        Friend WithEvents btnPrueba As Button
     End Class
 End Namespace

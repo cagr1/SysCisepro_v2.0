@@ -2669,5 +2669,21 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         Private Sub dgvComprobantesCompra_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles dgvComprobantesCompra.DataError
             e.ThrowException = False
         End Sub
+
+        Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnPrueba.Click
+            If lblIdComprobanteCompra.Text <> 0 Then
+                Dim f = New FormReporteComprobanteCompra
+                f.TipoCox = TipoCox
+                f.lblIdComprobanteCompra.Text = lblIdComprobanteCompra.Text
+                f._porcentaje = lblPorcentaje.Text
+                f._tipoComprobante = dgvComprobantesCompra.CurrentRow.Cells(2).Value
+                f._proveedorCompra = dgvComprobantesCompra.CurrentRow.Cells(1).Value
+                f._numeroComprobante = dgvComprobantesCompra.CurrentRow.Cells(3).Value
+                f.ShowDialog()
+            Else
+                'MsgBox("NO SE HA ENCONTRADO EL ID DEL COMPROBANTE DE COMPRA", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("No se ha encontrado el id del comprobante de compra", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+            End If
+        End Sub
     End Class
 End Namespace

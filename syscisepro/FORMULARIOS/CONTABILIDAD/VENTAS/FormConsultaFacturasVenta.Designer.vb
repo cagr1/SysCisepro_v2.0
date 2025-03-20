@@ -108,7 +108,7 @@
             Me.txtClienteGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtClienteGeneral.Enabled = False
             Me.txtClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtClienteGeneral.Location = New System.Drawing.Point(266, 22)
+            Me.txtClienteGeneral.Location = New System.Drawing.Point(225, 22)
             Me.txtClienteGeneral.Name = "txtClienteGeneral"
             Me.txtClienteGeneral.Size = New System.Drawing.Size(306, 21)
             Me.txtClienteGeneral.TabIndex = 31
@@ -119,7 +119,7 @@
             Me.lblIdClienteGeneral.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblIdClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblIdClienteGeneral.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.lblIdClienteGeneral.Location = New System.Drawing.Point(341, 3)
+            Me.lblIdClienteGeneral.Location = New System.Drawing.Point(300, 3)
             Me.lblIdClienteGeneral.Name = "lblIdClienteGeneral"
             Me.lblIdClienteGeneral.Size = New System.Drawing.Size(13, 13)
             Me.lblIdClienteGeneral.TabIndex = 30
@@ -251,7 +251,7 @@
             '
             Me.dtpFechaDesde.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaDesde.Location = New System.Drawing.Point(779, 20)
+            Me.dtpFechaDesde.Location = New System.Drawing.Point(736, 20)
             Me.dtpFechaDesde.Name = "dtpFechaDesde"
             Me.dtpFechaDesde.Size = New System.Drawing.Size(85, 21)
             Me.dtpFechaDesde.TabIndex = 0
@@ -260,7 +260,7 @@
             '
             Me.dtpFechaHasta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaHasta.Location = New System.Drawing.Point(899, 21)
+            Me.dtpFechaHasta.Location = New System.Drawing.Point(834, 20)
             Me.dtpFechaHasta.Name = "dtpFechaHasta"
             Me.dtpFechaHasta.Size = New System.Drawing.Size(86, 21)
             Me.dtpFechaHasta.TabIndex = 1
@@ -268,7 +268,7 @@
             'lblIdFacturaVenta
             '
             Me.lblIdFacturaVenta.AutoSize = True
-            Me.lblIdFacturaVenta.Location = New System.Drawing.Point(969, 1)
+            Me.lblIdFacturaVenta.Location = New System.Drawing.Point(899, 1)
             Me.lblIdFacturaVenta.Name = "lblIdFacturaVenta"
             Me.lblIdFacturaVenta.Size = New System.Drawing.Size(16, 13)
             Me.lblIdFacturaVenta.TabIndex = 4
@@ -281,7 +281,7 @@
             Me.rbFacturasActivas.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbFacturasActivas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbFacturasActivas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbFacturasActivas.Location = New System.Drawing.Point(578, 25)
+            Me.rbFacturasActivas.Location = New System.Drawing.Point(535, 25)
             Me.rbFacturasActivas.Name = "rbFacturasActivas"
             Me.rbFacturasActivas.Size = New System.Drawing.Size(62, 17)
             Me.rbFacturasActivas.TabIndex = 0
@@ -294,7 +294,7 @@
             Me.rbFacturasAnuladas.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbFacturasAnuladas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbFacturasAnuladas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbFacturasAnuladas.Location = New System.Drawing.Point(638, 25)
+            Me.rbFacturasAnuladas.Location = New System.Drawing.Point(595, 25)
             Me.rbFacturasAnuladas.Name = "rbFacturasAnuladas"
             Me.rbFacturasAnuladas.Size = New System.Drawing.Size(71, 17)
             Me.rbFacturasAnuladas.TabIndex = 1
@@ -308,7 +308,7 @@
             Me.rbFacturasTodas.Checked = True
             Me.rbFacturasTodas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbFacturasTodas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbFacturasTodas.Location = New System.Drawing.Point(707, 25)
+            Me.rbFacturasTodas.Location = New System.Drawing.Point(664, 25)
             Me.rbFacturasTodas.Name = "rbFacturasTodas"
             Me.rbFacturasTodas.Size = New System.Drawing.Size(55, 17)
             Me.rbFacturasTodas.TabIndex = 2
@@ -322,7 +322,7 @@
             Me.rbConcepto.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbConcepto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbConcepto.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbConcepto.Location = New System.Drawing.Point(108, 1)
+            Me.rbConcepto.Location = New System.Drawing.Point(95, 1)
             Me.rbConcepto.Name = "rbConcepto"
             Me.rbConcepto.Size = New System.Drawing.Size(72, 17)
             Me.rbConcepto.TabIndex = 35
@@ -348,7 +348,7 @@
             Me.rbConsorcio.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbConsorcio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbConsorcio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbConsorcio.Location = New System.Drawing.Point(108, 19)
+            Me.rbConsorcio.Location = New System.Drawing.Point(95, 19)
             Me.rbConsorcio.Name = "rbConsorcio"
             Me.rbConsorcio.Size = New System.Drawing.Size(55, 17)
             Me.rbConsorcio.TabIndex = 24
@@ -375,7 +375,7 @@
             Me.rbTodo.Checked = True
             Me.rbTodo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbTodo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbTodo.Location = New System.Drawing.Point(196, 4)
+            Me.rbTodo.Location = New System.Drawing.Point(170, 1)
             Me.rbTodo.Name = "rbTodo"
             Me.rbTodo.Size = New System.Drawing.Size(49, 17)
             Me.rbTodo.TabIndex = 0
@@ -642,7 +642,7 @@
             '
             'KryptonLabel4
             '
-            Me.KryptonLabel4.Location = New System.Drawing.Point(899, -3)
+            Me.KryptonLabel4.Location = New System.Drawing.Point(836, -3)
             Me.KryptonLabel4.Name = "KryptonLabel4"
             Me.KryptonLabel4.Size = New System.Drawing.Size(41, 20)
             Me.KryptonLabel4.TabIndex = 39
@@ -650,7 +650,7 @@
             '
             'KryptonLabel3
             '
-            Me.KryptonLabel3.Location = New System.Drawing.Point(779, -3)
+            Me.KryptonLabel3.Location = New System.Drawing.Point(736, -3)
             Me.KryptonLabel3.Name = "KryptonLabel3"
             Me.KryptonLabel3.Size = New System.Drawing.Size(45, 20)
             Me.KryptonLabel3.TabIndex = 38
@@ -658,7 +658,7 @@
             '
             'KryptonLabel2
             '
-            Me.KryptonLabel2.Location = New System.Drawing.Point(578, -2)
+            Me.KryptonLabel2.Location = New System.Drawing.Point(535, -2)
             Me.KryptonLabel2.Name = "KryptonLabel2"
             Me.KryptonLabel2.Size = New System.Drawing.Size(107, 20)
             Me.KryptonLabel2.TabIndex = 37
@@ -666,7 +666,7 @@
             '
             'KryptonLabel1
             '
-            Me.KryptonLabel1.Location = New System.Drawing.Point(266, 0)
+            Me.KryptonLabel1.Location = New System.Drawing.Point(225, 0)
             Me.KryptonLabel1.Name = "KryptonLabel1"
             Me.KryptonLabel1.Size = New System.Drawing.Size(48, 20)
             Me.KryptonLabel1.TabIndex = 36

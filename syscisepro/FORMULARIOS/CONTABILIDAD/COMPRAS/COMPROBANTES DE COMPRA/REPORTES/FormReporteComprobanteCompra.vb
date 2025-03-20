@@ -185,20 +185,21 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.REPORTES
             Dim proveedorCell As New PdfPCell(proveedorContent) With {
                                     .HorizontalAlignment = Element.ALIGN_LEFT,
                                     .VerticalAlignment = Element.ALIGN_MIDDLE,
-                                    .Border = PdfPCell.NO_BORDER
+                                    .Border = PdfPCell.NO_BORDER,
+                                    .Colspan = 2
                                 }
             tabla1.AddCell(proveedorCell)
 
-            Dim fechaContent As New Phrase()
-            fechaContent.Add(New Chunk("Fecha   ", fuente8Bold))
-            fechaContent.Add(New Chunk(_fechaEmision, fuente8))
+            'Dim fechaContent As New Phrase()
+            'fechaContent.Add(New Chunk("Fecha   ", fuente8Bold))
+            'fechaContent.Add(New Chunk(_fechaEmision, fuente8))
 
-            Dim fechaCell As New PdfPCell(fechaContent) With {
-                                    .HorizontalAlignment = Element.ALIGN_LEFT,
-                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
-                                    .Border = PdfPCell.NO_BORDER
-                                }
-            tabla1.AddCell(fechaCell)
+            'Dim fechaCell As New PdfPCell(fechaContent) With {
+            '                        .HorizontalAlignment = Element.ALIGN_LEFT,
+            '                        .VerticalAlignment = Element.ALIGN_MIDDLE,
+            '                        .Border = PdfPCell.NO_BORDER
+            '                    }
+            'tabla1.AddCell(fechaCell)
 
             Dim emptyCell As New PdfPCell(New Phrase("")) With {
                                     .HorizontalAlignment = Element.ALIGN_LEFT,
