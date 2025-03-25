@@ -1,5 +1,6 @@
 using DashboardAPI.Data;
 using DashboardAPI.Services;
+using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<DatabaseConnection>();
 builder.Services.AddScoped<DashboardService>();
-
+ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policiy =>

@@ -488,15 +488,20 @@ namespace SysCisepro3.TalentoHumano
                 return;
             }
 
-            txtDias.Text = dtpHasta.Value.Subtract(dtpDesde.Value).Days + "";
+            int diasVaciones = (dtpHasta.Value.Date - dtpDesde.Value.Date).Days + 1;
+            txtDias.Text = diasVaciones.ToString();
+            //txtDias.Text = dtpHasta.Value.Subtract(dtpDesde.Value).Days + "";
 
             var d = (from DataGridViewRow row in dataGridView2.Rows
                      where row.Cells[5].Value.ToString().Equals(cbxPeriodo.Text.Trim())
                      select Convert.ToInt32(row.Cells[3].Value)).Sum();
-            txtDisponibles.Text = (Convert.ToInt32(cbxPeriodo.SelectedValue) - d) + "";
-
-            txtPendientes.Text = (Convert.ToInt32(txtDisponibles.Text.Trim()) - dtpHasta.Value.Subtract(dtpDesde.Value).Days) + "";
-
+            int diasDisponibles = Convert.ToInt32(cbxPeriodo.SelectedValue) - d;
+            //txtDisponibles.Text = (Convert.ToInt32(cbxPeriodo.SelectedValue) - d) + "";
+            txtDisponibles.Text = diasDisponibles.ToString();
+            //txtPendientes.Text = (Convert.ToInt32(txtDisponibles.Text.Trim()) - dtpHasta.Value.Subtract(dtpDesde.Value).Days) + "";
+            int pendientes = diasDisponibles - diasVaciones;
+            //txtPendientes.Text = Convert.ToInt32(txtDisponibles.Text.Trim()) - diasVaciones;
+            txtPendientes.Text = pendientes.ToString();
             btnAgregar.Enabled = true;
         }
 

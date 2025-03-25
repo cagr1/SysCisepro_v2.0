@@ -17,48 +17,97 @@ namespace DashboardAPI.Services
             _databaseConnection = new DatabaseConnection(configuration);
         }
 
-        public List<SalesData> GetSalesData(int startYear, int endYear)
-        {
-            //var paramaters = new SqlParameter[]
-            //{
-            //    new SqlParameter("@StartYear", startYear),
-            //    new SqlParameter("@EndYear", endYear)
-            //};
-
-            //DataTable dataTable = _databaseConnection.ExecuteStoredProcedure("sp_GetSalesData", paramaters);
-
-            //return dataTable.AsEnumerable().Select(row => new SalesData
-            //{
-            //    Year = row.Field<int>("Year"),
-            //    Sales = row.Field<decimal>("Sales")
-            //}).ToList();
-
-            return new List<SalesData> {
-        new SalesData { Year = 2023, Sales = 150000 },
-        new SalesData { Year = 2024, Sales = 200000 }
-    };
-
-
-        }
-
-        public List<AccumulatedSalesData> GetAccumulatedSalesData(int startYear, int endYear)
+        public SalesData GetSalesDataRange(DateTime startDate, DateTime endDate)
         {
             var paramaters = new SqlParameter[]
             {
-                new SqlParameter("@StartYear", startYear),
-                new SqlParameter("@EndYear", endYear)
+                new SqlParameter("@FECHA_INICIAL", startDate),
+                new SqlParameter("@FECHA_FINAL", endDate)
             };
 
-            DataTable dataTable = _databaseConnection.ExecuteStoredProcedure("sp_GetAcumulatedSalesData", paramaters);
-
-            return dataTable.AsEnumerable().Select(row => new AccumulatedSalesData
+            DataTable resultTable = _databaseConnection.ExecuteStoredProcedure("sp_SalesDataByDateRange", paramaters);
+            
+            return new SalesData
             {
-                Year = row.Field<int>("Year"),
-                AcumulatedSales = row.Field<decimal>("AcumulatedSales")
-            }).ToList();
+                TotalSales = resultTable.Rows.Count > 0 ? Convert.ToDecimal(resultTable.Rows[0]["TOTAL_VENTAS"]) : 0
+            };
+
+
+
         }
 
-       
+        public SalesData GetAccumulatedSalesData(DateTime endDate)
+        {
+            var paramaters = new SqlParameter[]
+            {
+                
+                new SqlParameter("@FECHA_FINAL", endDate)
+            };
+
+            DataTable resultTable = _databaseConnection.ExecuteStoredProcedure("sp_SalesAccumulatedByRange", paramaters);
+
+            return new SalesData
+            {
+                TotalSales = resultTable.Rows.Count > 0 ? Convert.ToDecimal(resultTable.Rows[0]["TOTAL_VENTAS"]) : 0
+            };
+
+        }
+
+        public List<AccumulatedProfitLossEarnings> GetAccumulatedProfitLossEarnings(int year)
+        {
+            var paramaters = new SqlParameter[]
+            {
+                new SqlParameter("@anio", year)
+            };
+
+            DataTable resultTable = _databaseConnection.ExecuteStoredProcedure("sp_ReportProfitLossEarnings", paramaters);
+
+            return resultTable.AsEnumerable().Select(row => new AccumulatedProfitLossEarnings
+            {
+                NumberMonth = row.Field<int>("NumeroMes"),
+                NameMonth = row.Field<string>("NombreMes"),
+                TotalIncome = row.Field<decimal>("Ingresos"),
+                TotalExpenses = row.Field<decimal>("Egresos"),
+                TotalEarnings = row.Field<decimal>("Utilidad"),
+            }).ToList();
+            
+        }
+
+        public AnnualVariationRevenues GetAnnualVariationRevenues(DateTime startDate, DateTime endDate)
+        {
+            var paramaters = new SqlParameter[]
+            {
+                new SqlParameter("@FECHA_INICIAL", startDate ),
+                new SqlParameter("@FECHA_FINAL", endDate )
+            };
+
+            DataTable resultTable = _databaseConnection.ExecuteStoredProcedure("sp_AnnualVariationRevenues", paramaters);
+
+            return new AnnualVariationRevenues
+            {
+                VariationPercentage = resultTable.Rows.Count > 0 ? Convert.ToDecimal(resultTable.Rows[0]["VariacionPorcentual"]) : 0
+            };
+        }
+
+        public AnnualRevenues GetAnnualRevenues(DateTime startDate, DateTime endDate)
+        {
+            var paramaters = new SqlParameter[]
+            {
+                new SqlParameter("@FECHA_INICIAL", startDate ),
+                new SqlParameter("@FECHA_FINAL", endDate )
+            };
+
+            DataTable resultTable = _databaseConnection.ExecuteStoredProcedure("sp_AnnualRevenues", paramaters);
+
+            return new AnnualRevenues
+            {
+                Assets = resultTable.Rows.Count > 0 ? Convert.ToDecimal(resultTable.Rows[0]["Activo"]) : 0,
+                Liabiliteis = resultTable.Rows.Count > 0 ? Convert.ToDecimal(resultTable.Rows[0]["Pasivo"]) : 0,
+                Equity = resultTable.Rows.Count > 0 ? Convert.ToDecimal(resultTable.Rows[0]["Patrimonio"]) : 0,
+                Income = resultTable.Rows.Count > 0 ? Convert.ToDecimal(resultTable.Rows[0]["Utilidad"]) : 0
+            };
+        }
+
 
     }
 }

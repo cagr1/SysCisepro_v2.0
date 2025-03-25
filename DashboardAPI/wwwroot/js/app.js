@@ -1,47 +1,77 @@
 // js/app.js
-async function loadData() {
-    const startYear = document.getElementById('startYear').value || 2020;
-    const endYear = document.getElementById('endYear').value || 2023;
-    
-    try {
-        // Fetch data from API
-        const [salesData, accumulatedData] = await Promise.all([
-            fetch(`http://localhost:5179/api/Dashboard/sales/yearly?startYear=${startYear}&endYear=${endYear}`).then(res => res.json()),
-            fetch(`http://localhost:5179/api/Dashboard/sales/accumulated?startYear=${startYear}&endYear=${endYear}`).then(res => res.json())
-        ]);
-        if (!salesResponse.ok || !accumulatedResponse.ok) {
-            throw new Error('Error en la respuesta del servidor');
-        }
 
-        const salesData = await salesResponse.json();
-        const accumulatedData = await accumulatedResponse.json();
-        // Actualizar gráficos
-        updateCharts(salesData, accumulatedData);
+function formatDateWithTime(dateString, isEndDate = false) {
+    const date = new Date(dateString);
+    
+    if (isEndDate) {
+        date.setHours(23, 59, 59);
+    } else {
+        date.setHours(0, 0, 0);
+    }
+    
+    return date.toISOString().slice(0, 19).replace('T', ' ');
+}
+
+// Configurar fechas iniciales (año actual)
+function setDefaultDates() {
+    const currentYear = new Date().getFullYear();
+    const defaultStart = `${currentYear}-01-01`;
+    const defaultEnd = `${currentYear}-12-31`;
+    
+    document.getElementById('startDate').value = defaultStart;
+    document.getElementById('endDate').value = defaultEnd;
+}
+
+async function loadData() {
+    const startDateInput = document.getElementById('startDate').value;
+    const endDateInput = document.getElementById('endDate').value;
+    
+    // Agregar tiempos automáticamente
+    const startDate = formatDateWithTime(startDateInput);
+    const endDate = formatDateWithTime(endDateInput, true);
+
+    try {
+        // Obtener datos de la API
+        const ventasUrl = `http://localhost:5179/api/Dashboard/sales/by-date?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
+        const acumuladoUrl = `http://localhost:5179/api/Dashboard/sales/accumulated?endDate=${encodeURIComponent(endDate)}`;
+
+       
+        const [ventasResponse, acumuladoResponse] = await Promise.all([
+            fetch(ventasUrl),
+            fetch(acumuladoUrl)
+        ]);
+        
+        
+
+        if (!ventasResponse.ok) throw new Error(`Error ventas: ${ventasResponse.status}`);
+        if (!acumuladoResponse.ok) throw new Error(`Error acumulado: ${acumuladoResponse.status}`);
+
+        const ventasData = await ventasResponse.json();
+        const acumuladoData = await acumuladoResponse.json();
+
+        
+        // 5. Actualizar la UI con los datos
+        updateStats(ventasData, acumuladoData);
         
     } catch (error) {
         console.error('Error:', error);
-        alert('Error al cargar datos');
+        alert('Error al cargar los datos');
     }
 }
 
-function updateCharts(sales, accumulated) {
-    // Procesar datos para ApexCharts
-    const salesSeries = sales.map(item => item.sales);
-    const categories = sales.map(item => item.year);
-    
-    const accumulatedSeries = accumulated.map(item => item.acumulatedSales);
-
-    // Actualizar gráficos
-    salesChart.updateOptions({
-        xaxis: { categories },
-        series: [{ data: salesSeries }]
+// Actualizar estadísticas
+function updateStats(ventas, acumulado) {
+    const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
     });
 
-    accumulatedChart.updateOptions({
-        xaxis: { categories },
-        series: [{ data: accumulatedSeries }]
-    });
+    document.getElementById('ventasRango').textContent = formatter.format(ventas.totalSales);
+    document.getElementById('ventasAcumuladas').textContent = formatter.format(acumulado.totalSales);
 }
 
 // Cargar datos iniciales
-window.onload = () => loadData();
+document.addEventListener('DOMContentLoaded', () => {
+    setDefaultDates(); 
+    loadData();
+});

@@ -586,10 +586,11 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 'xml += "<contribuyenteEspecial>" & _numAutoContEspecial & "</contribuyenteEspecial>" & vbNewLine
                 xml += "<obligadoContabilidad>SI</obligadoContabilidad>" & vbNewLine
                 xml += "<codDocModificado>01</codDocModificado>" & vbNewLine
-                xml += "<numDocModificado>" & dgvNotaCredito.Rows(0).Cells(5).Value.ToString & "</numDocModificado>" & vbNewLine
+                'cambio 2025 ??? 
+                xml += "<numDocModificado>" & dgvNotaCredito.CurrentRow.Cells(5).Value.ToString & "</numDocModificado>" & vbNewLine
                 xml += "<fechaEmisionDocSustento>" & Format(dgvFacturaVenta.Rows(0).Cells(2).Value, "dd/MM/yyyy") & "</fechaEmisionDocSustento>" & vbNewLine
-                xml += "<totalSinImpuestos>" & Math.Round(CDec(dgvNotaCredito.Rows(0).Cells(7).Value), 2, MidpointRounding.ToEven) & "</totalSinImpuestos>" & vbNewLine
-                xml += "<valorModificacion>" & Math.Round(CDec(dgvNotaCredito.Rows(0).Cells(11).Value), 2, MidpointRounding.ToEven) & "</valorModificacion>" & vbNewLine
+                xml += "<totalSinImpuestos>" & Math.Round(CDec(dgvNotaCredito.CurrentRow.Cells(7).Value), 2, MidpointRounding.ToEven) & "</totalSinImpuestos>" & vbNewLine
+                xml += "<valorModificacion>" & Math.Round(CDec(dgvNotaCredito.CurrentRow.Cells(11).Value), 2, MidpointRounding.ToEven) & "</valorModificacion>" & vbNewLine
                 xml += "<moneda>DOLAR</moneda>" & vbNewLine
                 xml += "<totalConImpuestos>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=- INFORMACÍON DE LOS IMPUESTO QUE APLICAN =-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<totalImpuesto>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=- DETALLE DE CADA IMPUESTO =-=-=-=-=-=-=-=-=-=-=-=-=
@@ -600,11 +601,11 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 If _porcentajeIva = 0 Then xml += "<codigoPorcentaje>0</codigoPorcentaje>" & vbNewLine
                 If _porcentajeIva = 15 Then xml += "<codigoPorcentaje>4</codigoPorcentaje>" & vbNewLine
 
-                xml += "<baseImponible>" & Math.Round(CDec(dgvNotaCredito.Rows(0).Cells(7).Value), 2, MidpointRounding.ToEven) & "</baseImponible>" & vbNewLine
-                xml += "<valor>" & Math.Round(CDec(dgvNotaCredito.Rows(0).Cells(10).Value), 2, MidpointRounding.ToEven) & "</valor>" & vbNewLine
+                xml += "<baseImponible>" & Math.Round(CDec(dgvNotaCredito.CurrentRow.Cells(7).Value), 2, MidpointRounding.ToEven) & "</baseImponible>" & vbNewLine
+                xml += "<valor>" & Math.Round(CDec(dgvNotaCredito.CurrentRow.Cells(10).Value), 2, MidpointRounding.ToEven) & "</valor>" & vbNewLine
                 xml += "</totalImpuesto>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "</totalConImpuestos>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-                xml += "<motivo>" & dgvNotaCredito.Rows(0).Cells(6).Value.ToString.TrimEnd & "</motivo>" & vbNewLine
+                xml += "<motivo>" & dgvNotaCredito.CurrentRow.Cells(6).Value.ToString.TrimEnd & "</motivo>" & vbNewLine
                 xml += "</infoNotaCredito>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<detalles>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=- INFORMACÍON DE LOS DETALLES DE LA FACTURA =-=-=-=-=-=-=-=-=-=-=-=-=
                 If dgvDetalleFacturaVenta.Rows.Count > 0 Then
@@ -612,9 +613,9 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     xml += "<codigoInterno>" & dgvDetalleFacturaVenta.Rows(0).Cells(1).Value & "</codigoInterno>" & vbNewLine
                     xml += "<descripcion>" & _objetoSecuencialItem.BuscarNombreSecuencialItemXIdSecuencialItem(_tipoCon, dgvDetalleFacturaVenta.Rows(0).Cells(1).Value) & "</descripcion>" & vbNewLine
                     xml += "<cantidad>1</cantidad>" & vbNewLine
-                    xml += "<precioUnitario>" & Math.Round(CDec(dgvNotaCredito.Rows(0).Cells(7).Value), 2, MidpointRounding.ToEven) & "</precioUnitario>" & vbNewLine
+                    xml += "<precioUnitario>" & Math.Round(CDec(dgvNotaCredito.CurrentRow.Cells(7).Value), 2, MidpointRounding.ToEven) & "</precioUnitario>" & vbNewLine
                     xml += "<descuento>0.00</descuento>" & vbNewLine
-                    xml += "<precioTotalSinImpuesto>" & Math.Round(CDec(dgvNotaCredito.Rows(0).Cells(7).Value), 2, MidpointRounding.ToEven) & "</precioTotalSinImpuesto>" & vbNewLine
+                    xml += "<precioTotalSinImpuesto>" & Math.Round(CDec(dgvNotaCredito.CurrentRow.Cells(7).Value), 2, MidpointRounding.ToEven) & "</precioTotalSinImpuesto>" & vbNewLine
                     xml += "<impuestos>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=- INFORMACÍON DE LOS IMPUESTO QUE APLICAN =-=-=-=-=-=-=-=-=-=-=-=-=
                     xml += "<impuesto>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=- DETALLE DE CADA IMPUESTO =-=-=-=-=-=-=-=-=-=-=-=-=
                     xml += "<codigo>2</codigo>" & vbNewLine ' IVA => 2 / ICE => 3 / IRBPNR => 5
@@ -625,9 +626,9 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     If _porcentajeIva = 15 Then xml += "<codigoPorcentaje>4</codigoPorcentaje>" & vbNewLine
 
                     xml += "<tarifa>" & _porcentajeIva & "</tarifa>" & vbNewLine
-                    xml += "<baseImponible>" & Math.Round(CDec(dgvNotaCredito.Rows(0).Cells(7).Value), 2, MidpointRounding.ToEven) & "</baseImponible>" & vbNewLine
+                    xml += "<baseImponible>" & Math.Round(CDec(dgvNotaCredito.CurrentRow.Cells(7).Value), 2, MidpointRounding.ToEven) & "</baseImponible>" & vbNewLine
                     Dim valorIvaDetalle As Decimal = 0
-                    valorIvaDetalle = (Math.Round(CDec(dgvNotaCredito.Rows(0).Cells(7).Value), 2, MidpointRounding.ToEven) * _porcentajeIva) / 100
+                    valorIvaDetalle = (Math.Round(CDec(dgvNotaCredito.CurrentRow.Cells(7).Value), 2, MidpointRounding.ToEven) * _porcentajeIva) / 100
                     xml += "<valor>" & Math.Round(valorIvaDetalle, 2, MidpointRounding.ToEven) & "</valor>" & vbNewLine
                     xml += "</impuesto>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
                     xml += "</impuestos>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

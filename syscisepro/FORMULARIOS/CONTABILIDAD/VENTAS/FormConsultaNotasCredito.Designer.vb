@@ -554,7 +554,7 @@
             Me.MetroTabPage2.IsDerivedStyle = True
             Me.MetroTabPage2.Location = New System.Drawing.Point(4, 42)
             Me.MetroTabPage2.Name = "MetroTabPage2"
-            Me.MetroTabPage2.Size = New System.Drawing.Size(1030, 367)
+            Me.MetroTabPage2.Size = New System.Drawing.Size(1030, 366)
             Me.MetroTabPage2.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.MetroTabPage2.StyleManager = Nothing
             Me.MetroTabPage2.TabIndex = 1

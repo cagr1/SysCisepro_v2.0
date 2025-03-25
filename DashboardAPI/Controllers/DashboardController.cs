@@ -20,12 +20,12 @@ namespace DashboardAPI.Controllers
         }
 
         //Endpoint to get sales per year
-        [HttpGet("sales/yearly")]
-        public ActionResult <List<SalesData>> GetYearlySales([FromQuery] int startYear, [FromQuery] int endYear)
+        [HttpGet("sales/by-date")]
+        public ActionResult<SalesData> GetSalesData([FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
         {
          try
             {
-                var salesData = _dashboardService.GetSalesData(startYear, endYear);
+                var salesData = _dashboardService.GetSalesDataRange(startDate, endDate);
                 return Ok(salesData);
             }
             catch (Exception ex)
@@ -38,11 +38,11 @@ namespace DashboardAPI.Controllers
 
         // Endpoint para ventas acumuladas
         [HttpGet("sales/accumulated")]
-        public ActionResult<List<AccumulatedSalesData>> GetAccumulatedSales([FromQuery] int startYear, [FromQuery] int endYear)
+        public ActionResult<SalesData> GetAccumulatedSales( [FromQuery] DateTime endDate)
         {
             try
             {
-                var data = _dashboardService.GetAccumulatedSalesData(startYear,endYear);
+                var data = _dashboardService.GetAccumulatedSalesData(endDate);
                 return Ok(data);
             }
             catch (Exception ex)
@@ -51,6 +51,49 @@ namespace DashboardAPI.Controllers
             }
         }
 
+        //Endpoint para obtener reporte de Ingresos, Egresos y Utilidades
+        [HttpGet("profit-loss-byMonth")]
+        public ActionResult<List<AccumulatedProfitLossEarnings>> GetAccumulatedProfitLossEarnings([FromQuery] int year)
+        {
+            try
+            {
+                var data = _dashboardService.GetAccumulatedProfitLossEarnings(year);
+                return Accepted(data);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error: {ex.Message}");
+            }
+        }
 
+        //Endpoint para obtener variación anual de ingresos
+        [HttpGet("annual-variation-revenues")]
+        public ActionResult<AnnualVariationRevenues> GetAnnualVariationRevenues([FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
+        {
+            try
+            {
+                var data = _dashboardService.GetAnnualVariationRevenues(startDate,endDate);
+                return Accepted(data);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error: {ex.Message}");
+            }
+        }
+
+        //Endpoint para obtener reporte de activos, pasivos, patrimonio e ingresos
+        [HttpGet("annual-revenues")]
+        public ActionResult<AnnualRevenues> GetAnnualRevenues([FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
+        {
+            try
+            {
+                var data = _dashboardService.GetAnnualRevenues(startDate,endDate);
+                return Accepted(data);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error: {ex.Message}");
+            }
+        }
     }
 }

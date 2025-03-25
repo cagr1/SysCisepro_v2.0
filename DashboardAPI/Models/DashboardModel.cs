@@ -5,28 +5,38 @@ namespace DashboardAPI.Models
 {
     public class SalesData
     {
-        public int Year { get; set; }
-        public decimal Sales { get; set; }
+        
+        public decimal TotalSales { get; set; }
     }
-    public class AccumulatedSalesData
+    public class AccumulatedProfitLossEarnings
     {
-        public int Year { get; set; }
-        public decimal AcumulatedSales { get; set; }
+        public int NumberMonth { get; set; }
+        public string NameMonth { get; set; }
+        public decimal TotalIncome { get; set; }
+        public decimal TotalExpenses { get; set; }
+        public decimal TotalEarnings { get; set; }
+
     }
 
-    public class Variationdata
+    public class AnnualVariationRevenues
     {
-        public int CurrentYear { get; set; }
-        public int PreviousYear { get; set; }
+    
         public decimal VariationPercentage { get; set; }
     }
 
-    public class KpiData
+    public class AnnualRevenues
     {
-        public decimal TotalSalesCurrentYear { get; set; }
-        public decimal TotalSalesPreviousYear { get; set; }
-        public decimal SalesGrowthPercentage { get; set; }
-        public decimal AverageMonthSales { get; set; }
+        public decimal Assets  { get; set; }
+        public decimal Liabiliteis { get; set; }
+
+        public decimal Equity { get; set; }
+
+        public decimal Income { get; set;}
     }
+
+
+
+
+
 
 }
