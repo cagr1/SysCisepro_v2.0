@@ -101,6 +101,9 @@ function setDefaultDates() {
     document.getElementById('endDate').value = defaultEnd;
 }
 
+
+
+
 async function loadData() {
     
     // Obtener fechas de los inputs        
@@ -110,7 +113,7 @@ async function loadData() {
     // Agregar tiempos automáticamente
     const startDate = formatDateWithTime(startDateInput);
     const endDate = formatDateWithTime(endDateInput, true);
-
+    const year = startDateInput ? new Date(startDateInput).getUTCFullYear(): new Date().getUTCFullYear();
     const previousStartDate = formatDateWithTime(startDateInput, false, true);
     const previousEndDate = formatDateWithTime(endDateInput, true, true);
 
@@ -120,12 +123,26 @@ async function loadData() {
         const acumuladoUrl = `http://localhost:5179/api/Dashboard/sales/accumulated?endDate=${encodeURIComponent(endDate)}`;
         const ventasPreviousUrl = `http://localhost:5179/api/Dashboard/sales/by-date?startDate=${encodeURIComponent(previousStartDate)}&endDate=${encodeURIComponent(previousEndDate)}`;
         const ventasPreviousAcumuladoUrl = `http://localhost:5179/api/Dashboard/sales/accumulated?endDate=${encodeURIComponent(previousEndDate)}`;
-
-        const [ventasResponse, acumuladoResponse, ventasPreviousResponse, ventasPreviousAcumuladoResponse ] = await Promise.all([
+        const porcentajeVentasActualUrl = `http://localhost:5179/api/Dashboard/variation/income?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
+        const porcentajeVentasPreviousUrl = `http://localhost:5179/api/Dashboard/variation/income?startDate=${encodeURIComponent(previousStartDate)}&endDate=${encodeURIComponent(previousEndDate)}`;
+        const utilidadesUrl = `http://localhost:5179/api/Dashboard/annual-earnings?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
+        const utilidadesAcumuladasUrl = `http://localhost:5179/api/Dashboard/accumulated-earnings?endDate=${encodeURIComponent(endDate)}`;
+        const porcentajeUtilidadesUrl = `http://localhost:5179/api/Dashboard/variation/profit?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
+        const financialUrl = `http://localhost:5179/api/Dashboard/profit-loss-byMonth/${year}`;
+        const salesCategoryUrl = `http://localhost:5179/api/Dashboard/sales-by-category?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
+        const [ventasResponse, acumuladoResponse, ventasPreviousResponse, ventasPreviousAcumuladoResponse, porcentajeVentasActualResponse, porcentajeVentasPreviousResponse, utilidadesResponse, utilidadesAcumuladasResponse, porcentajeUtilidadesResponse, financialResponse, salesCategoryResponse ] = await Promise.all([
             fetch(ventasUrl),
             fetch(acumuladoUrl),
             fetch(ventasPreviousUrl),
-            fetch(ventasPreviousAcumuladoUrl)
+            fetch(ventasPreviousAcumuladoUrl),
+            fetch(porcentajeVentasActualUrl),
+            fetch(porcentajeVentasPreviousUrl),
+            fetch(utilidadesUrl),
+            fetch(utilidadesAcumuladasUrl),
+            fetch(porcentajeUtilidadesUrl),
+            fetch(financialUrl),
+            fetch(salesCategoryUrl)
+
         ]);
         
         
@@ -134,15 +151,31 @@ async function loadData() {
         if (!acumuladoResponse.ok) throw new Error(`Error acumulado: ${acumuladoResponse.status}`);
         if (!ventasPreviousResponse.ok) throw new Error(`Error ventas anteriores: ${ventasPreviousResponse.status}`);
         if (!ventasPreviousAcumuladoResponse.ok) throw new Error(`Error acumulado anterior: ${ventasPreviousAcumuladoResponse.status}`);
+        if (!porcentajeVentasActualResponse.ok) throw new Error(`Error porcentaje ventas actual: ${porcentajeVentasActualUrl.status}`);
+        if (!porcentajeVentasPreviousResponse.ok) throw new Error(`Error porcentaje ventas anterior: ${porcentajeVentasPreviousUrl.status}`);
+        if (!utilidadesResponse.ok) throw new Error(`Error utilidades: ${utilidadesResponse.status}`);
+        if (!utilidadesAcumuladasResponse.ok) throw new Error(`Error utilidades acumuladas: ${utilidadesAcumuladasResponse.status}`);
+        if (!porcentajeUtilidadesResponse.ok) throw new Error(`Error porcentaje utilidades: ${porcentajeUtilidadesResponse.status}`);
+        if (!financialResponse.ok) throw new Error(`Error financial: ${financialResponse.status}`);
+        if (!salesCategoryResponse.ok) throw new Error(`Error salesCategory: ${salesCategoryResponse.status}`);
 
         const ventasData = await ventasResponse.json();
         const acumuladoData = await acumuladoResponse.json();
         const ventasPreviousData = await ventasPreviousResponse.json();
         const acumuladoPreviousData = await ventasPreviousAcumuladoResponse.json();
+        const porcentajeVentasActual = await porcentajeVentasActualResponse.json();
+        const porcentajeVentasPrevious = await porcentajeVentasPreviousResponse.json();
+        const utilidadesData = await utilidadesResponse.json();
+        const utilidadesAcumuladasData = await utilidadesAcumuladasResponse.json();
+        const porcentajeUtilidades = await porcentajeUtilidadesResponse.json();
+        const financialData = await financialResponse.json();
+        const salesCategoryData = await salesCategoryResponse.json();
 
-        
+       
         // 5. Actualizar la UI con los datos
-        updateStats(ventasData, acumuladoData, ventasPreviousData, acumuladoPreviousData);
+        updateStats(ventasData, acumuladoData, ventasPreviousData, acumuladoPreviousData, porcentajeVentasActual, porcentajeVentasPrevious, utilidadesData, utilidadesAcumuladasData, porcentajeUtilidades); 
+        renderFinancialChart(financialData);
+        renderSalesCategoryChart(salesCategoryData);
         
     } catch (error) {
         console.error('Error:', error);
@@ -150,8 +183,22 @@ async function loadData() {
     }
 }
 
+function updateVariacion(elementId, value) {
+    const element = document.getElementById(elementId);
+    if (!element) return;
+
+    // Determinar si es positivo/negativo
+    const isPositive = value >= 0;
+    
+    // Actualizar clases
+    element.className = `card-variacion ${isPositive ? 'positive' : 'negative'}`;
+    
+    // Formatear valor
+    element.textContent = `${isPositive ? '+' : ''}${value.toFixed(2)}%`;
+}
+
 // Actualizar estadísticas
-function updateStats(ventas, acumulado,ventasPrevious, acumuladoPrevious) {
+function updateStats(ventas, acumulado,ventasPrevious, acumuladoPrevious, porcentajeActual, porcentajePrevious, utilidadesData, utilidadesAcumuladasData, porcentajeUtilidades) {
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD'
@@ -161,12 +208,21 @@ function updateStats(ventas, acumulado,ventasPrevious, acumuladoPrevious) {
     document.getElementById('ventasAcumuladas').textContent = formatter.format(acumulado.totalSales) + ' acumulado';
     document.getElementById('ventasRangoPrevious').textContent = formatter.format(ventasPrevious.totalSales);
     document.getElementById('ventasAcumuladasPrevious').textContent = formatter.format(acumuladoPrevious.totalSales) + ' acumulado';
+    document.getElementById('porcentajeVentasActual').textContent = `${porcentajeActual}%`;
+    document.getElementById('porcentajeVentasPrevio').textContent = `${porcentajePrevious}%`;
+    document.getElementById('utilidadesActuales').textContent = formatter.format(utilidadesData.totalEarnings);
+    document.getElementById('utilidadesAcumuladas').textContent = formatter.format(utilidadesAcumuladasData.totalEarnings) + ' acumulado';
+    document.getElementById('porcentajeUtilidades').textContent = `${porcentajeUtilidades}%`;
+
+
+    updateVariacion('porcentajeVentasActual', porcentajeActual.variationPercentage);
+    updateVariacion('porcentajeVentasPrevio', porcentajePrevious.variationPercentage);
+    updateVariacion('porcentajeUtilidades', porcentajeUtilidades.variationPercentage);
 }
 
 // Cargar datos iniciales
 document.addEventListener('DOMContentLoaded', () => {
     setDefaultDates(); 
     loadData();
-    manageSidebar();
-    window.addEventListener('resize', manageSidebar);
+    //window.addEventListener('resize', manageSidebar);
 });

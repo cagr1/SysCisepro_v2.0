@@ -189,7 +189,6 @@
             '
             Me.txtDescuento.BackColor = System.Drawing.Color.White
             Me.txtDescuento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtDescuento.Enabled = False
             Me.txtDescuento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtDescuento.Location = New System.Drawing.Point(607, 215)
             Me.txtDescuento.Name = "txtDescuento"

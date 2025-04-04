@@ -17,13 +17,12 @@ namespace DashboardAPI.Data
             _connectionString = configuration.GetConnectionString("DefaultConnection");
         }
 
-        public DataTable ExecuteStoredProcedure(string spName, SqlParameter[] parameters = null)
+        public async Task<DataTable> ExecuteStoredProcedure(string spName, SqlParameter[] parameters = null)
         {
             DataTable dataTable = new DataTable();
 
-            using (SqlConnection connection = new SqlConnection(_connectionString))
-            {
-                using (SqlCommand command = new SqlCommand(spName, connection))
+            using (var connection = new SqlConnection(_connectionString))
+            using (var command = new SqlCommand(spName, connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
 
@@ -34,10 +33,10 @@ namespace DashboardAPI.Data
 
                     try
                     {
-                        connection.Open();
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        await connection.OpenAsync();
+                        using (var reader = await command.ExecuteReaderAsync())
                         {
-                            adapter.Fill(dataTable);
+                            dataTable.Load(reader);
                         }
                     }
                     catch (Exception ex)
@@ -47,10 +46,11 @@ namespace DashboardAPI.Data
                         throw;
                     }
                 }
+            return dataTable;
             }
 
-            return dataTable;
+            
         }
     }
     
-}
+

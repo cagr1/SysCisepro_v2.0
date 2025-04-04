@@ -23,16 +23,33 @@ namespace DashboardAPI.Models
     
         public decimal VariationPercentage { get; set; }
     }
-
-    public class AnnualRevenues
+    public class AnnualEarnings
     {
-        public decimal Assets  { get; set; }
-        public decimal Liabiliteis { get; set; }
-
-        public decimal Equity { get; set; }
-
-        public decimal Income { get; set;}
+        public decimal TotalEarnings { get; set; }
     }
+
+    public class EarningAccumulated
+    {
+        public decimal TotalEarnings { get; set; }
+    }
+
+   
+    public class SalesbyCategory
+    {
+    public string Code { get; set; }
+    public string Description { get; set; }
+    public decimal Saldo { get; set; }
+    // public decimal SecurityServiceSales { get; set; } // 41020101
+    // public decimal MonitorServiceSales { get; set; }   // 41020102
+    // public decimal KitSales { get; set; }             // 41020103
+    // public decimal AlarmSales { get; set; }           // 41020104
+    // public decimal MaintenanceSales { get; set; }     // 41020105
+    // public decimal MaterialSales { get; set; }        // 41020106
+
+    }
+
+   
+
 
 
 

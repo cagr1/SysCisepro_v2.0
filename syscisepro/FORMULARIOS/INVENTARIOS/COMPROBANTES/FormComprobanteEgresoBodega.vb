@@ -189,7 +189,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             LlenarCentroCosto()
             cbmEgreso.SelectedIndex = 0
-
+            cmbDocumento.SelectedValue = 7
             CargarDocumentos()
 
 

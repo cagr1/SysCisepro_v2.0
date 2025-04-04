@@ -17,7 +17,7 @@ namespace DashboardAPI.Services
             _databaseConnection = new DatabaseConnection(configuration);
         }
 
-        public SalesData GetSalesDataRange(DateTime startDate, DateTime endDate)
+        public async Task<SalesData> GetSalesDataRange(DateTime startDate, DateTime endDate)
         {
             var paramaters = new SqlParameter[]
             {
@@ -25,7 +25,7 @@ namespace DashboardAPI.Services
                 new SqlParameter("@FECHA_FINAL", endDate)
             };
 
-            DataTable resultTable = _databaseConnection.ExecuteStoredProcedure("sp_SalesDataByDateRange", paramaters);
+            DataTable resultTable = await _databaseConnection.ExecuteStoredProcedure("sp_SalesDataByDateRange", paramaters);
             
             return new SalesData
             {
@@ -36,7 +36,7 @@ namespace DashboardAPI.Services
 
         }
 
-        public SalesData GetAccumulatedSalesData(DateTime endDate)
+        public async Task<SalesData> GetAccumulatedSalesData(DateTime endDate)
         {
             var paramaters = new SqlParameter[]
             {
@@ -44,7 +44,7 @@ namespace DashboardAPI.Services
                 new SqlParameter("@FECHA_FINAL", endDate)
             };
 
-            DataTable resultTable = _databaseConnection.ExecuteStoredProcedure("sp_SalesAccumulatedByRange", paramaters);
+            DataTable resultTable = await _databaseConnection.ExecuteStoredProcedure("sp_SalesAccumulatedByRange", paramaters);
 
             return new SalesData
             {
@@ -53,14 +53,88 @@ namespace DashboardAPI.Services
 
         }
 
-        public List<AccumulatedProfitLossEarnings> GetAccumulatedProfitLossEarnings(int year)
+        public async Task<AnnualVariationRevenues> GetVariationIncome(DateTime startDate, DateTime endDate)
         {
             var paramaters = new SqlParameter[]
             {
-                new SqlParameter("@anio", year)
+                new SqlParameter("@FECHA_INICIAL", startDate),
+                new SqlParameter("@FECHA_FINAL", endDate)
             };
 
-            DataTable resultTable = _databaseConnection.ExecuteStoredProcedure("sp_ReportProfitLossEarnings", paramaters);
+            DataTable resultTable =  await _databaseConnection.ExecuteStoredProcedure("sp_AnnualVariationRevenues", paramaters);
+
+            return new AnnualVariationRevenues
+            {
+                VariationPercentage = resultTable.Rows.Count > 0 ? Convert.ToDecimal(resultTable.Rows[0]["VariacionPorcentual"]) : 0
+            };
+
+
+
+        }
+
+        public async Task<AnnualEarnings> GetAnnualEarnings(DateTime startDate,DateTime endDate)
+        {
+            var paramaters = new SqlParameter[]
+            {
+                new SqlParameter("@FECHA_INICIAL", startDate),
+                new SqlParameter("@FECHA_FINAL", endDate)
+            };
+
+            DataTable resultTable = await _databaseConnection.ExecuteStoredProcedure("sp_AnnualEarnings", paramaters);
+
+            return new AnnualEarnings
+            {
+                TotalEarnings = resultTable.Rows.Count > 0 ? Convert.ToDecimal(resultTable.Rows[0]["Utilidad"]) : 0
+            };
+
+        }
+
+        public async Task<EarningAccumulated> GetEarningAccumulated(DateTime endDate)
+        {
+            var paramaters = new SqlParameter[]
+            {
+                new SqlParameter("@FECHA_FINAL", endDate)
+            };
+
+            DataTable resultTable = await _databaseConnection.ExecuteStoredProcedure("sp_EarningsAccumulated", paramaters);
+
+            return new EarningAccumulated
+            {
+                TotalEarnings = resultTable.Rows.Count > 0 ? Convert.ToDecimal(resultTable.Rows[0]["Utilidad"]) : 0
+            };
+
+        }
+
+        public async Task<AnnualVariationRevenues> GetVariationProfit(DateTime startDate, DateTime endDate)
+        {
+            var paramaters = new SqlParameter[]
+            {
+                new SqlParameter("@FECHA_INICIAL", startDate),
+                new SqlParameter("@FECHA_FINAL", endDate)
+            };
+
+            DataTable resultTable = await _databaseConnection.ExecuteStoredProcedure("sp_AnnualVariationIncomes", paramaters);
+
+            return new AnnualVariationRevenues
+            {
+                VariationPercentage = resultTable.Rows.Count > 0 ? Convert.ToDecimal(resultTable.Rows[0]["Variacion"]) : 0
+            };
+
+
+
+        }
+
+        public async Task<List<AccumulatedProfitLossEarnings>> GetAccumulatedProfitLossEarnings(int year)
+        {
+            var paramaters = new SqlParameter[]
+            {
+                new SqlParameter("@anio", SqlDbType.Int)
+                {
+                    Value = year
+                }
+            };
+
+            DataTable resultTable = await _databaseConnection.ExecuteStoredProcedure("sp_ReportProfitLossEarnings", paramaters);
 
             return resultTable.AsEnumerable().Select(row => new AccumulatedProfitLossEarnings
             {
@@ -73,7 +147,7 @@ namespace DashboardAPI.Services
             
         }
 
-        public AnnualVariationRevenues GetAnnualVariationRevenues(DateTime startDate, DateTime endDate)
+        public async Task<AnnualVariationRevenues> GetAnnualVariationRevenues(DateTime startDate, DateTime endDate)
         {
             var paramaters = new SqlParameter[]
             {
@@ -81,7 +155,7 @@ namespace DashboardAPI.Services
                 new SqlParameter("@FECHA_FINAL", endDate )
             };
 
-            DataTable resultTable = _databaseConnection.ExecuteStoredProcedure("sp_AnnualVariationRevenues", paramaters);
+            DataTable resultTable = await _databaseConnection.ExecuteStoredProcedure("sp_AnnualVariationRevenues", paramaters);
 
             return new AnnualVariationRevenues
             {
@@ -89,7 +163,9 @@ namespace DashboardAPI.Services
             };
         }
 
-        public AnnualRevenues GetAnnualRevenues(DateTime startDate, DateTime endDate)
+        
+
+        public async Task<List<SalesbyCategory>> GetSalesbyCategoriesAsync(DateTime startDate, DateTime endDate)
         {
             var paramaters = new SqlParameter[]
             {
@@ -97,15 +173,15 @@ namespace DashboardAPI.Services
                 new SqlParameter("@FECHA_FINAL", endDate )
             };
 
-            DataTable resultTable = _databaseConnection.ExecuteStoredProcedure("sp_AnnualRevenues", paramaters);
-
-            return new AnnualRevenues
+            DataTable resultTable = await _databaseConnection.ExecuteStoredProcedure("sp_salesByCategory", paramaters);
+       
+            return resultTable.AsEnumerable().Select(row => new SalesbyCategory 
             {
-                Assets = resultTable.Rows.Count > 0 ? Convert.ToDecimal(resultTable.Rows[0]["Activo"]) : 0,
-                Liabiliteis = resultTable.Rows.Count > 0 ? Convert.ToDecimal(resultTable.Rows[0]["Pasivo"]) : 0,
-                Equity = resultTable.Rows.Count > 0 ? Convert.ToDecimal(resultTable.Rows[0]["Patrimonio"]) : 0,
-                Income = resultTable.Rows.Count > 0 ? Convert.ToDecimal(resultTable.Rows[0]["Utilidad"]) : 0
-            };
+                Code = row.Field<string>("Codigo"),
+                Description = row.Field<string>("Cuenta"),
+                Saldo = row.Field<decimal>("Saldo"),
+            }).ToList();
+            
         }
 
 

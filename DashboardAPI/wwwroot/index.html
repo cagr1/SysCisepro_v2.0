@@ -12,8 +12,8 @@
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-    <!-- ApexCharts -->
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- eCharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.6.0/dist/echarts.min.js"></script>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -144,8 +144,9 @@
                 <div class="data-card ingresos">
                     <div class="card-title">VENTA ACTUAL</div>
                     <div class="card-main-value" id="ventasRango">$$$</div>
-                    <div class="card-acumulado" id="ventasAcumuladas">
-                       $49.9M                        
+                    <div class="card-secondary-info">
+                    <div class="card-acumulado" id="ventasAcumuladas">  $49.9M  </div>
+                        <div class="card-variacion positive" id="porcentajeVentasActual">+10%</div>
                     </div>
                     <div class="card-divider"></div>
                     <div class="card-meta">
@@ -155,9 +156,12 @@
                 <div class="data-card ingresos">
                     <div class="card-title">VENTA ANTERIOR</div>
                     <div class="card-main-value" id="ventasRangoPrevious">$$$</div>
-                    <div class="card-acumulado" id="ventasAcumuladasPrevious">
-                        $49.9M
+                    <div class="card-secondary-info">
+                        <div class="card-acumulado" id="ventasAcumuladasPrevious"> $49.9M </div>
+                        <div class="card-variacion positive" id="porcentajeVentasPrevio" >+10%</div>
                     </div>
+                    
+
                     <div class="card-divider"></div>
                     <div class="card-meta">
                         <span class="card-year" id="yearCardPreviousIncomes">2024</span>
@@ -187,9 +191,10 @@
                 <!-- Patrimonio -->
                 <div class="data-card patrimonio">
                     <div class="card-title">Utilidades</div>
-                    <div class="card-main-value" id="ventasRango">$9.8M</div>
-                    <div class="card-acumulado" id="ventasAcumuladas">
-                        $49.9M acumulado
+                    <div class="card-main-value" id="utilidadesActuales">$9.8M</div>
+                    <div class="card-secondary-info">
+                        <div class="card-acumulado" id="utilidadesAcumuladas"> $49.9M acumulado </div>
+                        <div class="card-variacion positive" id="porcentajeUtilidades" ></div>
                     </div>
                     <div class="card-divider"></div>
                     <div class="card-meta">
@@ -197,11 +202,29 @@
                     </div>
                 </div>
             </div>
+             <!-- Sección de Gráficos -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+        <!-- Contenedor Gráfico Financiero -->
+        <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h3 class="text-lg font-semibold mb-4 text-center">Ingresos, Egresos y Utilidades</h3>
+            <div id="financialChart" style="width: 100%; height: 400px;"></div>
+        </div>
+
+        <!-- Contenedor para otro gráfico (lo dejamos vacío por ahora) -->
+        <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h3 class="text-lg font-semibold mb-4 text-center">Ventas por Categoria</h3>
+            <div class="chart-container" style="height: 350px">
+                <div id="salesChart" style="width: 100%; height: 400px;"></div>
+            </div>
+        </div>
+    </div>
+
         </main>
     </div>
 
     <script src="/wwwroot/js/app.js"></script>
     <script src="/wwwroot/js/chart.js"></script>
+    
 </body>
 
 </html>
