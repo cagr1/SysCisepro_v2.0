@@ -1,16 +1,9 @@
 
 
-
 .pinned .menu-text {
-    opacity: 1 !important;
-    /* visibility: visible !important; */
-    /* transition: none !important; */
+    opacity: 1 !important;    
 } 
 
-/* .menu-text {
-    color: #1e293b;
-    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.3); 
-} */
  #sidebar {
     width: 4rem; /* 80px */
     height: calc(100vh - 4rem); /* Altura completa menos la barra de navegación */
@@ -60,18 +53,6 @@
     margin-left: 5rem;
     
 }
-
-/* #sidebar a:nth-child(1) svg { 
-    color: #3b82f6; 
-} */
-
-/* #sidebar a:nth-child(2) svg { /* Segundo ítem */
-    color: #f59e0b; /* Amarillo */
-} */
-
-/* #sidebar a:nth-child(3) svg { /* Tercer ítem */
-    color: #10b981; /* Verde */
-} */
 
 #sidebar a:hover svg {
     transform: scale(1.1);
@@ -146,13 +127,10 @@
     ) !important;
 }
 
-/* #sidebarToggle svg {
-    color: #1e40af; 
-} */
 
 #sidebarToggle:hover svg {
-    color: #92400e; /* Amarillo oscuro */
-    
+   color: #92400e; /* Amarillo oscuro */
+   
 }
 
 .cards-container {
@@ -164,8 +142,7 @@
     
 }
 
-.data-card {
-    
+.data-card {    
     border-radius: 10px;
     padding: 0.8rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -204,19 +181,13 @@
 
 
 .data-card.ingresos ,
-.data-card.ingresos .card-main-value {
-    
-    color: #2563eb;
-    
+.data-card.ingresos .card-main-value {    
+    color: #2563eb;    
 }
 
- .data-card.ingresos {
-    
-    /* border-color: #059669;
-    background: linear-gradient(to right, #d1fae5 85%, #05966930); */
+ .data-card.ingresos {        
     border-color: #2563eb; /* Azul corporativo */
-    background: linear-gradient(to right, #eff6ff 85%, #2563eb15);
-    
+    background: linear-gradient(to right, #eff6ff 85%, #2563eb15);    
 } 
 
 .data-card.egresos ,
@@ -231,15 +202,11 @@
 }
 
 .data-card.utilidad ,
-.data-card.utilidad .card-main-value {
-    
+.data-card.utilidad .card-main-value {    
     color: #059669;
 }
 
-.data-card.utilidad {
-    
-    /* border-color: #2563eb;
-    background: linear-gradient(to right, #eff6ff 85%, #2563eb30); */
+.data-card.utilidad {        
     border-color: #059669; /* Verde financiero */
     background: linear-gradient(to right, #d1fae5 85%, #05966915);
 }
@@ -247,13 +214,10 @@
 .data-card.patrimonio,
 .data-card.patrimonio .card-main-value {
     color: #4f46e5;
-
 }
 
-.data-card.patrimonio {
-    /* border-color: #d97706;
-    background: linear-gradient(to right, #fef3c7 85%, #d9770630); */
-    border-color: #4f46e5; /* Índigo profesional */
+.data-card.patrimonio {    
+    border-color: #4f46e5; 
     background: linear-gradient(to right, #eef2ff 85%, #4f46e515);
 }
 
@@ -264,8 +228,7 @@
 .data-card.patrimonio .card-divider { background: #4f46e5; }
 
 
-.card-header {
-       
+.card-header {       
     margin-bottom: 0.2rem;
     align-items: center;
     display: flex;
@@ -341,25 +304,20 @@
 }
 
 
-.data-card.ingresos .card-divider {
-    
+.data-card.ingresos .card-divider {    
     background: #3b82f6;
 }
 
 .data-card.egresos .card-divider {
-    background: #ef4444;
-    
+    background: #ef4444;    
 }
 
-.data-card.utilidad .card-divider {
-    
-    background:  #10b981;
-    
+.data-card.utilidad .card-divider {    
+    background:  #10b981;    
 }
 
 .data-card.capital .card-divider {
-    background: #64748b;
-    
+    background: #64748b;    
 }
 
 .card-meta {
@@ -380,10 +338,8 @@
     .cards-container {
         grid-template-columns: repeat(3, minmax(0, 1fr)); /* Grid simétrico */
         gap: 2rem;
-    }
-    
-   
-}
+        } 
+   }
 
 
 

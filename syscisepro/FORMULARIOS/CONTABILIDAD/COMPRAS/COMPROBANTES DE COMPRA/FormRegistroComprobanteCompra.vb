@@ -1380,7 +1380,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             If lblIdProveedorGeneral.Text <> "..." Then
                 If txtNumeroComprobanteCompra.Text <> "" Then
                     If cmbNombreParametroDocumentos.SelectedValue <> 3 Then
-                        Dim n = _objetoComprobantesCompra.BuscarNumeroComprobanteXIdProveedorNumeroComprobante(_tipoCon, lblIdProveedorGeneral.Text, txtNumeroComprobanteCompra.Text.Trim)
+                        Dim n = _objetoComprobantesCompra.BuscarNumeroComprobanteXIdProveedorNumeroComprobante(_tipoCon, lblIdProveedorGeneral.Text, txtNumeroComprobanteCompra.Text.Trim, cmbNombreParametroDocumentos.Text.Trim)
                         If n <> "0" Then
                             txtNumeroComprobanteCompra.Focus()
                             'MsgBox("EL NÚMERO DE COMPROBANTE " & n & " YA ESTA REGISTRADO PARA ESTE PROVEEDOR", MsgBoxStyle.Exclamation, "Mensaje de validación")

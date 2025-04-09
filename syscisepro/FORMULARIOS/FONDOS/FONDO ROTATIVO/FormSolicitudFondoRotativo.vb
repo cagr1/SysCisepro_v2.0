@@ -956,7 +956,7 @@ _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
         End Sub
         Private Function ValidarNumeroComprobanteRepetidoProveedor()
             If cmbNombreParametroDocumentos.Tag.ToString() = "DEDUCIBLE" Then
-                Dim n = _objetoComprobantesCompra.BuscarNumeroComprobanteXIdProveedorNumeroComprobante(_tipoCon, _idProveedorGeneral, _numeroComprobanteCompra.Trim.ToString)
+                Dim n = _objetoComprobantesCompra.BuscarNumeroComprobanteXIdProveedorNumeroComprobante(_tipoCon, _idProveedorGeneral, _numeroComprobanteCompra.Trim.ToString, cmbNombreParametroDocumentos.Text.Trim)
                 If n <> "0" Then
 
                     KryptonMessageBox.Show("EL NÚMERO DE COMPROBANTE " & n & " YA ESTA REGISTRADO PARA ESTE PROVEEDOR", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)

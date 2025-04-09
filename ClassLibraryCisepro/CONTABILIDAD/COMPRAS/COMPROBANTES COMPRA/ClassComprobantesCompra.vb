@@ -143,10 +143,11 @@ Namespace CONTABILIDAD.COMPRAS.COMPROBANTES_COMPRA
             Return If(data.Rows.Count = 0, 0, If(IsDBNull(data.Rows(0)(0)), 0, CInt(data.Rows(0)(0))))
         End Function
 
-        Public Function BuscarNumeroComprobanteXIdProveedorNumeroComprobante(ByVal tipoCon As TipoConexion, ByVal parametroIdProveedor As Int64, ByVal parametroNumeroComprobante As String) As String
+        Public Function BuscarNumeroComprobanteXIdProveedorNumeroComprobante(ByVal tipoCon As TipoConexion, ByVal parametroIdProveedor As Int64, ByVal parametroNumeroComprobante As String, ByVal parametroTipoComprobante As String) As String
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"ID_PROVEEDOR_GENERAL", SqlDbType.Int, parametroIdProveedor})
             pars.Add(New Object() {"NUMERO_COMPROBANTE_COMPRA", SqlDbType.NVarChar, parametroNumeroComprobante})
+            pars.Add(New Object() {"TIPO_COMPROBANTE_COMPRA", SqlDbType.NVarChar, parametroTipoComprobante})
             Dim data = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "buscarNumeroComprobanteXIdProveedorNumeroComprobante", True, pars)
             Return If(data.Rows.Count = 0, 0, If(IsDBNull(data.Rows(0)(0)), String.Empty, CStr(data.Rows(0)(0))))
         End Function

@@ -1100,7 +1100,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
 
         Private Function ValidarNumeroComprobanteRepetidoProveedor()
             If cbmParametrosDocumentos.Tag = "DEDUCIBLE" Then
-                Dim n = _objetoComprobantesCompra.BuscarNumeroComprobanteXIdProveedorNumeroComprobante(_tipoCon, _idProveedorGeneral, _numeroComprobanteCompra)
+                Dim n = _objetoComprobantesCompra.BuscarNumeroComprobanteXIdProveedorNumeroComprobante(_tipoCon, _idProveedorGeneral, _numeroComprobanteCompra, cbmParametrosDocumentos.Text.Trim)
                 If n <> "0" Then
                     'MsgBox("EL NÚMERO DE COMPROBANTE " & n & " YA ESTA REGISTRADO PARA ESTE PROVEEDOR", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     KryptonMessageBox.Show("El número de comprobante " & n & " ya esta registrado para este proveedor", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
