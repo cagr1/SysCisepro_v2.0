@@ -167,6 +167,8 @@
                         <span class="card-year" id="yearCardPreviousIncomes">2024</span>
                     </div>
                 </div>
+               
+                
                 <!-- <div class="data-card egresos">
                     <div class="card-title">GASTOS</div>
                     <div class="card-main-value" id="ventasRango">$9.8M</div>
@@ -201,23 +203,96 @@
                         <span class="card-year">2025</span>
                     </div>
                 </div>
+
+                <div class="data-card margen">
+                    <div class="card-title">MARGEN NETO</div>
+                    <div class="card-main-value" id="margenUtilidadNeta">14.8%</div>
+                    <div class="card-secondary-info">
+                        <div class="card-acumulado">Meta: 1.00%</div>
+                        <div class="card-variacion positive" id="variacionMargen">+0.8%</div>
+                    </div>
+                    <div class="card-divider"></div>
+                    <div class="card-meta">
+                        <span class="card-year">2024</span>
+                    </div>
+                </div>
             </div>
              <!-- Sección de Gráficos -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-        <!-- Contenedor Gráfico Financiero -->
-        <div class="bg-white p-4 rounded-lg shadow-sm">
-            <h3 class="text-lg font-semibold mb-4 text-center">Ingresos, Egresos y Utilidades</h3>
-            <div id="financialChart" style="width: 100%; height: 400px;"></div>
-        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 ">
+            <!-- Contenedor Gráfico Financiero -->
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+                <h3 class="text-lg font-semibold mb-4 text-center">Ingresos, Egresos y Utilidades</h3>
+                <div id="financialChart" style="width: 100%; height: 400px;"></div>
+            </div>
 
-        <!-- Contenedor para otro gráfico (lo dejamos vacío por ahora) -->
-        <div class="bg-white p-4 rounded-lg shadow-sm">
-            <h3 class="text-lg font-semibold mb-4 text-center">Ventas por Categoria</h3>
-            <div class="chart-container" style="height: 350px">
-                <div id="salesChart" style="width: 100%; height: 400px;"></div>
+            <!-- Contenedor para otro gráfico (lo dejamos vacío por ahora) -->
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+                <h3 class="text-lg font-semibold mb-4 text-center">Ventas por Categoria</h3>
+                <div class="chart-container" style="height: 350px">
+                    <div id="salesChart" style="width: 100%; height: 400px;"></div>
+                </div>
             </div>
         </div>
-    </div>
+        <div class="mt-8"></div>
+
+        <div class="cards-container mb-8">
+            <div class="data-card liquidez">
+                <div class="card-title">LIQUIDEZ</div>
+                <div class="card-main-value" id="liquidezCorriente">2.4x</div>
+                <div class="card-secondary-info">
+                    <div class="card-acumulado">Óptimo: 1.5-2.0</div>
+                    <div class="card-variacion negative">-0.2x</div>
+                </div>
+                <div class="card-divider"></div>
+                <div class="card-meta">
+                    <span class="card-year">2024</span>
+                </div>
+            </div>
+            
+            <!-- Endeudamiento -->
+            <div class="data-card endeudamiento">
+                <div class="card-title">ENDEUDAMIENTO</div>
+                <div class="card-main-value" id="endeudamiento">38%</div>
+                <div class="card-secondary-info">
+                    <div class="card-acumulado">Límite: 40%</div>
+                    <div class="card-variacion positive">-2%</div>
+                </div>
+                <div class="card-divider"></div>
+                <div class="card-meta">
+                    <span class="card-year">2024</span>
+                </div>
+            </div>
+            
+            <!-- Eficiencia Operativa -->
+            <div class="data-card eficiencia">
+                <div class="card-title">EFICIENCIA OP.</div>
+                <div class="card-main-value" id="eficienciaOperativa">65%</div>
+                <div class="card-secondary-info">
+                    <div class="card-acumulado">Mejora: 5%</div>
+                    <div class="card-variacion positive">+3%</div>
+                </div>
+                <div class="card-divider"></div>
+                <div class="card-meta">
+                    <span class="card-year">2024</span>
+                </div>
+            </div>
+            
+            <!-- Rentabilidad Patrimonio -->
+            <div class="data-card rentabilidad">
+                <div class="card-title">RENTAB. PATRIM.</div>
+                <div class="card-main-value" id="rentabilidadPatrimonio">22%</div>
+                <div class="card-secondary-info">
+                    <div class="card-acumulado">Sector: 18%</div>
+                    <div class="card-variacion positive">+4%</div>
+                </div>
+                <div class="card-divider"></div>
+                <div class="card-meta">
+                    <span class="card-year">2024</span>
+                </div>
+            </div>
+        </div>
+
+
 
         </main>
     </div>

@@ -48,6 +48,11 @@ namespace DashboardAPI.Models
 
     }
 
+    public class MarginEarnings
+    {
+        public decimal TotalEarnings { get; set; }
+    }
+
    
 
 

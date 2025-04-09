@@ -169,6 +169,22 @@ namespace DashboardAPI.Controllers
             }
         }
 
+        //Endpoint para obtener margen de utilidad
+        [HttpGet("margin-earnings")]
+        [OutputCache(Duration = 180, VaryByQueryKeys = new[] { "startDate", "endDate" })]
+        public async Task<MarginEarnings> GetMarginEarnings([FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
+        {
+            try
+            {                
+                return await _dashboardService.GetMarginEarnings(startDate, endDate);
+            }
+            catch (Exception ex)
+            {                
+                Console.WriteLine($"Error: {ex.Message}");
+                return new MarginEarnings { TotalEarnings = 0 };
+            }
+        }
+
         //Endpoint para obtener reporte de activos, pasivos, patrimonio e ingresos
         // [HttpGet("annual-revenues")]
         // [OutputCache(Duration = 180, VaryByQueryKeys = new[] { "startDate", "endDate" })]

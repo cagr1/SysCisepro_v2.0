@@ -185,5 +185,22 @@ namespace DashboardAPI.Services
         }
 
 
+        public async Task<MarginEarnings> GetMarginEarnings(DateTime startDate, DateTime endDate)
+        {
+            var paramaters = new SqlParameter[]
+            {
+                new SqlParameter("@FECHA_INICIAL", startDate ),
+                new SqlParameter("@FECHA_FINAL", endDate )
+            };
+
+            DataTable resultTable = await _databaseConnection.ExecuteStoredProcedure("sp_MarginEarnings", paramaters);
+
+            return new MarginEarnings
+            {
+                TotalEarnings = resultTable.Rows.Count > 0 ? Convert.ToDecimal(resultTable.Rows[0]["MargenUtilidadNeta"]) : 0
+            };
+        }
+
+
     }
 }
