@@ -73,23 +73,28 @@ function formatDateWithTime(dateString, isEndDate = false, subtractYear = false)
     return date.toISOString().slice(0, 19).replace('T', ' ');
 }
 
-function returnYearfromDatepiker() {
-    
-        const dateInput = document.getElementById('startDate').value;
-        const year = document.getElementById('yearCardActualIncomes');
-        const prevoiusYear = document.getElementById('yearCardPreviousIncomes');
-        
-        if (dateInput && year && prevoiusYear) {
-            const date = new Date(dateInput + 'T00:00:00Z'); // Asegurarse de que la fecha esté en UTC
-            const dateYear = date.getUTCFullYear(); // Obtener el año en UTC
-            const beforeYear = dateYear - 1; // Calcular el año anterior
-            year.textContent = dateYear;
-            prevoiusYear.textContent = beforeYear; // Actualizar el año anterior
-        }
-   
-}
-document.getElementById('startDate').addEventListener('change', returnYearfromDatepiker);
 
+
+function updateCardYears() {
+    const dateInput = document.getElementById('startDate').value;
+    
+    if (dateInput) {
+        const date = new Date(dateInput + 'T00:00:00Z');
+        const currentYear = date.getUTCFullYear();
+        const previousYear = currentYear - 1;
+
+        // Actualizar todos los años actuales
+        document.querySelectorAll('.card-year-actual').forEach(element => {
+            element.textContent = currentYear;
+        });
+
+        // Actualizar todos los años anteriores (si existen)
+        document.querySelectorAll('.card-year-previous').forEach(element => {
+            element.textContent = previousYear;
+        });
+    }
+}
+document.getElementById('startDate').addEventListener('change', updateCardYears);
 
 // Configurar fechas iniciales (año actual)
 function setDefaultDates() {
@@ -131,7 +136,8 @@ async function loadData() {
         const financialUrl = `http://localhost:5179/api/Dashboard/profit-loss-byMonth/${year}`;
         const salesCategoryUrl = `http://localhost:5179/api/Dashboard/sales-by-category?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
         const marginEarnignsUrl = `http://localhost:5179/api/Dashboard/margin-earnings?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
-        const [ventasResponse, acumuladoResponse, ventasPreviousResponse, ventasPreviousAcumuladoResponse, porcentajeVentasActualResponse, porcentajeVentasPreviousResponse, utilidadesResponse, utilidadesAcumuladasResponse, porcentajeUtilidadesResponse, financialResponse, salesCategoryResponse, marginEarningsResponse ] = await Promise.all([
+        const liquidezUrl = `http://localhost:5179/api/Dashboard/liquidity-ratio?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
+        const [ventasResponse, acumuladoResponse, ventasPreviousResponse, ventasPreviousAcumuladoResponse, porcentajeVentasActualResponse, porcentajeVentasPreviousResponse, utilidadesResponse, utilidadesAcumuladasResponse, porcentajeUtilidadesResponse, financialResponse, salesCategoryResponse, marginEarningsResponse, liquidezResponse ] = await Promise.all([
             fetch(ventasUrl),
             fetch(acumuladoUrl),
             fetch(ventasPreviousUrl),
@@ -143,7 +149,8 @@ async function loadData() {
             fetch(porcentajeUtilidadesUrl),
             fetch(financialUrl),
             fetch(salesCategoryUrl),
-            fetch(marginEarnignsUrl)
+            fetch(marginEarnignsUrl),
+            fetch(liquidezUrl)
 
         ]);
         
@@ -161,6 +168,7 @@ async function loadData() {
         if (!financialResponse.ok) throw new Error(`Error financial: ${financialResponse.status}`);
         if (!salesCategoryResponse.ok) throw new Error(`Error salesCategory: ${salesCategoryResponse.status}`);
         if (!marginEarningsResponse.ok) throw new Error(`Error marginEarnings: ${marginEarningsResponse.status}`);
+        if (!liquidezResponse.ok) throw new Error(`Error liquidez: ${liquidezResponse.status}`);
 
         const ventasData = await ventasResponse.json();
         const acumuladoData = await acumuladoResponse.json();
@@ -174,10 +182,11 @@ async function loadData() {
         const financialData = await financialResponse.json();
         const salesCategoryData = await salesCategoryResponse.json();
         const marginEarningsData = await marginEarningsResponse.json();
+        const liquidezData = await liquidezResponse.json();
 
        
         // 5. Actualizar la UI con los datos
-        updateStats(ventasData, acumuladoData, ventasPreviousData, acumuladoPreviousData, porcentajeVentasActual, porcentajeVentasPrevious, utilidadesData, utilidadesAcumuladasData, porcentajeUtilidades, marginEarningsData); 
+        updateStats(ventasData, acumuladoData, ventasPreviousData, acumuladoPreviousData, porcentajeVentasActual, porcentajeVentasPrevious, utilidadesData, utilidadesAcumuladasData, porcentajeUtilidades, marginEarningsData, liquidezData); 
         renderFinancialChart(financialData);
         renderSalesCategoryChart(salesCategoryData);
         
@@ -203,7 +212,7 @@ function updateVariacion(elementId, value) {
 
 
 // Actualizar estadísticas
-function updateStats(ventas, acumulado,ventasPrevious, acumuladoPrevious, porcentajeActual, porcentajePrevious, utilidadesData, utilidadesAcumuladasData, porcentajeUtilidades,marginEarningsData) {
+function updateStats(ventas, acumulado,ventasPrevious, acumuladoPrevious, porcentajeActual, porcentajePrevious, utilidadesData, utilidadesAcumuladasData, porcentajeUtilidades,marginEarningsData, liquidezData) {
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD'
@@ -212,10 +221,11 @@ function updateStats(ventas, acumulado,ventasPrevious, acumuladoPrevious, porcen
     //calulcar margen neto
     //const margenNeto = (marginEarningsData.totalEarnings * 100).toFixed(2) ;
 
-    const margenNetoPorcentaje = marginEarningsData.totalEarnings.toFixed(2);
-    const metaMargenNetoUtilidades = 1.00;
-    const variacionMargenNetoUtilidades = (margenNetoPorcentaje - metaMargenNetoUtilidades).toFixed(2);
-    //const variacionMargen = (margenNeto - meta).toFixed(2);
+    const margenNetoPorcentaje = parseFloat((marginEarningsData.totalEarnings * 100).toFixed(2));
+    const metaMargenNetoUtilidades = 50.00;
+    const variacionMargenNetoUtilidades = parseFloat((margenNetoPorcentaje - metaMargenNetoUtilidades).toFixed(2));
+    const metaLiquidez = 1.5;
+    const variacionliquidez = parseFloat((liquidezData.liquidityLevel - metaLiquidez).toFixed(2));
 
     document.getElementById('ventasRango').textContent = formatter.format(ventas.totalSales);
     document.getElementById('ventasAcumuladas').textContent = formatter.format(acumulado.totalSales) + ' acumulado';
@@ -227,12 +237,14 @@ function updateStats(ventas, acumulado,ventasPrevious, acumuladoPrevious, porcen
     document.getElementById('utilidadesAcumuladas').textContent = formatter.format(utilidadesAcumuladasData.totalEarnings) + ' acumulado';
     document.getElementById('porcentajeUtilidades').textContent = `${porcentajeUtilidades}%`;
     document.getElementById('margenUtilidadNeta').textContent = `${margenNetoPorcentaje}%` ;
+    document.getElementById('liquidezCorriente').textContent = `${liquidezData.liquidityLevel}%`;
 
 
     updateVariacion('porcentajeVentasActual', porcentajeActual.variationPercentage);
     updateVariacion('porcentajeVentasPrevio', porcentajePrevious.variationPercentage);
     updateVariacion('porcentajeUtilidades', porcentajeUtilidades.variationPercentage);
     updateVariacion('variacionMargen', variacionMargenNetoUtilidades);
+    updateVariacion('variacionLiquidez', variacionliquidez);
 }
 
 // Cargar datos iniciales

@@ -185,6 +185,27 @@ namespace DashboardAPI.Controllers
             }
         }
 
+        //Endpoint para obtener liquidez
+        [HttpGet("liquidity-ratio")]
+        [OutputCache(Duration = 180, VaryByQueryKeys = new[] { "startDate", "endDate" })]
+        public async Task<LiquidityRatio> GetLiquidityRatio([FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
+        {
+            try
+            {                
+                return await _dashboardService.GetLiquidityRatioAsync(startDate, endDate);
+            }
+            catch (Exception ex)
+            {                
+                Console.WriteLine($"Error: {ex.Message}");
+                return new LiquidityRatio { LiquidityLevel = 0 };
+            }
+        }
+
+
+
+
+
+
         //Endpoint para obtener reporte de activos, pasivos, patrimonio e ingresos
         // [HttpGet("annual-revenues")]
         // [OutputCache(Duration = 180, VaryByQueryKeys = new[] { "startDate", "endDate" })]

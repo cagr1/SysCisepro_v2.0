@@ -335,60 +335,60 @@
 /* Nuevas clases para los indicadores */
 .data-card.margen,
 .data-card.margen .card-main-value {    
-    color: #0d9488;    
+    color: #059669;    
 }
 
 .data-card.margen {        
-    border-color: #0d9488;
-    background: linear-gradient(to right, #ccfbf1 85%, #0d948815);    
+    border-color: #059669;
+    background: linear-gradient(to right, #d1fae5 85%, #05966915);    
 }
 
 .data-card.liquidez,
 .data-card.liquidez .card-main-value {    
-    color: #ea580c;    
+    color: #d97706;    
 }
 
 .data-card.liquidez {        
-    border-color: #ea580c;
-    background: linear-gradient(to right, #ffedd5 85%, #ea580c15);    
+    border-color: #d97706;
+    background: linear-gradient(to right, #ffedd5 85%, #d9770615);    
 }
 
 .data-card.endeudamiento,
 .data-card.endeudamiento .card-main-value {    
-    color: #db2777;    
+    color: #dc2626;    
 }
 
 .data-card.endeudamiento {        
-    border-color: #db2777;
-    background: linear-gradient(to right, #fce7f3 85%, #db277715);    
+    border-color: #dc2626;
+    background: linear-gradient(to right,#fee2e2 85%, #dc262615);    
 }
 
 .data-card.eficiencia,
 .data-card.eficiencia .card-main-value {    
-    color: #4338ca;    
+    color: #4f46e5;    
 }
 
 .data-card.eficiencia {        
-    border-color: #4338ca;
-    background: linear-gradient(to right, #e0e7ff 85%, #4338ca15);    
+    border-color: #4f46e5;
+    background: linear-gradient(to right, #eef2ff 85%, #4f46e515);    
 }
 
 .data-card.rentabilidad,
 .data-card.rentabilidad .card-main-value {    
-    color: #ca8a04;    
+    color: #d97706;    
 }
 
 .data-card.rentabilidad {        
-    border-color: #ca8a04;
-    background: linear-gradient(to right, #fef9c3 85%, #ca8a0415);    
+    border-color: #d97706;
+    background: linear-gradient(to right,  #fef3c7 85%, #d9770615);    
 }
 
 /* Divisores específicos */
-.data-card.margen .card-divider { background: #0d9488; }
-.data-card.liquidez .card-divider { background: #ea580c; }
-.data-card.endeudamiento .card-divider { background: #db2777; }
-.data-card.eficiencia .card-divider { background: #4338ca; }
-.data-card.rentabilidad .card-divider { background: #ca8a04; }
+.data-card.margen .card-divider { background: #059669; }
+.data-card.liquidez .card-divider { background: #d97706; }
+.data-card.endeudamiento .card-divider { background: #dc2626; }
+.data-card.eficiencia .card-divider { background: #4f46e5; }
+.data-card.rentabilidad .card-divider { background: #d97706; }
 
 
 

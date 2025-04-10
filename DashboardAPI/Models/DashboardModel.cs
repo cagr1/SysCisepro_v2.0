@@ -53,6 +53,11 @@ namespace DashboardAPI.Models
         public decimal TotalEarnings { get; set; }
     }
 
+    public class LiquidityRatio
+    {
+        public decimal LiquidityLevel { get; set; }
+    }
+
    
 
 

@@ -201,6 +201,23 @@ namespace DashboardAPI.Services
             };
         }
 
+        public async Task<LiquidityRatio> GetLiquidityRatioAsync(DateTime startDate, DateTime endDate)
+        {
+            var paramaters = new SqlParameter[]
+            {
+                new SqlParameter("@FECHA_INICIAL", startDate ),
+                new SqlParameter("@FECHA_FINAL", endDate )
+            };
+
+            DataTable resultTable = await _databaseConnection.ExecuteStoredProcedure("sp_liquidityLevel", paramaters);
+
+            return new LiquidityRatio
+            {
+                LiquidityLevel = resultTable.Rows.Count > 0 ? Convert.ToDecimal(resultTable.Rows[0]["Liquidez"]) : 0
+            };
+        }
+
+
 
     }
 }
