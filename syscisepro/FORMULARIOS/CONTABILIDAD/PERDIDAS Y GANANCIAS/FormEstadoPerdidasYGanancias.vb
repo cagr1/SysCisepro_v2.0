@@ -5,7 +5,7 @@ Imports syscisepro.DATOS
 Imports Krypton.Toolkit
 Imports ClosedXML.Excel
 Imports System.IO
-Imports ComponentFactory.Krypton.Toolkit
+'Imports ComponentFactory.Krypton.Toolkit
 'Imports DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
 
 
@@ -1781,5 +1781,65 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             End Try
         End Sub
 
+        Private Sub btnCargarPresupuesto_Click(sender As Object, e As EventArgs) Handles btnCargarPresupuesto.Click
+            Try
+
+
+                dgvPresupuesto.DataSource = Nothing
+
+                '1. Leer Archivo Excel con ClosedXML
+                Dim openFileDialog As New OpenFileDialog()
+                openFileDialog.Filter = "Archivos de Excel (*.xlsx)|*.xlsx"
+
+                If openFileDialog.ShowDialog() = DialogResult.OK Then
+                    Using workbook As New XLWorkbook(openFileDialog.FileName)
+                        Dim worksheet As IXLWorksheet = workbook.Worksheet(1)
+                        Dim excelData = worksheet.RangeUsed().AsTable
+
+                        Dim dtCuentasValidas As DataTable = _objEstado.SeleccionarCuentasPerdidasGanancias(_tipoCon)
+
+                        Dim errores As New List(Of String)
+
+                        For Each row In excelData.Rows()
+                            Dim codigoExcel As String = row.Cell("codigo").Value.ToString().Trim()
+                            Dim cuentaExcel As String = row.Cell("cuenta").Value.ToString().Trim()
+
+                            Dim rowsDB = dtCuentasValidas.Select($"Codigo = '{codigoExcel}'")
+
+                            If rowsDB.Length = 0 Then
+                                errores.Add($"Código no existe: {codigoExcel} - Fila {row.RowNumber()}")
+                            Else
+                                Dim cuentaBD As String = rowsDB(0)("cuenta").ToString().Trim()
+                                If cuentaBD <> cuentaExcel Then
+                                    errores.Add($"Cuenta no coincide: {codigoExcel} (Excel: {cuentaExcel} | BD: {cuentaBD})")
+                                End If
+                            End If
+                        Next
+
+                        If errores.Count > 0 Then
+
+                            KryptonMessageBox.Show($"Errores de validación: {vbCrLf}{String.Join(vbCrLf, errores)}", "Validación Fallida", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+
+                            Exit Sub
+                        End If
+                    End Using
+                End If
+
+                Dim FechaDesde = New Date(dtpFechaDesdePresupuesto.Value.Year, dtpFechaDesdePresupuesto.Value.Month, dtpFechaDesdePresupuesto.Value.Day, 0, 0, 0)
+                Dim FechaHasta = New Date(dtpFechaHastaPresupuesto.Value.Year, dtpFechaHastaPresupuesto.Value.Month, dtpFechaHastaPresupuesto.Value.Day, 23, 59, 59)
+
+                Dim dtEstadoPyGSimple = _objEstado.SeleccionarEstadoPerdidasGananciasSimple(_tipoCon, FechaDesde, FechaHasta)
+
+
+
+
+
+
+
+
+            Catch ex As Exception
+                KryptonMessageBox.Show("ERROR: " & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
+        End Sub
     End Class
 End Namespace

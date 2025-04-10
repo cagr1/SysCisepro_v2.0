@@ -131,5 +131,25 @@ Namespace CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         End Function
 
 
+        Public Function SeleccionarCuentasPerdidasGanancias(ByVal tipoCon As TipoConexion) As DataTable
+
+            Dim tabla = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "sp_SeleccionarEstadoPyGExcel", True)
+            Return tabla
+        End Function
+
+        Public Function SeleccionarEstadoPerdidasGananciasSimple(ByVal tipoCon As TipoConexion, ByVal FechaInicial As DateTime, ByVal FechaFinal As DateTime) As DataTable
+            Dim pars = New List(Of Object())
+
+
+
+            pars.Add(New Object() {"@FechaInicio", SqlDbType.DateTime, FechaInicial})
+            pars.Add(New Object() {"@FechaFin", SqlDbType.DateTime, FechaFinal})
+
+            Dim tabla = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_SeleccionarEstadoPyGSimple", True, pars)
+
+            Return tabla
+        End Function
+
+
     End Class
 End Namespace
