@@ -4092,13 +4092,13 @@ namespace SysCisepro3.TalentoHumano
                             copia.Cells[71].Value = 0;// XIII FON EXT
                         }
                         //cambio 
-                        copia.Cells[65].Value = dataper.Rows[0][73].ToString(); // extra
+                        copia.Cells[65].Value = dataper.Rows[0][74].ToString(); // extra
 
-                        copia.Cells[66].Value = dataper.Rows[0][69].ToString().Equals("1"); // FON RES
-                        copia.Cells[67].Value = dataper.Rows[0][70].ToString().Equals("1"); // XIII
-                        copia.Cells[68].Value = dataper.Rows[0][71].ToString().Equals("1"); // XIV
-                        copia.Cells[69].Value = dataper.Rows[0][74].ToString().Equals("1"); // ACU FRE
-                        copia.Cells[70].Value = dataper.Rows[0][75].ToString().Equals("1"); // DESC SEG
+                        copia.Cells[66].Value = dataper.Rows[0][70].ToString().Equals("1"); // FON RES
+                        copia.Cells[67].Value = dataper.Rows[0][71].ToString().Equals("1"); // XIII
+                        copia.Cells[68].Value = dataper.Rows[0][72].ToString().Equals("1"); // XIV
+                        copia.Cells[69].Value = dataper.Rows[0][75].ToString().Equals("1"); // ACU FRE
+                        copia.Cells[70].Value = dataper.Rows[0][76].ToString().Equals("1"); // DESC SEG
 
                         copia.Cells[72].Value = dataper.Rows[0][86].ToString(); // ID BANCO
                         copia.Cells[73].Value = dataper.Rows[0][91].ToString(); // BANCO
@@ -4111,7 +4111,7 @@ namespace SysCisepro3.TalentoHumano
 
                         copia.Cells[77].Value = 0;
 
-                        copia.Cells[78].Value = dataper.Rows[0][77].ToString().Equals("1"); // EXT SAL
+                        copia.Cells[78].Value = dataper.Rows[0][78].ToString().Equals("1"); // EXT SAL
 
                         dgvDetallesRol.Rows.Insert(idr, copia);
                         dgvDetallesRol.AutoResizeRows();

@@ -1787,6 +1787,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
                 dgvPresupuesto.DataSource = Nothing
 
+                Dim dtPresupuesto As New DataTable()
                 '1. Leer Archivo Excel con ClosedXML
                 Dim openFileDialog As New OpenFileDialog()
                 openFileDialog.Filter = "Archivos de Excel (*.xlsx)|*.xlsx"
@@ -1794,22 +1795,57 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 If openFileDialog.ShowDialog() = DialogResult.OK Then
                     Using workbook As New XLWorkbook(openFileDialog.FileName)
                         Dim worksheet As IXLWorksheet = workbook.Worksheet(1)
-                        Dim excelData = worksheet.RangeUsed().AsTable
+                        Dim rangeUsed = worksheet.RangeUsed()
 
+                        'Crear DataTable manualmente
+                        Dim firstRow As IXLRangeRow = rangeUsed.FirstRow()
+
+                        For Each cell As IXLCell In firstRow.Cells()
+                            Dim columnName As String
+
+                            'Verificar si la celda está vacía usando el método propio de ClosedXML
+                            If Not cell.IsEmpty Then
+                                columnName = cell.Value.ToString().Trim()
+                            Else
+                                columnName = $"Columna{cell.Address.ColumnNumber}"
+                            End If
+
+                            'Validar nombre de columna vacío
+                            If String.IsNullOrWhiteSpace(columnName) Then
+                                columnName = $"Columna{cell.Address.ColumnNumber}"
+                            End If
+
+                            dtPresupuesto.Columns.Add(columnName)
+                        Next
+
+
+                        'leer datos excluyendo la fila de encabezados
+                        For Each row As IXLRangeRow In rangeUsed.Rows().Skip(1)
+                            Dim newRow = dtPresupuesto.NewRow()
+                            For i As Integer = 0 To dtPresupuesto.Columns.Count - 1
+                                newRow(i) = row.Cell(i + 1).Value.ToString().Trim()
+                            Next
+                            dtPresupuesto.Rows.Add(newRow)
+                        Next
+
+
+
+
+                        'Validar Cuentas
                         Dim dtCuentasValidas As DataTable = _objEstado.SeleccionarCuentasPerdidasGanancias(_tipoCon)
 
                         Dim errores As New List(Of String)
 
-                        For Each row In excelData.Rows()
-                            Dim codigoExcel As String = row.Cell("codigo").Value.ToString().Trim()
-                            Dim cuentaExcel As String = row.Cell("cuenta").Value.ToString().Trim()
+                        For Each row As DataRow In dtPresupuesto.Rows
+                            Dim codigoExcel As String = row("Codigo").ToString().Trim()
+                            Dim cuentaExcel As String = row("Cuenta").ToString().Trim()
 
                             Dim rowsDB = dtCuentasValidas.Select($"Codigo = '{codigoExcel}'")
 
                             If rowsDB.Length = 0 Then
-                                errores.Add($"Código no existe: {codigoExcel} - Fila {row.RowNumber()}")
+                                errores.Add($"Código no existe: {codigoExcel} - Fila {dtPresupuesto.Rows.IndexOf(row) + 1}")
                             Else
-                                Dim cuentaBD As String = rowsDB(0)("cuenta").ToString().Trim()
+                                Dim cuentaBD As String = rowsDB(0)("Cuenta").ToString().Trim()
                                 If cuentaBD <> cuentaExcel Then
                                     errores.Add($"Cuenta no coincide: {codigoExcel} (Excel: {cuentaExcel} | BD: {cuentaBD})")
                                 End If
@@ -1823,23 +1859,107 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                             Exit Sub
                         End If
                     End Using
+                Else
+                    Return
                 End If
 
                 Dim FechaDesde = New Date(dtpFechaDesdePresupuesto.Value.Year, dtpFechaDesdePresupuesto.Value.Month, dtpFechaDesdePresupuesto.Value.Day, 0, 0, 0)
                 Dim FechaHasta = New Date(dtpFechaHastaPresupuesto.Value.Year, dtpFechaHastaPresupuesto.Value.Month, dtpFechaHastaPresupuesto.Value.Day, 23, 59, 59)
 
-                Dim dtEstadoPyGSimple = _objEstado.SeleccionarEstadoPerdidasGananciasSimple(_tipoCon, FechaDesde, FechaHasta)
+                Dim dtReal = _objEstado.SeleccionarEstadoPerdidasGananciasSimple(_tipoCon, FechaDesde, FechaHasta)
 
 
 
+                'Obtener meses de dtPresupuesto
+                Dim mesesPresupuesto = dtPresupuesto.Columns.Cast(Of DataColumn)().
+                Where(Function(c) c.ColumnName <> "Codigo" AndAlso c.ColumnName <> "Cuenta").
+                Select(Function(c) c.ColumnName)
+
+                Dim mesesReal = dtReal.Columns.Cast(Of DataColumn)().
+                Where(Function(c) c.ColumnName <> "Codigo" AndAlso c.ColumnName <> "Cuenta").
+                Select(Function(c) c.ColumnName)
+
+                Dim meses = mesesPresupuesto.Union(mesesReal).Distinct().ToList()
+
+                'Crear estructura de la tabla combinada
+
+                Dim dtCombinado As New DataTable()
+
+                dtCombinado.Columns.Add("Codigo", GetType(String))
+                dtCombinado.Columns.Add("Cuenta", GetType(String))
 
 
+                'Agregar columans para cada mes
+                For Each mes In meses
+                    dtCombinado.Columns.Add($"{mes} Real", GetType(Decimal))
+                    dtCombinado.Columns.Add($"{mes} Presupuesto", GetType(Decimal))
+                    dtCombinado.Columns.Add($"{mes} Diferencia", GetType(Decimal))
+                    dtCombinado.Columns.Add($"{mes} % Presupeusto", GetType(Decimal))
+                Next
 
+                'combianr datos
+
+                For Each rowReal As DataRow In dtReal.Rows
+                    Dim codigo = rowReal("Codigo").ToString()
+                    Dim cuenta = rowReal("Cuenta").ToString()
+
+                    Dim newRow = dtCombinado.NewRow()
+
+                    newRow("Codigo") = codigo
+                    newRow("Cuenta") = cuenta
+
+                    'Buscar correspondiente presupeusto
+                    Dim rowPresupuesto = dtPresupuesto.Select($"Codigo = '{codigo}'").FirstOrDefault()
+
+                    For Each mes In meses
+
+                        Dim valReal As Decimal
+                        If dtReal.Columns.Contains(mes) Then
+                            valReal = If(rowReal.IsNull(mes), 0D, CDec(rowReal(mes)))
+                        End If
+
+                        Dim ValPresupuesto As Decimal
+                        If rowPresupuesto IsNot Nothing AndAlso dtPresupuesto.Columns.Contains(mes) Then
+                            ValPresupuesto = If(rowPresupuesto.IsNull(mes), 0D, CDec(rowPresupuesto(mes)))
+                        End If
+
+
+                        Dim diferencia = valReal - ValPresupuesto
+                        Dim porcentaje = If(ValPresupuesto <> 0, (valReal / ValPresupuesto) * 100, 0)
+
+                        newRow($"{mes} Real") = valReal
+                        newRow($"{mes} Presupuesto") = ValPresupuesto
+                        newRow($"{mes} Diferencia") = diferencia
+                        newRow($"{mes} % Presupeusto") = Math.Round(porcentaje, 2)
+                    Next
+
+                    dtCombinado.Rows.Add(newRow)
+                    FormatearDataGridView()
+                Next
+
+                dgvPresupuesto.DataSource = dtCombinado
 
 
             Catch ex As Exception
                 KryptonMessageBox.Show("ERROR: " & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
+
+
+        Private Sub FormatearDataGridView()
+            For Each col As DataGridViewColumn In dgvPresupuesto.Columns
+                If col.Name.Contains("%") Then
+                    col.DefaultCellStyle.Format = "0.00%"
+                    col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+                ElseIf col.Name.Contains("Real") Or col.Name.Contains("Presupuestado") Or col.Name.Contains("Diferencia") Then
+                    col.DefaultCellStyle.Format = "N2"
+                    col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+                End If
+            Next
+        End Sub
+
+
+
+
     End Class
 End Namespace
