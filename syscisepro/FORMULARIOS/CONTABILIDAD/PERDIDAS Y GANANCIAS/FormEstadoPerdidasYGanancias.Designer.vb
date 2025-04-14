@@ -79,6 +79,15 @@
             Me.KryptonContextMenuItem3 = New ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem()
             Me.btnReporteNew = New ComponentFactory.Krypton.Toolkit.KryptonButton()
             Me.btnCargar = New ComponentFactory.Krypton.Toolkit.KryptonButton()
+            Me.KryptonPage3 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.dgvPresupuesto = New Krypton.Toolkit.KryptonDataGridView()
+            Me.KryptonGroupBox5 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.btnCargarPresupuesto = New ComponentFactory.Krypton.Toolkit.KryptonButton()
+            Me.btnExportarPresupuesto = New Krypton.Toolkit.KryptonButton()
+            Me.KryptonLabel12 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel13 = New Krypton.Toolkit.KryptonLabel()
+            Me.dtpFechaDesdePresupuesto = New Krypton.Toolkit.KryptonDateTimePicker()
+            Me.dtpFechaHastaPresupuesto = New Krypton.Toolkit.KryptonDateTimePicker()
             Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.btnCuztomize = New Krypton.Toolkit.KryptonButton()
             Me.dgvComparacion = New Krypton.Toolkit.KryptonDataGridView()
@@ -98,15 +107,7 @@
             Me.KryptonRibbonGroupTriple1 = New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple()
             Me.KryptonRibbonGroup1 = New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup()
             Me.KryptonContextMenuItems1 = New ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems()
-            Me.KryptonPage3 = New ComponentFactory.Krypton.Navigator.KryptonPage()
-            Me.KryptonGroupBox5 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonButton1 = New Krypton.Toolkit.KryptonButton()
-            Me.KryptonLabel12 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel13 = New Krypton.Toolkit.KryptonLabel()
-            Me.dtpFechaDesdePresupuesto = New Krypton.Toolkit.KryptonDateTimePicker()
-            Me.dtpFechaHastaPresupuesto = New Krypton.Toolkit.KryptonDateTimePicker()
-            Me.btnCargarPresupuesto = New ComponentFactory.Krypton.Toolkit.KryptonButton()
-            Me.dgvPresupuesto = New Krypton.Toolkit.KryptonDataGridView()
+            Me.nodoComPresupuesto = New System.Windows.Forms.DataGridViewTextBoxColumn()
             CType(Me.dgvEgresos, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvIngresos, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.ContextMenuStripClicDerecho.SuspendLayout()
@@ -127,6 +128,13 @@
             Me.KryptonNavigator1.SuspendLayout()
             CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonPage1.SuspendLayout()
+            CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonPage3.SuspendLayout()
+            CType(Me.dgvPresupuesto, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox5.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox5.Panel.SuspendLayout()
+            Me.KryptonGroupBox5.SuspendLayout()
             CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonPage2.SuspendLayout()
             CType(Me.dgvComparacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -136,13 +144,6 @@
             Me.KryptonGroupBox4.SuspendLayout()
             CType(Me.cbxDates, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.cbxShowColumns, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.KryptonPage3.SuspendLayout()
-            CType(Me.KryptonGroupBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.KryptonGroupBox5.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.KryptonGroupBox5.Panel.SuspendLayout()
-            Me.KryptonGroupBox5.SuspendLayout()
-            CType(Me.dgvPresupuesto, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'txtTotal
@@ -645,6 +646,130 @@
             Me.btnCargar.Values.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnCargar.Values.Text = "Cargar"
             '
+            'KryptonPage3
+            '
+            Me.KryptonPage3.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage3.Controls.Add(Me.dgvPresupuesto)
+            Me.KryptonPage3.Controls.Add(Me.KryptonGroupBox5)
+            Me.KryptonPage3.Flags = 65534
+            Me.KryptonPage3.LastVisibleSet = True
+            Me.KryptonPage3.MinimumSize = New System.Drawing.Size(50, 50)
+            Me.KryptonPage3.Name = "KryptonPage3"
+            Me.KryptonPage3.Size = New System.Drawing.Size(817, 641)
+            Me.KryptonPage3.Text = "Presupuesto"
+            Me.KryptonPage3.ToolTipTitle = "Page ToolTip"
+            Me.KryptonPage3.UniqueName = "BF4127518BD649E68E974F94B79053EE"
+            '
+            'dgvPresupuesto
+            '
+            Me.dgvPresupuesto.AllowUserToAddRows = False
+            Me.dgvPresupuesto.AllowUserToDeleteRows = False
+            Me.dgvPresupuesto.AllowUserToOrderColumns = True
+            Me.dgvPresupuesto.BorderStyle = System.Windows.Forms.BorderStyle.None
+            Me.dgvPresupuesto.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nodoComPresupuesto})
+            Me.dgvPresupuesto.GridStyles.Style = Krypton.Toolkit.DataGridViewStyle.Sheet
+            Me.dgvPresupuesto.GridStyles.StyleBackground = Krypton.Toolkit.PaletteBackStyle.GridBackgroundSheet
+            Me.dgvPresupuesto.GridStyles.StyleColumn = Krypton.Toolkit.GridStyle.Sheet
+            Me.dgvPresupuesto.GridStyles.StyleDataCells = Krypton.Toolkit.GridStyle.Sheet
+            Me.dgvPresupuesto.GridStyles.StyleRow = Krypton.Toolkit.GridStyle.Sheet
+            Me.dgvPresupuesto.Location = New System.Drawing.Point(9, 86)
+            Me.dgvPresupuesto.Name = "dgvPresupuesto"
+            Me.dgvPresupuesto.RowHeadersVisible = False
+            Me.dgvPresupuesto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+            Me.dgvPresupuesto.Size = New System.Drawing.Size(795, 544)
+            Me.dgvPresupuesto.StateNormal.Background.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvPresupuesto.TabIndex = 253
+            '
+            'KryptonGroupBox5
+            '
+            Me.KryptonGroupBox5.CaptionOverlap = 0R
+            Me.KryptonGroupBox5.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox5.Location = New System.Drawing.Point(7, 13)
+            Me.KryptonGroupBox5.Name = "KryptonGroupBox5"
+            '
+            'KryptonGroupBox5.Panel
+            '
+            Me.KryptonGroupBox5.Panel.Controls.Add(Me.btnCargarPresupuesto)
+            Me.KryptonGroupBox5.Panel.Controls.Add(Me.btnExportarPresupuesto)
+            Me.KryptonGroupBox5.Panel.Controls.Add(Me.KryptonLabel12)
+            Me.KryptonGroupBox5.Panel.Controls.Add(Me.KryptonLabel13)
+            Me.KryptonGroupBox5.Panel.Controls.Add(Me.dtpFechaDesdePresupuesto)
+            Me.KryptonGroupBox5.Panel.Controls.Add(Me.dtpFechaHastaPresupuesto)
+            Me.KryptonGroupBox5.Size = New System.Drawing.Size(799, 69)
+            Me.KryptonGroupBox5.TabIndex = 231
+            Me.KryptonGroupBox5.Values.Heading = "Busqueda"
+            Me.KryptonGroupBox5.Values.Image = Global.syscisepro.My.Resources.Resources.calendar_month_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            '
+            'btnCargarPresupuesto
+            '
+            Me.btnCargarPresupuesto.AutoSize = True
+            Me.btnCargarPresupuesto.Location = New System.Drawing.Point(7, 1)
+            Me.btnCargarPresupuesto.Name = "btnCargarPresupuesto"
+            Me.btnCargarPresupuesto.Size = New System.Drawing.Size(88, 30)
+            Me.btnCargarPresupuesto.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft
+            Me.btnCargarPresupuesto.TabIndex = 295
+            Me.btnCargarPresupuesto.Values.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnCargarPresupuesto.Values.Text = "Cargar"
+            '
+            'btnExportarPresupuesto
+            '
+            Me.btnExportarPresupuesto.Location = New System.Drawing.Point(680, 5)
+            Me.btnExportarPresupuesto.Name = "btnExportarPresupuesto"
+            Me.btnExportarPresupuesto.Size = New System.Drawing.Size(30, 30)
+            Me.btnExportarPresupuesto.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.[False]
+            Me.btnExportarPresupuesto.StateCommon.Border.Draw = Krypton.Toolkit.InheritBool.[False]
+            Me.btnExportarPresupuesto.StateCommon.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnExportarPresupuesto.TabIndex = 234
+            Me.btnExportarPresupuesto.Values.ImageStates.ImageCheckedNormal = Nothing
+            Me.btnExportarPresupuesto.Values.ImageStates.ImageCheckedPressed = Nothing
+            Me.btnExportarPresupuesto.Values.ImageStates.ImageCheckedTracking = Nothing
+            Me.btnExportarPresupuesto.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarPresupuesto.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarPresupuesto.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarPresupuesto.Values.Text = ""
+            '
+            'KryptonLabel12
+            '
+            Me.KryptonLabel12.Location = New System.Drawing.Point(256, 8)
+            Me.KryptonLabel12.Name = "KryptonLabel12"
+            Me.KryptonLabel12.Size = New System.Drawing.Size(41, 20)
+            Me.KryptonLabel12.TabIndex = 231
+            Me.KryptonLabel12.Values.Text = "Hasta"
+            '
+            'KryptonLabel13
+            '
+            Me.KryptonLabel13.Location = New System.Drawing.Point(111, 7)
+            Me.KryptonLabel13.Name = "KryptonLabel13"
+            Me.KryptonLabel13.Size = New System.Drawing.Size(45, 20)
+            Me.KryptonLabel13.TabIndex = 230
+            Me.KryptonLabel13.Values.Text = "Desde"
+            '
+            'dtpFechaDesdePresupuesto
+            '
+            Me.dtpFechaDesdePresupuesto.AlwaysActive = False
+            Me.dtpFechaDesdePresupuesto.CalendarTodayDate = New Date(2025, 2, 4, 0, 0, 0, 0)
+            Me.dtpFechaDesdePresupuesto.CustomFormat = "MMMM - yyyy"
+            Me.dtpFechaDesdePresupuesto.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaDesdePresupuesto.InputControlStyle = Krypton.Toolkit.InputControlStyle.Ribbon
+            Me.dtpFechaDesdePresupuesto.Location = New System.Drawing.Point(162, 5)
+            Me.dtpFechaDesdePresupuesto.Name = "dtpFechaDesdePresupuesto"
+            Me.dtpFechaDesdePresupuesto.Size = New System.Drawing.Size(85, 21)
+            Me.dtpFechaDesdePresupuesto.TabIndex = 228
+            '
+            'dtpFechaHastaPresupuesto
+            '
+            Me.dtpFechaHastaPresupuesto.AlwaysActive = False
+            Me.dtpFechaHastaPresupuesto.CalendarTodayDate = New Date(2025, 2, 4, 0, 0, 0, 0)
+            Me.dtpFechaHastaPresupuesto.CustomFormat = "MMMM - yyyy"
+            Me.dtpFechaHastaPresupuesto.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaHastaPresupuesto.InputControlStyle = Krypton.Toolkit.InputControlStyle.Ribbon
+            Me.dtpFechaHastaPresupuesto.Location = New System.Drawing.Point(303, 4)
+            Me.dtpFechaHastaPresupuesto.Name = "dtpFechaHastaPresupuesto"
+            Me.dtpFechaHastaPresupuesto.Size = New System.Drawing.Size(86, 21)
+            Me.dtpFechaHastaPresupuesto.TabIndex = 229
+            '
             'KryptonPage2
             '
             Me.KryptonPage2.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
@@ -834,128 +959,11 @@
             '
             Me.KryptonRibbonGroup1.Items.AddRange(New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer() {Me.KryptonRibbonGroupTriple1})
             '
-            'KryptonPage3
+            'nodoComPresupuesto
             '
-            Me.KryptonPage3.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
-            Me.KryptonPage3.Controls.Add(Me.dgvPresupuesto)
-            Me.KryptonPage3.Controls.Add(Me.KryptonGroupBox5)
-            Me.KryptonPage3.Flags = 65534
-            Me.KryptonPage3.LastVisibleSet = True
-            Me.KryptonPage3.MinimumSize = New System.Drawing.Size(50, 50)
-            Me.KryptonPage3.Name = "KryptonPage3"
-            Me.KryptonPage3.Size = New System.Drawing.Size(817, 641)
-            Me.KryptonPage3.Text = "Presupuesto"
-            Me.KryptonPage3.ToolTipTitle = "Page ToolTip"
-            Me.KryptonPage3.UniqueName = "BF4127518BD649E68E974F94B79053EE"
-            '
-            'KryptonGroupBox5
-            '
-            Me.KryptonGroupBox5.CaptionOverlap = 0R
-            Me.KryptonGroupBox5.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox5.Location = New System.Drawing.Point(7, 13)
-            Me.KryptonGroupBox5.Name = "KryptonGroupBox5"
-            '
-            'KryptonGroupBox5.Panel
-            '
-            Me.KryptonGroupBox5.Panel.Controls.Add(Me.btnCargarPresupuesto)
-            Me.KryptonGroupBox5.Panel.Controls.Add(Me.KryptonButton1)
-            Me.KryptonGroupBox5.Panel.Controls.Add(Me.KryptonLabel12)
-            Me.KryptonGroupBox5.Panel.Controls.Add(Me.KryptonLabel13)
-            Me.KryptonGroupBox5.Panel.Controls.Add(Me.dtpFechaDesdePresupuesto)
-            Me.KryptonGroupBox5.Panel.Controls.Add(Me.dtpFechaHastaPresupuesto)
-            Me.KryptonGroupBox5.Size = New System.Drawing.Size(799, 69)
-            Me.KryptonGroupBox5.TabIndex = 231
-            Me.KryptonGroupBox5.Values.Heading = "Busqueda"
-            Me.KryptonGroupBox5.Values.Image = Global.syscisepro.My.Resources.Resources.calendar_month_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            '
-            'KryptonButton1
-            '
-            Me.KryptonButton1.Location = New System.Drawing.Point(680, 3)
-            Me.KryptonButton1.Name = "KryptonButton1"
-            Me.KryptonButton1.Size = New System.Drawing.Size(30, 30)
-            Me.KryptonButton1.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.[False]
-            Me.KryptonButton1.StateCommon.Border.Draw = Krypton.Toolkit.InheritBool.[False]
-            Me.KryptonButton1.StateCommon.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
-            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
-            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
-            Me.KryptonButton1.TabIndex = 234
-            Me.KryptonButton1.Values.ImageStates.ImageCheckedNormal = Nothing
-            Me.KryptonButton1.Values.ImageStates.ImageCheckedPressed = Nothing
-            Me.KryptonButton1.Values.ImageStates.ImageCheckedTracking = Nothing
-            Me.KryptonButton1.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.icons8_excel_48
-            Me.KryptonButton1.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.icons8_excel_48
-            Me.KryptonButton1.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.icons8_excel_48
-            Me.KryptonButton1.Values.Text = ""
-            '
-            'KryptonLabel12
-            '
-            Me.KryptonLabel12.Location = New System.Drawing.Point(256, 8)
-            Me.KryptonLabel12.Name = "KryptonLabel12"
-            Me.KryptonLabel12.Size = New System.Drawing.Size(41, 20)
-            Me.KryptonLabel12.TabIndex = 231
-            Me.KryptonLabel12.Values.Text = "Hasta"
-            '
-            'KryptonLabel13
-            '
-            Me.KryptonLabel13.Location = New System.Drawing.Point(111, 8)
-            Me.KryptonLabel13.Name = "KryptonLabel13"
-            Me.KryptonLabel13.Size = New System.Drawing.Size(45, 20)
-            Me.KryptonLabel13.TabIndex = 230
-            Me.KryptonLabel13.Values.Text = "Desde"
-            '
-            'dtpFechaDesdePresupuesto
-            '
-            Me.dtpFechaDesdePresupuesto.AlwaysActive = False
-            Me.dtpFechaDesdePresupuesto.CalendarTodayDate = New Date(2025, 2, 4, 0, 0, 0, 0)
-            Me.dtpFechaDesdePresupuesto.CustomFormat = "MMMM - yyyy"
-            Me.dtpFechaDesdePresupuesto.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaDesdePresupuesto.InputControlStyle = Krypton.Toolkit.InputControlStyle.Ribbon
-            Me.dtpFechaDesdePresupuesto.Location = New System.Drawing.Point(162, 8)
-            Me.dtpFechaDesdePresupuesto.Name = "dtpFechaDesdePresupuesto"
-            Me.dtpFechaDesdePresupuesto.Size = New System.Drawing.Size(85, 21)
-            Me.dtpFechaDesdePresupuesto.TabIndex = 228
-            '
-            'dtpFechaHastaPresupuesto
-            '
-            Me.dtpFechaHastaPresupuesto.AlwaysActive = False
-            Me.dtpFechaHastaPresupuesto.CalendarTodayDate = New Date(2025, 2, 4, 0, 0, 0, 0)
-            Me.dtpFechaHastaPresupuesto.CustomFormat = "MMMM - yyyy"
-            Me.dtpFechaHastaPresupuesto.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaHastaPresupuesto.InputControlStyle = Krypton.Toolkit.InputControlStyle.Ribbon
-            Me.dtpFechaHastaPresupuesto.Location = New System.Drawing.Point(303, 8)
-            Me.dtpFechaHastaPresupuesto.Name = "dtpFechaHastaPresupuesto"
-            Me.dtpFechaHastaPresupuesto.Size = New System.Drawing.Size(86, 21)
-            Me.dtpFechaHastaPresupuesto.TabIndex = 229
-            '
-            'btnCargarPresupuesto
-            '
-            Me.btnCargarPresupuesto.AutoSize = True
-            Me.btnCargarPresupuesto.Location = New System.Drawing.Point(10, 4)
-            Me.btnCargarPresupuesto.Name = "btnCargarPresupuesto"
-            Me.btnCargarPresupuesto.Size = New System.Drawing.Size(88, 30)
-            Me.btnCargarPresupuesto.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft
-            Me.btnCargarPresupuesto.TabIndex = 295
-            Me.btnCargarPresupuesto.Values.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnCargarPresupuesto.Values.Text = "Cargar"
-            '
-            'dgvPresupuesto
-            '
-            Me.dgvPresupuesto.AllowUserToAddRows = False
-            Me.dgvPresupuesto.AllowUserToDeleteRows = False
-            Me.dgvPresupuesto.AllowUserToOrderColumns = True
-            Me.dgvPresupuesto.BorderStyle = System.Windows.Forms.BorderStyle.None
-            Me.dgvPresupuesto.GridStyles.Style = Krypton.Toolkit.DataGridViewStyle.Sheet
-            Me.dgvPresupuesto.GridStyles.StyleBackground = Krypton.Toolkit.PaletteBackStyle.GridBackgroundSheet
-            Me.dgvPresupuesto.GridStyles.StyleColumn = Krypton.Toolkit.GridStyle.Sheet
-            Me.dgvPresupuesto.GridStyles.StyleDataCells = Krypton.Toolkit.GridStyle.Sheet
-            Me.dgvPresupuesto.GridStyles.StyleRow = Krypton.Toolkit.GridStyle.Sheet
-            Me.dgvPresupuesto.Location = New System.Drawing.Point(9, 86)
-            Me.dgvPresupuesto.Name = "dgvPresupuesto"
-            Me.dgvPresupuesto.RowHeadersVisible = False
-            Me.dgvPresupuesto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvPresupuesto.Size = New System.Drawing.Size(795, 544)
-            Me.dgvPresupuesto.StateNormal.Background.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.dgvPresupuesto.TabIndex = 253
+            Me.nodoComPresupuesto.HeaderText = "+"
+            Me.nodoComPresupuesto.Name = "nodoComPresupuesto"
+            Me.nodoComPresupuesto.Width = 25
             '
             'FormEstadoPerdidasYGanancias
             '
@@ -999,6 +1007,14 @@
             CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonPage1.ResumeLayout(False)
             Me.KryptonPage1.PerformLayout()
+            CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonPage3.ResumeLayout(False)
+            CType(Me.dgvPresupuesto, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.KryptonGroupBox5.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox5.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox5.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox5, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox5.ResumeLayout(False)
             CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonPage2.ResumeLayout(False)
             CType(Me.dgvComparacion, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1009,14 +1025,6 @@
             Me.KryptonGroupBox4.ResumeLayout(False)
             CType(Me.cbxDates, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.cbxShowColumns, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.KryptonPage3.ResumeLayout(False)
-            CType(Me.KryptonGroupBox5.Panel, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.KryptonGroupBox5.Panel.ResumeLayout(False)
-            Me.KryptonGroupBox5.Panel.PerformLayout()
-            CType(Me.KryptonGroupBox5, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.KryptonGroupBox5.ResumeLayout(False)
-            CType(Me.dgvPresupuesto, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
 
         End Sub
@@ -1085,12 +1093,13 @@
         Friend WithEvents chkOcultar As ComponentFactory.Krypton.Toolkit.KryptonCheckBox
         Friend WithEvents KryptonPage3 As ComponentFactory.Krypton.Navigator.KryptonPage
         Friend WithEvents KryptonGroupBox5 As Krypton.Toolkit.KryptonGroupBox
-        Friend WithEvents KryptonButton1 As Krypton.Toolkit.KryptonButton
+        Friend WithEvents btnExportarPresupuesto As Krypton.Toolkit.KryptonButton
         Friend WithEvents KryptonLabel12 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel13 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents dtpFechaDesdePresupuesto As Krypton.Toolkit.KryptonDateTimePicker
         Friend WithEvents dtpFechaHastaPresupuesto As Krypton.Toolkit.KryptonDateTimePicker
         Friend WithEvents btnCargarPresupuesto As ComponentFactory.Krypton.Toolkit.KryptonButton
         Friend WithEvents dgvPresupuesto As Krypton.Toolkit.KryptonDataGridView
+        Friend WithEvents nodoComPresupuesto As DataGridViewTextBoxColumn
     End Class
 End Namespace

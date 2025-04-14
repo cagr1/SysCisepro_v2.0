@@ -5,6 +5,8 @@ Imports syscisepro.DATOS
 Imports Krypton.Toolkit
 Imports ClosedXML.Excel
 Imports System.IO
+Imports System.Globalization
+Imports Org.BouncyCastle.Asn1
 'Imports ComponentFactory.Krypton.Toolkit
 'Imports DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
 
@@ -417,32 +419,26 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                     End If
 
                     If omitirFila Then Continue For
-
-
                     colIndex = 1
-                        For Each cell As DataGridViewCell In row.Cells
-                            If dgv.Columns(cell.ColumnIndex).Visible Then
-                                Dim valor As Object = cell.Value
-                                Dim cellExcel = worksheet.Cell(startRow, colIndex)
-                                Dim colName = dgv.Columns(cell.ColumnIndex).HeaderText
+                    For Each cell As DataGridViewCell In row.Cells
+                        If dgv.Columns(cell.ColumnIndex).Visible Then
+                            Dim valor As Object = cell.Value
+                            Dim cellExcel = worksheet.Cell(startRow, colIndex)
+                            Dim colName = dgv.Columns(cell.ColumnIndex).HeaderText
 
-                                If columnasContables.Contains(colName) AndAlso IsNumeric(valor) Then
-                                    cellExcel.Value = Convert.ToDouble(valor)
-                                    cellExcel.Style.NumberFormat.Format = "#,##0.00"
-                                ElseIf IsNumeric(valor) Then
-                                    cellExcel.Value = Convert.ToDouble(valor)
-                                Else
-                                    cellExcel.Value = If(valor IsNot Nothing, valor.ToString(), "")
-                                End If
-
-
-
-
-                                colIndex += 1
+                            If columnasContables.Contains(colName) AndAlso IsNumeric(valor) Then
+                                cellExcel.Value = Convert.ToDouble(valor)
+                                cellExcel.Style.NumberFormat.Format = "#,##0.00"
+                            ElseIf IsNumeric(valor) Then
+                                cellExcel.Value = Convert.ToDouble(valor)
+                            Else
+                                cellExcel.Value = If(valor IsNot Nothing, valor.ToString(), "")
                             End If
-                        Next
-                        startRow += 1
-                    End If
+                            colIndex += 1
+                        End If
+                    Next
+                    startRow += 1
+                End If
             Next
 
             ' Totales
@@ -1648,7 +1644,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
         Private Sub ExportarDatosCompracion(ByVal dgvComparacion As DataGridView, ByVal titulo As String)
             Try
-                If dgvComparacion.Rows.Count = 0 Then
+                If dgvComparacion.Rows.Count = 0 Or dgvPresupuesto.Rows.Count = 0 Then
                     Krypton.Toolkit.KryptonMessageBox.Show("Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
@@ -1783,7 +1779,10 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
         Private Sub btnCargarPresupuesto_Click(sender As Object, e As EventArgs) Handles btnCargarPresupuesto.Click
             Try
-
+                If dtpFechaDesdePresupuesto.Value = dtpFechaHastaPresupuesto.Value Then
+                    KryptonMessageBox.Show("Realize primero la busqueda del rango de fechas", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    Return
+                End If
 
                 dgvPresupuesto.DataSource = Nothing
 
@@ -1802,14 +1801,12 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
                         For Each cell As IXLCell In firstRow.Cells()
                             Dim columnName As String
-
                             'Verificar si la celda está vacía usando el método propio de ClosedXML
                             If Not cell.IsEmpty Then
                                 columnName = cell.Value.ToString().Trim()
                             Else
                                 columnName = $"Columna{cell.Address.ColumnNumber}"
                             End If
-
                             'Validar nombre de columna vacío
                             If String.IsNullOrWhiteSpace(columnName) Then
                                 columnName = $"Columna{cell.Address.ColumnNumber}"
@@ -1817,8 +1814,6 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
                             dtPresupuesto.Columns.Add(columnName)
                         Next
-
-
                         'leer datos excluyendo la fila de encabezados
                         For Each row As IXLRangeRow In rangeUsed.Rows().Skip(1)
                             Dim newRow = dtPresupuesto.NewRow()
@@ -1828,24 +1823,20 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                             dtPresupuesto.Rows.Add(newRow)
                         Next
 
-
-
-
                         'Validar Cuentas
                         Dim dtCuentasValidas As DataTable = _objEstado.SeleccionarCuentasPerdidasGanancias(_tipoCon)
-
                         Dim errores As New List(Of String)
 
                         For Each row As DataRow In dtPresupuesto.Rows
                             Dim codigoExcel As String = row("Codigo").ToString().Trim()
                             Dim cuentaExcel As String = row("Cuenta").ToString().Trim()
 
-                            Dim rowsDB = dtCuentasValidas.Select($"Codigo = '{codigoExcel}'")
+                            Dim rowsDB = dtCuentasValidas.Select($"CODIGO = '{codigoExcel}'")
 
                             If rowsDB.Length = 0 Then
                                 errores.Add($"Código no existe: {codigoExcel} - Fila {dtPresupuesto.Rows.IndexOf(row) + 1}")
                             Else
-                                Dim cuentaBD As String = rowsDB(0)("Cuenta").ToString().Trim()
+                                Dim cuentaBD As String = rowsDB(0)("CUENTA").ToString().Trim()
                                 If cuentaBD <> cuentaExcel Then
                                     errores.Add($"Cuenta no coincide: {codigoExcel} (Excel: {cuentaExcel} | BD: {cuentaBD})")
                                 End If
@@ -1853,9 +1844,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                         Next
 
                         If errores.Count > 0 Then
-
                             KryptonMessageBox.Show($"Errores de validación: {vbCrLf}{String.Join(vbCrLf, errores)}", "Validación Fallida", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
-
                             Exit Sub
                         End If
                     End Using
@@ -1868,18 +1857,10 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
                 Dim dtReal = _objEstado.SeleccionarEstadoPerdidasGananciasSimple(_tipoCon, FechaDesde, FechaHasta)
 
-
-
-                'Obtener meses de dtPresupuesto
-                Dim mesesPresupuesto = dtPresupuesto.Columns.Cast(Of DataColumn)().
-                Where(Function(c) c.ColumnName <> "Codigo" AndAlso c.ColumnName <> "Cuenta").
+                Dim mesesSP = dtReal.Columns.Cast(Of DataColumn)().
+                Where(Function(c) c.ColumnName <> "Codigo" AndAlso c.ColumnName <> "Cuenta" AndAlso c.ColumnName <> "Nivel" AndAlso c.ColumnName <> "Padre").
                 Select(Function(c) c.ColumnName)
 
-                Dim mesesReal = dtReal.Columns.Cast(Of DataColumn)().
-                Where(Function(c) c.ColumnName <> "Codigo" AndAlso c.ColumnName <> "Cuenta").
-                Select(Function(c) c.ColumnName)
-
-                Dim meses = mesesPresupuesto.Union(mesesReal).Distinct().ToList()
 
                 'Crear estructura de la tabla combinada
 
@@ -1890,12 +1871,14 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
 
                 'Agregar columans para cada mes
-                For Each mes In meses
+                For Each mes In mesesSP
                     dtCombinado.Columns.Add($"{mes} Real", GetType(Decimal))
                     dtCombinado.Columns.Add($"{mes} Presupuesto", GetType(Decimal))
-                    dtCombinado.Columns.Add($"{mes} Diferencia", GetType(Decimal))
-                    dtCombinado.Columns.Add($"{mes} % Presupeusto", GetType(Decimal))
+                    dtCombinado.Columns.Add($"{mes} Dif", GetType(Decimal))
+                    dtCombinado.Columns.Add($"{mes} % ", GetType(Decimal))
                 Next
+
+
 
                 'combianr datos
 
@@ -1911,30 +1894,65 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                     'Buscar correspondiente presupeusto
                     Dim rowPresupuesto = dtPresupuesto.Select($"Codigo = '{codigo}'").FirstOrDefault()
 
-                    For Each mes In meses
+                    For Each mes In mesesSP
 
-                        Dim valReal As Decimal
+                        Dim mesKey = mes.Split(" ")(0)
+                        Dim valreal As Decimal
                         If dtReal.Columns.Contains(mes) Then
-                            valReal = If(rowReal.IsNull(mes), 0D, CDec(rowReal(mes)))
+                            valreal = If(rowReal.IsNull(mes), 0D, CDec(rowReal(mes)))
                         End If
 
-                        Dim ValPresupuesto As Decimal
-                        If rowPresupuesto IsNot Nothing AndAlso dtPresupuesto.Columns.Contains(mes) Then
-                            ValPresupuesto = If(rowPresupuesto.IsNull(mes), 0D, CDec(rowPresupuesto(mes)))
+                        Dim valpresupuesto As Decimal
+                        If rowPresupuesto IsNot Nothing AndAlso dtPresupuesto.Columns.Contains(mesKey) Then
+
+                            valpresupuesto = If(rowPresupuesto.IsNull(mesKey), 0D, CDec(rowPresupuesto(mesKey)))
+                            '
                         End If
 
 
-                        Dim diferencia = valReal - ValPresupuesto
-                        Dim porcentaje = If(ValPresupuesto <> 0, (valReal / ValPresupuesto) * 100, 0)
 
-                        newRow($"{mes} Real") = valReal
-                        newRow($"{mes} Presupuesto") = ValPresupuesto
-                        newRow($"{mes} Diferencia") = diferencia
-                        newRow($"{mes} % Presupeusto") = Math.Round(porcentaje, 2)
+
+                        Dim diferencia = valreal - valpresupuesto
+                        Dim porcentaje = If(valpresupuesto <> 0, (valreal / valpresupuesto) * 100, 0)
+
+                        newRow($"{mes} Real") = valreal
+                        newRow($"{mes} Presupuesto") = valpresupuesto
+                        newRow($"{mes} Dif") = diferencia
+                        newRow($"{mes} % ") = Math.Round(porcentaje, 2)
+
+
+
+
                     Next
 
                     dtCombinado.Rows.Add(newRow)
-                    FormatearDataGridView()
+
+                    For level As Integer = 7 To 1 Step -1
+                        For Each parentRow As DataGridViewRow In dgvPresupuesto.Rows
+                            Dim parentCodigo As String = parentRow.Cells("Codigo").Value.ToString()
+                            Dim parentNivel As Integer = ObtenerNivel(parentCodigo)
+
+                            If parentNivel < level Then
+                                For Each childRow As DataGridViewRow In dgvPresupuesto.Rows
+                                    Dim childCodigo As String = childRow.Cells("Codigo").Value.ToString()
+                                    Dim childNivel As Integer = ObtenerNivel(childCodigo)
+                                    Dim childPadre As String = ObtenerPadre(childCodigo)
+
+                                    If childPadre = parentCodigo AndAlso childNivel = level Then
+                                        ' Sumar valores de columnas reales (ej: "Jan 2024 Real")
+                                        For Each col As DataGridViewColumn In dgvPresupuesto.Columns
+                                            If col.Name.Contains(" Real") Then
+                                                Dim parentVal = CDbl(parentRow.Cells(col.Name).Value)
+                                                Dim childVal = CDbl(childRow.Cells(col.Name).Value)
+                                                parentRow.Cells(col.Name).Value = parentVal + childVal
+                                            End If
+                                        Next
+                                    End If
+                                Next
+                            End If
+                        Next
+                    Next
+
                 Next
 
                 dgvPresupuesto.DataSource = dtCombinado
@@ -1945,21 +1963,28 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             End Try
         End Sub
 
+        ' Función para obtener el nivel basado en la longitud del código:
+        Private Function ObtenerNivel(codigo As String) As Integer
+            Return codigo.Length \ 4 ' Ej: 4010 (4 caracteres) -> Nivel 1, 401001 (6) -> Nivel 2
+        End Function
 
-        Private Sub FormatearDataGridView()
-            For Each col As DataGridViewColumn In dgvPresupuesto.Columns
-                If col.Name.Contains("%") Then
-                    col.DefaultCellStyle.Format = "0.00%"
-                    col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-                ElseIf col.Name.Contains("Real") Or col.Name.Contains("Presupuestado") Or col.Name.Contains("Diferencia") Then
-                    col.DefaultCellStyle.Format = "N2"
-                    col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-                End If
-            Next
+        ' Función para obtener el padre:
+        Private Function ObtenerPadre(codigo As String) As String
+            If codigo.Length <= 4 Then
+                Return Nothing ' Raíz
+            Else
+                Return codigo.Substring(0, codigo.Length - 2) ' Ej: 401001 -> 4010
+            End If
+        End Function
+
+
+
+        Private Sub dtpFechaDesdePresupuesto_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaDesdePresupuesto.ValueChanged
+
         End Sub
 
-
-
-
+        Private Sub btnExportarPresupuesto_Click(sender As Object, e As EventArgs) Handles btnExportarPresupuesto.Click
+            ExportarDatosCompracion(dgvComparacion, "EstadoPyG_Comparativo")
+        End Sub
     End Class
 End Namespace
