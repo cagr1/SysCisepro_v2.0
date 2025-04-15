@@ -107,7 +107,7 @@
             Me.KryptonRibbonGroupTriple1 = New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple()
             Me.KryptonRibbonGroup1 = New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup()
             Me.KryptonContextMenuItems1 = New ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems()
-            Me.nodoComPresupuesto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.nodoComPresupuesto = New Krypton.Toolkit.KryptonDataGridViewButtonColumn()
             CType(Me.dgvEgresos, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvIngresos, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.ContextMenuStripClicDerecho.SuspendLayout()
@@ -963,6 +963,8 @@
             '
             Me.nodoComPresupuesto.HeaderText = "+"
             Me.nodoComPresupuesto.Name = "nodoComPresupuesto"
+            Me.nodoComPresupuesto.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.nodoComPresupuesto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
             Me.nodoComPresupuesto.Width = 25
             '
             'FormEstadoPerdidasYGanancias
@@ -1100,6 +1102,6 @@
         Friend WithEvents dtpFechaHastaPresupuesto As Krypton.Toolkit.KryptonDateTimePicker
         Friend WithEvents btnCargarPresupuesto As ComponentFactory.Krypton.Toolkit.KryptonButton
         Friend WithEvents dgvPresupuesto As Krypton.Toolkit.KryptonDataGridView
-        Friend WithEvents nodoComPresupuesto As DataGridViewTextBoxColumn
+        Friend WithEvents nodoComPresupuesto As Krypton.Toolkit.KryptonDataGridViewButtonColumn
     End Class
 End Namespace
