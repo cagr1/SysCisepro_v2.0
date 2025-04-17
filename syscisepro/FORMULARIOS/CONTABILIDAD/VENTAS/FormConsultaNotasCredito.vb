@@ -309,7 +309,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             Dim totalFacturacion As Decimal
             Try
                 For i = 0 To dgvNotaCredito.RowCount - 1
-                    totalSubtotal += CDec(dgvNotaCredito.Rows(i).Cells(9).Value)
+                    totalSubtotal += CDec(dgvNotaCredito.Rows(i).Cells(7).Value)
                     totalIva += CDec(dgvNotaCredito.Rows(i).Cells(10).Value)
                     totalFacturacion += CDec(dgvNotaCredito.Rows(i).Cells(11).Value)
                 Next

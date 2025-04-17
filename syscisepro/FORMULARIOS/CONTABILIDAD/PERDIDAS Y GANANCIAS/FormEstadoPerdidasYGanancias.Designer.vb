@@ -81,6 +81,7 @@
             Me.btnCargar = New ComponentFactory.Krypton.Toolkit.KryptonButton()
             Me.KryptonPage3 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.dgvPresupuesto = New Krypton.Toolkit.KryptonDataGridView()
+            Me.nodoComPresupuesto = New Krypton.Toolkit.KryptonDataGridViewButtonColumn()
             Me.KryptonGroupBox5 = New Krypton.Toolkit.KryptonGroupBox()
             Me.btnCargarPresupuesto = New ComponentFactory.Krypton.Toolkit.KryptonButton()
             Me.btnExportarPresupuesto = New Krypton.Toolkit.KryptonButton()
@@ -107,7 +108,6 @@
             Me.KryptonRibbonGroupTriple1 = New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple()
             Me.KryptonRibbonGroup1 = New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup()
             Me.KryptonContextMenuItems1 = New ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems()
-            Me.nodoComPresupuesto = New Krypton.Toolkit.KryptonDataGridViewButtonColumn()
             CType(Me.dgvEgresos, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvIngresos, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.ContextMenuStripClicDerecho.SuspendLayout()
@@ -680,6 +680,14 @@
             Me.dgvPresupuesto.StateNormal.Background.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvPresupuesto.TabIndex = 253
             '
+            'nodoComPresupuesto
+            '
+            Me.nodoComPresupuesto.HeaderText = "+"
+            Me.nodoComPresupuesto.Name = "nodoComPresupuesto"
+            Me.nodoComPresupuesto.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.nodoComPresupuesto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+            Me.nodoComPresupuesto.Width = 25
+            '
             'KryptonGroupBox5
             '
             Me.KryptonGroupBox5.CaptionOverlap = 0R
@@ -958,14 +966,6 @@
             'KryptonRibbonGroup1
             '
             Me.KryptonRibbonGroup1.Items.AddRange(New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer() {Me.KryptonRibbonGroupTriple1})
-            '
-            'nodoComPresupuesto
-            '
-            Me.nodoComPresupuesto.HeaderText = "+"
-            Me.nodoComPresupuesto.Name = "nodoComPresupuesto"
-            Me.nodoComPresupuesto.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.nodoComPresupuesto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-            Me.nodoComPresupuesto.Width = 25
             '
             'FormEstadoPerdidasYGanancias
             '

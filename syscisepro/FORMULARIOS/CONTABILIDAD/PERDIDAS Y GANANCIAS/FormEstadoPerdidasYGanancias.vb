@@ -54,7 +54,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         Private Previo As Boolean
         Private CambioPrevio As Boolean
         Private PorcentajePrevio As Boolean
-
+        Dim _valoresOriginales As New Dictionary(Of String, Dictionary(Of String, Decimal))
 
         ReadOnly _objEstado As New ClassPerdidasYGanancia
 
@@ -1856,17 +1856,15 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
                 Dim FechaDesde = New Date(dtpFechaDesdePresupuesto.Value.Year, dtpFechaDesdePresupuesto.Value.Month, dtpFechaDesdePresupuesto.Value.Day, 0, 0, 0)
                 Dim FechaHasta = New Date(dtpFechaHastaPresupuesto.Value.Year, dtpFechaHastaPresupuesto.Value.Month, dtpFechaHastaPresupuesto.Value.Day, 23, 59, 59)
-
                 Dim dtReal = _objEstado.SeleccionarEstadoPerdidasGananciasSimple(_tipoCon, FechaDesde, FechaHasta)
 
                 Dim mesesSP As List(Of String) = dtReal.Columns.Cast(Of DataColumn)().
                 Where(Function(c) c.ColumnName <> "Codigo" AndAlso c.ColumnName <> "Cuenta" AndAlso c.ColumnName <> "Nivel" AndAlso c.ColumnName <> "Padre").
                 Select(Function(c) c.ColumnName).ToList()
 
-
                 'Crear estructura de la tabla combinada
-
                 Dim dtCombinado As New DataTable()
+
 
                 dtCombinado.Columns.Add("Codigo", GetType(String))
                 dtCombinado.Columns.Add("Cuenta", GetType(String))
@@ -1875,18 +1873,13 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
                 'Agregar columans para cada mes
                 For Each mes In mesesSP
-                    dtCombinado.Columns.Add($"{mes} Real Base", GetType(Decimal))
                     dtCombinado.Columns.Add($"{mes} Real", GetType(Decimal))
                     dtCombinado.Columns.Add($"{mes} Presupuesto", GetType(Decimal))
                     dtCombinado.Columns.Add($"{mes} Dif", GetType(Decimal))
                     dtCombinado.Columns.Add($"{mes} % ", GetType(Decimal))
-
                 Next
 
-
-
                 'combianr datos
-
                 For Each rowReal As DataRow In dtReal.Rows
                     Dim codigo = rowReal("Codigo").ToString()
                     Dim cuenta = rowReal("Cuenta").ToString()
@@ -1901,66 +1894,98 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                     newRow("Padre") = padre
 
                     'Buscar correspondiente presupeusto
+
                     Dim rowPresupuesto = dtPresupuesto.Select($"Codigo = '{codigo}'").FirstOrDefault()
-
                     For Each mes In mesesSP
-
                         Dim mesKey = mes.Split(" ")(0)
                         Dim valreal As Decimal
-                        If dtReal.Columns.Contains(mes) Then
-                            valreal = If(rowReal.IsNull(mes), 0D, CDec(rowReal(mes)))
-                        End If
+
+                        valreal = If(rowReal.IsNull(mes), 0D, CDec(rowReal(mes)))
 
                         Dim valpresupuesto As Decimal
-                        If rowPresupuesto IsNot Nothing AndAlso dtPresupuesto.Columns.Contains(mesKey) Then
+                        valpresupuesto = If(rowPresupuesto IsNot Nothing, CDec(rowPresupuesto(mesKey)), 0D)
 
-                            valpresupuesto = If(rowPresupuesto.IsNull(mesKey), 0D, CDec(rowPresupuesto(mesKey)))
-
-                        End If
-
-                        Dim diferencia = valreal - valpresupuesto
-                        Dim porcentaje = If(valpresupuesto <> 0, (valreal / valpresupuesto) * 100, 0)
-                        newRow($"{mes} Real Base") = valreal
                         newRow($"{mes} Real") = valreal
                         newRow($"{mes} Presupuesto") = valpresupuesto
-                        newRow($"{mes} Dif") = diferencia
-                        newRow($"{mes} % ") = Math.Round(porcentaje, 2)
-
+                        newRow($"{mes} Dif") = valreal - valpresupuesto
+                        newRow($"{mes} % ") = Math.Round(If(valpresupuesto <> 0, (valreal / valpresupuesto) * 100, 0), 2)
                     Next
-
                     dtCombinado.Rows.Add(newRow)
-
-
-
                 Next
+
+                _valoresOriginales.Clear()
+                For Each row As DataRow In dtCombinado.Rows
+                    Dim valoresMes As New Dictionary(Of String, Decimal)
+                    For Each mes In mesesSP
+                        valoresMes(mes) = CDec(row($"{mes} Real"))
+                    Next
+                    _valoresOriginales(row("Codigo").ToString()) = valoresMes
+                Next
+
+                Dim maxLevel As Integer = dtCombinado.AsEnumerable().Max(Function(r) Integer.Parse(r("Nivel")))
+
+                For level As Integer = maxLevel To 1 Step -1
+                    For Each parentRow As DataRow In dtCombinado.Select($"Nivel = {level - 1}")
+                        Dim parentCodigo = parentRow("Codigo").ToString()
+
+                        ' Sumar todos los hijos del nivel actual
+                        For Each childRow As DataRow In dtCombinado.Select($"Padre = '{parentCodigo}' AND Nivel = {level}")
+                            For Each mes In mesesSP
+                                parentRow($"{mes} Real") = CDec(parentRow($"{mes} Real")) + CDec(childRow($"{mes} Real"))
+                                parentRow($"{mes} Presupuesto") = CDec(parentRow($"{mes} Presupuesto")) + CDec(childRow($"{mes} Presupuesto"))
+
+                                ' Recalcular Dif y % para el padre
+                                parentRow($"{mes} Dif") = CDec(parentRow($"{mes} Real")) - CDec(parentRow($"{mes} Presupuesto"))
+                                If CDec(parentRow($"{mes} Presupuesto")) <> 0 Then
+                                    parentRow($"{mes} % ") = Math.Round((CDec(parentRow($"{mes} Real")) / CDec(parentRow($"{mes} Presupuesto"))) * 100, 2)
+                                Else
+                                    parentRow($"{mes} % ") = DBNull.Value ' O 0 si prefieres
+                                End If
+                            Next
+                        Next
+                    Next
+                Next
+
+
 
 
                 dgvPresupuesto.DataSource = dtCombinado
-
-                For Each mes In mesesSP
-                    dgvPresupuesto.Columns($"{mes} Real Base").Visible = False
-                Next
 
                 dgvPresupuesto.Columns("Nivel").Visible = False
                 dgvPresupuesto.Columns("Padre").Visible = False
 
                 AddHandler dgvPresupuesto.CellClick, AddressOf dgvPresupuesto_CellClick
 
-
-
                 ' Configurar nodos padres iniciales expandidos
+
                 For Each row As DataGridViewRow In dgvPresupuesto.Rows
-                    Dim codigo = row.Cells("Codigo").Value.ToString()
-                    Dim tieneHijos = dgvPresupuesto.Rows.Cast(Of DataGridViewRow)().Any(
-                    Function(r) ObtenerPadre(r.Cells("Codigo").Value.ToString()) = codigo)
-                    row.Cells("nodoComPresupuesto").Value = If(tieneHijos, "-", "") ' Iniciar expandidos
-                    row.Visible = ObtenerNivel(codigo) = 1
+                    If Not row.IsNewRow Then
+                        Dim tieneHijos = dtCombinado.Select($"Padre = '{row.Cells("Codigo").Value}'").Any()
+                        row.Cells("nodoComPresupuesto").Value = If(tieneHijos, "-", "")
+
+                    End If
+
+
                 Next
 
-                ' Colapsar todos los nodos inicialmente y luego expandir raíces
                 For Each row As DataGridViewRow In dgvPresupuesto.Rows
-                    If ObtenerNivel(row.Cells("Codigo").Value.ToString()) = 1 Then
-                        ExpandirNodo(row.Cells("Codigo").Value.ToString(), mesesSP)
+                    If Not row.IsNewRow Then
+                        row.Visible = (row.Cells("Nivel").Value.ToString() = "1") ' Solo nivel raíz visible
+                    End If
+                Next
+
+                For Each row As DataGridViewRow In dgvPresupuesto.Rows
+                    If Not row.IsNewRow Then
+                        Dim nivel = row.Cells("Nivel").Value.ToString()
+                        Select Case nivel
+                            Case "7" : row.DefaultCellStyle.BackColor = Color.Lavender
+                            Case "6" : row.DefaultCellStyle.BackColor = Color.Thistle
+                            Case "5" : row.DefaultCellStyle.BackColor = Color.MistyRose
+                            Case "4" : row.DefaultCellStyle.BackColor = Color.LightSalmon
+                            Case "3" : row.DefaultCellStyle.BackColor = Color.PeachPuff
+                            Case "2" : row.DefaultCellStyle.BackColor = Color.Moccasin
+                            Case "1" : row.DefaultCellStyle.BackColor = Color.LemonChiffon
+                        End Select
                     End If
                 Next
 
@@ -2003,40 +2028,114 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         End Sub
 
         Private Sub dgvPresupuesto_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPresupuesto.CellClick
-            If e.ColumnIndex = dgvPresupuesto.Columns("nodoComPresupuesto").Index AndAlso e.RowIndex >= 0 Then
-                Dim row = dgvPresupuesto.Rows(e.RowIndex)
-                Dim currentCodigo = row.Cells("Codigo").Value.ToString()
-                Dim mesesSP = ObtenerMesesDesdeColumnas()
+            Try
+                If e.ColumnIndex = dgvPresupuesto.Columns("nodoComPresupuesto").Index AndAlso e.RowIndex >= 0 Then
 
-                If row.Cells("nodoComPresupuesto").Value = "+" Then
-                    ' Expandir: Mostrar hijos directos
-                    ExpandirNodo(currentCodigo, mesesSP)
-                    row.Cells("nodoComPresupuesto").Value = "-"
-                Else
-                    ' Colapsar: Ocultar todos los descendientes
-                    ColapsarNodo(currentCodigo, mesesSP)
-                    row.Cells("nodoComPresupuesto").Value = "+"
+                    Dim row = dgvPresupuesto.Rows(e.RowIndex)
+                    Dim currentCodigo = row.Cells("Codigo").Value.ToString()
+                    Dim currentNodo = row.Cells("nodoComPresupuesto").Value.ToString()
+
+                    Dim mesesSP = dgvPresupuesto.Columns.Cast(Of DataGridViewColumn)().
+                                    Where(Function(c) c.Name.Contains(" Real")).
+                                    Select(Function(c) c.Name.Replace(" Real", "")).ToList()
+
+                    If currentNodo = "-" Then
+                        For Each childRow As DataGridViewRow In dgvPresupuesto.Rows
+                            If childRow.Cells("Padre").Value.ToString() = currentCodigo Then
+                                childRow.Visible = False
+                                childRow.Cells("nodoComPresupuesto").Value = If(EsPadre(childRow), "-", "")
+                            End If
+                        Next
+                        row.Cells("nodoComPresupuesto").Value = "+"
+                    Else
+                        For Each childRow As DataGridViewRow In dgvPresupuesto.Rows
+                            If childRow.Cells("Padre").Value.ToString() = currentCodigo Then
+                                childRow.Visible = True
+                            End If
+                        Next
+                        row.Cells("nodoComPresupuesto").Value = "-"
+                    End If
+
+                    'Recalcular sumas hacia arriba en la jerarquia
+                    ActualizarSumasJerarquicas(row.Cells("Padre").Value.ToString(), mesesSP)
+
+
                 End If
-
-                ' Recalcular padre inmediato
-                Dim codigoPadre = row.Cells("Padre").Value.ToString()
-                If Not String.IsNullOrEmpty(codigoPadre) Then
-                    CalcularSumasPadres(codigoPadre, mesesSP)
-                End If
-
-            End If
+            Catch ex As Exception
+                KryptonMessageBox.Show("ERROR: " & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
         End Sub
+
+        Private Sub ActualizarSumasJerarquicas(codigoPadre As String, mesesSP As List(Of String))
+            While codigoPadre <> ""
+                Dim parentfound = False
+                For Each parentRow As DataGridViewRow In dgvPresupuesto.Rows
+                    If parentRow.Cells("Codigo").Value.ToString() = codigoPadre Then
+                        parentfound = True
+                        Dim currentCodigo As String = parentRow.Cells("Codigo").Value.ToString()
+                        ' Resetear a valores originales
+
+                        If _valoresOriginales.ContainsKey(currentCodigo) Then
+                            For Each mes In mesesSP
+                                parentRow.Cells($"{mes} Real").Value = _valoresOriginales(currentCodigo)(mes)
+                                parentRow.Cells($"{mes} Presupuesto").Value = CDec(parentRow.Cells($"{mes} Presupuesto").Value)
+
+                                'Recalcular Dif y % inmediatamente
+                                parentRow.Cells($"{mes} Dif").Value = CDec(parentRow.Cells($"{mes} Real").Value) - CDec(parentRow.Cells($"{mes} Presupuesto").Value)
+                                If CDec(parentRow.Cells($"{mes} Presupuesto").Value) <> 0 Then
+                                    parentRow.Cells($"{mes} % ").Value = Math.Round((CDec(parentRow.Cells($"{mes} Real").Value) / CDec(parentRow.Cells($"{mes} Presupuesto").Value)) * 100, 2)
+                                Else
+                                    parentRow.Cells($"{mes} % ").Value = DBNull.Value
+                                End If
+
+                            Next
+                        End If
+                        ' Sumar hijos visibles
+                        For Each childRow As DataGridViewRow In dgvPresupuesto.Rows
+                            If childRow.Visible AndAlso childRow.Cells("Padre").Value.ToString() = currentCodigo Then
+                                For Each mes In mesesSP
+                                    parentRow.Cells($"{mes} Real").Value += CDec(childRow.Cells($"{mes} Real").Value)
+                                    parentRow.Cells($"{mes} Presupuesto").Value += CDec(childRow.Cells($"{mes} Presupuesto").Value)
+
+                                    ' Recalcular Dif y % después de sumar
+                                    parentRow.Cells($"{mes} Dif").Value = CDec(parentRow.Cells($"{mes} Real").Value) - CDec(parentRow.Cells($"{mes} Presupuesto").Value)
+                                    If CDec(parentRow.Cells($"{mes} Presupuesto").Value) <> 0 Then
+                                        parentRow.Cells($"{mes} % ").Value = Math.Round((CDec(parentRow.Cells($"{mes} Real").Value) / CDec(parentRow.Cells($"{mes} Presupuesto").Value)) * 100, 2)
+                                    Else
+                                        parentRow.Cells($"{mes} % ").Value = DBNull.Value
+                                    End If
+
+                                Next
+                            End If
+                        Next
+
+                        codigoPadre = parentRow.Cells("Padre").Value.ToString()
+                        Exit For
+                    End If
+                Next
+
+                If Not parentfound Then Exit While
+
+            End While
+        End Sub
+
 
         Private Function ObtenerMesesDesdeColumnas() As List(Of String)
             Return dgvPresupuesto.Columns.Cast(Of DataGridViewColumn)().
-           Where(Function(c) c.Name.Contains(" Real")).
+           Where(Function(c) c.Name.Contains(" Real") AndAlso Not c.Name.Contains("Base Real")).
            Select(Function(c) c.Name.Replace(" Real", "")).ToList()
+        End Function
+
+        Private Function EsPadre(row As DataGridViewRow) As Boolean
+            Return dgvPresupuesto.Rows.Cast(Of DataGridViewRow)().
+        Any(Function(r) r.Cells("Padre").Value.ToString() = row.Cells("Codigo").Value.ToString())
         End Function
 
         Private Sub ExpandirNodo(codigoPadre As String, mesesSP As List(Of String))
             For Each childRow As DataGridViewRow In dgvPresupuesto.Rows
                 If childRow.Cells("Padre").Value.ToString() = codigoPadre Then
                     childRow.Visible = True
+                    ' Respetar estado previo de expansión
                     If childRow.Cells("nodoComPresupuesto").Value.ToString() = "-" Then
                         ExpandirNodo(childRow.Cells("Codigo").Value.ToString(), mesesSP)
                     End If
@@ -2049,78 +2148,45 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 If childRow.Cells("Padre").Value.ToString() = codigoPadre Then
                     childRow.Visible = False
                     childRow.Cells("nodoComPresupuesto").Value = "+"
-                    ColapsarNodo(childRow.Cells("Codigo").Value.ToString(), mesesSP) ' Colapsar nietos
+                    ColapsarNodo(childRow.Cells("Codigo").Value.ToString(), mesesSP) ' Colapsar recursivamente
                 End If
             Next
+            ' Restaurar valores base del padre
             CalcularSumasPadres(codigoPadre, mesesSP)
         End Sub
 
         Private Sub CalcularSumasPadres(codigoPadre As String, mesesSP As List(Of String))
             Dim parentRow As DataGridViewRow = dgvPresupuesto.Rows.Cast(Of DataGridViewRow)().FirstOrDefault(Function(r) r.Cells("Codigo").Value.ToString() = codigoPadre)
             If parentRow IsNot Nothing Then
-
-                Dim tieneHijosVisibles = dgvPresupuesto.Rows.Cast(Of DataGridViewRow)().Any(
-                Function(r) r.Visible AndAlso r.Cells("Padre").Value.ToString() = codigoPadre)
+                Dim tieneHijosVisibles = dgvPresupuesto.Rows.Cast(Of DataGridViewRow)().Any(Function(r) r.Visible AndAlso r.Cells("Padre").Value.ToString() = codigoPadre)
 
                 If tieneHijosVisibles Then
+                    ' Sumar valores REALES de hijos visibles
                     For Each mes In mesesSP
                         parentRow.Cells($"{mes} Real").Value = 0D
-                    Next
-
-                    ' Sumar hijos visibles
-                    For Each childRow As DataGridViewRow In dgvPresupuesto.Rows
-                        If childRow.Visible AndAlso childRow.Cells("Padre").Value.ToString() = codigoPadre Then
-                            For Each mes In mesesSP
+                        For Each childRow As DataGridViewRow In dgvPresupuesto.Rows
+                            If childRow.Visible AndAlso childRow.Cells("Padre").Value.ToString() = codigoPadre Then
                                 parentRow.Cells($"{mes} Real").Value += CDbl(childRow.Cells($"{mes} Real").Value)
-                            Next
-                        End If
+                            End If
+                        Next
                     Next
-
                 Else
+                    ' Usar valores BASE REAL precalculados
                     For Each mes In mesesSP
-                        parentRow.Cells($"{mes} Real").Value = parentRow.Cells($"{mes} Real Base").Value
+                        parentRow.Cells($"{mes} Real").Value = parentRow.Cells($"{mes} Base Real").Value
                     Next
-
                 End If
 
-
-
-                ' Calcular Dif y %
+                ' Actualizar diferencias y porcentajes
                 For Each mes In mesesSP
                     Dim valReal = CDbl(parentRow.Cells($"{mes} Real").Value)
                     Dim valPresupuesto = CDbl(parentRow.Cells($"{mes} Presupuesto").Value)
-
                     parentRow.Cells($"{mes} Dif").Value = valReal - valPresupuesto
                     parentRow.Cells($"{mes} % ").Value = If(valPresupuesto <> 0, Math.Round((valReal / valPresupuesto) * 100, 2), 0)
                 Next
-
-
-                'For Each col As DataGridViewColumn In dgvPresupuesto.Columns
-                '    If col.Name.Contains(" Real") Then
-                '        parentRow.Cells(col.Name).Value = 0D
-                '    End If
-                'Next
-
-                ' Sumar solo hijos visibles
-                'For Each childRow As DataGridViewRow In dgvPresupuesto.Rows
-                '    If childRow.Visible AndAlso childRow.Cells("Padre").Value.ToString() = codigoPadre Then
-                '        For Each col As DataGridViewColumn In dgvPresupuesto.Columns
-                '            If col.Name.Contains(" Real") Then
-                '                parentRow.Cells(col.Name).Value += CDbl(childRow.Cells(col.Name).Value)
-                '            End If
-                '        Next
-                '    End If
-                'Next
-
-                ' Calcular Dif y %
-                'For Each mes In mesesSP
-                '    Dim valReal = CDbl(parentRow.Cells($"{mes} Real").Value)
-                '    Dim valPresupuesto = CDbl(parentRow.Cells($"{mes} Presupuesto").Value)
-
-                '    parentRow.Cells($"{mes} Dif").Value = valReal - valPresupuesto
-                '    parentRow.Cells($"{mes} % ").Value = If(valPresupuesto <> 0, Math.Round((valReal / valPresupuesto) * 100, 2), 0)
-                'Next
             End If
         End Sub
+
+
     End Class
 End Namespace
