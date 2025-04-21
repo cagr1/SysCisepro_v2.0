@@ -1641,23 +1641,24 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         End Sub
 
         Private Sub btnExportarComparacion_Click(sender As Object, e As EventArgs) Handles btnExportarComparacion.Click
-            ExportarDatosCompracion(dgvComparacion, "EstadoPyG_Comparativo")
+            ExportarDatosCompracion_excel(dgvComparacion, "EstadoPyG_Comparativo")
         End Sub
 
         Private Sub ExportarDatosCompracion(ByVal dgvComparacion As DataGridView, ByVal titulo As String)
             Try
-                If dgvComparacion.Rows.Count = 0 Or dgvPresupuesto.Rows.Count = 0 Then
-                    Krypton.Toolkit.KryptonMessageBox.Show("Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                'If dgvComparacion.Rows.Count = 0 Then
+                '    Krypton.Toolkit.KryptonMessageBox.Show("Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                '    Return
+                'End If
+
+                If dgvComparacion.Rows.Cast(Of DataGridViewRow).All(Function(r) r.IsNewRow OrElse Not r.Visible) Then
+                    Krypton.Toolkit.KryptonMessageBox.Show("Primero realice una búsqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
 
-
-                Dim fec = ValidationForms.FechaActual(_tipoCon)
-
-
-
                 'Crear un nuevo libro y hoja
+                Dim fec = ValidationForms.FechaActual(_tipoCon)
                 Dim workbook = New XLWorkbook()
                 Dim worksheet = workbook.Worksheets.Add("Comparación")
 
@@ -1752,6 +1753,15 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 Next
 
 
+                'Aqui implementacion
+
+
+
+
+                'Aqui finaliza
+
+
+
                 ' Bordes inferiores
                 worksheet.Range("A" & (c + headin) & ":" & ic & indc).Style.Border.BottomBorder = XLBorderStyleValues.Thin
 
@@ -1778,6 +1788,134 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 Krypton.Toolkit.KryptonMessageBox.Show("ERROR: " & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
+
+
+        Private Sub ExportarDatosCompracion_excel(ByVal dgv As DataGridView, ByVal titulo As String)
+            Try
+                ' 1) Validar si hay filas reales
+                If dgv.Rows.Cast(Of DataGridViewRow).All(Function(r) r.IsNewRow OrElse Not r.Visible) Then
+                    Krypton.Toolkit.KryptonMessageBox.Show("Primero realice una búsqueda", "Validación",
+                                                   KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    Return
+                End If
+
+                ' 2) Fechas, libro y hoja
+                Dim fec = ValidationForms.FechaActual(_tipoCon)
+                Dim workbook = New XLWorkbook()
+                Dim worksheet = workbook.Worksheets.Add("Comparación")
+                Dim ic = ValidationForms.NumToCharExcelFromVisibleColumnsDataGrid(dgv)
+
+                ' 3) Cabecera
+                Dim objName = ValidationForms.NombreCompany(_tipoCon)
+                Dim nombreCompany As String = If(objName IsNot Nothing AndAlso Not IsDBNull(objName), objName.ToString(), "")
+                worksheet.Cell(1, 1).Value = $"{nombreCompany}  -  {titulo}"
+                worksheet.Range($"A1:{ic}1").Merge()
+                With worksheet.Range($"A1:{ic}1").Style
+                    .Font.Bold = True
+                    .Font.FontSize = 12
+                    .Font.FontColor = XLColor.White
+                    .Alignment.Horizontal = XLAlignmentHorizontalValues.Center
+                    .Fill.BackgroundColor = XLColor.FromColor(ValidationForms.GetColorSistema(_tipoCon))
+                End With
+                worksheet.Range($"A2:{ic}2").Merge().Value = $"PERÍODO: {dtpFechaDesde.Value.ToLongDateString()}  AL {dtpFechaHasta.Value.ToLongDateString()}"
+                worksheet.Range($"A3:{ic}3").Merge().Value = $"Fecha de Reporte: {fec.ToLongDateString()} {fec.ToLongTimeString()}"
+                worksheet.Range($"A2:{ic}3").Style.Font.FontSize = 12
+
+                ' 4) Columnas visibles (sin “+” row‐header)
+                Dim allVis = dgv.Columns.Cast(Of DataGridViewColumn).
+                     Where(Function(c) c.Visible AndAlso c.HeaderText <> "+").ToList()
+                Dim idxNivel = dgv.Columns("Nivel").Index
+                Dim idxCuenta = dgv.Columns("Cuenta").Index
+                Dim dataCols = allVis.Where(Function(c) c.HeaderText <> "Cuenta").ToList()
+
+                ' 5) Máximo nivel y ancho fijo de indent (≈30px → width=4)
+                Dim maxNivel = dgv.Rows.Cast(Of DataGridViewRow).
+                       Where(Function(r) Not r.IsNewRow).
+                       Max(Function(r) If(IsNumeric(r.Cells(idxNivel).Value), CInt(r.Cells(idxNivel).Value), 0))
+                Dim startDataCol = maxNivel + 2
+                For colIdx As Integer = 1 To maxNivel + 1
+                    worksheet.Column(colIdx).Width = 4
+                Next
+
+                ' 6) Encabezados (fila 5)
+                Dim headin = 5
+                For i = 0 To dataCols.Count - 1
+                    With worksheet.Cell(headin, startDataCol + i)
+                        .Value = dataCols(i).HeaderText
+                        .Style.Font.Bold = True
+                        .Style.Font.FontColor = XLColor.White
+                        .Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center
+                        .Style.Border.OutsideBorder = XLBorderStyleValues.Thin
+                        .Style.Fill.BackgroundColor = XLColor.FromColor(ValidationForms.GetColorSistema(_tipoCon))
+                    End With
+                Next
+
+                ' 7) Detalle de filas
+                Dim rowExcel = headin + 1
+                For Each r As DataGridViewRow In dgv.Rows
+                    If r.IsNewRow OrElse (chkOcultar.Checked AndAlso Not r.Visible) Then Continue For
+
+                    Dim bgColor As Color = r.DefaultCellStyle.BackColor
+
+                    ' a) Indent + Cuenta
+                    Dim nivel = If(IsNumeric(r.Cells(idxNivel).Value), CInt(r.Cells(idxNivel).Value), 0)
+                    Dim cuentaStr = If(r.Cells(idxCuenta).Value?.ToString(), "")
+                    With worksheet.Cell(rowExcel, 1 + nivel)
+                        .Value = cuentaStr
+                        .Style.Fill.BackgroundColor = XLColor.FromColor(bgColor)
+                    End With
+
+                    ' b) Resto de columnas
+                    For i = 0 To dataCols.Count - 1
+                        Dim col = dataCols(i)
+                        Dim cel = worksheet.Cell(rowExcel, startDataCol + i)
+                        Dim v = r.Cells(col.Index).Value
+
+                        If col.HeaderText = "Codigo" Or col.HeaderText = "Nivel" Or col.HeaderText = "Padre" Then
+                            ' siempre texto
+                            cel.Value = If(v?.ToString(), "")
+                        ElseIf IsNumeric(v) Then
+                            cel.Value = CDbl(v)
+                            cel.Style.NumberFormat.Format = "#,##0.00"
+                        Else
+                            cel.Value = If(v?.ToString(), "")
+                        End If
+
+                        cel.Style.Border.LeftBorder = XLBorderStyleValues.Thin
+                        cel.Style.Border.RightBorder = XLBorderStyleValues.Thin
+                        If r.Index = dgv.Rows.Count - 1 Then cel.Style.Border.BottomBorder = XLBorderStyleValues.Thin
+                    Next
+
+                    rowExcel += 1
+                Next
+
+                ' 8) Ajustes y guardado
+                'worksheet.Columns($"A:{ic}").AdjustToContents()
+                Dim lastDataCol = startDataCol + dataCols.Count - 1
+                For colIdx As Integer = startDataCol To lastDataCol
+                    worksheet.Column(colIdx).AdjustToContents()
+                Next
+                Using sfd As New SaveFileDialog() With {
+            .Filter = "Excel files (*.xlsx)|*.xlsx",
+            .FileName = $"{titulo}_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx"
+        }
+                    If sfd.ShowDialog() = DialogResult.OK Then
+                        workbook.SaveAs(sfd.FileName)
+                        Process.Start(sfd.FileName)
+                    End If
+                End Using
+
+                Krypton.Toolkit.KryptonMessageBox.Show("Datos exportados correctamente!", "Éxito",
+                                               KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+
+            Catch ex As Exception
+                Krypton.Toolkit.KryptonMessageBox.Show($"ERROR: {ex.Message}", "ERROR",
+                                               KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
+        End Sub
+
+
+
 
         Private Sub btnCargarPresupuesto_Click(sender As Object, e As EventArgs) Handles btnCargarPresupuesto.Click
             Try
@@ -1962,17 +2100,18 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                     If Not row.IsNewRow Then
                         Dim tieneHijos = dtCombinado.Select($"Padre = '{row.Cells("Codigo").Value}'").Any()
                         row.Cells("nodoComPresupuesto").Value = If(tieneHijos, "-", "")
-
+                        row.Visible = True
                     End If
-
 
                 Next
 
-                For Each row As DataGridViewRow In dgvPresupuesto.Rows
-                    If Not row.IsNewRow Then
-                        row.Visible = (row.Cells("Nivel").Value.ToString() = "1") ' Solo nivel raíz visible
-                    End If
-                Next
+
+
+                'For Each row As DataGridViewRow In dgvPresupuesto.Rows
+                '    If Not row.IsNewRow Then
+                '        row.Visible = (row.Cells("Nivel").Value.ToString() = "1") ' Solo nivel raíz visible
+                '    End If
+                'Next
 
                 For Each row As DataGridViewRow In dgvPresupuesto.Rows
                     If Not row.IsNewRow Then
@@ -1995,36 +2134,13 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             End Try
         End Sub
 
-        ' Función para obtener el nivel basado en la longitud del código:
-        Private Function ObtenerNivel(codigo As String) As Integer
-
-            For Each row As DataGridViewRow In dgvPresupuesto.Rows
-                If row.Cells("Codigo").Value.ToString() = codigo Then
-                    Return CInt(row.Cells("Nivel").Value)
-                End If
-            Next
-            Return 0
-        End Function
-
-        ' Función para obtener el padre:
-        Private Function ObtenerPadre(codigo As String) As String
-            For Each row As DataGridViewRow In dgvPresupuesto.Rows
-                If row.Cells("Codigo").Value.ToString() = codigo Then
-                    Return row.Cells("Padre").Value.ToString()
-                End If
-            Next
-            Return ""
-
-        End Function
-
-
 
         Private Sub dtpFechaDesdePresupuesto_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaDesdePresupuesto.ValueChanged
 
         End Sub
 
         Private Sub btnExportarPresupuesto_Click(sender As Object, e As EventArgs) Handles btnExportarPresupuesto.Click
-            ExportarDatosCompracion(dgvComparacion, "EstadoPyG_Comparativo")
+            ExportarDatosCompracion_excel(dgvPresupuesto, "EstadoPyG_Presupuesto")
         End Sub
 
         Private Sub dgvPresupuesto_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPresupuesto.CellClick
@@ -2119,74 +2235,47 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             End While
         End Sub
 
-
-        Private Function ObtenerMesesDesdeColumnas() As List(Of String)
-            Return dgvPresupuesto.Columns.Cast(Of DataGridViewColumn)().
-           Where(Function(c) c.Name.Contains(" Real") AndAlso Not c.Name.Contains("Base Real")).
-           Select(Function(c) c.Name.Replace(" Real", "")).ToList()
-        End Function
-
         Private Function EsPadre(row As DataGridViewRow) As Boolean
             Return dgvPresupuesto.Rows.Cast(Of DataGridViewRow)().
         Any(Function(r) r.Cells("Padre").Value.ToString() = row.Cells("Codigo").Value.ToString())
         End Function
 
-        Private Sub ExpandirNodo(codigoPadre As String, mesesSP As List(Of String))
-            For Each childRow As DataGridViewRow In dgvPresupuesto.Rows
-                If childRow.Cells("Padre").Value.ToString() = codigoPadre Then
-                    childRow.Visible = True
-                    ' Respetar estado previo de expansión
-                    If childRow.Cells("nodoComPresupuesto").Value.ToString() = "-" Then
-                        ExpandirNodo(childRow.Cells("Codigo").Value.ToString(), mesesSP)
-                    End If
-                End If
-            Next
-            CalcularSumasPadres(codigoPadre, mesesSP)
-        End Sub
-        Private Sub ColapsarNodo(codigoPadre As String, mesesSP As List(Of String))
-            For Each childRow As DataGridViewRow In dgvPresupuesto.Rows
-                If childRow.Cells("Padre").Value.ToString() = codigoPadre Then
-                    childRow.Visible = False
-                    childRow.Cells("nodoComPresupuesto").Value = "+"
-                    ColapsarNodo(childRow.Cells("Codigo").Value.ToString(), mesesSP) ' Colapsar recursivamente
-                End If
-            Next
-            ' Restaurar valores base del padre
-            CalcularSumasPadres(codigoPadre, mesesSP)
-        End Sub
-
-        Private Sub CalcularSumasPadres(codigoPadre As String, mesesSP As List(Of String))
-            Dim parentRow As DataGridViewRow = dgvPresupuesto.Rows.Cast(Of DataGridViewRow)().FirstOrDefault(Function(r) r.Cells("Codigo").Value.ToString() = codigoPadre)
-            If parentRow IsNot Nothing Then
-                Dim tieneHijosVisibles = dgvPresupuesto.Rows.Cast(Of DataGridViewRow)().Any(Function(r) r.Visible AndAlso r.Cells("Padre").Value.ToString() = codigoPadre)
-
-                If tieneHijosVisibles Then
-                    ' Sumar valores REALES de hijos visibles
-                    For Each mes In mesesSP
-                        parentRow.Cells($"{mes} Real").Value = 0D
-                        For Each childRow As DataGridViewRow In dgvPresupuesto.Rows
-                            If childRow.Visible AndAlso childRow.Cells("Padre").Value.ToString() = codigoPadre Then
-                                parentRow.Cells($"{mes} Real").Value += CDbl(childRow.Cells($"{mes} Real").Value)
-                            End If
-                        Next
-                    Next
-                Else
-                    ' Usar valores BASE REAL precalculados
-                    For Each mes In mesesSP
-                        parentRow.Cells($"{mes} Real").Value = parentRow.Cells($"{mes} Base Real").Value
-                    Next
-                End If
-
-                ' Actualizar diferencias y porcentajes
-                For Each mes In mesesSP
-                    Dim valReal = CDbl(parentRow.Cells($"{mes} Real").Value)
-                    Dim valPresupuesto = CDbl(parentRow.Cells($"{mes} Presupuesto").Value)
-                    parentRow.Cells($"{mes} Dif").Value = valReal - valPresupuesto
-                    parentRow.Cells($"{mes} % ").Value = If(valPresupuesto <> 0, Math.Round((valReal / valPresupuesto) * 100, 2), 0)
-                Next
+        Private Sub chbxOcultarPresupuesto_CheckedChanged(sender As Object, e As EventArgs) Handles chbxOcultarPresupuesto.CheckedChanged
+            If dgvPresupuesto.Rows.Count = 0 Then
+                Krypton.Toolkit.KryptonMessageBox.Show("Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                Return
             End If
+
+            ' 1. Definir columnas fijas y excluir Cambio/Variacion
+            Dim columnasFijas As New List(Of String) From {"Codigo", "Cuenta"}
+            Dim columnasMes As New List(Of String)
+            For Each col As DataGridViewColumn In dgvPresupuesto.Columns
+                If col.Name.Contains("Real") OrElse col.Name.Contains("Presupuesto") OrElse col.Name.Contains("Dif") OrElse col.Name.Contains("%") Then
+                    columnasMes.Add(col.Name)
+                End If
+            Next
+
+            ' Evaluar cada fila
+            For Each row As DataGridViewRow In dgvPresupuesto.Rows
+                Dim todasCero As Boolean = True
+
+                For Each colName As String In columnasMes
+                    If row.Cells(colName).Value IsNot Nothing AndAlso Not IsDBNull(row.Cells(colName).Value) Then
+                        Dim valor As Double
+                        If Double.TryParse(row.Cells(colName).Value.ToString(), valor) Then
+                            If Math.Abs(valor) > 0.0001 Then
+                                todasCero = False
+                                Exit For
+                            End If
+                        Else
+                            todasCero = False
+                            Exit For
+                        End If
+                    End If
+                Next
+
+                row.Visible = If(chbxOcultarPresupuesto.Checked, Not todasCero, True)
+            Next
         End Sub
-
-
     End Class
 End Namespace

@@ -108,6 +108,7 @@
             Me.KryptonRibbonGroupTriple1 = New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple()
             Me.KryptonRibbonGroup1 = New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup()
             Me.KryptonContextMenuItems1 = New ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems()
+            Me.chbxOcultarPresupuesto = New ComponentFactory.Krypton.Toolkit.KryptonCheckBox()
             CType(Me.dgvEgresos, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvIngresos, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.ContextMenuStripClicDerecho.SuspendLayout()
@@ -568,7 +569,7 @@
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
             Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage3, Me.KryptonPage2})
-            Me.KryptonNavigator1.SelectedIndex = 1
+            Me.KryptonNavigator1.SelectedIndex = 0
             Me.KryptonNavigator1.Size = New System.Drawing.Size(819, 670)
             Me.KryptonNavigator1.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonNavigator1.TabIndex = 294
@@ -697,6 +698,7 @@
             '
             'KryptonGroupBox5.Panel
             '
+            Me.KryptonGroupBox5.Panel.Controls.Add(Me.chbxOcultarPresupuesto)
             Me.KryptonGroupBox5.Panel.Controls.Add(Me.btnCargarPresupuesto)
             Me.KryptonGroupBox5.Panel.Controls.Add(Me.btnExportarPresupuesto)
             Me.KryptonGroupBox5.Panel.Controls.Add(Me.KryptonLabel12)
@@ -967,6 +969,19 @@
             '
             Me.KryptonRibbonGroup1.Items.AddRange(New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer() {Me.KryptonRibbonGroupTriple1})
             '
+            'chbxOcultarPresupuesto
+            '
+            Me.chbxOcultarPresupuesto.Images.CheckedNormal = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chbxOcultarPresupuesto.Images.CheckedPressed = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chbxOcultarPresupuesto.Images.CheckedTracking = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chbxOcultarPresupuesto.Location = New System.Drawing.Point(464, 8)
+            Me.chbxOcultarPresupuesto.Name = "chbxOcultarPresupuesto"
+            Me.chbxOcultarPresupuesto.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue
+            Me.chbxOcultarPresupuesto.Size = New System.Drawing.Size(91, 18)
+            Me.chbxOcultarPresupuesto.StateCommon.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chbxOcultarPresupuesto.TabIndex = 296
+            Me.chbxOcultarPresupuesto.Values.Text = "Quitar $0.00"
+            '
             'FormEstadoPerdidasYGanancias
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1103,5 +1118,6 @@
         Friend WithEvents btnCargarPresupuesto As ComponentFactory.Krypton.Toolkit.KryptonButton
         Friend WithEvents dgvPresupuesto As Krypton.Toolkit.KryptonDataGridView
         Friend WithEvents nodoComPresupuesto As Krypton.Toolkit.KryptonDataGridViewButtonColumn
+        Friend WithEvents chbxOcultarPresupuesto As ComponentFactory.Krypton.Toolkit.KryptonCheckBox
     End Class
 End Namespace
