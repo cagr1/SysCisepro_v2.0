@@ -1141,7 +1141,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             End Try
         End Sub
 
-
+        Private Su
 
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             dgvDetalleComprobanteRetencion.EndEdit()

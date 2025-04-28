@@ -11,6 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOutputCache();
 builder.Services.AddSwaggerGen();
+builder.Services.AddTransient<DatabaseConnection>();
 builder.Services.AddScoped<DatabaseConnection>();
 builder.Services.AddScoped<DashboardService>();
 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;

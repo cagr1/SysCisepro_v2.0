@@ -83,6 +83,7 @@
             Me.dgvPresupuesto = New Krypton.Toolkit.KryptonDataGridView()
             Me.nodoComPresupuesto = New Krypton.Toolkit.KryptonDataGridViewButtonColumn()
             Me.KryptonGroupBox5 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.chbxOcultarPresupuesto = New ComponentFactory.Krypton.Toolkit.KryptonCheckBox()
             Me.btnCargarPresupuesto = New ComponentFactory.Krypton.Toolkit.KryptonButton()
             Me.btnExportarPresupuesto = New Krypton.Toolkit.KryptonButton()
             Me.KryptonLabel12 = New Krypton.Toolkit.KryptonLabel()
@@ -108,7 +109,6 @@
             Me.KryptonRibbonGroupTriple1 = New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple()
             Me.KryptonRibbonGroup1 = New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup()
             Me.KryptonContextMenuItems1 = New ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems()
-            Me.chbxOcultarPresupuesto = New ComponentFactory.Krypton.Toolkit.KryptonCheckBox()
             CType(Me.dgvEgresos, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvIngresos, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.ContextMenuStripClicDerecho.SuspendLayout()
@@ -710,6 +710,19 @@
             Me.KryptonGroupBox5.Values.Heading = "Busqueda"
             Me.KryptonGroupBox5.Values.Image = Global.syscisepro.My.Resources.Resources.calendar_month_24dp_FILL0_wght400_GRAD0_opsz24__2_
             '
+            'chbxOcultarPresupuesto
+            '
+            Me.chbxOcultarPresupuesto.Images.CheckedNormal = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chbxOcultarPresupuesto.Images.CheckedPressed = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chbxOcultarPresupuesto.Images.CheckedTracking = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chbxOcultarPresupuesto.Location = New System.Drawing.Point(464, 8)
+            Me.chbxOcultarPresupuesto.Name = "chbxOcultarPresupuesto"
+            Me.chbxOcultarPresupuesto.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue
+            Me.chbxOcultarPresupuesto.Size = New System.Drawing.Size(91, 18)
+            Me.chbxOcultarPresupuesto.StateCommon.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chbxOcultarPresupuesto.TabIndex = 296
+            Me.chbxOcultarPresupuesto.Values.Text = "Quitar $0.00"
+            '
             'btnCargarPresupuesto
             '
             Me.btnCargarPresupuesto.AutoSize = True
@@ -968,19 +981,6 @@
             'KryptonRibbonGroup1
             '
             Me.KryptonRibbonGroup1.Items.AddRange(New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer() {Me.KryptonRibbonGroupTriple1})
-            '
-            'chbxOcultarPresupuesto
-            '
-            Me.chbxOcultarPresupuesto.Images.CheckedNormal = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.chbxOcultarPresupuesto.Images.CheckedPressed = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.chbxOcultarPresupuesto.Images.CheckedTracking = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.chbxOcultarPresupuesto.Location = New System.Drawing.Point(464, 8)
-            Me.chbxOcultarPresupuesto.Name = "chbxOcultarPresupuesto"
-            Me.chbxOcultarPresupuesto.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue
-            Me.chbxOcultarPresupuesto.Size = New System.Drawing.Size(91, 18)
-            Me.chbxOcultarPresupuesto.StateCommon.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.chbxOcultarPresupuesto.TabIndex = 296
-            Me.chbxOcultarPresupuesto.Values.Text = "Quitar $0.00"
             '
             'FormEstadoPerdidasYGanancias
             '

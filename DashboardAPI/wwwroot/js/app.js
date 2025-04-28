@@ -123,66 +123,42 @@ async function loadData() {
     const previousEndDate = formatDateWithTime(endDateInput, true, true);
 
     try {
-        // Obtener datos de la API
-        const ventasUrl = `http://localhost:5179/api/Dashboard/sales/by-date?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
-        const acumuladoUrl = `http://localhost:5179/api/Dashboard/sales/accumulated?endDate=${encodeURIComponent(endDate)}`;
-        const ventasPreviousUrl = `http://localhost:5179/api/Dashboard/sales/by-date?startDate=${encodeURIComponent(previousStartDate)}&endDate=${encodeURIComponent(previousEndDate)}`;
-        const ventasPreviousAcumuladoUrl = `http://localhost:5179/api/Dashboard/sales/accumulated?endDate=${encodeURIComponent(previousEndDate)}`;
-        const porcentajeVentasActualUrl = `http://localhost:5179/api/Dashboard/variation/income?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
-        const porcentajeVentasPreviousUrl = `http://localhost:5179/api/Dashboard/variation/income?startDate=${encodeURIComponent(previousStartDate)}&endDate=${encodeURIComponent(previousEndDate)}`;
-        const utilidadesUrl = `http://localhost:5179/api/Dashboard/annual-earnings?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
-        const utilidadesAcumuladasUrl = `http://localhost:5179/api/Dashboard/accumulated-earnings?endDate=${encodeURIComponent(endDate)}`;
-        const porcentajeUtilidadesUrl = `http://localhost:5179/api/Dashboard/variation/profit?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
-        const financialUrl = `http://localhost:5179/api/Dashboard/profit-loss-byMonth/${year}`;
-        const salesCategoryUrl = `http://localhost:5179/api/Dashboard/sales-by-category?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
-        const marginEarnignsUrl = `http://localhost:5179/api/Dashboard/margin-earnings?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
-        const liquidezUrl = `http://localhost:5179/api/Dashboard/liquidity-ratio?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
-        const [ventasResponse, acumuladoResponse, ventasPreviousResponse, ventasPreviousAcumuladoResponse, porcentajeVentasActualResponse, porcentajeVentasPreviousResponse, utilidadesResponse, utilidadesAcumuladasResponse, porcentajeUtilidadesResponse, financialResponse, salesCategoryResponse, marginEarningsResponse, liquidezResponse ] = await Promise.all([
-            fetch(ventasUrl),
-            fetch(acumuladoUrl),
-            fetch(ventasPreviousUrl),
-            fetch(ventasPreviousAcumuladoUrl),
-            fetch(porcentajeVentasActualUrl),
-            fetch(porcentajeVentasPreviousUrl),
-            fetch(utilidadesUrl),
-            fetch(utilidadesAcumuladasUrl),
-            fetch(porcentajeUtilidadesUrl),
-            fetch(financialUrl),
-            fetch(salesCategoryUrl),
-            fetch(marginEarnignsUrl),
-            fetch(liquidezUrl)
-
+        //Grupo Ventas
+        const [ventasData, acumuladoData] = await Promise.all([
+            fetchData(`http://localhost:5179/api/Dashboard/sales/by-date?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`),
+            fetchData(`http://localhost:5179/api/Dashboard/sales/accumulated?endDate=${encodeURIComponent(endDate)}`)
         ]);
         
+        //Grupos ventas anteriores
+        const [ventasPreviousData, acumuladoPreviousData] = await Promise.all([
+            fetchData(`http://localhost:5179/api/Dashboard/sales/by-date?startDate=${encodeURIComponent(previousStartDate)}&endDate=${encodeURIComponent(previousEndDate)}`),
+            fetchData(`http://localhost:5179/api/Dashboard/sales/accumulated?endDate=${encodeURIComponent(previousEndDate)}`)
+        ]);
         
+        //Grupo Porcentaje Ventas
+        const [porcentajeVentasActual, porcentajeVentasPrevious] = await Promise.all([
+            fetchData(`http://localhost:5179/api/Dashboard/variation/income?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`),
+            fetchData(`http://localhost:5179/api/Dashboard/variation/income?startDate=${encodeURIComponent(previousStartDate)}&endDate=${encodeURIComponent(previousEndDate)}`)
+        ]);
 
-        if (!ventasResponse.ok) throw new Error(`Error ventas: ${ventasResponse.status}`);
-        if (!acumuladoResponse.ok) throw new Error(`Error acumulado: ${acumuladoResponse.status}`);
-        if (!ventasPreviousResponse.ok) throw new Error(`Error ventas anteriores: ${ventasPreviousResponse.status}`);
-        if (!ventasPreviousAcumuladoResponse.ok) throw new Error(`Error acumulado anterior: ${ventasPreviousAcumuladoResponse.status}`);
-        if (!porcentajeVentasActualResponse.ok) throw new Error(`Error porcentaje ventas actual: ${porcentajeVentasActualUrl.status}`);
-        if (!porcentajeVentasPreviousResponse.ok) throw new Error(`Error porcentaje ventas anterior: ${porcentajeVentasPreviousUrl.status}`);
-        if (!utilidadesResponse.ok) throw new Error(`Error utilidades: ${utilidadesResponse.status}`);
-        if (!utilidadesAcumuladasResponse.ok) throw new Error(`Error utilidades acumuladas: ${utilidadesAcumuladasResponse.status}`);
-        if (!porcentajeUtilidadesResponse.ok) throw new Error(`Error porcentaje utilidades: ${porcentajeUtilidadesResponse.status}`);
-        if (!financialResponse.ok) throw new Error(`Error financial: ${financialResponse.status}`);
-        if (!salesCategoryResponse.ok) throw new Error(`Error salesCategory: ${salesCategoryResponse.status}`);
-        if (!marginEarningsResponse.ok) throw new Error(`Error marginEarnings: ${marginEarningsResponse.status}`);
-        if (!liquidezResponse.ok) throw new Error(`Error liquidez: ${liquidezResponse.status}`);
+        //Grupo Utilidades
+        const [utilidadesData, utilidadesAcumuladasData, porcentajeUtilidades] = await Promise.all([
+            fetchData(`http://localhost:5179/api/Dashboard/annual-earnings?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`),
+            fetchData(`http://localhost:5179/api/Dashboard/accumulated-earnings?endDate=${encodeURIComponent(endDate)}`),
+            fetchData(`http://localhost:5179/api/Dashboard/variation/profit?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`)
+        ]);
+        
+        //Grupo Financial
+        const [financialData, salesCategoryData, marginEarningsData, liquidezData] = await Promise.all([
+            fetchData(`http://localhost:5179/api/Dashboard/profit-loss-byMonth/${year}`),
+            fetchData(`http://localhost:5179/api/Dashboard/sales-by-category?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`),
+            fetchData(`http://localhost:5179/api/Dashboard/margin-earnings?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`),
+            fetchData(`http://localhost:5179/api/Dashboard/liquidity-ratio?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`)
+        ]);
 
-        const ventasData = await ventasResponse.json();
-        const acumuladoData = await acumuladoResponse.json();
-        const ventasPreviousData = await ventasPreviousResponse.json();
-        const acumuladoPreviousData = await ventasPreviousAcumuladoResponse.json();
-        const porcentajeVentasActual = await porcentajeVentasActualResponse.json();
-        const porcentajeVentasPrevious = await porcentajeVentasPreviousResponse.json();
-        const utilidadesData = await utilidadesResponse.json();
-        const utilidadesAcumuladasData = await utilidadesAcumuladasResponse.json();
-        const porcentajeUtilidades = await porcentajeUtilidadesResponse.json();
-        const financialData = await financialResponse.json();
-        const salesCategoryData = await salesCategoryResponse.json();
-        const marginEarningsData = await marginEarningsResponse.json();
-        const liquidezData = await liquidezResponse.json();
+
+        
+        
 
        
         // 5. Actualizar la UI con los datos
@@ -195,6 +171,20 @@ async function loadData() {
         alert('Error al cargar los datos');
     }
 }
+
+async function fetchData(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('HTTP error  + ${response.status}');
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Error al cargar los datos');
+    }
+}
+
 
 function updateVariacion(elementId, value) {
     const element = document.getElementById(elementId);
@@ -218,8 +208,7 @@ function updateStats(ventas, acumulado,ventasPrevious, acumuladoPrevious, porcen
         currency: 'USD'
     });
 
-    //calulcar margen neto
-    //const margenNeto = (marginEarningsData.totalEarnings * 100).toFixed(2) ;
+    
 
     const margenNetoPorcentaje = parseFloat((marginEarningsData.totalEarnings * 100).toFixed(2));
     const metaMargenNetoUtilidades = 50.00;

@@ -396,7 +396,7 @@
             DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvComprobanteCompra.DefaultCellStyle = DataGridViewCellStyle17
-            Me.dgvComprobanteCompra.Location = New System.Drawing.Point(712, 262)
+            Me.dgvComprobanteCompra.Location = New System.Drawing.Point(437, 52)
             Me.dgvComprobanteCompra.Name = "dgvComprobanteCompra"
             Me.dgvComprobanteCompra.ReadOnly = True
             DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -407,7 +407,7 @@
             DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvComprobanteCompra.RowHeadersDefaultCellStyle = DataGridViewCellStyle18
-            Me.dgvComprobanteCompra.Size = New System.Drawing.Size(68, 50)
+            Me.dgvComprobanteCompra.Size = New System.Drawing.Size(297, 50)
             Me.dgvComprobanteCompra.TabIndex = 34
             '
             'dgvComprobanteRetencionCompra
@@ -464,7 +464,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(824, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(820, 32)
             Me.MenuStrip1.TabIndex = 184
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -523,6 +523,7 @@
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtSaldoLiquidacion)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.dgvLiquidacionesPendientes)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtFechaLiquidacion)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.dgvComprobanteCompra)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtTotalLiquidacion)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtFondoLiquidacion)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtGastosLiquidacion)
@@ -627,7 +628,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
-            Me.ClientSize = New System.Drawing.Size(824, 547)
+            Me.ClientSize = New System.Drawing.Size(820, 547)
             Me.Controls.Add(Me.chkSeleccionarTodo)
             Me.Controls.Add(Me.lblDeducibles)
             Me.Controls.Add(Me.KryptonGroupBox3)
@@ -638,7 +639,6 @@
             Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.dgvComprobanteRetencionCompra)
-            Me.Controls.Add(Me.dgvComprobanteCompra)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormRevisionLiquidaciones"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

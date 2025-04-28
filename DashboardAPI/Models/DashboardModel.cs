@@ -10,7 +10,7 @@ namespace DashboardAPI.Models
     }
     public class AccumulatedProfitLossEarnings
     {
-        public int NumberMonth { get; set; }
+        public long NumberMonth { get; set; }
         public string NameMonth { get; set; }
         public decimal TotalIncome { get; set; }
         public decimal TotalExpenses { get; set; }

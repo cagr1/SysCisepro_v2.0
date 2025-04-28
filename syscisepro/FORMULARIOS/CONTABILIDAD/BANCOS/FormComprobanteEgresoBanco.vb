@@ -392,7 +392,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     If frm.rbtPersonal.Checked Then
                         txtPagadoA.Tag = frm.dgvCustodios.CurrentRow.Cells.Item(0).Value
                         txtRucCi.Text = frm.dgvCustodios.CurrentRow.Cells.Item(3).Value
-                        txtPagadoA.Text = frm.dgvCustodios.CurrentRow.Cells.Item(4).Value & " " & frm.dgvCustodios.CurrentRow.Cells.Item(5).Value
+                        txtPagadoA.Text = frm.dgvCustodios.CurrentRow.Cells.Item(5).Value & " " & frm.dgvCustodios.CurrentRow.Cells.Item(4).Value
                     End If
                 End If
             Catch ex As Exception

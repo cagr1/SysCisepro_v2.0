@@ -6,6 +6,7 @@ using DashboardAPI.Data;
 using DashboardAPI.Services;
 using DashboardAPI.Models;
 using Microsoft.AspNetCore.OutputCaching;
+using System.Text.Json;
 
 namespace DashboardAPI.Controllers
 {
@@ -122,14 +123,24 @@ namespace DashboardAPI.Controllers
         //Endpoint para obtener reporte de Ingresos, Egresos y Utilidades
         [HttpGet("profit-loss-byMonth/{year}")]
         [OutputCache(Duration = 180, VaryByQueryKeys = new[] { "year" })]
-        public async Task<ActionResult<AccumulatedProfitLossEarnings>> GetAccumulatedProfitLossEarnings( int year)
+        public async Task<ActionResult<List<AccumulatedProfitLossEarnings>>> GetAccumulatedProfitLossEarnings( int year)
         {
             try
-            {
+            {  
+                                             
                 var data = await _dashboardService.GetAccumulatedProfitLossEarnings(year);
-                return Ok(data);
-                
-            }
+
+                var json = new JsonSerializerOptions()
+                {
+                  WriteIndented = false,
+                  IgnoreNullValues = true
+                };
+               
+               //return Ok(data);
+                //return Ok(JsonSerializer.Serialize(data, json)); 
+                return new JsonResult(data, json); // Return the JSON result with the specified options                
+            }                       
+
             catch (Exception ex)
             {
                 return StatusCode(500, $"Error: {ex.Message}");                
@@ -156,7 +167,7 @@ namespace DashboardAPI.Controllers
         //Endpoint para obtener ventas por categoria
         [HttpGet("sales-by-category")]
         [OutputCache(Duration = 180, VaryByQueryKeys = new[] { "startDate", "endDate" })]
-        public async Task<ActionResult<SalesbyCategory>> GetSalesbyCategoriesAsync([FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
+        public async Task<ActionResult<List<SalesbyCategory>>> GetSalesbyCategoriesAsync([FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
         {
             try
             {                
