@@ -62,7 +62,7 @@ async function renderFinancialChart(data) {
             xAxis: {
                 type: 'category',
                 boundaryGap: false,
-                data: data.map(d => d.nameMonth),
+                data: data.map(d => d.NameMonth),
                 axisLabel: {
                     rotate: 30,
                     fontWeight: 'bold'
@@ -107,7 +107,7 @@ async function renderFinancialChart(data) {
                     itemStyle: {
                         color: '#5470C6'
                     },
-                    data: data.map(d => d.totalIncome)
+                    data: data.map(d => d.TotalIncome)
                 },
                 {
                     name: 'Egresos',
@@ -132,7 +132,7 @@ async function renderFinancialChart(data) {
                     itemStyle: {
                         color: '#EE6666'
                     },
-                    data: data.map(d => -Math.abs(d.totalExpenses)) // Mostrar como valores negativos
+                    data: data.map(d => -Math.abs(d.TotalExpenses)) // Mostrar como valores negativos
                 },
                 {
                     name: 'Utilidad',
@@ -160,7 +160,7 @@ async function renderFinancialChart(data) {
                             yAxis: 0 // Línea de referencia en cero
                         }]
                     },
-                    data: data.map(d => d.totalEarnings)
+                    data: data.map(d => d.TotalEarnings)
                 }
             ]
         };

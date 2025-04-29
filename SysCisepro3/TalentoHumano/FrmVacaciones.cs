@@ -517,11 +517,11 @@ namespace SysCisepro3.TalentoHumano
                 return;
             }
 
-            if (dtpDesde.Value == dtpHasta.Value)
-            {
-                KryptonMessageBox.Show(@"Verifique la fecha de SALIDA - ENTRADA!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
-                return;
-            }
+            //if (dtpDesde.Value == dtpHasta.Value)
+            //{
+            //    KryptonMessageBox.Show(@"Verifique la fecha de SALIDA - ENTRADA!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            //    return;
+            //}
 
             var valor = chkCobro.Checked ? txtValorCobro.Text.Trim().Length > 0 ? Convert.ToDecimal(txtValorCobro.Text.Trim()) : 0 : 0;
 

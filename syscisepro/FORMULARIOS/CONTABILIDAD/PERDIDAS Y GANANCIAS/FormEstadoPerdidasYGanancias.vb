@@ -1924,6 +1924,11 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                     Return
                 End If
 
+                If dtpFechaDesdePresupuesto.Value > dtpFechaHastaPresupuesto.Value Then
+                    KryptonMessageBox.Show("La fecha no debe ser mayor a la fecha desde y debe ser menor a la fecha hasta", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    Return
+                End If
+
                 dgvPresupuesto.DataSource = Nothing
 
                 Dim dtPresupuesto As New DataTable()

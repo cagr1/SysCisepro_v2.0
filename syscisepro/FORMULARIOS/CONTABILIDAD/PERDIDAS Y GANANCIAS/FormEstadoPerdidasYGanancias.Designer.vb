@@ -424,7 +424,9 @@
             'KryptonGroupBox1
             '
             Me.KryptonGroupBox1.CaptionOverlap = 0R
+            Me.KryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption
             Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox
             Me.KryptonGroupBox1.Location = New System.Drawing.Point(6, 45)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
@@ -468,7 +470,9 @@
             'KryptonGroupBox2
             '
             Me.KryptonGroupBox2.CaptionOverlap = 0R
+            Me.KryptonGroupBox2.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption
             Me.KryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox2.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox
             Me.KryptonGroupBox2.Location = New System.Drawing.Point(6, 106)
             Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
             '
@@ -492,7 +496,11 @@
             Me.KryptonLabel6.Name = "KryptonLabel6"
             Me.KryptonLabel6.Size = New System.Drawing.Size(71, 22)
             Me.KryptonLabel6.StateNormal.LongText.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.KryptonLabel6.StateNormal.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
+            Me.KryptonLabel6.StateNormal.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.KryptonLabel6.StateNormal.ShortText.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.KryptonLabel6.StateNormal.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
+            Me.KryptonLabel6.StateNormal.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.KryptonLabel6.TabIndex = 271
             Me.KryptonLabel6.Values.Text = "Ingresos"
             '
@@ -515,7 +523,9 @@
             'KryptonGroupBox3
             '
             Me.KryptonGroupBox3.CaptionOverlap = 0R
+            Me.KryptonGroupBox3.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption
             Me.KryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox3.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox
             Me.KryptonGroupBox3.Location = New System.Drawing.Point(6, 372)
             Me.KryptonGroupBox3.Name = "KryptonGroupBox3"
             '
@@ -539,8 +549,12 @@
             Me.KryptonLabel7.Name = "KryptonLabel7"
             Me.KryptonLabel7.Size = New System.Drawing.Size(67, 22)
             Me.KryptonLabel7.StateNormal.LongText.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.KryptonLabel7.StateNormal.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
+            Me.KryptonLabel7.StateNormal.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.KryptonLabel7.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.KryptonLabel7.StateNormal.ShortText.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.KryptonLabel7.StateNormal.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
+            Me.KryptonLabel7.StateNormal.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.KryptonLabel7.TabIndex = 271
             Me.KryptonLabel7.Values.Text = "Egresos"
             '
@@ -563,13 +577,22 @@
             'KryptonNavigator1
             '
             Me.KryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None
+            Me.KryptonNavigator1.Button.CloseButtonAction = ComponentFactory.Krypton.Navigator.CloseButtonAction.RemovePageAndDispose
             Me.KryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide
+            Me.KryptonNavigator1.Button.ContextButtonAction = ComponentFactory.Krypton.Navigator.ContextButtonAction.SelectPage
+            Me.KryptonNavigator1.Button.ContextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
+            Me.KryptonNavigator1.Button.ContextMenuMapImage = ComponentFactory.Krypton.Navigator.MapKryptonPageImage.Small
+            Me.KryptonNavigator1.Button.ContextMenuMapText = ComponentFactory.Krypton.Navigator.MapKryptonPageText.TextTitle
+            Me.KryptonNavigator1.Button.NextButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
+            Me.KryptonNavigator1.Button.NextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
+            Me.KryptonNavigator1.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
+            Me.KryptonNavigator1.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
             Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 0)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
             Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage3, Me.KryptonPage2})
-            Me.KryptonNavigator1.SelectedIndex = 0
+            Me.KryptonNavigator1.SelectedIndex = 1
             Me.KryptonNavigator1.Size = New System.Drawing.Size(819, 670)
             Me.KryptonNavigator1.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonNavigator1.TabIndex = 294
@@ -720,6 +743,8 @@
             Me.chbxOcultarPresupuesto.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue
             Me.chbxOcultarPresupuesto.Size = New System.Drawing.Size(91, 18)
             Me.chbxOcultarPresupuesto.StateCommon.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chbxOcultarPresupuesto.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
+            Me.chbxOcultarPresupuesto.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.chbxOcultarPresupuesto.TabIndex = 296
             Me.chbxOcultarPresupuesto.Values.Text = "Quitar $0.00"
             '
@@ -874,6 +899,8 @@
             Me.chkOcultar.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue
             Me.chkOcultar.Size = New System.Drawing.Size(91, 18)
             Me.chkOcultar.StateCommon.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chkOcultar.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
+            Me.chkOcultar.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.chkOcultar.TabIndex = 252
             Me.chkOcultar.Values.Text = "Quitar $0.00"
             '

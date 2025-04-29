@@ -180,8 +180,8 @@ async function fetchData(url) {
         }
         return await response.json();
     } catch (error) {
-        console.error('Error:', error);
-        alert('Error al cargar los datos');
+        console.error('Error fetching:', url, error);
+        return [];
     }
 }
 
