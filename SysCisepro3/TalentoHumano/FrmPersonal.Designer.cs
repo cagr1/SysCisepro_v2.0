@@ -2355,7 +2355,7 @@
             this.kryptonPage2,
             this.kryptonPage4,
             this.kryptonPage5});
-            this.kryptonNavigator1.SelectedIndex = 0;
+            this.kryptonNavigator1.SelectedIndex = 2;
             this.kryptonNavigator1.Size = new System.Drawing.Size(849, 632);
             this.kryptonNavigator1.TabIndex = 218;
             this.kryptonNavigator1.Text = "kryptonNavigator1";
@@ -3077,7 +3077,7 @@
             // 
             // kryptonGroupBox4
             // 
-            this.kryptonGroupBox4.CaptionOverlap = 0.85D;
+            this.kryptonGroupBox4.CaptionOverlap = 0D;
             this.kryptonGroupBox4.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonAlternate;
             this.kryptonGroupBox4.Location = new System.Drawing.Point(2, 4);
             this.kryptonGroupBox4.Name = "kryptonGroupBox4";
