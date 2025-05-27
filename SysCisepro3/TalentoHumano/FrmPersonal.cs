@@ -420,11 +420,12 @@ namespace SysCisepro3.TalentoHumano
                     txtNumCuenta.Text = cuenta.Rows[0][2].ToString().Trim();
                     cbxTipoCuenta.Text = cuenta.Rows[0][3].ToString().Trim();
                 }
-                catch
+                catch (Exception ex)
                 {
                     txtNumCuenta.Clear();
                     cbxBanco.SelectedIndex = 0;
                     cbxTipoCuenta.SelectedIndex = 0;
+                    KryptonMessageBox.Show(ex.Message, @"Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
                 }
 
                 try
@@ -1175,12 +1176,27 @@ namespace SysCisepro3.TalentoHumano
             _objContratos.IdProyecto = (int)cbxProyecto.SelectedValue;
             _sqlCommands.Add(_objContratos.ModificarContratoCommand());
 
-            var CuentaPersonal = (DataRowView)cbxBanco.SelectedItem;
-            _objCuentaPersonal.IdBanco = Convert.ToInt32(CuentaPersonal["id_banco"]);
-            _objCuentaPersonal.IdPersonal = Convert.ToInt32(_objPersonal.IdPersonal);
-            _objCuentaPersonal.NumCuenta = txtNumCuenta.Text;
-            _objCuentaPersonal.Tipo = cbxTipoCuenta.SelectedItem.ToString();
-            _sqlCommands.Add(_objCuentaPersonal.ModificarCuentabancoPersonalcommand());
+            var cuenta = _objCuentaPersonal.SeleccionarCuenta(TipoCon, lblIdPersonal.Text.Trim());
+            if (cuenta.Rows.Count > 0)
+            {
+                var CuentaPersonal = (DataRowView)cbxBanco.SelectedItem;
+                _objCuentaPersonal.IdBanco = Convert.ToInt32(CuentaPersonal["id_banco"]);
+                _objCuentaPersonal.IdPersonal = Convert.ToInt32(_objPersonal.IdPersonal);
+                _objCuentaPersonal.NumCuenta = txtNumCuenta.Text;
+                _objCuentaPersonal.Tipo = cbxTipoCuenta.SelectedItem.ToString();
+                _sqlCommands.Add(_objCuentaPersonal.ModificarCuentabancoPersonalcommand());
+            }
+
+            else {
+                var CuentaPersonal = (DataRowView)cbxBanco.SelectedItem;
+                _objCuentaPersonal.IdBanco = Convert.ToInt32(CuentaPersonal["id_banco"]);
+                _objCuentaPersonal.IdPersonal = Convert.ToInt32(_objPersonal.IdPersonal);
+                _objCuentaPersonal.NumCuenta = txtNumCuenta.Text;
+                _objCuentaPersonal.Tipo = cbxTipoCuenta.SelectedItem.ToString();
+                _sqlCommands.Add(_objCuentaPersonal.RegistrarNuevoCuentaBancoPersonalCommand());
+
+            }
+            
 
 
 

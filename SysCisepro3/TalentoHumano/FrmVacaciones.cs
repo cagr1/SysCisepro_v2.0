@@ -167,7 +167,7 @@ namespace SysCisepro3.TalentoHumano
             _sqlCommands.Clear();
 
             var fechaDesde = dtpDesde.Value.Year + "-" + dtpDesde.Value.Month + "-" + dtpDesde.Value.Day + " 00:00:00";
-            var fechaHasta = dtpHasta.Value.AddDays(-1).Year + "-" + dtpHasta.Value.AddDays(-1).Month + "-" + dtpHasta.Value.AddDays(-1).Day + " 23:59:59";
+            var fechaHasta = dtpHasta.Value.Year + "-" + dtpHasta.Value.Month + "-" + dtpHasta.Value.Day + " 23:59:59";
 
             _objRegistroPermisoPersonal.IdRegistro = _objRegistroPermisoPersonal.BuscarMayorIdRegistroPermiso(TipoCon) + 1;
             _objRegistroPermisoPersonal.IdPersonal = Convert.ToInt32(txtIdPersonal.Text.Trim());
@@ -522,6 +522,16 @@ namespace SysCisepro3.TalentoHumano
             //    KryptonMessageBox.Show(@"Verifique la fecha de SALIDA - ENTRADA!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             //    return;
             //}
+
+            if (Convert.ToInt32(txtPendientes.Text.Trim()) < 0)
+            {
+                KryptonMessageBox.Show(@"El número de días no debe ser mayor a los días pendientes para el período seleccionado!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
+            }
+
+
+
+
 
             var valor = chkCobro.Checked ? txtValorCobro.Text.Trim().Length > 0 ? Convert.ToDecimal(txtValorCobro.Text.Trim()) : 0 : 0;
 

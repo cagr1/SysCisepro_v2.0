@@ -6,8 +6,9 @@
     public enum TipoConexion
     {             
                
-        Cisepro = 0,
-        Seportpac ,
+        
+        Seportpac = 0,
+        Cisepro ,
         Asenava
     }
 }

@@ -6,8 +6,9 @@
         ''' <remarks></remarks>
 
 
-        Cisepro = 0
-        Seportpac
+
+        Seportpac = 0
+        Cisepro
         Asenava
     End Enum
 End Namespace

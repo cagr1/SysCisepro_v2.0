@@ -259,7 +259,12 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                 dgvSecuencial.Columns(20).Visible = False
 
                 For Each row In dgvSecuencial.Rows
-                    Dim cantidad As Integer = Convert.ToInt32(row.Cells("STOCK").Value)
+                    Dim cantidad As Integer
+                    If IsDBNull(row.Cells("STOCK").Value) Then
+                        cantidad = 0
+                    Else
+                        cantidad = Convert.ToInt32(row.Cells("STOCK").Value)
+                    End If
                     If cantidad >= 10 And cantidad <= 30 Then
                         row.DefaultCellStyle.BackColor = Color.Orange
                         row.DefaultCellStyle.ForeColor = Color.Black
@@ -274,8 +279,9 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                 Next
 
                 dgvSecuencial.AutoResizeRows()
-            Catch
+            Catch ex As Exception
                 dgvSecuencial.DataSource = Nothing
+                KryptonMessageBox.Show(ex.Message, "Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
