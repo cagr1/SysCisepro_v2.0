@@ -1899,7 +1899,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 xml += "<ptoEmi>" & _ptoEmisionRetencion & "</ptoEmi>" & vbNewLine
                 xml += "<secuencial>" & _secuencialRetencion & "</secuencial>" & vbNewLine
                 xml += "<dirMatriz>" & DireccionEmpresaCisepro & "</dirMatriz>" & vbNewLine
-                xml += "<agenteRetencion>00000001</agenteRetencion>" & vbNewLine
+                xml += "<contribuyenteEspecial>NAC-DGERCGC25-00000011</contribuyenteEspecial>" & vbNewLine
                 xml += "</infoTributaria>" & vbNewLine  ' =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<infoCompRetencion>" & vbNewLine  ' =-=-=-=-=-=-=-=-=-=- INFORMACÍON DE LA RETENCION =-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<fechaEmision>" & Format(dtpComprobanteRetencion.Value, "dd/MM/yyyy") & "</fechaEmision>" & vbNewLine
@@ -2016,7 +2016,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 xml += "<ptoEmi>" & _ptoEmisionLiqCompra & "</ptoEmi>" & vbNewLine
                 xml += "<secuencial>" & _secuencialLiqCompra & "</secuencial>" & vbNewLine
                 xml += "<dirMatriz>" & DireccionEmpresaCisepro & "</dirMatriz>" & vbNewLine
-                xml += "<agenteRetencion>00000001</agenteRetencion>" & vbNewLine
+                xml += "<contribuyenteEspecial>NAC-DGERCGC25-00000011</contribuyenteEspecial>" & vbNewLine
                 xml += "</infoTributaria>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<infoLiquidacionCompra>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=- INFORMACÍON DE LA FACTURA =-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<fechaEmision>" & Format(dtpFechaEmisionComprobanteCompra.Value, "dd/MM/yyyy") & "</fechaEmision>" & vbNewLine

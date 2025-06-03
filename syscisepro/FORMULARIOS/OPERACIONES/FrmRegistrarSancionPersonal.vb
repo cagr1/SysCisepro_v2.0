@@ -993,6 +993,8 @@ Namespace FORMULARIOS.OPERACIONES
 
                     dtpFecha.Value = dgvNormal.CurrentRow.Cells.Item(4).Value
 
+                    dtpFecha.Tag = dgvNormal.CurrentRow.Cells.Item(13).Value
+
                     btnNuevo.Enabled = True
                     btnGuardar.Enabled = False
                     btnAnular.Enabled = True

@@ -761,7 +761,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 xml += "<ptoEmi>" & _ptoEmisionNotaCredito & "</ptoEmi>" & vbNewLine
                 xml += "<secuencial>" & _secuencialNotaCredito & "</secuencial>" & vbNewLine
                 xml += "<dirMatriz>" & _direccionEmpresa & "</dirMatriz>" & vbNewLine
-                xml += "<agenteRetencion>00000001</agenteRetencion>" & vbNewLine
+                xml += "<contribuyenteEspecial>NAC-DGERCGC25-00000011</contribuyenteEspecial>" & vbNewLine
                 xml += "</infoTributaria>" & vbNewLine      ' =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<infoNotaCredito>" & vbNewLine      ' =-=-=-=-=-=-=-=-=-=- INFORMACÍON DE LA NOTA DE CREDITO -=-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<fechaEmision>" & Format(dtpFechaEmisionNotaCredito.Value, "dd/MM/yyyy") & "</fechaEmision>" & vbNewLine

@@ -1199,7 +1199,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 xml += "<ptoEmi>" & lblPtoEmisionFacturaEmpresa.Text & "</ptoEmi>" & vbNewLine
                 xml += "<secuencial>" & lblNumeroFacturaVenta.Text & "</secuencial>" & vbNewLine
                 xml += "<dirMatriz>" & txtDireccionEmpresa.Text & "</dirMatriz>" & vbNewLine
-                xml += "<agenteRetencion>00000001</agenteRetencion>" & vbNewLine 'Modificacion 01/04/24
+                xml += "<contribuyenteEspecial>NAC-DGERCGC25-00000011</contribuyenteEspecial>" & vbNewLine 'Modificacion 01/04/24
                 xml += "</infoTributaria>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<infoFactura>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=- INFORMACÍON DE LA FACTURA =-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<fechaEmision>" & Format(dtpFechaEmisionFacturaVenta.Value, "dd/MM/yyyy") & "</fechaEmision>" & vbNewLine

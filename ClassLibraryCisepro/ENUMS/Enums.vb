@@ -7,8 +7,9 @@
 
 
 
-        Seportpac = 0
-        Cisepro
+
+        Cisepro = 0
+        Seportpac
         Asenava
     End Enum
 End Namespace
