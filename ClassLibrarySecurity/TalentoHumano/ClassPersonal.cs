@@ -32,7 +32,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
         public string PasaportePersonal { get; set; }
         public decimal PesoPersonal { get; set; }
         public int EdadPersonal { get; set; }
-        public string PruebaAntidrogaPersona{ get; set; }
+        public string PruebaAntidrogaPersona { get; set; }
         public DateTime FechaEntradaPersonal { get; set; }
         public DateTime FechaSalidaPersonal { get; set; }
         public int EstadoPersonal { get; set; }
@@ -40,7 +40,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
         public int IdCargoPersonal { get; set; }
         public string UbicacionPersonal { get; set; }
         public string EstadoCivilPersonal { get; set; }
-        public string InstruccionPersonal { get; set; } 
+        public string InstruccionPersonal { get; set; }
         public string MovilPersonal { get; set; }
         public string TelefonoPersonal { get; set; }
         public string EmailPersonal { get; set; }
@@ -79,7 +79,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
 
         public int BuscarMayorId(TipoConexion tipoCon)
         {
-            var data =  ComandosSql.SeleccionarQueryToDataTable(tipoCon, "BuscarMayorId", true)  ;
+            var data = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "BuscarMayorId", true);
             return data.Rows.Count == 0 ? 0 : data.Rows[0][0] == DBNull.Value ? 0 : Convert.ToInt32(data.Rows[0][0]);
         }
 
@@ -87,9 +87,9 @@ namespace ClassLibraryCisepro3.TalentoHumano
         {
             var pars = new List<object[]>
             {
-                new object[] { "ID_PERSONAL", SqlDbType.Int, id } 
+                new object[] { "ID_PERSONAL", SqlDbType.Int, id }
             };
-            var data =  ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "SELECT NOMBRES FROM dbo.PERSONAL WHERE   @ID_PERSONAL=ID_PERSONAL;", false, pars);
+            var data = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "SELECT NOMBRES FROM dbo.PERSONAL WHERE   @ID_PERSONAL=ID_PERSONAL;", false, pars);
             return data.Rows.Count == 0 ? string.Empty : data.Rows[0]["NOMBRES"].ToString();
         }
 
@@ -97,9 +97,9 @@ namespace ClassLibraryCisepro3.TalentoHumano
         {
             var pars = new List<object[]>
             {
-                new object[] { "CEDULA", SqlDbType.VarChar, ced } 
+                new object[] { "CEDULA", SqlDbType.VarChar, ced }
             };
-            var data = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "SELECT apellidos + ' ' + NOMBRES datos FROM PERSONAL WHERE CEDULA=@CEDULA;", false, pars) ;
+            var data = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "SELECT apellidos + ' ' + NOMBRES datos FROM PERSONAL WHERE CEDULA=@CEDULA;", false, pars);
             return data.Rows.Count == 0 ? string.Empty : data.Rows[0]["datos"].ToString();
         }
 
@@ -119,7 +119,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
         //        new object[] { "orden", SqlDbType.Int,  orden },
         //        new object[] { "desde", SqlDbType.DateTime, desde } ,
         //        new object[] { "hasta", SqlDbType.DateTime, hasta },
-            
+
         //    };
         //    return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "SeleccionarTodosRegistrosPersonalPorFiltros", true, pars);
         //}
@@ -132,12 +132,12 @@ namespace ClassLibraryCisepro3.TalentoHumano
                 new object[] { "mi", SqlDbType.Int,  mi },
                 new object[] { "mf", SqlDbType.Int, mf },
                     };
-            
+
             return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_seleccionarCumpleaneros", true, pars);
         }
-         
+
         public DataTable SeleccionarPersonalPorCulminarProyecto(TipoConexion tipoCon)
-        { 
+        {
             var sql = "select p.id_personal ID, p.fecha_entrada INGRESO, p.cedula CI, p.apellidos + ' ' + p.nombres NOMBRES, s.nombre_sitio_trabajo PUESTO, t.NOMBRE_PROYECTO, t.FECHA_INICIO, t.FECHA_FIN, DATEDIFF(DAY, GETDATE(), t.FECHA_FIN) DIAS from personal p join contrato c on p.id_personal = c.id_personal join CONTRATO_PROYECTO t on c.ID_PROYECTO=t.ID_PROYECTO join sitios_trabajo s on p.ubicacion=s.id_sitio_trabajo join cliente_general g on s.id_cliente_general=g.id_cliente_general where (p.estado_personal = 1 and c.estado_contrato='VIGENTE' and t.ID_PROYECTO > 1) and DATEDIFF(DAY, GETDATE(), t.FECHA_FIN) < 15;";
             return ComandosSql.SeleccionarQueryToDataTable(tipoCon, sql, false);
         }
@@ -158,7 +158,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
         {
             var pars = new List<object[]>
             {
-                new object[] { "FILTRO", SqlDbType.Int,  idp } 
+                new object[] { "FILTRO", SqlDbType.Int,  idp }
             };
             return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select top 1 * from personal where id_personal = @FILTRO;", false, pars);
         }
@@ -169,12 +169,12 @@ namespace ClassLibraryCisepro3.TalentoHumano
         }
 
         public DataTable SeleccionarFotoPersonalPorId(TipoConexion tipoCon, int idp)
-        { 
+        {
             var pars = new List<object[]>
             {
-                new object[] { "FILTRO", SqlDbType.Int,  idp } 
+                new object[] { "FILTRO", SqlDbType.Int,  idp }
             };
-            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select top 1 foto from personal where id_personal = @FILTRO;", false, pars) ;
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select top 1 foto from personal where id_personal = @FILTRO;", false, pars);
         }
 
         public DataTable SeleccionarPersonal(TipoConexion tipoCon, string fil, bool soloActivos, int tipo)
@@ -184,18 +184,18 @@ namespace ClassLibraryCisepro3.TalentoHumano
 
             var pars = new List<object[]>
             {
-                new object[] { "FIL", SqlDbType.VarChar,  string.Concat("%", fil, "%") } 
+                new object[] { "FIL", SqlDbType.VarChar,  string.Concat("%", fil, "%") }
             };
-            return  ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select P.ID_PERSONAL, P.CEDULA, P.APELLIDOS + ' ' + P.NOMBRES NOMINA, C.DESCRIPCION, p.*, c.id_cargo_ocupacional, a.nombre_area, a.id_gerencias_general from PERSONAL P  JOIN CARGO_OCUPACIONAL C ON P.ID_CARGO_OCUPACIONAL=C.ID_CARGO_OCUPACIONAL  join area_general a on p.id_area = a.id_area_general WHERE " + est + tip + " (P.CEDULA LIKE @FIL OR P.APELLIDOS LIKE @FIL OR P.NOMBRES LIKE @FIL);", false, pars) ;
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select P.ID_PERSONAL, P.CEDULA, P.APELLIDOS + ' ' + P.NOMBRES NOMINA, C.DESCRIPCION, p.*, c.id_cargo_ocupacional, a.nombre_area, a.id_gerencias_general from PERSONAL P  JOIN CARGO_OCUPACIONAL C ON P.ID_CARGO_OCUPACIONAL=C.ID_CARGO_OCUPACIONAL  join area_general a on p.id_area = a.id_area_general WHERE " + est + tip + " (P.CEDULA LIKE @FIL OR P.APELLIDOS LIKE @FIL OR P.NOMBRES LIKE @FIL);", false, pars);
         }
 
         public int BuscarCedulaExistente(TipoConexion tipoCon, string cedula)
         {
             var pars = new List<object[]>
             {
-                new object[] { "CEDULA", SqlDbType.VarChar, cedula } 
+                new object[] { "CEDULA", SqlDbType.VarChar, cedula }
             };
-            var data =   ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "buscarCedulaExistente", true, pars)  ;
+            var data = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "buscarCedulaExistente", true, pars);
             return data.Rows.Count == 0 ? 0 : data.Rows[0][0] == DBNull.Value ? 0 : Convert.ToInt32(data.Rows[0][0]);
         }
 
@@ -203,7 +203,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
         {
             var pars = new List<object[]>
             {
-                new object[] { "CEDULA", SqlDbType.VarChar, string.Concat("%", cedula, "%") } 
+                new object[] { "CEDULA", SqlDbType.VarChar, string.Concat("%", cedula, "%") }
             };
             return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select id_notificacion ID, num_notificacion NUM_DOC, fecha_notificacion FECHA, cedularuc CI_RUC, apellidos_nombres NOMBRE, detalle_notificacion DETALLE  from notificaciones_denuncias where cedularuc like @cedula and estado=1;", false, pars);
         }
@@ -212,7 +212,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
         //{
 
 
-            
+
         //    var proye = proy == 0 ? string.Empty : " where tab.ID_PROYECTO=" + proy;
         //    var tipoPer = tipoPers == 0 ? string.Empty : "a.ID_GERENCIAS_GENERAL=" + tipoPers + " and ";
         //    var f = ingre ? "p.fecha_entrada" : "p.fecha_salida";
@@ -220,7 +220,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
         //    string sql;
 
         //    if (estado.Equals("2"))
-               
+
         //    {
         //        o = orden == 0 ? "tab.APELLIDOS, tab.NOMBRES" : orden == 1 ? "tab.FECHA_INICIAL_CONTRATO" : "tab.FECHA_VENCIMIENTO_CONTRATO";
         //        sql =
@@ -264,7 +264,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
         //        "WHERE " + estado + tipoPer + " (p.APELLIDOS like @FILTRO OR p.NOMBRES like @FILTRO OR p.CEDULA like @FILTRO) and (" + f +
         //        " between @desde and @hasta)) as tab " + proye + " ORDER BY " + o;
         //    }
-              
+
         //    var pars = new List<object[]>
         //    {
         //        new object[] { "FILTRO", SqlDbType.VarChar, string.Concat("%", filtro, "%") },
@@ -273,17 +273,17 @@ namespace ClassLibraryCisepro3.TalentoHumano
         //       // new object[] { "proy", SqlDbType.Int, proy },
         //        //new object[] { "tipoPers", SqlDbType.Int, tipoPers },
         //        //new object[] { "estado", SqlDbType.VarChar, estado }
-    
+
         //    };
         //    return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, sql, false, pars);
         //}
 
-        
-        public DataTable SeleccionarTodosRegistrosPersonalPorFiltros(TipoConexion tipoCon, int proy, int tipoPers, string estado, string filtro, bool ingre, int orden,  string desde, string hasta )
+
+        public DataTable SeleccionarTodosRegistrosPersonalPorFiltros(TipoConexion tipoCon, int proy, int tipoPers, string estado, string filtro, bool ingre, int orden, string desde, string hasta)
         {
 
 
-                       
+
 
             var pars = new List<object[]>
             {
@@ -295,7 +295,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
                 new object[] { "orden", SqlDbType.Int,  orden },
                 new object[] { "desde", SqlDbType.DateTime, desde } ,
                 new object[] { "hasta", SqlDbType.DateTime, hasta },
-            
+
             };
             return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "SeleccionarTodosRegistrosPersonalPorFiltros", true, pars);
         }
@@ -325,35 +325,35 @@ namespace ClassLibraryCisepro3.TalentoHumano
         {
             var pars = new List<object[]>
             {
-                new object[] { "FILTRO", SqlDbType.VarChar, fil } 
+                new object[] { "FILTRO", SqlDbType.VarChar, fil }
             };
-            return  ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "SeleccionarTodosRegistrosPersonalFiltroTodos", true, pars) ; 
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "SeleccionarTodosRegistrosPersonalFiltroTodos", true, pars);
         }
-         
+
         public DataTable SeleccionarTodosRegistrosPersonalFiltroFull(TipoConexion tipoCon, string fil)
         {
             var pars = new List<object[]>
             {
-                new object[] { "FILTRO", SqlDbType.VarChar, fil } 
+                new object[] { "FILTRO", SqlDbType.VarChar, fil }
             };
-            return   ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select * from PERSONAL where cedula = @FILTRO;", false, pars)  ;
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select * from PERSONAL where cedula = @FILTRO;", false, pars);
         }
 
         public DataSet BuscarPersonalPorIdsInPersonal(TipoConexion tipoCon, List<string> ids)
-        
+
         {
             var lids = ids.Aggregate("(", (current, id) => current + (id + ","));
-            lids = lids.EndsWith(",") ? lids.Substring(0, lids.Length - 1)+")" : lids+")";
+            lids = lids.EndsWith(",") ? lids.Substring(0, lids.Length - 1) + ")" : lids + ")";
 
-            
 
-            var per =  ComandosSql.SeleccionarQueryToDataTable(tipoCon, "SELECT * FROM dbo.PERSONAL WHERE ESTADO_PERSONAL=1 AND ID_PERSONAL in " + lids, false);
+
+            var per = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "SELECT * FROM dbo.PERSONAL WHERE ESTADO_PERSONAL=1 AND ID_PERSONAL in " + lids, false);
             per.TableName = "PERSONAL";
 
-            var are =  ComandosSql.SeleccionarQueryToDataTable( tipoCon,"SELECT * FROM dbo.AREA_GENERAL WHERE  ESTADO_AREA=1", false) ;
+            var are = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "SELECT * FROM dbo.AREA_GENERAL WHERE  ESTADO_AREA=1", false);
             are.TableName = "AREA_GENERAL";
 
-            var car =  ComandosSql.SeleccionarQueryToDataTable( tipoCon,"SELECT * FROM dbo.CARGO_OCUPACIONAL WHERE  ESTADO=1", false) ;
+            var car = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "SELECT * FROM dbo.CARGO_OCUPACIONAL WHERE  ESTADO=1", false);
             car.TableName = "CARGO_OCUPACIONAL";
 
             var ds = new DataSet();
@@ -364,7 +364,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
         }
 
         public DataSet BuscarPersonalPorIdsInPersonalProyecto(TipoConexion tipoCon, List<string> ids)
-        
+
         {
 
             var lids = ids.Aggregate("(", (current, id) => current + (id + ","));
@@ -398,15 +398,15 @@ namespace ClassLibraryCisepro3.TalentoHumano
         {
             var pars = new List<object[]>
             {
-                new object[] { "ID_PERSONAL", SqlDbType.Int, idp } 
+                new object[] { "ID_PERSONAL", SqlDbType.Int, idp }
             };
-            var per =  ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "buscarPersonalPorIdPersonal", true, pars) ;
+            var per = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "buscarPersonalPorIdPersonal", true, pars);
             per.TableName = "PERSONAL";
 
             //var are =  ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "SELECT * FROM dbo.AREA_GENERAL WHERE  ESTADO_AREA=1", false, pars)  ;
             //are.TableName = "AREA_GENERAL";
 
-            var car =  ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "SELECT * FROM dbo.CARGO_OCUPACIONAL WHERE  ESTADO=1", false, pars)  ;
+            var car = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "SELECT * FROM dbo.CARGO_OCUPACIONAL WHERE  ESTADO=1", false, pars);
             car.TableName = "CARGO_OCUPACIONAL";
 
             //var con = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "SELECT CASE WHEN CONTRATO.FECHA_VENCIMIENTO_CONTRATO = '1990-01-01 00:00:00.000' THEN 'SIN FECHA DE VENCIMIENTO' ELSE CONVERT(VARCHAR, CONTRATO.FECHA_VENCIMIENTO_CONTRATO, 120) END AS FECHA_VENCIMIENTO FROM CONTRATO WHERE  CONTRATO.ESTADO_CONTRATO = 'VIGENTE'", false, pars);
@@ -429,7 +429,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
         {
             var pars = new List<object[]>
             {
-                new object[] { "FILTRO", SqlDbType.VarChar, string.Concat("%", fil, "%") } 
+                new object[] { "FILTRO", SqlDbType.VarChar, string.Concat("%", fil, "%") }
             };
             return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select p.id_personal ID, p.CEDULA, p.APELLIDOS + ' ' + p.NOMBRES NOMBRES, p.FOTO, p.FECHA_ENTRADA, c.DESCRIPCION, g.ID_GERENCIAS_GENERAL, (select top 1 si.nombre_sitio_trabajo+ ' (' + cl.nompre_razon_social_cliente_general  + ')' from detalle_programacion dp  join sitios_trabajo si on dp.id_puesto=si.id_sitio_trabajo join cliente_general cl on si.id_cliente_general=cl.id_cliente_general where dp.id_personal = p.id_personal order by dp.id_programacion desc, dp.fecha_desde desc) puesto from personal p join CARGO_OCUPACIONAL c on p.ID_CARGO_OCUPACIONAL = c.ID_CARGO_OCUPACIONAL join AREA_GENERAL a on p.ID_AREA = a.ID_AREA_GENERAL join GERENCIAS_GENERAL g on a.ID_GERENCIAS_GENERAL = g.ID_GERENCIAS_GENERAL where p.estado_personal = 1 and (p.cedula like @FILTRO or p.nombres like @FILTRO or p.apellidos like @FILTRO);", false, pars);
         }
@@ -443,7 +443,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
             };
             cmd.Parameters.AddWithValue("@id_secuencia", SqlDbType.BigInt).Value = idSec;
             cmd.Parameters.AddWithValue("@digit", SqlDbType.BigInt).Value = digit;
-            cmd.Parameters.AddWithValue("@anio", SqlDbType.BigInt).Value = anio; 
+            cmd.Parameters.AddWithValue("@anio", SqlDbType.BigInt).Value = anio;
             return cmd;
         }
 
@@ -594,7 +594,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
                 "update personal set estado_personal = 0, fecha_salida = @fsa, CREDENCIAL = 0 where ID_PERSONAL= @ID_PERSONAL;"
             };
             cmd.Parameters.AddWithValue("@ID_PERSONAL", SqlDbType.Int).Value = IdPersonal;
-            cmd.Parameters.AddWithValue("@fsa", SqlDbType.DateTime).Value = fechaSalida; 
+            cmd.Parameters.AddWithValue("@fsa", SqlDbType.DateTime).Value = fechaSalida;
             return cmd;
         }
 
@@ -614,12 +614,12 @@ namespace ClassLibraryCisepro3.TalentoHumano
             var t = "";
             if (estado != 2) t += " p.estado_personal = " + estado + " and ";
             if (tipo != 0) t += " a.id_gerencias_general = " + tipo + " and ";
-             
+
             var sql = "select p.id_personal, p.cedula, (p.apellidos + ' ' +p.nombres) nomina, p.instruccion, p.direccion direccion1, 'S/N' numero, '' direccion2, '' referencia, p.ciudad, p.parroquia, '' ciudadela, '' sector, p.telefono, p.movil, p.email, '' correoins, a.nombre_area, '' postal, g.nombre_gerencias from personal p join area_general a on p.id_area = a.id_area_general join gerencias_general g on a.id_gerencias_general = g.id_gerencias_general where " + t + " (p.cedula like @FILTRO or p.apellidos like @FILTRO or p.nombres like @FILTRO) order by p.apellidos, p.nombres";
 
             var pars = new List<object[]>
             {
-                new object[] { "FILTRO", SqlDbType.VarChar, string.Concat("%", filtro, "%") }  
+                new object[] { "FILTRO", SqlDbType.VarChar, string.Concat("%", filtro, "%") }
             };
             return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, sql, false, pars);
         }
@@ -658,6 +658,14 @@ namespace ClassLibraryCisepro3.TalentoHumano
 
         }
 
+        public DataTable BuscarPersonalControlAntidroga(TipoConexion tipoCon, string Filtro)
+        {
+            var pars = new List<object[]>
+            {
+                new object[] { "@FILTRO", SqlDbType.VarChar, Filtro }
+            };
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_BuscarPersonalControlAntidroga", true, pars);
 
+        }
     }
 }

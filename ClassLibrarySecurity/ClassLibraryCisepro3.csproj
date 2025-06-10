@@ -98,6 +98,7 @@
     <Compile Include="TalentoHumano\ClassNotificacionesDenuncias.cs" />
     <Compile Include="TalentoHumano\ClassParametrosRol.cs" />
     <Compile Include="TalentoHumano\ClassPersonal.cs" />
+    <Compile Include="TalentoHumano\ClassPersonalControl.cs" />
     <Compile Include="TalentoHumano\ClassRegistroPermisoPersonal.cs" />
     <Compile Include="TalentoHumano\ClassRolesFirmados.cs" />
     <Compile Include="TalentoHumano\ClassRolPago.cs" />

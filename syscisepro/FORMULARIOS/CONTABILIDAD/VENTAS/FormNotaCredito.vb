@@ -738,6 +738,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub ExportarXml()
             Try
                 Dim ruta As String
+                Dim nres = _objetoInformacionTributaria.SeleccionarNroResolucionAgenteRetencion(_tipoCon)
                 Select Case _tipoCon
                     Case TipoConexion.Asenava
                         ruta = RutaDocsElec & "\COMPROBANTES GENERADOS\FACTURAS - RETENCIONES FONDO\NOTA CREDITO " & _numeroNotaCredito & ".xml"
@@ -761,11 +762,11 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 xml += "<ptoEmi>" & _ptoEmisionNotaCredito & "</ptoEmi>" & vbNewLine
                 xml += "<secuencial>" & _secuencialNotaCredito & "</secuencial>" & vbNewLine
                 xml += "<dirMatriz>" & _direccionEmpresa & "</dirMatriz>" & vbNewLine
-                xml += "<contribuyenteEspecial>NAC-DGERCGC25-00000011</contribuyenteEspecial>" & vbNewLine
                 xml += "</infoTributaria>" & vbNewLine      ' =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<infoNotaCredito>" & vbNewLine      ' =-=-=-=-=-=-=-=-=-=- INFORMACÍON DE LA NOTA DE CREDITO -=-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<fechaEmision>" & Format(dtpFechaEmisionNotaCredito.Value, "dd/MM/yyyy") & "</fechaEmision>" & vbNewLine
                 xml += "<dirEstablecimiento>" & _direccionEmpresa & "</dirEstablecimiento>" & vbNewLine
+                xml += "<contribuyenteEspecial>" & nres & "</contribuyenteEspecial>" & vbNewLine
                 xml += "<tipoIdentificacionComprador>" & _tipoIdentificacionCliente & "</tipoIdentificacionComprador>" & vbNewLine
                 xml += "<razonSocialComprador>" & txtNombreComercialCliente.Text & "</razonSocialComprador>" & vbNewLine
                 xml += "<identificacionComprador>" & lblRucClienteGenral.Text & "</identificacionComprador>" & vbNewLine
@@ -820,7 +821,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 End If
                 xml += "</detalles>" & vbNewLine      ' =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     
                 xml += "<infoAdicional>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=- INFORMACÍON ADICIONAL DEL SERVICIO PRESTADO =-=-=-=-=-=-=-=-=-=-=-=-=
-                xml += "<campoAdicional nombre='Informacion'>Agente de retencion segun resolucion N. " & _objetoInformacionTributaria.SeleccionarNroResolucionAgenteRetencion(_tipoCon) & ". </campoAdicional>" & vbNewLine
+                xml += "<campoAdicional nombre='Informacion'> </campoAdicional>" & vbNewLine
                 xml += "</infoAdicional>" & vbNewLine
                 xml += "</notaCredito>" & vbNewLine
 

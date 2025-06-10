@@ -572,6 +572,12 @@
       <DependentUpon>rptSolicitudVacaciones.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="TalentoHumano\FrmAgregarPersonalControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmAgregarPersonalControl.Designer.cs">
+      <DependentUpon>FrmAgregarPersonalControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="TalentoHumano\FrmAgregarPersonalRolPago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -867,6 +873,9 @@
     <EmbeddedResource Include="Reportes\rptSolicitudVacaciones.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptSolicitudVacaciones.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmAgregarPersonalControl.resx">
+      <DependentUpon>FrmAgregarPersonalControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TalentoHumano\FrmAgregarPersonalRolPago.resx">
       <DependentUpon>FrmAgregarPersonalRolPago.cs</DependentUpon>

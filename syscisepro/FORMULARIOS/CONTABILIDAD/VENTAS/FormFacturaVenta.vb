@@ -1199,11 +1199,11 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 xml += "<ptoEmi>" & lblPtoEmisionFacturaEmpresa.Text & "</ptoEmi>" & vbNewLine
                 xml += "<secuencial>" & lblNumeroFacturaVenta.Text & "</secuencial>" & vbNewLine
                 xml += "<dirMatriz>" & txtDireccionEmpresa.Text & "</dirMatriz>" & vbNewLine
-                xml += "<contribuyenteEspecial>NAC-DGERCGC25-00000011</contribuyenteEspecial>" & vbNewLine 'Modificacion 01/04/24
                 xml += "</infoTributaria>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<infoFactura>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=- INFORMACÍON DE LA FACTURA =-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<fechaEmision>" & Format(dtpFechaEmisionFacturaVenta.Value, "dd/MM/yyyy") & "</fechaEmision>" & vbNewLine
                 xml += "<dirEstablecimiento>" & txtDireccionEmpresa.Text & "</dirEstablecimiento>" & vbNewLine
+                xml += "<contribuyenteEspecial>" & nres & "</contribuyenteEspecial>" & vbNewLine 'Modificacion 01/04/24
                 'xml += "<contribuyenteEspecial>" & _numAutoContEspecial & "</contribuyenteEspecial>" & vbNewLine
                 xml += "<obligadoContabilidad>SI</obligadoContabilidad>" & vbNewLine
                 xml += "<tipoIdentificacionComprador>" & _tipoIdentificacionCliente & "</tipoIdentificacionComprador>" & vbNewLine
@@ -1266,7 +1266,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 End If
                 xml += "</detalles>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<infoAdicional>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=- INFORMACÍON ADICIONAL DEL SERVICIO PRESTADO =-=-=-=-=-=-=-=-=-=-=-=-=
-                xml += "<campoAdicional nombre='Informacion'>Agente de retencion segun resolucion N. " & nres & ". </campoAdicional>" & vbNewLine
+                xml += "<campoAdicional nombre='Informacion'> </campoAdicional>" & vbNewLine
                 If _tipoCon = TipoConexion.Seportpac Then
                     xml += "<campoAdicional nombre='Retencion'>Por favor remitir su retencion en el plazo estipulado por la ley a nuestras direcciones. Correo: seportpac@hotmail.com;</campoAdicional>" & vbNewLine
                 Else

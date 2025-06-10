@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPersonal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.ButtonNuevoRegistro = new System.Windows.Forms.ToolStripButton();
@@ -197,6 +197,9 @@
             this.kryptonNavigator1 = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
             this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.btnPersonal = new System.Windows.Forms.Button();
+            this.txtPrueba = new System.Windows.Forms.TextBox();
+            this.kryptonLabel68 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel43 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel42 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel41 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -220,10 +223,7 @@
             this.kryptonLabel25 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel24 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel23 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel22 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel21 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel20 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel19 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel18 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel17 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel16 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -301,7 +301,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
-            this.panelEsatdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
@@ -1153,7 +1152,7 @@
             this.chkcredencial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(228)))), ((int)(((byte)(243)))));
             this.chkcredencial.Enabled = false;
             this.chkcredencial.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkcredencial.Location = new System.Drawing.Point(405, 186);
+            this.chkcredencial.Location = new System.Drawing.Point(401, 56);
             this.chkcredencial.Name = "chkcredencial";
             this.chkcredencial.Size = new System.Drawing.Size(15, 14);
             this.chkcredencial.TabIndex = 188;
@@ -1165,7 +1164,7 @@
             this.label42.BackColor = System.Drawing.Color.Transparent;
             this.label42.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            this.label42.Location = new System.Drawing.Point(336, 187);
+            this.label42.Location = new System.Drawing.Point(336, 57);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(60, 13);
             this.label42.TabIndex = 187;
@@ -1179,7 +1178,7 @@
             this.cbmProvincia.Enabled = false;
             this.cbmProvincia.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmProvincia.FormattingEnabled = true;
-            this.cbmProvincia.Location = new System.Drawing.Point(84, 210);
+            this.cbmProvincia.Location = new System.Drawing.Point(84, 179);
             this.cbmProvincia.Name = "cbmProvincia";
             this.cbmProvincia.Size = new System.Drawing.Size(111, 21);
             this.cbmProvincia.TabIndex = 15;
@@ -1193,7 +1192,7 @@
             this.cbmCanton.Enabled = false;
             this.cbmCanton.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmCanton.FormattingEnabled = true;
-            this.cbmCanton.Location = new System.Drawing.Point(263, 209);
+            this.cbmCanton.Location = new System.Drawing.Point(259, 182);
             this.cbmCanton.Name = "cbmCanton";
             this.cbmCanton.Size = new System.Drawing.Size(111, 21);
             this.cbmCanton.TabIndex = 16;
@@ -1205,7 +1204,7 @@
             this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtEmail.Enabled = false;
             this.txtEmail.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(84, 291);
+            this.txtEmail.Location = new System.Drawing.Point(84, 258);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(162, 21);
             this.txtEmail.TabIndex = 21;
@@ -1217,7 +1216,7 @@
             this.cbmParroquia.Enabled = false;
             this.cbmParroquia.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmParroquia.FormattingEnabled = true;
-            this.cbmParroquia.Location = new System.Drawing.Point(84, 236);
+            this.cbmParroquia.Location = new System.Drawing.Point(84, 205);
             this.cbmParroquia.Name = "cbmParroquia";
             this.cbmParroquia.Size = new System.Drawing.Size(111, 21);
             this.cbmParroquia.TabIndex = 17;
@@ -1227,7 +1226,7 @@
             this.txtTelefono.BackColor = System.Drawing.Color.White;
             this.txtTelefono.Enabled = false;
             this.txtTelefono.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(262, 234);
+            this.txtTelefono.Location = new System.Drawing.Point(259, 208);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(60, 21);
             this.txtTelefono.TabIndex = 19;
@@ -1240,10 +1239,10 @@
             this.txtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDireccion.Enabled = false;
             this.txtDireccion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(84, 263);
+            this.txtDireccion.Location = new System.Drawing.Point(84, 232);
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(346, 21);
+            this.txtDireccion.Size = new System.Drawing.Size(335, 21);
             this.txtDireccion.TabIndex = 18;
             // 
             // txtMovil
@@ -1251,7 +1250,7 @@
             this.txtMovil.BackColor = System.Drawing.Color.White;
             this.txtMovil.Enabled = false;
             this.txtMovil.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMovil.Location = new System.Drawing.Point(370, 234);
+            this.txtMovil.Location = new System.Drawing.Point(359, 207);
             this.txtMovil.Name = "txtMovil";
             this.txtMovil.Size = new System.Drawing.Size(60, 21);
             this.txtMovil.TabIndex = 20;
@@ -1263,7 +1262,7 @@
             this.dateTimePicker2.Enabled = false;
             this.dateTimePicker2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(735, 281);
+            this.dateTimePicker2.Location = new System.Drawing.Point(729, 284);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(93, 21);
             this.dateTimePicker2.TabIndex = 203;
@@ -1273,7 +1272,7 @@
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(558, 281);
+            this.dateTimePicker1.Location = new System.Drawing.Point(549, 286);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(86, 21);
             this.dateTimePicker1.TabIndex = 201;
@@ -1283,14 +1282,14 @@
             this.cbxProyecto.BackColor = System.Drawing.Color.White;
             this.cbxProyecto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProyecto.Enabled = false;
-            this.cbxProyecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxProyecto.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cbxProyecto.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxProyecto.FormattingEnabled = true;
             this.cbxProyecto.Items.AddRange(new object[] {
             "POR OBRA O SERVICIO DETERMINADO DENTRO DEL GIRO DEL NEGOCIO",
             "A TIEMPO INDEFINIDO CON PERÍODO DE PRUEBA (3 - 6 MESES)",
             "CONTRATO INDEFINIDO, SIN FECHA ESPECÍFICA DE FINALIZACIÓN"});
-            this.cbxProyecto.Location = new System.Drawing.Point(558, 257);
+            this.cbxProyecto.Location = new System.Drawing.Point(549, 258);
             this.cbxProyecto.Name = "cbxProyecto";
             this.cbxProyecto.Size = new System.Drawing.Size(271, 21);
             this.cbxProyecto.TabIndex = 200;
@@ -1304,7 +1303,7 @@
             this.chkAcumulaFondo.Enabled = false;
             this.chkAcumulaFondo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkAcumulaFondo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            this.chkAcumulaFondo.Location = new System.Drawing.Point(750, 168);
+            this.chkAcumulaFondo.Location = new System.Drawing.Point(750, 181);
             this.chkAcumulaFondo.Name = "chkAcumulaFondo";
             this.chkAcumulaFondo.Size = new System.Drawing.Size(88, 17);
             this.chkAcumulaFondo.TabIndex = 41;
@@ -1323,7 +1322,7 @@
             0,
             0,
             65536});
-            this.NupExtra.Location = new System.Drawing.Point(754, 234);
+            this.NupExtra.Location = new System.Drawing.Point(761, 126);
             this.NupExtra.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -1345,7 +1344,7 @@
             0,
             0,
             65536});
-            this.NupSueldo.Location = new System.Drawing.Point(754, 211);
+            this.NupSueldo.Location = new System.Drawing.Point(761, 102);
             this.NupSueldo.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -1364,7 +1363,7 @@
             this.bntSitio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntSitio.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntSitio.Image = global::SysCisepro3.Properties.Resources.location_on_24dp_FILL0_wght400_GRAD0_opsz24;
-            this.bntSitio.Location = new System.Drawing.Point(802, 302);
+            this.bntSitio.Location = new System.Drawing.Point(802, 308);
             this.bntSitio.Name = "bntSitio";
             this.bntSitio.Size = new System.Drawing.Size(27, 27);
             this.bntSitio.TabIndex = 50;
@@ -1378,12 +1377,13 @@
             this.txtSitio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSitio.Enabled = false;
             this.txtSitio.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSitio.Location = new System.Drawing.Point(558, 304);
+            this.txtSitio.Location = new System.Drawing.Point(549, 312);
             this.txtSitio.Multiline = true;
             this.txtSitio.Name = "txtSitio";
             this.txtSitio.Size = new System.Drawing.Size(238, 21);
             this.txtSitio.TabIndex = 49;
             this.txtSitio.Text = "AUN NO SE ESPECIFICA";
+            this.txtSitio.TextChanged += new System.EventHandler(this.txtSitio_TextChanged);
             // 
             // chkFondoRes
             // 
@@ -1392,7 +1392,7 @@
             this.chkFondoRes.Enabled = false;
             this.chkFondoRes.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkFondoRes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            this.chkFondoRes.Location = new System.Drawing.Point(668, 168);
+            this.chkFondoRes.Location = new System.Drawing.Point(668, 181);
             this.chkFondoRes.Name = "chkFondoRes";
             this.chkFondoRes.Size = new System.Drawing.Size(75, 17);
             this.chkFondoRes.TabIndex = 40;
@@ -1407,7 +1407,7 @@
             this.chkXiv.Enabled = false;
             this.chkXiv.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkXiv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            this.chkXiv.Location = new System.Drawing.Point(616, 168);
+            this.chkXiv.Location = new System.Drawing.Point(616, 181);
             this.chkXiv.Name = "chkXiv";
             this.chkXiv.Size = new System.Drawing.Size(43, 17);
             this.chkXiv.TabIndex = 39;
@@ -1422,7 +1422,7 @@
             this.chkXiii.Enabled = false;
             this.chkXiii.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkXiii.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            this.chkXiii.Location = new System.Drawing.Point(558, 168);
+            this.chkXiii.Location = new System.Drawing.Point(558, 181);
             this.chkXiii.Name = "chkXiii";
             this.chkXiii.Size = new System.Drawing.Size(42, 17);
             this.chkXiii.TabIndex = 38;
@@ -1436,10 +1436,10 @@
             this.txtObservacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtObservacion.Enabled = false;
             this.txtObservacion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservacion.Location = new System.Drawing.Point(558, 329);
+            this.txtObservacion.Location = new System.Drawing.Point(87, 313);
             this.txtObservacion.Multiline = true;
             this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.Size = new System.Drawing.Size(271, 21);
+            this.txtObservacion.Size = new System.Drawing.Size(332, 21);
             this.txtObservacion.TabIndex = 51;
             // 
             // dtpFechaAfiliado
@@ -1447,7 +1447,7 @@
             this.dtpFechaAfiliado.Enabled = false;
             this.dtpFechaAfiliado.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaAfiliado.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaAfiliado.Location = new System.Drawing.Point(754, 119);
+            this.dtpFechaAfiliado.Location = new System.Drawing.Point(588, 129);
             this.dtpFechaAfiliado.Name = "dtpFechaAfiliado";
             this.dtpFechaAfiliado.Size = new System.Drawing.Size(77, 21);
             this.dtpFechaAfiliado.TabIndex = 37;
@@ -1456,15 +1456,18 @@
             // 
             this.chkAfiliado.AutoSize = true;
             this.chkAfiliado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.chkAfiliado.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkAfiliado.Enabled = false;
             this.chkAfiliado.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkAfiliado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            this.chkAfiliado.Location = new System.Drawing.Point(648, 123);
+            this.chkAfiliado.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkAfiliado.Location = new System.Drawing.Point(473, 129);
             this.chkAfiliado.Name = "chkAfiliado";
             this.chkAfiliado.Size = new System.Drawing.Size(98, 17);
             this.chkAfiliado.TabIndex = 36;
             this.chkAfiliado.Text = "Afiliado IESS   ";
-            this.chkAfiliado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkAfiliado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkAfiliado.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.chkAfiliado.UseVisualStyleBackColor = false;
             this.chkAfiliado.CheckedChanged += new System.EventHandler(this.chkAfiliado_CheckedChanged);
             // 
@@ -1479,9 +1482,9 @@
             "POR OBRA O SERVICIO DETERMINADO DENTRO DEL GIRO DEL NEGOCIO",
             "A TIEMPO INDEFINIDO CON PERÍODO DE PRUEBA (3 - 6 MESES)",
             "CONTRATO INDEFINIDO, SIN FECHA ESPECÍFICA DE FINALIZACIÓN"});
-            this.cbmTipoContrato.Location = new System.Drawing.Point(558, 143);
+            this.cbmTipoContrato.Location = new System.Drawing.Point(549, 156);
             this.cbmTipoContrato.Name = "cbmTipoContrato";
-            this.cbmTipoContrato.Size = new System.Drawing.Size(273, 21);
+            this.cbmTipoContrato.Size = new System.Drawing.Size(182, 21);
             this.cbmTipoContrato.TabIndex = 152;
             // 
             // txtMotivoSalidaActual
@@ -1490,18 +1493,19 @@
             this.txtMotivoSalidaActual.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMotivoSalidaActual.Enabled = false;
             this.txtMotivoSalidaActual.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMotivoSalidaActual.Location = new System.Drawing.Point(666, 186);
+            this.txtMotivoSalidaActual.Location = new System.Drawing.Point(773, 79);
             this.txtMotivoSalidaActual.Name = "txtMotivoSalidaActual";
-            this.txtMotivoSalidaActual.Size = new System.Drawing.Size(165, 21);
+            this.txtMotivoSalidaActual.Size = new System.Drawing.Size(36, 21);
             this.txtMotivoSalidaActual.TabIndex = 44;
             this.txtMotivoSalidaActual.Text = "EN FUNCIONES";
+            this.txtMotivoSalidaActual.Visible = false;
             // 
             // dtpFechaIngreso
             // 
             this.dtpFechaIngreso.Enabled = false;
             this.dtpFechaIngreso.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaIngreso.Location = new System.Drawing.Point(558, 120);
+            this.dtpFechaIngreso.Location = new System.Drawing.Point(761, 56);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
             this.dtpFechaIngreso.Size = new System.Drawing.Size(77, 21);
             this.dtpFechaIngreso.TabIndex = 35;
@@ -1512,9 +1516,9 @@
             this.dtpFechaSalida.Enabled = false;
             this.dtpFechaSalida.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaSalida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaSalida.Location = new System.Drawing.Point(558, 185);
+            this.dtpFechaSalida.Location = new System.Drawing.Point(761, 79);
             this.dtpFechaSalida.Name = "dtpFechaSalida";
-            this.dtpFechaSalida.Size = new System.Drawing.Size(86, 21);
+            this.dtpFechaSalida.Size = new System.Drawing.Size(78, 21);
             this.dtpFechaSalida.TabIndex = 43;
             this.dtpFechaSalida.Value = new System.DateTime(2024, 10, 29, 9, 40, 48, 0);
             this.dtpFechaSalida.ValueChanged += new System.EventHandler(this.dtpFechaSalida_ValueChanged);
@@ -1526,11 +1530,12 @@
             this.chSalida.Cursor = System.Windows.Forms.Cursors.Default;
             this.chSalida.Enabled = false;
             this.chSalida.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chSalida.Location = new System.Drawing.Point(529, 189);
+            this.chSalida.Location = new System.Drawing.Point(739, 81);
             this.chSalida.Name = "chSalida";
             this.chSalida.Size = new System.Drawing.Size(15, 14);
             this.chSalida.TabIndex = 42;
             this.chSalida.UseVisualStyleBackColor = false;
+            this.chSalida.Visible = false;
             this.chSalida.CheckedChanged += new System.EventHandler(this.chSalida_CheckedChanged);
             // 
             // cbCargo
@@ -1541,7 +1546,7 @@
             this.cbCargo.Enabled = false;
             this.cbCargo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCargo.FormattingEnabled = true;
-            this.cbCargo.Location = new System.Drawing.Point(559, 233);
+            this.cbCargo.Location = new System.Drawing.Point(549, 231);
             this.cbCargo.Name = "cbCargo";
             this.cbCargo.Size = new System.Drawing.Size(134, 21);
             this.cbCargo.TabIndex = 46;
@@ -1554,7 +1559,7 @@
             this.cbArea.Enabled = false;
             this.cbArea.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbArea.FormattingEnabled = true;
-            this.cbArea.Location = new System.Drawing.Point(558, 209);
+            this.cbArea.Location = new System.Drawing.Point(549, 205);
             this.cbArea.Name = "cbArea";
             this.cbArea.Size = new System.Drawing.Size(135, 21);
             this.cbArea.TabIndex = 45;
@@ -1567,7 +1572,7 @@
             this.cbxBanco.Enabled = false;
             this.cbxBanco.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxBanco.FormattingEnabled = true;
-            this.cbxBanco.Location = new System.Drawing.Point(84, 321);
+            this.cbxBanco.Location = new System.Drawing.Point(87, 286);
             this.cbxBanco.Name = "cbxBanco";
             this.cbxBanco.Size = new System.Drawing.Size(111, 21);
             this.cbxBanco.TabIndex = 22;
@@ -1582,7 +1587,7 @@
             this.cbxTipoCuenta.Items.AddRange(new object[] {
             "AHO",
             "CTE"});
-            this.cbxTipoCuenta.Location = new System.Drawing.Point(380, 321);
+            this.cbxTipoCuenta.Location = new System.Drawing.Point(369, 286);
             this.cbxTipoCuenta.Name = "cbxTipoCuenta";
             this.cbxTipoCuenta.Size = new System.Drawing.Size(50, 21);
             this.cbxTipoCuenta.TabIndex = 24;
@@ -1592,12 +1597,13 @@
             this.txtNumCuenta.BackColor = System.Drawing.Color.White;
             this.txtNumCuenta.Enabled = false;
             this.txtNumCuenta.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumCuenta.Location = new System.Drawing.Point(241, 321);
+            this.txtNumCuenta.Location = new System.Drawing.Point(247, 286);
             this.txtNumCuenta.Name = "txtNumCuenta";
-            this.txtNumCuenta.Size = new System.Drawing.Size(95, 21);
+            this.txtNumCuenta.Size = new System.Drawing.Size(78, 21);
             this.txtNumCuenta.TabIndex = 23;
             this.txtNumCuenta.Text = "0";
             this.txtNumCuenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtNumCuenta.TextChanged += new System.EventHandler(this.txtNumCuenta_TextChanged);
             // 
             // chArrienda
             // 
@@ -1848,41 +1854,41 @@
             this.DataGridView1.AllowUserToAddRows = false;
             this.DataGridView1.AllowUserToDeleteRows = false;
             this.DataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView1.DefaultCellStyle = dataGridViewCellStyle13;
             this.DataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.DataGridView1.Location = new System.Drawing.Point(5, 39);
             this.DataGridView1.MultiSelect = false;
             this.DataGridView1.Name = "DataGridView1";
             this.DataGridView1.ReadOnly = true;
             this.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.DataGridView1.RowHeadersVisible = false;
             this.DataGridView1.RowHeadersWidth = 25;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridView1.Size = new System.Drawing.Size(827, 286);
             this.DataGridView1.TabIndex = 43;
@@ -1890,9 +1896,8 @@
             // panelEsatdo
             // 
             this.panelEsatdo.BackColor = System.Drawing.Color.White;
-            this.panelEsatdo.Controls.Add(this.PictureBox1);
             this.panelEsatdo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelEsatdo.Location = new System.Drawing.Point(343, 4);
+            this.panelEsatdo.Location = new System.Drawing.Point(7, 5);
             this.panelEsatdo.Name = "panelEsatdo";
             this.panelEsatdo.Size = new System.Drawing.Size(92, 116);
             this.panelEsatdo.TabIndex = 186;
@@ -1901,12 +1906,13 @@
             // 
             this.PictureBox1.BackColor = System.Drawing.Color.White;
             this.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.PictureBox1.Location = new System.Drawing.Point(9, 9);
             this.PictureBox1.Name = "PictureBox1";
             this.PictureBox1.Size = new System.Drawing.Size(86, 109);
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox1.TabIndex = 118;
             this.PictureBox1.TabStop = false;
+            this.PictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             this.PictureBox1.DoubleClick += new System.EventHandler(this.PictureBox1_DoubleClick);
             // 
             // cbEstadoCivil
@@ -1922,9 +1928,9 @@
             "CASADO (A)",
             "DIVORCIADO (A)",
             "VIUDO (A)"});
-            this.cbEstadoCivil.Location = new System.Drawing.Point(66, 124);
+            this.cbEstadoCivil.Location = new System.Drawing.Point(164, 104);
             this.cbEstadoCivil.Name = "cbEstadoCivil";
-            this.cbEstadoCivil.Size = new System.Drawing.Size(73, 21);
+            this.cbEstadoCivil.Size = new System.Drawing.Size(79, 21);
             this.cbEstadoCivil.TabIndex = 8;
             // 
             // txtPeso
@@ -1932,9 +1938,9 @@
             this.txtPeso.BackColor = System.Drawing.Color.White;
             this.txtPeso.Enabled = false;
             this.txtPeso.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPeso.Location = new System.Drawing.Point(183, 181);
+            this.txtPeso.Location = new System.Drawing.Point(384, 153);
             this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(48, 21);
+            this.txtPeso.Size = new System.Drawing.Size(35, 21);
             this.txtPeso.TabIndex = 13;
             this.txtPeso.Text = "0";
             this.txtPeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1952,7 +1958,7 @@
             "BACHILLER",
             "UNIVERSIDAD INCOMPLETA",
             "SUPERIOR"});
-            this.cbmInstruccion.Location = new System.Drawing.Point(84, 155);
+            this.cbmInstruccion.Location = new System.Drawing.Point(84, 128);
             this.cbmInstruccion.Name = "cbmInstruccion";
             this.cbmInstruccion.Size = new System.Drawing.Size(111, 21);
             this.cbmInstruccion.TabIndex = 10;
@@ -1973,7 +1979,7 @@
             "B+",
             "AB−",
             "AB+"});
-            this.cbmTipoSangre.Location = new System.Drawing.Point(84, 182);
+            this.cbmTipoSangre.Location = new System.Drawing.Point(84, 153);
             this.cbmTipoSangre.Name = "cbmTipoSangre";
             this.cbmTipoSangre.Size = new System.Drawing.Size(59, 21);
             this.cbmTipoSangre.TabIndex = 12;
@@ -1983,11 +1989,11 @@
             this.txtEstatura.BackColor = System.Drawing.Color.White;
             this.txtEstatura.Enabled = false;
             this.txtEstatura.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstatura.Location = new System.Drawing.Point(285, 183);
+            this.txtEstatura.Location = new System.Drawing.Point(258, 154);
             this.txtEstatura.Name = "txtEstatura";
-            this.txtEstatura.Size = new System.Drawing.Size(47, 21);
+            this.txtEstatura.Size = new System.Drawing.Size(35, 21);
             this.txtEstatura.TabIndex = 14;
-            this.txtEstatura.Text = "0";
+            this.txtEstatura.Text = "120";
             this.txtEstatura.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtContrato
@@ -1995,7 +2001,7 @@
             this.txtContrato.BackColor = System.Drawing.Color.White;
             this.txtContrato.Enabled = false;
             this.txtContrato.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrato.Location = new System.Drawing.Point(231, 4);
+            this.txtContrato.Location = new System.Drawing.Point(339, 6);
             this.txtContrato.Name = "txtContrato";
             this.txtContrato.Size = new System.Drawing.Size(80, 21);
             this.txtContrato.TabIndex = 2;
@@ -2008,9 +2014,9 @@
             this.txtNombres.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombres.Enabled = false;
             this.txtNombres.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombres.Location = new System.Drawing.Point(66, 31);
+            this.txtNombres.Location = new System.Drawing.Point(164, 28);
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(245, 21);
+            this.txtNombres.Size = new System.Drawing.Size(169, 21);
             this.txtNombres.TabIndex = 3;
             // 
             // txtApellidos
@@ -2019,9 +2025,9 @@
             this.txtApellidos.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtApellidos.Enabled = false;
             this.txtApellidos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidos.Location = new System.Drawing.Point(66, 63);
+            this.txtApellidos.Location = new System.Drawing.Point(164, 52);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(245, 21);
+            this.txtApellidos.Size = new System.Drawing.Size(169, 21);
             this.txtApellidos.TabIndex = 4;
             // 
             // cbmSexo
@@ -2034,17 +2040,18 @@
             this.cbmSexo.Items.AddRange(new object[] {
             "MASCULINO",
             "FEMENINO"});
-            this.cbmSexo.Location = new System.Drawing.Point(66, 95);
+            this.cbmSexo.Location = new System.Drawing.Point(340, 78);
             this.cbmSexo.Name = "cbmSexo";
-            this.cbmSexo.Size = new System.Drawing.Size(73, 21);
+            this.cbmSexo.Size = new System.Drawing.Size(79, 21);
             this.cbmSexo.TabIndex = 5;
+            this.cbmSexo.SelectedIndexChanged += new System.EventHandler(this.cbmSexo_SelectedIndexChanged);
             // 
             // dtpFechaNacimiento
             // 
             this.dtpFechaNacimiento.Enabled = false;
             this.dtpFechaNacimiento.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(231, 95);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(164, 78);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(79, 21);
             this.dtpFechaNacimiento.TabIndex = 6;
@@ -2055,7 +2062,7 @@
             this.txtEdad.BackColor = System.Drawing.Color.White;
             this.txtEdad.Enabled = false;
             this.txtEdad.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEdad.Location = new System.Drawing.Point(370, 123);
+            this.txtEdad.Location = new System.Drawing.Point(390, 30);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(26, 21);
             this.txtEdad.TabIndex = 7;
@@ -2067,9 +2074,9 @@
             this.txtPasaporte.BackColor = System.Drawing.Color.White;
             this.txtPasaporte.Enabled = false;
             this.txtPasaporte.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPasaporte.Location = new System.Drawing.Point(231, 125);
+            this.txtPasaporte.Location = new System.Drawing.Point(339, 104);
             this.txtPasaporte.Name = "txtPasaporte";
-            this.txtPasaporte.Size = new System.Drawing.Size(79, 21);
+            this.txtPasaporte.Size = new System.Drawing.Size(80, 21);
             this.txtPasaporte.TabIndex = 9;
             this.txtPasaporte.Text = "0";
             this.txtPasaporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -2079,9 +2086,9 @@
             this.txtLibreta.BackColor = System.Drawing.Color.White;
             this.txtLibreta.Enabled = false;
             this.txtLibreta.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLibreta.Location = new System.Drawing.Point(309, 154);
+            this.txtLibreta.Location = new System.Drawing.Point(339, 127);
             this.txtLibreta.Name = "txtLibreta";
-            this.txtLibreta.Size = new System.Drawing.Size(87, 21);
+            this.txtLibreta.Size = new System.Drawing.Size(80, 21);
             this.txtLibreta.TabIndex = 11;
             this.txtLibreta.Text = "0";
             this.txtLibreta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -2103,7 +2110,7 @@
             this.txtDocumentacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDocumentacion.Enabled = false;
             this.txtDocumentacion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDocumentacion.Location = new System.Drawing.Point(558, 95);
+            this.txtDocumentacion.Location = new System.Drawing.Point(675, 30);
             this.txtDocumentacion.Name = "txtDocumentacion";
             this.txtDocumentacion.Size = new System.Drawing.Size(125, 21);
             this.txtDocumentacion.TabIndex = 34;
@@ -2115,11 +2122,11 @@
             this.btnDocumentacion.Enabled = false;
             this.btnDocumentacion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDocumentacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            this.btnDocumentacion.Location = new System.Drawing.Point(441, 97);
+            this.btnDocumentacion.Location = new System.Drawing.Point(588, 28);
             this.btnDocumentacion.Name = "btnDocumentacion";
-            this.btnDocumentacion.Size = new System.Drawing.Size(105, 23);
+            this.btnDocumentacion.Size = new System.Drawing.Size(56, 23);
             this.btnDocumentacion.TabIndex = 33;
-            this.btnDocumentacion.Text = "Documentacion";
+            this.btnDocumentacion.Text = "Docs";
             this.btnDocumentacion.UseVisualStyleBackColor = false;
             this.btnDocumentacion.Click += new System.EventHandler(this.btnDocumentacion_Click);
             // 
@@ -2129,11 +2136,10 @@
             this.chkCursoVigilante.BackColor = System.Drawing.Color.White;
             this.chkCursoVigilante.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkCursoVigilante.Enabled = false;
-            this.chkCursoVigilante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chkCursoVigilante.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkCursoVigilante.Location = new System.Drawing.Point(558, 77);
+            this.chkCursoVigilante.Location = new System.Drawing.Point(556, 104);
             this.chkCursoVigilante.Name = "chkCursoVigilante";
-            this.chkCursoVigilante.Size = new System.Drawing.Size(12, 11);
+            this.chkCursoVigilante.Size = new System.Drawing.Size(15, 14);
             this.chkCursoVigilante.TabIndex = 31;
             this.chkCursoVigilante.UseVisualStyleBackColor = false;
             this.chkCursoVigilante.CheckedChanged += new System.EventHandler(this.chkCursoVigilante_CheckedChanged);
@@ -2144,7 +2150,7 @@
             this.txtEmisorCursoVigilante.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmisorCursoVigilante.Enabled = false;
             this.txtEmisorCursoVigilante.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmisorCursoVigilante.Location = new System.Drawing.Point(703, 76);
+            this.txtEmisorCursoVigilante.Location = new System.Drawing.Point(588, 103);
             this.txtEmisorCursoVigilante.Name = "txtEmisorCursoVigilante";
             this.txtEmisorCursoVigilante.Size = new System.Drawing.Size(90, 21);
             this.txtEmisorCursoVigilante.TabIndex = 32;
@@ -2156,11 +2162,10 @@
             this.chkHistoriaClinica.BackColor = System.Drawing.Color.White;
             this.chkHistoriaClinica.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkHistoriaClinica.Enabled = false;
-            this.chkHistoriaClinica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chkHistoriaClinica.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkHistoriaClinica.Location = new System.Drawing.Point(558, 9);
+            this.chkHistoriaClinica.Location = new System.Drawing.Point(557, 34);
             this.chkHistoriaClinica.Name = "chkHistoriaClinica";
-            this.chkHistoriaClinica.Size = new System.Drawing.Size(12, 11);
+            this.chkHistoriaClinica.Size = new System.Drawing.Size(15, 14);
             this.chkHistoriaClinica.TabIndex = 25;
             this.chkHistoriaClinica.UseVisualStyleBackColor = false;
             // 
@@ -2170,11 +2175,10 @@
             this.chbExamenPsicologico.BackColor = System.Drawing.Color.White;
             this.chbExamenPsicologico.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chbExamenPsicologico.Enabled = false;
-            this.chbExamenPsicologico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chbExamenPsicologico.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbExamenPsicologico.Location = new System.Drawing.Point(558, 54);
+            this.chbExamenPsicologico.Location = new System.Drawing.Point(556, 80);
             this.chbExamenPsicologico.Name = "chbExamenPsicologico";
-            this.chbExamenPsicologico.Size = new System.Drawing.Size(12, 11);
+            this.chbExamenPsicologico.Size = new System.Drawing.Size(15, 14);
             this.chbExamenPsicologico.TabIndex = 29;
             this.chbExamenPsicologico.UseVisualStyleBackColor = false;
             this.chbExamenPsicologico.CheckedChanged += new System.EventHandler(this.chbExamenPsicologico_CheckedChanged);
@@ -2185,7 +2189,7 @@
             this.txtLugarExamenPsicologico.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtLugarExamenPsicologico.Enabled = false;
             this.txtLugarExamenPsicologico.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLugarExamenPsicologico.Location = new System.Drawing.Point(703, 52);
+            this.txtLugarExamenPsicologico.Location = new System.Drawing.Point(588, 78);
             this.txtLugarExamenPsicologico.Name = "txtLugarExamenPsicologico";
             this.txtLugarExamenPsicologico.Size = new System.Drawing.Size(89, 21);
             this.txtLugarExamenPsicologico.TabIndex = 30;
@@ -2201,7 +2205,7 @@
             this.cbmPruebaAntiDroga.Items.AddRange(new object[] {
             "NEGATIVO",
             "POSITIVO"});
-            this.cbmPruebaAntiDroga.Location = new System.Drawing.Point(703, 3);
+            this.cbmPruebaAntiDroga.Location = new System.Drawing.Point(549, 5);
             this.cbmPruebaAntiDroga.Name = "cbmPruebaAntiDroga";
             this.cbmPruebaAntiDroga.Size = new System.Drawing.Size(90, 21);
             this.cbmPruebaAntiDroga.TabIndex = 26;
@@ -2212,11 +2216,10 @@
             this.chbDiscapacitado.BackColor = System.Drawing.Color.White;
             this.chbDiscapacitado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chbDiscapacitado.Enabled = false;
-            this.chbDiscapacitado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chbDiscapacitado.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbDiscapacitado.Location = new System.Drawing.Point(558, 31);
+            this.chbDiscapacitado.Location = new System.Drawing.Point(556, 56);
             this.chbDiscapacitado.Name = "chbDiscapacitado";
-            this.chbDiscapacitado.Size = new System.Drawing.Size(12, 11);
+            this.chbDiscapacitado.Size = new System.Drawing.Size(15, 14);
             this.chbDiscapacitado.TabIndex = 27;
             this.chbDiscapacitado.UseVisualStyleBackColor = false;
             this.chbDiscapacitado.CheckedChanged += new System.EventHandler(this.chbDiscapacitado_CheckedChanged);
@@ -2227,7 +2230,7 @@
             this.txtCarnetConadis.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCarnetConadis.Enabled = false;
             this.txtCarnetConadis.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCarnetConadis.Location = new System.Drawing.Point(703, 27);
+            this.txtCarnetConadis.Location = new System.Drawing.Point(588, 52);
             this.txtCarnetConadis.Name = "txtCarnetConadis";
             this.txtCarnetConadis.Size = new System.Drawing.Size(89, 21);
             this.txtCarnetConadis.TabIndex = 28;
@@ -2238,7 +2241,7 @@
             this.txtCedula.BackColor = System.Drawing.Color.White;
             this.txtCedula.Enabled = false;
             this.txtCedula.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCedula.Location = new System.Drawing.Point(57, 4);
+            this.txtCedula.Location = new System.Drawing.Point(164, 5);
             this.txtCedula.MaxLength = 10;
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(82, 21);
@@ -2251,7 +2254,7 @@
             this.lblValCed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblValCed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblValCed.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValCed.Location = new System.Drawing.Point(145, 3);
+            this.lblValCed.Location = new System.Drawing.Point(244, 6);
             this.lblValCed.Name = "lblValCed";
             this.lblValCed.Size = new System.Drawing.Size(24, 22);
             this.lblValCed.TabIndex = 132;
@@ -2260,7 +2263,7 @@
             // 
             this.lblIdPersonal.AutoSize = true;
             this.lblIdPersonal.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdPersonal.Location = new System.Drawing.Point(102, 8);
+            this.lblIdPersonal.Location = new System.Drawing.Point(225, 7);
             this.lblIdPersonal.Name = "lblIdPersonal";
             this.lblIdPersonal.Size = new System.Drawing.Size(13, 13);
             this.lblIdPersonal.TabIndex = 117;
@@ -2299,43 +2302,43 @@
             this.dgvPersonal.AllowUserToAddRows = false;
             this.dgvPersonal.AllowUserToDeleteRows = false;
             this.dgvPersonal.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvPersonal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvPersonal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvPersonal.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.dgvPersonal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPersonal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPersonal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPersonal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPersonal.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPersonal.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgvPersonal.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dgvPersonal.Location = new System.Drawing.Point(4, 27);
+            this.dgvPersonal.Location = new System.Drawing.Point(6, 28);
             this.dgvPersonal.MultiSelect = false;
             this.dgvPersonal.Name = "dgvPersonal";
             this.dgvPersonal.ReadOnly = true;
             this.dgvPersonal.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPersonal.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPersonal.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dgvPersonal.RowHeadersVisible = false;
             this.dgvPersonal.RowHeadersWidth = 25;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPersonal.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPersonal.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.dgvPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPersonal.Size = new System.Drawing.Size(835, 185);
+            this.dgvPersonal.Size = new System.Drawing.Size(831, 175);
             this.dgvPersonal.TabIndex = 42;
             this.dgvPersonal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonal_CellClick);
             this.dgvPersonal.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonal_CellDoubleClick);
@@ -2381,6 +2384,14 @@
             // 
             // kryptonGroupBox1.Panel
             // 
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnPersonal);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.chkCursoVigilante);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.chbExamenPsicologico);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.chbDiscapacitado);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.chkHistoriaClinica);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtPrueba);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel68);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.PictureBox1);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel43);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel42);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel41);
@@ -2426,19 +2437,14 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel23);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtDocumentacion);
             this.kryptonGroupBox1.Panel.Controls.Add(this.chkAcumulaFondo);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel22);
             this.kryptonGroupBox1.Panel.Controls.Add(this.btnDocumentacion);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel21);
             this.kryptonGroupBox1.Panel.Controls.Add(this.cbCargo);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel20);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtEmisorCursoVigilante);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel19);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel18);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.txtMotivoSalidaActual);
             this.kryptonGroupBox1.Panel.Controls.Add(this.cbArea);
             this.kryptonGroupBox1.Panel.Controls.Add(this.chkFondoRes);
             this.kryptonGroupBox1.Panel.Controls.Add(this.chSalida);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.chkCursoVigilante);
             this.kryptonGroupBox1.Panel.Controls.Add(this.dtpFechaSalida);
             this.kryptonGroupBox1.Panel.Controls.Add(this.chkXiv);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel17);
@@ -2471,14 +2477,11 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel3);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel2);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel1);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.chbExamenPsicologico);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtLibreta);
             this.kryptonGroupBox1.Panel.Controls.Add(this.panelEsatdo);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtCedula);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtPasaporte);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblIdPersonal);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.chbDiscapacitado);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.chkHistoriaClinica);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblValCed);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtContrato);
             this.kryptonGroupBox1.Panel.Controls.Add(this.dtpFechaNacimiento);
@@ -2487,13 +2490,45 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtApellidos);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtNombres);
             this.kryptonGroupBox1.Panel.Controls.Add(this.cbmPruebaAntiDroga);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtMotivoSalidaActual);
             this.kryptonGroupBox1.Size = new System.Drawing.Size(846, 366);
             this.kryptonGroupBox1.TabIndex = 0;
             this.kryptonGroupBox1.Values.Heading = "";
             // 
+            // btnPersonal
+            // 
+            this.btnPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.btnPersonal.FlatAppearance.BorderSize = 0;
+            this.btnPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPersonal.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonal.Image = global::SysCisepro3.Properties.Resources.person_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnPersonal.Location = new System.Drawing.Point(807, 3);
+            this.btnPersonal.Name = "btnPersonal";
+            this.btnPersonal.Size = new System.Drawing.Size(27, 27);
+            this.btnPersonal.TabIndex = 232;
+            this.btnPersonal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPersonal.UseVisualStyleBackColor = false;
+            this.btnPersonal.Click += new System.EventHandler(this.btnPersonal_Click);
+            // 
+            // txtPrueba
+            // 
+            this.txtPrueba.Enabled = false;
+            this.txtPrueba.Location = new System.Drawing.Point(674, 6);
+            this.txtPrueba.Name = "txtPrueba";
+            this.txtPrueba.Size = new System.Drawing.Size(126, 20);
+            this.txtPrueba.TabIndex = 231;
+            // 
+            // kryptonLabel68
+            // 
+            this.kryptonLabel68.Location = new System.Drawing.Point(642, 5);
+            this.kryptonLabel68.Name = "kryptonLabel68";
+            this.kryptonLabel68.Size = new System.Drawing.Size(29, 20);
+            this.kryptonLabel68.TabIndex = 230;
+            this.kryptonLabel68.Values.Text = "Por";
+            // 
             // kryptonLabel43
             // 
-            this.kryptonLabel43.Location = new System.Drawing.Point(439, 329);
+            this.kryptonLabel43.Location = new System.Drawing.Point(8, 313);
             this.kryptonLabel43.Name = "kryptonLabel43";
             this.kryptonLabel43.Size = new System.Drawing.Size(78, 20);
             this.kryptonLabel43.TabIndex = 229;
@@ -2501,7 +2536,7 @@
             // 
             // kryptonLabel42
             // 
-            this.kryptonLabel42.Location = new System.Drawing.Point(340, 321);
+            this.kryptonLabel42.Location = new System.Drawing.Point(331, 287);
             this.kryptonLabel42.Name = "kryptonLabel42";
             this.kryptonLabel42.Size = new System.Drawing.Size(34, 20);
             this.kryptonLabel42.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen;
@@ -2510,7 +2545,7 @@
             // 
             // kryptonLabel41
             // 
-            this.kryptonLabel41.Location = new System.Drawing.Point(202, 321);
+            this.kryptonLabel41.Location = new System.Drawing.Point(205, 288);
             this.kryptonLabel41.Name = "kryptonLabel41";
             this.kryptonLabel41.Size = new System.Drawing.Size(29, 20);
             this.kryptonLabel41.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen;
@@ -2519,7 +2554,7 @@
             // 
             // kryptonLabel40
             // 
-            this.kryptonLabel40.Location = new System.Drawing.Point(5, 322);
+            this.kryptonLabel40.Location = new System.Drawing.Point(8, 289);
             this.kryptonLabel40.Name = "kryptonLabel40";
             this.kryptonLabel40.Size = new System.Drawing.Size(44, 20);
             this.kryptonLabel40.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen;
@@ -2528,7 +2563,7 @@
             // 
             // kryptonLabel39
             // 
-            this.kryptonLabel39.Location = new System.Drawing.Point(7, 295);
+            this.kryptonLabel39.Location = new System.Drawing.Point(8, 256);
             this.kryptonLabel39.Name = "kryptonLabel39";
             this.kryptonLabel39.Size = new System.Drawing.Size(40, 20);
             this.kryptonLabel39.TabIndex = 225;
@@ -2536,7 +2571,7 @@
             // 
             // kryptonLabel38
             // 
-            this.kryptonLabel38.Location = new System.Drawing.Point(438, 303);
+            this.kryptonLabel38.Location = new System.Drawing.Point(438, 316);
             this.kryptonLabel38.Name = "kryptonLabel38";
             this.kryptonLabel38.Size = new System.Drawing.Size(64, 20);
             this.kryptonLabel38.TabIndex = 224;
@@ -2544,7 +2579,7 @@
             // 
             // lblFin
             // 
-            this.lblFin.Location = new System.Drawing.Point(654, 281);
+            this.lblFin.Location = new System.Drawing.Point(668, 286);
             this.lblFin.Name = "lblFin";
             this.lblFin.Size = new System.Drawing.Size(48, 20);
             this.lblFin.TabIndex = 223;
@@ -2552,7 +2587,7 @@
             // 
             // lblInicio
             // 
-            this.lblInicio.Location = new System.Drawing.Point(438, 279);
+            this.lblInicio.Location = new System.Drawing.Point(438, 284);
             this.lblInicio.Name = "lblInicio";
             this.lblInicio.Size = new System.Drawing.Size(62, 20);
             this.lblInicio.TabIndex = 222;
@@ -2560,7 +2595,7 @@
             // 
             // kryptonLabel37
             // 
-            this.kryptonLabel37.Location = new System.Drawing.Point(7, 266);
+            this.kryptonLabel37.Location = new System.Drawing.Point(10, 231);
             this.kryptonLabel37.Name = "kryptonLabel37";
             this.kryptonLabel37.Size = new System.Drawing.Size(62, 20);
             this.kryptonLabel37.TabIndex = 221;
@@ -2568,7 +2603,7 @@
             // 
             // kryptonLabel36
             // 
-            this.kryptonLabel36.Location = new System.Drawing.Point(334, 234);
+            this.kryptonLabel36.Location = new System.Drawing.Point(324, 207);
             this.kryptonLabel36.Name = "kryptonLabel36";
             this.kryptonLabel36.Size = new System.Drawing.Size(28, 20);
             this.kryptonLabel36.TabIndex = 220;
@@ -2576,7 +2611,7 @@
             // 
             // kryptonLabel35
             // 
-            this.kryptonLabel35.Location = new System.Drawing.Point(205, 235);
+            this.kryptonLabel35.Location = new System.Drawing.Point(201, 208);
             this.kryptonLabel35.Name = "kryptonLabel35";
             this.kryptonLabel35.Size = new System.Drawing.Size(30, 20);
             this.kryptonLabel35.TabIndex = 219;
@@ -2584,7 +2619,7 @@
             // 
             // kryptonLabel34
             // 
-            this.kryptonLabel34.Location = new System.Drawing.Point(7, 240);
+            this.kryptonLabel34.Location = new System.Drawing.Point(9, 206);
             this.kryptonLabel34.Name = "kryptonLabel34";
             this.kryptonLabel34.Size = new System.Drawing.Size(63, 20);
             this.kryptonLabel34.TabIndex = 218;
@@ -2592,7 +2627,7 @@
             // 
             // kryptonLabel33
             // 
-            this.kryptonLabel33.Location = new System.Drawing.Point(205, 213);
+            this.kryptonLabel33.Location = new System.Drawing.Point(201, 183);
             this.kryptonLabel33.Name = "kryptonLabel33";
             this.kryptonLabel33.Size = new System.Drawing.Size(49, 20);
             this.kryptonLabel33.TabIndex = 217;
@@ -2600,7 +2635,7 @@
             // 
             // kryptonLabel32
             // 
-            this.kryptonLabel32.Location = new System.Drawing.Point(5, 211);
+            this.kryptonLabel32.Location = new System.Drawing.Point(11, 178);
             this.kryptonLabel32.Name = "kryptonLabel32";
             this.kryptonLabel32.Size = new System.Drawing.Size(60, 20);
             this.kryptonLabel32.TabIndex = 216;
@@ -2608,7 +2643,7 @@
             // 
             // kryptonLabel31
             // 
-            this.kryptonLabel31.Location = new System.Drawing.Point(438, 254);
+            this.kryptonLabel31.Location = new System.Drawing.Point(438, 258);
             this.kryptonLabel31.Name = "kryptonLabel31";
             this.kryptonLabel31.Size = new System.Drawing.Size(59, 20);
             this.kryptonLabel31.TabIndex = 215;
@@ -2616,7 +2651,7 @@
             // 
             // kryptonLabel30
             // 
-            this.kryptonLabel30.Location = new System.Drawing.Point(703, 236);
+            this.kryptonLabel30.Location = new System.Drawing.Point(684, 127);
             this.kryptonLabel30.Name = "kryptonLabel30";
             this.kryptonLabel30.Size = new System.Drawing.Size(37, 20);
             this.kryptonLabel30.TabIndex = 214;
@@ -2624,7 +2659,7 @@
             // 
             // kryptonLabel29
             // 
-            this.kryptonLabel29.Location = new System.Drawing.Point(438, 233);
+            this.kryptonLabel29.Location = new System.Drawing.Point(438, 231);
             this.kryptonLabel29.Name = "kryptonLabel29";
             this.kryptonLabel29.Size = new System.Drawing.Size(43, 20);
             this.kryptonLabel29.TabIndex = 213;
@@ -2632,7 +2667,7 @@
             // 
             // kryptonLabel28
             // 
-            this.kryptonLabel28.Location = new System.Drawing.Point(703, 214);
+            this.kryptonLabel28.Location = new System.Drawing.Point(685, 103);
             this.kryptonLabel28.Name = "kryptonLabel28";
             this.kryptonLabel28.Size = new System.Drawing.Size(48, 20);
             this.kryptonLabel28.TabIndex = 212;
@@ -2640,7 +2675,7 @@
             // 
             // kryptonLabel27
             // 
-            this.kryptonLabel27.Location = new System.Drawing.Point(438, 210);
+            this.kryptonLabel27.Location = new System.Drawing.Point(438, 205);
             this.kryptonLabel27.Name = "kryptonLabel27";
             this.kryptonLabel27.Size = new System.Drawing.Size(36, 20);
             this.kryptonLabel27.TabIndex = 211;
@@ -2648,7 +2683,7 @@
             // 
             // kryptonLabel26
             // 
-            this.kryptonLabel26.Location = new System.Drawing.Point(438, 189);
+            this.kryptonLabel26.Location = new System.Drawing.Point(685, 79);
             this.kryptonLabel26.Name = "kryptonLabel26";
             this.kryptonLabel26.Size = new System.Drawing.Size(43, 20);
             this.kryptonLabel26.TabIndex = 210;
@@ -2656,7 +2691,7 @@
             // 
             // kryptonLabel25
             // 
-            this.kryptonLabel25.Location = new System.Drawing.Point(438, 168);
+            this.kryptonLabel25.Location = new System.Drawing.Point(438, 181);
             this.kryptonLabel25.Name = "kryptonLabel25";
             this.kryptonLabel25.Size = new System.Drawing.Size(76, 20);
             this.kryptonLabel25.TabIndex = 209;
@@ -2664,7 +2699,7 @@
             // 
             // kryptonLabel24
             // 
-            this.kryptonLabel24.Location = new System.Drawing.Point(438, 144);
+            this.kryptonLabel24.Location = new System.Drawing.Point(438, 157);
             this.kryptonLabel24.Name = "kryptonLabel24";
             this.kryptonLabel24.Size = new System.Drawing.Size(86, 20);
             this.kryptonLabel24.TabIndex = 208;
@@ -2672,55 +2707,32 @@
             // 
             // kryptonLabel23
             // 
-            this.kryptonLabel23.Location = new System.Drawing.Point(438, 121);
+            this.kryptonLabel23.Location = new System.Drawing.Point(684, 55);
             this.kryptonLabel23.Name = "kryptonLabel23";
             this.kryptonLabel23.Size = new System.Drawing.Size(51, 20);
             this.kryptonLabel23.TabIndex = 207;
             this.kryptonLabel23.Values.Text = "Ingreso";
             // 
-            // kryptonLabel22
-            // 
-            this.kryptonLabel22.Location = new System.Drawing.Point(586, 72);
-            this.kryptonLabel22.Name = "kryptonLabel22";
-            this.kryptonLabel22.Size = new System.Drawing.Size(47, 20);
-            this.kryptonLabel22.TabIndex = 206;
-            this.kryptonLabel22.Values.Text = "Emisor";
-            // 
             // kryptonLabel21
             // 
-            this.kryptonLabel21.Location = new System.Drawing.Point(438, 73);
+            this.kryptonLabel21.Location = new System.Drawing.Point(432, 101);
             this.kryptonLabel21.Name = "kryptonLabel21";
             this.kryptonLabel21.Size = new System.Drawing.Size(93, 20);
             this.kryptonLabel21.TabIndex = 205;
             this.kryptonLabel21.Values.Text = "Curso Vigilante";
             // 
-            // kryptonLabel20
-            // 
-            this.kryptonLabel20.Location = new System.Drawing.Point(586, 49);
-            this.kryptonLabel20.Name = "kryptonLabel20";
-            this.kryptonLabel20.Size = new System.Drawing.Size(47, 20);
-            this.kryptonLabel20.TabIndex = 204;
-            this.kryptonLabel20.Values.Text = "Emisor";
-            // 
-            // kryptonLabel19
-            // 
-            this.kryptonLabel19.Location = new System.Drawing.Point(585, 25);
-            this.kryptonLabel19.Name = "kryptonLabel19";
-            this.kryptonLabel19.Size = new System.Drawing.Size(54, 20);
-            this.kryptonLabel19.TabIndex = 203;
-            this.kryptonLabel19.Values.Text = "Conadis";
-            // 
             // kryptonLabel18
             // 
-            this.kryptonLabel18.Location = new System.Drawing.Point(232, 182);
+            this.kryptonLabel18.Location = new System.Drawing.Point(205, 153);
             this.kryptonLabel18.Name = "kryptonLabel18";
             this.kryptonLabel18.Size = new System.Drawing.Size(54, 20);
             this.kryptonLabel18.TabIndex = 202;
             this.kryptonLabel18.Values.Text = "Estatura";
+            this.kryptonLabel18.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel18_Paint);
             // 
             // kryptonLabel17
             // 
-            this.kryptonLabel17.Location = new System.Drawing.Point(145, 182);
+            this.kryptonLabel17.Location = new System.Drawing.Point(336, 154);
             this.kryptonLabel17.Name = "kryptonLabel17";
             this.kryptonLabel17.Size = new System.Drawing.Size(36, 20);
             this.kryptonLabel17.TabIndex = 201;
@@ -2728,7 +2740,7 @@
             // 
             // kryptonLabel16
             // 
-            this.kryptonLabel16.Location = new System.Drawing.Point(5, 181);
+            this.kryptonLabel16.Location = new System.Drawing.Point(10, 154);
             this.kryptonLabel16.Name = "kryptonLabel16";
             this.kryptonLabel16.Size = new System.Drawing.Size(61, 20);
             this.kryptonLabel16.TabIndex = 200;
@@ -2736,7 +2748,7 @@
             // 
             // kryptonLabel15
             // 
-            this.kryptonLabel15.Location = new System.Drawing.Point(319, 124);
+            this.kryptonLabel15.Location = new System.Drawing.Point(336, 30);
             this.kryptonLabel15.Name = "kryptonLabel15";
             this.kryptonLabel15.Size = new System.Drawing.Size(38, 20);
             this.kryptonLabel15.TabIndex = 199;
@@ -2744,7 +2756,7 @@
             // 
             // kryptonLabel14
             // 
-            this.kryptonLabel14.Location = new System.Drawing.Point(231, 155);
+            this.kryptonLabel14.Location = new System.Drawing.Point(263, 128);
             this.kryptonLabel14.Name = "kryptonLabel14";
             this.kryptonLabel14.Size = new System.Drawing.Size(65, 20);
             this.kryptonLabel14.TabIndex = 198;
@@ -2752,7 +2764,7 @@
             // 
             // kryptonLabel13
             // 
-            this.kryptonLabel13.Location = new System.Drawing.Point(7, 156);
+            this.kryptonLabel13.Location = new System.Drawing.Point(10, 129);
             this.kryptonLabel13.Name = "kryptonLabel13";
             this.kryptonLabel13.Size = new System.Drawing.Size(70, 20);
             this.kryptonLabel13.TabIndex = 197;
@@ -2760,15 +2772,16 @@
             // 
             // kryptonLabel12
             // 
-            this.kryptonLabel12.Location = new System.Drawing.Point(144, 125);
+            this.kryptonLabel12.Location = new System.Drawing.Point(262, 104);
             this.kryptonLabel12.Name = "kryptonLabel12";
             this.kryptonLabel12.Size = new System.Drawing.Size(65, 20);
             this.kryptonLabel12.TabIndex = 196;
             this.kryptonLabel12.Values.Text = "Pasaporte";
+            this.kryptonLabel12.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel12_Paint);
             // 
             // kryptonLabel11
             // 
-            this.kryptonLabel11.Location = new System.Drawing.Point(7, 122);
+            this.kryptonLabel11.Location = new System.Drawing.Point(105, 105);
             this.kryptonLabel11.Name = "kryptonLabel11";
             this.kryptonLabel11.Size = new System.Drawing.Size(43, 20);
             this.kryptonLabel11.TabIndex = 195;
@@ -2776,7 +2789,7 @@
             // 
             // kryptonLabel10
             // 
-            this.kryptonLabel10.Location = new System.Drawing.Point(438, 50);
+            this.kryptonLabel10.Location = new System.Drawing.Point(432, 77);
             this.kryptonLabel10.Name = "kryptonLabel10";
             this.kryptonLabel10.Size = new System.Drawing.Size(118, 20);
             this.kryptonLabel10.TabIndex = 194;
@@ -2784,23 +2797,24 @@
             // 
             // kryptonLabel9
             // 
-            this.kryptonLabel9.Location = new System.Drawing.Point(438, 23);
+            this.kryptonLabel9.Location = new System.Drawing.Point(434, 52);
             this.kryptonLabel9.Name = "kryptonLabel9";
             this.kryptonLabel9.Size = new System.Drawing.Size(87, 20);
             this.kryptonLabel9.TabIndex = 193;
             this.kryptonLabel9.Values.Text = "Discapacitado";
+            this.kryptonLabel9.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel9_Paint);
             // 
             // kryptonLabel8
             // 
-            this.kryptonLabel8.Location = new System.Drawing.Point(146, 95);
+            this.kryptonLabel8.Location = new System.Drawing.Point(105, 77);
             this.kryptonLabel8.Name = "kryptonLabel8";
-            this.kryptonLabel8.Size = new System.Drawing.Size(83, 20);
+            this.kryptonLabel8.Size = new System.Drawing.Size(44, 20);
             this.kryptonLabel8.TabIndex = 192;
-            this.kryptonLabel8.Values.Text = "F Nacimiento";
+            this.kryptonLabel8.Values.Text = "F Naci";
             // 
             // kryptonLabel7
             // 
-            this.kryptonLabel7.Location = new System.Drawing.Point(7, 95);
+            this.kryptonLabel7.Location = new System.Drawing.Point(263, 77);
             this.kryptonLabel7.Name = "kryptonLabel7";
             this.kryptonLabel7.Size = new System.Drawing.Size(36, 20);
             this.kryptonLabel7.TabIndex = 191;
@@ -2808,7 +2822,7 @@
             // 
             // kryptonLabel6
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(5, 63);
+            this.kryptonLabel6.Location = new System.Drawing.Point(104, 52);
             this.kryptonLabel6.Name = "kryptonLabel6";
             this.kryptonLabel6.Size = new System.Drawing.Size(61, 20);
             this.kryptonLabel6.TabIndex = 190;
@@ -2816,7 +2830,7 @@
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(7, 32);
+            this.kryptonLabel5.Location = new System.Drawing.Point(103, 26);
             this.kryptonLabel5.Name = "kryptonLabel5";
             this.kryptonLabel5.Size = new System.Drawing.Size(61, 20);
             this.kryptonLabel5.TabIndex = 189;
@@ -2824,7 +2838,7 @@
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(586, 4);
+            this.kryptonLabel4.Location = new System.Drawing.Point(432, 6);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(107, 20);
             this.kryptonLabel4.TabIndex = 188;
@@ -2832,7 +2846,7 @@
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(438, 3);
+            this.kryptonLabel3.Location = new System.Drawing.Point(432, 26);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(92, 20);
             this.kryptonLabel3.TabIndex = 187;
@@ -2840,7 +2854,7 @@
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(169, 5);
+            this.kryptonLabel2.Location = new System.Drawing.Point(274, 6);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(59, 20);
             this.kryptonLabel2.TabIndex = 133;
@@ -2848,11 +2862,12 @@
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(5, 4);
+            this.kryptonLabel1.Location = new System.Drawing.Point(105, 4);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(48, 20);
             this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "Cedula";
+            this.kryptonLabel1.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel1_Paint);
             // 
             // kryptonPage3
             // 
@@ -3262,7 +3277,7 @@
             // 
             this.kryptonGroupBox3.CaptionOverlap = 0D;
             this.kryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
-            this.kryptonGroupBox3.Location = new System.Drawing.Point(2, 428);
+            this.kryptonGroupBox3.Location = new System.Drawing.Point(2, 426);
             this.kryptonGroupBox3.Name = "kryptonGroupBox3";
             // 
             // kryptonGroupBox3.Panel
@@ -3270,7 +3285,7 @@
             this.kryptonGroupBox3.Panel.Controls.Add(this.Button1);
             this.kryptonGroupBox3.Panel.Controls.Add(this.dgvPersonal);
             this.kryptonGroupBox3.Panel.Controls.Add(this.txtFiltro);
-            this.kryptonGroupBox3.Size = new System.Drawing.Size(844, 231);
+            this.kryptonGroupBox3.Size = new System.Drawing.Size(844, 233);
             this.kryptonGroupBox3.TabIndex = 219;
             this.kryptonGroupBox3.Values.Heading = "Busqueda";
             // 
@@ -3326,7 +3341,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
-            this.panelEsatdo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).EndInit();
@@ -3560,9 +3574,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel13;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel18;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel17;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel20;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel19;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel22;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel21;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel23;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel26;
@@ -3620,5 +3631,8 @@
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox6;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox5;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox7;
+        private System.Windows.Forms.TextBox txtPrueba;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel68;
+        internal System.Windows.Forms.Button btnPersonal;
     }
 }

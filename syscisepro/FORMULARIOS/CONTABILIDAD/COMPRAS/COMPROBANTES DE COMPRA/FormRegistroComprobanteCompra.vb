@@ -1290,7 +1290,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
                     If txtIvaComprobanteCompra.Text > 0 Then NuevoRegistroAsientoDiarioIva(ObtenerPorcentajeIvaCombinado(), CDec(txtIvaComprobanteCompra.Text)) ' SI LA COMPRA GRABA IVA
 
-                    If txtIva5ComprobanteCompra.Text > 0 Then NuevoRegistroAsientoDiarioIva(5, CDec(txtIvaComprobanteCompra.Text)) ' SI LA COMPRA GRABA IVA 5%
+                    If txtIva5ComprobanteCompra.Text > 0 Then NuevoRegistroAsientoDiarioIva(5, CDec(txtIva5ComprobanteCompra.Text)) ' SI LA COMPRA GRABA IVA 5%
 
                     If chkActivarRetencion.Checked Then
                         If txtTotalComprobanteRetencion.Text > 0 Then
@@ -1874,6 +1874,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         Private Sub ExportarXmlRetencion()
             Try
                 Dim numeroRetencion = _establecimientoRetencion.ToString & "-" & _ptoEmisionRetencion.ToString & "-" & _secuencialRetencion
+                Dim nres = _objetoInformacionTributaria.SeleccionarNroResolucionAgenteRetencion(_tipoCon)
                 Dim ruta As String
                 Select Case _tipoCon
                     Case TipoConexion.Asenava
@@ -1899,11 +1900,11 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 xml += "<ptoEmi>" & _ptoEmisionRetencion & "</ptoEmi>" & vbNewLine
                 xml += "<secuencial>" & _secuencialRetencion & "</secuencial>" & vbNewLine
                 xml += "<dirMatriz>" & DireccionEmpresaCisepro & "</dirMatriz>" & vbNewLine
-                xml += "<contribuyenteEspecial>NAC-DGERCGC25-00000011</contribuyenteEspecial>" & vbNewLine
                 xml += "</infoTributaria>" & vbNewLine  ' =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<infoCompRetencion>" & vbNewLine  ' =-=-=-=-=-=-=-=-=-=- INFORMACÍON DE LA RETENCION =-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<fechaEmision>" & Format(dtpComprobanteRetencion.Value, "dd/MM/yyyy") & "</fechaEmision>" & vbNewLine
                 xml += "<dirEstablecimiento>" & DireccionEmpresaCisepro & "</dirEstablecimiento>" & vbNewLine
+                xml += "<contribuyenteEspecial> " & nres & "</contribuyenteEspecial>" & vbNewLine
                 'If NumAutoContEspecialCisepro <> "0000" Then
                 '    xml += "<contribuyenteEspecial>" & NumAutoContEspecialCisepro & "</contribuyenteEspecial>" & vbNewLine
                 'End If
@@ -1947,7 +1948,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                         If cmbNombreParametroDocumentos.SelectedValue = 9 Then
                             xml += "<codDocSustento>09</codDocSustento>" & vbNewLine
                         Else
-                            xml += "<codDocSustento>01</codDocSustento>" & vbNewLine
+                            xml += "<codDocSustento>03</codDocSustento>" & vbNewLine
                         End If
                         xml += "<numDocSustento>" & txtNumeroComprobanteCompra.Text & "</numDocSustento>" & vbNewLine
                         xml += "<fechaEmisionDocSustento>" & Format(dtpFechaEmisionComprobanteCompra.Value, "dd/MM/yyyy") & "</fechaEmisionDocSustento>" & vbNewLine
@@ -1957,7 +1958,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 End If
 
                 xml += "<infoAdicional>" & vbNewLine  ' =-=-=-=-=-=-=-=-=-=- INFORMACÍON ADICIONAL DEL SERVICIO PRESTADO =-=-=-=-=-=-=-=-=-=-=-=-=
-                xml += "<campoAdicional nombre='Informacion'>Agente de retencion segun resolucion N. " & _objetoInformacionTributaria.SeleccionarNroResolucionAgenteRetencion(_tipoCon) & ". </campoAdicional>" & vbNewLine
+                xml += "<campoAdicional nombre='Informacion'>  </campoAdicional>" & vbNewLine
                 xml += "</infoAdicional>" & vbNewLine
                 xml += "</comprobanteRetencion>" & vbNewLine
 
@@ -2016,11 +2017,11 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 xml += "<ptoEmi>" & _ptoEmisionLiqCompra & "</ptoEmi>" & vbNewLine
                 xml += "<secuencial>" & _secuencialLiqCompra & "</secuencial>" & vbNewLine
                 xml += "<dirMatriz>" & DireccionEmpresaCisepro & "</dirMatriz>" & vbNewLine
-                xml += "<contribuyenteEspecial>NAC-DGERCGC25-00000011</contribuyenteEspecial>" & vbNewLine
                 xml += "</infoTributaria>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<infoLiquidacionCompra>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=- INFORMACÍON DE LA FACTURA =-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<fechaEmision>" & Format(dtpFechaEmisionComprobanteCompra.Value, "dd/MM/yyyy") & "</fechaEmision>" & vbNewLine
                 xml += "<dirEstablecimiento>" & txtDireccionProveedorGeneral.Text.Trim() & "</dirEstablecimiento>" & vbNewLine
+                xml += "<contribuyenteEspecial>" & nres & "</contribuyenteEspecial>" & vbNewLine
                 'xml += "<contribuyenteEspecial>" & txtNumAutoContEspFacturaCompra.Text & "</contribuyenteEspecial>" & vbNewLine
                 xml += "<obligadoContabilidad>" & txtObligadoLlevarContabilidadProveedorGeneral.Text.Trim() & "</obligadoContabilidad>" & vbNewLine
                 xml += "<tipoIdentificacionProveedor>" & TipoIdentificacionProveedor & "</tipoIdentificacionProveedor>" & vbNewLine
@@ -2111,7 +2112,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 End If
                 xml += "</detalles>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<infoAdicional>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=- INFORMACÍON ADICIONAL DEL SERVICIO PRESTADO =-=-=-=-=-=-=-=-=-=-=-=-=
-                xml += "<campoAdicional nombre='Informacion'>Agente de retencion segun resolucion N. " & nres & ". </campoAdicional>" & vbNewLine
+                xml += "<campoAdicional nombre='Informacion'> </campoAdicional>" & vbNewLine
                 If _tipoCon = TipoConexion.Seportpac Then
                     xml += "<campoAdicional nombre='Liquidacion de Compra'>Por favor remitir su retencion en el plazo estipulado por la ley a nuestras direcciones Correo: seportpac@hotmail.com;</campoAdicional>" & vbNewLine
                 Else

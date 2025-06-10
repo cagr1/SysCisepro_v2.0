@@ -19,6 +19,7 @@ using SysCisepro3.Properties;
 using Office = Microsoft.Office.Interop;
 using DataTable = System.Data.DataTable;
 using Krypton.Toolkit;
+using static System.Windows.Forms.MonthCalendar;
 //using ComponentFactory.Krypton.Toolkit;
 
 
@@ -50,6 +51,13 @@ namespace SysCisepro3.TalentoHumano
         private FrmNotificarNovedades _frmNotificacion;
         private readonly ClassSalidaPersonal _objSalidaPersonal;
 
+        //Datos para Control Antidroga
+        private int _IdPersonal;
+        private string _Nombres ;
+        private string _Cargo ;
+        private string _Area ;
+        private string _Observaciones ;
+
         private List<object[]> docs;
 
 
@@ -66,6 +74,7 @@ namespace SysCisepro3.TalentoHumano
         private FrmBuscarPuestoTrabajo _frmBuscarPuestoTrabajo;
         private FrmSeleccionarMotivoFechaSalida _objMotivoFechaSalida;
         private FrmBuscarAspirante _frmBuscarAspirante;
+        private FrmAgregarPersonalControl _frmAgregarPersonalControl;
 
         private readonly List<SqlCommand> _sqlCommands;
 
@@ -574,6 +583,7 @@ namespace SysCisepro3.TalentoHumano
             txtApellidos.Clear();
             cbmSexo.SelectedIndex = 0;
             dtpFechaNacimiento.Value = DateTime.Now;
+            txtPrueba.Clear();
             cbEstadoCivil.SelectedIndex = 0;
             txtPasaporte.Text = @"NO TIENE";
             txtEdad.Text = @"0";
@@ -854,7 +864,12 @@ namespace SysCisepro3.TalentoHumano
                    "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                DialogResult.Yes) return;
 
-            
+            if (txtPrueba.Text.Trim().Length == 0)
+            {
+                KryptonMessageBox.Show(@"Ingrese responsable de la prueba antidroga para el personal ADMINISTRATIVO / OPERATIVO!",
+                  "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
+            }
 
             if (ValidacionParametros())
             {
@@ -1076,7 +1091,7 @@ namespace SysCisepro3.TalentoHumano
             _sqlCommands.Add(_objContratos.RegistrarNuevoContratoCommand());
 
             _objHistorialLaboral.IdHistoriaLaboral = _objHistorialLaboral.BuscarMayorIdHistoriaLaboral(TipoCon) + 1;
-            _objHistorialLaboral.FechaHistoriaLaboral = DateTime.Now;
+            _objHistorialLaboral.FechaHistoriaLaboral = _objPersonal.FechaEntradaPersonal;
             _objHistorialLaboral.DetalleHistoriaLaboral = "INGRESO A LA COMPAÑIA CON EL CARGO DE " + cbCargo.Text;
             _objHistorialLaboral.EstadoHistoriaLaboral = 1;
             _objHistorialLaboral.IdPersonalHistoriaLaboral = _objPersonal.IdPersonal;
@@ -1346,7 +1361,7 @@ namespace SysCisepro3.TalentoHumano
             HabilitarRegistro(true, false);
             _estado = 2;
 
-            //CargarProyectos(false);
+            CargarProyectos(false);
             
 
 
@@ -1955,6 +1970,72 @@ namespace SysCisepro3.TalentoHumano
         private void cbxProyecto_SelectedIndexChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbmSexo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonLabel12_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void kryptonLabel18_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtNumCuenta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonLabel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void kryptonLabel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtSitio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPersonal_Click(object sender, EventArgs e)
+        {
+            using (_frmAgregarPersonalControl = new FrmAgregarPersonalControl { TipoCon = TipoCon })
+            {
+                if (_frmAgregarPersonalControl.ShowDialog() == DialogResult.OK)
+                {
+                    _IdPersonal = _frmAgregarPersonalControl.IdPersonal;
+                    _Nombres = _frmAgregarPersonalControl.Nombres;
+                    _Cargo = _frmAgregarPersonalControl.Cargo;
+                    _Area = _frmAgregarPersonalControl.Area;
+                    _Observaciones = _frmAgregarPersonalControl.Observaciones;
+                    txtPrueba.Text = _Nombres.ToString();
+                }
+
+
+            } try
+                {
+                
+
+                }
+                catch (Exception ex)
+                {
+                    KryptonMessageBox.Show(ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                }
         }
     }
 }
