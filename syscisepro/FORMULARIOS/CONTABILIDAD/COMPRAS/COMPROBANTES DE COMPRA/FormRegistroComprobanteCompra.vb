@@ -1460,14 +1460,15 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
                 '.PorcentajeIvaComprobante = PorcentajeIva
                 If CDec(txtIva5ComprobanteCompra.Text) > 0 Then
-                    .IvaComprobante = txtIva5ComprobanteCompra.Text
-                    .PorcentajeIvaComprobante = 5
-                Else
-                    .IvaComprobante = txtIvaComprobanteCompra.Text
-                    .PorcentajeIvaComprobante = ObtenerPorcentajeIvaCombinado()
+                    .Iva5Comprobante = txtIva5ComprobanteCompra.Text
+
                 End If
-                '.IvaComprobante = txtIvaComprobanteCompra.Text
-                .Iva5Comprobante = txtIva5ComprobanteCompra.Text
+                If CDec(txtIvaComprobanteCompra.Text) > 0 Then
+                    Dim porcentaje As Integer = ObtenerPorcentajeIvaCombinado()
+                    .IvaComprobante = txtIvaComprobanteCompra.Text
+                    .PorcentajeIvaComprobante = porcentaje
+                End If
+
                 .TotalComprobante = txtTotalComprobanteCompra.Text
                 .EstadoComprobante = 1
                 .IdOrdenCompra = If(lblOrdenCompra.Text.Trim.Equals("###"), 0, CInt(lblOrdenCompra.Text))

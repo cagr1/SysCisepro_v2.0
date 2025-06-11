@@ -26,11 +26,11 @@ namespace ClassLibraryCisepro3.TalentoHumano
 
         public int BuscarMayorId(TipoConexion tipoCon)
         {
-            var data = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "BuscarMayorIdPersonalControl", true);
+            var data = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "sp_buscarMayorIdControlAntidroga", true);
             return data.Rows.Count == 0 ? 0 : data.Rows[0][0] == DBNull.Value ? 0 : Convert.ToInt32(data.Rows[0][0]);
         }
 
-        public SqlCommand RegistrarNuevoPersonalCommand()
+        public SqlCommand RegistrarNuevoPersonalAntidrogaCommand()
         {
             var cmd = new SqlCommand
             {

@@ -50,6 +50,7 @@ namespace SysCisepro3.TalentoHumano
         private readonly ClassDocumentosContrato _objDocumentosContrato;
         private FrmNotificarNovedades _frmNotificacion;
         private readonly ClassSalidaPersonal _objSalidaPersonal;
+        private readonly ClassPersonalControl _objControlAntidroga;
 
         //Datos para Control Antidroga
         private int _IdPersonal;
@@ -101,6 +102,7 @@ namespace SysCisepro3.TalentoHumano
             _objSitiosTrabajo = new ClassSitiosTrabajo();
             _objDocumentosContrato = new ClassDocumentosContrato();
             _objSalidaPersonal = new ClassSalidaPersonal();
+            _objControlAntidroga = new ClassPersonalControl();
         }
 
         private void FormPersonal_Load(object sender, EventArgs e)
@@ -1090,6 +1092,16 @@ namespace SysCisepro3.TalentoHumano
             _objContratos.IdProyecto = (int)cbxProyecto.SelectedValue;
             _sqlCommands.Add(_objContratos.RegistrarNuevoContratoCommand());
 
+            _objControlAntidroga.idControl = _objControlAntidroga.BuscarMayorId(TipoCon) + 1;
+            _objControlAntidroga.FechaPrueba = dtpFechaIngreso.Value;
+            _objControlAntidroga.Observaciones = _Observaciones;
+            _objControlAntidroga.IdPersonal = _IdPersonal;
+            _objControlAntidroga.Idresponsable = Convert.ToInt32(Usuario.IdPersonal.ToString());
+            _objControlAntidroga.Nombres= _Nombres;
+            _objControlAntidroga.Area = _Area;
+            _objControlAntidroga.Cargo = _Cargo;
+            _sqlCommands.Add(_objControlAntidroga.RegistrarNuevoPersonalAntidrogaCommand());
+
             _objHistorialLaboral.IdHistoriaLaboral = _objHistorialLaboral.BuscarMayorIdHistoriaLaboral(TipoCon) + 1;
             _objHistorialLaboral.FechaHistoriaLaboral = _objPersonal.FechaEntradaPersonal;
             _objHistorialLaboral.DetalleHistoriaLaboral = "INGRESO A LA COMPAÑIA CON EL CARGO DE " + cbCargo.Text;
@@ -1304,6 +1316,17 @@ namespace SysCisepro3.TalentoHumano
                 _objContratos.ExtSal = 0;
                 _objContratos.IdProyecto = (int)cbxProyecto.SelectedValue;
                 _sqlCommands.Add(_objContratos.RegistrarNuevoContratoCommand());
+
+                _objControlAntidroga.idControl = _objControlAntidroga.BuscarMayorId(TipoCon) + 1;
+                _objControlAntidroga.FechaPrueba = dtpFechaIngreso.Value;
+                _objControlAntidroga.Observaciones = _Observaciones;
+                _objControlAntidroga.IdPersonal = _IdPersonal;
+                _objControlAntidroga.Idresponsable = Convert.ToInt32(Usuario.IdPersonal.ToString());
+                _objControlAntidroga.Nombres = _Nombres;
+                _objControlAntidroga.Area = _Area;
+                _objControlAntidroga.Cargo = _Cargo;
+                _sqlCommands.Add(_objControlAntidroga.RegistrarNuevoPersonalAntidrogaCommand());
+
 
                 _objHistorialLaboral.IdHistoriaLaboral = _objHistorialLaboral.BuscarMayorIdHistoriaLaboral(TipoCon) + 1;
                 _objHistorialLaboral.FechaHistoriaLaboral = DateTime.Now;
@@ -2036,6 +2059,11 @@ namespace SysCisepro3.TalentoHumano
                 {
                     KryptonMessageBox.Show(ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 }
+        }
+
+        private void NupSueldo_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
