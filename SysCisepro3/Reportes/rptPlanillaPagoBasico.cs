@@ -455,6 +455,14 @@ namespace SysCisepro3.Reportes {
                 return this.DataDefinition.ParameterFields[45];
             }
         }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_asistente {
+            get {
+                return this.DataDefinition.ParameterFields[46];
+            }
+        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]

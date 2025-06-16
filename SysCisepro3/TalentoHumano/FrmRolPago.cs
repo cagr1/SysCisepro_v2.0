@@ -4354,7 +4354,12 @@ namespace SysCisepro3.TalentoHumano
                 _rptPlanilla.SetParameterValue("empre", empre);
                 _rptPlanilla.SetParameterValue("mes", Mes1);
                 _rptPlanilla.SetParameterValue("anio", Anio);
+                if (empre == "CISEPRO C. LTDA.")
+                _rptPlanilla.SetParameterValue("asistente", "Jessica Mite");
+                else
+                _rptPlanilla.SetParameterValue("asistente", "Priscila Avila");
 
+                
 
                 //_rptPlanilla.SetParameterValue("banco", (fila1.Cells[72].Value != null && fila1.Cells[72].Value.ToString().Trim() != "0")
                 //? fila1.Cells[73].Value + " - " + fila1.Cells[74].Value + " (" + fila1.Cells[75].Value + ")" : "SIN BANCO - PAGADO EN CHEQUE");

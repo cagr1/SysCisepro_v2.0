@@ -51,5 +51,15 @@ namespace ClassLibraryCisepro3.TalentoHumano
             return cmd;
         }
 
+        public DataTable BuscarPersonalAntidroga(TipoConexion tipoCon, int idPersonal)
+        {
+            var pars = new List<object[]>
+            {
+                new object[] { "@idPersonal", SqlDbType.Int,  idPersonal }
+            };
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_buscarPersonalAntidroga", true, pars);
+
+        }
+
     }
 }

@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPersonal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.ButtonNuevoRegistro = new System.Windows.Forms.ToolStripButton();
@@ -1462,7 +1462,7 @@
             this.chkAfiliado.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkAfiliado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.chkAfiliado.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkAfiliado.Location = new System.Drawing.Point(473, 129);
+            this.chkAfiliado.Location = new System.Drawing.Point(475, 129);
             this.chkAfiliado.Name = "chkAfiliado";
             this.chkAfiliado.Size = new System.Drawing.Size(98, 17);
             this.chkAfiliado.TabIndex = 36;
@@ -1636,10 +1636,10 @@
             this.chDeudorGarante.BackColor = System.Drawing.Color.White;
             this.chDeudorGarante.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chDeudorGarante.Enabled = false;
-            this.chDeudorGarante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chDeudorGarante.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.chDeudorGarante.Location = new System.Drawing.Point(299, 14);
             this.chDeudorGarante.Name = "chDeudorGarante";
-            this.chDeudorGarante.Size = new System.Drawing.Size(12, 11);
+            this.chDeudorGarante.Size = new System.Drawing.Size(25, 13);
             this.chDeudorGarante.TabIndex = 144;
             this.chDeudorGarante.UseVisualStyleBackColor = false;
             this.chDeudorGarante.CheckedChanged += new System.EventHandler(this.chDeudorGarante_CheckedChanged);
@@ -1696,7 +1696,7 @@
             this.txtDatosHijos.Location = new System.Drawing.Point(132, 101);
             this.txtDatosHijos.Multiline = true;
             this.txtDatosHijos.Name = "txtDatosHijos";
-            this.txtDatosHijos.Size = new System.Drawing.Size(405, 93);
+            this.txtDatosHijos.Size = new System.Drawing.Size(405, 77);
             this.txtDatosHijos.TabIndex = 3;
             this.txtDatosHijos.Text = "PENDIENTE";
             // 
@@ -1706,10 +1706,10 @@
             this.chTrabajoAnterior.BackColor = System.Drawing.Color.White;
             this.chTrabajoAnterior.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chTrabajoAnterior.Enabled = false;
-            this.chTrabajoAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chTrabajoAnterior.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.chTrabajoAnterior.Location = new System.Drawing.Point(132, 13);
             this.chTrabajoAnterior.Name = "chTrabajoAnterior";
-            this.chTrabajoAnterior.Size = new System.Drawing.Size(12, 11);
+            this.chTrabajoAnterior.Size = new System.Drawing.Size(25, 13);
             this.chTrabajoAnterior.TabIndex = 142;
             this.chTrabajoAnterior.UseVisualStyleBackColor = false;
             this.chTrabajoAnterior.CheckedChanged += new System.EventHandler(this.chTrabajoAnterior_CheckedChanged);
@@ -1842,7 +1842,7 @@
             this.button2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(347, 7);
+            this.button2.Location = new System.Drawing.Point(347, -4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(36, 27);
             this.button2.TabIndex = 196;
@@ -1855,43 +1855,43 @@
             this.DataGridView1.AllowUserToAddRows = false;
             this.DataGridView1.AllowUserToDeleteRows = false;
             this.DataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView1.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.DataGridView1.Location = new System.Drawing.Point(5, 39);
+            this.DataGridView1.Location = new System.Drawing.Point(5, 25);
             this.DataGridView1.MultiSelect = false;
             this.DataGridView1.Name = "DataGridView1";
             this.DataGridView1.ReadOnly = true;
             this.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DataGridView1.RowHeadersVisible = false;
             this.DataGridView1.RowHeadersWidth = 25;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridView1.Size = new System.Drawing.Size(827, 286);
+            this.DataGridView1.Size = new System.Drawing.Size(827, 293);
             this.DataGridView1.TabIndex = 43;
             // 
             // panelEsatdo
@@ -1907,7 +1907,7 @@
             // 
             this.PictureBox1.BackColor = System.Drawing.Color.White;
             this.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PictureBox1.Location = new System.Drawing.Point(9, 9);
+            this.PictureBox1.Location = new System.Drawing.Point(10, 9);
             this.PictureBox1.Name = "PictureBox1";
             this.PictureBox1.Size = new System.Drawing.Size(86, 109);
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2138,7 +2138,7 @@
             this.chkCursoVigilante.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkCursoVigilante.Enabled = false;
             this.chkCursoVigilante.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkCursoVigilante.Location = new System.Drawing.Point(556, 104);
+            this.chkCursoVigilante.Location = new System.Drawing.Point(558, 103);
             this.chkCursoVigilante.Name = "chkCursoVigilante";
             this.chkCursoVigilante.Size = new System.Drawing.Size(15, 14);
             this.chkCursoVigilante.TabIndex = 31;
@@ -2164,7 +2164,7 @@
             this.chkHistoriaClinica.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkHistoriaClinica.Enabled = false;
             this.chkHistoriaClinica.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkHistoriaClinica.Location = new System.Drawing.Point(557, 34);
+            this.chkHistoriaClinica.Location = new System.Drawing.Point(558, 34);
             this.chkHistoriaClinica.Name = "chkHistoriaClinica";
             this.chkHistoriaClinica.Size = new System.Drawing.Size(15, 14);
             this.chkHistoriaClinica.TabIndex = 25;
@@ -2177,7 +2177,7 @@
             this.chbExamenPsicologico.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chbExamenPsicologico.Enabled = false;
             this.chbExamenPsicologico.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbExamenPsicologico.Location = new System.Drawing.Point(556, 80);
+            this.chbExamenPsicologico.Location = new System.Drawing.Point(558, 79);
             this.chbExamenPsicologico.Name = "chbExamenPsicologico";
             this.chbExamenPsicologico.Size = new System.Drawing.Size(15, 14);
             this.chbExamenPsicologico.TabIndex = 29;
@@ -2218,7 +2218,7 @@
             this.chbDiscapacitado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chbDiscapacitado.Enabled = false;
             this.chbDiscapacitado.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbDiscapacitado.Location = new System.Drawing.Point(556, 56);
+            this.chbDiscapacitado.Location = new System.Drawing.Point(558, 56);
             this.chbDiscapacitado.Name = "chbDiscapacitado";
             this.chbDiscapacitado.Size = new System.Drawing.Size(15, 14);
             this.chbDiscapacitado.TabIndex = 27;
@@ -2303,43 +2303,43 @@
             this.dgvPersonal.AllowUserToAddRows = false;
             this.dgvPersonal.AllowUserToDeleteRows = false;
             this.dgvPersonal.AllowUserToResizeRows = false;
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvPersonal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvPersonal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPersonal.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.dgvPersonal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPersonal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle37.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPersonal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPersonal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPersonal.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPersonal.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvPersonal.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dgvPersonal.Location = new System.Drawing.Point(6, 28);
             this.dgvPersonal.MultiSelect = false;
             this.dgvPersonal.Name = "dgvPersonal";
             this.dgvPersonal.ReadOnly = true;
             this.dgvPersonal.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPersonal.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPersonal.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvPersonal.RowHeadersVisible = false;
             this.dgvPersonal.RowHeadersWidth = 25;
-            dataGridViewCellStyle40.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPersonal.RowsDefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPersonal.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPersonal.Size = new System.Drawing.Size(831, 175);
+            this.dgvPersonal.Size = new System.Drawing.Size(831, 190);
             this.dgvPersonal.TabIndex = 42;
             this.dgvPersonal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonal_CellClick);
             this.dgvPersonal.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonal_CellDoubleClick);
@@ -2349,6 +2349,7 @@
             // 
             this.kryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None;
             this.kryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide;
+            this.kryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonNavigator1.Location = new System.Drawing.Point(0, 31);
             this.kryptonNavigator1.Name = "kryptonNavigator1";
             this.kryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup;
@@ -2359,7 +2360,7 @@
             this.kryptonPage4,
             this.kryptonPage5});
             this.kryptonNavigator1.SelectedIndex = 0;
-            this.kryptonNavigator1.Size = new System.Drawing.Size(849, 377);
+            this.kryptonNavigator1.Size = new System.Drawing.Size(849, 632);
             this.kryptonNavigator1.TabIndex = 218;
             this.kryptonNavigator1.Text = "kryptonNavigator1";
             // 
@@ -2371,7 +2372,7 @@
             this.kryptonPage1.LastVisibleSet = true;
             this.kryptonPage1.MinimumSize = new System.Drawing.Size(50, 50);
             this.kryptonPage1.Name = "kryptonPage1";
-            this.kryptonPage1.Size = new System.Drawing.Size(847, 348);
+            this.kryptonPage1.Size = new System.Drawing.Size(847, 603);
             this.kryptonPage1.Text = "Datos Personales";
             this.kryptonPage1.ToolTipTitle = "Page ToolTip";
             this.kryptonPage1.UniqueName = "BF6778DB7B6E4FC64698D4730B10B066";
@@ -2384,6 +2385,7 @@
             // 
             // kryptonGroupBox1.Panel
             // 
+            this.kryptonGroupBox1.Panel.Controls.Add(this.PictureBox1);
             this.kryptonGroupBox1.Panel.Controls.Add(this.btnPersonal);
             this.kryptonGroupBox1.Panel.Controls.Add(this.chkCursoVigilante);
             this.kryptonGroupBox1.Panel.Controls.Add(this.chbExamenPsicologico);
@@ -2391,7 +2393,6 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.chkHistoriaClinica);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtPrueba);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel68);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.PictureBox1);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel43);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel42);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel41);
@@ -2564,7 +2565,7 @@
             // 
             // kryptonLabel39
             // 
-            this.kryptonLabel39.Location = new System.Drawing.Point(8, 256);
+            this.kryptonLabel39.Location = new System.Drawing.Point(10, 258);
             this.kryptonLabel39.Name = "kryptonLabel39";
             this.kryptonLabel39.Size = new System.Drawing.Size(40, 20);
             this.kryptonLabel39.TabIndex = 225;
@@ -2885,7 +2886,7 @@
             // 
             // kryptonGroupBox2
             // 
-            this.kryptonGroupBox2.CaptionOverlap = 0.85D;
+            this.kryptonGroupBox2.CaptionOverlap = 0D;
             this.kryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonAlternate;
             this.kryptonGroupBox2.Location = new System.Drawing.Point(-1, 3);
             this.kryptonGroupBox2.Name = "kryptonGroupBox2";
@@ -2916,13 +2917,13 @@
             this.kryptonGroupBox2.Panel.Controls.Add(this.chCasaPropia);
             this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel45);
             this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel44);
-            this.kryptonGroupBox2.Size = new System.Drawing.Size(852, 362);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(852, 348);
             this.kryptonGroupBox2.TabIndex = 0;
             this.kryptonGroupBox2.Values.Heading = "Datos";
             // 
             // kryptonLabel57
             // 
-            this.kryptonLabel57.Location = new System.Drawing.Point(540, 246);
+            this.kryptonLabel57.Location = new System.Drawing.Point(540, 228);
             this.kryptonLabel57.Name = "kryptonLabel57";
             this.kryptonLabel57.Size = new System.Drawing.Size(299, 83);
             this.kryptonLabel57.StateCommon.LongText.Font = new System.Drawing.Font("Roboto", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2934,7 +2935,7 @@
             // 
             // kryptonLabel56
             // 
-            this.kryptonLabel56.Location = new System.Drawing.Point(540, 203);
+            this.kryptonLabel56.Location = new System.Drawing.Point(540, 185);
             this.kryptonLabel56.Name = "kryptonLabel56";
             this.kryptonLabel56.Size = new System.Drawing.Size(270, 36);
             this.kryptonLabel56.StateCommon.LongText.Font = new System.Drawing.Font("Roboto", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2943,7 +2944,7 @@
             // 
             // kryptonLabel55
             // 
-            this.kryptonLabel55.Location = new System.Drawing.Point(17, 297);
+            this.kryptonLabel55.Location = new System.Drawing.Point(17, 279);
             this.kryptonLabel55.Name = "kryptonLabel55";
             this.kryptonLabel55.Size = new System.Drawing.Size(109, 20);
             this.kryptonLabel55.TabIndex = 163;
@@ -2951,7 +2952,7 @@
             // 
             // kryptonLabel54
             // 
-            this.kryptonLabel54.Location = new System.Drawing.Point(18, 250);
+            this.kryptonLabel54.Location = new System.Drawing.Point(18, 232);
             this.kryptonLabel54.Name = "kryptonLabel54";
             this.kryptonLabel54.Size = new System.Drawing.Size(88, 20);
             this.kryptonLabel54.TabIndex = 162;
@@ -2963,7 +2964,7 @@
             this.txtDatosEsposa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDatosEsposa.Enabled = false;
             this.txtDatosEsposa.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDatosEsposa.Location = new System.Drawing.Point(132, 208);
+            this.txtDatosEsposa.Location = new System.Drawing.Point(132, 190);
             this.txtDatosEsposa.Multiline = true;
             this.txtDatosEsposa.Name = "txtDatosEsposa";
             this.txtDatosEsposa.Size = new System.Drawing.Size(405, 35);
@@ -2976,7 +2977,7 @@
             this.txtDatosFamiliar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDatosFamiliar.Enabled = false;
             this.txtDatosFamiliar.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDatosFamiliar.Location = new System.Drawing.Point(131, 252);
+            this.txtDatosFamiliar.Location = new System.Drawing.Point(131, 234);
             this.txtDatosFamiliar.Multiline = true;
             this.txtDatosFamiliar.Name = "txtDatosFamiliar";
             this.txtDatosFamiliar.Size = new System.Drawing.Size(405, 35);
@@ -2989,7 +2990,7 @@
             this.txtDatosEmergencia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDatosEmergencia.Enabled = false;
             this.txtDatosEmergencia.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDatosEmergencia.Location = new System.Drawing.Point(132, 296);
+            this.txtDatosEmergencia.Location = new System.Drawing.Point(132, 278);
             this.txtDatosEmergencia.Multiline = true;
             this.txtDatosEmergencia.Name = "txtDatosEmergencia";
             this.txtDatosEmergencia.Size = new System.Drawing.Size(405, 35);
@@ -2998,7 +2999,7 @@
             // 
             // kryptonLabel53
             // 
-            this.kryptonLabel53.Location = new System.Drawing.Point(18, 210);
+            this.kryptonLabel53.Location = new System.Drawing.Point(18, 192);
             this.kryptonLabel53.Name = "kryptonLabel53";
             this.kryptonLabel53.Size = new System.Drawing.Size(83, 20);
             this.kryptonLabel53.TabIndex = 158;
@@ -3119,7 +3120,7 @@
             this.kryptonGroupBox4.Panel.Controls.Add(this.dtpFechaSalidaReferencia);
             this.kryptonGroupBox4.Panel.Controls.Add(this.txtMotivoSalidaAnterior);
             this.kryptonGroupBox4.Panel.Controls.Add(this.dtpFechaEntradaReferencia);
-            this.kryptonGroupBox4.Size = new System.Drawing.Size(843, 360);
+            this.kryptonGroupBox4.Size = new System.Drawing.Size(843, 345);
             this.kryptonGroupBox4.TabIndex = 0;
             this.kryptonGroupBox4.Values.Heading = "Datos";
             // 
@@ -3261,7 +3262,7 @@
             // 
             // kryptonGroupBox7
             // 
-            this.kryptonGroupBox7.CaptionOverlap = 0.85D;
+            this.kryptonGroupBox7.CaptionOverlap = 0D;
             this.kryptonGroupBox7.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
             this.kryptonGroupBox7.Location = new System.Drawing.Point(3, 4);
             this.kryptonGroupBox7.Name = "kryptonGroupBox7";
@@ -3270,7 +3271,7 @@
             // 
             this.kryptonGroupBox7.Panel.Controls.Add(this.button2);
             this.kryptonGroupBox7.Panel.Controls.Add(this.DataGridView1);
-            this.kryptonGroupBox7.Size = new System.Drawing.Size(843, 358);
+            this.kryptonGroupBox7.Size = new System.Drawing.Size(843, 345);
             this.kryptonGroupBox7.TabIndex = 0;
             this.kryptonGroupBox7.Values.Heading = "Datos";
             // 
@@ -3278,7 +3279,7 @@
             // 
             this.kryptonGroupBox3.CaptionOverlap = 0D;
             this.kryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
-            this.kryptonGroupBox3.Location = new System.Drawing.Point(2, 464);
+            this.kryptonGroupBox3.Location = new System.Drawing.Point(2, 411);
             this.kryptonGroupBox3.Name = "kryptonGroupBox3";
             // 
             // kryptonGroupBox3.Panel
@@ -3286,7 +3287,7 @@
             this.kryptonGroupBox3.Panel.Controls.Add(this.Button1);
             this.kryptonGroupBox3.Panel.Controls.Add(this.dgvPersonal);
             this.kryptonGroupBox3.Panel.Controls.Add(this.txtFiltro);
-            this.kryptonGroupBox3.Size = new System.Drawing.Size(844, 195);
+            this.kryptonGroupBox3.Size = new System.Drawing.Size(844, 248);
             this.kryptonGroupBox3.TabIndex = 219;
             this.kryptonGroupBox3.Values.Heading = "Busqueda";
             // 

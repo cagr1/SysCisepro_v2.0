@@ -310,6 +310,15 @@ namespace SysCisepro3.TalentoHumano
             try
             {
                 var row = dgvPersonal.CurrentRow;
+                var id = Convert.ToInt32(row.Cells["ID_PERSONAL"].Value.ToString());
+
+            
+                var prueba = _objControlAntidroga.BuscarPersonalAntidroga(TipoCon, id);
+
+                if (prueba.Rows.Count> 0 )
+                { txtPrueba.Text = prueba.Rows[0]["Nombres"].ToString(); }
+                else
+                { txtPrueba.Text = @"NO TIENE"; }
 
                 lblIdPersonal.Text = row.Cells["ID_PERSONAL"].Value.ToString();
                 txtCedula.Text = row.Cells["CEDULA"].Value.ToString();
@@ -436,7 +445,7 @@ namespace SysCisepro3.TalentoHumano
                     txtNumCuenta.Clear();
                     cbxBanco.SelectedIndex = 0;
                     cbxTipoCuenta.SelectedIndex = 0;
-                    KryptonMessageBox.Show(ex.Message, @"Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+                    KryptonMessageBox.Show("Sin cuenta bancaria", @"Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
                 }
 
                 try
@@ -719,6 +728,7 @@ namespace SysCisepro3.TalentoHumano
             chTrabajoAnterior.Enabled = enable;
             txtRecomendaciones.Enabled = true;
             txtNumCuenta.Enabled = enable;
+            txtPrueba.Enabled = enable;
             if (!secundarios) return;
             cbxTipoCuenta.Enabled = enable;
             txtCarnetConadis.Enabled = enable;
@@ -866,12 +876,7 @@ namespace SysCisepro3.TalentoHumano
                    "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                DialogResult.Yes) return;
 
-            if (txtPrueba.Text.Trim().Length == 0)
-            {
-                KryptonMessageBox.Show(@"Ingrese responsable de la prueba antidroga para el personal ADMINISTRATIVO / OPERATIVO!",
-                  "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
-                return;
-            }
+            
 
             if (ValidacionParametros())
             {
@@ -1008,6 +1013,14 @@ namespace SysCisepro3.TalentoHumano
 
         private void GuardarRegistroNuevoPersonal()
         {
+            if (txtPrueba.Text.Trim().Length == 0)
+            {
+                KryptonMessageBox.Show(@"Ingrese responsable de la prueba antidroga para el personal ADMINISTRATIVO / OPERATIVO!",
+                  "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
+            }
+
+
             _objPersonal.IdPersonal = _objPersonal.BuscarMayorId(TipoCon) + 1;
             _objPersonal.CedulaPersonal = txtCedula.Text.Trim();
             _objPersonal.NombresPersonal = txtNombres.Text.Trim();
@@ -1233,6 +1246,13 @@ namespace SysCisepro3.TalentoHumano
         {
             try
             {
+
+                if (txtPrueba.Text.Trim().Length == 0)
+                {
+                    KryptonMessageBox.Show(@"Ingrese responsable de la prueba antidroga para el personal ADMINISTRATIVO / OPERATIVO!",
+                      "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    return;
+                }
                 _objPersonal.IdPersonal = Convert.ToInt32(lblIdPersonal.Text.Trim());
                 _objPersonal.CedulaPersonal = txtCedula.Text.Trim();
                 _objPersonal.NombresPersonal = txtNombres.Text.Trim();

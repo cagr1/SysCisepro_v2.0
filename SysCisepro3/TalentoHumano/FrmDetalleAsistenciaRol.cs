@@ -312,6 +312,17 @@ namespace SysCisepro3.TalentoHumano
                 rpt.SetParameterValue("neto", Convert.ToDouble(Fila.Cells[64].Value).ToString("N"));
                 rpt.SetParameterValue("banco", Fila.Cells[72].Value.ToString().Trim().Equals("0") ? "SIN BANCO - PAGADO EN CHEQUE" : Fila.Cells[73].Value + " - " + Fila.Cells[74].Value + " (" + Fila.Cells[75].Value + ")");
 
+                if (empre == "CISEPRO C. LTDA.")
+                {
+                    rpt.SetParameterValue("asistente", "Jessica Mite");
+                }
+                else 
+                {                    
+                    rpt.SetParameterValue("asistente", "Priscila Avila");
+                }
+
+                
+
                 var view = new FrmVisualizadorReportes { TipoCon = TipoCon, Titulo = "PLANILLA DE PAGO", crystalReportViewer1 = { ReportSource = rpt } };
                 view.ShowDialog();
                 view.Dispose();

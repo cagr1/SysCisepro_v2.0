@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.kryptonGroupBox1 = new Krypton.Toolkit.KryptonGroupBox();
+            this.txtObservaciones = new System.Windows.Forms.TextBox();
+            this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
             this.lblIdAsignacion = new System.Windows.Forms.Label();
             this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
             this.txtArea = new System.Windows.Forms.TextBox();
@@ -41,8 +43,6 @@
             this.txtPersonal = new System.Windows.Forms.TextBox();
             this.Button2 = new System.Windows.Forms.Button();
             this.Button1 = new System.Windows.Forms.Button();
-            this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
-            this.txtObservaciones = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
             this.kryptonGroupBox1.Panel.SuspendLayout();
@@ -73,6 +73,24 @@
             this.kryptonGroupBox1.Size = new System.Drawing.Size(617, 111);
             this.kryptonGroupBox1.TabIndex = 211;
             this.kryptonGroupBox1.Values.Heading = "Datos";
+            // 
+            // txtObservaciones
+            // 
+            this.txtObservaciones.BackColor = System.Drawing.Color.White;
+            this.txtObservaciones.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtObservaciones.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservaciones.Location = new System.Drawing.Point(100, 56);
+            this.txtObservaciones.Name = "txtObservaciones";
+            this.txtObservaciones.Size = new System.Drawing.Size(448, 21);
+            this.txtObservaciones.TabIndex = 199;
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(4, 56);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(90, 20);
+            this.kryptonLabel5.TabIndex = 198;
+            this.kryptonLabel5.Values.Text = "Observaciones";
             // 
             // lblIdAsignacion
             // 
@@ -203,24 +221,6 @@
             this.Button1.Text = "CANCELAR";
             this.Button1.UseVisualStyleBackColor = false;
             // 
-            // kryptonLabel5
-            // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(4, 56);
-            this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(90, 20);
-            this.kryptonLabel5.TabIndex = 198;
-            this.kryptonLabel5.Values.Text = "Observaciones";
-            // 
-            // txtObservaciones
-            // 
-            this.txtObservaciones.BackColor = System.Drawing.Color.White;
-            this.txtObservaciones.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtObservaciones.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservaciones.Location = new System.Drawing.Point(100, 56);
-            this.txtObservaciones.Name = "txtObservaciones";
-            this.txtObservaciones.Size = new System.Drawing.Size(448, 21);
-            this.txtObservaciones.TabIndex = 199;
-            // 
             // FrmAgregarPersonalControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,6 +231,7 @@
             this.Controls.Add(this.Button2);
             this.Controls.Add(this.Button1);
             this.Name = "FrmAgregarPersonalControl";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
