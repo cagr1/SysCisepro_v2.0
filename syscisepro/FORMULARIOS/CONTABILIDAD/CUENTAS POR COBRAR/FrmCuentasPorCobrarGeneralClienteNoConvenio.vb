@@ -40,6 +40,7 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
 
         Dim _fechaDesde As String = ""
         Dim _fechaHasta As String = ""
+        Dim _idCliente As Integer = 0
 
 
         Private Sub FrmCuentasPorCobrarGeneralClienteNoConvenio_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -82,6 +83,16 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
                 txtNombreComercialClienteGeneral.AutoCompleteSource = AutoCompleteSource.CustomSource
             Catch
                 txtNombreComercialClienteGeneral.AutoCompleteCustomSource = Nothing
+            End Try
+        End Sub
+
+        Public Sub autocompletarNombreClienteAcumulado()
+            Try
+                txtCliente.AutoCompleteCustomSource = _objetoClienteGeneral.Autocompletar(_tipoCon)
+                txtCliente.AutoCompleteMode = AutoCompleteMode.Suggest
+                txtCliente.AutoCompleteSource = AutoCompleteSource.CustomSource
+            Catch
+                txtCliente.AutoCompleteCustomSource = Nothing
             End Try
         End Sub
 
@@ -339,6 +350,120 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
         Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
             Dim frm As New FrmPendienteFacturacion
             frm.ShowDialog()
+        End Sub
+
+        Private Sub btnBuscarAcumulado_Click(sender As Object, e As EventArgs) Handles btnBuscarAcumulado.Click
+            Dim fechaDesde As DateTime = dtpDesdeAcu.Value.Date
+            Dim fechaHasta As Date = dtpHastaAcu.Value.Date.AddDays(1).AddSeconds(-1) ' hasta el final del día
+
+            dgvClienteAcumulado.DataSource = Nothing
+
+            cargarCuentasPorCobrarGeneralPorClienteAcumulado(fechaDesde, fechaHasta)
+        End Sub
+
+
+        Public Sub cargarCuentasPorCobrarGeneralPorClienteAcumulado(ByVal fechaDesde As DateTime, ByVal fechaHasta As DateTime)
+            Try
+                dgvCuentasPorCobrar.Rows.Clear()
+                Dim auxCli = String.Empty
+                Dim tot(6) As Decimal
+
+                Dim data As DataTable = _objetoCuentasPorCobrar.BuscarCuentasPorCobrarGeneralDetalladoPorClienteAcumulado(_tipoCon, fechaDesde, fechaHasta)
+
+
+                If data.Rows.Count > 0 Then
+                    auxCli = data.Rows(0)(1).ToString().Trim()
+
+
+                    ' Procesar cada fila de datos
+                    For Each row As DataRow In data.Rows
+                        Dim currentCliente As String = row("Cliente").ToString().Trim()
+
+                        ' Si cambió el cliente, agregar totales y espacios
+                        If Not auxCli.Equals(currentCliente) AndAlso Not String.IsNullOrEmpty(auxCli) Then
+                            AgregarFilaTotal(tot, auxCli)
+                            AgregarEspacioEntreClientes()
+
+                            ' Reiniciar totales
+                            Array.Clear(tot, 0, tot.Length)
+                        End If
+
+                        ' Agregar fila con datos
+                        dgvClienteAcumulado.Rows.Add(
+                row("Cliente"),
+                row("Factura"),
+                Format(CDate(row("Fecha")), "dd/MM/yyyy"),
+                CDec(row("Facturado")).ToString("N2"),
+                CDec(row("1-30")).ToString("N2"),
+                CDec(row("31-60")).ToString("N2"),
+                CDec(row("61-90")).ToString("N2"),
+                CDec(row("91-120")).ToString("N2"),
+                CDec(row(">120")).ToString("N2"),
+                CDec(row("Total")).ToString("N2")
+            )
+
+                        ' Acumular totales
+                        tot(0) += CDec(row("Facturado"))
+                        tot(1) += CDec(row("1-30"))
+                        tot(2) += CDec(row("31-60"))
+                        tot(3) += CDec(row("61-90"))
+                        tot(4) += CDec(row("91-120"))
+                        tot(5) += CDec(row(">120"))
+                        tot(6) += CDec(row("Total"))
+
+                        auxCli = currentCliente
+                    Next
+
+                    ' Agregar total del último cliente
+                    If data.Rows.Count > 0 Then
+                        AgregarFilaTotal(tot, auxCli)
+                    End If
+
+                    ' Ajustar visualización
+                    dgvClienteAcumulado.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells)
+                    dgvClienteAcumulado.AutoResizeRows()
+
+                End If
+
+                dgvCuentasPorCobrar.AutoResizeRows()
+            Catch ex As Exception
+                dgvCuentasPorCobrar.Rows.Clear()
+                KryptonMessageBox.Show("Metodo cargar cuentas por cobrar general por cliente" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
+        End Sub
+
+        Private Sub AgregarFilaTotal(totales() As Decimal, nombreCliente As String)
+            ' Agregar fila de totales para el cliente actual
+            Dim rowIndex As Integer = dgvClienteAcumulado.Rows.Add()
+            With dgvClienteAcumulado.Rows(rowIndex)
+                .Cells(0).Value = "TOTAL " & nombreCliente
+                .Cells(3).Value = totales(0).ToString("N2") ' Facturado
+                .Cells(4).Value = totales(1).ToString("N2") ' 1-30
+                .Cells(5).Value = totales(2).ToString("N2") ' 31-60
+                .Cells(6).Value = totales(3).ToString("N2") ' 61-90
+                .Cells(7).Value = totales(4).ToString("N2") ' 91-120
+                .Cells(8).Value = totales(5).ToString("N2") ' >120
+                .Cells(9).Value = totales(6).ToString("N2") ' Total
+
+                ' Formato de la fila de totales
+                .DefaultCellStyle.Font = New Font("Segoe UI", 8, FontStyle.Bold)
+                .DefaultCellStyle.BackColor = Color.LightGray
+            End With
+        End Sub
+
+        Private Sub AgregarEspacioEntreClientes()
+            ' Agregar fila vacía como separador
+            dgvClienteAcumulado.Rows.Add()
+
+            ' Opcional: configurar altura de la fila vacía
+            If dgvClienteAcumulado.RowCount > 0 Then
+                dgvClienteAcumulado.Rows(dgvClienteAcumulado.RowCount - 1).Height = 10
+            End If
+        End Sub
+
+        Private Sub txtCliente_KeyUp(sender As Object, e As KeyEventArgs) Handles txtCliente.KeyUp
+            If e.KeyCode <> Keys.Enter Then Return
+            _idCliente = Convert.ToInt32(_objetoClienteGeneral.BuscarIdClienteXRazonSocial(_tipoCon, txtCliente.Text))
         End Sub
     End Class
 End Namespace

@@ -35,7 +35,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
             var cmd = new SqlCommand
             {
                 CommandType = CommandType.StoredProcedure,
-                CommandText = "NuevoPersonalControl"
+                CommandText = "sp_nuevoPersonalControl"
             };
             cmd.Parameters.AddWithValue("@ID_CONTROL", SqlDbType.Int).Value = idControl;
             cmd.Parameters.AddWithValue("@FECHA_PRUEBA", SqlDbType.DateTime).Value = FechaPrueba;
