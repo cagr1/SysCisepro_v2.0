@@ -75,13 +75,13 @@ Namespace INVENTARIOS.ITEMS
             Dim g = If(grup = 0, String.Empty, " gu.ID_GRUPO_ITEM=" & grup & " and ")
             Dim s = If(subg = 0, String.Empty, " su.ID_SUB_GRUPO_ITEM=" & subg & " and ")
 
-            Dim sql = "select si.ID_SECUENCIAL_ITEM AS 'ID', si.CODIGO_SECUENCIAL_ITEM AS 'CÓDIGO', si.NOMBRE_SECUENCIAL_ITEM AS 'PRODUCTO', si.DESCRIPCION AS 'DESCRIPCIÓN', SI.SERIE,  coalesce(si.COSTO,0)    AS 'COSTO', coalesce(si.PVP,0)   AS 'PVP', (select KX.CANTIDAD from kardex kx WHERE KX.ID_SECUENCIAL_ITEM = si.ID_SECUENCIAL_ITEM) STOCK, " & _
-"si.FECHA_SECUENCIAL_ITEM AS 'FECHA CREACIÓN', mg.DETALLE AS 'MARCA', mo.DETALLE AS 'MODELO', ma.DETALLE AS 'MATERIAL', co.DETALLE AS 'COLOR', un.DETALLE_UNIDAD_MEDIDA AS 'UNIDAD MEDIDA', " & _
-"un.CODIGO_UNIDAD_MEDIDA AS 'MEDIDA', su.NOMBRE_SUB_GRUPO_ITEM AS 'SUB GRUPO' , gu.NOMBRE_GRUPO_ITEM AS 'GRUPO' , ca.NOMBRE_categoria_ITEM AS 'CATEGORIA', su.ID_SUB_GRUPO_ITEM AS 'ID SUB GRUPO', gu.ID_GRUPO_ITEM AS 'ID GRUPO', ca.ID_categoria_ITEM AS 'ID CATEGORIA' " & _
-"from secuencial_item si join marca_general mg on si.id_marca = mg.id_marca join modelo_general mo on si.id_modelo = mo.id_modelo join material_general ma on si.id_material = ma.id_material " & _
-"join color_general co on si.id_color = co.id_color join unidad_medida un on si.id_unidad_medida = un.id_unidad_medida join sub_grupo_item su on si.id_sub_grupo_item = su.id_sub_grupo_item " & _
-"join grupo_item gu on su.id_grupo_item = gu.id_grupo_item join categoria_item ca on gu.id_categoria_item = ca.id_categoria_item where si.estado_secuencial_item = 1 and mg.estado = 1  " & _
-"and mo.estado= 1 and ma.estado = 1 and co.estado = 1 and un.ESTADO_UNIDAD_MEDIDA = 1 and  " & c & g & s & _
+            Dim sql = "select si.ID_SECUENCIAL_ITEM AS 'ID', si.CODIGO_SECUENCIAL_ITEM AS 'CÓDIGO', si.NOMBRE_SECUENCIAL_ITEM AS 'PRODUCTO', si.DESCRIPCION AS 'DESCRIPCIÓN', SI.SERIE,  coalesce(si.COSTO,0)    AS 'COSTO', coalesce(si.PVP,0)   AS 'PVP', (select KX.CANTIDAD from kardex kx WHERE KX.ID_SECUENCIAL_ITEM = si.ID_SECUENCIAL_ITEM and KX.ESTADO = 1) STOCK, " &
+"si.FECHA_SECUENCIAL_ITEM AS 'FECHA CREACIÓN', mg.DETALLE AS 'MARCA', mo.DETALLE AS 'MODELO', ma.DETALLE AS 'MATERIAL', co.DETALLE AS 'COLOR', un.DETALLE_UNIDAD_MEDIDA AS 'UNIDAD MEDIDA', " &
+"un.CODIGO_UNIDAD_MEDIDA AS 'MEDIDA', su.NOMBRE_SUB_GRUPO_ITEM AS 'SUB GRUPO' , gu.NOMBRE_GRUPO_ITEM AS 'GRUPO' , ca.NOMBRE_categoria_ITEM AS 'CATEGORIA', su.ID_SUB_GRUPO_ITEM AS 'ID SUB GRUPO', gu.ID_GRUPO_ITEM AS 'ID GRUPO', ca.ID_categoria_ITEM AS 'ID CATEGORIA' " &
+"from secuencial_item si join marca_general mg on si.id_marca = mg.id_marca join modelo_general mo on si.id_modelo = mo.id_modelo join material_general ma on si.id_material = ma.id_material " &
+"join color_general co on si.id_color = co.id_color join unidad_medida un on si.id_unidad_medida = un.id_unidad_medida join sub_grupo_item su on si.id_sub_grupo_item = su.id_sub_grupo_item " &
+"join grupo_item gu on su.id_grupo_item = gu.id_grupo_item join categoria_item ca on gu.id_categoria_item = ca.id_categoria_item where si.estado_secuencial_item = 1 and mg.estado = 1  " &
+"and mo.estado= 1 and ma.estado = 1 and co.estado = 1 and un.ESTADO_UNIDAD_MEDIDA = 1 and  " & c & g & s &
 "(si.NOMBRE_SECUENCIAL_ITEM like ('%'+@FILTRO+'%') or si.DESCRIPCION like ('%' + @FILTRO + '%') or si.SERIE like ('%' + @FILTRO + '%')) ORDER BY si.ID_SUB_GRUPO_ITEM ASC , si.NOMBRE_SECUENCIAL_ITEM "
 
             Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, sql, False, pars)

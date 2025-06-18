@@ -1340,8 +1340,8 @@ namespace SysCisepro3.TalentoHumano
                 _objControlAntidroga.idControl = _objControlAntidroga.BuscarMayorId(TipoCon) + 1;
                 _objControlAntidroga.FechaPrueba = dtpFechaIngreso.Value;
                 _objControlAntidroga.Observaciones = _Observaciones;
-                _objControlAntidroga.IdPersonal = _IdPersonal;
-                _objControlAntidroga.Idresponsable = Convert.ToInt32(Usuario.IdPersonal.ToString());
+                _objControlAntidroga.IdPersonal = _objPersonal.IdPersonal;
+                _objControlAntidroga.Idresponsable = _IdPersonal;
                 _objControlAntidroga.Nombres = _Nombres;
                 _objControlAntidroga.Area = _Area;
                 _objControlAntidroga.Cargo = _Cargo;

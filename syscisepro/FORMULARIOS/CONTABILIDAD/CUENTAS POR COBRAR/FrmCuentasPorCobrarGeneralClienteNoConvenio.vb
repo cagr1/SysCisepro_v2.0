@@ -364,15 +364,16 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
 
         Public Sub cargarCuentasPorCobrarGeneralPorClienteAcumulado(ByVal fechaDesde As DateTime, ByVal fechaHasta As DateTime)
             Try
-                dgvCuentasPorCobrar.Rows.Clear()
+                dgvClienteAcumulado.Rows.Clear()
                 Dim auxCli = String.Empty
-                Dim tot(6) As Decimal
+                Dim totCliente(6) As Decimal
+                Dim totGeneral(7) As Decimal
 
                 Dim data As DataTable = _objetoCuentasPorCobrar.BuscarCuentasPorCobrarGeneralDetalladoPorClienteAcumulado(_tipoCon, fechaDesde, fechaHasta)
 
 
                 If data.Rows.Count > 0 Then
-                    auxCli = data.Rows(0)(1).ToString().Trim()
+                    auxCli = data.Rows(0)("Cliente").ToString().Trim()
 
 
                     ' Procesar cada fila de datos
@@ -381,43 +382,68 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
 
                         ' Si cambió el cliente, agregar totales y espacios
                         If Not auxCli.Equals(currentCliente) AndAlso Not String.IsNullOrEmpty(auxCli) Then
-                            AgregarFilaTotal(tot, auxCli)
+                            AgregarFilaTotal(totCliente, auxCli)
                             AgregarEspacioEntreClientes()
 
-                            ' Reiniciar totales
-                            Array.Clear(tot, 0, tot.Length)
+                            ' Acumular al total general y reiniciar totales del cliente
+                            For i As Integer = 0 To 6
+                                totGeneral(i) += totCliente(i)
+                                totCliente(i) = 0 ' Reiniciar totales del cliente
+                            Next
                         End If
 
                         ' Agregar fila con datos
                         dgvClienteAcumulado.Rows.Add(
-                row("Cliente"),
-                row("Factura"),
-                Format(CDate(row("Fecha")), "dd/MM/yyyy"),
-                CDec(row("Facturado")).ToString("N2"),
-                CDec(row("1-30")).ToString("N2"),
-                CDec(row("31-60")).ToString("N2"),
-                CDec(row("61-90")).ToString("N2"),
-                CDec(row("91-120")).ToString("N2"),
-                CDec(row(">120")).ToString("N2"),
-                CDec(row("Total")).ToString("N2")
+                        row("Cliente"),
+                        row("Factura"),
+                        Format(CDate(row("Fecha")), "dd/MM/yyyy"),
+                        CDec(row("Facturado")).ToString("N2"),
+                        CDec(row("1-30")).ToString("N2"),
+                        CDec(row("31-60")).ToString("N2"),
+                        CDec(row("61-90")).ToString("N2"),
+                        CDec(row("91-120")).ToString("N2"),
+                        CDec(row(">120")).ToString("N2"),
+                        CDec(row("Total")).ToString("N2")
             )
 
-                        ' Acumular totales
-                        tot(0) += CDec(row("Facturado"))
-                        tot(1) += CDec(row("1-30"))
-                        tot(2) += CDec(row("31-60"))
-                        tot(3) += CDec(row("61-90"))
-                        tot(4) += CDec(row("91-120"))
-                        tot(5) += CDec(row(">120"))
-                        tot(6) += CDec(row("Total"))
+                        ' Acumular totales del cliente
+                        totCliente(0) += CDec(row("Facturado"))
+                        totCliente(1) += CDec(row("1-30"))
+                        totCliente(2) += CDec(row("31-60"))
+                        totCliente(3) += CDec(row("61-90"))
+                        totCliente(4) += CDec(row("91-120"))
+                        totCliente(5) += CDec(row(">120"))
+                        totCliente(6) += CDec(row("Total"))
 
                         auxCli = currentCliente
                     Next
 
                     ' Agregar total del último cliente
                     If data.Rows.Count > 0 Then
-                        AgregarFilaTotal(tot, auxCli)
+                        AgregarFilaTotal(totCliente, auxCli)
+
+                        ' Acumular al total general
+                        For i As Integer = 0 To 6
+                            totGeneral(i) += totCliente(i)
+                        Next
                     End If
+
+                    Dim rowIndex As Integer = dgvClienteAcumulado.Rows.Add()
+                    With dgvClienteAcumulado.Rows(rowIndex)
+                        .Cells(0).Value = "TOTAL GENERAL"
+                        .Cells(3).Value = totGeneral(0).ToString("N2") ' Facturado
+                        .Cells(4).Value = totGeneral(1).ToString("N2") ' 1-30
+                        .Cells(5).Value = totGeneral(2).ToString("N2") ' 31-60
+                        .Cells(6).Value = totGeneral(3).ToString("N2") ' 61-90
+                        .Cells(7).Value = totGeneral(4).ToString("N2") ' 91-120
+                        .Cells(8).Value = totGeneral(5).ToString("N2") ' >120
+                        .Cells(9).Value = totGeneral(6).ToString("N2") ' Total
+
+                        ' Formato de la fila de total general
+                        .DefaultCellStyle.Font = New Font("Segoe UI", 9, FontStyle.Bold)
+                        .DefaultCellStyle.BackColor = Color.LightSteelBlue
+
+                    End With
 
                     ' Ajustar visualización
                     dgvClienteAcumulado.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells)

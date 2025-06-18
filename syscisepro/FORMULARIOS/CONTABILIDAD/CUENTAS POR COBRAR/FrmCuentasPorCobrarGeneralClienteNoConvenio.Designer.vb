@@ -85,15 +85,6 @@
             Me.KryptonNavigator1 = New ComponentFactory.Krypton.Navigator.KryptonNavigator()
             Me.KryptonPage1 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
-            Me.KryptonGroupBox3 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
-            Me.txtCliente = New System.Windows.Forms.TextBox()
-            Me.dtpHastaAcu = New System.Windows.Forms.DateTimePicker()
-            Me.rbClienteAcu = New System.Windows.Forms.RadioButton()
-            Me.dtpDesdeAcu = New System.Windows.Forms.DateTimePicker()
-            Me.rbGeneralAcu = New System.Windows.Forms.RadioButton()
-            Me.btnBuscarAcumulado = New ComponentFactory.Krypton.Toolkit.KryptonButton()
             Me.dgvClienteAcumulado = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
             Me.cliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.factura = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -105,6 +96,15 @@
             Me.noventa_120 = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.cientoveinte = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.KryptonGroupBox3 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.btnBuscarAcumulado = New ComponentFactory.Krypton.Toolkit.KryptonButton()
+            Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
+            Me.txtCliente = New System.Windows.Forms.TextBox()
+            Me.dtpHastaAcu = New System.Windows.Forms.DateTimePicker()
+            Me.rbClienteAcu = New System.Windows.Forms.RadioButton()
+            Me.dtpDesdeAcu = New System.Windows.Forms.DateTimePicker()
+            Me.rbGeneralAcu = New System.Windows.Forms.RadioButton()
             Me.MenuStrip1.SuspendLayout()
             CType(Me.dgvCuentasPorCobrar, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -121,11 +121,11 @@
             Me.KryptonPage1.SuspendLayout()
             CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonPage2.SuspendLayout()
+            CType(Me.dgvClienteAcumulado, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox3.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox3.Panel.SuspendLayout()
             Me.KryptonGroupBox3.SuspendLayout()
-            CType(Me.dgvClienteAcumulado, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'MenuStrip1
@@ -500,7 +500,7 @@
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbGeneral)
             Me.KryptonGroupBox1.Size = New System.Drawing.Size(861, 55)
             Me.KryptonGroupBox1.TabIndex = 197
-            Me.KryptonGroupBox1.Values.Heading = "Busqueda"
+            Me.KryptonGroupBox1.Values.Heading = "Datos"
             '
             'KryptonLabel3
             '
@@ -529,9 +529,7 @@
             'KryptonGroupBox2
             '
             Me.KryptonGroupBox2.CaptionOverlap = 0R
-            Me.KryptonGroupBox2.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption
             Me.KryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox2.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox
             Me.KryptonGroupBox2.Location = New System.Drawing.Point(2, 401)
             Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
             '
@@ -603,40 +601,17 @@
             '
             'KryptonNavigator1
             '
-            Me.KryptonNavigator1.Bar.BarMapExtraText = ComponentFactory.Krypton.Navigator.MapKryptonPageText.None
-            Me.KryptonNavigator1.Bar.BarMapImage = ComponentFactory.Krypton.Navigator.MapKryptonPageImage.Small
-            Me.KryptonNavigator1.Bar.BarMapText = ComponentFactory.Krypton.Navigator.MapKryptonPageText.TextTitle
-            Me.KryptonNavigator1.Bar.CheckButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Standalone
-            Me.KryptonNavigator1.Bar.ItemSizing = ComponentFactory.Krypton.Navigator.BarItemSizing.SameHeight
-            Me.KryptonNavigator1.Bar.TabBorderStyle = ComponentFactory.Krypton.Toolkit.TabBorderStyle.RoundedOutsizeMedium
             Me.KryptonNavigator1.Bar.TabStyle = ComponentFactory.Krypton.Toolkit.TabStyle.Dock
             Me.KryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None
-            Me.KryptonNavigator1.Button.CloseButtonAction = ComponentFactory.Krypton.Navigator.CloseButtonAction.RemovePageAndDispose
             Me.KryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide
-            Me.KryptonNavigator1.Button.ContextButtonAction = ComponentFactory.Krypton.Navigator.ContextButtonAction.SelectPage
-            Me.KryptonNavigator1.Button.ContextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
-            Me.KryptonNavigator1.Button.ContextMenuMapImage = ComponentFactory.Krypton.Navigator.MapKryptonPageImage.Small
-            Me.KryptonNavigator1.Button.ContextMenuMapText = ComponentFactory.Krypton.Navigator.MapKryptonPageText.TextTitle
-            Me.KryptonNavigator1.Button.NextButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
-            Me.KryptonNavigator1.Button.NextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
-            Me.KryptonNavigator1.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
-            Me.KryptonNavigator1.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
             Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.KryptonNavigator1.Group.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient
-            Me.KryptonNavigator1.Group.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlClient
-            Me.KryptonNavigator1.Header.HeaderStyleBar = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary
-            Me.KryptonNavigator1.Header.HeaderStylePrimary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Primary
-            Me.KryptonNavigator1.Header.HeaderStyleSecondary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 32)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
             Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
-            Me.KryptonNavigator1.PageBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
-            Me.KryptonNavigator1.Panel.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelClient
-            Me.KryptonNavigator1.SelectedIndex = 1
+            Me.KryptonNavigator1.SelectedIndex = 0
             Me.KryptonNavigator1.Size = New System.Drawing.Size(879, 525)
             Me.KryptonNavigator1.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.KryptonNavigator1.StateNormal.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
             Me.KryptonNavigator1.TabIndex = 199
             Me.KryptonNavigator1.Text = "KryptonNavigator1"
             '
@@ -652,7 +627,6 @@
             Me.KryptonPage1.Name = "KryptonPage1"
             Me.KryptonPage1.Size = New System.Drawing.Size(877, 496)
             Me.KryptonPage1.Text = "Busqueda"
-            Me.KryptonPage1.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage1.UniqueName = "8CE5953AC163468F9F8934745D9FB2FD"
             '
@@ -667,9 +641,77 @@
             Me.KryptonPage2.Name = "KryptonPage2"
             Me.KryptonPage2.Size = New System.Drawing.Size(877, 496)
             Me.KryptonPage2.Text = "Acumulado"
-            Me.KryptonPage2.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip
             Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage2.UniqueName = "A132AF518D4F4C483E8B6305622E03D6"
+            '
+            'dgvClienteAcumulado
+            '
+            Me.dgvClienteAcumulado.ColumnHeadersHeight = 35
+            Me.dgvClienteAcumulado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cliente, Me.factura, Me.fecha, Me.Facturado, Me.uno_30, Me.treintauno_60, Me.sesenta_90, Me.noventa_120, Me.cientoveinte, Me.total})
+            Me.dgvClienteAcumulado.GridStyles.Style = ComponentFactory.Krypton.Toolkit.DataGridViewStyle.Mixed
+            Me.dgvClienteAcumulado.GridStyles.StyleBackground = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridDataCellList
+            Me.dgvClienteAcumulado.Location = New System.Drawing.Point(4, 62)
+            Me.dgvClienteAcumulado.Name = "dgvClienteAcumulado"
+            Me.dgvClienteAcumulado.RowHeadersVisible = False
+            Me.dgvClienteAcumulado.RowHeadersWidth = 40
+            Me.dgvClienteAcumulado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+            Me.dgvClienteAcumulado.Size = New System.Drawing.Size(860, 424)
+            Me.dgvClienteAcumulado.StateNormal.Background.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvClienteAcumulado.TabIndex = 199
+            '
+            'cliente
+            '
+            DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            Me.cliente.DefaultCellStyle = DataGridViewCellStyle14
+            Me.cliente.HeaderText = "Cliente"
+            Me.cliente.Name = "cliente"
+            '
+            'factura
+            '
+            DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            Me.factura.DefaultCellStyle = DataGridViewCellStyle15
+            Me.factura.HeaderText = "No Factura"
+            Me.factura.Name = "factura"
+            '
+            'fecha
+            '
+            Me.fecha.HeaderText = "Fecha Emision"
+            Me.fecha.Name = "fecha"
+            '
+            'Facturado
+            '
+            Me.Facturado.HeaderText = "Facturado"
+            Me.Facturado.Name = "Facturado"
+            '
+            'uno_30
+            '
+            Me.uno_30.HeaderText = "[1-30]"
+            Me.uno_30.Name = "uno_30"
+            '
+            'treintauno_60
+            '
+            Me.treintauno_60.HeaderText = "[31-60]"
+            Me.treintauno_60.Name = "treintauno_60"
+            '
+            'sesenta_90
+            '
+            Me.sesenta_90.HeaderText = "[61-90]"
+            Me.sesenta_90.Name = "sesenta_90"
+            '
+            'noventa_120
+            '
+            Me.noventa_120.HeaderText = "[91-120]"
+            Me.noventa_120.Name = "noventa_120"
+            '
+            'cientoveinte
+            '
+            Me.cientoveinte.HeaderText = "[>120]"
+            Me.cientoveinte.Name = "cientoveinte"
+            '
+            'total
+            '
+            Me.total.HeaderText = "Total"
+            Me.total.Name = "total"
             '
             'KryptonGroupBox3
             '
@@ -690,7 +732,30 @@
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.rbGeneralAcu)
             Me.KryptonGroupBox3.Size = New System.Drawing.Size(861, 55)
             Me.KryptonGroupBox3.TabIndex = 198
-            Me.KryptonGroupBox3.Values.Heading = "Busqueda"
+            Me.KryptonGroupBox3.Values.Heading = "Datos"
+            '
+            'btnBuscarAcumulado
+            '
+            Me.btnBuscarAcumulado.AutoSize = True
+            Me.btnBuscarAcumulado.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+            Me.btnBuscarAcumulado.Location = New System.Drawing.Point(473, -1)
+            Me.btnBuscarAcumulado.Name = "btnBuscarAcumulado"
+            Me.btnBuscarAcumulado.Size = New System.Drawing.Size(32, 32)
+            Me.btnBuscarAcumulado.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
+            Me.btnBuscarAcumulado.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
+            Me.btnBuscarAcumulado.StateCommon.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnBuscarAcumulado.StateCommon.Content.Padding = New System.Windows.Forms.Padding(2)
+            Me.btnBuscarAcumulado.TabIndex = 250
+            Me.btnBuscarAcumulado.Values.ImageStates.ImageCheckedNormal = Nothing
+            Me.btnBuscarAcumulado.Values.ImageStates.ImageCheckedPressed = Nothing
+            Me.btnBuscarAcumulado.Values.ImageStates.ImageCheckedTracking = Nothing
+            Me.btnBuscarAcumulado.Values.ImageStates.ImageDisabled = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscarAcumulado.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscarAcumulado.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
+            Me.btnBuscarAcumulado.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
+            Me.btnBuscarAcumulado.Values.Text = ""
             '
             'KryptonLabel10
             '
@@ -768,97 +833,6 @@
             Me.rbGeneralAcu.Text = "General"
             Me.rbGeneralAcu.UseVisualStyleBackColor = False
             '
-            'btnBuscarAcumulado
-            '
-            Me.btnBuscarAcumulado.AutoSize = True
-            Me.btnBuscarAcumulado.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-            Me.btnBuscarAcumulado.Location = New System.Drawing.Point(473, -1)
-            Me.btnBuscarAcumulado.Name = "btnBuscarAcumulado"
-            Me.btnBuscarAcumulado.Size = New System.Drawing.Size(32, 32)
-            Me.btnBuscarAcumulado.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
-            Me.btnBuscarAcumulado.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
-            Me.btnBuscarAcumulado.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
-            Me.btnBuscarAcumulado.StateCommon.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
-            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
-            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
-            Me.btnBuscarAcumulado.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
-            Me.btnBuscarAcumulado.StateCommon.Content.Padding = New System.Windows.Forms.Padding(2)
-            Me.btnBuscarAcumulado.TabIndex = 250
-            Me.btnBuscarAcumulado.Values.ImageStates.ImageCheckedNormal = Nothing
-            Me.btnBuscarAcumulado.Values.ImageStates.ImageCheckedPressed = Nothing
-            Me.btnBuscarAcumulado.Values.ImageStates.ImageCheckedTracking = Nothing
-            Me.btnBuscarAcumulado.Values.ImageStates.ImageDisabled = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnBuscarAcumulado.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnBuscarAcumulado.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
-            Me.btnBuscarAcumulado.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
-            Me.btnBuscarAcumulado.Values.Text = ""
-            '
-            'dgvClienteAcumulado
-            '
-            Me.dgvClienteAcumulado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvClienteAcumulado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cliente, Me.factura, Me.fecha, Me.Facturado, Me.uno_30, Me.treintauno_60, Me.sesenta_90, Me.noventa_120, Me.cientoveinte, Me.total})
-            Me.dgvClienteAcumulado.Location = New System.Drawing.Point(4, 62)
-            Me.dgvClienteAcumulado.Name = "dgvClienteAcumulado"
-            Me.dgvClienteAcumulado.RowHeadersVisible = False
-            Me.dgvClienteAcumulado.Size = New System.Drawing.Size(860, 424)
-            Me.dgvClienteAcumulado.StateNormal.Background.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.dgvClienteAcumulado.StateNormal.Background.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
-            Me.dgvClienteAcumulado.TabIndex = 199
-            '
-            'cliente
-            '
-            DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            Me.cliente.DefaultCellStyle = DataGridViewCellStyle14
-            Me.cliente.HeaderText = "Cliente"
-            Me.cliente.Name = "cliente"
-            '
-            'factura
-            '
-            DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            Me.factura.DefaultCellStyle = DataGridViewCellStyle15
-            Me.factura.HeaderText = "No Factura"
-            Me.factura.Name = "factura"
-            '
-            'fecha
-            '
-            Me.fecha.HeaderText = "Fecha Emision"
-            Me.fecha.Name = "fecha"
-            '
-            'Facturado
-            '
-            Me.Facturado.HeaderText = "Facturado"
-            Me.Facturado.Name = "Facturado"
-            '
-            'uno_30
-            '
-            Me.uno_30.HeaderText = "[1-30]"
-            Me.uno_30.Name = "uno_30"
-            '
-            'treintauno_60
-            '
-            Me.treintauno_60.HeaderText = "[31-60]"
-            Me.treintauno_60.Name = "treintauno_60"
-            '
-            'sesenta_90
-            '
-            Me.sesenta_90.HeaderText = "[61-90]"
-            Me.sesenta_90.Name = "sesenta_90"
-            '
-            'noventa_120
-            '
-            Me.noventa_120.HeaderText = "[91-120]"
-            Me.noventa_120.Name = "noventa_120"
-            '
-            'cientoveinte
-            '
-            Me.cientoveinte.HeaderText = "[>120]"
-            Me.cientoveinte.Name = "cientoveinte"
-            '
-            'total
-            '
-            Me.total.HeaderText = "Total"
-            Me.total.Name = "total"
-            '
             'FrmCuentasPorCobrarGeneralClienteNoConvenio
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -896,12 +870,12 @@
             Me.KryptonPage1.ResumeLayout(False)
             CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonPage2.ResumeLayout(False)
+            CType(Me.dgvClienteAcumulado, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.KryptonGroupBox3.Panel, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox3.Panel.ResumeLayout(False)
             Me.KryptonGroupBox3.Panel.PerformLayout()
             CType(Me.KryptonGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox3.ResumeLayout(False)
-            CType(Me.dgvClienteAcumulado, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
