@@ -259,7 +259,7 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
                 Auditoria()
             Else
                 'MsgBox("EL NIVEL DE LA CUENTA DEBE SER UNO MAS QUE LA CUENTA PADRE", MsgBoxStyle.Exclamation, "Mensaje de validación.")
-                KryptonMessageBox.Show("EL NIVEL DE LA CUENTA DEBE SER UNO MAS QUE LA CUENTA PADRE", "Mensaje de validación.", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("La cuenta ingresada debe ser un nivel mas que la cuenta padre" & "" & vbNewLine & "por favor verifique ", "Mensaje de validación.", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
         '==============================================================================================================================================================================

@@ -38,11 +38,20 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
 
         Dim _numeroRegistro As Int64 = 0
 
+        Public Property IdComprobante As Integer
+            Get
+                Return CInt(lblIdComprobanteEgreso.Text)
+            End Get
+            Set(value As Integer)
+                lblIdComprobanteEgreso.Text = value.ToString()
+            End Set
+        End Property
+
         Private Sub ConectarReporteComprobanteEgreso()
             Try
-                _numeroRegistro = _objetoNumeroRegistroAsientoCompEgreso.BuscarNumeroRegistroAsientoPorIdComprobanteEgreso(_tipoCon, lblIdComprobanteEgreso.Text)
+                _numeroRegistro = _objetoNumeroRegistroAsientoCompEgreso.BuscarNumeroRegistroAsientoPorIdComprobanteEgreso(_tipoCon, IdComprobante)
 
-                _crComprobanteEgreso.SetDataSource(_objetoComprobanteEgresoBancos.BuscarReporteComprobantesEgresoBancoMachalaXIdComprobanteNumeroRegistro(_tipoCon, CType(lblIdComprobanteEgreso.Text, Int64), _numeroRegistro))
+                _crComprobanteEgreso.SetDataSource(_objetoComprobanteEgresoBancos.BuscarReporteComprobantesEgresoBancoMachalaXIdComprobanteNumeroRegistro(_tipoCon, IdComprobante, _numeroRegistro))
                 crvComprobanteEgresoBancoMachala.ReportSource = _crComprobanteEgreso
                 crvComprobanteEgresoBancoMachala.Zoom(75)
                 crvComprobanteEgresoBancoMachala.Refresh()

@@ -683,12 +683,14 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         End Sub
         Private Sub btnReporteComprobanteEgresoBancos_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporte.Click
             If CInt(lblIdComprobanteEgresoBancos.Text) <> 0 Then
-                If CInt(cmbBancos.SelectedValue) = 1 And _tipoCon = TipoConexion.Cisepro Then
-                    Dim f = New FormReporteComprobanteEgresoBancoMachala
-                    f.TipoCox = TipoCox
-                    f.lblIdComprobanteEgreso.Text = CInt(lblIdComprobanteEgresoBancos.Text)
-                    f.ShowDialog()
-                Else
+                'If CInt(cmbBancos.SelectedValue) = 1 And _tipoCon = TipoConexion.Cisepro Then
+                If _tipoCon = TipoConexion.Cisepro Then
+                    '    Dim f = New FormReporteComprobanteEgresoBancoMachala
+                    '    f.TipoCox = TipoCox
+                    '    f.IdComprobante = CInt(lblIdComprobanteEgresoBancos.Text)
+                    '    f.ShowDialog()
+                    'Else
+
                     Dim f = New FormReporteComprobanteEgresoBancos
                     f.TipoCox = TipoCox
                     f.lblIdComprobanteEgreso.Text = CInt(lblIdComprobanteEgresoBancos.Text)

@@ -1404,7 +1404,7 @@ namespace SysCisepro3.TalentoHumano
             HabilitarRegistro(true, false);
             _estado = 2;
 
-            CargarProyectos(false);
+            //CargarProyectos(false);
             
 
 

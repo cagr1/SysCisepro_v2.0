@@ -524,6 +524,7 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
             Dim tarifa12FacturasCompras As Decimal = 0
             Dim tarifa5FacturasCompras As Decimal = 0
             Dim ivaFacturasCompras As Decimal = 0
+            Dim iva5FacturasCompras As Decimal = 0
             Dim nroRegistrosLiquidacionCompras = 0
             Dim tarifa0LiquidacionCompras As Decimal = 0
             Dim tarifa12LiquidacionCompras As Decimal = 0
@@ -619,6 +620,7 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                     tarifa12FacturasCompras = tarifa12FacturasCompras + dgvComprasATS.Rows(indiceCompCompra).Cells(8).Value
                     tarifa5FacturasCompras = tarifa5FacturasCompras + dgvComprasATS.Rows(indiceCompCompra).Cells(20).Value
                     ivaFacturasCompras = ivaFacturasCompras + dgvComprasATS.Rows(indiceCompCompra).Cells(12).Value
+                    iva5FacturasCompras = iva5FacturasCompras + dgvComprasATS.Rows(indiceCompCompra).Cells(21).Value
                     If _comprasFacturas = "" Then
                         _comprasFacturas = dgvComprasATS.Rows(indiceCompCompra).Cells(0).Value.ToString
                     Else
@@ -800,7 +802,7 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
             txtNroRegistrosFacturasCompras.Text = nroRegistrosFacturasCompras
             txtTarifa0FacturaCompras.Text = tarifa0FacturasCompras
             txtTarifa12FacturasCompras.Text = tarifa12FacturasCompras + tarifa5FacturasCompras
-            txtIvaFacturasCompras.Text = ivaFacturasCompras
+            txtIvaFacturasCompras.Text = ivaFacturasCompras + iva5FacturasCompras
 
             txtNroRegistrosLiquidacionCompras.Text = nroRegistrosLiquidacionCompras : txtTarifa0LiquidacionCompras.Text = tarifa0LiquidacionCompras : txtTarifa12LiquidacionCompras.Text = tarifa12LiquidacionCompras : txtIvaLiquidacionCompras.Text = ivaLiquidacionCompras
             txtNroRegistrosNotasVentaCompras.Text = nroRegistrosNotaVentaCompras : txtTarifa0NotaVentaCompras.Text = tarifa0NotaVentaCompras : txtTarifa12NotaVentaCompras.Text = tarifa12NotaVentaCompras : txtIvaNotaVentaCompras.Text = ivaNotaVentaCompras
@@ -1168,13 +1170,15 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                     archivo.writeline("<fechaEmision>" & Format(dgvComprasATS.Rows(indiceCompras).Cells(5).Value, "dd/MM/yyyy") & "</fechaEmision>")
                     archivo.writeline("<autorizacion>" & dgvComprasATS.Rows(indiceCompras).Cells(7).Value & "</autorizacion>")
                     archivo.writeline("<baseNoGraIva>" & dgvComprasATS.Rows(indiceCompras).Cells(9).Value & "</baseNoGraIva>")
+
                     archivo.writeline("<baseImponible>0.00</baseImponible>")
-                    archivo.writeline("<baseImpGrav>" & dgvComprasATS.Rows(indiceCompras).Cells(8).Value & "</baseImpGrav>")
+                    'archivo.writeline("<baseImpGrav>" & dgvComprasATS.Rows(indiceCompras).Cells(8).Value & "</baseImpGrav>") 'AQUI
+                    archivo.writeline("<baseImpGrav>" & (Convert.ToDecimal(dgvComprasATS.Rows(indiceCompras).Cells(8).Value) + Convert.ToDecimal(dgvComprasATS.Rows(indiceCompras).Cells(20).Value)).ToString() & "</baseImpGrav>")
                     archivo.writeline("<baseImpExe>0.00</baseImpExe>")
                     archivo.writeline("<montoIce>0.00</montoIce>")
 
-                    archivo.writeline("<montoIva>" & dgvComprasATS.Rows(indiceCompras).Cells(12).Value & "</montoIva>")
-
+                    'archivo.writeline("<montoIva>" & dgvComprasATS.Rows(indiceCompras).Cells(12).Value & "</montoIva>") 'AQUI
+                    archivo.writeline("<montoIva>" & (Convert.ToDecimal(dgvComprasATS.Rows(indiceCompras).Cells(12).Value) + Convert.ToDecimal(dgvComprasATS.Rows(indiceCompras).Cells(21).Value)).ToString() & "</montoIva>")
                     valRetBien10 = 0.0
                     valRetServ20 = 0.0
                     valRetServ50 = 0.0
