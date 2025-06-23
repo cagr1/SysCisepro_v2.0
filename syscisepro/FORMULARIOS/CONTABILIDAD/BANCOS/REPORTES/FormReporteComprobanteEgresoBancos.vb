@@ -37,6 +37,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
         Dim objetoChequeEmitido As New ClassChequesEmitidosCxp
 
         Dim crComprobanteEgreso As New crComprobanteEgresoBancos
+        ReadOnly _crComprobanteEgresoMachala As New crComprobanteEgresoBancoMachala2
         Dim crComprobanteEgresoHorizontal As New crComprobanteEgresoBancosHorizontal
 
         Dim crChequeEmitido As New crChequesEmitidos
@@ -61,6 +62,19 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                 Console.WriteLine(ex.Message)
             End Try
         End Sub
+
+        Public Sub conectarReporteComprobanteEgresoMachala()
+            Try
+
+
+                _crComprobanteEgresoMachala.SetDataSource(objetoComprobanteEgresoBancos.BuscarReporteComprobantesEgresoBancoMachalaXIdComprobanteNumeroRegistro(_tipoCon, CType(lblIdComprobanteEgreso.Text, Int64), numeroRegistro))
+                crvMachala.ReportSource = _crComprobanteEgresoMachala
+                crvMachala.Zoom(75)
+                crvMachala.Refresh()
+            Catch ex As Exception
+            End Try
+        End Sub
+
         Public Sub conectarReporteChequeEmitido()
             Try
                 crChequeEmitido.SetDataSource(objetoChequeEmitido.SeleccionarChequeEmitidoXIdComprobanteEgreso(_tipoCon, CType(lblIdComprobanteEgreso.Text, Int64)))
@@ -84,6 +98,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
 
             conectarReporteComprobanteEgreso()
             conectarReporteChequeEmitido()
+            conectarReporteComprobanteEgresoMachala()
+
         End Sub
 
         Private Sub txtIdComprobanteEgreso_KeyDown(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs) Handles txtIdComprobanteEgreso.KeyDown
@@ -123,6 +139,10 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
         End Sub
 
         Private Sub crvChequeEmitido_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles crvChequeEmitido.Load
+
+        End Sub
+
+        Private Sub txtIdComprobanteEgreso_TextChanged(sender As Object, e As EventArgs) Handles txtIdComprobanteEgreso.TextChanged
 
         End Sub
     End Class

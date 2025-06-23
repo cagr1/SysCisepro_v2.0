@@ -1203,7 +1203,9 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 xml += "<infoFactura>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=- INFORMACÍON DE LA FACTURA =-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<fechaEmision>" & Format(dtpFechaEmisionFacturaVenta.Value, "dd/MM/yyyy") & "</fechaEmision>" & vbNewLine
                 xml += "<dirEstablecimiento>" & txtDireccionEmpresa.Text & "</dirEstablecimiento>" & vbNewLine
-                xml += "<contribuyenteEspecial>" & nres & "</contribuyenteEspecial>" & vbNewLine 'Modificacion 01/04/24
+                If _tipoCon = TipoConexion.Cisepro Then
+                    xml += "<contribuyenteEspecial>" & nres & "</contribuyenteEspecial>" & vbNewLine 'Modificacion 01/04/24
+                End If
                 'xml += "<contribuyenteEspecial>" & _numAutoContEspecial & "</contribuyenteEspecial>" & vbNewLine
                 xml += "<obligadoContabilidad>SI</obligadoContabilidad>" & vbNewLine
                 xml += "<tipoIdentificacionComprador>" & _tipoIdentificacionCliente & "</tipoIdentificacionComprador>" & vbNewLine
