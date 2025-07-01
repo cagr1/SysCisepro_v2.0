@@ -5,9 +5,8 @@
      **/
     public enum TipoConexion
     {
-
-
-        
+            
+               
         
         Cisepro = 0,
         Seportpac ,

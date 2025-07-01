@@ -41,6 +41,7 @@ Namespace FORMULARIOS.OPERACIONES
         ReadOnly _crSitiosCisepro As New rptHorariosProgramacionNew
         ReadOnly _objProgramacionOps As New ClassProgramacionOperaciones
         ReadOnly _objdetaProgramacionOps As New ClassDetallesProgramacion
+        ReadOnly _objGuardiaPlantilla As New ClassGuardiaPlantilla
 
         Dim _frmDetail As FrmEditarRegistroPorgramacion
 
@@ -635,22 +636,22 @@ Namespace FORMULARIOS.OPERACIONES
 
         Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAdd.Click
             If (dtpDesdeP.Value < DateTimePicker1.Value Or dtpDesdeP.Value > DateTimePicker2.Value) Then
-                MessageBox.Show("La fecha de inicio para el vigilante " & txtPersonal.Text.Trim & " debe estar dentro del rango de la fecha de la programación!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                KryptonMessageBox.Show("La fecha de inicio para el vigilante " & txtPersonal.Text.Trim & " debe estar dentro del rango de la fecha de la programación!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
                 Return
             End If
 
             If (dtpHastaP.Value < DateTimePicker1.Value Or dtpHastaP.Value > DateTimePicker2.Value Or dtpHastaP.Value < dtpDesdeP.Value) Then
-                MessageBox.Show("La fecha de fin para el vigilante " & txtPersonal.Text.Trim & " debe estar dentro del rango de la fecha de la programación y debe ser mayor  o igual a la fecha de inicio!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                KryptonMessageBox.Show("La fecha de fin para el vigilante " & txtPersonal.Text.Trim & " debe estar dentro del rango de la fecha de la programación y debe ser mayor  o igual a la fecha de inicio!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
                 Return
             End If
 
             If (txtIdSitio.Text.Trim.Length = 0 Or txtIdPersonal.Text.Trim.Length = 0 Or lblIdHorario.Text.Trim.Length = 0) Then
-                MessageBox.Show("Debe seleccionar Sitio, Horario y Personal para agregar a la programación!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                KryptonMessageBox.Show("Debe seleccionar Sitio, Horario y Personal para agregar a la programación!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
                 Return
             End If
 
             If (txtIdSitio.Text.Trim = "0" Or txtIdPersonal.Text.Trim = "0" Or lblIdHorario.Text.Trim = "0") Then
-                MessageBox.Show("Debe seleccionar Sitio, Horario y Personal para agregar a la programación!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                KryptonMessageBox.Show("Debe seleccionar Sitio, Horario y Personal para agregar a la programación!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
                 Return
             End If
 
@@ -673,7 +674,7 @@ Namespace FORMULARIOS.OPERACIONES
 
         Private Sub AgregarRegistro(ByVal row As DataRow, ByVal nombre As String)
             If VerificarRepetidoSitioHorario(row.Item(0).ToString, row.Item(4).ToString) Then
-                MessageBox.Show(nombre & " ya se encuentra asignado a este u otro puesto con el mismo horario!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                KryptonMessageBox.Show(nombre & " ya se encuentra asignado a este u otro puesto con el mismo horario!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
                 Return
             End If
 
@@ -706,7 +707,8 @@ Namespace FORMULARIOS.OPERACIONES
 
         Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnRemove.Click
             If ListView1.Items.Count = 0 Or ListView1.SelectedItems.Count = 0 Then Return
-            If MessageBox.Show("Seguro que desea quitar este registro", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            'If MessageBox.Show("Seguro que desea quitar este registro", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("Seguro que desea quitar este registro", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             ListView1.Items.Remove(ListView1.SelectedItems(0))
         End Sub
 
@@ -843,7 +845,7 @@ Namespace FORMULARIOS.OPERACIONES
                 frm.cargarPersonalNoProgramacion(TextBox3.Text.Trim)
                 frm.ShowDialog()
             Catch ex As Exception
-                MessageBox.Show("Error al visualizar lista!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                KryptonMessageBox.Show("Error al visualizar lista!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
             End Try
         End Sub
 
@@ -861,7 +863,7 @@ Namespace FORMULARIOS.OPERACIONES
                 frm.cargarSitiosNoProgramacion(TextBox3.Text.Trim)
                 frm.ShowDialog()
             Catch ex As Exception
-                MessageBox.Show("Error al visualizar lista!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                KryptonMessageBox.Show("Error al visualizar lista!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
             End Try
         End Sub
 
@@ -876,12 +878,12 @@ Namespace FORMULARIOS.OPERACIONES
             Dim ulm = _objProgramacionOps.BuscarMesAnioUltimaProgramacion(_tipoCon)
             If ulm.Rows.Count = 0 Then Return
             If String.IsNullOrEmpty(ulm.Rows(0)(0)) Then Return
-            'If MessageBox.Show("Desea cargar la programación del mes anterior (" & ValidationForms.Mes(ulm.Rows(0)(1)) & "-" & ulm.Rows(0)(2) & ")?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+
             If KryptonMessageBox.Show("Desea cargar la programación del mes anterior (" & ValidationForms.Mes(ulm.Rows(0)(1)) & "-" & ulm.Rows(0)(2) & ")?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
             Dim pro = _objProgramacionOps.SeleccionarProgramacionById(_tipoCon, ulm.Rows(0)(0))
             If pro Is Nothing Or pro.Rows.Count = 0 Then
-                'MessageBox.Show("Los datos de la programación del mes anterior (" & ValidationForms.Mes(ulm.Rows(0)(1)) & "-" & ulm.Rows(0)(2) & " no han podido ser cargados!!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
                 KryptonMessageBox.Show("Los datos de la programación del mes anterior (" & ValidationForms.Mes(ulm.Rows(0)(1)) & "-" & ulm.Rows(0)(2) & " no han podido ser cargados!!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
                 Return
             End If
@@ -994,5 +996,27 @@ Namespace FORMULARIOS.OPERACIONES
         Private Sub KryptonLabel3_Click(sender As Object, e As EventArgs) Handles KryptonLabel3.Click
 
         End Sub
+
+        Private Sub btnCargar_Click(sender As Object, e As EventArgs) Handles btnCargar.Click
+            Try
+                ListView1.Items.Clear()
+                ListView1.Groups.Clear()
+
+                Dim openFileDialog As New OpenFileDialog With {
+                    .Filter = "Archivos de Excel (*.xlsx)|*.xlsx",
+                    .Title = "Seleccione el archivo de Excel"
+                }
+
+                If openFileDialog.ShowDialog() <> DialogResult.OK Then Return
+
+                Dim dtExcel = 
+
+
+            Catch ex As Exception
+
+            End Try
+        End Sub
+
+
     End Class
 End Namespace

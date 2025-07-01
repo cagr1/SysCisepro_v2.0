@@ -251,6 +251,7 @@
     <Compile Include="JERARQUIAS DE ACTIVOS\ClassGrupo.vb" />
     <Compile Include="CONTABILIDAD\PLAN DE CUENTAS\ClassPlanDeCuentas.vb" />
     <Compile Include="OPERACIONES\ClassDetallesProgramacion.vb" />
+    <Compile Include="OPERACIONES\ClassGuardiaPlantilla.vb" />
     <Compile Include="OPERACIONES\ClassHorariosOperacion.vb" />
     <Compile Include="OPERACIONES\ClassProgramacionOperaciones.vb" />
     <Compile Include="PROCESOSSQL\ComandosSql.vb" />

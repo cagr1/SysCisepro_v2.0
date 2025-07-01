@@ -129,6 +129,7 @@
             Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.btnReporte = New System.Windows.Forms.Button()
             Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
+            Me.btnCargar = New System.Windows.Forms.ToolStripMenuItem()
             Me.MenuStrip1.SuspendLayout()
             CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonNavigator1.SuspendLayout()
@@ -160,7 +161,7 @@
             Me.btnNoSitiosProgramacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.btnNoSitiosProgramacion.Image = Global.syscisepro.My.Resources.Resources.map_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnNoSitiosProgramacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnNoSitiosProgramacion.Location = New System.Drawing.Point(736, 3)
+            Me.btnNoSitiosProgramacion.Location = New System.Drawing.Point(746, 3)
             Me.btnNoSitiosProgramacion.Name = "btnNoSitiosProgramacion"
             Me.btnNoSitiosProgramacion.Size = New System.Drawing.Size(91, 26)
             Me.btnNoSitiosProgramacion.TabIndex = 206
@@ -178,7 +179,7 @@
             Me.btnNoProgramacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.btnNoProgramacion.Image = Global.syscisepro.My.Resources.Resources.group_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnNoProgramacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnNoProgramacion.Location = New System.Drawing.Point(634, 3)
+            Me.btnNoProgramacion.Location = New System.Drawing.Point(644, 3)
             Me.btnNoProgramacion.Name = "btnNoProgramacion"
             Me.btnNoProgramacion.Size = New System.Drawing.Size(96, 26)
             Me.btnNoProgramacion.TabIndex = 200
@@ -625,7 +626,7 @@
             'MenuStrip1
             '
             Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.btnNuevo, Me.btnGuardar, Me.btnEditar, Me.btnCancelar, Me.btnMesAnterior})
+            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.btnNuevo, Me.btnGuardar, Me.btnEditar, Me.btnCancelar, Me.btnMesAnterior, Me.btnCargar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
@@ -688,7 +689,7 @@
             Me.btnMesAnterior.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnMesAnterior.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnMesAnterior.Name = "btnMesAnterior"
-            Me.btnMesAnterior.Size = New System.Drawing.Size(95, 28)
+            Me.btnMesAnterior.Size = New System.Drawing.Size(96, 28)
             Me.btnMesAnterior.Text = "MES ANT."
             '
             'crvSitios
@@ -1340,6 +1341,14 @@
             Me.DateTimePicker3.Size = New System.Drawing.Size(121, 21)
             Me.DateTimePicker3.TabIndex = 203
             '
+            'btnCargar
+            '
+            Me.btnCargar.Image = Global.syscisepro.My.Resources.Resources.upload_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnCargar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.btnCargar.Name = "btnCargar"
+            Me.btnCargar.Size = New System.Drawing.Size(89, 28)
+            Me.btnCargar.Text = "CARGAR"
+            '
             'FrmProgramacionGeneral
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1398,7 +1407,6 @@
         Friend WithEvents ListView1 As System.Windows.Forms.ListView
         Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
         Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
-        Friend WithEvents ColumnHeader6 As System.Windows.Forms.ColumnHeader
         Friend WithEvents ColumnHeader8 As System.Windows.Forms.ColumnHeader
         Friend WithEvents ColumnHeader10 As System.Windows.Forms.ColumnHeader
         Friend WithEvents ColumnHeader11 As System.Windows.Forms.ColumnHeader
@@ -1486,5 +1494,7 @@
         Friend WithEvents KryptonGroupBox3 As Krypton.Toolkit.KryptonGroupBox
         Friend WithEvents btnReporte As Button
         Friend WithEvents DateTimePicker3 As DateTimePicker
+        Friend WithEvents ColumnHeader6 As ColumnHeader
+        Friend WithEvents btnCargar As ToolStripMenuItem
     End Class
 End Namespace

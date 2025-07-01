@@ -1905,7 +1905,9 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 xml += "<infoCompRetencion>" & vbNewLine  ' =-=-=-=-=-=-=-=-=-=- INFORMACÍON DE LA RETENCION =-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<fechaEmision>" & Format(dtpComprobanteRetencion.Value, "dd/MM/yyyy") & "</fechaEmision>" & vbNewLine
                 xml += "<dirEstablecimiento>" & DireccionEmpresaCisepro & "</dirEstablecimiento>" & vbNewLine
-                xml += "<contribuyenteEspecial> " & nres & "</contribuyenteEspecial>" & vbNewLine
+                If _tipoCon = TipoConexion.Cisepro Then
+                    xml += "<contribuyenteEspecial>" & nres & "</contribuyenteEspecial>" & vbNewLine 'Modificacion 01/04/24
+                End If
                 'If NumAutoContEspecialCisepro <> "0000" Then
                 '    xml += "<contribuyenteEspecial>" & NumAutoContEspecialCisepro & "</contribuyenteEspecial>" & vbNewLine
                 'End If
@@ -2022,7 +2024,9 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 xml += "<infoLiquidacionCompra>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=- INFORMACÍON DE LA FACTURA =-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<fechaEmision>" & Format(dtpFechaEmisionComprobanteCompra.Value, "dd/MM/yyyy") & "</fechaEmision>" & vbNewLine
                 xml += "<dirEstablecimiento>" & txtDireccionProveedorGeneral.Text.Trim() & "</dirEstablecimiento>" & vbNewLine
-                xml += "<contribuyenteEspecial>" & nres & "</contribuyenteEspecial>" & vbNewLine
+                If _tipoCon = TipoConexion.Cisepro Then
+                    xml += "<contribuyenteEspecial>" & nres & "</contribuyenteEspecial>" & vbNewLine 'Modificacion 01/04/24
+                End If
                 'xml += "<contribuyenteEspecial>" & txtNumAutoContEspFacturaCompra.Text & "</contribuyenteEspecial>" & vbNewLine
                 xml += "<obligadoContabilidad>" & txtObligadoLlevarContabilidadProveedorGeneral.Text.Trim() & "</obligadoContabilidad>" & vbNewLine
                 xml += "<tipoIdentificacionProveedor>" & TipoIdentificacionProveedor & "</tipoIdentificacionProveedor>" & vbNewLine
