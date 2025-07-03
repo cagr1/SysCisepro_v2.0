@@ -102,11 +102,13 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
         Dim _razModComprobanteCompra As String
         Dim _observacionComprobanteCompra As String
         Dim _subtotal12ComprobanteCompra As Decimal
+        Dim _subtotal5ComprobanteCompra As Decimal
         Dim _subtotal0ComprobanteCompra As Decimal
         Dim _descuentoComprobanteCompra As Decimal
         Dim _subtotalComprobanteCompra As Decimal
         Dim _porcentajeIvaComprobanteCompra As Decimal
         Dim _ivaComprobanteCompra As Decimal
+        Dim _iva5ComprobanteCompra As Decimal
         Dim _totalComprobanteCompra As Decimal
         Dim _idOrdenCompora As Decimal
         Dim _tipoBs As Integer
@@ -627,11 +629,13 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                     _razModComprobanteCompra = _formComprobanteCompra.txtRazModComprobanteCompra.Text
                     _observacionComprobanteCompra = _formComprobanteCompra.txtObservacionesComprobantesCompra.Text
                     _subtotal12ComprobanteCompra = _formComprobanteCompra.txtSubtotal12FacturaCompra.Text
+                    _subtotal5ComprobanteCompra = _formComprobanteCompra.txtSubtotal5FacturaCompra.Text
                     _subtotal0ComprobanteCompra = _formComprobanteCompra.txtSubtotal0FacturaCompra.Text
                     _descuentoComprobanteCompra = _formComprobanteCompra.txtDescuentoFacturaCompra.Text
                     _subtotalComprobanteCompra = _formComprobanteCompra.txtSubTotalComprobanteCompra.Text
                     _porcentajeIvaComprobanteCompra = _formComprobanteCompra.PorcentajeIva
                     _ivaComprobanteCompra = _formComprobanteCompra.txtIvaComprobanteCompra.Text
+                    _iva5ComprobanteCompra = _formComprobanteCompra.txtIva5ComprobanteCompra.Text
                     _totalComprobanteCompra = _formComprobanteCompra.txtTotalComprobanteCompra.Text
                     _idOrdenCompora = If(_formComprobanteCompra.lblOrdenCompra.Text.Equals("###"), 0, CInt(_formComprobanteCompra.lblOrdenCompra.Text))
                     _tipoBs = _formComprobanteCompra.cmbBienServicio.SelectedIndex
@@ -1194,11 +1198,13 @@ _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
                 .RazModComprobante = _razModComprobanteCompra
                 .ObservacionComprobante = txtDetalleSolicitudFR.Text
                 .Subtotal12Comprobante = _subtotal12ComprobanteCompra
+                .Subtotal5Comprobante = _subtotal5ComprobanteCompra
                 .Subtotal0Comprobante = _subtotal0ComprobanteCompra
                 .DescuentoComprobante = _descuentoComprobanteCompra
                 .SubtotalComprobante = _subtotalComprobanteCompra
                 .PorcentajeIvaComprobante = _porcentajeIvaComprobanteCompra
                 .IvaComprobante = _ivaComprobanteCompra
+                .Iva5Comprobante = _iva5ComprobanteCompra
                 .TotalComprobante = _totalComprobanteCompra
                 .EstadoComprobante = 10 ' =-=-=-= PAGADO POR FONDO 
                 .IdOrdenCompra = _idOrdenCompora

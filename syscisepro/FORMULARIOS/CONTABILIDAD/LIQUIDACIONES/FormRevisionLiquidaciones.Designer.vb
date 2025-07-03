@@ -226,7 +226,7 @@
             DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvSolicitudFondoRotativo.RowsDefaultCellStyle = DataGridViewCellStyle5
             Me.dgvSolicitudFondoRotativo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvSolicitudFondoRotativo.Size = New System.Drawing.Size(815, 152)
+            Me.dgvSolicitudFondoRotativo.Size = New System.Drawing.Size(813, 152)
             Me.dgvSolicitudFondoRotativo.TabIndex = 17
             '
             'CHK
@@ -278,7 +278,7 @@
             DataGridViewCellStyle10.Font = New System.Drawing.Font("Roboto", 8.25!)
             Me.dgvLiquidacionesPendientes.RowsDefaultCellStyle = DataGridViewCellStyle10
             Me.dgvLiquidacionesPendientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvLiquidacionesPendientes.Size = New System.Drawing.Size(797, 90)
+            Me.dgvLiquidacionesPendientes.Size = New System.Drawing.Size(544, 90)
             Me.dgvLiquidacionesPendientes.TabIndex = 22
             '
             'chkSeleccionarTodo
@@ -396,7 +396,7 @@
             DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvComprobanteCompra.DefaultCellStyle = DataGridViewCellStyle17
-            Me.dgvComprobanteCompra.Location = New System.Drawing.Point(437, 52)
+            Me.dgvComprobanteCompra.Location = New System.Drawing.Point(575, 40)
             Me.dgvComprobanteCompra.Name = "dgvComprobanteCompra"
             Me.dgvComprobanteCompra.ReadOnly = True
             DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -407,7 +407,7 @@
             DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvComprobanteCompra.RowHeadersDefaultCellStyle = DataGridViewCellStyle18
-            Me.dgvComprobanteCompra.Size = New System.Drawing.Size(297, 50)
+            Me.dgvComprobanteCompra.Size = New System.Drawing.Size(223, 145)
             Me.dgvComprobanteCompra.TabIndex = 34
             '
             'dgvComprobanteRetencionCompra
@@ -431,7 +431,7 @@
             DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvComprobanteRetencionCompra.DefaultCellStyle = DataGridViewCellStyle20
-            Me.dgvComprobanteRetencionCompra.Location = New System.Drawing.Point(704, 434)
+            Me.dgvComprobanteRetencionCompra.Location = New System.Drawing.Point(575, 213)
             Me.dgvComprobanteRetencionCompra.Name = "dgvComprobanteRetencionCompra"
             Me.dgvComprobanteRetencionCompra.ReadOnly = True
             DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -442,7 +442,7 @@
             DataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvComprobanteRetencionCompra.RowHeadersDefaultCellStyle = DataGridViewCellStyle21
-            Me.dgvComprobanteRetencionCompra.Size = New System.Drawing.Size(72, 46)
+            Me.dgvComprobanteRetencionCompra.Size = New System.Drawing.Size(205, 152)
             Me.dgvComprobanteRetencionCompra.TabIndex = 35
             '
             'dgvDetalleComprobanteRetencionCompra
@@ -450,10 +450,10 @@
             Me.dgvDetalleComprobanteRetencionCompra.AllowUserToAddRows = False
             Me.dgvDetalleComprobanteRetencionCompra.AllowUserToDeleteRows = False
             Me.dgvDetalleComprobanteRetencionCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvDetalleComprobanteRetencionCompra.Location = New System.Drawing.Point(481, 6)
+            Me.dgvDetalleComprobanteRetencionCompra.Location = New System.Drawing.Point(580, 15)
             Me.dgvDetalleComprobanteRetencionCompra.Name = "dgvDetalleComprobanteRetencionCompra"
             Me.dgvDetalleComprobanteRetencionCompra.ReadOnly = True
-            Me.dgvDetalleComprobanteRetencionCompra.Size = New System.Drawing.Size(240, 127)
+            Me.dgvDetalleComprobanteRetencionCompra.Size = New System.Drawing.Size(214, 127)
             Me.dgvDetalleComprobanteRetencionCompra.TabIndex = 36
             '
             'MenuStrip1
@@ -464,7 +464,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(820, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(824, 32)
             Me.MenuStrip1.TabIndex = 184
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -523,7 +523,6 @@
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtSaldoLiquidacion)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.dgvLiquidacionesPendientes)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtFechaLiquidacion)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.dgvComprobanteCompra)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtTotalLiquidacion)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtFondoLiquidacion)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtGastosLiquidacion)
@@ -612,14 +611,14 @@
             '
             Me.KryptonGroupBox3.CaptionOverlap = 0R
             Me.KryptonGroupBox3.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox3.Location = New System.Drawing.Point(0, 371)
+            Me.KryptonGroupBox3.Location = New System.Drawing.Point(2, 371)
             Me.KryptonGroupBox3.Name = "KryptonGroupBox3"
             '
             'KryptonGroupBox3.Panel
             '
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.dgvSolicitudFondoRotativo)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.dgvDetalleComprobanteRetencionCompra)
-            Me.KryptonGroupBox3.Size = New System.Drawing.Size(819, 176)
+            Me.KryptonGroupBox3.Size = New System.Drawing.Size(817, 176)
             Me.KryptonGroupBox3.TabIndex = 187
             Me.KryptonGroupBox3.Values.Heading = "Deducibles"
             '
@@ -628,7 +627,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
-            Me.ClientSize = New System.Drawing.Size(820, 547)
+            Me.ClientSize = New System.Drawing.Size(824, 547)
             Me.Controls.Add(Me.chkSeleccionarTodo)
             Me.Controls.Add(Me.lblDeducibles)
             Me.Controls.Add(Me.KryptonGroupBox3)
@@ -639,6 +638,7 @@
             Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.dgvComprobanteRetencionCompra)
+            Me.Controls.Add(Me.dgvComprobanteCompra)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormRevisionLiquidaciones"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -1618,6 +1618,7 @@
     <Compile Include="FORMULARIOS\FormReportEstadoPyG.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FORMULARIOS\OPERACIONES\ClassGuardiaPlantilla.vb" />
     <Compile Include="FORMULARIOS\OPERACIONES\FrmAgregarPersonalReporte.Designer.vb">
       <DependentUpon>FrmAgregarPersonalReporte.vb</DependentUpon>
     </Compile>

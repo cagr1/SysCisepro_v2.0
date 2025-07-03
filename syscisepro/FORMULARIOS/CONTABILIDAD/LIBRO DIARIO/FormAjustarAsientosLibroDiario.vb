@@ -784,7 +784,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             For indice = 0 To dgvAsientoRoles.RowCount - 1
                 With _objetoAsientoLibroDiario
                     .IdAsiento = i
-                    .FechaAsiento = dgvAsientoRoles.Rows(indice).Cells(1).Value
+                    .FechaAsiento = dtpFechaAsiento.Value
                     .CodigoCuentaAsiento = dgvAsientoRoles.Rows(indice).Cells(2).Value.ToString.Trim
                     .NombreCuentaAsiento = dgvAsientoRoles.Rows(indice).Cells(3).Value.ToString.Trim
                     .ConceptoAsiento = dgvAsientoRoles.Rows(indice).Cells(4).Value.ToString.ToUpper

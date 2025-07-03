@@ -105,6 +105,17 @@ Namespace OPERACIONES
             Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select si.RIVER, cl.nompre_razon_social_cliente_genEral, si.NOMBRE_SITIO_TRABAJO, si.DIRECCION_SITIO_TRABAJO from sitios_trabajo si join cliente_general cl on si.id_cliente_general = cl.id_cliente_general where si.ESTADO > 0 and si.id_sitio_trabajo not in (select dp.id_puesto from DETALLE_PROGRAMACION dp where dp.ID_PROGRAMACION = @idp) order by si.river;", False, pars)
         End Function
 
+        Public Function llenarGuardiasHorario(ByVal tipoCon As TipoConexion, ByVal desde As DateTime, ByVal hasta As DateTime, ByVal cedula As String, ByVal idHorario As Integer, ByVal sitio As String, ByVal river As String) As DataTable
+            Dim pars = New List(Of Object())
+            pars.Add(New Object() {"desde", SqlDbType.DateTime, desde})
+            pars.Add(New Object() {"hasta", SqlDbType.DateTime, hasta})
+            pars.Add(New Object() {"cedula", SqlDbType.VarChar, cedula})
+            pars.Add(New Object() {"idHorario", SqlDbType.Int, idHorario})
+            pars.Add(New Object() {"sitio", SqlDbType.VarChar, sitio})
+            pars.Add(New Object() {"river", SqlDbType.VarChar, river})
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_llenarHorarioGuardias", True, pars)
+
+        End Function
     End Class
 End Namespace
 

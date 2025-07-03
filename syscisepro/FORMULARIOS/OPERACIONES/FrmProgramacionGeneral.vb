@@ -1009,11 +1009,118 @@ Namespace FORMULARIOS.OPERACIONES
 
                 If openFileDialog.ShowDialog() <> DialogResult.OK Then Return
 
-                Dim dtExcel = 
+                Dim listaGuardias = _objGuardiaPlantilla.LeerExcel(openFileDialog.FileName)
+
+                Dim itemsError As List(Of ClassGuardiaPlantilla) = listaGuardias.Where(Function(x) Not x.EsValido).ToList()
+                If itemsError.Count > 0 Then
+                    KryptonMessageBox.Show(itemsError(0).MensajeError, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
+                    Return
+                End If
+
+                ProcesarGuardias(listaGuardias)
 
 
             Catch ex As Exception
+                KryptonMessageBox.Show("Hubo un problema al cargar los datos!" & vbNewLine & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
 
+            End Try
+        End Sub
+
+        Private Sub ProcesarGuardias(listaGuardias As List(Of ClassGuardiaPlantilla))
+            Try
+                Dim resultadosCompletos As New List(Of DataTable)
+
+                ' Procesar cada fila válida
+                For Each guardia In listaGuardias.Where(Function(x) x.EsValido).ToList()
+                    ' Llamar al SP para cada fila
+                    Dim resultado = llenarGuardia(guardia.Cedula, guardia.IdHorario, guardia.Sitio, guardia.River)
+                    If resultado IsNot Nothing AndAlso resultado.Rows.Count > 0 Then
+                        resultadosCompletos.Add(resultado)
+                    End If
+                Next
+
+                ' Combinar todos los resultados
+                If resultadosCompletos.Count > 0 Then
+                    Dim dtCombinado = CombinarDataTables(resultadosCompletos)
+                    LlenarListViewAgrupado(dtCombinado)
+                End If
+
+            Catch ex As Exception
+                MessageBox.Show(String.Format("Error al procesar guardias: {0}", ex.Message),
+                               "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+        End Sub
+
+        Private Function llenarGuardia(cedula As String, idHorario As Integer, sitio As String, river As String) As DataTable
+            Try
+                ' Llamar a tu función existente con los parámetros individuales
+                Dim resultado As DataTable = _objProgramacionOps.llenarGuardiasHorario(
+                    _tipoCon,
+                    DateTimePicker1.Value,   ' @desde
+                    DateTimePicker2.Value,   ' @hasta  
+                    cedula,                  ' @CEDULA
+                    idHorario,               ' @IDH
+                    sitio,                   ' @SITIO
+                    river                    ' @river
+                )
+
+                Return resultado
+
+            Catch ex As Exception
+                KryptonMessageBox.Show("Error al ejecutar el SP: " & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return Nothing
+            End Try
+        End Function
+
+        Private Function CombinarDataTables(tablas As List(Of DataTable)) As DataTable
+            If tablas.Count = 0 Then Return Nothing
+
+            Dim dtCombinado = tablas(0).Copy()
+
+            For i As Integer = 1 To tablas.Count - 1
+                dtCombinado.Merge(tablas(i))
+            Next
+
+            Return dtCombinado
+        End Function
+
+        ' Función para llenar ListView agrupado
+        Private Sub LlenarListViewAgrupado(dt As DataTable)
+            Try
+                ListView1.Items.Clear()
+                ListView1.Groups.Clear()
+                ListView1.View = View.Details
+
+
+                ' Agrupar por PERSONAL (o el campo que prefieras)
+                Dim grupos = dt.AsEnumerable().GroupBy(Function(row) row.Field(Of String)("PERSONAL")).ToList()
+
+                For Each grupo In grupos
+                    ' Crear grupo
+                    Dim grupoLV As New ListViewGroup(grupo.Key, grupo.Key)
+                    ListView1.Groups.Add(grupoLV)
+
+                    ' Agregar items del grupo
+                    For Each row In grupo
+                        Dim item As New ListViewItem(row("IDP").ToString()) With {
+                            .Group = grupoLV
+                        }
+
+                        ' Agregar subitems según las columnas de tu SP
+                        item.SubItems.Add(row("PERSONAL").ToString())
+                        item.SubItems.Add(row("SITIO").ToString())
+                        item.SubItems.Add(row("HOR").ToString())
+                        item.SubItems.Add(row("DIAS").ToString())
+                        item.SubItems.Add(row("INICIA").ToString())
+                        item.SubItems.Add(row("TERMINA").ToString())
+
+                        ListView1.Items.Add(item)
+                    Next
+                Next
+
+            Catch ex As Exception
+                MessageBox.Show(String.Format("Error al llenar ListView: {0}", ex.Message),
+                               "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
 
