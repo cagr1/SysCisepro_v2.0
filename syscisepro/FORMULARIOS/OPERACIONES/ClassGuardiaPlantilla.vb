@@ -50,20 +50,36 @@ Namespace FORMULARIOS.OPERACIONES
         End Function
 
         Public Function ValidarDuplicados(lista As List(Of ClassGuardiaPlantilla)) As List(Of ClassGuardiaPlantilla)
-            For i As Integer = 0 To lista.Count - 1
-                Dim itemActual = lista(i)
+            Dim duplicados = lista.
+            GroupBy(Function(x) New With {
+                x.Cedula,
+                x.Sitio,
+                x.River,
+                x.IdHorario
+            }).
+            Where(Function(g) g.Count() > 1).  ' Solo grupos con duplicados
+            SelectMany(Function(g) g).         ' Aplana los grupos
+            ToList()
 
-                ' Buscar duplicados (misma cedula, sitio y river pero diferente horario)
-                Dim duplicados As List(Of ClassGuardiaPlantilla) = lista.Where(Function(x) x.Cedula = itemActual.Cedula AndAlso x.Sitio = itemActual.Sitio AndAlso x.River = itemActual.River AndAlso x.IdHorario <> itemActual.IdHorario).ToList()
-
-                If duplicados.Count > 0 Then
-                    itemActual.EsValido = False
-                    itemActual.MensajeError = String.Format("Usuario {0} tiene múltiples horarios para {1} - {2}", itemActual.Cedula, itemActual.Sitio, itemActual.River)
-                End If
+            ' Marcar los duplicados como inválidos
+            For Each item In duplicados
+                item.EsValido = False
+                item.MensajeError = $"Error: {item.Cedula} ya está asignado al horario {item.IdHorario} en {item.Sitio} (River {item.River})"
             Next
 
             Return lista
 
+        End Function
+
+        Public Function ValidarEstructuraDatos(lista As List(Of ClassGuardiaPlantilla)) As Boolean
+            For Each item In lista
+                If String.IsNullOrWhiteSpace(item.Cedula) OrElse
+           item.IdHorario <= 0 OrElse
+           String.IsNullOrWhiteSpace(item.Sitio) Then
+                    Return False
+                End If
+            Next
+            Return True
         End Function
 
         Public Function ConvertirADataTable(lista As List(Of ClassGuardiaPlantilla)) As DataTable

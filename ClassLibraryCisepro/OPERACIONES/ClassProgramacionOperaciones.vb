@@ -107,12 +107,12 @@ Namespace OPERACIONES
 
         Public Function llenarGuardiasHorario(ByVal tipoCon As TipoConexion, ByVal desde As DateTime, ByVal hasta As DateTime, ByVal cedula As String, ByVal idHorario As Integer, ByVal sitio As String, ByVal river As String) As DataTable
             Dim pars = New List(Of Object())
-            pars.Add(New Object() {"desde", SqlDbType.DateTime, desde})
-            pars.Add(New Object() {"hasta", SqlDbType.DateTime, hasta})
-            pars.Add(New Object() {"cedula", SqlDbType.VarChar, cedula})
-            pars.Add(New Object() {"idHorario", SqlDbType.Int, idHorario})
-            pars.Add(New Object() {"sitio", SqlDbType.VarChar, sitio})
-            pars.Add(New Object() {"river", SqlDbType.VarChar, river})
+            pars.Add(New Object() {"@desde", SqlDbType.DateTime, desde})
+            pars.Add(New Object() {"@hasta", SqlDbType.DateTime, hasta})
+            pars.Add(New Object() {"@cedula", SqlDbType.VarChar, cedula})
+            pars.Add(New Object() {"@idh", SqlDbType.Int, idHorario})
+            pars.Add(New Object() {"@sitio", SqlDbType.VarChar, sitio})
+            pars.Add(New Object() {"@river", SqlDbType.VarChar, river})
             Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_llenarHorarioGuardias", True, pars)
 
         End Function

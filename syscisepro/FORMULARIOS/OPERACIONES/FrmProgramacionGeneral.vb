@@ -5,6 +5,7 @@ Imports ClassLibraryCisepro.ProcesosSql
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports Krypton.Toolkit
+Imports System.Text
 
 Namespace FORMULARIOS.OPERACIONES
     ''' <summary>
@@ -1011,9 +1012,32 @@ Namespace FORMULARIOS.OPERACIONES
 
                 Dim listaGuardias = _objGuardiaPlantilla.LeerExcel(openFileDialog.FileName)
 
+                ' Validación de estructura de datos
+                If Not _objGuardiaPlantilla.ValidarEstructuraDatos(listaGuardias) Then
+                    KryptonMessageBox.Show("El archivo contiene datos en formato incorrecto", "Error",
+                          KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
+                End If
+
+                listaGuardias = _objGuardiaPlantilla.ValidarDuplicados(listaGuardias)
+
+
+
                 Dim itemsError As List(Of ClassGuardiaPlantilla) = listaGuardias.Where(Function(x) Not x.EsValido).ToList()
                 If itemsError.Count > 0 Then
-                    KryptonMessageBox.Show(itemsError(0).MensajeError, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
+                    Dim mensaje = New StringBuilder("Errores encontrados:" & vbNewLine)
+                    For Each errorItem In itemsError.Take(5) ' Mostrar máximo 5 errores
+                        mensaje.AppendLine($"- {errorItem.MensajeError}")
+                    Next
+
+                    If itemsError.Count > 5 Then
+                        mensaje.AppendLine($"(Y {itemsError.Count - 5} errores más...)")
+                    End If
+
+                    KryptonMessageBox.Show(mensaje.ToString(),
+                          "Validación Fallida",
+                          KryptonMessageBoxButtons.OK,
+                          KryptonMessageBoxIcon.Warning)
                     Return
                 End If
 
@@ -1031,7 +1055,7 @@ Namespace FORMULARIOS.OPERACIONES
                 Dim resultadosCompletos As New List(Of DataTable)
 
                 ' Procesar cada fila válida
-                For Each guardia In listaGuardias.Where(Function(x) x.EsValido).ToList()
+                For Each guardia In listaGuardias
                     ' Llamar al SP para cada fila
                     Dim resultado = llenarGuardia(guardia.Cedula, guardia.IdHorario, guardia.Sitio, guardia.River)
                     If resultado IsNot Nothing AndAlso resultado.Rows.Count > 0 Then
@@ -1042,7 +1066,7 @@ Namespace FORMULARIOS.OPERACIONES
                 ' Combinar todos los resultados
                 If resultadosCompletos.Count > 0 Then
                     Dim dtCombinado = CombinarDataTables(resultadosCompletos)
-                    LlenarListViewAgrupado(dtCombinado)
+                    LlenarListViewPlantilla(dtCombinado)
                 End If
 
             Catch ex As Exception
@@ -1075,52 +1099,81 @@ Namespace FORMULARIOS.OPERACIONES
         Private Function CombinarDataTables(tablas As List(Of DataTable)) As DataTable
             If tablas.Count = 0 Then Return Nothing
 
+            Dim primeraTabla = tablas(0)
+
             Dim dtCombinado = tablas(0).Copy()
 
+
             For i As Integer = 1 To tablas.Count - 1
-                dtCombinado.Merge(tablas(i))
+                If tablas(i).Columns.Count = primeraTabla.Columns.Count Then
+                    dtCombinado.Merge(tablas(i), False, MissingSchemaAction.Ignore)
+                End If
             Next
 
             Return dtCombinado
         End Function
 
         ' Función para llenar ListView agrupado
-        Private Sub LlenarListViewAgrupado(dt As DataTable)
+        Private Sub LlenarListViewPlantilla(dt As DataTable)
             Try
                 ListView1.Items.Clear()
                 ListView1.Groups.Clear()
-                ListView1.View = View.Details
+
 
 
                 ' Agrupar por PERSONAL (o el campo que prefieras)
-                Dim grupos = dt.AsEnumerable().GroupBy(Function(row) row.Field(Of String)("PERSONAL")).ToList()
+                Dim grupos = dt.AsEnumerable().
+                GroupBy(Function(row) row.Field(Of String)("SITIO")).
+                OrderBy(Function(grupo) grupo.Key)
 
                 For Each grupo In grupos
                     ' Crear grupo
-                    Dim grupoLV As New ListViewGroup(grupo.Key, grupo.Key)
+                    Dim grupoLV As New ListViewGroup(grupo.Key)
                     ListView1.Groups.Add(grupoLV)
 
                     ' Agregar items del grupo
-                    For Each row In grupo
+                    For Each row In grupo.OrderBy(Function(r) r.Field(Of String)("PERSONAL"))
                         Dim item As New ListViewItem(row("IDP").ToString()) With {
-                            .Group = grupoLV
-                        }
+                    .Group = grupoLV,
+                    .Tag = row("IDP"), ' Guardar ID como referencia
+                    .UseItemStyleForSubItems = False
+                }
 
-                        ' Agregar subitems según las columnas de tu SP
-                        item.SubItems.Add(row("PERSONAL").ToString())
-                        item.SubItems.Add(row("SITIO").ToString())
-                        item.SubItems.Add(row("HOR").ToString())
-                        item.SubItems.Add(row("DIAS").ToString())
-                        item.SubItems.Add(row("INICIA").ToString())
-                        item.SubItems.Add(row("TERMINA").ToString())
+                        ' Agregar subitems en el orden exacto del SP y carga anterior
+                        item.SubItems.Add(row("PERSONAL").ToString()) ' PERSONAL
+                        item.SubItems.Add(row("IDS").ToString()) ' IDS
+                        item.SubItems.Add(row("SITIO").ToString()) ' SITIO
+                        item.SubItems.Add(row("IDH").ToString()) ' IDH
+                        item.SubItems.Add(row("HOR").ToString()) ' HOR
+                        item.SubItems.Add(row("DIAS").ToString()) ' DIAS
+                        item.SubItems.Add(row("LUNES").ToString()) ' LUNES
+                        item.SubItems.Add(row("MARTES").ToString()) ' MARTES
+                        item.SubItems.Add(row("MIERCOLES").ToString()) ' MIERCOLES
+                        item.SubItems.Add(row("JUEVES").ToString()) ' JUEVES
+                        item.SubItems.Add(row("VIERNES").ToString()) ' VIERNES
+                        item.SubItems.Add(row("SABADO").ToString()) ' SABADO
+                        item.SubItems.Add(row("DOMINGO").ToString()) ' DOMINGO
+                        item.SubItems.Add(row("DETALLE").ToString()) ' DETALLE
+                        item.SubItems.Add(Convert.ToDateTime(row("INICIA")).ToString("dd/MM/yyyy")) ' INICIA
+                        item.SubItems.Add(Convert.ToDateTime(row("TERMINA")).ToString("dd/MM/yyyy")) ' TERMINA
+                        item.SubItems.Add(row("TIPO").ToString()) ' TIPO
+                        item.SubItems.Add(row("estado_personal").ToString()) ' estado_personal
+
+                        ' Resaltar si está inactivo (igual que en carga mes anterior)
+                        If row("estado_personal").ToString() = "0" Then
+                            item.SubItems(1).BackColor = Color.FromArgb(255, 240, 128, 128)
+                        End If
 
                         ListView1.Items.Add(item)
                     Next
                 Next
 
+                ListView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent)
+                ListView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize)
+
             Catch ex As Exception
-                MessageBox.Show(String.Format("Error al llenar ListView: {0}", ex.Message),
-                               "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show(String.Format("Error al llenar ListView: {0}", ex.Message),
+                               "Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
