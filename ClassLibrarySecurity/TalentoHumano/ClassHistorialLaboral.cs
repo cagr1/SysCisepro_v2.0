@@ -55,6 +55,14 @@ namespace ClassLibraryCisepro3.TalentoHumano
             return  ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon,"select h.id_historia_laboral ID, h.fecha_historia_laboral FECHA, h.detalle_historia_laboral DETALLE from historia_laboral h where h.ID_PERSONAL_HISTORIA_LABORAL = @id_personal order by h.fecha_historia_laboral;", false, pars);
         }
 
+        public DataTable SeleccionarTodosRegistrosIngresosPersonal(TipoConexion tipoCon, int id)
+        {
+            var pars = new List<object[]>
+            {
+                new object[] {"id_personal", SqlDbType.Int, id}
+            };
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_SeleccionarHistorialxID", true, pars);
+        }
 
         public SqlCommand DeleteIdHistoriaLaboral(int id, DateTime desde, DateTime hasta )
         {

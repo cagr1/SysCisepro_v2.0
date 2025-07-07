@@ -533,9 +533,9 @@ namespace SysCisepro3.TalentoHumano
                     pbPerfil.Image = Resources._default;
                 }
 
-
+                
                 CargarHistorialLaboral(lblIdPersonal.Text.Trim());
-
+                CargarIngresosEgresos(id);
                 if (Convert.ToInt32(row.Cells["ESTADO_PERSONAL"].Value) == 1)
                 {
                     ButtonNuevoRegistro.Enabled = true;
@@ -577,6 +577,26 @@ namespace SysCisepro3.TalentoHumano
                 DataGridView1.DataSource = null;
             }
         }
+
+        private void CargarIngresosEgresos(Int32 id)
+        {
+            try
+            {
+                var data = _objHistorialLaboral.SeleccionarTodosRegistrosIngresosPersonal(TipoCon, id);
+                dgvIngresoSalida.DataSource = data;
+                if (data.Rows.Count == 0) return;
+                dgvIngresoSalida.Columns[0].Width = 40;
+                dgvIngresoSalida.Columns[1].Width = 120;
+                dgvIngresoSalida.Columns[2].Width = 820;
+                dgvIngresoSalida.EditMode = DataGridViewEditMode.EditProgrammatically;
+                dgvIngresoSalida.AutoResizeRows();
+            }
+            catch
+            {
+                dgvIngresoSalida.DataSource = null;
+            }
+        }
+
 
         private void txtFiltro_KeyUp(object sender, KeyEventArgs e)
         {
@@ -669,6 +689,7 @@ namespace SysCisepro3.TalentoHumano
             
 
             DataGridView1.DataSource = null;
+            dgvIngresoSalida.DataSource = null;
 
             pbFoto.Image = Resources._default;
             pbPerfil.Image = Resources._default;
@@ -2084,6 +2105,16 @@ namespace SysCisepro3.TalentoHumano
         private void NupSueldo_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void kryptonPage6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ExportarDatosExcel(dgvIngresoSalida, "INGRESOS Y EGRESOS");
         }
     }
 }
