@@ -1053,21 +1053,33 @@ Namespace FORMULARIOS.OPERACIONES
         Private Sub ProcesarGuardias(listaGuardias As List(Of ClassGuardiaPlantilla))
             Try
                 Dim resultadosCompletos As New List(Of DataTable)
-
+                Dim grupos = listaGuardias.
+                    GroupBy(Function(x) New With {x.Sitio, x.River}).
+                    ToList()
                 ' Procesar cada fila válida
-                For Each guardia In listaGuardias
-                    ' Llamar al SP para cada fila
-                    Dim resultado = llenarGuardia(guardia.Cedula, guardia.IdHorario, guardia.Sitio, guardia.River)
+                For Each grupo In grupos
+                    ' Tomar el primer elemento del grupo como referencia
+                    Dim primerGuardia = grupo.First()
+
+                    ' Llamar al SP solo una vez por grupo
+                    Dim resultado = llenarGuardia(
+                primerGuardia.Cedula,
+                primerGuardia.IdHorario,
+                primerGuardia.Sitio,
+                primerGuardia.River)
+
                     If resultado IsNot Nothing AndAlso resultado.Rows.Count > 0 Then
                         resultadosCompletos.Add(resultado)
                     End If
                 Next
 
+
+
                 ' Combinar todos los resultados
                 If resultadosCompletos.Count > 0 Then
-                    Dim dtCombinado = CombinarDataTables(resultadosCompletos)
-                    LlenarListViewPlantilla(dtCombinado)
-                End If
+                                    Dim dtCombinado = CombinarDataTables(resultadosCompletos)
+                                    LlenarListViewPlantilla(dtCombinado)
+                                End If
 
             Catch ex As Exception
                 MessageBox.Show(String.Format("Error al procesar guardias: {0}", ex.Message),

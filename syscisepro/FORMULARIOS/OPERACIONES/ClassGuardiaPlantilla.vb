@@ -50,7 +50,7 @@ Namespace FORMULARIOS.OPERACIONES
         End Function
 
         Public Function ValidarDuplicados(lista As List(Of ClassGuardiaPlantilla)) As List(Of ClassGuardiaPlantilla)
-            Dim duplicados = lista.
+            Dim grupos = lista.
             GroupBy(Function(x) New With {
                 x.Cedula,
                 x.Sitio,
@@ -58,13 +58,15 @@ Namespace FORMULARIOS.OPERACIONES
                 x.IdHorario
             }).
             Where(Function(g) g.Count() > 1).  ' Solo grupos con duplicados
-            SelectMany(Function(g) g).         ' Aplana los grupos
             ToList()
 
             ' Marcar los duplicados como inválidos
-            For Each item In duplicados
-                item.EsValido = False
-                item.MensajeError = $"Error: {item.Cedula} ya está asignado al horario {item.IdHorario} en {item.Sitio} (River {item.River})"
+            For Each grupo In grupos
+                For Each item In grupo
+                    item.EsValido = False
+                    item.MensajeError = $"Error: {item.Cedula} ya está asignado al horario {item.IdHorario} en {item.Sitio} (River {item.River})"
+                Next
+
             Next
 
             Return lista
