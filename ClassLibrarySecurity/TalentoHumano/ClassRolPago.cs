@@ -443,10 +443,10 @@ stat + " ESTADO_PERSONAL, cp.id_banco, bc.nombre_banco, cp.num_cuenta, cp.tipo, 
                 new object[] { "anio", SqlDbType.Int, anio },
                 new object[] { "tipo", SqlDbType.Int, tipo }
             };
-            var sql = "select dr.id_personal, dr.neto_rol from detalles_rol dr join rol_pago rp on dr.id_rol=rp.id_rol " +
-                      "where rp.mes_rol =@mes and rp.anio_rol=@anio and rp.quincena=0 and rp.tipo=@tipo and rp.estado > 0";
+            //var sql = "select dr.id_personal, dr.neto_rol from detalles_rol dr join rol_pago rp on dr.id_rol=rp.id_rol " +
+            //          "where rp.mes_rol =@mes and rp.anio_rol=@anio and rp.quincena=0 and rp.tipo=@tipo and rp.estado > 0";
 
-            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, sql, false, pars);
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_seleccionarDetallesQuincenaRolPagoContrato", true, pars);
         }
 
         public DataTable SeleccionarDetallesParametrosPersonal(TipoConexion tipoCon)

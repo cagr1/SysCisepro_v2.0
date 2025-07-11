@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPersonal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.ButtonNuevoRegistro = new System.Windows.Forms.ToolStripButton();
@@ -198,6 +198,7 @@
             this.kryptonNavigator1 = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
             this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.chkQuince = new System.Windows.Forms.CheckBox();
             this.btnPersonal = new System.Windows.Forms.Button();
             this.txtPrueba = new System.Windows.Forms.TextBox();
             this.kryptonLabel68 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -1483,6 +1484,7 @@
             // 
             this.cbmTipoContrato.BackColor = System.Drawing.Color.White;
             this.cbmTipoContrato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbmTipoContrato.DropDownWidth = 170;
             this.cbmTipoContrato.Enabled = false;
             this.cbmTipoContrato.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmTipoContrato.FormattingEnabled = true;
@@ -1492,7 +1494,7 @@
             "CONTRATO INDEFINIDO, SIN FECHA ESPECÍFICA DE FINALIZACIÓN"});
             this.cbmTipoContrato.Location = new System.Drawing.Point(549, 156);
             this.cbmTipoContrato.Name = "cbmTipoContrato";
-            this.cbmTipoContrato.Size = new System.Drawing.Size(182, 21);
+            this.cbmTipoContrato.Size = new System.Drawing.Size(129, 21);
             this.cbmTipoContrato.TabIndex = 152;
             // 
             // txtMotivoSalidaActual
@@ -1862,41 +1864,41 @@
             this.DataGridView1.AllowUserToAddRows = false;
             this.DataGridView1.AllowUserToDeleteRows = false;
             this.DataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView1.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.DataGridView1.Location = new System.Drawing.Point(5, 25);
             this.DataGridView1.MultiSelect = false;
             this.DataGridView1.Name = "DataGridView1";
             this.DataGridView1.ReadOnly = true;
             this.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DataGridView1.RowHeadersVisible = false;
             this.DataGridView1.RowHeadersWidth = 25;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridView1.Size = new System.Drawing.Size(827, 293);
             this.DataGridView1.TabIndex = 43;
@@ -2310,41 +2312,41 @@
             this.dgvPersonal.AllowUserToAddRows = false;
             this.dgvPersonal.AllowUserToDeleteRows = false;
             this.dgvPersonal.AllowUserToResizeRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvPersonal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvPersonal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPersonal.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.dgvPersonal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPersonal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPersonal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPersonal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPersonal.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPersonal.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvPersonal.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dgvPersonal.Location = new System.Drawing.Point(6, 28);
             this.dgvPersonal.MultiSelect = false;
             this.dgvPersonal.Name = "dgvPersonal";
             this.dgvPersonal.ReadOnly = true;
             this.dgvPersonal.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPersonal.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPersonal.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvPersonal.RowHeadersVisible = false;
             this.dgvPersonal.RowHeadersWidth = 25;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPersonal.RowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPersonal.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPersonal.Size = new System.Drawing.Size(831, 190);
             this.dgvPersonal.TabIndex = 42;
@@ -2355,26 +2357,11 @@
             // kryptonNavigator1
             // 
             this.kryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None;
-            this.kryptonNavigator1.Button.CloseButtonAction = ComponentFactory.Krypton.Navigator.CloseButtonAction.RemovePageAndDispose;
             this.kryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide;
-            this.kryptonNavigator1.Button.ContextButtonAction = ComponentFactory.Krypton.Navigator.ContextButtonAction.SelectPage;
-            this.kryptonNavigator1.Button.ContextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic;
-            this.kryptonNavigator1.Button.ContextMenuMapImage = ComponentFactory.Krypton.Navigator.MapKryptonPageImage.Small;
-            this.kryptonNavigator1.Button.ContextMenuMapText = ComponentFactory.Krypton.Navigator.MapKryptonPageText.TextTitle;
-            this.kryptonNavigator1.Button.NextButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction;
-            this.kryptonNavigator1.Button.NextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic;
-            this.kryptonNavigator1.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction;
-            this.kryptonNavigator1.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic;
             this.kryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonNavigator1.Group.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient;
-            this.kryptonNavigator1.Group.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlClient;
-            this.kryptonNavigator1.Header.HeaderStyleBar = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary;
-            this.kryptonNavigator1.Header.HeaderStylePrimary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Primary;
-            this.kryptonNavigator1.Header.HeaderStyleSecondary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary;
             this.kryptonNavigator1.Location = new System.Drawing.Point(0, 31);
             this.kryptonNavigator1.Name = "kryptonNavigator1";
             this.kryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup;
-            this.kryptonNavigator1.PageBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient;
             this.kryptonNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
             this.kryptonPage1,
             this.kryptonPage3,
@@ -2382,7 +2369,6 @@
             this.kryptonPage4,
             this.kryptonPage5,
             this.kryptonPage6});
-            this.kryptonNavigator1.Panel.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelClient;
             this.kryptonNavigator1.SelectedIndex = 0;
             this.kryptonNavigator1.Size = new System.Drawing.Size(849, 632);
             this.kryptonNavigator1.TabIndex = 218;
@@ -2398,20 +2384,18 @@
             this.kryptonPage1.Name = "kryptonPage1";
             this.kryptonPage1.Size = new System.Drawing.Size(847, 603);
             this.kryptonPage1.Text = "Datos Personales";
-            this.kryptonPage1.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage1.ToolTipTitle = "Page ToolTip";
             this.kryptonPage1.UniqueName = "BF6778DB7B6E4FC64698D4730B10B066";
             // 
             // kryptonGroupBox1
             // 
-            this.kryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
-            this.kryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox1.Location = new System.Drawing.Point(0, -2);
             this.kryptonGroupBox1.Name = "kryptonGroupBox1";
             // 
             // kryptonGroupBox1.Panel
             // 
+            this.kryptonGroupBox1.Panel.Controls.Add(this.chkQuince);
             this.kryptonGroupBox1.Panel.Controls.Add(this.PictureBox1);
             this.kryptonGroupBox1.Panel.Controls.Add(this.btnPersonal);
             this.kryptonGroupBox1.Panel.Controls.Add(this.chkCursoVigilante);
@@ -2523,6 +2507,23 @@
             this.kryptonGroupBox1.TabIndex = 0;
             this.kryptonGroupBox1.Values.Heading = "";
             // 
+            // chkQuince
+            // 
+            this.chkQuince.AutoSize = true;
+            this.chkQuince.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.chkQuince.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkQuince.Checked = true;
+            this.chkQuince.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkQuince.Enabled = false;
+            this.chkQuince.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkQuince.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.chkQuince.Location = new System.Drawing.Point(685, 158);
+            this.chkQuince.Name = "chkQuince";
+            this.chkQuince.Size = new System.Drawing.Size(80, 17);
+            this.chkQuince.TabIndex = 233;
+            this.chkQuince.Text = "Cobra Quin";
+            this.chkQuince.UseVisualStyleBackColor = false;
+            // 
             // btnPersonal
             // 
             this.btnPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
@@ -2569,8 +2570,6 @@
             this.kryptonLabel42.Name = "kryptonLabel42";
             this.kryptonLabel42.Size = new System.Drawing.Size(34, 20);
             this.kryptonLabel42.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen;
-            this.kryptonLabel42.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonLabel42.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel42.TabIndex = 228;
             this.kryptonLabel42.Values.Text = "Tipo";
             // 
@@ -2580,8 +2579,6 @@
             this.kryptonLabel41.Name = "kryptonLabel41";
             this.kryptonLabel41.Size = new System.Drawing.Size(29, 20);
             this.kryptonLabel41.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen;
-            this.kryptonLabel41.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonLabel41.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel41.TabIndex = 227;
             this.kryptonLabel41.Values.Text = "Cta";
             // 
@@ -2591,8 +2588,6 @@
             this.kryptonLabel40.Name = "kryptonLabel40";
             this.kryptonLabel40.Size = new System.Drawing.Size(44, 20);
             this.kryptonLabel40.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen;
-            this.kryptonLabel40.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonLabel40.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel40.TabIndex = 226;
             this.kryptonLabel40.Values.Text = "Banco";
             // 
@@ -2914,16 +2909,13 @@
             this.kryptonPage3.Name = "kryptonPage3";
             this.kryptonPage3.Size = new System.Drawing.Size(847, 603);
             this.kryptonPage3.Text = "Datos Familiares";
-            this.kryptonPage3.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage3.ToolTipTitle = "Page ToolTip";
             this.kryptonPage3.UniqueName = "73B0FF3B837C4161F9A583351D4DCB0B";
             // 
             // kryptonGroupBox2
             // 
             this.kryptonGroupBox2.CaptionOverlap = 0D;
-            this.kryptonGroupBox2.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonAlternate;
-            this.kryptonGroupBox2.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox2.Location = new System.Drawing.Point(-1, 3);
             this.kryptonGroupBox2.Name = "kryptonGroupBox2";
             // 
@@ -2963,11 +2955,7 @@
             this.kryptonLabel57.Name = "kryptonLabel57";
             this.kryptonLabel57.Size = new System.Drawing.Size(299, 83);
             this.kryptonLabel57.StateCommon.LongText.Font = new System.Drawing.Font("Roboto", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel57.StateCommon.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonLabel57.StateCommon.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel57.StateCommon.ShortText.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel57.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonLabel57.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel57.TabIndex = 165;
             this.kryptonLabel57.Values.Text = "EJEMPLO:\r\nIDROVO CARDENAS MIRIAM MATILDE/JUAN MONTALVO\r\nY CARLOS REGALADO/SECRETA" +
     "RIA/072914750\r\n\r\nIDROVO CARDENAS MIRIAM MATILDE/JUAN MONTALVO\r\nY CARLOS REGALADO" +
@@ -2979,8 +2967,6 @@
             this.kryptonLabel56.Name = "kryptonLabel56";
             this.kryptonLabel56.Size = new System.Drawing.Size(270, 36);
             this.kryptonLabel56.StateCommon.LongText.Font = new System.Drawing.Font("Roboto", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel56.StateCommon.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonLabel56.StateCommon.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel56.TabIndex = 164;
             this.kryptonLabel56.Values.Text = "EJEMPLO: \r\nPEREZ RAMIREZ /JUAN CARLOS/40/10-10-1984\r\n";
             // 
@@ -3053,8 +3039,6 @@
             this.kryptonLabel52.Name = "kryptonLabel52";
             this.kryptonLabel52.Size = new System.Drawing.Size(293, 52);
             this.kryptonLabel52.StateCommon.LongText.Font = new System.Drawing.Font("Roboto", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel52.StateCommon.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonLabel52.StateCommon.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel52.TabIndex = 157;
             this.kryptonLabel52.Values.Text = "EJEMPLO: \r\nPEREZ RAMIREZ /JUAN CARLOS/40/10-10-1984\r\nPEREZ RAMIREZ/MARIA FERNANDA" +
     "/10/10-10-2014     ";
@@ -3133,16 +3117,13 @@
             this.kryptonPage2.Name = "kryptonPage2";
             this.kryptonPage2.Size = new System.Drawing.Size(847, 603);
             this.kryptonPage2.Text = "Referencias";
-            this.kryptonPage2.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage2.ToolTipTitle = "Page ToolTip";
             this.kryptonPage2.UniqueName = "7221C065FCD54597588560CF2D42EC8B";
             // 
             // kryptonGroupBox4
             // 
             this.kryptonGroupBox4.CaptionOverlap = 0D;
-            this.kryptonGroupBox4.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox4.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonAlternate;
-            this.kryptonGroupBox4.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox4.Location = new System.Drawing.Point(2, 4);
             this.kryptonGroupBox4.Name = "kryptonGroupBox4";
             // 
@@ -3263,18 +3244,14 @@
             this.kryptonPage4.Name = "kryptonPage4";
             this.kryptonPage4.Size = new System.Drawing.Size(847, 603);
             this.kryptonPage4.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.kryptonPage4.StateNormal.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPage4.Text = "Fotos";
-            this.kryptonPage4.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage4.ToolTipTitle = "Page ToolTip";
             this.kryptonPage4.UniqueName = "13E9095214FE457CA385A754B99B308B";
             // 
             // kryptonGroupBox6
             // 
             this.kryptonGroupBox6.CaptionOverlap = 0D;
-            this.kryptonGroupBox6.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox6.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonAlternate;
-            this.kryptonGroupBox6.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox6.Location = new System.Drawing.Point(427, 32);
             this.kryptonGroupBox6.Name = "kryptonGroupBox6";
             // 
@@ -3288,9 +3265,7 @@
             // kryptonGroupBox5
             // 
             this.kryptonGroupBox5.CaptionOverlap = 0D;
-            this.kryptonGroupBox5.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox5.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonAlternate;
-            this.kryptonGroupBox5.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox5.Location = new System.Drawing.Point(3, 31);
             this.kryptonGroupBox5.Name = "kryptonGroupBox5";
             // 
@@ -3311,16 +3286,13 @@
             this.kryptonPage5.Name = "kryptonPage5";
             this.kryptonPage5.Size = new System.Drawing.Size(847, 603);
             this.kryptonPage5.Text = "Historial Laboral";
-            this.kryptonPage5.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage5.ToolTipTitle = "Page ToolTip";
             this.kryptonPage5.UniqueName = "03A69FD16918476A6A93D26165BA2179";
             // 
             // kryptonGroupBox7
             // 
             this.kryptonGroupBox7.CaptionOverlap = 0D;
-            this.kryptonGroupBox7.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox7.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
-            this.kryptonGroupBox7.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox7.Location = new System.Drawing.Point(3, 4);
             this.kryptonGroupBox7.Name = "kryptonGroupBox7";
             // 
@@ -3343,9 +3315,7 @@
             this.kryptonPage6.Name = "kryptonPage6";
             this.kryptonPage6.Size = new System.Drawing.Size(847, 603);
             this.kryptonPage6.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.kryptonPage6.StateNormal.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPage6.Text = "Ingresos / Egresos";
-            this.kryptonPage6.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage6.ToolTipTitle = "Page ToolTip";
             this.kryptonPage6.UniqueName = "E6FFF96F4C94490E6E8BD0D92E62C0D8";
             this.kryptonPage6.Click += new System.EventHandler(this.kryptonPage6_Click);
@@ -3372,8 +3342,8 @@
             this.dgvIngresoSalida.Location = new System.Drawing.Point(7, 34);
             this.dgvIngresoSalida.Name = "dgvIngresoSalida";
             this.dgvIngresoSalida.RowHeadersVisible = false;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvIngresoSalida.RowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvIngresoSalida.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvIngresoSalida.Size = new System.Drawing.Size(827, 302);
             this.dgvIngresoSalida.StateNormal.Background.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.dgvIngresoSalida.TabIndex = 0;
@@ -3381,9 +3351,7 @@
             // kryptonGroupBox3
             // 
             this.kryptonGroupBox3.CaptionOverlap = 0D;
-            this.kryptonGroupBox3.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
-            this.kryptonGroupBox3.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox3.Location = new System.Drawing.Point(2, 411);
             this.kryptonGroupBox3.Name = "kryptonGroupBox3";
             // 
@@ -3747,5 +3715,6 @@
         private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage6;
         private Krypton.Toolkit.KryptonDataGridView dgvIngresoSalida;
         internal System.Windows.Forms.Button button3;
+        private System.Windows.Forms.CheckBox chkQuince;
     }
 }

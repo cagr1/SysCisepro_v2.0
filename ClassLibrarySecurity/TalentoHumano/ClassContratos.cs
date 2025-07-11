@@ -86,7 +86,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
             };
             var sql = "select c.id_contrato ID, c.nro_contrato NRO_CONTRATO, convert(varchar, p.id_personal) + ' ~ ' +p.apellidos + ' ' + p.nombres NOMINA, " +
                     "o.descripcion CARGO, a.nombre_area AREA, c.fecha_inicial_contrato INICIO, c.fecha_vencimiento_contrato FINALIZA, c.periodo_contrato PERIODO, c.tipo_contrato DURACION, c.estado_contrato ESTADO_CONTRATO, " +
-                    "c.iess IESS, c.fecha_afiliacion DESDE, c.reserva_rol F_RESERVA, c.xiii_rol XIII, c.xiv_rol XIV, c.observacion OBSERVACION, c.rec_ext, c.acum_fon_res, c.desc_seg, c.id_proyecto from contrato c join personal p on c.id_personal = p.id_personal " +
+                    "c.iess IESS, c.fecha_afiliacion DESDE, c.reserva_rol F_RESERVA, c.xiii_rol XIII, c.xiv_rol XIV, c.observacion OBSERVACION, c.rec_ext, c.acum_fon_res, c.desc_seg, c.id_proyecto, c.COBRA_QUINCE from contrato c join personal p on c.id_personal = p.id_personal " +
                     "join cargo_ocupacional o on p.id_cargo_ocupacional = o.id_cargo_ocupacional join area_general a on p.id_area = a.id_area_general " +
                     "where c.id_personal =@id_personal And c.estado_contrato = 'VIGENTE';";
             return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, sql, false, pars)  ;
@@ -137,7 +137,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
             var cmd = new SqlCommand
             {
                 CommandType = CommandType.Text,
-                CommandText = "update contrato set tipo_contrato=@tipo_contrato, fecha_inicial_contrato=@fin,fecha_vencimiento_contrato=@fuo, fecha_afiliacion=@faf,  periodo_contrato=@ped, observacion=@observacion, RESERVA_ROL=@RESERVA, XIII_ROL=@XIII, XIV_ROL=@XIV, REC_EXT=@EXTRA, ACUM_FON_RES=@ACURES, DESC_SEG=@DESCSEG, EXTSAL=@EXTSAL, ID_PROYECTO=@ID_PROYECTO where nro_contrato=@nro_contrato and id_personal=@pers;"
+                CommandText = "update contrato set tipo_contrato=@tipo_contrato, fecha_inicial_contrato=@fin,fecha_vencimiento_contrato=@fuo, fecha_afiliacion=@faf,  periodo_contrato=@ped, observacion=@observacion, RESERVA_ROL=@RESERVA, XIII_ROL=@XIII, XIV_ROL=@XIV, REC_EXT=@EXTRA, ACUM_FON_RES=@ACURES, DESC_SEG=@DESCSEG, COBRA_QUINCE = @COBRAQ  ,EXTSAL=@EXTSAL, ID_PROYECTO=@ID_PROYECTO where nro_contrato=@nro_contrato and id_personal=@pers;"
             };
             cmd.Parameters.AddWithValue("@pers", SqlDbType.Int).Value = IdPersonalContrato;
             cmd.Parameters.AddWithValue("@nro_contrato", SqlDbType.Int).Value = NroContrato;
@@ -155,6 +155,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
             cmd.Parameters.AddWithValue("@ACURES", SqlDbType.Int).Value = AcumulaFondoReservaContrato;
             cmd.Parameters.AddWithValue("@EXTRA", SqlDbType.Decimal).Value = RecExtra;
             cmd.Parameters.AddWithValue("@DESCSEG", SqlDbType.Int).Value = SeDescuentaSerguro;
+            cmd.Parameters.AddWithValue("@COBRAQ", SqlDbType.Int).Value = CobraQuince;
             cmd.Parameters.AddWithValue("@EXTSAL", SqlDbType.Int).Value = ExtSal;
             cmd.Parameters.AddWithValue("@ID_PROYECTO", SqlDbType.Int).Value = IdProyecto;
             return cmd;

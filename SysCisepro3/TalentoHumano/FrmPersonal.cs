@@ -20,6 +20,7 @@ using Office = Microsoft.Office.Interop;
 using DataTable = System.Data.DataTable;
 using Krypton.Toolkit;
 using static System.Windows.Forms.MonthCalendar;
+using System.Diagnostics;
 //using ComponentFactory.Krypton.Toolkit;
 
 
@@ -469,7 +470,18 @@ namespace SysCisepro3.TalentoHumano
 
                     cbxProyecto.SelectedValue = Convert.ToInt32(contrato.Rows[0][19]);
 
-                    NupExtra.Value = Convert.ToDecimal(contrato.Rows[0][16]);                  
+                    NupExtra.Value = Convert.ToDecimal(contrato.Rows[0][16]);
+
+                    object quincena = Convert.ToInt32(contrato.Rows[0][20]);
+
+                    if (quincena == DBNull.Value || Convert.ToInt32(quincena) == 0)
+                    {
+                       chkQuince.Checked = false;
+                    }
+                    else
+                    {
+                        chkQuince.Checked = true;
+                    }
                 }
                 catch
                 {
@@ -768,6 +780,9 @@ namespace SysCisepro3.TalentoHumano
             dtpFechaSalidaReferencia.Enabled = enable;
             txtNombresUltimoPatrono.Enabled = enable;
             txtTelefonoUltimoPatrono.Enabled = enable;
+            
+
+
         }
 
         private void HabilitarBotonesMenu(bool botonNuevo, bool botonGuardar, bool botonModificar, bool botonEliminar, bool botonCancelar, bool botonFinalizar, bool botonAspirantes)
@@ -800,6 +815,7 @@ namespace SysCisepro3.TalentoHumano
 
 
             txtCedula.Focus();
+            chkQuince.Enabled = true;
         }
 
         private void GenerarSecuencialContrato(DateTime fec)
@@ -1121,7 +1137,8 @@ namespace SysCisepro3.TalentoHumano
             _objContratos.Observacion = txtObservacion.Text.Trim();
             _objContratos.RecExtra = Convert.ToDouble(NupExtra.Value);
             _objContratos.SeDescuentaSerguro = 1;
-            _objContratos.CobraQuince = 1;
+            //if chkQuince.Checked = True : 1 Else: 0
+            _objContratos.CobraQuince = chkQuince.Checked ? 1 : 0;
             _objContratos.ExtSal = 0;
             _objContratos.IdProyecto = (int)cbxProyecto.SelectedValue;
             _sqlCommands.Add(_objContratos.RegistrarNuevoContratoCommand());
@@ -1232,7 +1249,7 @@ namespace SysCisepro3.TalentoHumano
             _objContratos.RecExtra = Convert.ToDouble(NupExtra.Value);
             _objContratos.IdPersonalContrato = _objPersonal.IdPersonal;
             _objContratos.SeDescuentaSerguro = 1;
-            _objContratos.CobraQuince = 1;
+            _objContratos.CobraQuince = chkQuince.Checked ? 1 : 0;
             _objContratos.ExtSal = 0;
             _objContratos.IdProyecto = (int)cbxProyecto.SelectedValue;
             _sqlCommands.Add(_objContratos.ModificarContratoCommand());
@@ -1353,7 +1370,7 @@ namespace SysCisepro3.TalentoHumano
                 _objContratos.Observacion = txtObservacion.Text.Trim();
                 _objContratos.RecExtra = Convert.ToDouble(NupExtra.Value);
                 _objContratos.SeDescuentaSerguro = 1;
-                _objContratos.CobraQuince = 1;
+                _objContratos.CobraQuince = chkQuince.Checked ? 1 : 0;
                 _objContratos.ExtSal = 0;
                 _objContratos.IdProyecto = (int)cbxProyecto.SelectedValue;
                 _sqlCommands.Add(_objContratos.RegistrarNuevoContratoCommand());
@@ -1426,8 +1443,8 @@ namespace SysCisepro3.TalentoHumano
             _estado = 2;
 
             //CargarProyectos(false);
-            
 
+            Debug.WriteLine($"Estado de chkQuince después de HabilitarRegistro: {chkQuince.Enabled}");
 
             txtContrato.Enabled = false;
             cbmTipoContrato.Enabled = true;
@@ -1444,6 +1461,7 @@ namespace SysCisepro3.TalentoHumano
             txtMotivoSalidaActual.Enabled = chSalida.Checked;
 
             lblValCon.Visible = false;
+            chkQuince.Enabled = true;
             HabilitarBotonesMenu(false, true, false, false, true, false, false);
         }
 
@@ -1465,6 +1483,7 @@ namespace SysCisepro3.TalentoHumano
             chkXiv.Enabled = false;
             chkFondoRes.Enabled = false;
             chkAcumulaFondo.Enabled = false;
+            chkQuince.Enabled = false;
         }
 
         private void txtCedula_KeyUp(object sender, KeyEventArgs e)
