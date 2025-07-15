@@ -1189,6 +1189,57 @@ Namespace FORMULARIOS.OPERACIONES
             End Try
         End Sub
 
+        Private Sub btnReporte_Click(sender As Object, e As EventArgs) Handles btnReporte.Click
+            Try
+                If ListView1.Items.Count = 0 Then
+                    MessageBox.Show("Debe seleccionar una programación para generar reporte!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    Return
+                End If
 
+                'Dim ds As New dsOperaciones
+                Dim ds As New dsOperaciones2
+                'For Each item As ListViewItem In ListView1.Items
+                '    ds.Tables("PROGRAMACION_GENERAL").Rows.Add(item.SubItems(0).Text, item.SubItems(1).Text,
+                '                                               item.SubItems(2).Text, "", item.SubItems(3).Text,
+                '                                               item.SubItems(4).Text, item.SubItems(5).Text, item.SubItems(6).Text,
+                '                                               If(item.SubItems(7).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(7).Text.Trim),
+                '                                               If(item.SubItems(8).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(8).Text.Trim),
+                '                                               If(item.SubItems(9).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(9).Text.Trim),
+                '                                               If(item.SubItems(10).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(10).Text.Trim),
+                '                                               If(item.SubItems(11).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(11).Text.Trim),
+                '                                               If(item.SubItems(12).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(12).Text.Trim),
+                '                                               If(item.SubItems(13).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(13).Text.Trim),
+                '                                               item.SubItems(2).Text, item.SubItems(14).Text)
+                'Next
+                For Each item As ListViewItem In ListView1.Items
+                    ds.Tables("PROGRAMACION_GENERAL").Rows.Add(item.SubItems(0).Text, item.SubItems(1).Text,
+                                                               item.SubItems(2).Text, item.SubItems(3).Text,
+                                                               If(item.SubItems(7).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(7).Text.Trim),
+                                                               If(item.SubItems(8).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(8).Text.Trim),
+                                                               If(item.SubItems(9).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(9).Text.Trim),
+                                                               If(item.SubItems(10).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(10).Text.Trim),
+                                                               If(item.SubItems(11).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(11).Text.Trim),
+                                                               If(item.SubItems(12).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(12).Text.Trim),
+                                                               If(item.SubItems(13).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(13).Text.Trim),
+                                                               item.SubItems(15).Text, item.SubItems(16).Text)
+                Next
+
+
+
+
+                _crSitiosCisepro.SetDataSource(ds.Tables("PROGRAMACION_GENERAL"))
+                _crSitiosCisepro.SetParameterValue("img", ValidationForms.NombreLogo(_tipoCon, Application.StartupPath))
+                _crSitiosCisepro.SetParameterValue("mes", ValidationForms.Mes(dtpMes.Value.Month) & " - " & dtpMes.Value.Year)
+                _crSitiosCisepro.SetParameterValue("desde", DateTimePicker1.Value.ToLongDateString())
+                _crSitiosCisepro.SetParameterValue("hasta", DateTimePicker2.Value.ToLongDateString())
+                crvSitios.ReportSource = _crSitiosCisepro
+
+                crvSitios.Zoom(75)
+                crvSitios.Refresh()
+            Catch ex As Exception
+
+                KryptonMessageBox.Show("Error al generar reporte: " & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
+        End Sub
     End Class
 End Namespace

@@ -78,6 +78,7 @@
             Me.btnEditar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnCancelar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnMesAnterior = New System.Windows.Forms.ToolStripMenuItem()
+            Me.btnCargar = New System.Windows.Forms.ToolStripMenuItem()
             Me.crvSitios = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
             Me.KryptonNavigator1 = New ComponentFactory.Krypton.Navigator.KryptonNavigator()
             Me.KryptonPage1 = New ComponentFactory.Krypton.Navigator.KryptonPage()
@@ -129,7 +130,6 @@
             Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.btnReporte = New System.Windows.Forms.Button()
             Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
-            Me.btnCargar = New System.Windows.Forms.ToolStripMenuItem()
             Me.MenuStrip1.SuspendLayout()
             CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonNavigator1.SuspendLayout()
@@ -692,6 +692,14 @@
             Me.btnMesAnterior.Size = New System.Drawing.Size(96, 28)
             Me.btnMesAnterior.Text = "MES ANT."
             '
+            'btnCargar
+            '
+            Me.btnCargar.Image = Global.syscisepro.My.Resources.Resources.upload_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnCargar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.btnCargar.Name = "btnCargar"
+            Me.btnCargar.Size = New System.Drawing.Size(89, 28)
+            Me.btnCargar.Text = "CARGAR"
+            '
             'crvSitios
             '
             Me.crvSitios.ActiveViewIndex = -1
@@ -702,7 +710,7 @@
             Me.crvSitios.Name = "crvSitios"
             Me.crvSitios.ShowCloseButton = False
             Me.crvSitios.ShowLogo = False
-            Me.crvSitios.Size = New System.Drawing.Size(847, 669)
+            Me.crvSitios.Size = New System.Drawing.Size(847, 667)
             Me.crvSitios.TabIndex = 0
             Me.crvSitios.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             '
@@ -1310,7 +1318,7 @@
             Me.KryptonPage2.LastVisibleSet = True
             Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage2.Name = "KryptonPage2"
-            Me.KryptonPage2.Size = New System.Drawing.Size(847, 669)
+            Me.KryptonPage2.Size = New System.Drawing.Size(847, 667)
             Me.KryptonPage2.Text = "Reporte"
             Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage2.UniqueName = "4577C4D69A4D41D116ACC5EEEF2D286F"
@@ -1340,14 +1348,6 @@
             Me.DateTimePicker3.ShowUpDown = True
             Me.DateTimePicker3.Size = New System.Drawing.Size(121, 21)
             Me.DateTimePicker3.TabIndex = 203
-            '
-            'btnCargar
-            '
-            Me.btnCargar.Image = Global.syscisepro.My.Resources.Resources.upload_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnCargar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-            Me.btnCargar.Name = "btnCargar"
-            Me.btnCargar.Size = New System.Drawing.Size(89, 28)
-            Me.btnCargar.Text = "CARGAR"
             '
             'FrmProgramacionGeneral
             '

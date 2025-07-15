@@ -686,11 +686,11 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
         End Sub
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             If CDec(txtTotalDebe.Text) <> CDec(txtTotalHaber.Text) Then
-                MessageBox.Show("El ASIENTO no cuadra, No se puede guardar los cambios!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("El ASIENTO no cuadra, No se puede guardar los cambios!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
-            If MessageBox.Show("Seguro que desea guardar los cambios realizados?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            If KryptonMessageBox.Show("Seguro que desea guardar los cambios realizados?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) = DialogResult.No Then
                 Return
             End If
             _sqlCommands.Clear()
@@ -781,22 +781,24 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
         Private Sub NuevoRegistroAsientoDiarioRoles()
             Dim i = _objetoAsientoLibroDiario.BuscarMayorIdAsientoLibroDiario(_tipoCon) + 1
-            For indice = 0 To dgvAsientoRoles.RowCount - 1
+
+            For Each row As DataGridViewRow In dgvAsientoRoles.Rows
+                If row.IsNewRow Then Continue For
                 With _objetoAsientoLibroDiario
                     .IdAsiento = i
                     .FechaAsiento = dtpFechaAsiento.Value
-                    .CodigoCuentaAsiento = dgvAsientoRoles.Rows(indice).Cells(2).Value.ToString.Trim
-                    .NombreCuentaAsiento = dgvAsientoRoles.Rows(indice).Cells(3).Value.ToString.Trim
-                    .ConceptoAsiento = dgvAsientoRoles.Rows(indice).Cells(4).Value.ToString.ToUpper
-                    .DetalleTransaccionAsiento = dgvAsientoRoles.Rows(indice).Cells(5).Value.ToString.ToUpper
+                    .CodigoCuentaAsiento = row.Cells(2).Value.ToString.Trim
+                    .NombreCuentaAsiento = row.Cells(3).Value.ToString.Trim
+                    .ConceptoAsiento = row.Cells(4).Value.ToString.ToUpper
+                    .DetalleTransaccionAsiento = row.Cells(5).Value.ToString.ToUpper
                     .ProvinciaAsiento = "EL ORO"
                     .CiudadAsiento = "MACHALA"
                     .ParroquiaAsiento = "MACHALA"
                     .CentroCostoAsiento = "GERENCIA GENERAL"
-                    .ValorDebeAsiento = dgvAsientoRoles.Rows(indice).Cells(6).Value
-                    .ValorHaberAsiento = dgvAsientoRoles.Rows(indice).Cells(7).Value
+                    .ValorDebeAsiento = row.Cells(6).Value
+                    .ValorHaberAsiento = row.Cells(7).Value
                     .NumeroRegistroAsiento = _objetoNumeroRegistro.NumeroRegistro
-                    If dgvAsientoRoles.Rows(indice).Cells(6).Value > dgvAsientoRoles.Rows(indice).Cells(7).Value Then
+                    If row.Cells(6).Value > row.Cells(7).Value Then
                         .DebeHaberAsiento = 1
                     Else
                         .DebeHaberAsiento = 2
