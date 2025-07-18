@@ -26,8 +26,8 @@ namespace ClassLibraryCisepro3.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.137;Initial Catalog=SYSCISEPRO;Persist Security Info=True;U" +
-            "ser ID=syscisepro;Password=syscisepro;Connection Timeout=0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.5;Initial Catalog=SYSCISEPRO;Persist Security Info=True;Use" +
+            "r ID=syscisepro;Password=syscisepro;Connection Timeout=0")]
         public string SysCiseproConnectionString {
             get {
                 return ((string)(this["SysCiseproConnectionString"]));
@@ -37,8 +37,8 @@ namespace ClassLibraryCisepro3.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.137;Initial Catalog=SYSSEPORTPAC;Persist Security Info=True" +
-            ";User ID=syscisepro;Password=syscisepro;Connection Timeout=0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.5;Initial Catalog=SYSSEPORTPAC;Persist Security Info=True;U" +
+            "ser ID=syscisepro;Password=syscisepro;Connection Timeout=0")]
         public string SysSeportpacConnectionString {
             get {
                 return ((string)(this["SysSeportpacConnectionString"]));
@@ -48,8 +48,8 @@ namespace ClassLibraryCisepro3.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.137;Initial Catalog=SYSASENAVA;Persist Security Info=True;U" +
-            "ser ID=syscisepro;Password=syscisepro;Connection Timeout=0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.5;Initial Catalog=SYSASENAVA;Persist Security Info=True;Use" +
+            "r ID=syscisepro;Password=syscisepro;Connection Timeout=0")]
         public string SysAsenavaConnectionString {
             get {
                 return ((string)(this["SysAsenavaConnectionString"]));

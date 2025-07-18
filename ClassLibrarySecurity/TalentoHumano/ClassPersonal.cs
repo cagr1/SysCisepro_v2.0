@@ -279,7 +279,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
         //}
 
 
-        public DataTable SeleccionarTodosRegistrosPersonalPorFiltros(TipoConexion tipoCon, int proy, int tipoPers, string estado, string filtro, bool ingre, int orden, string desde, string hasta)
+        public DataTable SeleccionarTodosRegistrosPersonalPorFiltros(TipoConexion tipoCon, int proy, int tipoPers, string estado, string filtro, bool ingre, int orden, DateTime desde, DateTime hasta)
         {
 
 

@@ -57,8 +57,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.137;Initial Catalog=SYSCISEPRO;Persist Security Info=True;U"& _ 
-            "ser ID=syscisepro;Password=syscisepro;Connection Timeout=0")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.5;Initial Catalog=SYSCISEPRO;Persist Security Info=True;Use"& _ 
+            "r ID=syscisepro;Password=syscisepro;Connection Timeout=0")>  _
         Public ReadOnly Property SysCiseproConnectionString() As String
             Get
                 Return CType(Me("SysCiseproConnectionString"),String)
@@ -68,8 +68,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.137;Initial Catalog=SYSSEPORTPAC;Persist Security Info=True;U"& _ 
-            "ser ID=syscisepro;Password=syscisepro;Connection Timeout=0")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.5;Initial Catalog=SYSSEPORTPAC;Persist Security Info=True;Use"& _ 
+            "r ID=syscisepro;Password=syscisepro;Connection Timeout=0")>  _
         Public ReadOnly Property SysSeportpacConnectionString() As String
             Get
                 Return CType(Me("SysSeportpacConnectionString"),String)
@@ -79,8 +79,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.137;Initial Catalog=SYSASENAVA;Persist Security Info=True;U"& _ 
-            "ser ID=syscisepro;Password=syscisepro;Connection Timeout=0")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.5;Initial Catalog=SYSASENAVA;Persist Security Info=True;Use"& _ 
+            "r ID=syscisepro;Password=syscisepro;Connection Timeout=0")>  _
         Public ReadOnly Property SysAsenavaConnectionString() As String
             Get
                 Return CType(Me("SysAsenavaConnectionString"),String)

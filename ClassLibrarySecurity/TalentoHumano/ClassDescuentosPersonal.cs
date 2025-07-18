@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using ClassLibraryCisepro3.Enums;
 using ClassLibraryCisepro3.ProcesosSql;
 
@@ -75,11 +76,13 @@ namespace ClassLibraryCisepro3.TalentoHumano
         
 
 
-        public DataTable SeleccionarDescuentosDatos(TipoConexion tipoCon, string filtro, string desde, string hasta, string tipo)
+        public DataTable SeleccionarDescuentosDatos(TipoConexion tipoCon, string filtro, DateTime desde, DateTime hasta, string tipo)
         {
-            
+
             //tipo = tipo.Contains("TODOS LOS DESCUENTOS") ? string.Empty : tipo;
+
             
+
             var pars = new List<object[]>
             {
                 new object[] { "@FILTRO", SqlDbType.NVarChar, filtro }, 
@@ -181,7 +184,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
             return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select CONVERT(varchar(10), r.id_registro) + ' - ' + convert(varchar, r.fecha, 103) + ' - ' + e.CEDULA + ' - '  + e.apellidos + ' ' + e.nombres + ' - ' + CONVERT(varchar(10), r.valor) + ' - ' + u.OBSERVACION_UNIFORMES DETALLE, sc.NOMBRE_SECUENCIAL_ITEM, du.CANTIDAD_DETALLE_UNIFORMES,SC.COSTO, dk.VALOR_UNITARIO_EGRESO, dk.VALOR_TOTAL_EGRESO, ((du.CANTIDAD_DETALLE_UNIFORMES*dk.VALOR_UNITARIO_EGRESO) - (du.CANTIDAD_DETALLE_UNIFORMES*SC.COSTO)) UTILIDAD from DESCUENTOS_ROL r join personal e on r.id_personal= e.id_personal join cargo_ocupacional c on e.id_cargo_ocupacional = c.id_cargo_ocupacional left join sitios_trabajo s on e.ubicacion = s.id_sitio_trabajo left join cliente_general l on s.id_cliente_general = l.id_cliente_general join area_general a on e.id_area = a.id_area_general join entrega_uniformes u on (r.fecha=u.FECHA_UNIFORMES and u.ESTADO_UNIFORMES = 1) join detalle_uniformes du on u.id_uniformes = du.id_uniformes join DETALLE_KARDEX dk on du.ID_DETALLE_KARDEX_DETALLE_UNIFORMES = dk.ID_DETALLE join KARDEX ka on dk.ID_KARDEX = ka.ID_KARDEX join SECUENCIAL_ITEM sc on ka.ID_SECUENCIAL_ITEM=sc.ID_SECUENCIAL_ITEM where (r.fecha between @DESDE and @HASTA) and r.estado = 1 and r.tipo = 9 and (e.cedula like ('%' + @FILTRO + '%') or e.apellidos like ('%' + @FILTRO + '%') or e.nombres like ('%' + @FILTRO + '%') or sc.NOMBRE_SECUENCIAL_ITEM like ('%' + @FILTRO + '%') ) order by  r.fecha, r.id_personal;", false, pars);
         }
          
-        public bool IdDescuentoInDescuentosRol(TipoConexion tipoCon, string idDescuento, string desde, string hasta)
+        public bool IdDescuentoInDescuentosRol(TipoConexion tipoCon, string idDescuento, DateTime desde, DateTime hasta)
         {
             var pars = new List<object[]>
             {
