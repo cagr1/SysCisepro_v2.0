@@ -39,10 +39,12 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
 
         Private Sub CargarLiquidacionFondoRotativo()
             Try
-                Dim fechaDesde = DateTimePicker1.Value.Year & "-" & DateTimePicker1.Value.Month & "-" & DateTimePicker1.Value.Day & " 00:00:00"
-                Dim fechaHasta = DateTimePicker2.Value.Year & "-" & DateTimePicker2.Value.Month & "-" & DateTimePicker2.Value.Day & " 23:59:59"
+                'Dim fechaDesde = DateTimePicker1.Value.Year & "-" & DateTimePicker1.Value.Month & "-" & DateTimePicker1.Value.Day & " 00:00:00"
+                Dim fechaDesde = DateTimePicker1.Value.Day & "-" & DateTimePicker1.Value.Month & "-" & DateTimePicker1.Value.Year & " 00:00:00"
+                'Dim fechaHasta = DateTimePicker2.Value.Year & "-" & DateTimePicker2.Value.Month & "-" & DateTimePicker2.Value.Day & " 23:59:59"
+                Dim fechaHasta = DateTimePicker2.Value.Day & "-" & DateTimePicker2.Value.Month & "-" & DateTimePicker2.Value.Year & " 23:59:59"
 
-                dgvLiquidacionFondoRotativo.DataSource = _objetoLiquidacionFondoRotativo.SeleccionarLiquidacionFondoRotativo(_tipoCon, fechaDesde, fechaHasta)
+                dgvLiquidacionFondoRotativo.DataSource = _objetoLiquidacionFondoRotativo.SeleccionarLiquidacionFondoRotativo(_tipoCon, Convert.ToDateTime(fechaDesde), Convert.ToDateTime(fechaHasta))
                 dgvLiquidacionFondoRotativo.Font = New Font("Roboto", 9, FontStyle.Regular)
                 dgvLiquidacionFondoRotativo.Columns(0).HeaderText = "ID LIQ"
                 dgvLiquidacionFondoRotativo.Columns(1).HeaderText = "FECHA"

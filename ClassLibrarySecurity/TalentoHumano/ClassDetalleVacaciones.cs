@@ -105,7 +105,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
             return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, sql, false, pars);
         }
 
-        public DataTable SeleccionarRegistroVacaciones(TipoConexion tipoCon, string desde, string hasta, string fil, bool reg)
+        public DataTable SeleccionarRegistroVacaciones(TipoConexion tipoCon, DateTime desde, DateTime hasta, string fil, bool reg)
         {
             var pars = new List<object[]>
             {

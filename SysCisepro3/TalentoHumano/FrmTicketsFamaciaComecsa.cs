@@ -267,8 +267,11 @@ namespace SysCisepro3.TalentoHumano
             {
                 dgvRegistro.Rows.Clear();
                
-                var fechaDesde = dtpFechaDesde.Value.Year + "-" + dtpFechaDesde.Value.Month + "-" + dtpFechaDesde.Value.Day + " 00:00:00";
-                var fechaHasta = dtpFechaHasta.Value.Year + "-" + dtpFechaHasta.Value.Month + "-" + dtpFechaHasta.Value.Day + " 23:59:59";
+                //var fechaDesde = dtpFechaDesde.Value.Year + "-" + dtpFechaDesde.Value.Month + "-" + dtpFechaDesde.Value.Day + " 00:00:00";
+                //var fechaHasta = dtpFechaHasta.Value.Year + "-" + dtpFechaHasta.Value.Month + "-" + dtpFechaHasta.Value.Day + " 23:59:59";
+
+                var fechaDesde = dtpFechaDesde.Value.Day + "-" + dtpFechaDesde.Value.Month + "-" + dtpFechaDesde.Value.Year + " 00:00:00";
+                var fechaHasta = dtpFechaHasta.Value.Day + "-" + dtpFechaHasta.Value.Month + "-" + dtpFechaHasta.Value.Year + " 23:59:59";
 
                 var tipo = cbxFiltro.SelectedIndex;
                 //declare data for receive a datatable
@@ -276,7 +279,7 @@ namespace SysCisepro3.TalentoHumano
 
                 if (tipo == 0)
                 {
-                    data = _objTicketsFarmaciaComecsa.SeleccionarRegistroNotificacionesTodo(TipoCon, fechaDesde, fechaHasta, txtFiltro.Text.Trim());
+                    data = _objTicketsFarmaciaComecsa.SeleccionarRegistroNotificacionesTodo(TipoCon, Convert.ToDateTime(fechaDesde), Convert.ToDateTime(fechaHasta), txtFiltro.Text.Trim());
                 }
                 else
                 {
@@ -298,7 +301,7 @@ namespace SysCisepro3.TalentoHumano
                         
                     }
 
-                    data = _objTicketsFarmaciaComecsa.SeleccionarRegistroNotificaciones(TipoCon, fechaDesde, fechaHasta, tipoF, txtFiltro.Text.Trim());
+                    data = _objTicketsFarmaciaComecsa.SeleccionarRegistroNotificaciones(TipoCon, Convert.ToDateTime(fechaDesde), Convert.ToDateTime(fechaHasta), tipoF, txtFiltro.Text.Trim());
                     
 
                 }

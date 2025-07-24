@@ -105,12 +105,13 @@ namespace SysCisepro3.TalentoHumano
 
                 if (chkDetalle.Checked)
                 {
-                    var fechad = dtpFechaDesde.Value.Year + "-" + dtpFechaDesde.Value.Month + "-" +
-                                 dtpFechaDesde.Value.Day + " 00:00:00";
-                    var fechah = dtpFechaHasta.Value.Year + "-" + dtpFechaHasta.Value.Month + "-" +
-                                 dtpFechaHasta.Value.Day + " 23:59:59";
+                    //var fechad = dtpFechaDesde.Value.Year + "-" + dtpFechaDesde.Value.Month + "-" + dtpFechaDesde.Value.Day + " 00:00:00";
+                    //var fechah = dtpFechaHasta.Value.Year + "-" + dtpFechaHasta.Value.Month + "-" + dtpFechaHasta.Value.Day + " 23:59:59";
 
-                    data = _objDetalleVacaciones.SeleccionarRegistroVacaciones(TipoCon, fechad, fechah, fil, radioButton1.Checked);
+                    var fechad = dtpFechaDesde.Value.Day + "-" + dtpFechaDesde.Value.Month + "-" + dtpFechaDesde.Value.Year + " 00:00:00";
+                    var fechah = dtpFechaHasta.Value.Day + "-" + dtpFechaHasta.Value.Month + "-" + dtpFechaHasta.Value.Year + " 23:59:59";
+
+                    data = _objDetalleVacaciones.SeleccionarRegistroVacaciones(TipoCon, Convert.ToDateTime(fechad), Convert.ToDateTime(fechah), fil, radioButton1.Checked);
                 }
                 else
                 {

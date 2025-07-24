@@ -32,7 +32,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
             return data.Rows.Count == 0 ? 0 : data.Rows[0][0] == DBNull.Value ? 0 : Convert.ToInt32(data.Rows[0][0]);
         }
 
-        public DataTable SeleccionarRegistroNotificaciones(TipoConexion tipoCon, string desde, string hasta, int tipo, string filtro)
+        public DataTable SeleccionarRegistroNotificaciones(TipoConexion tipoCon, DateTime desde, DateTime hasta, int tipo, string filtro)
         {
             var pars = new List<object[]>
             {
@@ -45,7 +45,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
             return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_seleccionarRegistrosNotificaciones", true, pars);
         }
 
-        public DataTable SeleccionarRegistroNotificacionesTodo(TipoConexion tipoCon, string desde, string hasta, string filtro)
+        public DataTable SeleccionarRegistroNotificacionesTodo(TipoConexion tipoCon, DateTime desde, DateTime hasta, string filtro)
         {
             var pars = new List<object[]>
             {

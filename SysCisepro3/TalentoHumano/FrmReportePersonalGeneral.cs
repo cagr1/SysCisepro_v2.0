@@ -139,12 +139,11 @@ namespace SysCisepro3.TalentoHumano
             {
                 dataGridView1.Rows.Clear();
 
-                //var fechaDesde = dtpFechaDesde.Value.Year + "-" + dtpFechaDesde.Value.Month + "-" + dtpFechaDesde.Value.Day + " 00:00:00";
+                
                 var fechaDesde = dtpFechaDesde.Value.Day + "-" + dtpFechaDesde.Value.Month + "-" + dtpFechaDesde.Value.Year + " 00:00:00";
-                //var fechaHasta = dtpFechaHasta.Value.Year + "-" + dtpFechaHasta.Value.Month + "-" + dtpFechaHasta.Value.Day + " 23:59:59";
                 var fechaHasta = dtpFechaHasta.Value.Day + "-" + dtpFechaHasta.Value.Month + "-" + dtpFechaHasta.Value.Year + " 23:59:59";
 
-                //var data = _objPersonal.SeleccionarTodosRegistrosPersonalPorFiltros(TipoCon, fil, cbxEstado.SelectedIndex.ToString(), fechaDesde, fechaHasta, RadioButton1.Checked, cbxOrden.SelectedIndex, cbxTipo.SelectedIndex, (int)cbxProyecto.SelectedValue);
+                
                 var data = _objPersonal.SeleccionarTodosRegistrosPersonalPorFiltros(TipoCon, (int)cbxProyecto.SelectedValue, cbxTipo.SelectedIndex, cbxEstado.SelectedIndex.ToString(), fil, RadioButton1.Checked, cbxOrden.SelectedIndex, Convert.ToDateTime(fechaDesde), Convert.ToDateTime(fechaHasta));
                 if (data.Rows.Count == 0)
                 {
