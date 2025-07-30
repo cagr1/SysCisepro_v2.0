@@ -102,7 +102,7 @@ namespace SysCisepro3.Main
         {
           // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA
           DefinirTipoSistema();
-          timer1.Start(); 
+         // timer1.Start(); 
         }
 
         private void MdiParentMain_FormClosing(object sender, FormClosingEventArgs e)

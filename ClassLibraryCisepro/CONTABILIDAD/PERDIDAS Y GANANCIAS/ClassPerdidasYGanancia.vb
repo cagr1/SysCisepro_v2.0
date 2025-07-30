@@ -48,43 +48,33 @@ Namespace CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             Return If(data.Rows.Count = 0, String.Empty, CStr(data.Rows(0)("now")).Substring(0, 19))
         End Function
 
-        Public Function SeleccionarEstadoPerdidasGananciasComparativaPorMesesIngresos(ByVal tipoCon As TipoConexion, ByVal inicio As Date, ByVal fin As Date) As DataTable
-
-            Dim year = inicio.Year
-
-            Dim base = "select pc.codigo,pc.padre_cuenta padre, pc.nivel, pc.detalle "
-            Dim fm As Date
-            If (fin.Month - inicio.Month) >= 0 Then
-                For i As Integer = inicio.Month To fin.Month Step 1
-                    fm = Convert.ToDateTime(year & "-" & i & "-1").AddMonths(1).AddDays(-1)
-                    base = base + ", coalesce((sum(CASE WHEN ld.FECHA_ASIENTO between '" & (year & "-" & i & "-1") & " 00:00:00' and '" & (year & "-" & fm.Month & "-" & fm.Day) & " 23:59:59' THEN ld.VALOR_DEBE_ASIENTO END) - sum(CASE WHEN ld.FECHA_ASIENTO between '" & (year & "-" & i & "-1") & " 00:00:00' and '" & (year & "-" & fm.Month & "-" & fm.Day) & " 23:59:59' THEN ld.VALOR_HABER_ASIENTO END)),0) " & Mes(i)
-                Next
-            End If
-            base = base + ", 0.0 TOTAL from plan_cuentas_general pc left join asientos_libro_diario ld on pc.codigo = ld.codigo_cuenta_asiento where pc.estado = 1 and pc.codigo like '4%' and ld.ESTADO_ASIENTO>0 " & _
-"and ld.FECHA_ASIENTO between '" & (year & "-" & inicio.Month & "-1") & " 00:00:00' and '" & (year & "-" & fin.Month & "-" & fin.Day) & " 23:59:59' " & _
-"group by pc.codigo, pc.padre_cuenta, pc.nivel, pc.detalle  order by pc.codigo;"
+        Public Function SeleccionarEstadoPerdidasGananciasComparativaPorMesesIngresos(ByVal tipoCon As TipoConexion, ByVal inicio As DateTime, ByVal fin As DateTime, ByVal tipo As Char) As DataTable
 
 
-            Return ComandosSql.SeleccionarQueryToDataTable(tipoCon, base, False) 
+            Dim pars = New List(Of Object())
+
+            pars.Add(New Object() {"@FechaInicio", SqlDbType.DateTime, inicio})
+            pars.Add(New Object() {"@FechaFin", SqlDbType.DateTime, fin})
+            pars.Add(New Object() {"@TipoCuenta", SqlDbType.VarChar, "4"})
+            Dim tabla = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_seleccionarEstadoPerdidasGananciasComparativaPorMeses", True, pars)
+
+            Return tabla
+
+
         End Function
 
-        Public Function SeleccionarEstadoPerdidasGananciasComparativaPorMesesEgresos(ByVal tipoCon As TipoConexion, ByVal inicio As Date, ByVal fin As Date) As DataTable
+        Public Function SeleccionarEstadoPerdidasGananciasComparativaPorMesesEgresos(ByVal tipoCon As TipoConexion, ByVal inicio As DateTime, ByVal fin As DateTime, ByVal tipo As Char) As DataTable
 
-            Dim year = inicio.Year
+            Dim pars = New List(Of Object())
 
-            Dim base = "select pc.codigo,pc.padre_cuenta padre, pc.nivel, pc.detalle "
-            Dim fm As Date
-            If (fin.Month - inicio.Month) >= 0 Then
-                For i As Integer = inicio.Month To fin.Month Step 1
-                    fm = Convert.ToDateTime(year & "-" & i & "-1").AddMonths(1).AddDays(-1)
-                    base = base + ", coalesce((sum(CASE WHEN ld.FECHA_ASIENTO between '" & (year & "-" & i & "-1") & " 00:00:00' and '" & (year & "-" & fm.Month & "-" & fm.Day) & " 23:59:59' THEN ld.VALOR_DEBE_ASIENTO END) - sum(CASE WHEN ld.FECHA_ASIENTO between '" & (year & "-" & i & "-1") & " 00:00:00' and '" & (year & "-" & fm.Month & "-" & fm.Day) & " 23:59:59' THEN ld.VALOR_HABER_ASIENTO END)),0) " & Mes(i)
-                Next
-            End If
-            base = base + ", 0.0 TOTAL from plan_cuentas_general pc left join asientos_libro_diario ld on pc.codigo = ld.codigo_cuenta_asiento where  pc.estado = 1 and pc.codigo like '5%' and ld.ESTADO_ASIENTO>0 " & _
-"and ld.FECHA_ASIENTO between '" & (year & "-" & inicio.Month & "-1") & " 00:00:00' and '" & (year & "-" & fin.Month & "-" & fin.Day) & " 23:59:59' " & _
-"group by pc.codigo, pc.padre_cuenta, pc.nivel, pc.detalle  order by pc.codigo;"
+            pars.Add(New Object() {"@FechaInicio", SqlDbType.DateTime, inicio})
+            pars.Add(New Object() {"@FechaFin", SqlDbType.DateTime, fin})
+            pars.Add(New Object() {"@TipoCuenta", SqlDbType.VarChar, "5"})
+            Dim tabla = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_seleccionarEstadoPerdidasGananciasComparativaPorMeses", True, pars)
 
-            Return ComandosSql.SeleccionarQueryToDataTable(tipoCon, base, False) 
+            Return tabla
+
+
         End Function
 
         Private Function Mes(ByVal m As Integer) As String

@@ -36,16 +36,19 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         Public IdUsuario As Integer
 
         Dim objEstado As New ClassPerdidasYGanancia
-        Dim fechaDesde As String
-        Dim fechaHasta As String
+        Dim fechaDesde As DateTime
+        Dim fechaHasta As DateTime
 
         Private Sub btnBuscarMensual_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscarMensual.Click
             btnBuscarMensual.Enabled = False
             Button1.Enabled = False
             dtpFechaHasta.Enabled = False
 
-            fechaDesde = Convert.ToDateTime(dtpFechaHasta.Value.Year & "/1/1").ToShortDateString & " 00:00:00"
-            fechaHasta = Convert.ToDateTime(dtpFechaHasta.Value.Year & "/" & dtpFechaHasta.Value.Month & "/1").AddMonths(1).AddDays(-1).ToShortDateString & " 23:59:59"
+            'fechaDesde = Convert.ToDateTime(dtpFechaHasta.Value.Year & "-1-1").ToShortDateString & " 00:00:00"
+            'fechaHasta = Convert.ToDateTime(dtpFechaHasta.Value.Year & "-" & dtpFechaHasta.Value.Month & "-1").AddMonths(1).AddDays(-1).ToShortDateString & " 23:59:59"
+
+            fechaDesde = New DateTime(dtpFechaHasta.Value.Year, 1, 1)
+            fechaHasta = New DateTime(dtpFechaHasta.Value.Year, dtpFechaHasta.Value.Month, 1).AddMonths(1).AddDays(-1).AddHours(23).AddMinutes(59).AddSeconds(59)
 
             PictureBox1.Visible = True
             PictureBox1.BackColor = Color.FromArgb(30, Color.White)
@@ -210,8 +213,11 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         End Sub
 
         Private Sub BackgroundWorker1_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-            Dim ingresos = objEstado.SeleccionarEstadoPerdidasGananciasComparativaPorMesesIngresos(_tipoCon, fechaDesde, fechaHasta)
-            Dim egresos = objEstado.SeleccionarEstadoPerdidasGananciasComparativaPorMesesEgresos(_tipoCon, fechaDesde, fechaHasta)
+            Dim ingreso = "4"
+            Dim egreso = "5"
+
+            Dim ingresos = objEstado.SeleccionarEstadoPerdidasGananciasComparativaPorMesesIngresos(_tipoCon, fechaDesde, fechaHasta, ingreso)
+            Dim egresos = objEstado.SeleccionarEstadoPerdidasGananciasComparativaPorMesesEgresos(_tipoCon, fechaDesde, fechaHasta, egreso)
 
             Dim datos As New List(Of DataTable)
             datos.Add(ingresos)
