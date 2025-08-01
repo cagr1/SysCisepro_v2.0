@@ -731,7 +731,7 @@ namespace SysCisepro3.Main
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA
             DefinirTipoSistema();             
-           // timer1.Start();
+            //timer1.Start();
             
             //Image image = Resources.Your_paragraph_text__2_;
             // AdjustImageToFit(pictureBox1, image);
@@ -757,7 +757,7 @@ namespace SysCisepro3.Main
                 return;
             }
 
-            timer1.Stop();
+            //timer1.Stop();
 
             ObjUsuario.SalirSistema(TipoCon);
 
@@ -1854,118 +1854,118 @@ namespace SysCisepro3.Main
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    //var hoy = ObjUsuario.Now(TipoCon);
-            //    var hoy2 = DateTime.Now;
+            try
+            {
+                //var hoy = ObjUsuario.Now(TipoCon);
+                var hoy2 = DateTime.Now;
 
-            //    if (hoy2.Minute % TiempoNotificacion != 0) return;
+                if (hoy2.Minute % TiempoNotificacion != 0) return;
 
-            //    if (ObjUsuario.TipoUsuario.Contains("ADMINISTRADOR"))
-            //    {  
-            //        _data = _objLibroDiario.SeleccionarRegistrosCodigoCuentaCambiadaLibroDiario(TipoCon);
-            //        _tipoNoficicacion = 5;
-            //        notifyIcon1.BalloonTipText = @"Existen alteraciones de codigo y cuentas en el libro diario!"; 
-            //    }
+                if (ObjUsuario.TipoUsuario.Contains("ADMINISTRADOR"))
+                {
+                    _data = _objLibroDiario.SeleccionarRegistrosCodigoCuentaCambiadaLibroDiario(TipoCon);
+                    _tipoNoficicacion = 5;
+                    notifyIcon1.BalloonTipText = @"Existen alteraciones de codigo y cuentas en el libro diario!";
+                }
 
-            //    if (ObjUsuario.TipoUsuario.Contains("CONTABILIDAD") && Settings.Default.Usuario.Equals("MABEL"))
-            //    {
-            //        _data = _objClienteGeneral.BuscarClientesSinFacturarXRangoFecha(TipoCon, _fechaInicialMesActual, _fechaFinalMesActual, _fechaInicialMesAnterior, _fechaFinalMesAnterior);
-            //        _tipoNoficicacion = 1;
-            //        notifyIcon1.BalloonTipText = @"Existen clientes a los que aún no les ha hecho la facturación correspondiente!"; 
-            //    }
+                if (ObjUsuario.TipoUsuario.Contains("CONTABILIDAD") && Settings.Default.Usuario.Equals("MABEL"))
+                {
+                    _data = _objClienteGeneral.BuscarClientesSinFacturarXRangoFecha(TipoCon, _fechaInicialMesActual, _fechaFinalMesActual, _fechaInicialMesAnterior, _fechaFinalMesAnterior);
+                    _tipoNoficicacion = 1;
+                    notifyIcon1.BalloonTipText = @"Existen clientes a los que aún no les ha hecho la facturación correspondiente!";
+                }
 
-            //    if (ObjUsuario.TipoUsuario == "RR.HH" && Settings.Default.Usuario.Equals("MARMIJOS"))
-            //    {
-            //        try
-            //        {
-            //            _anios.Clear();
-            //            for (var i = 0; i <= (DateTime.Now.Year - 2018); i++) _anios.Add(2018 + i);
-            //            _data = _objDetalleVacaciones.SeleccionarRegistroPendientesVacacionesPorPeriodo(TipoCon, string.Empty, _anios, 0, 1);
+                if (ObjUsuario.TipoUsuario == "RR.HH" && Settings.Default.Usuario.Equals("MARMIJOS"))
+                {
+                    try
+                    {
+                        _anios.Clear();
+                        for (var i = 0; i <= (DateTime.Now.Year - 2018); i++) _anios.Add(2018 + i);
+                        _data = _objDetalleVacaciones.SeleccionarRegistroPendientesVacacionesPorPeriodo(TipoCon, string.Empty, _anios, 0, 1);
 
-            //            foreach (DataRow row in _data.Rows)
-            //            {
-            //                var fe = Convert.ToDateTime(row[4]);
-            //                var fx = new DateTime(int.Parse(row[6].ToString().Split('-')[1].Trim()), fe.Month, fe.Day, fe.Hour, fe.Minute, fe.Second);
-            //                if (fe >= fx) row.Delete();
-            //            }
+                        foreach (DataRow row in _data.Rows)
+                        {
+                            var fe = Convert.ToDateTime(row[4]);
+                            var fx = new DateTime(int.Parse(row[6].ToString().Split('-')[1].Trim()), fe.Month, fe.Day, fe.Hour, fe.Minute, fe.Second);
+                            if (fe >= fx) row.Delete();
+                        }
 
-            //            _tipoNoficicacion = 2;
-            //            notifyIcon1.BalloonTipText = @"Existe personal de guardias que tiene días pendientes de vacaciones! Por favor, coordine con OPERACIONES para procesar la salida correspondiente.";
-            //        }
-            //        catch (Exception ex)
-            //        {
-            //            Console.WriteLine(ex.Message);
-            //        }
-            //    }
+                        _tipoNoficicacion = 2;
+                        notifyIcon1.BalloonTipText = @"Existe personal de guardias que tiene días pendientes de vacaciones! Por favor, coordine con OPERACIONES para procesar la salida correspondiente.";
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                }
 
-            //    if (ObjUsuario.TipoUsuario == "RR.HH" && Settings.Default.Usuario.Equals("ELENA"))
-            //    {
-            //        try
-            //        {
-            //            _data = _objPersonal.SeleccionarPersonalPorCulminarProyecto(TipoCon);
-            //            _data2 = _objPersonal.SeleccionarPersonalPorCulminar3mesesPrueba(TipoCon);
+                if (ObjUsuario.TipoUsuario == "RR.HH" && Settings.Default.Usuario.Equals("ELENA"))
+                {
+                    try
+                    {
+                        _data = _objPersonal.SeleccionarPersonalPorCulminarProyecto(TipoCon);
+                        _data2 = _objPersonal.SeleccionarPersonalPorCulminar3mesesPrueba(TipoCon);
 
-            //            _tipoNoficicacion = 3;
-            //            notifyIcon1.BalloonTipText = @"Existe personal que está por culminar el contrato según el proycto registardo o tiene más de 3 meses (período de prueba)!. Por favor, coordine con OPERACIONES para procesar la salida / reubicación correspondiente.";
+                        _tipoNoficicacion = 3;
+                        notifyIcon1.BalloonTipText = @"Existe personal que está por culminar el contrato según el proycto registardo o tiene más de 3 meses (período de prueba)!. Por favor, coordine con OPERACIONES para procesar la salida / reubicación correspondiente.";
 
-            //        }
-            //        catch (Exception ex)
-            //        {
-            //            Console.WriteLine(ex.Message);
-            //        }
-            //    }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                }
 
-            //    if (ObjUsuario.TipoUsuario == "RR.HH" && Settings.Default.Usuario.Equals("WILLIAM"))
-            //    {
-            //        try
-            //        {
-            //            _data = _objPersonal.SeleccionarPersonalPor2MesesDocumentacion(TipoCon);
-            //            _tipoNoficicacion = 6;
-            //            notifyIcon1.BalloonTipText = @"Existe personal que tiene al menos 2 meses desde su ingreso y no ha presentado su documentación!. Por favor, verifique la información correspondiente.";
-            //        }
-            //        catch (Exception ex)
-            //        {
-            //            Console.WriteLine(ex.Message);
-            //        }
-            //    }
-            //    if (Settings.Default.Usuario.Equals("NATALIA") || Settings.Default.Usuario.Equals("MAGDALENA") || Settings.Default.Usuario.Equals("MARMIJOS") || Settings.Default.Usuario.Equals("ERIKA"))
-            //    {
-            //        _data = _objChaleco.SeleccionarChalecosxCaducar(TipoCon);
-            //        _tipoNoficicacion = 7;
-            //        notifyIcon1.BalloonTipText = @"Aviso por chalecos que estan a punto de expirar su permiso. Por favor, verifique la información correspondiente.";
-            //    }
-
-
+                if (ObjUsuario.TipoUsuario == "RR.HH" && Settings.Default.Usuario.Equals("WILLIAM"))
+                {
+                    try
+                    {
+                        _data = _objPersonal.SeleccionarPersonalPor2MesesDocumentacion(TipoCon);
+                        _tipoNoficicacion = 6;
+                        notifyIcon1.BalloonTipText = @"Existe personal que tiene al menos 2 meses desde su ingreso y no ha presentado su documentación!. Por favor, verifique la información correspondiente.";
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                }
+                if (Settings.Default.Usuario.Equals("NATALIA") || Settings.Default.Usuario.Equals("MAGDALENA") || Settings.Default.Usuario.Equals("MARMIJOS") || Settings.Default.Usuario.Equals("ERIKA"))
+                {
+                    _data = _objChaleco.SeleccionarChalecosxCaducar(TipoCon);
+                    _tipoNoficicacion = 7;
+                    notifyIcon1.BalloonTipText = @"Aviso por chalecos que estan a punto de expirar su permiso. Por favor, verifique la información correspondiente.";
+                }
 
 
 
-            //    if (_data.Rows.Count > 0) notifyIcon1.ShowBalloonTip(10000);
-            //    //if (_data.Rows.Count > 0)
-            //    //{
-            //    //    _frmNotificacion = new FrmNotificarNovedades(TipoCon, ObjUsuario, notifyIcon1.BalloonTipText, _tipoNoficicacion) { DataNotificacion = _data, DataVacaciones = _data2 };
-            //    //    _frmNotificacion.Show();
-            //    //}
-            //}
-            //catch (Exception ex)
 
-            //{
-            //    Console.WriteLine(@"Error recordatorio facturar: " + ex.Message);
-            //}
+
+                if (_data.Rows.Count > 0) notifyIcon1.ShowBalloonTip(10000);
+                //if (_data.Rows.Count > 0)
+                //{
+                //    _frmNotificacion = new FrmNotificarNovedades(TipoCon, ObjUsuario, notifyIcon1.BalloonTipText, _tipoNoficicacion) { DataNotificacion = _data, DataVacaciones = _data2 };
+                //    _frmNotificacion.Show();
+                //}
+            }
+            catch (Exception ex)
+
+            {
+                Console.WriteLine(@"Error recordatorio facturar: " + ex.Message);
+            }
         }
 
         private void notifyIcon1_Click(object sender, EventArgs e)
         {
-            //if (_data.Rows.Count == 0) return;
-            //_frmNotificacion = new FrmNotificarNovedades(TipoCon, ObjUsuario, notifyIcon1.BalloonTipText, _tipoNoficicacion) { DataNotificacion = _data, DataVacaciones = _data2 };
-            //_frmNotificacion.Show();
+            if (_data.Rows.Count == 0) return;
+            _frmNotificacion = new FrmNotificarNovedades(TipoCon, ObjUsuario, notifyIcon1.BalloonTipText, _tipoNoficicacion) { DataNotificacion = _data, DataVacaciones = _data2 };
+            _frmNotificacion.Show();
         }
 
         private void notifyIcon1_BalloonTipClicked(object sender, EventArgs e)
         {
-            //if (_data.Rows.Count == 0) return;
-            //_frmNotificacion = new FrmNotificarNovedades(TipoCon, ObjUsuario, notifyIcon1.BalloonTipText, _tipoNoficicacion) { DataNotificacion = _data, DataVacaciones = _data2 };
-            //_frmNotificacion.Show();
+            if (_data.Rows.Count == 0) return;
+            _frmNotificacion = new FrmNotificarNovedades(TipoCon, ObjUsuario, notifyIcon1.BalloonTipText, _tipoNoficicacion) { DataNotificacion = _data, DataVacaciones = _data2 };
+            _frmNotificacion.Show();
         }
 
         private void toolStripMenuItem8_Click(object sender, EventArgs e)

@@ -19,6 +19,7 @@ Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports System.Text
 Imports Krypton.Toolkit
 Imports ComponentFactory.Krypton.Navigator
+'Imports DocumentFormat.OpenXml.Vml
 
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
@@ -238,8 +239,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             If cmbConcepto.SelectedValue Is Nothing Or TypeOf cmbConcepto.SelectedValue Is DataRowView Then Return
             lblCodigoCuentaConcepto.Text = _objetoConceptosFacturaVenta.BuscarCuentaConceptosFacturaVentaPorNombre(_tipoCon, cmbConcepto.SelectedValue)
 
-            _fechaDesde = "01-01-" & dtpFechaEmisionFacturaVenta.Value.Year.ToString & " 00:00:00.001" ' primer dia del mes
-            _fechaHasta = dtpFechaEmisionFacturaVenta.Value.Day.ToString & "-" & dtpFechaEmisionFacturaVenta.Value.Month.ToString & "-" & dtpFechaEmisionFacturaVenta.Value.Year.ToString & " 23:59:59.000" ' dia de emision de la factura
+
 
             CargarFacturasVenta()
             CargarAsiento()
@@ -307,10 +307,11 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvFacturaVenta.Columns(8).Visible = False
                 dgvFacturaVenta.Columns(9).HeaderText = "IVA (12%)   "
                 dgvFacturaVenta.Columns(9).Visible = False
-                dgvFacturaVenta.Columns(10).HeaderText = "TOTAL"
+                dgvFacturaVenta.Columns(10).HeaderText = "IVA"
                 dgvFacturaVenta.Columns(10).Visible = False
-                dgvFacturaVenta.Columns(11).HeaderText = "EST"
-                dgvFacturaVenta.Columns(11).Visible = False
+                dgvFacturaVenta.Columns(11).HeaderText = "TOTAL"
+                'if 
+
                 dgvFacturaVenta.Columns(12).Visible = False
                 dgvFacturaVenta.Columns(13).Visible = False
                 dgvFacturaVenta.Columns(14).Visible = False
@@ -319,11 +320,23 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvFacturaVenta.Columns(17).Visible = False
                 dgvFacturaVenta.Columns(18).Visible = False
                 dgvFacturaVenta.Columns(19).Visible = False
+                dgvFacturaVenta.Columns(20).Visible = False
+                dgvFacturaVenta.Columns(21).Visible = False
+                dgvFacturaVenta.Columns(22).Visible = False
                 dgvFacturaVenta.AutoResizeColumns()
                 dgvFacturaVenta.AutoResizeRows()
                 dgvFacturaVenta.Columns(2).Width = 80
                 dgvFacturaVenta.ReadOnly = True
                 dgvFacturaVenta.EditMode = DataGridViewEditMode.EditProgrammatically
+
+
+                For Each row As DataGridViewRow In dgvFacturaVenta.Rows
+                    If row.Cells("EST").Value = 0 Then
+                        row.DefaultCellStyle.BackColor = Color.LightCoral
+                    End If
+                Next
+
+
             Catch
                 dgvFacturaVenta.DataSource = Nothing
             End Try
@@ -518,9 +531,16 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             If e.KeyCode <> Keys.Enter Then Return
             CargarDatosCliente()
 
-            ' se da formato a la fecha para que el rango coja desde el comienzo del día inicial hasta que termina el día final
-            _fechaDesde = "01-" & dtpFechaEmisionFacturaVenta.Value.Month.ToString & "-" & dtpFechaEmisionFacturaVenta.Value.Year.ToString & " 00:00:00.001" ' primer dia del mes
+
+            Dim añoActual As String = dtpFechaEmisionFacturaVenta.Value.Year.ToString
+            Dim mesHaceDosMeses As Integer = dtpFechaEmisionFacturaVenta.Value.AddMonths(-2).Month ' Mes hace 2 meses
+
+            _fechaDesde = "01-" & mesHaceDosMeses.ToString & "-" & añoActual & " 00:00:00.001" ' Primer día del mes hace 2 meses
+            '_fechaDesde = "01-01-" & dtpFechaEmisionFacturaVenta.Value.Year.ToString & " 00:00:00.001" ' primer dia del mes
             _fechaHasta = dtpFechaEmisionFacturaVenta.Value.Day.ToString & "-" & dtpFechaEmisionFacturaVenta.Value.Month.ToString & "-" & dtpFechaEmisionFacturaVenta.Value.Year.ToString & " 23:59:59.000" ' dia de emision de la factura
+            ' se da formato a la fecha para que el rango coja desde el comienzo del día inicial hasta que termina el día final
+            '_fechaDesde = "01-" & dtpFechaEmisionFacturaVenta.Value.Month.ToString & "-" & dtpFechaEmisionFacturaVenta.Value.Year.ToString & " 00:00:00.001" ' primer dia del mes
+            '_fechaHasta = dtpFechaEmisionFacturaVenta.Value.Day.ToString & "-" & dtpFechaEmisionFacturaVenta.Value.Month.ToString & "-" & dtpFechaEmisionFacturaVenta.Value.Year.ToString & " 23:59:59.000" ' dia de emision de la factura
 
             CargarFacturasVenta()
             CargarConveniosDebitoBanco()
@@ -621,10 +641,15 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             txtSubTotal.Text = subtotal
             txtIva.Text = iva2
             txtTotal.Text = total
+
+
+
         End Sub
 
         Private Sub txtTotal_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles txtTotal.TextChanged
             txtSon.Text = _validacionesConversion.Letras(txtTotal.Text) + " dólares"
+
+
         End Sub
         Private Sub rbPruebas_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbPruebas.CheckedChanged
             _tipoAmbiente = If(rbPruebas.Checked, 1, 2)
@@ -844,6 +869,30 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             Else
                 If ValidarParametros() Then
                     If ValidarValores() Then ' verifica si los valores de la factura estan correctos
+
+                        Dim totalHistorialCell As Object = Nothing
+                        Dim totalActual As Decimal = CDec(txtTotal.Text) ' Asume que txtTotal tiene el valor final
+
+                        ' Verifica si hay filas en el DataGridView
+                        If dgvFacturaVenta.RowCount > 0 Then
+                            totalHistorialCell = dgvFacturaVenta.Rows(0).Cells(11).Value
+                        End If
+
+                        If totalHistorialCell IsNot Nothing AndAlso Not Convert.IsDBNull(totalHistorialCell) AndAlso Convert.ToDecimal(totalHistorialCell) <> 0 Then
+                            ' Cliente EXISTENTE: Verificar coincidencia de totales
+                            If Convert.ToDecimal(totalHistorialCell) <> totalActual Then
+                                Dim respuesta As DialogResult = KryptonMessageBox.Show(
+                                "El total no coincide con el historial del cliente. ¿Desea continuar igual?",
+                                "Advertencia",
+                                KryptonMessageBoxButtons.YesNo,
+                                KryptonMessageBoxIcon.Warning
+                                )
+                                If respuesta = DialogResult.No Then
+                                    Return
+                                End If
+                            End If
+                        End If
+
                         If ValidarAsiento() Then
 
                             'If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LA VENTA ACTUAL?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
@@ -923,12 +972,10 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                                         NuevoRegistroAsientoDiarioIva() ' registra en el asiento diario la cuenta contable del iva
 
                                     Else
-                                        'MsgBox("CLAVE DE ACCESO INVALIDA. Por favor, intente nuevamente o póngase en contácto con el administrador!")
                                         KryptonMessageBox.Show("Clave de acceso invalida. Por favor, intente nuevamente o póngase en contácto con el administrador!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                                         Exit Sub ' sale del evento
                                     End If
                                 Else
-                                    'MsgBox("CLAVE INGRESADA Y GENERADA NO SON IGUALES. Por favor, intente nuevamente o póngase en contácto con el administrador!")
                                     KryptonMessageBox.Show("Clave ingresada y generada no son iguales. Por favor, intente nuevamente o póngase en contácto con el administrador!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                                     Exit Sub ' sale del evento
                                 End If
@@ -946,20 +993,13 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                                 Return
                             End If
 
-                            'MsgBox(If(res(0), res(1) & vbNewLine & "XML GENERADO CORRECTAMENTE" & If(resx, " - XML GUARDADO", " - XML NO GUARDADO!"), res(1)), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
-
-
-
                         Else
-                            'MsgBox("No se puede guardar." & vbNewLine & ", EL ASIENTO NO CUADRA. REVISE EL ASIENTO DE DIARIO, SUBTOTAL, IVA Y TOTAL DE LA FACTURA.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                             KryptonMessageBox.Show("El asiento no cuadra. revise el asiento de diario, subtotal, iva y total de la factura", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                         End If
                     Else
-                        'MsgBox("No se puede guardar." & vbNewLine & "INCONSISTENCIA CON LOS VALORES. REVISE EL ASIENTO DE DIARIO, SUBTOTAL, IVA Y TOTAL DE LA FACTURA.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                         KryptonMessageBox.Show("Inconsistencia con los valores. revise el asiento de diario, subtotal, iva y total de la factura", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                     End If
                 Else
-                    'MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     KryptonMessageBox.Show("No se han llenado todos los campos necesarios", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 End If
             End If

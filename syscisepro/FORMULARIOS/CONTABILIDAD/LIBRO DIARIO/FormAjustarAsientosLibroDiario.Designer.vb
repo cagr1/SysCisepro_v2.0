@@ -1078,7 +1078,7 @@
             '
             Me.cbxTipo.DropDownWidth = 121
             Me.cbxTipo.IntegralHeight = False
-            Me.cbxTipo.Items.AddRange(New Object() {"- Elija Uno - ", "Administrativo", "Operativo"})
+            Me.cbxTipo.Items.AddRange(New Object() {"- Elija Uno - ", "Administrativo", "Operativo", "Operativo Indirecto"})
             Me.cbxTipo.Location = New System.Drawing.Point(246, 8)
             Me.cbxTipo.Name = "cbxTipo"
             Me.cbxTipo.Size = New System.Drawing.Size(125, 21)

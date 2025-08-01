@@ -976,6 +976,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 Dim fondoxpagar = CDec(txtFondoReservaxPagar.Text) + CDec(row(5).ToString())
                 Dim iess = CDec(row(6)) + aporte
                 Dim fondo = CDec(txtFondoReservaxPagar.Text)
+                'Administrativo
                 If (cbxTipo.SelectedIndex = 1) Then
                     dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020101", "SUELDOS PERSONAL ADMINISTRATIVO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(0), 0)
                     dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020102", "HORAS EXTRAS", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(1), 0)
@@ -1030,14 +1031,14 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                     End If
 
 
-
-                Else
-                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020101", "SUELDOS PERSONAL ADMINISTRATIVO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(0), 0)
-                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020102", "HORAS EXTRAS", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(1), 0)
-                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020201", "APORTE PATRONAL", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, aporte, 0)
-                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020301", "PROVISION 13AVO SUELDO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(3), 0)
-                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020302", "PROVISION 14AVO SUELDO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(4), 0)
-                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020202", "FONDO DE RESERVA", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, fondoxpagar, 0)
+                    'Operativo
+                ElseIf (cbxTipo.SelectedIndex = 2) Then
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "51020101", "SUELDOS PERSONAL DIRECTO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(0), 0)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "51020102", "HORAS EXTRAS", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(1), 0)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "51020201", "APORTE PATRONAL", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, aporte, 0)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "51020301", "PROVISION 13AVO SUELDO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(3), 0)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "51020302", "PROVISION 14AVO SUELDO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(4), 0)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "51020202", "FONDO DE RESERVA", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, fondoxpagar, 0)
                     dgvAsientoRoles.Rows.Add(0, DateTime.Now, "101040401", "ANTICIPO NORMAL A EMPLEADOS", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(7))
                     dgvAsientoRoles.Rows.Add(0, DateTime.Now, "101040402", "ANTICIPO EMERGENTE A EMPLEADOS", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(11))
                     dgvAsientoRoles.Rows.Add(0, DateTime.Now, "20107010207", "IMPUESTO A LA RENTA RD", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(13))
@@ -1083,8 +1084,59 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                     If CDec(row(21)) > 0 Then
                         dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070718", "DESCUENTO ALMUERZO AL PERSONAL", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(21))
                     End If
+                    'Operativos Indirectos
+                ElseIf (cbxTipo.SelectedIndex = 3) Then
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "51030101", "SUELDOS PERSONAL INDIRECTO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(0), 0)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "51030102", "HORAS EXTRAS", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(1), 0)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "51030201", "APORTE PATRONAL", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, aporte, 0)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "51030301", "PROVISION 13AVO SUELDO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(3), 0)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "51030302", "PROVISION 14AVO SUELDO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(4), 0)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "51030202", "FONDO DE RESERVA", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, fondoxpagar, 0)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "101040401", "ANTICIPO NORMAL A EMPLEADOS", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(7))
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "101040402", "ANTICIPO EMERGENTE A EMPLEADOS", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(11))
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "20107010207", "IMPUESTO A LA RENTA RD", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(13))
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070301", "OBLIGACIONES CON EL SEGURO SOCIAL", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, iess)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070305", "FONDO DE RESERVA POR PAGAR", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, fondo)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070307", "PRESTAMO QUIROGRAFARIO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(8))
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070309", "PRESTAMO HIPOTECARIO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(9))
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070336", "OBLIGACIONES CON EL SEGURO SOCIAL EXTENCION SALUD", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(10))
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070701", "OPERATIVOS", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(22))
 
+                    If CDec(row(14)) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070705", "DESCUENTO EQUIPO DE SEGURIDAD", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(14))
+                    End If
 
+                    If CDec(row(19)) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070706", "DESCUENTO DE MULTAS", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(19))
+                    End If
+
+                    If CDec(row(20)) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070707", "OTRAS CUENTAS POR PAGAR", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(20))
+                    End If
+
+                    If (CDec(row(18))) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070709", "DESCUENTO JUDICIALES POR PAGAR", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(18))
+                    End If
+
+                    If (CDec(row(16))) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070710", "DESCUENTO DE COMISARIATO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(16))
+                    End If
+
+                    If CDec(row(17)) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070714", "DESCUENTO JUDICIALES POR BENEFICIOS DE LEY", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(17))
+                    End If
+
+                    If (CDec(row(15))) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070716", "DESCUENTO COMECSA", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(15))
+                    End If
+
+                    If CDec(row(12)) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070717", "DESCUENTO CURSO DE CAPACITACION", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(12))
+                    End If
+
+                    If CDec(row(21)) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070718", "DESCUENTO ALMUERZO AL PERSONAL", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(21))
+                    End If
                 End If
 
                 sumarTotalAsientoRoles()
