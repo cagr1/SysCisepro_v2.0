@@ -117,6 +117,7 @@
             Me.txtCodigoIngreso = New System.Windows.Forms.TextBox()
             Me.TabControl1 = New System.Windows.Forms.TabControl()
             Me.TabPage1 = New System.Windows.Forms.TabPage()
+            Me.btnPrueba = New System.Windows.Forms.Button()
             Me.btnUniformes = New System.Windows.Forms.Button()
             Me.Button1 = New System.Windows.Forms.Button()
             Me.txtIdComprobante = New System.Windows.Forms.TextBox()
@@ -203,6 +204,8 @@
             Me.btnBuscarModi = New ComponentFactory.Krypton.Toolkit.KryptonButton()
             Me.txtFiltro = New System.Windows.Forms.TextBox()
             Me.KryptonPage3 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.KryptonPage4 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.PdfViewer1 = New PdfiumViewer.PdfViewer()
             CType(Me.pbFoto, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.nudTotal, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.nudValor, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -255,6 +258,8 @@
             Me.KryptonGroupBox5.SuspendLayout()
             CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonPage3.SuspendLayout()
+            CType(Me.KryptonPage4, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonPage4.SuspendLayout()
             Me.SuspendLayout()
             '
             'pbFoto
@@ -1150,6 +1155,7 @@
             '
             'TabPage1
             '
+            Me.TabPage1.Controls.Add(Me.btnPrueba)
             Me.TabPage1.Controls.Add(Me.btnUniformes)
             Me.TabPage1.Controls.Add(Me.Button1)
             Me.TabPage1.Controls.Add(Me.txtIdComprobante)
@@ -1162,13 +1168,28 @@
             Me.TabPage1.Text = "Comprobante"
             Me.TabPage1.UseVisualStyleBackColor = True
             '
+            'btnPrueba
+            '
+            Me.btnPrueba.BackColor = System.Drawing.Color.Transparent
+            Me.btnPrueba.FlatAppearance.BorderSize = 0
+            Me.btnPrueba.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btnPrueba.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnPrueba.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnPrueba.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.btnPrueba.Location = New System.Drawing.Point(644, 2)
+            Me.btnPrueba.Name = "btnPrueba"
+            Me.btnPrueba.Size = New System.Drawing.Size(38, 30)
+            Me.btnPrueba.TabIndex = 154
+            Me.btnPrueba.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.btnPrueba.UseVisualStyleBackColor = False
+            '
             'btnUniformes
             '
             Me.btnUniformes.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnUniformes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnUniformes.Location = New System.Drawing.Point(804, 2)
+            Me.btnUniformes.Location = New System.Drawing.Point(839, 2)
             Me.btnUniformes.Name = "btnUniformes"
-            Me.btnUniformes.Size = New System.Drawing.Size(117, 30)
+            Me.btnUniformes.Size = New System.Drawing.Size(82, 30)
             Me.btnUniformes.TabIndex = 153
             Me.btnUniformes.Text = "UNIFORMES"
             Me.btnUniformes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -1182,7 +1203,7 @@
             Me.Button1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Button1.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.Button1.Location = New System.Drawing.Point(652, 3)
+            Me.Button1.Location = New System.Drawing.Point(708, 3)
             Me.Button1.Name = "Button1"
             Me.Button1.Size = New System.Drawing.Size(126, 30)
             Me.Button1.TabIndex = 8
@@ -1298,7 +1319,7 @@
             Me.tsmActualizar.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.tsmActualizar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.tsmActualizar.Name = "tsmActualizar"
-            Me.tsmActualizar.Size = New System.Drawing.Size(112, 28)
+            Me.tsmActualizar.Size = New System.Drawing.Size(113, 28)
             Me.tsmActualizar.Text = "ACTUALIZAR"
             Me.tsmActualizar.Visible = False
             '
@@ -1364,7 +1385,7 @@
             Me.tbComprobanteIngresoBodega.Location = New System.Drawing.Point(0, 32)
             Me.tbComprobanteIngresoBodega.Name = "tbComprobanteIngresoBodega"
             Me.tbComprobanteIngresoBodega.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
-            Me.tbComprobanteIngresoBodega.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2, Me.KryptonPage3})
+            Me.tbComprobanteIngresoBodega.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2, Me.KryptonPage3, Me.KryptonPage4})
             Me.tbComprobanteIngresoBodega.SelectedIndex = 0
             Me.tbComprobanteIngresoBodega.Size = New System.Drawing.Size(952, 628)
             Me.tbComprobanteIngresoBodega.TabIndex = 194
@@ -2163,11 +2184,34 @@
             Me.KryptonPage3.LastVisibleSet = True
             Me.KryptonPage3.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage3.Name = "KryptonPage3"
-            Me.KryptonPage3.Size = New System.Drawing.Size(950, 601)
+            Me.KryptonPage3.Size = New System.Drawing.Size(950, 599)
             Me.KryptonPage3.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage3.Text = "Reporte"
             Me.KryptonPage3.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage3.UniqueName = "CF1859721FEB44DA25A4318F18E1F105"
+            '
+            'KryptonPage4
+            '
+            Me.KryptonPage4.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage4.Controls.Add(Me.PdfViewer1)
+            Me.KryptonPage4.Flags = 65534
+            Me.KryptonPage4.LastVisibleSet = True
+            Me.KryptonPage4.MinimumSize = New System.Drawing.Size(50, 50)
+            Me.KryptonPage4.Name = "KryptonPage4"
+            Me.KryptonPage4.Size = New System.Drawing.Size(950, 599)
+            Me.KryptonPage4.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.KryptonPage4.Text = "Reporte Especial"
+            Me.KryptonPage4.ToolTipTitle = "Page ToolTip"
+            Me.KryptonPage4.UniqueName = "16692053FCA74506B4ACE46EA89605B2"
+            '
+            'PdfViewer1
+            '
+            Me.PdfViewer1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.PdfViewer1.Location = New System.Drawing.Point(2, 3)
+            Me.PdfViewer1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+            Me.PdfViewer1.Name = "PdfViewer1"
+            Me.PdfViewer1.Size = New System.Drawing.Size(945, 582)
+            Me.PdfViewer1.TabIndex = 0
             '
             'FormComprobanteEgresoBodega
             '
@@ -2253,6 +2297,8 @@
             Me.KryptonGroupBox5.ResumeLayout(False)
             CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonPage3.ResumeLayout(False)
+            CType(Me.KryptonPage4, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonPage4.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -2420,5 +2466,8 @@
         Friend WithEvents gbxDetalles As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
         Friend WithEvents btnExportarDetalleComprobante As ComponentFactory.Krypton.Toolkit.KryptonButton
         Friend WithEvents btnExportarComprobantes As ComponentFactory.Krypton.Toolkit.KryptonButton
+        Friend WithEvents btnPrueba As Button
+        Friend WithEvents KryptonPage4 As ComponentFactory.Krypton.Navigator.KryptonPage
+        Friend WithEvents PdfViewer1 As PdfiumViewer.PdfViewer
     End Class
 End Namespace

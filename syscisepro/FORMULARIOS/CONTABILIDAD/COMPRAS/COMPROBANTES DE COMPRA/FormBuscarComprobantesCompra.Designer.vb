@@ -58,6 +58,7 @@
             Me.PdfViewer1 = New PdfiumViewer.PdfViewer()
             Me.KryptonNavigator1 = New ComponentFactory.Krypton.Navigator.KryptonNavigator()
             Me.KryptonPage1 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.btnPrueba = New System.Windows.Forms.Button()
             Me.KryptonGroupBox3 = New Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonLabel14 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel13 = New Krypton.Toolkit.KryptonLabel()
@@ -83,7 +84,6 @@
             Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonPage3 = New ComponentFactory.Krypton.Navigator.KryptonPage()
-            Me.btnPrueba = New System.Windows.Forms.Button()
             CType(Me.dgvComprobantesCompra, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
             CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -223,7 +223,7 @@
             Me.rbTodos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbTodos.Location = New System.Drawing.Point(638, 26)
             Me.rbTodos.Name = "rbTodos"
-            Me.rbTodos.Size = New System.Drawing.Size(56, 17)
+            Me.rbTodos.Size = New System.Drawing.Size(55, 17)
             Me.rbTodos.TabIndex = 3
             Me.rbTodos.TabStop = True
             Me.rbTodos.Text = "Todos"
@@ -366,7 +366,7 @@
             Me.PDFLIQUIDACIONToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.pdf
             Me.PDFLIQUIDACIONToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.PDFLIQUIDACIONToolStripMenuItem.Name = "PDFLIQUIDACIONToolStripMenuItem"
-            Me.PDFLIQUIDACIONToolStripMenuItem.Size = New System.Drawing.Size(159, 30)
+            Me.PDFLIQUIDACIONToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
             Me.PDFLIQUIDACIONToolStripMenuItem.Text = "LIQUIDACION"
             '
             'PDFRETENCIONToolStripMenuItem
@@ -374,7 +374,7 @@
             Me.PDFRETENCIONToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.pdf
             Me.PDFRETENCIONToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.PDFRETENCIONToolStripMenuItem.Name = "PDFRETENCIONToolStripMenuItem"
-            Me.PDFRETENCIONToolStripMenuItem.Size = New System.Drawing.Size(159, 30)
+            Me.PDFRETENCIONToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
             Me.PDFRETENCIONToolStripMenuItem.Text = "RETENCION"
             '
             'ofdSeleccionarArchivo
@@ -431,16 +431,7 @@
             'KryptonNavigator1
             '
             Me.KryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None
-            Me.KryptonNavigator1.Button.CloseButtonAction = ComponentFactory.Krypton.Navigator.CloseButtonAction.RemovePageAndDispose
             Me.KryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide
-            Me.KryptonNavigator1.Button.ContextButtonAction = ComponentFactory.Krypton.Navigator.ContextButtonAction.SelectPage
-            Me.KryptonNavigator1.Button.ContextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
-            Me.KryptonNavigator1.Button.ContextMenuMapImage = ComponentFactory.Krypton.Navigator.MapKryptonPageImage.Small
-            Me.KryptonNavigator1.Button.ContextMenuMapText = ComponentFactory.Krypton.Navigator.MapKryptonPageText.TextTitle
-            Me.KryptonNavigator1.Button.NextButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
-            Me.KryptonNavigator1.Button.NextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
-            Me.KryptonNavigator1.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
-            Me.KryptonNavigator1.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
             Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 0)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
@@ -469,6 +460,16 @@
             Me.KryptonPage1.Text = "Consultas"
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage1.UniqueName = "60A89A382CC14AB266BE4180ACB5260B"
+            '
+            'btnPrueba
+            '
+            Me.btnPrueba.Location = New System.Drawing.Point(945, 64)
+            Me.btnPrueba.Name = "btnPrueba"
+            Me.btnPrueba.Size = New System.Drawing.Size(75, 23)
+            Me.btnPrueba.TabIndex = 187
+            Me.btnPrueba.Text = "Prueba"
+            Me.btnPrueba.UseVisualStyleBackColor = True
+            Me.btnPrueba.Visible = False
             '
             'KryptonGroupBox3
             '
@@ -774,16 +775,6 @@
             Me.KryptonPage3.Text = "Reporte"
             Me.KryptonPage3.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage3.UniqueName = "E7A068A9D4EC4B4A40A25EDDE0DE1F87"
-            '
-            'btnPrueba
-            '
-            Me.btnPrueba.Location = New System.Drawing.Point(945, 64)
-            Me.btnPrueba.Name = "btnPrueba"
-            Me.btnPrueba.Size = New System.Drawing.Size(75, 23)
-            Me.btnPrueba.TabIndex = 187
-            Me.btnPrueba.Text = "Prueba"
-            Me.btnPrueba.UseVisualStyleBackColor = True
-            Me.btnPrueba.Visible = False
             '
             'FormBuscarComprobantesCompra
             '

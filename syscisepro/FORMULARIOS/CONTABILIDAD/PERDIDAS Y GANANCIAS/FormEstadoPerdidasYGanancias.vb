@@ -1963,7 +1963,19 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                         For Each row As IXLRangeRow In rangeUsed.Rows().Skip(1)
                             Dim newRow = dtPresupuesto.NewRow()
                             For i As Integer = 0 To dtPresupuesto.Columns.Count - 1
-                                newRow(i) = row.Cell(i + 1).Value.ToString().Trim()
+                                Dim cell = row.Cell(i + 1)
+
+                                ' Manejar diferentes tipos de celdas
+                                If cell.DataType = XLDataType.Number Then
+                                    newRow(i) = cell.GetValue(Of Decimal)()
+                                Else
+                                    Dim stringValue = cell.Value.ToString().Trim()
+                                    If Decimal.TryParse(stringValue, Nothing) Then
+                                        newRow(i) = CDec(stringValue)
+                                    Else
+                                        newRow(i) = 0D ' Valor por defecto para no numéricos
+                                    End If
+                                End If
                             Next
                             dtPresupuesto.Rows.Add(newRow)
                         Next

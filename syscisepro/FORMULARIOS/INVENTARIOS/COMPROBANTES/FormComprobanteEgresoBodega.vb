@@ -23,6 +23,11 @@ Imports Krypton.Toolkit
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
+Imports iTextSharp.text
+Imports iTextSharp.text.pdf
+Imports System.IO
+Imports DocumentFormat.OpenXml.Wordprocessing
+Imports DocumentFormat.OpenXml.Bibliography
 
 Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
     ''' <summary>
@@ -73,6 +78,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         ReadOnly _objDetCompEgr As New ClassDetalleComprobanteEgreso
         'ReadOnly _crComprobanteEgreso As New crComprobanteEgreso
         ReadOnly _crComprobanteEgreso As New crComprobanteEgresoMin
+        ReadOnly _crComprobanteEgresEspecial As New crComprobanteEgresoMinPru
         ReadOnly _objSecuencialItem As New ClassSecuencialItem
         ReadOnly _objKardex As New ClassKardex
         ReadOnly _objDetalleKardex As New ClassDetalleKardex
@@ -132,7 +138,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             Select Case _tipoCon
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
-                    MenuStrip1.ForeColor = Color.White
+                    MenuStrip1.ForeColor = System.Drawing.Color.White
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     'Label11.ForeColor = Color.White
                     'Label11.BackColor = My.MySettingsProperty.Settings.ColorAsenava
@@ -142,7 +148,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    MenuStrip1.ForeColor = Color.White
+                    MenuStrip1.ForeColor = System.Drawing.Color.White
                     'Label11.ForeColor = Color.White
                     'Label11.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvSecuencial.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
@@ -150,21 +156,19 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     dgvDetalleComprobate.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    MenuStrip1.ForeColor = Color.White
-                    'Label11.ForeColor = Color.White
-                    'Label11.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    MenuStrip1.ForeColor = System.Drawing.Color.White
+
                     dgvSecuencial.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvComprobantesEgreso.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvDetalleComprobate.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
 
-            dgvSecuencial.Font = New Font("Roboto", 8, FontStyle.Regular)
-            dgvComprobantesEgreso.Font = New Font("Roboto", 8, FontStyle.Regular)
-            dgvDetalleComprobate.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvSecuencial.Font = New System.Drawing.Font("Roboto", 8, FontStyle.Regular)
+            dgvComprobantesEgreso.Font = New System.Drawing.Font("Roboto", 8, FontStyle.Regular)
+            dgvDetalleComprobate.Font = New System.Drawing.Font("Roboto", 8, FontStyle.Regular)
 
             txtFiltro.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
-            txtFiltro.Font = New Font("Roboto", 9, FontStyle.Regular)
+            txtFiltro.Font = New System.Drawing.Font("Roboto", 9, FontStyle.Regular)
             Dim validation As New ValidationForms()
             validation.SetPlaceholder(txtFiltro, "Buscar por Sitio o Nombre")
 
@@ -640,8 +644,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 For Each row In dgvComprobantesEgreso.Rows
                     If row.Cells("SITIO DE TRABAJO").Value.ToString() = "SIN SITIO" Then
-                        row.DefaultCellStyle.BackColor = Color.LightCoral
-                        row.DefaultCellStyle.ForeColor = Color.DarkRed
+                        row.DefaultCellStyle.BackColor = System.Drawing.Color.LightCoral
+                        row.DefaultCellStyle.ForeColor = System.Drawing.Color.DarkRed
                     End If
                 Next
 
@@ -1013,7 +1017,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 worksheet.Range("A1:" & ic & "1").Font.Bold = True
                 worksheet.Range("A1:" & ic & "1").Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
                 worksheet.Range("A1:" & ic & "1").Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                worksheet.Range("A1:" & ic & "1").Font.Color = Color.White
+                worksheet.Range("A1:" & ic & "1").Font.Color = System.Drawing.Color.White
                 worksheet.Range("A1:" & ic & "1").Font.Size = 12
                 'Copete  
                 worksheet.Range("A2:" & ic & "2").Merge()
@@ -1033,7 +1037,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     worksheet.Cells(1 + head, i).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
                     worksheet.Cells(1 + head, i).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
                     worksheet.Cells(1 + head, i).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                    worksheet.Cells(1 + head, i).Font.Color = Color.White
+                    worksheet.Cells(1 + head, i).Font.Color = System.Drawing.Color.White
                 Next
 
                 Dim dataGridViewExpRowCount = 0
@@ -1257,7 +1261,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             End With
             If OpenFileDialog1.ShowDialog() <> Windows.Forms.DialogResult.OK Then Return
             With pbFoto
-                .Image = Image.FromFile(OpenFileDialog1.FileName)
+                .Image = System.Drawing.Image.FromFile(OpenFileDialog1.FileName)
             End With
         End Sub
 
@@ -2530,5 +2534,260 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         Private Sub KryptonPage2_Click(sender As Object, e As EventArgs) Handles KryptonPage2.Click
 
         End Sub
+
+        Private Sub btnPrueba_Click(sender As Object, e As EventArgs) Handles btnPrueba.Click
+            Try
+                Dim pdfStream As New MemoryStream()
+
+                Dim ruta As String = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "ComprobanteEgreso.pdf")
+                PdfViewer1.Document?.Dispose()
+                PdfViewer1.Document = Nothing
+                Dim pageSize As New iTextSharp.text.Rectangle(Utilities.MillimetersToPoints(150), Utilities.MillimetersToPoints(210))
+                Dim document As New iTextSharp.text.Document(pageSize, 15, 15, 30, 15)
+                Dim writer As PdfWriter = PdfWriter.GetInstance(document, pdfStream)
+                writer.CloseStream = False
+                document.Open()
+
+                Dim baseFont As BaseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.EMBEDDED)
+                Dim fuente12 As iTextSharp.text.Font = New iTextSharp.text.Font(baseFont, 12, iTextSharp.text.Font.BOLD)
+                Dim fuente10Bold As iTextSharp.text.Font = New iTextSharp.text.Font(baseFont, 10, iTextSharp.text.Font.BOLD)
+                Dim fuente10 As iTextSharp.text.Font = New iTextSharp.text.Font(baseFont, 10)
+                Dim fuente8 As iTextSharp.text.Font = New iTextSharp.text.Font(baseFont, 8)
+                Dim fuente8Bold As iTextSharp.text.Font = New iTextSharp.text.Font(baseFont, 8, iTextSharp.text.Font.BOLD)
+
+                Dim rutaImagen As String = ValidationForms.NombreLogoNuevo(_tipoCon, Application.StartupPath)
+                Dim logo As iTextSharp.text.Image = iTextSharp.text.Image.GetInstance(rutaImagen)
+                logo.ScaleToFit(30, 30)
+
+
+
+
+
+
+                For i As Integer = 0 To 7
+                    ' Agregar nueva página (excepto la primera)
+                    If i > 0 Then document.NewPage()
+
+                    'Encabezado
+                    Dim headerTable As PdfPTable = New PdfPTable(3)
+                    headerTable.TotalWidth = Utilities.MillimetersToPoints(120) ' 130mm de ancho
+                    headerTable.LockedWidth = True
+                    'headerTable.TotalWidth = 400
+
+                    Dim ColumnWidhts As Single() = {20, 70, 30}
+                    headerTable.SetWidths(ColumnWidhts)
+
+                    ' Columna 1: Logo
+                    Dim logoCell As New PdfPCell(logo)
+                    logoCell.HorizontalAlignment = Element.ALIGN_CENTER
+                    logoCell.VerticalAlignment = Element.ALIGN_MIDDLE
+                    logoCell.Border = PdfPCell.NO_BORDER
+                    logoCell.Padding = 2
+                    headerTable.AddCell(logoCell)
+
+                    ' Columna 2: Título (centrado y compacto)
+                    Dim tituloCell As New PdfPCell(New Phrase("COMPROBANTE DE EGRESO", fuente12))
+                    tituloCell.HorizontalAlignment = Element.ALIGN_CENTER
+                    tituloCell.VerticalAlignment = Element.ALIGN_MIDDLE
+                    tituloCell.Border = PdfPCell.NO_BORDER
+                    tituloCell.Padding = 2
+                    headerTable.AddCell(tituloCell)
+
+
+                    ' Columna 3: Información
+                    Dim fechaOriginal As Date = dtpFecha.Value
+                    Dim fechaAumentada = fechaOriginal.AddMonths(i)
+
+                    Dim infoContent As New Phrase()
+                    infoContent.Add(New Chunk("Código: Re-3.8.1-4" & vbLf, fuente8Bold))
+                    infoContent.Add(New Chunk("Versión: 004" & vbLf, fuente8Bold))
+                    infoContent.Add(New Chunk("Página 1 de 1" & vbLf, fuente8Bold))
+                    infoContent.Add(New Chunk("Fecha: 06/01/2014 " & vbLf, fuente8Bold))
+
+                    Dim infoCell As New PdfPCell(infoContent)
+                    infoCell.HorizontalAlignment = Element.ALIGN_LEFT
+                    infoCell.VerticalAlignment = Element.ALIGN_TOP
+                    infoCell.Border = PdfPCell.NO_BORDER
+                    infoCell.Padding = 2
+                    headerTable.AddCell(infoCell)
+
+                    headerTable.WriteSelectedRows(0, -1, Utilities.MillimetersToPoints(10),
+                                            document.PageSize.Height - Utilities.MillimetersToPoints(15), writer.DirectContent)
+
+                    ' --- TABLA COMPROBANTE ---
+                    Dim tablaComprobante = CrearTablaComprobante(fechaAumentada, baseFont)
+                    tablaComprobante.WriteSelectedRows(0, -1, Utilities.MillimetersToPoints(5),
+                                                document.PageSize.Height - Utilities.MillimetersToPoints(35), writer.DirectContent)
+
+
+
+                    ' --- TABLA DETALLES ---
+                    Dim tablaDetalles = CrearTablaDetalles(baseFont)
+                    tablaDetalles.WriteSelectedRows(0, -1, Utilities.MillimetersToPoints(5),
+                                                document.PageSize.Height - Utilities.MillimetersToPoints(60), writer.DirectContent)
+
+                    ' --- LÍNEA DE SEPARACIÓN ---
+                    Dim rectTabla1 As PdfContentByte = writer.DirectContent
+                    rectTabla1.RoundRectangle(20, document.PageSize.Height - 90, document.PageSize.Width - 40, 70, 5)
+                    rectTabla1.Stroke()
+                Next
+
+
+
+                ' Cerrar documento
+                document.Close()
+
+                ' Guardar y mostrar PDF
+                File.WriteAllBytes(ruta, pdfStream.ToArray())
+                PdfViewer1.Document = PdfiumViewer.PdfDocument.Load(ruta)
+
+
+
+
+
+            Catch ex As Exception
+                KryptonMessageBox.Show(ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
+        End Sub
+
+        Private Function CrearTablaComprobante(fecha As Date, BaseFont As BaseFont) As PdfPTable
+            Dim fuente8 As New iTextSharp.text.Font(BaseFont, 8)
+            Dim fuente8Bold As New iTextSharp.text.Font(BaseFont, 8, Font.Bold)
+
+            Dim tabla As New PdfPTable(3)
+            tabla.TotalWidth = Utilities.MillimetersToPoints(130)
+            tabla.LockedWidth = True
+
+            ' Configuración de celdas
+            Dim padding As Single = 3.0F
+            Dim noBorder As Integer = iTextSharp.text.Rectangle.NO_BORDER
+
+            ' Configurar anchos de columnas (en puntos)
+            Dim columnWidths As Single() = {40, 30, 30}
+            tabla.SetWidths(columnWidths)
+
+            ' Habilitar bordes solo para la tabla (exterior)
+            tabla.DefaultCell.Border = noBorder
+            tabla.DefaultCell.Padding = padding
+            tabla.DefaultCell.HorizontalAlignment = Element.ALIGN_LEFT '
+
+            ' --- FILA 1 ---
+            ' Bodega (columna 1)
+            Dim cellBodega = New PdfPCell(New Phrase("Bodega: " & cmbBodega.Text, fuente8))
+            cellBodega.Border = noBorder
+            tabla.AddCell(cellBodega)
+
+            ' Fecha (columna 2)
+            Dim cellFecha = New PdfPCell(New Phrase("Fecha: " & fecha.ToString("dd/MM/yyyy"), fuente8))
+            cellFecha.Border = noBorder
+            tabla.AddCell(cellFecha)
+
+            ' Provincia (columna 3)
+            Dim cellProvincia = New PdfPCell(New Phrase("Provincia: " & cbmProvincia.Text, fuente8))
+            cellProvincia.Border = noBorder
+            tabla.AddCell(cellProvincia)
+
+            ' --- FILA 2 ---
+            ' Razón (ocupa columnas 1 y 2)
+            Dim cellRazon = New PdfPCell(New Phrase("Razón: " & txtRazon.Text, fuente8))
+            cellRazon.Colspan = 2
+            cellRazon.Border = noBorder
+            tabla.AddCell(cellRazon)
+
+            ' Ciudad (columna 3)
+            Dim cellCiudad = New PdfPCell(New Phrase("Ciudad: " & cbmCanton.Text, fuente8))
+            cellCiudad.Border = noBorder
+            tabla.AddCell(cellCiudad)
+
+            ' --- FILA 3 ---
+            ' Lugar (ocupa columnas 1 y 2)
+            Dim cellLugar = New PdfPCell(New Phrase(txtUbicacion.Text, fuente8))
+            cellLugar.Colspan = 2
+            cellLugar.Border = noBorder
+            tabla.AddCell(cellLugar)
+
+            ' Parroquia (columna 3)
+            Dim cellParroquia = New PdfPCell(New Phrase("Parroquia: " & cbmParroquia.Text, fuente8))
+            cellParroquia.Border = noBorder
+            tabla.AddCell(cellParroquia)
+
+
+
+
+            Return tabla
+        End Function
+
+
+
+
+        Private Function CrearTablaDetalles(baseFont As BaseFont) As PdfPTable
+            Dim fuente8 As New iTextSharp.text.Font(baseFont, 8)
+            Dim fuente8Bold As New iTextSharp.text.Font(baseFont, 8, Font.Bold)
+
+            Dim tabla As New PdfPTable(4)
+            tabla.TotalWidth = 400
+            tabla.LockedWidth = True
+
+            'Configurar anchos de columnas (en mm)
+            Dim columnWidths As Single() = {
+            Utilities.MillimetersToPoints(25),  ' Código
+            Utilities.MillimetersToPoints(60),  ' Item (más ancho)
+            Utilities.MillimetersToPoints(25),  ' Observación
+            Utilities.MillimetersToPoints(20)   ' Cantidad
+        }
+            tabla.SetWidths(columnWidths)
+
+            Dim padding As Single = 4.0F
+            ' Encabezados
+            Dim headers = {"Código", "Item", "Observación", "Cantidad"}
+            For Each header In headers
+                Dim cell = New PdfPCell(New Phrase(header, fuente8Bold))
+                cell.HorizontalAlignment = Element.ALIGN_CENTER
+                cell.BackgroundColor = BaseColor.LIGHT_GRAY
+                cell.Padding = padding ' Aplicar padding si es necesario
+                cell.Border = iTextSharp.text.Rectangle.BOX
+                tabla.AddCell(cell)
+            Next
+
+            ' Datos del DataGridView
+            For Each row As DataGridViewRow In dgvSecuencial.Rows
+                If Not row.IsNewRow Then
+                    ' Celda Código
+                    Dim celdaCodigo = New PdfPCell(New Phrase(row.Cells("CODIGO").Value.ToString(), fuente8))
+                    celdaCodigo.Padding = padding
+                    celdaCodigo.Border = iTextSharp.text.Rectangle.BOX
+                    tabla.AddCell(celdaCodigo)
+
+                    ' Celda Item (más ancha)
+                    Dim celdaItem = New PdfPCell(New Phrase(row.Cells("NOMBRE").Value.ToString(), fuente8))
+                    celdaItem.Padding = padding
+                    celdaItem.Border = iTextSharp.text.Rectangle.BOX
+                    tabla.AddCell(celdaItem)
+
+                    ' Celda Observación
+                    Dim celdaObs = New PdfPCell(New Phrase(row.Cells("OBSERVACION").Value.ToString(), fuente8))
+                    celdaObs.Padding = padding
+                    celdaObs.Border = iTextSharp.text.Rectangle.BOX
+                    tabla.AddCell(celdaObs)
+
+                    ' Celda Cantidad
+                    Dim celdaCant = New PdfPCell(New Phrase(row.Cells("CANTIDAD").Value.ToString(), fuente8))
+                    celdaCant.Padding = padding
+                    celdaCant.Border = iTextSharp.text.Rectangle.BOX
+                    celdaCant.HorizontalAlignment = Element.ALIGN_CENTER
+                    tabla.AddCell(celdaCant)
+
+
+                End If
+            Next
+
+            Return tabla
+        End Function
+
+
+
+
+
+
     End Class
 End Namespace
