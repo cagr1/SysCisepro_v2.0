@@ -1984,21 +1984,45 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                         Dim dtCuentasValidas As DataTable = _objEstado.SeleccionarCuentasPerdidasGanancias(_tipoCon)
                         Dim errores As New List(Of String)
 
+
+                        Dim cuentasNoEncontradas As New List(Of String)
+
+                        ' Crear diccionario para búsqueda rápida
+                        Dim dictCuentasBD As New Dictionary(Of String, String)
+                        For Each rowBD As DataRow In dtCuentasValidas.Rows
+                            Dim codigoBD = rowBD("CODIGO").ToString().Trim()
+                            Dim cuentaBD = rowBD("CUENTA").ToString().Trim()
+                            If Not dictCuentasBD.ContainsKey(codigoBD) Then
+                                dictCuentasBD.Add(codigoBD, cuentaBD)
+                            End If
+                        Next
+
                         For Each row As DataRow In dtPresupuesto.Rows
                             Dim codigoExcel As String = row("Codigo").ToString().Trim()
                             Dim cuentaExcel As String = row("Cuenta").ToString().Trim()
 
-                            Dim rowsDB = dtCuentasValidas.Select($"CODIGO = '{codigoExcel}'")
+                            If dictCuentasBD.ContainsKey(codigoExcel) Then
+                                Dim cuentaBD As String = dictCuentasBD(codigoExcel)
 
-                            If rowsDB.Length = 0 Then
-                                errores.Add($"Código no existe: {codigoExcel} - Fila {dtPresupuesto.Rows.IndexOf(row) + 1}")
-                            Else
-                                Dim cuentaBD As String = rowsDB(0)("CUENTA").ToString().Trim()
-                                If cuentaBD <> cuentaExcel Then
-                                    errores.Add($"Cuenta no coincide: {codigoExcel} (Excel: {cuentaExcel} | BD: {cuentaBD})")
+                                ' Comparación insensible a mayúsculas y espacios
+                                If Not String.Equals(cuentaExcel, cuentaBD, StringComparison.OrdinalIgnoreCase) Then
+                                    ' Intenta una comparación más flexible
+                                    If cuentaExcel = "0" OrElse String.IsNullOrWhiteSpace(cuentaExcel) Then
+                                        ' Si en Excel viene vacío o cero, actualizamos con el valor de BD
+                                        row("Cuenta") = cuentaBD
+                                    Else
+                                        errores.Add($"Cuenta no coincide: {codigoExcel} (Excel: {cuentaExcel} | BD: {cuentaBD})")
+                                    End If
                                 End If
+                            Else
+                                cuentasNoEncontradas.Add(codigoExcel)
                             End If
                         Next
+
+                        ' Manejar cuentas no encontradas
+                        If cuentasNoEncontradas.Count > 0 Then
+                            errores.AddRange(cuentasNoEncontradas.Select(Function(c) $"Código no existe: {c}"))
+                        End If
 
                         If errores.Count > 0 Then
                             KryptonMessageBox.Show($"Errores de validación: {vbCrLf}{String.Join(vbCrLf, errores)}", "Validación Fallida", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
@@ -2034,75 +2058,98 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                     dtCombinado.Columns.Add($"{mes} % ", GetType(Decimal))
                 Next
 
-                'combianr datos
+                ' Crear diccionario para acceso rápido a presupuestos
+                Dim presupuestoDict As New Dictionary(Of String, DataRow)
+                For Each row As DataRow In dtPresupuesto.Rows
+                    Dim codigo = row("Codigo").ToString().Trim()
+                    If Not presupuestoDict.ContainsKey(codigo) Then
+                        presupuestoDict.Add(codigo, row)
+                    End If
+                Next
+
+                'Lista para procesamiento jerarquico posterior
+                Dim rowsToProcess As New List(Of DataRow)
+
+
+
+                ' Combinar datos reales y presupuestados
                 For Each rowReal As DataRow In dtReal.Rows
-                    Dim codigo = rowReal("Codigo").ToString()
+                    Dim codigo = rowReal("Codigo").ToString().Trim()
                     Dim cuenta = rowReal("Cuenta").ToString()
-                    Dim nivel = rowReal("Nivel").ToString()
+                    Dim nivel = Integer.Parse(rowReal("Nivel").ToString())
                     Dim padre = rowReal("Padre").ToString()
 
                     Dim newRow = dtCombinado.NewRow()
-
                     newRow("Codigo") = codigo
                     newRow("Cuenta") = cuenta
                     newRow("Nivel") = nivel
                     newRow("Padre") = padre
 
-                    'Buscar correspondiente presupeusto
+                    ' Buscar fila correspondiente en presupuesto
+                    Dim rowPresupuesto As DataRow = Nothing
+                    presupuestoDict.TryGetValue(codigo, rowPresupuesto)
 
-                    Dim rowPresupuesto = dtPresupuesto.Select($"Codigo = '{codigo}'").FirstOrDefault()
+                    ' Procesar cada mes
                     For Each mes In mesesSP
-                        Dim mesKey = mes.Split(" ")(0)
-                        Dim valreal As Decimal
+                        ' Obtener valor real
+                        Dim valreal As Decimal = If(rowReal.IsNull(mes), 0D, CDec(rowReal(mes)))
 
-                        valreal = If(rowReal.IsNull(mes), 0D, CDec(rowReal(mes)))
+                        ' Obtener valor presupuestado
+                        Dim valpresupuesto As Decimal = 0D
+                        If rowPresupuesto IsNot Nothing AndAlso Not rowPresupuesto.IsNull(mes) Then
+                            valpresupuesto = CDec(rowPresupuesto(mes))
+                        End If
 
-                        Dim valpresupuesto As Decimal
-                        valpresupuesto = If(rowPresupuesto IsNot Nothing, CDec(rowPresupuesto(mesKey)), 0D)
-
+                        ' Asignar valores
                         newRow($"{mes} Real") = valreal
                         newRow($"{mes} Presupuesto") = valpresupuesto
                         newRow($"{mes} Dif") = valreal - valpresupuesto
-                        newRow($"{mes} % ") = Math.Round(If(valpresupuesto <> 0, (valreal / valpresupuesto) * 100, 0), 2)
+                        newRow($"{mes} % ") = If(valpresupuesto <> 0, Math.Round((valreal / valpresupuesto) * 100, 2), 0)
                     Next
+
                     dtCombinado.Rows.Add(newRow)
+                    rowsToProcess.Add(newRow)
                 Next
 
-                _valoresOriginales.Clear()
-                For Each row As DataRow In dtCombinado.Rows
-                    Dim valoresMes As New Dictionary(Of String, Decimal)
-                    For Each mes In mesesSP
-                        valoresMes(mes) = CDec(row($"{mes} Real"))
-                    Next
-                    _valoresOriginales(row("Codigo").ToString()) = valoresMes
+                ' Procesamiento jerárquico: sumar hijos a padres
+                ' Ordenar por nivel descendente (procesar primero los niveles más bajos)
+                Dim sortedRows = rowsToProcess.OrderByDescending(Function(r) CInt(r("Nivel"))).ToList()
+
+
+                ' Create a dictionary for quick access to rows by Codigo
+                Dim rowDict As New Dictionary(Of String, DataRow)
+                For Each row In dtCombinado.Rows
+                    Dim codigo = row("Codigo").ToString().Trim()
+                    If Not rowDict.ContainsKey(codigo) Then
+                        rowDict.Add(codigo, row)
+                    End If
                 Next
 
-                Dim maxLevel As Integer = dtCombinado.AsEnumerable().Max(Function(r) Integer.Parse(r("Nivel")))
+                For Each row As DataRow In sortedRows
+                    Dim nivel = CInt(row("Nivel"))
+                    If nivel <= 1 Then Continue For ' Skip root level if it exists
 
-                For level As Integer = maxLevel To 1 Step -1
-                    For Each parentRow As DataRow In dtCombinado.Select($"Nivel = {level - 1}")
-                        Dim parentCodigo = parentRow("Codigo").ToString()
+                    Dim padre = row("Padre").ToString().Trim()
+                    If String.IsNullOrEmpty(padre) Then Continue For
 
-                        ' Sumar todos los hijos del nivel actual
-                        For Each childRow As DataRow In dtCombinado.Select($"Padre = '{parentCodigo}' AND Nivel = {level}")
-                            For Each mes In mesesSP
-                                parentRow($"{mes} Real") = CDec(parentRow($"{mes} Real")) + CDec(childRow($"{mes} Real"))
-                                parentRow($"{mes} Presupuesto") = CDec(parentRow($"{mes} Presupuesto")) + CDec(childRow($"{mes} Presupuesto"))
+                    ' Find parent row
+                    If rowDict.ContainsKey(padre) Then
+                        Dim parentRow = rowDict(padre)
 
-                                ' Recalcular Dif y % para el padre
-                                parentRow($"{mes} Dif") = CDec(parentRow($"{mes} Real")) - CDec(parentRow($"{mes} Presupuesto"))
-                                If CDec(parentRow($"{mes} Presupuesto")) <> 0 Then
-                                    parentRow($"{mes} % ") = Math.Round((CDec(parentRow($"{mes} Real")) / CDec(parentRow($"{mes} Presupuesto"))) * 100, 2)
-                                Else
-                                    parentRow($"{mes} % ") = DBNull.Value ' O 0 si prefieres
-                                End If
-                            Next
+                        For Each mes In mesesSP
+                            ' Get current values
+                            Dim realVal As Decimal = CDec(row($"{mes} Real"))
+
+                            parentRow($"{mes} Real") = CDec(parentRow($"{mes} Real")) + realVal
+                            ' Recalculate differences and percentages using the original budget values
+                            Dim presupuestoVal As Decimal = CDec(parentRow($"{mes} Presupuesto"))
+                            parentRow($"{mes} Dif") = CDec(parentRow($"{mes} Real")) - presupuestoVal
+                            parentRow($"{mes} % ") = If(presupuestoVal <> 0,
+                            Math.Round((CDec(parentRow($"{mes} Real")) / presupuestoVal) * 100, 2),
+                            0)
                         Next
-                    Next
+                    End If
                 Next
-
-
-
 
                 dgvPresupuesto.DataSource = dtCombinado
 
@@ -2121,14 +2168,6 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                     End If
 
                 Next
-
-
-
-                'For Each row As DataGridViewRow In dgvPresupuesto.Rows
-                '    If Not row.IsNewRow Then
-                '        row.Visible = (row.Cells("Nivel").Value.ToString() = "1") ' Solo nivel raíz visible
-                '    End If
-                'Next
 
                 For Each row As DataGridViewRow In dgvPresupuesto.Rows
                     If Not row.IsNewRow Then

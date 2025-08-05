@@ -1386,7 +1386,7 @@
             Me.tbComprobanteIngresoBodega.Name = "tbComprobanteIngresoBodega"
             Me.tbComprobanteIngresoBodega.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.tbComprobanteIngresoBodega.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2, Me.KryptonPage3, Me.KryptonPage4})
-            Me.tbComprobanteIngresoBodega.SelectedIndex = 0
+            Me.tbComprobanteIngresoBodega.SelectedIndex = 2
             Me.tbComprobanteIngresoBodega.Size = New System.Drawing.Size(952, 628)
             Me.tbComprobanteIngresoBodega.TabIndex = 194
             Me.tbComprobanteIngresoBodega.Text = "KryptonNavigator1"

@@ -5,10 +5,6 @@
         ''' TODOS LOS METODOS DE GUARDAR, SELECCIONAR, BUSCAR, ESTAN LIGADOS A UN PROCEDIMIENTO EN BD Y SU TIPO DE RETRNO GENERAL ES DATATABLE</summary>
         ''' <remarks></remarks>
 
-
-
-
-
         Cisepro = 0
         Seportpac
         Asenava

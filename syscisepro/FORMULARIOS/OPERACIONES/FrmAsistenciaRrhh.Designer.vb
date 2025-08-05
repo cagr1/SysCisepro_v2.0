@@ -1713,7 +1713,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(6, 1)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-            Me.MenuStrip1.Size = New System.Drawing.Size(104, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(105, 32)
             Me.MenuStrip1.TabIndex = 1
             Me.MenuStrip1.Text = "MenuStrip1"
             '
@@ -1724,14 +1724,14 @@
             Me.REPORTESToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.REPORTESToolStripMenuItem.Name = "REPORTESToolStripMenuItem"
             Me.REPORTESToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No
-            Me.REPORTESToolStripMenuItem.Size = New System.Drawing.Size(96, 28)
+            Me.REPORTESToolStripMenuItem.Size = New System.Drawing.Size(97, 28)
             Me.REPORTESToolStripMenuItem.Text = "REPORTES"
             '
             'EXPORTARDATOSToolStripMenuItem
             '
             Me.EXPORTARDATOSToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.excel_icon
             Me.EXPORTARDATOSToolStripMenuItem.Name = "EXPORTARDATOSToolStripMenuItem"
-            Me.EXPORTARDATOSToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+            Me.EXPORTARDATOSToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
             Me.EXPORTARDATOSToolStripMenuItem.Text = "EXPORTAR DATOS"
             '
             'Panel1
@@ -2370,7 +2370,7 @@
             Me.KryptonPage2.LastVisibleSet = True
             Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage2.Name = "KryptonPage2"
-            Me.KryptonPage2.Size = New System.Drawing.Size(1125, 592)
+            Me.KryptonPage2.Size = New System.Drawing.Size(1125, 590)
             Me.KryptonPage2.Text = "Detalle Puestos"
             Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage2.UniqueName = "7BFF323237214E91818EB1B33DCB2542"

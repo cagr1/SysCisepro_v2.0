@@ -28,6 +28,7 @@ Imports iTextSharp.text.pdf
 Imports System.IO
 Imports DocumentFormat.OpenXml.Wordprocessing
 Imports DocumentFormat.OpenXml.Bibliography
+Imports iTextSharp.text.pdf.draw
 
 Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
     ''' <summary>
@@ -1540,20 +1541,20 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
 
                             ' Verificar si la serie ya fue utilizada
-                            If valorSerie <> "" Then
-                                Dim data As DataTable = _objDetCompEgr.BuscarSerieRepetida(_tipoCon, valorSerie, idkardex)
-                                If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
-                                    Dim valorRepetido As String = If(IsDBNull(data.Rows(0)(2)), "", data.Rows(0)(2).ToString().Trim()) ' Usar data(0)(2)
+                            'If valorSerie <> "" Then
+                            '    Dim data As DataTable = _objDetCompEgr.BuscarSerieRepetida(_tipoCon, valorSerie, idkardex)
+                            '    If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
+                            '        Dim valorRepetido As String = If(IsDBNull(data.Rows(0)(2)), "", data.Rows(0)(2).ToString().Trim()) ' Usar data(0)(2)
 
-                                    If valorRepetido <> "-" AndAlso valorRepetido <> "" Then
-                                        Dim last As DataRow = data.Rows(data.Rows.Count - 1)
-                                        If Convert.ToInt32(last("ID_ACTIVIDAD")) = 1 Then
-                                            KryptonMessageBox.Show("LA SERIE " & valorSerie & " YA FUE UTILIZADA EN UN INGRESO", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
-                                            Return
-                                        End If
-                                    End If
-                                End If
-                            End If
+                            '        If valorRepetido <> "-" AndAlso valorRepetido <> "" Then
+                            '            Dim last As DataRow = data.Rows(data.Rows.Count - 1)
+                            '            If Convert.ToInt32(last("ID_ACTIVIDAD")) = 1 Then
+                            '                KryptonMessageBox.Show("LA SERIE " & valorSerie & " YA FUE UTILIZADA EN UN INGRESO", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                            '                Return
+                            '            End If
+                            '        End If
+                            '    End If
+                            'End If
 
 
                             'If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
@@ -2333,22 +2334,22 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         Private Sub txtSerie_TextChanged(sender As Object, e As EventArgs) Handles txtSerie.TextChanged
             Dim idkardex = Convert.ToInt32(lblIdKardex.Text)
 
-            If txtSerie.Text.Trim().Length > 0 Then
-                Try
-                    Dim data As DataTable = _objDetCompEgr.BuscarSerieRepetida(_tipoCon, txtSerie.Text, idkardex)
-                    If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
-                        Dim first As DataRow = data.Rows(0)
-                        If Convert.ToInt32(first("ID_ACTIVIDAD")) = 2 Then
-                            KryptonMessageBox.Show("La serie ya fue utilizada en un egreso", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
-                            txtSerie.Clear()
-                            Return
-                        End If
-                    End If
-                Catch ex As Exception
-                    KryptonMessageBox.Show("Ocurrió un problema al buscar la serie. por favor, contácte al administrador!!!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+            'If txtSerie.Text.Trim().Length > 0 Then
+            '    Try
+            '        Dim data As DataTable = _objDetCompEgr.BuscarSerieRepetida(_tipoCon, txtSerie.Text, idkardex)
+            '        If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
+            '            Dim first As DataRow = data.Rows(0)
+            '            If Convert.ToInt32(first("ID_ACTIVIDAD")) = 2 Then
+            '                KryptonMessageBox.Show("La serie ya fue utilizada en un egreso", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+            '                txtSerie.Clear()
+            '                Return
+            '            End If
+            '        End If
+            '    Catch ex As Exception
+            '        KryptonMessageBox.Show("Ocurrió un problema al buscar la serie. por favor, contácte al administrador!!!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
 
-                End Try
-            End If
+            '    End Try
+            'End If
 
 
         End Sub
@@ -2554,19 +2555,38 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 Dim fuente10 As iTextSharp.text.Font = New iTextSharp.text.Font(baseFont, 10)
                 Dim fuente8 As iTextSharp.text.Font = New iTextSharp.text.Font(baseFont, 8)
                 Dim fuente8Bold As iTextSharp.text.Font = New iTextSharp.text.Font(baseFont, 8, iTextSharp.text.Font.BOLD)
+                'Dim watermarkFont As New iTextSharp.text.Font(baseFont, 40, iTextSharp.text.Font.BOLD, New BaseColor(200, 200, 200))
 
                 Dim rutaImagen As String = ValidationForms.NombreLogoNuevo(_tipoCon, Application.StartupPath)
                 Dim logo As iTextSharp.text.Image = iTextSharp.text.Image.GetInstance(rutaImagen)
                 logo.ScaleToFit(30, 30)
 
-
-
-
-
-
                 For i As Integer = 0 To 7
                     ' Agregar nueva página (excepto la primera)
-                    If i > 0 Then document.NewPage()
+                    If i > 0 Then
+                        document.NewPage()
+
+                        'agregar marca de agua
+                        Dim cb As PdfContentByte = writer.DirectContentUnder
+
+
+
+                        ' Configurar la marca de agua
+                        cb.SetColorFill(BaseColor.LIGHT_GRAY)
+                        cb.SetFontAndSize(baseFont, 40)
+
+                        ' Texto y posición
+                        Dim text As String = "COPIA DEL ORIGINAL"
+                        Dim x As Single = document.PageSize.Width / 2
+                        Dim y As Single = document.PageSize.Height / 2
+
+                        ' Aplicar rotación y mostrar texto
+                        cb.SaveState()
+                        cb.BeginText()
+                        cb.ShowTextAligned(Element.ALIGN_CENTER, text, x, y, 45)
+                        cb.EndText()
+                        cb.RestoreState()
+                    End If
 
                     'Encabezado
                     Dim headerTable As PdfPTable = New PdfPTable(3)
@@ -2593,7 +2613,6 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     tituloCell.Padding = 2
                     headerTable.AddCell(tituloCell)
 
-
                     ' Columna 3: Información
                     Dim fechaOriginal As Date = dtpFecha.Value
                     Dim fechaAumentada = fechaOriginal.AddMonths(i)
@@ -2619,20 +2638,53 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     tablaComprobante.WriteSelectedRows(0, -1, Utilities.MillimetersToPoints(5),
                                                 document.PageSize.Height - Utilities.MillimetersToPoints(35), writer.DirectContent)
 
-
-
                     ' --- TABLA DETALLES ---
                     Dim tablaDetalles = CrearTablaDetalles(baseFont)
                     tablaDetalles.WriteSelectedRows(0, -1, Utilities.MillimetersToPoints(5),
                                                 document.PageSize.Height - Utilities.MillimetersToPoints(60), writer.DirectContent)
 
                     ' --- LÍNEA DE SEPARACIÓN ---
-                    Dim rectTabla1 As PdfContentByte = writer.DirectContent
-                    rectTabla1.RoundRectangle(20, document.PageSize.Height - 90, document.PageSize.Width - 40, 70, 5)
-                    rectTabla1.Stroke()
+                    'Dim rectTabla1 As PdfContentByte = writer.DirectContent
+                    'rectTabla1.RoundRectangle(20, document.PageSize.Height - 90, document.PageSize.Width - 40, 70, 5)
+                    'rectTabla1.Stroke()
+
+                    ' --- ESPACIO PARA 3 FIRMAS SIMPLES ---
+                    Dim yPosFirmas As Single = document.PageSize.Height - Utilities.MillimetersToPoints(105) ' Posición vertical inicial
+                    Dim alturaLinea As Single = Utilities.MillimetersToPoints(20) ' Altura para cada firma
+                    Dim espacioEntreFirmas As Single = Utilities.MillimetersToPoints(5) ' Espacio entre firmas
+
+                    ' Crear tabla simple de 3 columnas
+                    Dim tablaFirmas As New PdfPTable(3)
+                    tablaFirmas.TotalWidth = Utilities.MillimetersToPoints(120)
+                    tablaFirmas.LockedWidth = True
+                    tablaFirmas.DefaultCell.Border = PdfPCell.NO_BORDER
+                    tablaFirmas.SetWidths(New Single() {40, 40, 40}) ' Ancho igual para las 3 columnas
+
+                    ' Función simple para añadir una celda con línea y texto
+                    Dim AddFirma = Sub(titulo As String)
+                                       Dim cell As New PdfPCell()
+                                       cell.HorizontalAlignment = Element.ALIGN_CENTER
+                                       cell.VerticalAlignment = Element.ALIGN_BOTTOM
+                                       cell.Border = PdfPCell.TOP_BORDER
+                                       cell.BorderColor = BaseColor.BLACK
+                                       cell.BorderWidthTop = 0.5
+                                       cell.FixedHeight = alturaLinea
+                                       cell.Phrase = New Phrase(titulo, fuente8)
+                                       tablaFirmas.AddCell(cell)
+                                   End Sub
+
+                    ' Añadir las 3 firmas
+                    AddFirma("FIRMA SUPERVISOR")
+                    AddFirma("FIRMA VIGILANTE")
+                    AddFirma("FIRMA BODEGA")
+
+                    ' Dibujar la tabla de firmas
+                    tablaFirmas.WriteSelectedRows(0, -1, Utilities.MillimetersToPoints(15), yPosFirmas, writer.DirectContent)
+
+
+
+
                 Next
-
-
 
                 ' Cerrar documento
                 document.Close()
@@ -2640,9 +2692,6 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 ' Guardar y mostrar PDF
                 File.WriteAllBytes(ruta, pdfStream.ToArray())
                 PdfViewer1.Document = PdfiumViewer.PdfDocument.Load(ruta)
-
-
-
 
 
             Catch ex As Exception
@@ -2739,7 +2788,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             Dim padding As Single = 4.0F
             ' Encabezados
-            Dim headers = {"Código", "Item", "Observación", "Cantidad"}
+            Dim headers = {"Código", "Item", "Serie", "Cantidad"}
             For Each header In headers
                 Dim cell = New PdfPCell(New Phrase(header, fuente8Bold))
                 cell.HorizontalAlignment = Element.ALIGN_CENTER
@@ -2765,7 +2814,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     tabla.AddCell(celdaItem)
 
                     ' Celda Observación
-                    Dim celdaObs = New PdfPCell(New Phrase(row.Cells("OBSERVACION").Value.ToString(), fuente8))
+                    Dim celdaObs = New PdfPCell(New Phrase(row.Cells("DETALLES").Value.ToString(), fuente8))
                     celdaObs.Padding = padding
                     celdaObs.Border = iTextSharp.text.Rectangle.BOX
                     tabla.AddCell(celdaObs)

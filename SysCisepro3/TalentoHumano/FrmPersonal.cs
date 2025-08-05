@@ -446,7 +446,7 @@ namespace SysCisepro3.TalentoHumano
                     txtNumCuenta.Clear();
                     cbxBanco.SelectedIndex = 0;
                     cbxTipoCuenta.SelectedIndex = 0;
-                    KryptonMessageBox.Show("Sin cuenta bancaria", @"Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+                    
                 }
 
                 try
@@ -1387,7 +1387,7 @@ namespace SysCisepro3.TalentoHumano
 
 
                 _objHistorialLaboral.IdHistoriaLaboral = _objHistorialLaboral.BuscarMayorIdHistoriaLaboral(TipoCon) + 1;
-                _objHistorialLaboral.FechaHistoriaLaboral = DateTime.Now;
+                _objHistorialLaboral.FechaHistoriaLaboral = dtpFechaIngreso.Value;
                 _objHistorialLaboral.DetalleHistoriaLaboral = "INGRESO A LA COMPAÑIA " + Validaciones.NombreCompany(TipoCon) + " CON EL CARGO DE " + cbCargo.Text;
                 _objHistorialLaboral.EstadoHistoriaLaboral = 1;
                 _objHistorialLaboral.IdPersonalHistoriaLaboral = _objPersonal.IdPersonal;
