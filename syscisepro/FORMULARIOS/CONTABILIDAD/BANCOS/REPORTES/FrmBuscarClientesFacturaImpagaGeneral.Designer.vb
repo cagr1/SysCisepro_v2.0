@@ -1,7 +1,7 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FrmBuscarClientesFacturaImpagaGeneral
-        Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
 
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
@@ -85,7 +85,7 @@
             Me.dtpFechaDesde.CustomFormat = "dddd, dd-MMM-yyyy"
             Me.dtpFechaDesde.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-            Me.dtpFechaDesde.Location = New System.Drawing.Point(47, 2)
+            Me.dtpFechaDesde.Location = New System.Drawing.Point(55, 2)
             Me.dtpFechaDesde.Name = "dtpFechaDesde"
             Me.dtpFechaDesde.Size = New System.Drawing.Size(170, 22)
             Me.dtpFechaDesde.TabIndex = 36

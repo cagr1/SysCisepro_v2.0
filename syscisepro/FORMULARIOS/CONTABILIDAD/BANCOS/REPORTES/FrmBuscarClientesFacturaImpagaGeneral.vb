@@ -36,8 +36,11 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
         Private Sub CargarClienteGeneral(ByVal parametroBusqueda As String)
             Try
                 dgvDebitos.Rows.Clear()
-                Dim fechaDesde = dtpFechaDesde.Value.Year.ToString & "/" & dtpFechaDesde.Value.Month.ToString & "/" & dtpFechaDesde.Value.Day.ToString & " 00:00:00"
-                Dim fechaHasta = dtpFechaHasta.Value.Year.ToString & "/" & dtpFechaHasta.Value.Month.ToString & "/" & dtpFechaHasta.Value.Day.ToString & " 23:59:59"
+                'Dim fechaDesde = dtpFechaDesde.Value.Year.ToString & "/" & dtpFechaDesde.Value.Month.ToString & "/" & dtpFechaDesde.Value.Day.ToString & " 00:00:00"
+                'Dim fechaHasta = dtpFechaHasta.Value.Year.ToString & "/" & dtpFechaHasta.Value.Month.ToString & "/" & dtpFechaHasta.Value.Day.ToString & " 23:59:59"
+
+                Dim fechaDesde = dtpFechaDesde.Value.Day.ToString & "-" & dtpFechaDesde.Value.Month.ToString & "-" & dtpFechaDesde.Value.Year.ToString & " 00:00:00"
+                Dim fechaHasta = dtpFechaHasta.Value.Day.ToString & "-" & dtpFechaHasta.Value.Month.ToString & "-" & dtpFechaHasta.Value.Year.ToString & " 23:59:59"
 
                 Dim datos As DataTable = _objCliente.CargarClienteGeneralFacturasPorCobrar(_tipoCon, parametroBusqueda, fechaDesde, fechaHasta)
 

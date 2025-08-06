@@ -2633,6 +2633,11 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     headerTable.WriteSelectedRows(0, -1, Utilities.MillimetersToPoints(10),
                                             document.PageSize.Height - Utilities.MillimetersToPoints(15), writer.DirectContent)
 
+                    ' --- LÍNEA DE SEPARACIÓN ---
+                    Dim rectTabla1 As PdfContentByte = writer.DirectContent
+                    rectTabla1.RoundRectangle(20, document.PageSize.Height - 90, document.PageSize.Width - 40, 70, 5)
+                    rectTabla1.Stroke()
+
                     ' --- TABLA COMPROBANTE ---
                     Dim tablaComprobante = CrearTablaComprobante(fechaAumentada, baseFont)
                     tablaComprobante.WriteSelectedRows(0, -1, Utilities.MillimetersToPoints(5),
@@ -2643,40 +2648,36 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     tablaDetalles.WriteSelectedRows(0, -1, Utilities.MillimetersToPoints(5),
                                                 document.PageSize.Height - Utilities.MillimetersToPoints(60), writer.DirectContent)
 
-                    ' --- LÍNEA DE SEPARACIÓN ---
-                    'Dim rectTabla1 As PdfContentByte = writer.DirectContent
-                    'rectTabla1.RoundRectangle(20, document.PageSize.Height - 90, document.PageSize.Width - 40, 70, 5)
-                    'rectTabla1.Stroke()
+
 
                     ' --- ESPACIO PARA 3 FIRMAS SIMPLES ---
-                    Dim yPosFirmas As Single = document.PageSize.Height - Utilities.MillimetersToPoints(105) ' Posición vertical inicial
-                    Dim alturaLinea As Single = Utilities.MillimetersToPoints(20) ' Altura para cada firma
-                    Dim espacioEntreFirmas As Single = Utilities.MillimetersToPoints(5) ' Espacio entre firmas
+                    Dim yPosFirmas As Single = document.PageSize.Height - Utilities.MillimetersToPoints(135) ' Posición vertical inicial
+                    Dim alturaFirma As Single = Utilities.MillimetersToPoints(25) ' Altura por cada área de firma
 
-                    ' Crear tabla simple de 3 columnas
+                    ' Crear tabla de 3 columnas (una por firma)
                     Dim tablaFirmas As New PdfPTable(3)
-                    tablaFirmas.TotalWidth = Utilities.MillimetersToPoints(120)
+                    tablaFirmas.TotalWidth = Utilities.MillimetersToPoints(120) ' Ancho total
                     tablaFirmas.LockedWidth = True
                     tablaFirmas.DefaultCell.Border = PdfPCell.NO_BORDER
                     tablaFirmas.SetWidths(New Single() {40, 40, 40}) ' Ancho igual para las 3 columnas
 
-                    ' Función simple para añadir una celda con línea y texto
-                    Dim AddFirma = Sub(titulo As String)
-                                       Dim cell As New PdfPCell()
-                                       cell.HorizontalAlignment = Element.ALIGN_CENTER
-                                       cell.VerticalAlignment = Element.ALIGN_BOTTOM
-                                       cell.Border = PdfPCell.TOP_BORDER
-                                       cell.BorderColor = BaseColor.BLACK
-                                       cell.BorderWidthTop = 0.5
-                                       cell.FixedHeight = alturaLinea
-                                       cell.Phrase = New Phrase(titulo, fuente8)
-                                       tablaFirmas.AddCell(cell)
-                                   End Sub
+                    ' Configurar cada celda de firma
+                    For Each titulo In New String() {"SUPERVISOR", "VIGILANTE", "BODEGA"}
+                        ' Crear contenido: línea arriba, texto abajo
+                        Dim contenido As New iTextSharp.text.Paragraph()
+                        contenido.Add(New Chunk(New LineSeparator(0.5, 100, BaseColor.BLACK, Element.ALIGN_CENTER, -1)))
+                        contenido.Add(New Chunk(Environment.NewLine))
+                        contenido.Add(New Chunk(titulo, fuente8))
 
-                    ' Añadir las 3 firmas
-                    AddFirma("FIRMA SUPERVISOR")
-                    AddFirma("FIRMA VIGILANTE")
-                    AddFirma("FIRMA BODEGA")
+                        ' Configurar celda
+                        Dim cell As New PdfPCell(contenido)
+                        cell.HorizontalAlignment = Element.ALIGN_CENTER
+                        cell.VerticalAlignment = Element.ALIGN_MIDDLE
+                        cell.Border = PdfPCell.NO_BORDER
+                        cell.FixedHeight = alturaFirma
+                        cell.PaddingTop = 5
+                        tablaFirmas.AddCell(cell)
+                    Next
 
                     ' Dibujar la tabla de firmas
                     tablaFirmas.WriteSelectedRows(0, -1, Utilities.MillimetersToPoints(15), yPosFirmas, writer.DirectContent)

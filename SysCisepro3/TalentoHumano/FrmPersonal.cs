@@ -913,7 +913,13 @@ namespace SysCisepro3.TalentoHumano
                    "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                DialogResult.Yes) return;
 
-            
+            if (txtPrueba.Text.Trim().Length == 0)
+            {
+                KryptonMessageBox.Show(@"Ingrese responsable de la prueba antidroga para el personal ADMINISTRATIVO / OPERATIVO!",
+                  "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
+            }
+
 
             if (ValidacionParametros())
             {
@@ -1050,12 +1056,7 @@ namespace SysCisepro3.TalentoHumano
 
         private void GuardarRegistroNuevoPersonal()
         {
-            if (txtPrueba.Text.Trim().Length == 0)
-            {
-                KryptonMessageBox.Show(@"Ingrese responsable de la prueba antidroga para el personal ADMINISTRATIVO / OPERATIVO!",
-                  "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
-                return;
-            }
+            
 
 
             _objPersonal.IdPersonal = _objPersonal.BuscarMayorId(TipoCon) + 1;
@@ -1285,12 +1286,7 @@ namespace SysCisepro3.TalentoHumano
             try
             {
 
-                if (txtPrueba.Text.Trim().Length == 0)
-                {
-                    KryptonMessageBox.Show(@"Ingrese responsable de la prueba antidroga para el personal ADMINISTRATIVO / OPERATIVO!",
-                      "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
-                    return;
-                }
+               
                 _objPersonal.IdPersonal = Convert.ToInt32(lblIdPersonal.Text.Trim());
                 _objPersonal.CedulaPersonal = txtCedula.Text.Trim();
                 _objPersonal.NombresPersonal = txtNombres.Text.Trim();

@@ -290,7 +290,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             dgvDebitos.Columns(0).Visible = False
         End Sub
 
-        Private Sub dgvDebitos_DataError(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewDataErrorEventArgs) Handles dgvDebitos.DataError
+        Private Sub dgvDebitos_DataError(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewDataErrorEventArgs)
             ' nothing
         End Sub
 
@@ -352,44 +352,44 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                         End If
 
                         objWriter.WriteLine(
-                            "DET" & _
-                            CompletarConCero(row.Index, 7, True) & _
-                            CompletarConEspacio(row.Cells(4).Value, 15, False) & _
-                            row.Cells(7).Value.ToString.Trim.Split(" ")(0).Trim & _
-                            CompletarConEspacio("EC", 3, False) & _
-                            ba & _
-                            row.Cells(9).Value.ToString.Trim.Split(" ")(0).Trim & _
-                            CompletarConEspacio(row.Cells(10).Value.ToString, 20, False) & _
-                            "00" & _
-                            "00" & _
-                            CompletarConEspacio(row.Cells(5).Value.ToString, 40, False) & _
-                            CompletarConEspacio(row.Cells(6).Value.ToString, 40, False) & _
-                            "C" & _
-                            "00000" & _
-                            "000000" & _
-                            "000000" & _
-                            "00000000" & _
-                            "0000" & _
-                            CompletarConCero(row.Cells(11).Value.ToString.Replace(".", ""), 15, True) & _
-                            "USD" & _
-                            CompletarConEspacio("", 40, False) & _
-                            row.Cells(3).Value.ToString.Trim.Split(" ")(0).Trim & _
-                            CompletarConEspacio(row.Cells(4).Value.ToString, 14, False) & _
-                            CompletarConEspacio("", 60, False) & _
-                            CompletarConEspacio("", 10, False) & _
-                            CompletarConEspacio("", 20, False) & _
-                            CompletarConEspacio("", 15, False) & _
-                            CompletarConEspacio("", 8, False) & _
-                            CompletarConEspacio("", 10, False) & _
-                            CompletarConEspacio("", 1, False) & _
-                            CompletarConEspacio("", 7, False) & _
-                            CompletarConEspacio("", 15, False) & _
-                            CompletarConEspacio("", 4, False) & _
-                            "05839" & _
-                            CompletarConCero("", 15, False) & _
-                            CompletarConCero("", 15, False) & _
-                            CompletarConCero("", 15, False) & _
-                            CompletarConCero("", 15, False) & _
+                            "DET" &
+                            CompletarConCero(row.Index, 7, True) &
+                            CompletarConEspacio(row.Cells(4).Value, 15, False) &
+                            row.Cells(7).Value.ToString.Trim.Split(" ")(0).Trim &
+                            CompletarConEspacio("EC", 3, False) &
+                            ba &
+                            row.Cells(9).Value.ToString.Trim.Split(" ")(0).Trim &
+                            CompletarConEspacio(row.Cells(10).Value.ToString, 20, False) &
+                            "00" &
+                            "00" &
+                            CompletarConEspacio(row.Cells(5).Value.ToString, 40, False) &
+                            CompletarConEspacio(row.Cells(6).Value.ToString, 40, False) &
+                            "C" &
+                            "00000" &
+                            "000000" &
+                            "000000" &
+                            "00000000" &
+                            "0000" &
+                            CompletarConCero(row.Cells(11).Value.ToString.Replace(".", ""), 15, True) &
+                            "USD" &
+                            CompletarConEspacio("", 40, False) &
+                            row.Cells(3).Value.ToString.Trim.Split(" ")(0).Trim &
+                            CompletarConEspacio(row.Cells(4).Value.ToString, 14, False) &
+                            CompletarConEspacio("", 60, False) &
+                            CompletarConEspacio("", 10, False) &
+                            CompletarConEspacio("", 20, False) &
+                            CompletarConEspacio("", 15, False) &
+                            CompletarConEspacio("", 8, False) &
+                            CompletarConEspacio("", 10, False) &
+                            CompletarConEspacio("", 1, False) &
+                            CompletarConEspacio("", 7, False) &
+                            CompletarConEspacio("", 15, False) &
+                            CompletarConEspacio("", 4, False) &
+                            "05839" &
+                            CompletarConCero("", 15, False) &
+                            CompletarConCero("", 15, False) &
+                            CompletarConCero("", 15, False) &
+                            CompletarConCero("", 15, False) &
                             cbxTipoNegociacion.Text.ToString.Trim.Split(" ")(0).Trim
                             )
                     Next
@@ -530,7 +530,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             End Try
         End Sub
 
-        Private Sub dgvDebitos_CellBeginEdit(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellCancelEventArgs) Handles dgvDebitos.CellBeginEdit
+        Private Sub dgvDebitos_CellBeginEdit(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellCancelEventArgs)
             If e.RowIndex > -1 Then
                 If e.ColumnIndex = 0 Then
                     If Not String.IsNullOrEmpty(dgvDebitos.Rows(e.RowIndex).Cells("FecProceso").Value) Then
