@@ -32,11 +32,8 @@
             Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBuscarClientesFacturaImpagaGeneral))
-            Me.Label1 = New System.Windows.Forms.Label()
             Me.txtParametrobusqueda = New System.Windows.Forms.TextBox()
             Me.dtpFechaDesde = New System.Windows.Forms.DateTimePicker()
-            Me.Label2 = New System.Windows.Forms.Label()
-            Me.Label3 = New System.Windows.Forms.Label()
             Me.dtpFechaHasta = New System.Windows.Forms.DateTimePicker()
             Me.dgvDebitos = New System.Windows.Forms.DataGridView()
             Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -56,18 +53,11 @@
             Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.Button1 = New System.Windows.Forms.Button()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvDebitos, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
-            '
-            'Label1
-            '
-            Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(519, 6)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(51, 14)
-            Me.Label1.TabIndex = 12
-            Me.Label1.Text = "BUSCAR:"
             '
             'txtParametrobusqueda
             '
@@ -75,7 +65,7 @@
             Me.txtParametrobusqueda.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtParametrobusqueda.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtParametrobusqueda.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            Me.txtParametrobusqueda.Location = New System.Drawing.Point(573, 2)
+            Me.txtParametrobusqueda.Location = New System.Drawing.Point(544, 2)
             Me.txtParametrobusqueda.Name = "txtParametrobusqueda"
             Me.txtParametrobusqueda.Size = New System.Drawing.Size(361, 23)
             Me.txtParametrobusqueda.TabIndex = 10
@@ -85,30 +75,10 @@
             Me.dtpFechaDesde.CustomFormat = "dddd, dd-MMM-yyyy"
             Me.dtpFechaDesde.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-            Me.dtpFechaDesde.Location = New System.Drawing.Point(55, 2)
+            Me.dtpFechaDesde.Location = New System.Drawing.Point(60, 2)
             Me.dtpFechaDesde.Name = "dtpFechaDesde"
             Me.dtpFechaDesde.Size = New System.Drawing.Size(170, 22)
             Me.dtpFechaDesde.TabIndex = 36
-            '
-            'Label2
-            '
-            Me.Label2.AutoSize = True
-            Me.Label2.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.Location = New System.Drawing.Point(5, 5)
-            Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(44, 14)
-            Me.Label2.TabIndex = 37
-            Me.Label2.Text = "DESDE:"
-            '
-            'Label3
-            '
-            Me.Label3.AutoSize = True
-            Me.Label3.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label3.Location = New System.Drawing.Point(243, 5)
-            Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(43, 14)
-            Me.Label3.TabIndex = 39
-            Me.Label3.Text = "HASTA:"
             '
             'dtpFechaHasta
             '
@@ -129,7 +99,8 @@
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvDebitos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
             Me.dgvDebitos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-            Me.dgvDebitos.BackgroundColor = System.Drawing.Color.White
+            Me.dgvDebitos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
+            Me.dgvDebitos.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvDebitos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvDebitos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
@@ -149,12 +120,12 @@
             DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvDebitos.DefaultCellStyle = DataGridViewCellStyle8
             Me.dgvDebitos.GridColor = System.Drawing.Color.LightSteelBlue
-            Me.dgvDebitos.Location = New System.Drawing.Point(0, 25)
+            Me.dgvDebitos.Location = New System.Drawing.Point(0, 32)
             Me.dgvDebitos.Name = "dgvDebitos"
             Me.dgvDebitos.ReadOnly = True
             Me.dgvDebitos.RowHeadersVisible = False
             Me.dgvDebitos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDebitos.Size = New System.Drawing.Size(1027, 311)
+            Me.dgvDebitos.Size = New System.Drawing.Size(1027, 304)
             Me.dgvDebitos.TabIndex = 186
             '
             'Column11
@@ -282,45 +253,72 @@
             '
             'Button1
             '
+            Me.Button1.FlatAppearance.BorderSize = 0
+            Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Button1.Image = Global.syscisepro.My.Resources.Resources.application_go
+            Me.Button1.Image = Global.syscisepro.My.Resources.Resources.login_24dp_FILL0_wght400_GRAD0_opsz24
             Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.Button1.Location = New System.Drawing.Point(940, 0)
+            Me.Button1.Location = New System.Drawing.Point(926, -1)
             Me.Button1.Name = "Button1"
-            Me.Button1.Size = New System.Drawing.Size(84, 26)
+            Me.Button1.Size = New System.Drawing.Size(35, 27)
             Me.Button1.TabIndex = 187
-            Me.Button1.Text = "ENVIAR"
             Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.Button1.UseVisualStyleBackColor = True
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(0, 5)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(45, 20)
+            Me.KryptonLabel1.TabIndex = 188
+            Me.KryptonLabel1.Values.Text = "Desde"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(236, 2)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(41, 20)
+            Me.KryptonLabel2.TabIndex = 189
+            Me.KryptonLabel2.Values.Text = "Hasta"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(492, 4)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(46, 20)
+            Me.KryptonLabel3.TabIndex = 190
+            Me.KryptonLabel3.Values.Text = "Buscar"
             '
             'FrmBuscarClientesFacturaImpagaGeneral
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(1027, 336)
+            Me.Controls.Add(Me.KryptonLabel3)
+            Me.Controls.Add(Me.KryptonLabel2)
+            Me.Controls.Add(Me.KryptonLabel1)
             Me.Controls.Add(Me.Button1)
             Me.Controls.Add(Me.dgvDebitos)
             Me.Controls.Add(Me.dtpFechaHasta)
             Me.Controls.Add(Me.dtpFechaDesde)
-            Me.Controls.Add(Me.Label1)
             Me.Controls.Add(Me.txtParametrobusqueda)
-            Me.Controls.Add(Me.Label2)
-            Me.Controls.Add(Me.Label3)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FrmBuscarClientesFacturaImpagaGeneral"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "CLIENTE (Seleccione uno o varios)"
             CType(Me.dgvDebitos, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
         End Sub
-        Friend WithEvents Label1 As System.Windows.Forms.Label
         Friend WithEvents txtParametrobusqueda As System.Windows.Forms.TextBox
         Friend WithEvents dtpFechaDesde As System.Windows.Forms.DateTimePicker
-        Friend WithEvents Label2 As System.Windows.Forms.Label
-        Friend WithEvents Label3 As System.Windows.Forms.Label
         Friend WithEvents dtpFechaHasta As System.Windows.Forms.DateTimePicker
         Friend WithEvents dgvDebitos As System.Windows.Forms.DataGridView
         Friend WithEvents Button1 As System.Windows.Forms.Button
@@ -340,5 +338,8 @@
         Friend WithEvents Column9 As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents Column15 As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents Column16 As System.Windows.Forms.DataGridViewTextBoxColumn
+        Friend WithEvents KryptonLabel1 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel3 As Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace
