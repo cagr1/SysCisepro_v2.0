@@ -32,9 +32,10 @@
             Me.KryptonPage1 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.KryptonPage3 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.crvMachala = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
             Me.txtIdComprobanteEgreso = New System.Windows.Forms.TextBox()
             Me.txtIdComprobamteEgreso2 = New System.Windows.Forms.TextBox()
-            Me.crvMachala = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+            Me.PdfViewer1 = New PdfiumViewer.PdfViewer()
             CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonNavigator1.SuspendLayout()
             CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,12 +65,11 @@
             Me.crvChequeEmitido.ActiveViewIndex = -1
             Me.crvChequeEmitido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvChequeEmitido.Cursor = System.Windows.Forms.Cursors.Default
-            Me.crvChequeEmitido.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.crvChequeEmitido.Location = New System.Drawing.Point(0, 0)
+            Me.crvChequeEmitido.Location = New System.Drawing.Point(133, 137)
             Me.crvChequeEmitido.Name = "crvChequeEmitido"
             Me.crvChequeEmitido.ShowCloseButton = False
             Me.crvChequeEmitido.ShowLogo = False
-            Me.crvChequeEmitido.Size = New System.Drawing.Size(880, 635)
+            Me.crvChequeEmitido.Size = New System.Drawing.Size(642, 379)
             Me.crvChequeEmitido.TabIndex = 0
             Me.crvChequeEmitido.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             '
@@ -113,6 +113,7 @@
             'KryptonPage2
             '
             Me.KryptonPage2.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage2.Controls.Add(Me.PdfViewer1)
             Me.KryptonPage2.Controls.Add(Me.crvChequeEmitido)
             Me.KryptonPage2.Flags = 65534
             Me.KryptonPage2.LastVisibleSet = True
@@ -136,6 +137,20 @@
             Me.KryptonPage3.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage3.UniqueName = "C7D4C634119240D3BFB221348CF70ABC"
             '
+            'crvMachala
+            '
+            Me.crvMachala.ActiveViewIndex = -1
+            Me.crvMachala.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.crvMachala.Cursor = System.Windows.Forms.Cursors.Default
+            Me.crvMachala.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.crvMachala.Location = New System.Drawing.Point(0, 0)
+            Me.crvMachala.Name = "crvMachala"
+            Me.crvMachala.ShowCloseButton = False
+            Me.crvMachala.ShowLogo = False
+            Me.crvMachala.Size = New System.Drawing.Size(880, 635)
+            Me.crvMachala.TabIndex = 0
+            Me.crvMachala.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+            '
             'txtIdComprobanteEgreso
             '
             Me.txtIdComprobanteEgreso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -156,18 +171,12 @@
             Me.txtIdComprobamteEgreso2.TabIndex = 3
             Me.txtIdComprobamteEgreso2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
-            'crvMachala
+            'PdfViewer1
             '
-            Me.crvMachala.ActiveViewIndex = -1
-            Me.crvMachala.Cursor = System.Windows.Forms.Cursors.Default
-            Me.crvMachala.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.crvMachala.Location = New System.Drawing.Point(0, 0)
-            Me.crvMachala.Name = "crvMachala"
-            Me.crvMachala.ShowCloseButton = False
-            Me.crvMachala.ShowLogo = False
-            Me.crvMachala.Size = New System.Drawing.Size(880, 635)
-            Me.crvMachala.TabIndex = 0
-            Me.crvMachala.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+            Me.PdfViewer1.Location = New System.Drawing.Point(2, 2)
+            Me.PdfViewer1.Name = "PdfViewer1"
+            Me.PdfViewer1.Size = New System.Drawing.Size(876, 622)
+            Me.PdfViewer1.TabIndex = 1
             '
             'FormReporteComprobanteEgresoBancos
             '
@@ -210,5 +219,6 @@
         Friend WithEvents txtIdComprobanteEgreso As TextBox
         Friend WithEvents txtIdComprobamteEgreso2 As TextBox
         Friend WithEvents crvMachala As CrystalDecisions.Windows.Forms.CrystalReportViewer
+        Friend WithEvents PdfViewer1 As PdfiumViewer.PdfViewer
     End Class
 End Namespace

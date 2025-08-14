@@ -226,8 +226,11 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
             dgvMayores.DataSource = Nothing
 
             'Formateo de fechas optimizado
-            Dim fechaDesde As String = $"{dtpInicio.Value.Day}-{dtpInicio.Value.Month}-{dtpInicio.Value.Year} 00:00:00"
-            Dim fechaHasta As String = $"{dtpFinal.Value.Day}-{dtpFinal.Value.Month}-{dtpFinal.Value.Year} 23:59:59"
+            'Dim fechaDesde As String = $"{dtpInicio.Value.Day}-{dtpInicio.Value.Month}-{dtpInicio.Value.Year} 00:00:00"
+            'Dim fechaHasta As String = $"{dtpFinal.Value.Day}-{dtpFinal.Value.Month}-{dtpFinal.Value.Year} 23:59:59"
+
+            Dim fechaDesde = New Date(dtpInicio.Value.Year, dtpInicio.Value.Month, dtpInicio.Value.Day, 0, 0, 0)
+            Dim fechaHasta = New Date(dtpFinal.Value.Year, dtpFinal.Value.Month, dtpFinal.Value.Day, 23, 59, 59)
 
             'Cargar DATOS principales
             dgvMayores.DataSource = objPlanCuentas.SeleccionarSaldosMayoresXFechaDiarioBalanceFinalMensual2(_tipoCon, dtpInicio.Value.Year)

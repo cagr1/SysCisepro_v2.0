@@ -1950,12 +1950,12 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                         xml += "<valorRetenido>" & Math.Round(dgvDetalleComprobanteRetencion.Rows(indiceDetalle).Cells(5).Value, 2, MidpointRounding.AwayFromZero) & "</valorRetenido>" & vbNewLine
                         If cmbNombreParametroDocumentos.SelectedValue = 9 Then
                             xml += "<codDocSustento>09</codDocSustento>" & vbNewLine
-                        ElseIf cmbNombreParametroDocumentos.SelectedValue = 0 Then
+                        ElseIf cmbNombreParametroDocumentos.SelectedValue = 1 Then
                             xml += "<codDocSustento>01</codDocSustento>" & vbNewLine
                         ElseIf cmbNombreParametroDocumentos.SelectedValue = 2 Then
-                            xml += "<codDocSustento>02</codDocSustento>" & vbNewLine
-                        Else
                             xml += "<codDocSustento>03</codDocSustento>" & vbNewLine
+                        Else
+                            xml += "<codDocSustento>09</codDocSustento>" & vbNewLine
                         End If
                         xml += "<numDocSustento>" & txtNumeroComprobanteCompra.Text & "</numDocSustento>" & vbNewLine
                         xml += "<fechaEmisionDocSustento>" & Format(dtpFechaEmisionComprobanteCompra.Value, "dd/MM/yyyy") & "</fechaEmisionDocSustento>" & vbNewLine

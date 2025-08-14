@@ -44,6 +44,16 @@ Namespace CONTABILIDAD.BANCOS
             Return ds
         End Function
 
+
+        Public Function SeleccionarChequeEmitidoXIdComprobante(ByVal tipoCon As TipoConexion, ByVal parametroBusqueda As Int64) As DataSet
+            Dim pars = New List(Of Object())
+            pars.Add(New Object() {"@id_comprobante", SqlDbType.Int, parametroBusqueda})
+            Dim obje = ComandosSql.SeleccionarQueryWithParamsToDataAdapter(tipoCon, "sp_buscarComprobantesEgresoBancoXIdComprobante", True, pars)
+            Dim ds = New DataSet()
+            obje.Fill(ds, "COMPROBANTE_EGRESO_BANCOS")
+            Return ds
+        End Function
+
         Public Function BuscarMayorIdChequeEmitidoCxp(ByVal tipoCon As TipoConexion) As Integer
             Dim data = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "BuscarMayorIdChequeEmitidoCXP", True)
             Return If(data.Rows.Count = 0, 0, If(IsDBNull(data.Rows(0)(0)), 0, CInt(data.Rows(0)(0))))

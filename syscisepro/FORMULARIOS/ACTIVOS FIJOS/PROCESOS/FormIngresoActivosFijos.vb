@@ -2287,7 +2287,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     For Each row As DataGridViewRow In dgvChaleco.Rows
                         ' PRIMERO EL REGISTRO ACTIVO FIJO
                         Dim IdDetaDepre = _objDetalleDepreciacion.BuscarMayorIdDetalleDepreciacion(_tipoCon) + id
-                        GuardarDatosActivoGeneralVarios(idActivoFijo, idDepreciacion, row.Cells(9).Value.ToString.Trim, row.Cells(11).Value.ToString.Trim, row.Cells(12).Value.ToString.Trim, row.Cells(13).Value.ToString.Trim, IdDetaDepre)
+                        GuardarDatosActivoGeneralVarios(idActivoFijo, idDepreciacion, row.Cells(3).Value.ToString.Trim, row.Cells(11).Value.ToString.Trim, row.Cells(12).Value.ToString.Trim, row.Cells(13).Value.ToString.Trim, IdDetaDepre)
 
                         With _objetoChaleco
                             .IdActivoFijo = idActivoFijo
