@@ -26,6 +26,7 @@ using ClassLibraryCisepro3.ActivoFijo;
 using Krypton.Toolkit;
 using System.IO;
 using System.Drawing.Text;
+using SysCisepro3.Contabilidad;
 
 
 
@@ -1621,11 +1622,11 @@ namespace SysCisepro3.Main
         }
         private void rEPORTEGENERALDEPERSONALToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmReportePersonalGeneral.Instancia.MdiParent = this;
-            FrmReportePersonalGeneral.TipoCon = TipoCon;
-            FrmReportePersonalGeneral.Usuario = ObjUsuario;
-            FrmReportePersonalGeneral.Instancia.Show();
-            FrmReportePersonalGeneral.Instancia.BringToFront();
+            FrmFlujoOperaciones.Instancia.MdiParent = this;
+            FrmFlujoOperaciones.TipoCon = TipoCon;
+            FrmFlujoOperaciones.Usuario = ObjUsuario;
+            FrmFlujoOperaciones.Instancia.Show();
+            FrmFlujoOperaciones.Instancia.BringToFront();
         }
         private void rESÚMENPAGOSNÓMINAToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -2174,7 +2175,16 @@ namespace SysCisepro3.Main
 
         }
 
-       
+        private void fLUJOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPersonal.Instancia.MdiParent = this;
+            FrmPersonal.TipoCon = TipoCon;
+            FrmPersonal.Usuario = ObjUsuario;
+            FrmPersonal.Instancia.Show();
+            FrmPersonal.Instancia.BringToFront();
+        }
+
+
 
 
 

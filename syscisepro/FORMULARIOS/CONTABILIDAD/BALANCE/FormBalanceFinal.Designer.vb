@@ -64,6 +64,8 @@
             Me.nodoCom = New Krypton.Toolkit.KryptonDataGridViewButtonColumn()
             Me.btnCuztomize = New Krypton.Toolkit.KryptonButton()
             Me.KryptonGroupBox4 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.btnExportarComparacion = New Krypton.Toolkit.KryptonButton()
+            Me.chkOcultar = New ComponentFactory.Krypton.Toolkit.KryptonCheckBox()
             Me.cbxDates = New ComponentFactory.Krypton.Toolkit.KryptonComboBox()
             Me.cbxShowColumns = New Krypton.Toolkit.KryptonComboBox()
             Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
@@ -71,8 +73,6 @@
             Me.dtpFechaDesdeMes = New Krypton.Toolkit.KryptonDateTimePicker()
             Me.dtpFechaHastaMes = New Krypton.Toolkit.KryptonDateTimePicker()
             Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
-            Me.chkOcultar = New ComponentFactory.Krypton.Toolkit.KryptonCheckBox()
-            Me.btnExportarComparacion = New Krypton.Toolkit.KryptonButton()
             CType(Me.dgvMayores, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.GroupBox2.SuspendLayout()
             Me.ContextMenuStripClicDerecho.SuspendLayout()
@@ -316,18 +316,18 @@
             Me.ContextMenuStripClicDerecho.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.ContextMenuStripClicDerecho.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmOcultar, Me.tsmMostrar})
             Me.ContextMenuStripClicDerecho.Name = "ContextMenuStripClicDerecho"
-            Me.ContextMenuStripClicDerecho.Size = New System.Drawing.Size(129, 48)
+            Me.ContextMenuStripClicDerecho.Size = New System.Drawing.Size(130, 48)
             '
             'tsmOcultar
             '
             Me.tsmOcultar.Name = "tsmOcultar"
-            Me.tsmOcultar.Size = New System.Drawing.Size(128, 22)
+            Me.tsmOcultar.Size = New System.Drawing.Size(129, 22)
             Me.tsmOcultar.Text = "OCULTAR"
             '
             'tsmMostrar
             '
             Me.tsmMostrar.Name = "tsmMostrar"
-            Me.tsmMostrar.Size = New System.Drawing.Size(128, 22)
+            Me.tsmMostrar.Size = New System.Drawing.Size(129, 22)
             Me.tsmMostrar.Text = "MOSTRAR"
             '
             'MenuStrip1
@@ -355,7 +355,7 @@
             Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.btnExportar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnExportar.Name = "btnExportar"
-            Me.btnExportar.Size = New System.Drawing.Size(98, 28)
+            Me.btnExportar.Size = New System.Drawing.Size(99, 28)
             Me.btnExportar.Text = "EXPORTAR"
             '
             'btnArbol
@@ -510,6 +510,38 @@
             Me.KryptonGroupBox4.Values.Heading = "Busqueda"
             Me.KryptonGroupBox4.Values.Image = Global.syscisepro.My.Resources.Resources.calendar_month_24dp_FILL0_wght400_GRAD0_opsz24__2_
             '
+            'btnExportarComparacion
+            '
+            Me.btnExportarComparacion.Location = New System.Drawing.Point(678, 3)
+            Me.btnExportarComparacion.Name = "btnExportarComparacion"
+            Me.btnExportarComparacion.Size = New System.Drawing.Size(30, 30)
+            Me.btnExportarComparacion.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.[False]
+            Me.btnExportarComparacion.StateCommon.Border.Draw = Krypton.Toolkit.InheritBool.[False]
+            Me.btnExportarComparacion.StateCommon.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnExportarComparacion.TabIndex = 254
+            Me.btnExportarComparacion.Values.ImageStates.ImageCheckedNormal = Nothing
+            Me.btnExportarComparacion.Values.ImageStates.ImageCheckedPressed = Nothing
+            Me.btnExportarComparacion.Values.ImageStates.ImageCheckedTracking = Nothing
+            Me.btnExportarComparacion.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarComparacion.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarComparacion.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarComparacion.Values.Text = ""
+            '
+            'chkOcultar
+            '
+            Me.chkOcultar.Images.CheckedNormal = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chkOcultar.Images.CheckedPressed = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chkOcultar.Images.CheckedTracking = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chkOcultar.Location = New System.Drawing.Point(567, 10)
+            Me.chkOcultar.Name = "chkOcultar"
+            Me.chkOcultar.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue
+            Me.chkOcultar.Size = New System.Drawing.Size(91, 18)
+            Me.chkOcultar.StateCommon.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chkOcultar.TabIndex = 253
+            Me.chkOcultar.Values.Text = "Quitar $0.00"
+            '
             'cbxDates
             '
             Me.cbxDates.AlwaysActive = False
@@ -586,38 +618,6 @@
             Me.KryptonPage2.Text = "Arbol"
             Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage2.UniqueName = "FF643023690441A3F980E845C980F1C1"
-            '
-            'chkOcultar
-            '
-            Me.chkOcultar.Images.CheckedNormal = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.chkOcultar.Images.CheckedPressed = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.chkOcultar.Images.CheckedTracking = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.chkOcultar.Location = New System.Drawing.Point(567, 10)
-            Me.chkOcultar.Name = "chkOcultar"
-            Me.chkOcultar.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue
-            Me.chkOcultar.Size = New System.Drawing.Size(91, 18)
-            Me.chkOcultar.StateCommon.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.chkOcultar.TabIndex = 253
-            Me.chkOcultar.Values.Text = "Quitar $0.00"
-            '
-            'btnExportarComparacion
-            '
-            Me.btnExportarComparacion.Location = New System.Drawing.Point(678, 3)
-            Me.btnExportarComparacion.Name = "btnExportarComparacion"
-            Me.btnExportarComparacion.Size = New System.Drawing.Size(30, 30)
-            Me.btnExportarComparacion.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.[False]
-            Me.btnExportarComparacion.StateCommon.Border.Draw = Krypton.Toolkit.InheritBool.[False]
-            Me.btnExportarComparacion.StateCommon.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
-            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
-            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
-            Me.btnExportarComparacion.TabIndex = 254
-            Me.btnExportarComparacion.Values.ImageStates.ImageCheckedNormal = Nothing
-            Me.btnExportarComparacion.Values.ImageStates.ImageCheckedPressed = Nothing
-            Me.btnExportarComparacion.Values.ImageStates.ImageCheckedTracking = Nothing
-            Me.btnExportarComparacion.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.icons8_excel_48
-            Me.btnExportarComparacion.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.icons8_excel_48
-            Me.btnExportarComparacion.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.icons8_excel_48
-            Me.btnExportarComparacion.Values.Text = ""
             '
             'FormBalanceFinal
             '

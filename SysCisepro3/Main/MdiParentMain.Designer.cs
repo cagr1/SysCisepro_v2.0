@@ -297,6 +297,7 @@
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.fLUJOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -436,7 +437,7 @@
             this.tsAdministracion.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsAdministracion.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsAdministracion.Name = "tsAdministracion";
-            this.tsAdministracion.Size = new System.Drawing.Size(142, 47);
+            this.tsAdministracion.Size = new System.Drawing.Size(143, 47);
             this.tsAdministracion.Text = "ADMINISTRACIÓN";
             this.tsAdministracion.Click += new System.EventHandler(this.tsAdministracion_Click);
             this.tsAdministracion.MouseLeave += new System.EventHandler(this.tsAdministracion_MouseLeave);
@@ -656,7 +657,7 @@
             this.tsActivosFijos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsActivosFijos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsActivosFijos.Name = "tsActivosFijos";
-            this.tsActivosFijos.Size = new System.Drawing.Size(122, 47);
+            this.tsActivosFijos.Size = new System.Drawing.Size(123, 47);
             this.tsActivosFijos.Text = "ACTIVOS FIJOS";
             this.tsActivosFijos.Click += new System.EventHandler(this.tsActivosFijos_Click);
             this.tsActivosFijos.MouseLeave += new System.EventHandler(this.tsActivosFijos_MouseLeave);
@@ -1190,7 +1191,7 @@
             this.tsContabilidad.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsContabilidad.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsContabilidad.Name = "tsContabilidad";
-            this.tsContabilidad.Size = new System.Drawing.Size(126, 47);
+            this.tsContabilidad.Size = new System.Drawing.Size(127, 47);
             this.tsContabilidad.Text = "CONTABILIDAD";
             this.tsContabilidad.MouseLeave += new System.EventHandler(this.tsContabilidad_MouseLeave);
             this.tsContabilidad.MouseHover += new System.EventHandler(this.tsContabilidad_MouseHover);
@@ -2064,7 +2065,8 @@
             this.mAYORIZACIÓNToolStripMenuItem,
             this.bALANCEDECOMPROBACIÓNToolStripMenuItem,
             this.eSTADODEPÉRDIDASYGANANCIASToolStripMenuItem,
-            this.bALANCEFINALToolStripMenuItem});
+            this.bALANCEFINALToolStripMenuItem,
+            this.fLUJOToolStripMenuItem});
             this.rEPORTESCONTABLESToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rEPORTESCONTABLESToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.analytics_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.rEPORTESCONTABLESToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -2792,6 +2794,14 @@
             this.notifyIcon1.BalloonTipClicked += new System.EventHandler(this.notifyIcon1_BalloonTipClicked);
             this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_Click);
             // 
+            // fLUJOToolStripMenuItem
+            // 
+            this.fLUJOToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.finance_mode_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.fLUJOToolStripMenuItem.Name = "fLUJOToolStripMenuItem";
+            this.fLUJOToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.fLUJOToolStripMenuItem.Text = "FLUJO DE OPERACION";
+            this.fLUJOToolStripMenuItem.Click += new System.EventHandler(this.fLUJOToolStripMenuItem_Click);
+            // 
             // MdiParentMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -3098,6 +3108,7 @@
         private System.Windows.Forms.ToolStripMenuItem rEPORTToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator24;
+        private System.Windows.Forms.ToolStripMenuItem fLUJOToolStripMenuItem;
     }
 }
 

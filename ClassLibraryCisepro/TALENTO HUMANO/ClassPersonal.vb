@@ -168,11 +168,12 @@ Namespace TALENTO_HUMANO
 
         Public Function BuscarFiltradoPorNombrePersonalGeneralOperaciones(ByVal tipoCon As TipoConexion, ByVal parametroBusqueda As String, ByVal todos As Boolean) As DataTable
             Dim pars = New List(Of Object())
-            pars.Add(New Object() {"filtro", SqlDbType.VarChar, parametroBusqueda})
-            Dim sql = "select p.id_personal,1 un,2 dos, p.cedula, p.nombres, p.apellidos, 3 tres,c.descripcion cargo, " & _
-                        "a.nombre_area area, p.movil, p.telefono from personal p join area_general a on p.id_area = a.id_area_general join cargo_ocupacional c on " & _
-                            "p.id_cargo_ocupacional = c.id_cargo_ocupacional where " & (If(todos, String.Empty, "estado_personal = 1 and a.id_gerencias_general=2 and ")) & " (p.cedula like ('%'+ @filtro +'%') or p.apellidos like ('%'+ @filtro +'%') or p.nombres like ('%'+ @filtro +'%') or c.descripcion like ('%'+ @filtro +'%') or a.nombre_area like ('%'+ @filtro +'%')) order by p.apellidos, p.nombres;"
-            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, sql, False, pars) 
+            pars.Add(New Object() {"filtro", SqlDbType.NVarChar, parametroBusqueda})
+            pars.Add(New Object() {"todos", SqlDbType.Bit, todos})
+            'Dim sql = "select p.id_personal,1 un,2 dos, p.cedula, p.nombres, p.apellidos, 3 tres,c.descripcion cargo, " & _
+            '            "a.nombre_area area, p.movil, p.telefono from personal p join area_general a on p.id_area = a.id_area_general join cargo_ocupacional c on " & _
+            '                "p.id_cargo_ocupacional = c.id_cargo_ocupacional where " & (If(todos, String.Empty, "estado_personal = 1 and a.id_gerencias_general=2 and ")) & " (p.cedula like ('%'+ @filtro +'%') or p.apellidos like ('%'+ @filtro +'%') or p.nombres like ('%'+ @filtro +'%') or c.descripcion like ('%'+ @filtro +'%') or a.nombre_area like ('%'+ @filtro +'%')) order by p.apellidos, p.nombres;"
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_buscarFiltradoPorNombrePerosnalGenrealOperaciones", True, pars)
         End Function
 
         Public Function BuscarFiltradoPorNombrePersonalGeneralAdministrativo(ByVal tipoCon As TipoConexion, ByVal parametroBusqueda As String, ByVal todos As Boolean) As DataTable

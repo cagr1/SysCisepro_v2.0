@@ -398,6 +398,12 @@
     <Compile Include="Contabilidad\FrmBuscarPlanCuentas.Designer.cs">
       <DependentUpon>FrmBuscarPlanCuentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contabilidad\FrmFlujoOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\FrmFlujoOperaciones.Designer.cs">
+      <DependentUpon>FrmFlujoOperaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Datos\dsCredencialPersonal.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -788,6 +794,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Contabilidad\FrmBuscarPlanCuentas.resx">
       <DependentUpon>FrmBuscarPlanCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\FrmFlujoOperaciones.resx">
+      <DependentUpon>FrmFlujoOperaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmIntro.resx">
       <DependentUpon>FrmIntro.cs</DependentUpon>

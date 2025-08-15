@@ -211,9 +211,8 @@ namespace SysCisepro3.TalentoHumano
             {
                 //var tipo = (cbxFiltro.SelectedIndex == 0 || string.IsNullOrWhiteSpace(cbxFiltro.Text)) ? string.Empty : cbxFiltro.Text;
                 var tipo = (cbxFiltro.SelectedIndex == 0 || string.IsNullOrWhiteSpace(cbxFiltro.Text))  ? " "  : cbxFiltro.Text;
-                //var fechaDesde = dtpFechaDesde.Value.Year + "-" + dtpFechaDesde.Value.Month + "-" + dtpFechaDesde.Value.Day + " 00:00:00";
+                
                 var fechaDesde = dtpFechaDesde.Value.Day + "-" + dtpFechaDesde.Value.Month + "-" + dtpFechaDesde.Value.Year + " 00:00:00";
-                //var fechaHasta = dtpFechaHasta.Value.Year + "-" + dtpFechaHasta.Value.Month + "-" + dtpFechaHasta.Value.Day + " 23:59:59";
                 var fechaHasta = dtpFechaHasta.Value.Day + "-" + dtpFechaHasta.Value.Month + "-" + dtpFechaHasta.Value.Year + " 23:59:59";
                 //var filtro = string.IsNullOrWhiteSpace(txtFiltro.Text) ? string.Empty : txtFiltro.Text.Trim();
                 var filtro = string.IsNullOrWhiteSpace(txtFiltro.Text) ? " " : txtFiltro.Text.Trim();

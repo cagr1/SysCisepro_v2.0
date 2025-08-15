@@ -26,5 +26,8 @@ namespace ClassLibraryCisepro3.Contabilidad.PlanDeCuentas
             foreach (DataRow row in d.Rows) c.Add(row[0].ToString());
             return c;
         }
+
+
+
     }
 }
