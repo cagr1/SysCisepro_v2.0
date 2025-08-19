@@ -1,4 +1,6 @@
-﻿using System.Data;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Windows.Forms;
 using ClassLibraryCisepro3.Enums;
 using ClassLibraryCisepro3.ProcesosSql;
@@ -26,6 +28,22 @@ namespace ClassLibraryCisepro3.Contabilidad.PlanDeCuentas
             foreach (DataRow row in d.Rows) c.Add(row[0].ToString());
             return c;
         }
+
+        public DataTable SeleccionarCuentasBalanceFinalYPerdidasGanacias(TipoConexion tipoCon, DateTime desde, DateTime hasta)
+        {
+            var pars = new List<object[]>
+            {
+                new object[] { "@fecha_inicial", SqlDbType.DateTime, desde }
+                , new object[] { "@fecha_final", SqlDbType.DateTime, hasta }
+        
+            };
+
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_SeleccionarCuentasBalanceFinalYPerdidasGanacias", true, pars);
+        }
+
+        
+
+
 
 
 

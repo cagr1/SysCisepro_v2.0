@@ -2177,11 +2177,11 @@ namespace SysCisepro3.Main
 
         private void fLUJOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmPersonal.Instancia.MdiParent = this;
-            FrmPersonal.TipoCon = TipoCon;
-            FrmPersonal.Usuario = ObjUsuario;
-            FrmPersonal.Instancia.Show();
-            FrmPersonal.Instancia.BringToFront();
+            FrmFlujoOperaciones.Instancia.MdiParent = this;
+            FrmFlujoOperaciones.TipoCon = TipoCon;
+            FrmFlujoOperaciones.Usuario = ObjUsuario;
+            FrmFlujoOperaciones.Instancia.Show();
+            FrmFlujoOperaciones.Instancia.BringToFront();
         }
 
 
