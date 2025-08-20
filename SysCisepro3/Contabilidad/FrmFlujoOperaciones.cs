@@ -16,6 +16,9 @@ using ClassLibraryCisepro3.UsuarioGeneral;
 using SysCisepro3.Datos;
 using SysCisepro3.TalentoHumano;
 using ClosedXML.Excel;
+using ClassLibraryCisepro3.Estaticas;
+using System.Diagnostics;
+using System.IO;
 
 namespace SysCisepro3.Contabilidad
 {
@@ -127,10 +130,24 @@ namespace SysCisepro3.Contabilidad
             dtFlujo.Columns.Add("Descripcion", typeof(string));
             dtFlujo.Columns.Add("Valor", typeof(decimal));
 
+            DataRow row = dtFlujo.NewRow();
+            DataRow row2 = dtFlujo.NewRow();
+            DataRow row3 = dtFlujo.NewRow();
+            DataRow row4 = dtFlujo.NewRow();
+            DataRow row5 = dtFlujo.NewRow();
+            DataRow row6 = dtFlujo.NewRow();
+            DataRow row7 = dtFlujo.NewRow();
+            DataRow row8 = dtFlujo.NewRow();
+            DataRow row9 = dtFlujo.NewRow();
+            DataRow row10 = dtFlujo.NewRow();
+            DataRow row11 = dtFlujo.NewRow();
+            DataRow row12 = dtFlujo.NewRow();
+
             // Agregar las filas según la estructura requerida
             dtFlujo.Rows.Add("FLUJOS DE OPERACIÓN");//0
+            dtFlujo.Rows.Add(row);
             dtFlujo.Rows.Add("GANANCIA (PÉRDIDA) ANTES DE 15% A TRABAJADORES E IMPUESTO A LA RENTA");//1
-            dtFlujo.Rows.Add(" ");//2
+            dtFlujo.Rows.Add(row2);//2
             dtFlujo.Rows.Add("AJUSTE POR PARTIDAS DISTINTAS AL EFECTIVO:");//3
             dtFlujo.Rows.Add("Ajustes por gasto de depreciación y amortización");//3
             dtFlujo.Rows.Add("Ajustes por Gastos Intereses (FLUJO FINANCIAMIENTO)");//4
@@ -144,7 +161,7 @@ namespace SysCisepro3.Contabilidad
             dtFlujo.Rows.Add("Ajustes por gasto por impuesto a la renta");
             dtFlujo.Rows.Add("Ajustes por gasto por participación trabajadores");
             dtFlujo.Rows.Add("Otros ajustes por partidas distintas al efectivo");
-            dtFlujo.Rows.Add("");
+            dtFlujo.Rows.Add(row3);
             dtFlujo.Rows.Add("CAMBIOS EN ACTIVOS Y PASIVOS:");//16
             dtFlujo.Rows.Add("(Incremento) disminución en cuentas por cobrar clientes");//17
             dtFlujo.Rows.Add("(Incremento) disminución en otras cuentas por cobrar");//18
@@ -156,18 +173,22 @@ namespace SysCisepro3.Contabilidad
             dtFlujo.Rows.Add("Incremento (disminución) en otras cuentas por pagar");
             dtFlujo.Rows.Add("Incremento (disminución) en beneficios empleados");
             dtFlujo.Rows.Add("Incremento (disminución) en anticipos de clientes");
-            dtFlujo.Rows.Add("Incremento (disminución) en otros pasivos");//
+            dtFlujo.Rows.Add("Incremento (disminución) en otros pasivos");
+            dtFlujo.Rows.Add(row4);
             dtFlujo.Rows.Add("Flujos de efectivo netos procedentes de (utilizados en) actividades de operación");
+            dtFlujo.Rows.Add(row5);
             dtFlujo.Rows.Add("FLUJOS DE INVERSION");
+            dtFlujo.Rows.Add(row6);
             dtFlujo.Rows.Add("CAMBIOS EN ACTIVOS NO CORRIENTES");
             dtFlujo.Rows.Add("(Incremento) disminución en PROPIEDADES PLANTAS Y EQUIPOS");
             dtFlujo.Rows.Add("(Incremento) disminución en ACTIVOS BIOLOGICOS");
             dtFlujo.Rows.Add("(Incremento) disminución en ACTIVOS INVERSION");
             dtFlujo.Rows.Add("(Incremento) disminución en otros activos");
-            dtFlujo.Rows.Add(" ");
+            dtFlujo.Rows.Add(row7);
             dtFlujo.Rows.Add("Flujos de efectivo netos procedentes de (utilizados en) actividades de INVERSION");
-            dtFlujo.Rows.Add(" ");
+            dtFlujo.Rows.Add(row8);
             dtFlujo.Rows.Add("FLUJOS DE FINANCIAMIENTO");
+            dtFlujo.Rows.Add(row9);
             dtFlujo.Rows.Add("CAMBIOS EN PASIVOS NO CORRIENTES Y PATRIMONIO :");
             dtFlujo.Rows.Add("(Incremento) disminución en CAPITAL SOCIAL");
             dtFlujo.Rows.Add("(Incremento) disminución en PARTICIPACION FUTURAS CAPITALIZACIONES");
@@ -176,7 +197,9 @@ namespace SysCisepro3.Contabilidad
             dtFlujo.Rows.Add("(Incremento) disminución en otros PRESTAMOS A LARGO PLAZO");
             dtFlujo.Rows.Add("(Incremento) disminución en otros CTAS POR PAGAR ACCIONISTAS NO CORRIENTES");
             dtFlujo.Rows.Add("(Incremento) disminución en otros PASIVOS NO CORRIENTES");
+            dtFlujo.Rows.Add(row10);
             dtFlujo.Rows.Add("Flujos de efectivo netos procedentes de (utilizados en) actividades de FINANCIAMIENTO");
+            dtFlujo.Rows.Add(row11);
             dtFlujo.Rows.Add("EFECTOS DE LA VARIACION SOBRE EL EFECTIVO Y EQUIVALENTES AL DE EFECTIVO");
             dtFlujo.Rows.Add("Efectos de la variación en la tasa de cambio sobre el efectivo y equivalentes al efectivo");
             dtFlujo.Rows.Add("INCREMENTO (DISMINUCIÓN) NETO DE EFECTIVO Y EQUIVALENTES AL EFECTIVO");
@@ -202,7 +225,7 @@ namespace SysCisepro3.Contabilidad
             decimal utilidadAnterior = ActivoAnterior + PasivoAnterior + PatrimonioAnterior;
 
             decimal variacionUtilidad = utilidadActual - utilidadAnterior;
-            //NumberFormat.Format = "#,##0.00" variacion de utilidad 
+            
             
 
             dtFlujo.Rows[2]["Valor"] = variacionUtilidad;
@@ -214,12 +237,12 @@ namespace SysCisepro3.Contabilidad
             decimal Ajuste1 = ObtenerValorCuentaResultados(dtActual, Depreciaciones);
             
                         
-            dtFlujo.Rows[4]["Valor"] = Ajuste1 ;
+            dtFlujo.Rows[5]["Valor"] = Ajuste1 ;
             
             //total bloque1
             decimal bloque1 = Ajuste1;
             //total sumado bloque 1
-            dtFlujo.Rows[3]["Valor"] = bloque1;
+            dtFlujo.Rows[4]["Valor"] = bloque1;
 
             //BLOQUE 2
             
@@ -227,21 +250,21 @@ namespace SysCisepro3.Contabilidad
             //dismunicion en cuentas por cobrar clientes
             string CuentasPorCobrar = "1010205";
 
-            decimal cambios1 = ObtenerValorCuentaVariacion(dtVariacion, CuentasPorCobrar);
-            dtFlujo.Rows[18]["Valor"] = cambios1;
+            decimal activo1 = ObtenerValorCuentaVariacion(dtVariacion, CuentasPorCobrar);
+            dtFlujo.Rows[19]["Valor"] = activo1;
 
             //dismunicion en cuentas otras cuentas por cobrar 
             string CuentasPorCobrar2 = "1010208";
             
-            decimal cambios2 = ObtenerValorCuentaVariacion(dtVariacion, CuentasPorCobrar2);
-            dtFlujo.Rows[19]["Valor"] = cambios2;
+            decimal activo2 = ObtenerValorCuentaVariacion(dtVariacion, CuentasPorCobrar2);
+            dtFlujo.Rows[20]["Valor"] = activo2;
 
             //dismunicion en anticipos de proveedores
 
             string AnticiposProveedores = "1010403";
             
-            decimal cambios3 = ObtenerValorCuentaVariacion(dtVariacion, AnticiposProveedores);
-            dtFlujo.Rows[20]["Valor"] = cambios3;
+            decimal activo3 = ObtenerValorCuentaVariacion(dtVariacion, AnticiposProveedores);
+            dtFlujo.Rows[21]["Valor"] = activo3;
            
             //disminucion en otros activos
 
@@ -256,20 +279,22 @@ namespace SysCisepro3.Contabilidad
             string ActivosImpuestosCorrientes = "10105";
             
             decimal ao3 = ObtenerValorCuentaVariacion(dtVariacion, ActivosImpuestosCorrientes);
+
+            decimal otrosActivos = (ao1 + ao2 + ao3);
             
-            dtFlujo.Rows[21]["Valor"] = ao1 + ao2 + ao3;
+            dtFlujo.Rows[24]["Valor"] = otrosActivos;
 
             //dismunicion en cuentas por pagar comerciales
             string CuentasPorPagar = "20103";
             
-            decimal cambios4 = ObtenerValorCuentaVariacion(dtVariacion, CuentasPorPagar);
-            dtFlujo.Rows[24]["Valor"] = cambios4;
+            decimal pasivo1 = ObtenerValorCuentaVariacion(dtVariacion, CuentasPorPagar);
+            dtFlujo.Rows[25]["Valor"] = pasivo1;
 
             //dismunicion en cuentas por otras cuentas pagar 
             string CuentasPorPagar2 = "2010701";
             
-            decimal cambios5 = ObtenerValorCuentaVariacion(dtVariacion, CuentasPorPagar2);
-            dtFlujo.Rows[25]["Valor"] = cambios5;
+            decimal pasivo2 = ObtenerValorCuentaVariacion(dtVariacion, CuentasPorPagar2);
+            dtFlujo.Rows[26]["Valor"] = pasivo2;
 
             //dismunicion en benefecios a empleados
             string iess = "2010703";
@@ -291,15 +316,17 @@ namespace SysCisepro3.Contabilidad
             string utilidadesporpagar = "2010709001";
 
             decimal be5 = ObtenerValorCuentaVariacion(dtVariacion, utilidadesporpagar);
+
+            decimal totalBeneficios = be + be2 + be3 + be4 + be5;
             
-            dtFlujo.Rows[26]["Valor"] = be + be2 + be3 + be4 + be5;
+            dtFlujo.Rows[27]["Valor"] = totalBeneficios;
 
             //dismunicion en anticipos a clientes
 
             string AnticiposClientes = "20113";
 
-            decimal cambios6 = ObtenerValorCuentaVariacion(dtVariacion, AnticiposClientes);
-            dtFlujo.Rows[27]["Valor"] = cambios6;
+            decimal pasivo3 = ObtenerValorCuentaVariacion(dtVariacion, AnticiposClientes);
+            dtFlujo.Rows[28]["Valor"] = pasivo3;
 
             //disminucion en otros pasivos
 
@@ -315,35 +342,149 @@ namespace SysCisepro3.Contabilidad
             
             decimal op3 = ObtenerValorCuentaVariacion(dtVariacion, PasivoPorDerechoArriendo);
 
-            dtFlujo.Rows[28]["Valor"] = op1 + op2 + op3;
+            decimal otrosPasivos = (op1 + op2 + op3);
+
+            dtFlujo.Rows[29]["Valor"] = otrosPasivos;
 
             //total sumado bloque 2
 
-            decimal bloque2 = ao1 + ao2 + ao3 + be + be2 + be3 + be4 + be5 + op1 + op2 + op3 + cambios1 + cambios2 + cambios3 + cambios4 + cambios5 + cambios6;
+            decimal bloque2 = activo1 + activo2 + activo3  + otrosActivos + pasivo1 + pasivo2 + pasivo3  + totalBeneficios  + otrosPasivos;
 
-            dtFlujo.Rows[17]["Valor"] = bloque2;
+            dtFlujo.Rows[18]["Valor"] = bloque2;
 
-            //flujos de efectivos netos
+            //flujos de efectivos netos procendetes de actividades de operaciones
 
-            dtFlujo.Rows[30]["valor"]= 
+            dtFlujo.Rows[31]["valor"]=  variacionUtilidad + bloque1 - bloque2;
+
+            //bloque3
+
+            // (Incremento) disminución en PROPIEDADES PLANTAS Y EQUIPOS
+
+            string mueblesYEnseres = "1020105";
+
+            decimal muebles = ObtenerValorCuentaVariacion(dtVariacion, mueblesYEnseres);
+            
+            string equiposComputacion = "1020108";
+            
+            decimal equipos = ObtenerValorCuentaVariacion(dtVariacion, equiposComputacion);
+
+            string vehiuclosEqupos = "1020109";
+            
+            decimal vehiculos = ObtenerValorCuentaVariacion(dtVariacion, vehiuclosEqupos);
+
+            string otrosMuebles = "1020110";
+
+            decimal otros = ObtenerValorCuentaVariacion(dtVariacion, otrosMuebles);
+
+            decimal propiedades = muebles + equipos + vehiculos + otros;
+                        
+            dtFlujo.Rows[36]["Valor"] = propiedades;
+
+            decimal bloque3 = propiedades;
+
+            //  Flujos de efectivo netos procedentes de (utilizados en) actividades de INVERSION
+
+            dtFlujo.Rows[41]["valor"] = bloque3;
+
+
+            //bloque 4
+
+            //(Incremento)disminución en otros PRESTAMOS A LARGO PLAZO
+
+            string ObligacionesFiancieras = "20203";
+
+            decimal Obligaciones = ObtenerValorCuentaVariacion(dtVariacion, ObligacionesFiancieras);
+
+            dtFlujo.Rows[50]["Valor"] = Obligaciones;
+
+            //(Incremento) disminución en otros PASIVOS NO CORRIENTES
+
+            string ProvisionesBenficicios = "20207";
+
+            decimal Provisiones = ObtenerValorCuentaVariacion(dtVariacion, ProvisionesBenficicios);
+
+            dtFlujo.Rows[52]["Valor"] = Provisiones;
+
+            decimal bloque4 =  Obligaciones + Provisiones;
+            
+            //Flujos de efectivo netos procedentes de (utilizados en) actividades de FINANCIAMIENTO
+
+            dtFlujo.Rows[54]["valor"] = bloque4;
+
+            //bloque 5
+
+            // INCREMENTO (DISMINUCIÓN) NETO DE EFECTIVO Y EQUIVALENTES AL EFECTIVO
+
+            dtFlujo.Rows[58]["valor"] = (variacionUtilidad + bloque1 - bloque2) + bloque3 + bloque4;
+
+            //EFECTIVO Y EQUIVALENTES AL EFECTIVO AL PRINCIPIO DEL PERIODO
+            string EfectivoEquivalente = "10101";
+            decimal EFectivoAntiguo = ObtenerValorCuentaResultados(dtAntiguo, EfectivoEquivalente);
+
+            dtFlujo.Rows[59]["valor"] = EFectivoAntiguo;
+
+
+            //EFECTIVO Y EQUIVALENTES AL EFECTIVO AL FINAL DEL PERIODO
+
+            dtFlujo.Rows[60]["valor"] = variacionUtilidad + bloque1 - bloque2 + bloque3 + bloque4 + EFectivoAntiguo;
+
+
 
             // Asignar al DataGridView
             dgvFlujoOperaciones.DataSource = dtFlujo;
             dgvFlujoOperaciones.Columns["Valor"].DefaultCellStyle.Format = "#,##0.00";
             dgvFlujoOperaciones.Columns["Valor"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvFlujoOperaciones.Rows[0].DefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold);
+            dgvFlujoOperaciones.Rows[0].DefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
             dgvFlujoOperaciones.Rows[0].DefaultCellStyle.BackColor = Color.FromArgb(30, 57, 91);
             dgvFlujoOperaciones.Rows[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dgvFlujoOperaciones.Rows[1].DefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
-            dgvFlujoOperaciones.Rows[1].DefaultCellStyle.BackColor = Color.FromArgb(30, 57, 91);
-            dgvFlujoOperaciones.Rows[1].DefaultCellStyle.ForeColor = Color.White;
-            
+            dgvFlujoOperaciones.Rows[2].DefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+            dgvFlujoOperaciones.Rows[2].DefaultCellStyle.BackColor = Color.FromArgb(30, 57, 91);
+            dgvFlujoOperaciones.Rows[2].DefaultCellStyle.ForeColor = Color.White;
 
-            dgvFlujoOperaciones.Rows[16].DefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
-            dgvFlujoOperaciones.Rows[16].DefaultCellStyle.BackColor = Color.FromArgb(30, 57, 91);
-            dgvFlujoOperaciones.Rows[16].DefaultCellStyle.ForeColor = Color.White;
+            dgvFlujoOperaciones.Rows[4].DefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+            dgvFlujoOperaciones.Rows[4].DefaultCellStyle.BackColor = Color.FromArgb(30, 57, 91);
+            dgvFlujoOperaciones.Rows[4].DefaultCellStyle.ForeColor = Color.White;
+
+
+            dgvFlujoOperaciones.Rows[18].DefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+            dgvFlujoOperaciones.Rows[18].DefaultCellStyle.BackColor = Color.FromArgb(30, 57, 91);
+            dgvFlujoOperaciones.Rows[18].DefaultCellStyle.ForeColor = Color.White;
+
+            dgvFlujoOperaciones.Rows[31].DefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Bold);
+            dgvFlujoOperaciones.Rows[31].DefaultCellStyle.ForeColor = Color.FromArgb(30, 57, 91);
+
+            dgvFlujoOperaciones.Rows[33].DefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+            dgvFlujoOperaciones.Rows[33].DefaultCellStyle.BackColor = Color.FromArgb(30, 57, 91);
+            dgvFlujoOperaciones.Rows[33].DefaultCellStyle.ForeColor = Color.White;
+
+            dgvFlujoOperaciones.Rows[35].DefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+            dgvFlujoOperaciones.Rows[35].DefaultCellStyle.BackColor = Color.FromArgb(30, 57, 91);
+            dgvFlujoOperaciones.Rows[35].DefaultCellStyle.ForeColor = Color.White;
+
+            dgvFlujoOperaciones.Rows[41].DefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Bold);
+            dgvFlujoOperaciones.Rows[41].DefaultCellStyle.ForeColor = Color.FromArgb(30, 57, 91);
+
+            dgvFlujoOperaciones.Rows[43].DefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+            dgvFlujoOperaciones.Rows[43].DefaultCellStyle.BackColor = Color.FromArgb(30, 57, 91);
+            dgvFlujoOperaciones.Rows[43].DefaultCellStyle.ForeColor = Color.White;
+
+            dgvFlujoOperaciones.Rows[45].DefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+            dgvFlujoOperaciones.Rows[45].DefaultCellStyle.BackColor = Color.FromArgb(30, 57, 91);
+            dgvFlujoOperaciones.Rows[45].DefaultCellStyle.ForeColor = Color.White;
+
+            dgvFlujoOperaciones.Rows[54].DefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Bold);
+            dgvFlujoOperaciones.Rows[54].DefaultCellStyle.ForeColor = Color.FromArgb(30, 57, 91);
+
+            dgvFlujoOperaciones.Rows[56].DefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+            dgvFlujoOperaciones.Rows[56].DefaultCellStyle.BackColor = Color.FromArgb(30, 57, 91);
+            dgvFlujoOperaciones.Rows[56].DefaultCellStyle.ForeColor = Color.White;
+
+
+
             dgvFlujoOperaciones.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
+
 
         }
 
@@ -392,6 +533,159 @@ namespace SysCisepro3.Contabilidad
             }
         }
 
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            ExportToExcelDgv(dgvFlujoOperaciones, "FlujoOperaciones");
 
+        }
+
+
+        private void ExportToExcelDgv(DataGridView dgv, string nombreArchivo)
+        {
+
+            try
+            {
+
+                if (dgv == null || dgv.Rows.Count == 0)
+                {
+                    KryptonMessageBox.Show("No hay datos para exportar.", "Aviso", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning);
+                    return;
+                }
+
+                var fec = DateTime.Now;
+                var sfd = new SaveFileDialog
+                {
+                    Filter = @"Excel Files(.xlsx)|*.xlsx",
+                    Title = @"EXPORTAR A EXCEL",
+                    FileName = $"{nombreArchivo}_{fec.Year}{fec.Month}{fec.Day}_{fec.Hour}{fec.Minute}.xlsx"
+                };
+
+                if (sfd.ShowDialog() != DialogResult.OK) return;
+
+                // Usamos ClosedXML para crear un archivo Excel
+                var workbook = new XLWorkbook();
+                var worksheet = workbook.Worksheets.Add("FLUJO_OPERACIONES");
+
+                // Contar columnas visibles
+                int l = -1;
+                for (int i = 0; i < dgv.Columns.Count; i++)
+                {
+                    if (dgv.Columns[i].Visible) l++;
+                }
+                string ic = ValidationForms.NumToCharExcel(l);
+
+                // Número de filas
+                int rc = dgv.RowCount + 20;
+
+                // Establecer tamaño de fuente
+                worksheet.Range("A1:" + ic + rc).Style.Font.SetFontSize(10);
+
+                // Título
+                worksheet.Range("A1:" + ic + "1").Merge().Value = Validaciones.NombreCompany(TipoCon) + " - Flujo de Efectivo";
+                worksheet.Range("A1:" + ic + "1").Style.Font.SetBold(true).Font.SetFontSize(12);
+                worksheet.Range("A1:" + ic + "1").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Left;
+                worksheet.Range("A1:" + ic + "1").Style.Fill.SetBackgroundColor(XLColor.FromColor(ValidationForms.GetColorSistema(TipoCon)));
+                worksheet.Range("A1:" + ic + "1").Style.Font.SetFontColor(XLColor.White);
+
+                // Fecha de impresión
+                worksheet.Range("A3:" + ic + "3").Merge().Value = "Desde el " + dtpFechaDesde.Value.ToShortDateString() + " AL " + dtpFechaHasta.Value.ToShortDateString() + "                Fecha de Impresión: " + Usuario.Now(TipoCon);
+                worksheet.Range("A3:" + ic + "3").Style.Font.SetFontSize(12);
+
+                // Encabezados de las columnas
+                int head = 5;
+                int x = 1;
+                for (int i = 0; i < dgv.Columns.Count; i++)
+                {
+                    if (!dgv.Columns[i].Visible) continue;
+                    worksheet.Cell(head, x).Value = dgv.Columns[i].HeaderText;
+                    worksheet.Cell(head, x).Style.Font.SetBold(true);
+                    worksheet.Cell(head, x).Style.Border.SetOutsideBorder(XLBorderStyleValues.Thin);
+                    worksheet.Cell(head, x).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                    worksheet.Cell(head, x).Style.Fill.SetBackgroundColor(XLColor.FromColor(ValidationForms.GetColorSistema(TipoCon)));
+                    worksheet.Cell(head, x).Style.Font.SetFontColor(XLColor.White);
+                    x++;
+                }
+
+                // Datos de las filas
+                head++;
+                foreach (DataGridViewRow row in dgv.Rows)
+                {
+                    int y = 1;
+                    for (int j = 0; j < dgv.Columns.Count; j++)
+                    {
+                        if (!dgv.Columns[j].Visible) continue;
+                        var cellValue = row.Cells[j].Value;
+                        var headerText = dgv.Columns[j].HeaderText.ToUpper();
+
+                        if (headerText == "Descripcion" )
+                        {
+                            worksheet.Cell(head, y).Value = cellValue?.ToString() ?? string.Empty;
+                        }
+                        else
+                        {
+                            if (IsNumeric(cellValue))
+                            {
+                                worksheet.Cell(head, y).Value = Convert.ToDouble(cellValue);
+                                worksheet.Cell(head, y).Style.NumberFormat.Format = "#,##0.00";
+                            }
+                            else
+                            {
+                                worksheet.Cell(head, y).Value = cellValue?.ToString() ?? string.Empty;
+                            }
+                        }
+
+
+
+                        worksheet.Cell(head, y).Style.Border.SetOutsideBorder(XLBorderStyleValues.Thin);
+                        y++;
+                    }
+                    head++;
+                }
+
+                
+                // Logo en la celda correspondiente
+                var newlogo = Validaciones.NombreLogo(TipoCon, System.Windows.Forms.Application.StartupPath);
+
+                using (var logoImage = Image.FromFile(newlogo))
+                {
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        logoImage.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                        ms.Position = 0;
+
+                        worksheet.AddPicture(ms)
+                            .MoveTo(worksheet.Cell(2, 7))
+                            .WithSize(70, 70);
+                    }
+                }
+
+                // Ajustar el ancho de las columnas
+                worksheet.Columns().AdjustToContents();
+
+
+
+                // Guardar el archivo en la ruta seleccionada por el usuario
+                workbook.SaveAs(sfd.FileName);
+
+                // Abrimos el archivo
+                Process.Start(sfd.FileName);
+
+                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+
+
+
+            }
+            catch (Exception ex)
+            {
+                KryptonMessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!" + Environment.NewLine + ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+            }
+
+        }
+
+        private bool IsNumeric(object value)
+        {
+            if (value == null) return false;
+            return double.TryParse(value.ToString(), out _);
+        }
     }
 }

@@ -92,6 +92,7 @@
             this.kryptonButton1.TabIndex = 296;
             this.kryptonButton1.Values.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
             this.kryptonButton1.Values.Text = "Excel";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // btnCargar
             // 
@@ -182,6 +183,7 @@
             this.Controls.Add(this.kryptonGroupBox2);
             this.Controls.Add(this.kryptonGroupBox1);
             this.Name = "FrmFlujoOperaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
