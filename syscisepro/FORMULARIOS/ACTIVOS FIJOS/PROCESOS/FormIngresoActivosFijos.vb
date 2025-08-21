@@ -23,6 +23,7 @@ Imports ReaLTaiizor.Controls
 Imports System.Windows.Forms
 Imports System.Drawing
 Imports syscisepro.DATOS
+Imports ClassLibraryCisepro.CONTABILIDAD.LIBRO_DIARIO
 Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     ''' <summary>
     ''' CISEPRO - SEPORTPAC - ASENAVA 2019
@@ -96,6 +97,9 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         ReadOnly _objHistorialVehiculos As New ClassHistorialVehiculos
         ReadOnly _objProveedor As New ClassProveedores
         ReadOnly _objPersonal As New ClassPersonal
+        ReadOnly _objetoLibroDiario As New ClassLibroDiario
+        ReadOnly _objetoNumeroRegistro As New ClassNumeroRegistroAsiento
+        ReadOnly _objetoAsientoLibroDiario As New ClassAsientosLibroDiario
 
         ReadOnly _objUser As New ClassUsuarioGeneral
         ReadOnly _validacionesNumeros As New ClassNumerico
@@ -1593,8 +1597,185 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
             End If
 
+            'asiento de depreciacion x mes y por tiempo de vida util
+
+            _objetoLibroDiario.IdLibroDiario = _objetoLibroDiario.BuscarMayorIdLibroDiario(_tipoCon)
+
+            With _objetoNumeroRegistro
+                .NumeroRegistro = .BuscarMayorNumeroRegistro(_tipoCon) + 1
+                .NumeroAnterior = .BuscarMayorNumeroAnterior(_tipoCon) + 1
+            End With
+            _sqlCommands.Add(_objetoNumeroRegistro.NuevoNumeroRegistroAsientoLibroDiarioCommand)
+
+            Dim CuentaDepreciacion = txtCuentaDepreciacion.Text
+            Dim CuentaDepreciacionAcumulada
+
+            Dim dtAsientos As DataTable = GenerarTablaAsientosDepreciacion(
+                fecha,
+                valfac,
+                valResi,
+                vidauti,
+                CuentaDepreciacion,
+                CuentaDepreciacionAcumulada,
+            
+            )
+
+
+            Dim idAsiento = _objetoAsientoLibroDiario.BuscarMayorIdAsientoLibroDiario(_tipoCon) + 1
+            For indice = 0 To dgvAsientosDiario.RowCount - 1
+                With _objetoAsientoLibroDiario
+                    .IdAsiento = idAsiento
+                    .FechaAsiento = dgvAsientosDiario.Rows(indice).Cells(1).Value
+                    .CodigoCuentaAsiento = dgvAsientosDiario.Rows(indice).Cells(2).Value.ToString.Trim
+                    .NombreCuentaAsiento = dgvAsientosDiario.Rows(indice).Cells(3).Value.ToString.Trim
+                    .ConceptoAsiento = dgvAsientosDiario.Rows(indice).Cells(4).Value.ToString.ToUpper
+                    .DetalleTransaccionAsiento = dgvAsientosDiario.Rows(indice).Cells(5).Value.ToString.ToUpper
+                    .ProvinciaAsiento = "EL ORO"
+                    .CiudadAsiento = "MACHALA"
+                    .ParroquiaAsiento = "MACHALA"
+                    .CentroCostoAsiento = "GERENCIA GENERAL"
+                    .ValorDebeAsiento = dgvAsientosDiario.Rows(indice).Cells(6).Value
+                    .ValorHaberAsiento = dgvAsientosDiario.Rows(indice).Cells(7).Value
+                    .NumeroRegistroAsiento = _objetoNumeroRegistro.NumeroRegistro
+                    If dgvAsientosDiario.Rows(indice).Cells(6).Value > dgvAsientosDiario.Rows(indice).Cells(7).Value Then
+                        .DebeHaberAsiento = 1
+                    Else
+                        .DebeHaberAsiento = 2
+                    End If
+                    .ConciliarAsiento = 1
+                    .EstadoAsiento = 1
+                    .IdLibroDiario = _objetoLibroDiario.IdLibroDiario
+                    .EstadoMayorAsiento = 0
+                End With
+                _sqlCommands.Add(_objetoAsientoLibroDiario.NuevoRegistroAsientoLibroDiarioCommand())
+                idAsiento += 1
+            Next
+
+
+
 
         End Sub
+
+        Private Function GenerarTablaAsientosDepreciacion(
+                fechaInicio As DateTime,
+                costo As Decimal,
+                valorResidual As Decimal,
+                vidaUtilAnios As Integer,
+                codigoCuentaGasto As String,
+                nombreCuentaGasto As String,
+                codigoCuentaAcumulada As String,
+                nombreCuentaAcumulada As String,
+                conceptoBase As String,
+                detalleBase As String
+            ) As DataTable
+
+            Dim dt As New DataTable
+
+            dt.Columns.Add("Indice", GetType(Integer)) ' opcional
+            dt.Columns.Add("Fecha", GetType(Date))
+            dt.Columns.Add("CodigoCuenta", GetType(String))
+            dt.Columns.Add("NombreCuenta", GetType(String))
+            dt.Columns.Add("Concepto", GetType(String))
+            dt.Columns.Add("Detalle", GetType(String))
+            dt.Columns.Add("ValorDebe", GetType(Decimal))
+            dt.Columns.Add("ValorHaber", GetType(Decimal))
+
+            ' Validaciones basicas
+            If vidaUtilAnios <= 0 Then Throw New ArgumentException("Vida útil debe ser mayor que 0.")
+            If costo <= 0 Then Throw New ArgumentException("Costo debe ser mayor que 0.")
+            If valorResidual < 0 Then Throw New ArgumentException("Valor residual inválido.")
+
+            Dim baseDepreciable As Decimal = costo - valorResidual
+            If baseDepreciable <= 0 Then Return dt
+
+            Dim totalDiasVida As Integer = vidaUtilAnios * 360
+            Dim diario As Decimal = baseDepreciable / totalDiasVida ' tasa diaria sin redondeo
+
+            Dim current As DateTime = fechaInicio
+            Dim diasPrimerMes As Integer = 30 - current.Day
+            If diasPrimerMes < 0 Then diasPrimerMes = 0
+
+            Dim diasPendientes As Integer = totalDiasVida
+            Dim sumaAsignada As Decimal = 0D
+            Dim primeraIteracion As Boolean = True
+            Dim indice As Integer = 0
+
+            ' Bucle: consume días en bloques mensuales (30 o prorrateo del primer mes)
+            Do While diasPendientes > 0
+                Dim diasThisMonth As Integer
+
+                If primeraIteracion Then
+                    diasThisMonth = Math.Min(diasPrimerMes, diasPendientes)
+                    ' Si diasPrimerMes = 0, avanzamos y tomamos 30 en la siguiente iteración
+                    If diasThisMonth = 0 Then
+                        current = current.AddMonths(1)
+                        primeraIteracion = False
+                        Continue Do
+                    End If
+                Else
+                    diasThisMonth = Math.Min(30, diasPendientes)
+                End If
+
+                ' Monto de ese mes (sin redondeo)
+                Dim montoMesSinRedondear As Decimal = diario * diasThisMonth
+                Dim montoMes As Decimal = Decimal.Round(montoMesSinRedondear, 2, MidpointRounding.AwayFromZero)
+
+                ' Si es el último bloque, ajustamos para que la suma total coincida exactamente
+                If diasThisMonth = diasPendientes Then
+                    montoMes = baseDepreciable - sumaAsignada
+                    montoMes = Decimal.Round(montoMes, 2, MidpointRounding.AwayFromZero)
+                End If
+
+                ' Fecha del asiento: día 30 del mes (convención 30/360)
+                Dim diaPosteo As Integer = Math.Min(30, Date.DaysInMonth(current.Year, current.Month))
+                Dim fechaAsiento As DateTime = New Date(current.Year, current.Month, diaPosteo)
+
+                ' Fila Debe (Gasto)
+                Dim rDebe As DataRow = dt.NewRow()
+                rDebe("Indice") = indice
+                rDebe("Fecha") = fechaAsiento
+                rDebe("CodigoCuenta") = codigoCuentaGasto
+                rDebe("NombreCuenta") = nombreCuentaGasto
+                rDebe("Concepto") = (conceptoBase & " - " & fechaAsiento.ToString("MMMM yyyy")).ToUpper()
+                rDebe("Detalle") = detalleBase.ToUpper()
+                rDebe("ValorDebe") = montoMes
+                rDebe("ValorHaber") = 0D
+                dt.Rows.Add(rDebe)
+                indice += 1
+
+                ' Fila Haber (Acumulada)
+                Dim rHaber As DataRow = dt.NewRow()
+                rHaber("Indice") = indice
+                rHaber("Fecha") = fechaAsiento
+                rHaber("CodigoCuenta") = codigoCuentaAcumulada
+                rHaber("NombreCuenta") = nombreCuentaAcumulada
+                rHaber("Concepto") = (conceptoBase & " - " & fechaAsiento.ToString("MMMM yyyy")).ToUpper()
+                rHaber("Detalle") = detalleBase.ToUpper()
+                rHaber("ValorDebe") = 0D
+                rHaber("ValorHaber") = montoMes
+                dt.Rows.Add(rHaber)
+                indice += 1
+
+                ' actualizar acumuladores
+                sumaAsignada += montoMes
+                diasPendientes -= diasThisMonth
+
+                ' avanzar al siguiente mes
+                current = current.AddMonths(1)
+                primeraIteracion = False
+            Loop
+
+            ' Ajuste final por redondeo (seguridad)
+            Dim diferencia As Decimal = Decimal.Round(baseDepreciable - sumaAsignada, 2, MidpointRounding.AwayFromZero)
+            If diferencia <> 0D AndAlso dt.Rows.Count >= 2 Then
+                Dim idxHaber As Integer = dt.Rows.Count - 1
+                Dim idxDebe As Integer = dt.Rows.Count - 2
+                dt.Rows(idxHaber)("ValorHaber") = CDec(dt.Rows(idxHaber)("ValorHaber")) + diferencia
+                dt.Rows(idxDebe)("ValorDebe") = CDec(dt.Rows(idxDebe)("ValorDebe")) + diferencia
+            End If
+
+            Return dt
+        End Function
 
         'Private Sub GuardarDatosActivoGeneral(ByVal idActivoFijo As Integer, ByVal idDepreciacion As Integer, ByVal serie As String)
 
