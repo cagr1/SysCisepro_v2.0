@@ -35,6 +35,8 @@ Namespace CONTABILIDAD.VENTAS
         End Function
 
 
+
+
         Public Function BuscarMayorIdContrato(ByVal tipoCon As TipoConexion) As Integer
             Dim data = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "select max(ID_CONTRATO) ID_CONTRATO from CONTRATO_CLIENTE;", False)
             Return If(data.Rows.Count = 0, 0, If(IsDBNull(data.Rows(0)(0)), 0, CInt(data.Rows(0)(0)) + 1))

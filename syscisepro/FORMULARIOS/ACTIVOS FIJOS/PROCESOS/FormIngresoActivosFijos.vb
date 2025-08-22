@@ -1608,48 +1608,55 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             _sqlCommands.Add(_objetoNumeroRegistro.NuevoNumeroRegistroAsientoLibroDiarioCommand)
 
             Dim CuentaDepreciacion = txtCuentaDepreciacion.Text
+            Dim CodigoDepreciacion
             Dim CuentaDepreciacionAcumulada
+            Dim CodigoDepreciacionAcumulada
+            Dim ConceptoAsiento
+            Dim DetalleAsiento
 
             Dim dtAsientos As DataTable = GenerarTablaAsientosDepreciacion(
                 fecha,
                 valfac,
                 valResi,
                 vidauti,
+                CodigoDepreciacion,
                 CuentaDepreciacion,
+                CodigoDepreciacionAcumulada,
                 CuentaDepreciacionAcumulada,
-            
+                ConceptoAsiento,
+                DetalleAsiento
             )
 
 
             Dim idAsiento = _objetoAsientoLibroDiario.BuscarMayorIdAsientoLibroDiario(_tipoCon) + 1
-            For indice = 0 To dgvAsientosDiario.RowCount - 1
-                With _objetoAsientoLibroDiario
-                    .IdAsiento = idAsiento
-                    .FechaAsiento = dgvAsientosDiario.Rows(indice).Cells(1).Value
-                    .CodigoCuentaAsiento = dgvAsientosDiario.Rows(indice).Cells(2).Value.ToString.Trim
-                    .NombreCuentaAsiento = dgvAsientosDiario.Rows(indice).Cells(3).Value.ToString.Trim
-                    .ConceptoAsiento = dgvAsientosDiario.Rows(indice).Cells(4).Value.ToString.ToUpper
-                    .DetalleTransaccionAsiento = dgvAsientosDiario.Rows(indice).Cells(5).Value.ToString.ToUpper
-                    .ProvinciaAsiento = "EL ORO"
-                    .CiudadAsiento = "MACHALA"
-                    .ParroquiaAsiento = "MACHALA"
-                    .CentroCostoAsiento = "GERENCIA GENERAL"
-                    .ValorDebeAsiento = dgvAsientosDiario.Rows(indice).Cells(6).Value
-                    .ValorHaberAsiento = dgvAsientosDiario.Rows(indice).Cells(7).Value
-                    .NumeroRegistroAsiento = _objetoNumeroRegistro.NumeroRegistro
-                    If dgvAsientosDiario.Rows(indice).Cells(6).Value > dgvAsientosDiario.Rows(indice).Cells(7).Value Then
-                        .DebeHaberAsiento = 1
-                    Else
-                        .DebeHaberAsiento = 2
-                    End If
-                    .ConciliarAsiento = 1
-                    .EstadoAsiento = 1
-                    .IdLibroDiario = _objetoLibroDiario.IdLibroDiario
-                    .EstadoMayorAsiento = 0
-                End With
-                _sqlCommands.Add(_objetoAsientoLibroDiario.NuevoRegistroAsientoLibroDiarioCommand())
-                idAsiento += 1
-            Next
+            'For indice = 0 To dgvAsientosDiario.RowCount - 1
+            '    With _objetoAsientoLibroDiario
+            '        .IdAsiento = idAsiento
+            '        .FechaAsiento = dgvAsientosDiario.Rows(indice).Cells(1).Value
+            '        .CodigoCuentaAsiento = dgvAsientosDiario.Rows(indice).Cells(2).Value.ToString.Trim
+            '        .NombreCuentaAsiento = dgvAsientosDiario.Rows(indice).Cells(3).Value.ToString.Trim
+            '        .ConceptoAsiento = dgvAsientosDiario.Rows(indice).Cells(4).Value.ToString.ToUpper
+            '        .DetalleTransaccionAsiento = dgvAsientosDiario.Rows(indice).Cells(5).Value.ToString.ToUpper
+            '        .ProvinciaAsiento = "EL ORO"
+            '        .CiudadAsiento = "MACHALA"
+            '        .ParroquiaAsiento = "MACHALA"
+            '        .CentroCostoAsiento = "GERENCIA GENERAL"
+            '        .ValorDebeAsiento = dgvAsientosDiario.Rows(indice).Cells(6).Value
+            '        .ValorHaberAsiento = dgvAsientosDiario.Rows(indice).Cells(7).Value
+            '        .NumeroRegistroAsiento = _objetoNumeroRegistro.NumeroRegistro
+            '        If dgvAsientosDiario.Rows(indice).Cells(6).Value > dgvAsientosDiario.Rows(indice).Cells(7).Value Then
+            '            .DebeHaberAsiento = 1
+            '        Else
+            '            .DebeHaberAsiento = 2
+            '        End If
+            '        .ConciliarAsiento = 1
+            '        .EstadoAsiento = 1
+            '        .IdLibroDiario = _objetoLibroDiario.IdLibroDiario
+            '        .EstadoMayorAsiento = 0
+            '    End With
+            '    _sqlCommands.Add(_objetoAsientoLibroDiario.NuevoRegistroAsientoLibroDiarioCommand())
+            '    idAsiento += 1
+            'Next
 
 
 

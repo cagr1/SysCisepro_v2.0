@@ -143,6 +143,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             'rbProduccion.Checked = True
             'rbTipoEmisionNormal.Checked = True
             cbxPtoEmision.SelectedIndex = 1
+            PendienteFacturas()
 
         End Sub
         Private Sub VerificarCbConvenio()
@@ -160,6 +161,18 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             Catch
                 txtNombreComercialCliente.AutoCompleteCustomSource = Nothing
             End Try
+        End Sub
+
+
+        Private Sub PendienteFacturas()
+            ' Primer día del mes actual (ej: 01/08/2025)
+            Dim fechaInicio As DateTime = New DateTime(Date.Now.Year, Date.Now.Month, 1)
+
+            ' Último día del mes actual (ej: 31/08/2025)
+            Dim fechaFin As DateTime = fechaInicio.AddMonths(1).AddDays(-1)
+            dgvPendienteFactura.DataSource = _objetoClienteGeneral.CargarClienteGeneralSinFacturasPorRangoFecha(_tipoCon, fechaInicio, fechaFin)
+            dgvPendienteFactura.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+            dgvPendienteFactura.ReadOnly = True
         End Sub
         Private Sub DeshabilitadoInicio()
             'gbPtoEmision.Enabled = True
@@ -544,7 +557,39 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
             CargarFacturasVenta()
             CargarConveniosDebitoBanco()
+            CargarSaldoCliente()
         End Sub
+
+        Private Sub CargarSaldoCliente()
+
+            Dim Contrato = _objetoClienteGeneral.BuscarFiltradoPorRazonSocialClienteGeneral(_tipoCon, txtNombreComercialCliente.Text)
+            Dim Valor As Decimal = Convert.ToDecimal(Contrato.Rows(0)(23))
+            Dim FechaContrato = Convert.ToDateTime(Contrato.Rows(0)(22))
+            Dim Facturas = _objetoFacturaVenta.BuscarFacturaVentaXIdClienteConceptoRangoFecha(_tipoCon, lblIdClienteGeneral.Text, cmbConcepto.SelectedValue, FechaContrato, DateTime.Now)
+            Dim Facturado As Decimal = 0.0D
+
+            If Facturas.Rows.Count > 0 Then
+                For Each Row As DataRow In Facturas.Rows
+                    If Row(11) IsNot Nothing AndAlso Not IsDBNull(Row(11)) AndAlso Convert.ToInt32(Row("EST")) > 0 Then
+                        Facturado += Convert.ToDecimal(Row(11))
+                    End If
+
+                Next
+            End If
+            Dim Saldo = Valor - Facturado
+
+                If Valor = 0 Then
+                    lblSaldo.Text = "No se ha ingresado valor de contrato"
+                ElseIf Saldo < 0 Then
+                    lblSaldo.Text = "Saldo negativo: " & Saldo.ToString()
+                Else
+                    lblSaldo.Text = Saldo.ToString()
+                End If
+
+
+
+        End Sub
+
         Private Sub CargarDatosCliente()
             Try
                 Dim cli = _objetoClienteGeneral.BuscarClienteGeneralXRazonSocial(_tipoCon, txtNombreComercialCliente.Text)

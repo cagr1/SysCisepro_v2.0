@@ -62,7 +62,6 @@
             Me.txtTelefono2ClienteGeneral = New System.Windows.Forms.TextBox()
             Me.txtTelefono1ClienteGeneral = New System.Windows.Forms.TextBox()
             Me.TextBoxVal = New System.Windows.Forms.TextBox()
-            Me.ComboBox2 = New System.Windows.Forms.ComboBox()
             Me.txtObservaciones = New System.Windows.Forms.TextBox()
             Me.dtpFechaIngresoClienteGeneral = New System.Windows.Forms.DateTimePicker()
             Me.cmbTipoCliente = New System.Windows.Forms.ComboBox()
@@ -173,6 +172,8 @@
             Me.KryptonLabel16 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel15 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonGroupBox4 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.cmbTipoEmpresa = New System.Windows.Forms.ComboBox()
+            Me.KryptonLabel52 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel14 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel9 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
@@ -243,8 +244,7 @@
             Me.KryptonLabel38 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonPage6 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.KryptonLabel43 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel52 = New Krypton.Toolkit.KryptonLabel()
-            Me.cmbTipoEmpresa = New System.Windows.Forms.ComboBox()
+            Me.dtpFechaContrato = New System.Windows.Forms.DateTimePicker()
             CType(Me.dgvClienteGeneral, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.gbConvenioBancario.SuspendLayout()
             CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -515,34 +515,22 @@
             Me.TextBoxVal.BackColor = System.Drawing.Color.White
             Me.TextBoxVal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.TextBoxVal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TextBoxVal.Location = New System.Drawing.Point(267, 1)
+            Me.TextBoxVal.Location = New System.Drawing.Point(283, 2)
             Me.TextBoxVal.Name = "TextBoxVal"
-            Me.TextBoxVal.Size = New System.Drawing.Size(85, 21)
+            Me.TextBoxVal.Size = New System.Drawing.Size(87, 21)
             Me.TextBoxVal.TabIndex = 12
             Me.TextBoxVal.Text = "0.00"
             Me.TextBoxVal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'ComboBox2
-            '
-            Me.ComboBox2.BackColor = System.Drawing.Color.White
-            Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.ComboBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ComboBox2.FormattingEnabled = True
-            Me.ComboBox2.Items.AddRange(New Object() {"ALARMA", "GUARDIANIA", "ALARMA Y GUARDIANIA"})
-            Me.ComboBox2.Location = New System.Drawing.Point(93, 3)
-            Me.ComboBox2.Name = "ComboBox2"
-            Me.ComboBox2.Size = New System.Drawing.Size(74, 21)
-            Me.ComboBox2.TabIndex = 11
             '
             'txtObservaciones
             '
             Me.txtObservaciones.BackColor = System.Drawing.Color.White
             Me.txtObservaciones.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtObservaciones.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtObservaciones.Location = New System.Drawing.Point(454, 1)
+            Me.txtObservaciones.Location = New System.Drawing.Point(481, 1)
             Me.txtObservaciones.Multiline = True
             Me.txtObservaciones.Name = "txtObservaciones"
-            Me.txtObservaciones.Size = New System.Drawing.Size(203, 45)
+            Me.txtObservaciones.Size = New System.Drawing.Size(176, 45)
             Me.txtObservaciones.TabIndex = 0
             '
             'dtpFechaIngresoClienteGeneral
@@ -1503,9 +1491,9 @@
             Me.TextBox7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.TextBox7.Enabled = False
             Me.TextBox7.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TextBox7.Location = New System.Drawing.Point(562, 4)
+            Me.TextBox7.Location = New System.Drawing.Point(544, 4)
             Me.TextBox7.Name = "TextBox7"
-            Me.TextBox7.Size = New System.Drawing.Size(87, 21)
+            Me.TextBox7.Size = New System.Drawing.Size(105, 21)
             Me.TextBox7.TabIndex = 188
             Me.TextBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
@@ -1529,9 +1517,9 @@
             Me.TextBox5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.TextBox5.Enabled = False
             Me.TextBox5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TextBox5.Location = New System.Drawing.Point(562, 29)
+            Me.TextBox5.Location = New System.Drawing.Point(544, 29)
             Me.TextBox5.Name = "TextBox5"
-            Me.TextBox5.Size = New System.Drawing.Size(87, 21)
+            Me.TextBox5.Size = New System.Drawing.Size(105, 21)
             Me.TextBox5.TabIndex = 185
             Me.TextBox5.Text = "0.00"
             Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1555,7 +1543,7 @@
             Me.TextBox4.Enabled = False
             Me.TextBox4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.TextBox4.ForeColor = System.Drawing.Color.White
-            Me.TextBox4.Location = New System.Drawing.Point(343, 5)
+            Me.TextBox4.Location = New System.Drawing.Point(326, 5)
             Me.TextBox4.Name = "TextBox4"
             Me.TextBox4.Size = New System.Drawing.Size(123, 21)
             Me.TextBox4.TabIndex = 0
@@ -1569,7 +1557,7 @@
             Me.TextBox6.ForeColor = System.Drawing.Color.White
             Me.TextBox6.Location = New System.Drawing.Point(72, 27)
             Me.TextBox6.Name = "TextBox6"
-            Me.TextBox6.Size = New System.Drawing.Size(394, 21)
+            Me.TextBox6.Size = New System.Drawing.Size(377, 21)
             Me.TextBox6.TabIndex = 1
             '
             'MenuStrip2
@@ -1751,19 +1739,19 @@
             '
             'KryptonGroupBox5.Panel
             '
+            Me.KryptonGroupBox5.Panel.Controls.Add(Me.dtpFechaContrato)
             Me.KryptonGroupBox5.Panel.Controls.Add(Me.KryptonLabel17)
             Me.KryptonGroupBox5.Panel.Controls.Add(Me.KryptonLabel16)
             Me.KryptonGroupBox5.Panel.Controls.Add(Me.KryptonLabel15)
             Me.KryptonGroupBox5.Panel.Controls.Add(Me.txtObservaciones)
             Me.KryptonGroupBox5.Panel.Controls.Add(Me.TextBoxVal)
-            Me.KryptonGroupBox5.Panel.Controls.Add(Me.ComboBox2)
             Me.KryptonGroupBox5.Size = New System.Drawing.Size(672, 74)
             Me.KryptonGroupBox5.TabIndex = 185
             Me.KryptonGroupBox5.Values.Heading = "Informacion Adicional sobre Contacto"
             '
             'KryptonLabel17
             '
-            Me.KryptonLabel17.Location = New System.Drawing.Point(358, 3)
+            Me.KryptonLabel17.Location = New System.Drawing.Point(384, 3)
             Me.KryptonLabel17.Name = "KryptonLabel17"
             Me.KryptonLabel17.Size = New System.Drawing.Size(90, 20)
             Me.KryptonLabel17.TabIndex = 23
@@ -1771,7 +1759,7 @@
             '
             'KryptonLabel16
             '
-            Me.KryptonLabel16.Location = New System.Drawing.Point(172, 2)
+            Me.KryptonLabel16.Location = New System.Drawing.Point(191, 3)
             Me.KryptonLabel16.Name = "KryptonLabel16"
             Me.KryptonLabel16.Size = New System.Drawing.Size(90, 20)
             Me.KryptonLabel16.TabIndex = 22
@@ -1781,9 +1769,9 @@
             '
             Me.KryptonLabel15.Location = New System.Drawing.Point(5, 2)
             Me.KryptonLabel15.Name = "KryptonLabel15"
-            Me.KryptonLabel15.Size = New System.Drawing.Size(84, 20)
+            Me.KryptonLabel15.Size = New System.Drawing.Size(93, 20)
             Me.KryptonLabel15.TabIndex = 21
-            Me.KryptonLabel15.Values.Text = "Año Contrato"
+            Me.KryptonLabel15.Values.Text = "Fecha Contrato"
             '
             'KryptonGroupBox4
             '
@@ -1807,6 +1795,28 @@
             Me.KryptonGroupBox4.Size = New System.Drawing.Size(213, 128)
             Me.KryptonGroupBox4.TabIndex = 184
             Me.KryptonGroupBox4.Values.Heading = ""
+            '
+            'cmbTipoEmpresa
+            '
+            Me.cmbTipoEmpresa.BackColor = System.Drawing.Color.White
+            Me.cmbTipoEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+            Me.cmbTipoEmpresa.DropDownWidth = 140
+            Me.cmbTipoEmpresa.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbTipoEmpresa.FormattingEnabled = True
+            Me.cmbTipoEmpresa.Items.AddRange(New Object() {"PUBLICA", "PRIVADA"})
+            Me.cmbTipoEmpresa.Location = New System.Drawing.Point(95, 28)
+            Me.cmbTipoEmpresa.Name = "cmbTipoEmpresa"
+            Me.cmbTipoEmpresa.Size = New System.Drawing.Size(103, 21)
+            Me.cmbTipoEmpresa.TabIndex = 22
+            '
+            'KryptonLabel52
+            '
+            Me.KryptonLabel52.Location = New System.Drawing.Point(3, 24)
+            Me.KryptonLabel52.Name = "KryptonLabel52"
+            Me.KryptonLabel52.Size = New System.Drawing.Size(84, 20)
+            Me.KryptonLabel52.StateNormal.ShortText.Color1 = System.Drawing.Color.SeaGreen
+            Me.KryptonLabel52.TabIndex = 21
+            Me.KryptonLabel52.Values.Text = "Tipo Empresa"
             '
             'KryptonLabel14
             '
@@ -2001,7 +2011,7 @@
             Me.KryptonPage2.LastVisibleSet = True
             Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage2.Name = "KryptonPage2"
-            Me.KryptonPage2.Size = New System.Drawing.Size(678, 669)
+            Me.KryptonPage2.Size = New System.Drawing.Size(678, 667)
             Me.KryptonPage2.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage2.Text = "Direcciones"
             Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
@@ -2077,7 +2087,7 @@
             Me.KryptonPage3.LastVisibleSet = True
             Me.KryptonPage3.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage3.Name = "KryptonPage3"
-            Me.KryptonPage3.Size = New System.Drawing.Size(678, 669)
+            Me.KryptonPage3.Size = New System.Drawing.Size(678, 667)
             Me.KryptonPage3.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage3.Text = "Sitios Vigilancia"
             Me.KryptonPage3.ToolTipTitle = "Page ToolTip"
@@ -2230,7 +2240,7 @@
             Me.KryptonPage4.LastVisibleSet = True
             Me.KryptonPage4.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage4.Name = "KryptonPage4"
-            Me.KryptonPage4.Size = New System.Drawing.Size(678, 669)
+            Me.KryptonPage4.Size = New System.Drawing.Size(678, 667)
             Me.KryptonPage4.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage4.Text = "Detalle Puesto"
             Me.KryptonPage4.ToolTipTitle = "Page ToolTip"
@@ -2307,7 +2317,7 @@
             Me.KryptonPage5.LastVisibleSet = True
             Me.KryptonPage5.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage5.Name = "KryptonPage5"
-            Me.KryptonPage5.Size = New System.Drawing.Size(678, 669)
+            Me.KryptonPage5.Size = New System.Drawing.Size(678, 667)
             Me.KryptonPage5.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage5.Text = "Historial"
             Me.KryptonPage5.ToolTipTitle = "Page ToolTip"
@@ -2528,7 +2538,7 @@
             '
             'KryptonLabel40
             '
-            Me.KryptonLabel40.Location = New System.Drawing.Point(478, 28)
+            Me.KryptonLabel40.Location = New System.Drawing.Point(459, 28)
             Me.KryptonLabel40.Name = "KryptonLabel40"
             Me.KryptonLabel40.Size = New System.Drawing.Size(79, 20)
             Me.KryptonLabel40.TabIndex = 18
@@ -2536,7 +2546,7 @@
             '
             'KryptonLabel39
             '
-            Me.KryptonLabel39.Location = New System.Drawing.Point(478, 5)
+            Me.KryptonLabel39.Location = New System.Drawing.Point(458, 5)
             Me.KryptonLabel39.Name = "KryptonLabel39"
             Me.KryptonLabel39.Size = New System.Drawing.Size(84, 20)
             Me.KryptonLabel39.TabIndex = 17
@@ -2544,7 +2554,7 @@
             '
             'KryptonLabel36
             '
-            Me.KryptonLabel36.Location = New System.Drawing.Point(293, 3)
+            Me.KryptonLabel36.Location = New System.Drawing.Point(283, 3)
             Me.KryptonLabel36.Name = "KryptonLabel36"
             Me.KryptonLabel36.Size = New System.Drawing.Size(34, 20)
             Me.KryptonLabel36.TabIndex = 16
@@ -2577,7 +2587,7 @@
             Me.KryptonPage6.LastVisibleSet = True
             Me.KryptonPage6.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage6.Name = "KryptonPage6"
-            Me.KryptonPage6.Size = New System.Drawing.Size(678, 669)
+            Me.KryptonPage6.Size = New System.Drawing.Size(678, 667)
             Me.KryptonPage6.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage6.Text = "Convenio"
             Me.KryptonPage6.ToolTipTitle = "Page ToolTip"
@@ -2591,27 +2601,15 @@
             Me.KryptonLabel43.TabIndex = 182
             Me.KryptonLabel43.Values.Text = "Buscar"
             '
-            'KryptonLabel52
+            'dtpFechaContrato
             '
-            Me.KryptonLabel52.Location = New System.Drawing.Point(3, 24)
-            Me.KryptonLabel52.Name = "KryptonLabel52"
-            Me.KryptonLabel52.Size = New System.Drawing.Size(84, 20)
-            Me.KryptonLabel52.StateNormal.ShortText.Color1 = System.Drawing.Color.SeaGreen
-            Me.KryptonLabel52.TabIndex = 21
-            Me.KryptonLabel52.Values.Text = "Tipo Empresa"
-            '
-            'cmbTipoEmpresa
-            '
-            Me.cmbTipoEmpresa.BackColor = System.Drawing.Color.White
-            Me.cmbTipoEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cmbTipoEmpresa.DropDownWidth = 140
-            Me.cmbTipoEmpresa.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.cmbTipoEmpresa.FormattingEnabled = True
-            Me.cmbTipoEmpresa.Items.AddRange(New Object() {"PUBLICA", "PRIVADA"})
-            Me.cmbTipoEmpresa.Location = New System.Drawing.Point(95, 28)
-            Me.cmbTipoEmpresa.Name = "cmbTipoEmpresa"
-            Me.cmbTipoEmpresa.Size = New System.Drawing.Size(103, 21)
-            Me.cmbTipoEmpresa.TabIndex = 22
+            Me.dtpFechaContrato.CalendarFont = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaContrato.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaContrato.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaContrato.Location = New System.Drawing.Point(100, 3)
+            Me.dtpFechaContrato.Name = "dtpFechaContrato"
+            Me.dtpFechaContrato.Size = New System.Drawing.Size(85, 21)
+            Me.dtpFechaContrato.TabIndex = 24
             '
             'FormMantenimientoClientes
             '
@@ -2789,7 +2787,6 @@
         Friend WithEvents ToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents ToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents TextBoxVal As System.Windows.Forms.TextBox
-        Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
         Friend WithEvents MenuStrip2 As System.Windows.Forms.MenuStrip
         Friend WithEvents ToolStripMenuItem5 As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents ToolStripMenuItem6 As System.Windows.Forms.ToolStripMenuItem
@@ -2925,5 +2922,6 @@
         Friend WithEvents KryptonLabel44 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents cmbTipoEmpresa As ComboBox
         Friend WithEvents KryptonLabel52 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents dtpFechaContrato As DateTimePicker
     End Class
 End Namespace

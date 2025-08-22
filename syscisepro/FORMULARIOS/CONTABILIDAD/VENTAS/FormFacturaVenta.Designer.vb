@@ -139,6 +139,10 @@
             Me.rbPtoEmision001 = New System.Windows.Forms.RadioButton()
             Me.rbPtoEmision002 = New System.Windows.Forms.RadioButton()
             Me.KryptonPage3 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.dgvPendienteFactura = New Krypton.Toolkit.KryptonDataGridView()
+            Me.KryptonLabel23 = New Krypton.Toolkit.KryptonLabel()
+            Me.lblSaldo = New Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvDetalleFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
@@ -173,6 +177,11 @@
             Me.KryptonGroupBox8.Panel.SuspendLayout()
             Me.KryptonGroupBox8.SuspendLayout()
             CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.Panel.SuspendLayout()
+            Me.KryptonGroupBox1.SuspendLayout()
+            CType(Me.dgvPendienteFactura, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'cmbIva
@@ -659,7 +668,7 @@
             Me.dgvFacturaVenta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             Me.dgvFacturaVenta.RowHeadersVisible = False
             Me.dgvFacturaVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvFacturaVenta.Size = New System.Drawing.Size(268, 634)
+            Me.dgvFacturaVenta.Size = New System.Drawing.Size(268, 250)
             Me.dgvFacturaVenta.TabIndex = 89
             '
             'cbxConvenio
@@ -1171,13 +1180,13 @@
             '
             Me.KryptonGroupBox5.CaptionOverlap = 0R
             Me.KryptonGroupBox5.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox5.Location = New System.Drawing.Point(740, 37)
+            Me.KryptonGroupBox5.Location = New System.Drawing.Point(740, 79)
             Me.KryptonGroupBox5.Name = "KryptonGroupBox5"
             '
             'KryptonGroupBox5.Panel
             '
             Me.KryptonGroupBox5.Panel.Controls.Add(Me.dgvFacturaVenta)
-            Me.KryptonGroupBox5.Size = New System.Drawing.Size(272, 658)
+            Me.KryptonGroupBox5.Size = New System.Drawing.Size(272, 274)
             Me.KryptonGroupBox5.TabIndex = 195
             Me.KryptonGroupBox5.Values.Heading = "Historial de facturacion"
             '
@@ -1373,12 +1382,58 @@
             Me.KryptonPage3.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage3.UniqueName = "21A206A48749458D3BAF3F0AA6D152CE"
             '
+            'KryptonGroupBox1
+            '
+            Me.KryptonGroupBox1.CaptionOverlap = 0R
+            Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(740, 359)
+            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
+            '
+            'KryptonGroupBox1.Panel
+            '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.dgvPendienteFactura)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(272, 336)
+            Me.KryptonGroupBox1.TabIndex = 202
+            Me.KryptonGroupBox1.Values.Heading = "Pendientes Facturacion"
+            '
+            'dgvPendienteFactura
+            '
+            Me.dgvPendienteFactura.BorderStyle = System.Windows.Forms.BorderStyle.None
+            Me.dgvPendienteFactura.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.dgvPendienteFactura.Location = New System.Drawing.Point(0, 0)
+            Me.dgvPendienteFactura.Name = "dgvPendienteFactura"
+            Me.dgvPendienteFactura.RowHeadersVisible = False
+            Me.dgvPendienteFactura.Size = New System.Drawing.Size(268, 312)
+            Me.dgvPendienteFactura.StateNormal.Background.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvPendienteFactura.TabIndex = 0
+            '
+            'KryptonLabel23
+            '
+            Me.KryptonLabel23.Location = New System.Drawing.Point(742, 42)
+            Me.KryptonLabel23.Name = "KryptonLabel23"
+            Me.KryptonLabel23.Size = New System.Drawing.Size(150, 20)
+            Me.KryptonLabel23.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen
+            Me.KryptonLabel23.TabIndex = 204
+            Me.KryptonLabel23.Values.Text = "Saldo Pendiente Contrato"
+            '
+            'lblSaldo
+            '
+            Me.lblSaldo.Location = New System.Drawing.Point(889, 42)
+            Me.lblSaldo.Name = "lblSaldo"
+            Me.lblSaldo.Size = New System.Drawing.Size(19, 20)
+            Me.lblSaldo.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen
+            Me.lblSaldo.TabIndex = 205
+            Me.lblSaldo.Values.Text = "..."
+            '
             'FormFacturaVenta
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(1016, 696)
+            Me.Controls.Add(Me.lblSaldo)
+            Me.Controls.Add(Me.KryptonLabel23)
+            Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.KryptonGroupBox8)
             Me.Controls.Add(Me.KryptonGroupBox7)
             Me.Controls.Add(Me.KryptonGroupBox6)
@@ -1443,6 +1498,11 @@
             CType(Me.KryptonGroupBox8, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox8.ResumeLayout(False)
             CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
+            CType(Me.dgvPendienteFactura, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -1548,5 +1608,9 @@
         Friend WithEvents KryptonLabel20 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonPage3 As ComponentFactory.Krypton.Navigator.KryptonPage
         Friend WithEvents cbxPlazo As ComboBox
+        Friend WithEvents KryptonGroupBox1 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents dgvPendienteFactura As Krypton.Toolkit.KryptonDataGridView
+        Friend WithEvents KryptonLabel23 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents lblSaldo As Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

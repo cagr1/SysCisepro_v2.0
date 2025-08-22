@@ -120,7 +120,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
             dtpFechaDesde.Value = New DateTime(DateTime.Now.Year, 1, 1, 0, 0, 0)
             dtpFechaHasta.Value = dtpFechaDesde.Value.AddYears(1).AddDays(-1)
-            GenerarAnios()
+            'GenerarAnios()
             DeshabilitadoInicio()
             AutocompletarNombreCiudades()
             AutocompletarConsorcioCliente()
@@ -154,7 +154,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             txtTelefono2ClienteGeneral.Enabled = False
             'gbIngresoObservaciones.Enabled = False
             TextBoxVal.Enabled = False
-            ComboBox2.Enabled = False
+            dtpFechaContrato.Enabled = False
             txtObservaciones.Enabled = False
             'gbNroResolucionContEspecial.Enabled = False
             rbSiContribuyenteEspecial.Enabled = False
@@ -342,27 +342,39 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 TextBox4.Text = dgvClienteGeneral.CurrentRow.Cells.Item(3).Value
                 TextBox6.Text = dgvClienteGeneral.CurrentRow.Cells.Item(4).Value + " (" + dgvClienteGeneral.CurrentRow.Cells.Item(5).Value + ")"
 
+                'Datos contrato
+                'convertir dgvClienteGeneral.CurrentRow.Cells.Item(22).Value a Year
+                Dim Year = dgvClienteGeneral.CurrentRow.Cells.Item(22).Value.ToString()
+
+                dtpFechaContrato.Text = dgvClienteGeneral.CurrentRow.Cells.Item(22).Value
+                TextBoxVal.Text = dgvClienteGeneral.CurrentRow.Cells.Item(23).Value
+                TextBox5.Text = dgvClienteGeneral.CurrentRow.Cells.Item(23).Value
+                TextBox7.Text = dgvClienteGeneral.CurrentRow.Cells.Item(22).Value
+
                 dgvFacturaVenta.DataSource = Nothing
                 SumarTotalFacturas()
 
-                Try
-                    Dim c = _objetoContratoCliente.BuscarContratoActivoClienteGeneralXId(_tipoCon, dgvClienteGeneral.CurrentRow.Cells.Item(20).Value)
-                    ComboBox2.SelectedItem = c.Rows(0)(3)
-                    TextBoxVal.Text = c.Rows(0)(2)
-                    TextBoxVal.Tag = dgvClienteGeneral.CurrentRow.Cells.Item(20).Value
+                'Try
+                ' Dim c = _objetoContratoCliente.BuscarContratoActivoClienteGeneralXId(_tipoCon, dgvClienteGeneral.CurrentRow.Cells.Item(20).Value)
+                '    ComboBox2.SelectedItem = c.Rows(0)(3)
+                '    TextBoxVal.Text = c.Rows(0)(2)
+                '    TextBoxVal.Tag = dgvClienteGeneral.CurrentRow.Cells.Item(20).Value
 
-                    TextBox7.Text = c.Rows(0)(3)
-                    TextBox5.Text = c.Rows(0)(2)
-                    TextBox5.Tag = dgvClienteGeneral.CurrentRow.Cells.Item(20).Value
-                Catch
-                    ComboBox2.SelectedIndex = ComboBox2.Items.Count - 1
-                    TextBoxVal.Text = "0.00"
-                    TextBoxVal.Tag = Nothing
+                '    TextBox7.Text = c.Rows(0)(3)
+                '    TextBox5.Text = c.Rows(0)(2)
+                '    TextBox5.Tag = dgvClienteGeneral.CurrentRow.Cells.Item(20).Value
+                'Catch ex As Exception
+                '    ComboBox2.SelectedIndex = ComboBox2.Items.Count - 1
+                '    TextBoxVal.Text = "0.00"
+                '    TextBoxVal.Tag = Nothing
 
-                    TextBox7.Clear()
-                    TextBox5.Clear()
-                    TextBox5.Tag = Nothing
-                End Try
+                '    TextBox7.Clear()
+                '    TextBox5.Clear()
+                '    TextBox5.Tag = Nothing
+
+                '    KryptonMessageBox.Show("El cliente no tiene contrato activo." & vbNewLine & ex.Message, "Cisepro", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+
+                'End Try
 
                 ToolStripMenuItem14.Enabled = True
                 ToolStripMenuItem11.Enabled = False
@@ -396,7 +408,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             LimpiarParametros()
             _botonSeleccionado = 1
 
-            ComboBox2.SelectedIndex = 0
+            'ComboBox2.SelectedIndex = 0
             cmbTipoIdentificacion.SelectedIndex = 0
             cmbTipoCliente.SelectedIndex = 0
             rbNoContribuyenteEspecial.Checked = True
@@ -429,7 +441,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             txtTelefono2ClienteGeneral.Enabled = True
             'gbIngresoObservaciones.Enabled = True
             TextBoxVal.Enabled = True
-            ComboBox2.Enabled = True
+            'ComboBox2.Enabled = True
+            dtpFechaContrato.Enabled = True
             txtObservaciones.Enabled = True
             'gbNroResolucionContEspecial.Enabled = True
             rbSiContribuyenteEspecial.Enabled = True
@@ -480,7 +493,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             txtTelefono2ClienteGeneral.Enabled = True
             'gbIngresoObservaciones.Enabled = True
             TextBoxVal.Enabled = True
-            ComboBox2.Enabled = True
+            'ComboBox2.Enabled = True
+            dtpFechaContrato.Enabled = True
             txtObservaciones.Enabled = True
             'gbNroResolucionContEspecial.Enabled = True
             rbSiContribuyenteEspecial.Enabled = True
@@ -575,51 +589,58 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             Try
                 dgvClienteGeneral.DataSource = _objetoClienteGeneral.BuscarFiltradoPorRazonSocialClienteGeneral(_tipoCon, txtBuscarCliente.Text)
                 dgvClienteGeneral.AutoResizeRows()
-                dgvClienteGeneral.Columns(0).HeaderText = "ID"
+                dgvClienteGeneral.Columns(0).HeaderText = "Id"
                 dgvClienteGeneral.Columns(0).Width = 50
-                dgvClienteGeneral.Columns(1).HeaderText = "COD."
+                dgvClienteGeneral.Columns(1).HeaderText = "Cod."
                 dgvClienteGeneral.Columns(1).Visible = False
-                dgvClienteGeneral.Columns(2).HeaderText = "IDENT."
+                dgvClienteGeneral.Columns(2).HeaderText = "Ident."
                 dgvClienteGeneral.Columns(2).Width = 50
                 dgvClienteGeneral.Columns(3).HeaderText = "RUC / CI"
                 dgvClienteGeneral.Columns(3).Width = 90
-                dgvClienteGeneral.Columns(4).HeaderText = "NOMBRE / RAZÓN SOCIAL"
+                dgvClienteGeneral.Columns(4).HeaderText = "Nombre / Razón Social"
                 dgvClienteGeneral.Columns(4).Width = 200
-                dgvClienteGeneral.Columns(5).HeaderText = "APELLIDO / NOMBRE COMERCIAL"
+                dgvClienteGeneral.Columns(5).HeaderText = "Apellido / Nombre comercial"
                 dgvClienteGeneral.Columns(5).Width = 200
-                dgvClienteGeneral.Columns(6).HeaderText = "NRO RES CONT ESPECIAL"
+                dgvClienteGeneral.Columns(6).HeaderText = "NRO cont especial"
                 dgvClienteGeneral.Columns(6).Width = 70
-                dgvClienteGeneral.Columns(7).HeaderText = "OBLIG LLEVAR CONT"
+                dgvClienteGeneral.Columns(7).HeaderText = "Oblig CONT"
                 dgvClienteGeneral.Columns(7).Width = 60
-                dgvClienteGeneral.Columns(8).HeaderText = "DIRECCIÓN UBICACIÓN"
+                dgvClienteGeneral.Columns(8).HeaderText = "Dirección ubicación"
                 dgvClienteGeneral.Columns(8).Width = 200
-                dgvClienteGeneral.Columns(9).HeaderText = "DIRECCIÓN FACTURACIÓN"
+                dgvClienteGeneral.Columns(9).HeaderText = "Dirección facturación"
                 dgvClienteGeneral.Columns(9).Width = 200
-                dgvClienteGeneral.Columns(10).HeaderText = "CONSORCIO/ GRUPO"
+                dgvClienteGeneral.Columns(10).HeaderText = "consorcio/ grupo"
                 dgvClienteGeneral.Columns(10).Width = 120
-                dgvClienteGeneral.Columns(11).HeaderText = "CIUDAD"
+                dgvClienteGeneral.Columns(11).HeaderText = "ciudad"
                 dgvClienteGeneral.Columns(11).Width = 60
-                dgvClienteGeneral.Columns(12).HeaderText = "TELEFONO 1"
+                dgvClienteGeneral.Columns(12).HeaderText = "telefono 1"
                 dgvClienteGeneral.Columns(12).Width = 80
-                dgvClienteGeneral.Columns(13).HeaderText = "TELEFONO 2"
+                dgvClienteGeneral.Columns(13).HeaderText = "telefono 2"
                 dgvClienteGeneral.Columns(13).Width = 80
-                dgvClienteGeneral.Columns(14).HeaderText = "E-MAIL"
+                dgvClienteGeneral.Columns(14).HeaderText = "E-mail"
                 dgvClienteGeneral.Columns(14).Width = 150
-                dgvClienteGeneral.Columns(15).HeaderText = "CONTÁCTO"
+                dgvClienteGeneral.Columns(15).HeaderText = "Contácto"
                 dgvClienteGeneral.Columns(15).Width = 200
-                dgvClienteGeneral.Columns(16).HeaderText = "FECHA INGRESO"
+                dgvClienteGeneral.Columns(16).HeaderText = "Fecha Ingreso"
                 dgvClienteGeneral.Columns(16).Width = 80
-                dgvClienteGeneral.Columns(17).HeaderText = "TIPO CLIENTE"
+                dgvClienteGeneral.Columns(17).HeaderText = "Tipo Cliente"
                 dgvClienteGeneral.Columns(17).Width = 100
-                dgvClienteGeneral.Columns(18).HeaderText = "OBSERVACIONES"
+                dgvClienteGeneral.Columns(18).HeaderText = "Observaciones"
                 dgvClienteGeneral.Columns(18).Width = 200
                 dgvClienteGeneral.Columns(19).HeaderText = "EST"
                 dgvClienteGeneral.Columns(19).Visible = False
-                dgvClienteGeneral.Columns(20).HeaderText = "TIPO EMPRESA"
+                dgvClienteGeneral.Columns(20).HeaderText = "Tipo Empresa"
                 dgvClienteGeneral.Columns(20).Width = 80
+                dgvClienteGeneral.Columns(21).Visible = False
+                dgvClienteGeneral.Columns(22).HeaderText = "Fecha Contrato"
+                dgvClienteGeneral.Columns(22).Width = 80
+                dgvClienteGeneral.Columns(23).HeaderText = "Valor"
+                dgvClienteGeneral.Columns(23).Width = 80
+
                 dgvClienteGeneral.ReadOnly = True
                 dgvClienteGeneral.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
+                KryptonMessageBox.Show("Error: " & ex.Message, "Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 dgvClienteGeneral.DataSource = Nothing
             End Try
         End Sub
@@ -628,7 +649,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             _botonSeleccionado = 2
         End Sub
         Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCancelar.Click
-            ComboBox2.SelectedIndex = 0
+            'ComboBox2.SelectedIndex = 0
 
             LimpiarParametros()
             DeshabilitadoInicio()
@@ -642,7 +663,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub ToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem2.Click
             CargarSitiosClienteGeneral()
         End Sub
-        Private Sub dgvClienteGeneral_CellDoubleClick(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvClienteGeneral.CellDoubleClick, dgvSitios.CellDoubleClick
+        Private Sub dgvClienteGeneral_CellDoubleClick(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvSitios.CellDoubleClick
             If dgvClienteGeneral.RowCount = 0 Then Return
             'TabControl1.SelectedIndex = 1
             KryptonNavigator1.SelectedPage = KryptonPage2
@@ -1047,8 +1068,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 .IdContrato = CInt(.BuscarMayorIdContrato(_tipoCon)) + 1
                 .IdClienteGeneral = _objetoClienteGeneral.IdCliente
                 .Valor = If(TextBoxVal.Text.Trim().Length = 0, 0, CDec(TextBoxVal.Text.Trim()))
-                .Fecha = ValidationForms.FechaActual(_tipoCon)
-                .Anio = .Fecha.Year
+                .Fecha = dtpFechaContrato.Value 'ValidationForms.FechaActual(_tipoCon)
+                .Anio = CInt(dtpFechaContrato.Value.Year) 'dtpFechaContrato.Value.Year
                 .Estado = 1
             End With
             _sqlCommands.Add(_objetoContratoCliente.NuevoRegistroContratoClienteGeneral)
@@ -1124,8 +1145,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             With _objetoContratoCliente
                 .IdClienteGeneral = _objetoClienteGeneral.IdCliente
                 .Valor = If(TextBoxVal.Text.Trim().Length = 0, 0, CDec(TextBoxVal.Text.Trim()))
-                _objetoContratoCliente.Fecha = ValidationForms.FechaActual(_tipoCon)
-                _objetoContratoCliente.Anio = CInt(ComboBox2.SelectedItem)
+                .Fecha = dtpFechaContrato.Value 'ValidationForms.FechaActual(_tipoCon)
+                .Anio = CInt(dtpFechaContrato.Value.Year)    'CInt(dtpFechaContrato.Value.Year)
                 .Estado = 1
             End With
             If (TextBoxVal.Tag & "").ToString().Trim().Length = 0 Then
@@ -1157,34 +1178,34 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 End If
             Next
         End Sub
-        Private Sub GenerarAnios()
-            Dim c = _objetoContratoCliente.BuscarAniosContratoActivoClienteGeneral(_tipoCon)
-            Dim f = ValidationForms.FechaActual(_tipoCon)
-            ComboBox2.Items.Clear()
-            For Each r As DataRow In c.Rows
-                ComboBox2.Items.Add(r(0))
-            Next
-            If Not ComboBox2.Items.Contains(f.Year) Then ComboBox2.Items.Add(f.Year)
-        End Sub
+        'Private Sub GenerarAnios()
+        '    Dim c = _objetoContratoCliente.BuscarAniosContratoActivoClienteGeneral(_tipoCon)
+        '    Dim f = ValidationForms.FechaActual(_tipoCon)
+        '    ComboBox2.Items.Clear()
+        '    For Each r As DataRow In c.Rows
+        '        ComboBox2.Items.Add(r(0))
+        '    Next
+        '    If Not ComboBox2.Items.Contains(f.Year) Then ComboBox2.Items.Add(f.Year)
+        'End Sub
         Private Sub TextBox4_KeyPress(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyPressEventArgs) Handles TextBoxVal.KeyPress
             e.Handled = Not _validacionesDecimales.EsDecimal(e.KeyChar, TextBoxVal.Text)
         End Sub
 
-        Private Sub ComboBox2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboBox2.SelectedIndexChanged
-            If ComboBox2.Items.Count = 0 Then Return
-            If dgvClienteGeneral.CurrentRow Is Nothing Then Return
-            If dgvClienteGeneral.CurrentRow.Cells.Item(20).Value Is DBNull.Value Then Return
-            Try
-                Dim c = _objetoContratoCliente.BuscarContratoActivoXIdClienteAnio(_tipoCon, dgvClienteGeneral.CurrentRow.Cells.Item(0).Value, ComboBox2.SelectedItem)
-                ComboBox2.SelectedItem = c.Rows(0)(3)
-                TextBoxVal.Text = c.Rows(0)(2)
-                TextBoxVal.Tag = c.Rows(0)(0)
-            Catch
-                ComboBox2.SelectedIndex = 0
-                TextBoxVal.Text = "0.00"
-                TextBoxVal.Tag = Nothing
-            End Try
-        End Sub
+        'Private Sub ComboBox2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs)
+        '    If ComboBox2.Items.Count = 0 Then Return
+        '    If dgvClienteGeneral.CurrentRow Is Nothing Then Return
+        '    If dgvClienteGeneral.CurrentRow.Cells.Item(20).Value Is DBNull.Value Then Return
+        '    Try
+        'Dim c = _objetoContratoCliente.BuscarContratoActivoXIdClienteAnio(_tipoCon, dgvClienteGeneral.CurrentRow.Cells.Item(0).Value, ComboBox2.SelectedItem)
+        '        ComboBox2.SelectedItem = c.Rows(0)(3)
+        '        TextBoxVal.Text = c.Rows(0)(2)
+        '        TextBoxVal.Tag = c.Rows(0)(0)
+        '    Catch
+        '        ComboBox2.SelectedIndex = 0
+        '        TextBoxVal.Text = "0.00"
+        '        TextBoxVal.Tag = Nothing
+        '    End Try
+        'End Sub
 
         Private Sub ToolStripMenuItem5_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem5.Click
             Try
@@ -1240,7 +1261,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             TextBox8.Text = totCont - totalACobrar
         End Sub
 
-        Private Sub dgvFacturaVenta_CellDoubleClick(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvFacturaVenta.CellDoubleClick
+        Private Sub dgvFacturaVenta_CellDoubleClick(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvFacturaVenta.CellDoubleClick, dgvClienteGeneral.CellDoubleClick
             Try
                 If dgvFacturaVenta.CurrentRow.Cells("EST").Value = 0 Then Return
                 Dim formAsientoDiario As New FormBuscarAsientoDiario
