@@ -1607,57 +1607,94 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             End With
             _sqlCommands.Add(_objetoNumeroRegistro.NuevoNumeroRegistroAsientoLibroDiarioCommand)
 
-            Dim CuentaDepreciacion = txtCuentaDepreciacion.Text
-            Dim CodigoDepreciacion
-            Dim CuentaDepreciacionAcumulada
-            Dim CodigoDepreciacionAcumulada
+            Dim CodigoCuentaDepreciacion = txtCuentaDepreciacion.Text
+            Dim NombreCuentaDepreciacion
+            Dim CodigoCuentaDepreciacionAcumulada
+            Dim NombreCuentaDepreciacionAcumulada
             Dim ConceptoAsiento
             Dim DetalleAsiento
+            Dim FechaAsiento = dtpFechaActual.Value
 
-            Dim dtAsientos As DataTable = GenerarTablaAsientosDepreciacion(
-                fecha,
+            If txtCuentaDepreciacion.Text.Trim().Length > 0 Then
+                Select Case txtCuentaDepreciacion.Text.Trim()
+                    Case "5202190101"
+                        NombreCuentaDepreciacion = "DEPRECIACION DE MUEBLES Y ENSERES"
+                        CodigoCuentaDepreciacionAcumulada = "102011201"
+                        NombreCuentaDepreciacionAcumulada = "DEPRECIACION ACUMULADA DE MUEBLES Y ENSERES"
+                        ConceptoAsiento = "COMPROBANTE ASIENTO DE DIARIO"
+                    Case "5202190103"
+                        NombreCuentaDepreciacion = "DEPRECIACION DE VEHICULOS"
+                        CodigoCuentaDepreciacionAcumulada = "102011203"
+                        NombreCuentaDepreciacionAcumulada = "DEPRECIACION ACUMULADA DE VEHICULOS"
+                        ConceptoAsiento = "COMPROBANTE ASIENTO DE DIARIO"
+                    Case "5202190105"
+                        NombreCuentaDepreciacion = "DEPRECIACION DE EQUIPO DE COMPUTO"
+                        CodigoCuentaDepreciacionAcumulada = "102011202"
+                        NombreCuentaDepreciacionAcumulada = "DEPRECIACIÓN ACUMULADA DE EQUIPOS DE COMPUTACIÓN"
+                        ConceptoAsiento = "COMPROBANTE ASIENTO DE DIARIO"
+                    Case "5202190106"
+                        NombreCuentaDepreciacion = "DEPRECIACION DE OTRAS PROPIEDADES PLANTA Y  EQUIPO"
+                        CodigoCuentaDepreciacionAcumulada = "102011204"
+                        NombreCuentaDepreciacionAcumulada = "DEPRECIACIÓN ACUMULADA DE OTRAS PROPIEDADES, PLANTA Y EQUIPO"
+                        ConceptoAsiento = "COMPROBANTE ASIENTO DE DIARIO"
+
+                End Select
+            End If
+
+
+            Dim dtAsientos As DataTable = Nothing
+            dtAsientos =
+                GenerarTablaAsientosDepreciacion(
+                FechaAsiento,
                 valfac,
                 valResi,
                 vidauti,
-                CodigoDepreciacion,
-                CuentaDepreciacion,
-                CodigoDepreciacionAcumulada,
-                CuentaDepreciacionAcumulada,
+                CodigoCuentaDepreciacion,
+                NombreCuentaDepreciacion,
+                CodigoCuentaDepreciacionAcumulada,
+                NombreCuentaDepreciacionAcumulada,
                 ConceptoAsiento,
                 DetalleAsiento
             )
 
 
             Dim idAsiento = _objetoAsientoLibroDiario.BuscarMayorIdAsientoLibroDiario(_tipoCon) + 1
-            'For indice = 0 To dgvAsientosDiario.RowCount - 1
-            '    With _objetoAsientoLibroDiario
-            '        .IdAsiento = idAsiento
-            '        .FechaAsiento = dgvAsientosDiario.Rows(indice).Cells(1).Value
-            '        .CodigoCuentaAsiento = dgvAsientosDiario.Rows(indice).Cells(2).Value.ToString.Trim
-            '        .NombreCuentaAsiento = dgvAsientosDiario.Rows(indice).Cells(3).Value.ToString.Trim
-            '        .ConceptoAsiento = dgvAsientosDiario.Rows(indice).Cells(4).Value.ToString.ToUpper
-            '        .DetalleTransaccionAsiento = dgvAsientosDiario.Rows(indice).Cells(5).Value.ToString.ToUpper
-            '        .ProvinciaAsiento = "EL ORO"
-            '        .CiudadAsiento = "MACHALA"
-            '        .ParroquiaAsiento = "MACHALA"
-            '        .CentroCostoAsiento = "GERENCIA GENERAL"
-            '        .ValorDebeAsiento = dgvAsientosDiario.Rows(indice).Cells(6).Value
-            '        .ValorHaberAsiento = dgvAsientosDiario.Rows(indice).Cells(7).Value
-            '        .NumeroRegistroAsiento = _objetoNumeroRegistro.NumeroRegistro
-            '        If dgvAsientosDiario.Rows(indice).Cells(6).Value > dgvAsientosDiario.Rows(indice).Cells(7).Value Then
-            '            .DebeHaberAsiento = 1
-            '        Else
-            '            .DebeHaberAsiento = 2
-            '        End If
-            '        .ConciliarAsiento = 1
-            '        .EstadoAsiento = 1
-            '        .IdLibroDiario = _objetoLibroDiario.IdLibroDiario
-            '        .EstadoMayorAsiento = 0
-            '    End With
-            '    _sqlCommands.Add(_objetoAsientoLibroDiario.NuevoRegistroAsientoLibroDiarioCommand())
-            '    idAsiento += 1
-            'Next
 
+            If dtAsientos.Rows.Count > 0 Then
+                For indice = 0 To dtAsientos.Rows.Count - 1
+                    Dim row As DataRow = dtAsientos.Rows(indice)
+                    With _objetoAsientoLibroDiario
+                        .IdAsiento = idAsiento
+                        .FechaAsiento = CDate(row("Fecha"))
+                        .CodigoCuentaAsiento = row("CodigoCuenta").ToString().Trim()
+                        .NombreCuentaAsiento = row("NombreCuenta").ToString().Trim()
+                        .ConceptoAsiento = row("Concepto").ToString().ToUpper()
+                        .DetalleTransaccionAsiento = row("Detalle").ToString().ToUpper()
+                        .ProvinciaAsiento = "EL ORO"
+                        .CiudadAsiento = "MACHALA"
+                        .ParroquiaAsiento = "MACHALA"
+                        .CentroCostoAsiento = "GERENCIA GENERAL"
+                        .ValorDebeAsiento = CDec(row("ValorDebe"))
+                        .ValorHaberAsiento = CDec(row("ValorHaber"))
+                        .NumeroRegistroAsiento = _objetoNumeroRegistro.NumeroRegistro
+                        If CDec(row("ValorDebe")) > CDec(row("ValorHaber")) Then
+                            .DebeHaberAsiento = 1
+                        Else
+                            .DebeHaberAsiento = 2
+                        End If
+                        .ConciliarAsiento = 1
+                        .EstadoAsiento = 1
+                        .IdLibroDiario = _objetoLibroDiario.IdLibroDiario
+                        .EstadoMayorAsiento = 0
+                    End With
+
+                    _sqlCommands.Add(_objetoAsientoLibroDiario.NuevoRegistroAsientoLibroDiarioCommand())
+                    idAsiento += 1
+                Next
+            Else
+                KryptonMessageBox.Show("No se ha generado ningun asiento", "Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
+            End If
 
 
 
@@ -1737,14 +1774,17 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 Dim diaPosteo As Integer = Math.Min(30, Date.DaysInMonth(current.Year, current.Month))
                 Dim fechaAsiento As DateTime = New Date(current.Year, current.Month, diaPosteo)
 
+                ' Generar texto de detalle dinamico
+                Dim detallesMesAnio As String = "PARA REGISTRAR DEPRECIACION MENSUAL " & fechaAsiento.ToString("MMMM yyyy").ToUpper()
+
                 ' Fila Debe (Gasto)
                 Dim rDebe As DataRow = dt.NewRow()
                 rDebe("Indice") = indice
                 rDebe("Fecha") = fechaAsiento
                 rDebe("CodigoCuenta") = codigoCuentaGasto
                 rDebe("NombreCuenta") = nombreCuentaGasto
-                rDebe("Concepto") = (conceptoBase & " - " & fechaAsiento.ToString("MMMM yyyy")).ToUpper()
-                rDebe("Detalle") = detalleBase.ToUpper()
+                rDebe("Concepto") = conceptoBase
+                rDebe("Detalle") = detallesMesAnio
                 rDebe("ValorDebe") = montoMes
                 rDebe("ValorHaber") = 0D
                 dt.Rows.Add(rDebe)
@@ -1756,8 +1796,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 rHaber("Fecha") = fechaAsiento
                 rHaber("CodigoCuenta") = codigoCuentaAcumulada
                 rHaber("NombreCuenta") = nombreCuentaAcumulada
-                rHaber("Concepto") = (conceptoBase & " - " & fechaAsiento.ToString("MMMM yyyy")).ToUpper()
-                rHaber("Detalle") = detalleBase.ToUpper()
+                rHaber("Concepto") = conceptoBase
+                rHaber("Detalle") = detallesMesAnio
                 rHaber("ValorDebe") = 0D
                 rHaber("ValorHaber") = montoMes
                 dt.Rows.Add(rHaber)
@@ -1780,8 +1820,24 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 dt.Rows(idxHaber)("ValorHaber") = CDec(dt.Rows(idxHaber)("ValorHaber")) + diferencia
                 dt.Rows(idxDebe)("ValorDebe") = CDec(dt.Rows(idxDebe)("ValorDebe")) + diferencia
             End If
+            'comprobar que valores debe y haber son iguales
 
-            Return dt
+            Dim totalDebe As Decimal = 0D
+            Dim totalHaber As Decimal = 0D
+            For i As Integer = 0 To dt.Rows.Count - 1
+                totalDebe += CDec(dt.Rows(i)("ValorDebe"))
+                totalHaber += CDec(dt.Rows(i)("ValorHaber"))
+            Next
+
+            If totalDebe <> totalHaber Then
+                KryptonMessageBox.Show("El total debe y haber no coinciden", "Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return Nothing
+            Else
+                Return dt
+            End If
+
+
+
         End Function
 
         'Private Sub GuardarDatosActivoGeneral(ByVal idActivoFijo As Integer, ByVal idDepreciacion As Integer, ByVal serie As String)
