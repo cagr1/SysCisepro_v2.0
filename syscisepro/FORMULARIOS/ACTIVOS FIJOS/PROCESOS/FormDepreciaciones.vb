@@ -10,6 +10,7 @@ Imports syscisepro.FORMULARIOS.ACTIVOS_FIJOS.REPORTES
 Imports iTextSharp.text
 Imports iTextSharp.text.pdf
 Imports System.IO
+Imports ClassLibraryCisepro.CONTABILIDAD.PLAN_DE_CUENTAS
 
 Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     ''' <summary>
@@ -46,6 +47,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         ReadOnly _objDepreciacion As New ClassDepreciaciones
         ReadOnly _objDetalleDepreciacion As New ClassDetalleDepreciaciones
         ReadOnly _objAuditoria As New ClassAuditoriaGeneral
+        ReadOnly _objetoPlanCuentas As New ClassPlanDeCuentas
 
         Private Sub Auditoria()
             _objAuditoria.IdAuditoria = _objAuditoria.BuscarMayorIdAuditoriaGeneral(_tipoCon) + 1
@@ -89,7 +91,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 dgvActivoFijo.Columns(10).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
                 dgvActivoFijo.Columns(11).HeaderText = "Num Factura"
                 dgvActivoFijo.Columns(11).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-                dgvActivoFijo.Columns(12).HeaderText = "Cuenta Depreciacion"
+
 
                 dgvActivoFijo.AutoResizeColumns()
                 dgvActivoFijo.AutoResizeRows()
@@ -264,21 +266,20 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             Dim writer As PdfWriter = PdfWriter.GetInstance(document, pdfStream)
             writer.CloseStream = False
             document.Open()
+            Dim baseFont As BaseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.EMBEDDED)
+            Dim fuente12 As iTextSharp.text.Font = New Font(baseFont, 12, iTextSharp.text.Font.BOLD)
+            Dim fuente10Bold As iTextSharp.text.Font = New Font(baseFont, 10, iTextSharp.text.Font.BOLD)
+            Dim fuente10 As iTextSharp.text.Font = New Font(baseFont, 10)
+            Dim fuente8 As iTextSharp.text.Font = New Font(baseFont, 8)
+            Dim fuente8Bold As iTextSharp.text.Font = New Font(baseFont, 8, iTextSharp.text.Font.BOLD)
 
-            Dim baseFont As BaseFont = baseFont.CreateFont(baseFont.HELVETICA, baseFont.CP1252, baseFont.EMBEDDED)
-                Dim fuente12 As iTextSharp.text.Font = New Font(baseFont, 12, iTextSharp.text.Font.BOLD)
-                Dim fuente10Bold As iTextSharp.text.Font = New Font(baseFont, 10, iTextSharp.text.Font.BOLD)
-                Dim fuente10 As iTextSharp.text.Font = New Font(baseFont, 10)
-                Dim fuente8 As iTextSharp.text.Font = New Font(baseFont, 8)
-                Dim fuente8Bold As iTextSharp.text.Font = New Font(baseFont, 8, iTextSharp.text.Font.BOLD)
-
-                Dim rutaImagen As String = ValidationForms.NombreLogoNuevo(_tipoCon, Application.StartupPath)
-                Dim logo As iTextSharp.text.Image = iTextSharp.text.Image.GetInstance(rutaImagen)
+            Dim rutaImagen As String = ValidationForms.NombreLogoNuevo(_tipoCon, Application.StartupPath)
+            Dim logo As iTextSharp.text.Image = iTextSharp.text.Image.GetInstance(rutaImagen)
             logo.ScaleToFit(50, 50)
 
             Dim NombreEmpresa As String = ValidationForms.NombreCompany(_tipoCon)
-                Dim Ciudad As String = "Machala - El Oro - Ecuador"
-                Dim Direccion As String = "Avenida Alejandro Castro Benitez, El Bosque Sector 5"
+            Dim Ciudad As String = "Machala - El Oro - Ecuador"
+            Dim Direccion As String = "Avenida Alejandro Castro Benitez, El Bosque Sector 5"
 
 
 
@@ -293,7 +294,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             cellLeft.AddElement(New Phrase(NombreEmpresa, fuente12))
             cellLeft.AddElement(New Phrase(Ciudad, fuente10))
             cellLeft.AddElement(New Phrase(Direccion, fuente10))
-            cellLeft.AddElement(New Phrase("Id Activo Fijo: " & dgvActivoFijo.CurrentRow.Cells(0).Value.ToString(), fuente10Bold))
+
             headerTable.AddCell(cellLeft)
 
             Dim cellRight As New PdfPCell(logo)
@@ -308,34 +309,82 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             'headerTable.WriteSelectedRows(0, -1, 20, 575, writer.DirectContent)
 
             Dim rectTabla1 As PdfContentByte = writer.DirectContent
-            rectTabla1.RoundRectangle(10.0F, 485.0F, 390.0F, 75.0F, 10.0F)
+            rectTabla1.RoundRectangle(10.0F, 495.0F, 390.0F, 75.0F, 10.0F)
             rectTabla1.Stroke()
             ' ================== BLOQUE 2 ==================
+
+            Dim bloque2 As New PdfPTable(2)
+            bloque2.WidthPercentage = 100
+            bloque2.SetWidths(New Single() {40, 60})
+
+            Dim dt = _objetoPlanCuentas.SeleccionarPadresHijosXCodigoHijo(_tipoCon, dgvActivoFijo.CurrentRow.Cells(6).Value.ToString())
+
+
+            Dim CodigoCuentaHijo = dt.Rows(0)(0).ToString
+            Dim NombreCuentaHijo = dt.Rows(0)(1).ToString
+            Dim CodigoCuentaPadre = dt.Rows(0)(2).ToString
+            Dim NombreCuentaAPdre = dt.Rows(0)(3).ToString
+
+
+            ' ================== TABLA IZQUIERDA (estructura de cuentas) ==================
+            Dim cuentasTable As New PdfPTable(2)
+            cuentasTable.WidthPercentage = 100
+            cuentasTable.SetWidths(New Single() {35, 65})
+
+            ' Encabezados
+            cuentasTable.AddCell(New PdfPCell(New Phrase("Código", fuente8Bold)) With {.Border = PdfPCell.NO_BORDER})
+            cuentasTable.AddCell(New PdfPCell(New Phrase("Detalle", fuente8Bold)) With {.Border = PdfPCell.NO_BORDER})
+
+            ' Filas fijas
+            cuentasTable.AddCell(New PdfPCell(New Phrase("1", fuente8)) With {.Border = PdfPCell.NO_BORDER})
+            cuentasTable.AddCell(New PdfPCell(New Phrase("Activo", fuente8)) With {.Border = PdfPCell.NO_BORDER})
+
+            cuentasTable.AddCell(New PdfPCell(New Phrase("102", fuente8)) With {.Border = PdfPCell.NO_BORDER})
+            cuentasTable.AddCell(New PdfPCell(New Phrase("Activo No Corriente", fuente8)) With {.Border = PdfPCell.NO_BORDER})
+
+            cuentasTable.AddCell(New PdfPCell(New Phrase("10201", fuente8)) With {.Border = PdfPCell.NO_BORDER})
+            cuentasTable.AddCell(New PdfPCell(New Phrase("Propiedades, Planta y Equipo", fuente8)) With {.Border = PdfPCell.NO_BORDER})
+
+            ' Filas dinámicas desde consulta
+            cuentasTable.AddCell(New PdfPCell(New Phrase(CodigoCuentaPadre, fuente8)) With {.Border = PdfPCell.NO_BORDER})
+            cuentasTable.AddCell(New PdfPCell(New Phrase(NombreCuentaAPdre, fuente8)) With {.Border = PdfPCell.NO_BORDER})
+
+            cuentasTable.AddCell(New PdfPCell(New Phrase(CodigoCuentaHijo, fuente8)) With {.Border = PdfPCell.NO_BORDER})
+            cuentasTable.AddCell(New PdfPCell(New Phrase(NombreCuentaHijo, fuente8)) With {.Border = PdfPCell.NO_BORDER})
+
+            ' Añadir tabla izquierda al contenedor
+            bloque2.AddCell(New PdfPCell(cuentasTable) With {.Border = PdfPCell.NO_BORDER})
+
+
+            ' ================== TABLA DERECHA (información del activo) ==================
             Dim infoTable As New PdfPTable(2)
             infoTable.WidthPercentage = 100
-            infoTable.SetWidths(New Single() {50, 50})
+            infoTable.SetWidths(New Single() {45, 55})
 
             ' Fila 1
-            infoTable.AddCell(New PdfPCell(New Phrase("Cuenta: ", fuente8Bold)) With {.Border = PdfPCell.NO_BORDER})
-            infoTable.AddCell(New PdfPCell(New Phrase(dgvActivoFijo.CurrentRow.Cells(6).Value.ToString(), fuente8)) With {.Border = PdfPCell.NO_BORDER})
             infoTable.AddCell(New PdfPCell(New Phrase("Fecha de Compra: ", fuente8Bold)) With {.Border = PdfPCell.NO_BORDER})
             infoTable.AddCell(New PdfPCell(New Phrase(dgvActivoFijo.CurrentRow.Cells(10).Value.ToString(), fuente8)) With {.Border = PdfPCell.NO_BORDER})
 
             ' Fila 2 → Nombre de Activo ocupa doble columna
-            Dim nombreActivoCell As New PdfPCell(New Phrase("Nombre de Activo: " & dgvActivoFijo.CurrentRow.Cells(2).Value.ToString(), fuente8))
+            Dim nombreActivoPhrase As New Phrase()
+            nombreActivoPhrase.Add(New Chunk("Nombre de Activo: ", fuente8Bold))
+            nombreActivoPhrase.Add(New Chunk(dgvActivoFijo.CurrentRow.Cells(2).Value.ToString(), fuente8))
+            Dim nombreActivoCell As New PdfPCell(nombreActivoPhrase)
             nombreActivoCell.Colspan = 2
             nombreActivoCell.Border = PdfPCell.NO_BORDER
             infoTable.AddCell(nombreActivoCell)
 
             ' Fila 3
-            infoTable.AddCell(New PdfPCell(New Phrase("Tipo de Activo: ", fuente8Bold)) With {.Border = PdfPCell.NO_BORDER})
-            infoTable.AddCell(New PdfPCell(New Phrase(dgvActivoFijo.CurrentRow.Cells(1).Value.ToString(), fuente8)) With {.Border = PdfPCell.NO_BORDER})
             infoTable.AddCell(New PdfPCell(New Phrase("Número de Factura: ", fuente8Bold)) With {.Border = PdfPCell.NO_BORDER})
             infoTable.AddCell(New PdfPCell(New Phrase(dgvActivoFijo.CurrentRow.Cells(11).Value.ToString(), fuente8)) With {.Border = PdfPCell.NO_BORDER})
 
-            ' Fila 4
             infoTable.AddCell(New PdfPCell(New Phrase("Valor de Factura: ", fuente8Bold)) With {.Border = PdfPCell.NO_BORDER})
             infoTable.AddCell(New PdfPCell(New Phrase(dgvActivoFijo.CurrentRow.Cells(3).Value.ToString(), fuente8)) With {.Border = PdfPCell.NO_BORDER})
+
+            ' Fila 4
+            infoTable.AddCell(New PdfPCell(New Phrase("Valor Residual: ", fuente8Bold)) With {.Border = PdfPCell.NO_BORDER})
+            infoTable.AddCell(New PdfPCell(New Phrase(dgvActivoFijo.CurrentRow.Cells(7).Value.ToString(), fuente8)) With {.Border = PdfPCell.NO_BORDER})
+
             infoTable.AddCell(New PdfPCell(New Phrase("Años Vida Útil: ", fuente8Bold)) With {.Border = PdfPCell.NO_BORDER})
             infoTable.AddCell(New PdfPCell(New Phrase(dgvActivoFijo.CurrentRow.Cells(4).Value.ToString(), fuente8)) With {.Border = PdfPCell.NO_BORDER})
 
@@ -343,13 +392,22 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             infoTable.AddCell(New PdfPCell(New Phrase("Proveedor: ", fuente8Bold)) With {.Border = PdfPCell.NO_BORDER})
             infoTable.AddCell(New PdfPCell(New Phrase(dgvActivoFijo.CurrentRow.Cells(9).Value.ToString(), fuente8)) With {.Border = PdfPCell.NO_BORDER})
 
-            document.Add(infoTable)
+            ' Añadir tabla derecha al contenedor
+            bloque2.AddCell(New PdfPCell(infoTable) With {.Border = PdfPCell.NO_BORDER})
+
+            ' Agregar todo al documento
+            document.Add(bloque2)
             document.Add(New Paragraph(" "))
 
-            'infoTable.WriteSelectedRows(0, -1, 20, 510, writer.DirectContent)
+            Dim yPos As Single = 490  ' posición Y inicial (ajústala a tu diseño)
+            'bloque2.WriteSelectedRows(0, -1, 15, yPos, writer.DirectContent)
 
+            ' Calcular altura dinámica
+            Dim heightTable As Single = bloque2.TotalHeight + 10
+
+            ' Dibujar rectángulo decorativo ajustado
             Dim rectTabla2 As PdfContentByte = writer.DirectContent
-            rectTabla2.RoundRectangle(10.0F, 370.0F, 390.0F, 110.0F, 10.0F)
+            rectTabla2.RoundRectangle(10.0F, yPos - heightTable, 390.0F, heightTable, 10.0F)
             rectTabla2.Stroke()
 
             ' ================== BLOQUE 3 (Depreciación Anual) ==================

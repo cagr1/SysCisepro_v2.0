@@ -596,10 +596,11 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 xml += "<totalImpuesto>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=- DETALLE DE CADA IMPUESTO =-=-=-=-=-=-=-=-=-=-=-=-=
                 xml += "<codigo>2</codigo>" & vbNewLine ' IVA => 2 / ICE => 3 / IRBPNR => 5
 
+                If _porcentajeIva = 15 Then xml += "<codigoPorcentaje>4</codigoPorcentaje>" & vbNewLine
                 If _porcentajeIva = 14 Then xml += "<codigoPorcentaje>3</codigoPorcentaje>" & vbNewLine
                 If _porcentajeIva = 12 Then xml += "<codigoPorcentaje>2</codigoPorcentaje>" & vbNewLine
                 If _porcentajeIva = 0 Then xml += "<codigoPorcentaje>0</codigoPorcentaje>" & vbNewLine
-                If _porcentajeIva = 15 Then xml += "<codigoPorcentaje>4</codigoPorcentaje>" & vbNewLine
+
 
                 xml += "<baseImponible>" & Math.Round(CDec(dgvNotaCredito.CurrentRow.Cells(7).Value), 2, MidpointRounding.ToEven) & "</baseImponible>" & vbNewLine
                 xml += "<valor>" & Math.Round(CDec(dgvNotaCredito.CurrentRow.Cells(10).Value), 2, MidpointRounding.ToEven) & "</valor>" & vbNewLine
@@ -620,10 +621,11 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     xml += "<impuesto>" & vbNewLine ' =-=-=-=-=-=-=-=-=-=- DETALLE DE CADA IMPUESTO =-=-=-=-=-=-=-=-=-=-=-=-=
                     xml += "<codigo>2</codigo>" & vbNewLine ' IVA => 2 / ICE => 3 / IRBPNR => 5
 
+                    If _porcentajeIva = 15 Then xml += "<codigoPorcentaje>4</codigoPorcentaje>" & vbNewLine
                     If _porcentajeIva = 14 Then xml += "<codigoPorcentaje>3</codigoPorcentaje>" & vbNewLine
                     If _porcentajeIva = 12 Then xml += "<codigoPorcentaje>2</codigoPorcentaje>" & vbNewLine
                     If _porcentajeIva = 0 Then xml += "<codigoPorcentaje>0</codigoPorcentaje>" & vbNewLine
-                    If _porcentajeIva = 15 Then xml += "<codigoPorcentaje>4</codigoPorcentaje>" & vbNewLine
+
 
                     xml += "<tarifa>" & _porcentajeIva & "</tarifa>" & vbNewLine
                     xml += "<baseImponible>" & Math.Round(CDec(dgvNotaCredito.CurrentRow.Cells(7).Value), 2, MidpointRounding.ToEven) & "</baseImponible>" & vbNewLine

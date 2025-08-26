@@ -373,7 +373,7 @@
             Me.KryptonGroupBox1.CaptionOverlap = 0R
             Me.KryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.KeyTip
             Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox1.Location = New System.Drawing.Point(6, 38)
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(9, 39)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
             'KryptonGroupBox1.Panel

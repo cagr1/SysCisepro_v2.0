@@ -275,6 +275,13 @@ Namespace CONTABILIDAD.PLAN_DE_CUENTAS
             Return tabla
         End Function
 
+        Public Function SeleccionarPadresHijosXCodigoHijo(ByVal tipoCon As TipoConexion, ByVal Codigo As String) As DataTable
+            Dim pars = New List(Of Object())
+            pars.Add(New Object() {"@Codigo", SqlDbType.VarChar, Codigo})
+            Dim tabla = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_SeleccionarPadresHijosXCodigoHijo", True, pars)
+
+            Return tabla
+        End Function
 
     End Class
 End Namespace

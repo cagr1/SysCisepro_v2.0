@@ -518,5 +518,9 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
                 KryptonMessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
+
+        Private Sub KryptonGroupBox1_Paint(sender As Object, e As PaintEventArgs) Handles KryptonGroupBox1.Paint
+
+        End Sub
     End Class
 End Namespace
