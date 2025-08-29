@@ -2,6 +2,11 @@
 Imports ClassLibraryCisepro.CONTABILIDAD.COMPRAS.PROVEEDORES
 Imports ClassLibraryCisepro.ENUMS
 Imports Krypton.Toolkit
+Imports iTextSharp.text
+Imports iTextSharp.text.pdf
+Imports ClassLibraryCisepro.VALIDACIONES
+Imports syscisepro.DATOS
+Imports System.IO
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
     ''' <summary>
@@ -30,13 +35,13 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                         _tipoCon = TipoConexion.Cisepro
                 End Select
             End Set
-        End Property 
+        End Property
         Public IdUsuario As Integer
 
         ReadOnly _objetoOrdenCompra As New ClassOrdenCompra
         ReadOnly _objetoDetalleOrdenCompra As New ClassDetalleOrdenCompra
         ReadOnly _objetoProveedorGeneral As New ClassProveedores
-         
+        ReadOnly _objValidaciones As New ClassConversion
         Public Sub CargarOrdenCompra()
             Try
                 dgvOrdenCompra.DataSource = _objetoOrdenCompra.SeleccionarRegistrosOrdenCompraAprobacion(_tipoCon)
@@ -136,16 +141,123 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                     dgvDetalleOrdenCompra.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvOrdenCompra.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-            dgvDetalleOrdenCompra.Font = New Font("Roboto", 8, FontStyle.Regular)
-            dgvOrdenCompra.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvDetalleOrdenCompra.Font = New System.Drawing.Font("Roboto", 8, FontStyle.Regular)
+            dgvOrdenCompra.Font = New Drawing.Font("Roboto", 8, FontStyle.Regular)
         End Sub
 
         Private Sub btnReporte_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporte.Click
             If txtIdOrdenCompra.Text = "..." Then Return
-            Dim f = New FormReporteOrdenCompra
-            f.TipoCox = TipoCox
-            f.lblIdOrdenCompra.Text = txtIdOrdenCompra.Text
-            f.ShowDialog()
+
+            Dim dt = _objetoOrdenCompra.SeleccionarRegistrosOrdenCompraXIdOrdenCompra(_tipoCon, CInt(txtIdOrdenCompra.Text))
+
+            If dt.Rows.Count = 0 Then
+                KryptonMessageBox.Show("No se encontraron registros", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                Return
+            End If
+
+
+
+            Dim pdfStream As New MemoryStream()
+
+            Dim ruta As String = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "InformeDepreciaciones.pdf")
+            PdfViewer1.Document?.Dispose()
+            PdfViewer1.Document = Nothing
+
+            'Using fs As New FileStream(ruta, FileMode.Create, FileAccess.Write, FileShare.None)
+            Dim document As New iTextSharp.text.Document(PageSize.A5)
+            Dim writer As PdfWriter = PdfWriter.GetInstance(document, pdfStream)
+            writer.CloseStream = False
+            document.Open()
+            Dim baseFont As BaseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.EMBEDDED)
+            Dim fuente12 As iTextSharp.text.Font = New Font(baseFont, 12, iTextSharp.text.Font.BOLD)
+            Dim fuente10Bold As iTextSharp.text.Font = New Font(baseFont, 10, iTextSharp.text.Font.BOLD)
+            Dim fuente10 As iTextSharp.text.Font = New Font(baseFont, 10)
+            Dim fuente8 As iTextSharp.text.Font = New Font(baseFont, 8)
+            Dim fuente8Bold As iTextSharp.text.Font = New Font(baseFont, 8, iTextSharp.text.Font.BOLD)
+
+            Dim rutaImagen As String = ValidationForms.NombreLogoNuevo(_tipoCon, Application.StartupPath)
+            Dim logo As iTextSharp.text.Image = iTextSharp.text.Image.GetInstance(rutaImagen)
+            logo.ScaleToFit(30, 30)
+
+            Dim NombreEmpresa As String = ValidationForms.NombreCompany(_tipoCon)
+            Dim Ciudad As String = "Machala - El Oro - Ecuador"
+            Dim Direccion As String = "Avenida Alejandro Castro Benitez, El Bosque Sector 5"
+
+            Dim letras = dt.Rows(0)(18).ToString()
+
+            Dim valorEnLetras As String = _objValidaciones.Letras(Letras)
+
+            ' ENCABEZADO
+            ' ===============================
+            ' ENCABEZADO (3 columnas)
+            ' ===============================
+
+            ' Creamos una tabla de 3 columnas
+            Dim encabezado As New PdfPTable(3)
+            encabezado.WidthPercentage = 100
+            encabezado.SetWidths(New Single() {20, 50, 30}) ' proporción columnas
+
+            ' Estilo general con bordes redondeados
+            Dim bordeRedondeado As New PdfPCell()
+            bordeRedondeado.Border = Rectangle.BOX
+            bordeRedondeado.BorderWidth = 1.5F
+            bordeRedondeado.Padding = 5
+            bordeRedondeado.HorizontalAlignment = Element.ALIGN_CENTER
+            bordeRedondeado.VerticalAlignment = Element.ALIGN_MIDDLE
+
+            ' ==== Celda 1: Logo ====
+            Dim cellLogo As New PdfPCell(logo, True)
+            cellLogo.Border = Rectangle.BOX
+            cellLogo.BorderWidth = 1.5F
+            cellLogo.HorizontalAlignment = Element.ALIGN_CENTER
+            cellLogo.VerticalAlignment = Element.ALIGN_MIDDLE
+
+            encabezado.AddCell(cellLogo)
+
+            ' ==== Celda 2: Título ====
+            Dim cellTitulo As New PdfPCell(New Phrase("ORDEN DE COMPRA", fuente12))
+            cellTitulo.Border = Rectangle.BOX
+            cellTitulo.BorderWidth = 1.5F
+            cellTitulo.HorizontalAlignment = Element.ALIGN_CENTER
+            cellTitulo.VerticalAlignment = Element.ALIGN_MIDDLE
+            cellTitulo.Padding = 6
+            encabezado.AddCell(cellTitulo)
+
+            ' ==== Celda 3: Datos en 4 líneas ====
+            Dim fechaReporte As String = Convert.ToDateTime(dt.Rows(0)(1)).ToString("dd/MM/yyyy")
+
+            Dim textoCabecera As String =
+            "Código: RE 3.6.1-7" & vbCrLf &
+            "Versión: 003" & vbCrLf &
+            "Página: 1" & vbCrLf &
+            "Fecha: " & fechaReporte
+
+            Dim cellInfo As New PdfPCell(New Phrase(textoCabecera, fuente8))
+            cellInfo.Border = Rectangle.BOX
+            cellInfo.BorderWidth = 1.5F
+            cellInfo.HorizontalAlignment = Element.ALIGN_LEFT
+            cellInfo.VerticalAlignment = Element.ALIGN_MIDDLE
+            cellInfo.Padding = 5
+
+            ' Importante: sin bordes internos → se deja texto en líneas
+            encabezado.AddCell(cellInfo)
+
+            ' Agregar la tabla al documento
+            document.Add(encabezado)
+
+            'Cierre
+            document.Close()
+            pdfStream.Position = 0
+
+
+            document.Close()
+            writer.Close()
+
+            pdfStream.Seek(0, SeekOrigin.Begin)
+            PdfViewer1.Document = PdfiumViewer.PdfDocument.Load(pdfStream)
+            PdfViewer1.ZoomMode = 1
+
+
         End Sub
 
         Private Sub dgvOrdenCompra_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvOrdenCompra.SelectionChanged

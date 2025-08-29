@@ -128,6 +128,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                         Dim fuente10Bold As New Font(baseFont, 10, Font.Bold)
                         Dim fuente10 As New Font(baseFont, 10)
                         Dim fuente8 As New Font(baseFont, 8)
+                        Dim fuente8Bold As New Font(baseFont, 8, Font.Bold)
 
                         ' Obtener el valor en letras (necesitarías implementar esta función)
                         Dim valorEnLetras As String = _objValidaciones.Letras(Letras)
@@ -140,7 +141,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                         Dim nombreY As Single = chequeHeight - (2.3 * cmToPoints) ' Y se mide desde arriba
                         Dim ctNombre As New ColumnText(writer.DirectContent)
                         ctNombre.SetSimpleColumn(nombreX, nombreY, nombreX + 200, nombreY + 20)
-                        ctNombre.AddElement(New Paragraph(nombre, fuente10Bold))
+                        ctNombre.AddElement(New Paragraph(nombre, fuente8Bold))
                         ctNombre.Go()
 
                         ' 2. Valor numérico - Posición: X=12.5cm, Y=2.5cm
@@ -148,7 +149,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                         Dim valorY As Single = chequeHeight - (2.3 * cmToPoints)
                         Dim ctValor As New ColumnText(writer.DirectContent)
                         ctValor.SetSimpleColumn(valorX, valorY, valorX + 100, valorY + 20)
-                        ctValor.AddElement(New Paragraph(String.Format("** {0:N2} **", valor), fuente12Bold))
+                        ctValor.AddElement(New Paragraph(String.Format("** {0:N2} **", valor), fuente10Bold))
                         ctValor.Go()
 
                         ' 3. Valor en letras - Posición: Centrado, Y=3cm
@@ -157,7 +158,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                         Dim ctLetras As New ColumnText(writer.DirectContent)
                         ctLetras.SetSimpleColumn(letrasX, letrasY, chequeWidth, letrasY + 20)
                         ctLetras.Alignment = Element.ALIGN_CENTER
-                        ctLetras.AddElement(New Paragraph(valorEnLetras, fuente10))
+                        ctLetras.AddElement(New Paragraph(valorEnLetras, fuente8))
                         ctLetras.Go()
 
                         ' 4. Ciudad y fecha - Posición: X=2cm, Y=4.3cm

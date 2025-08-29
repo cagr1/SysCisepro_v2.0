@@ -31,11 +31,11 @@
             Me.KryptonNavigator1 = New ComponentFactory.Krypton.Navigator.KryptonNavigator()
             Me.KryptonPage1 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.PdfViewer1 = New PdfiumViewer.PdfViewer()
             Me.KryptonPage3 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.crvMachala = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
             Me.txtIdComprobanteEgreso = New System.Windows.Forms.TextBox()
             Me.txtIdComprobamteEgreso2 = New System.Windows.Forms.TextBox()
-            Me.PdfViewer1 = New PdfiumViewer.PdfViewer()
             CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonNavigator1.SuspendLayout()
             CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,7 +92,7 @@
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 0)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2, Me.KryptonPage3})
-            Me.KryptonNavigator1.SelectedIndex = 0
+            Me.KryptonNavigator1.SelectedIndex = 1
             Me.KryptonNavigator1.Size = New System.Drawing.Size(882, 662)
             Me.KryptonNavigator1.TabIndex = 8
             Me.KryptonNavigator1.Text = "KryptonNavigator1"
@@ -123,6 +123,13 @@
             Me.KryptonPage2.Text = "Cheque"
             Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage2.UniqueName = "3F85382D9C5245BD0FA2CEAB7EB39E6A"
+            '
+            'PdfViewer1
+            '
+            Me.PdfViewer1.Location = New System.Drawing.Point(2, 2)
+            Me.PdfViewer1.Name = "PdfViewer1"
+            Me.PdfViewer1.Size = New System.Drawing.Size(876, 622)
+            Me.PdfViewer1.TabIndex = 1
             '
             'KryptonPage3
             '
@@ -170,13 +177,6 @@
             Me.txtIdComprobamteEgreso2.Size = New System.Drawing.Size(100, 23)
             Me.txtIdComprobamteEgreso2.TabIndex = 3
             Me.txtIdComprobamteEgreso2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'PdfViewer1
-            '
-            Me.PdfViewer1.Location = New System.Drawing.Point(2, 2)
-            Me.PdfViewer1.Name = "PdfViewer1"
-            Me.PdfViewer1.Size = New System.Drawing.Size(876, 622)
-            Me.PdfViewer1.TabIndex = 1
             '
             'FormReporteComprobanteEgresoBancos
             '

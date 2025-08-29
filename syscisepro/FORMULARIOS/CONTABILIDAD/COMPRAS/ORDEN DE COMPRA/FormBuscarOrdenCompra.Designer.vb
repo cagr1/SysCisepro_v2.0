@@ -25,7 +25,6 @@
         Private Sub InitializeComponent()
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormBuscarOrdenCompra))
-            Me.dgvDetalleOrdenCompra = New System.Windows.Forms.DataGridView()
             Me.txtTotalOrdenCompra = New System.Windows.Forms.TextBox()
             Me.txtIvaOrdenCompra = New System.Windows.Forms.TextBox()
             Me.txtDescuentoOrdenCompra = New System.Windows.Forms.TextBox()
@@ -55,32 +54,25 @@
             Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
-            CType(Me.dgvDetalleOrdenCompra, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonNavigator1 = New ComponentFactory.Krypton.Navigator.KryptonNavigator()
+            Me.KryptonPage1 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.dgvDetalleOrdenCompra = New System.Windows.Forms.DataGridView()
+            Me.PdfViewer1 = New PdfiumViewer.PdfViewer()
             CType(Me.dgvOrdenCompra, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox1.Panel.SuspendLayout()
             Me.KryptonGroupBox1.SuspendLayout()
+            CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonNavigator1.SuspendLayout()
+            CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonPage1.SuspendLayout()
+            CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonPage2.SuspendLayout()
+            CType(Me.dgvDetalleOrdenCompra, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
-            '
-            'dgvDetalleOrdenCompra
-            '
-            Me.dgvDetalleOrdenCompra.AllowUserToAddRows = False
-            Me.dgvDetalleOrdenCompra.AllowUserToDeleteRows = False
-            Me.dgvDetalleOrdenCompra.AllowUserToResizeRows = False
-            Me.dgvDetalleOrdenCompra.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
-            Me.dgvDetalleOrdenCompra.BorderStyle = System.Windows.Forms.BorderStyle.None
-            Me.dgvDetalleOrdenCompra.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            Me.dgvDetalleOrdenCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvDetalleOrdenCompra.Location = New System.Drawing.Point(2, 238)
-            Me.dgvDetalleOrdenCompra.MultiSelect = False
-            Me.dgvDetalleOrdenCompra.Name = "dgvDetalleOrdenCompra"
-            Me.dgvDetalleOrdenCompra.ReadOnly = True
-            Me.dgvDetalleOrdenCompra.RowHeadersVisible = False
-            Me.dgvDetalleOrdenCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleOrdenCompra.Size = New System.Drawing.Size(1014, 333)
-            Me.dgvDetalleOrdenCompra.TabIndex = 47
             '
             'txtTotalOrdenCompra
             '
@@ -234,17 +226,17 @@
             Me.dgvOrdenCompra.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvOrdenCompra.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvOrdenCompra.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.dgvOrdenCompra.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvOrdenCompra.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvOrdenCompra.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvOrdenCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvOrdenCompra.Location = New System.Drawing.Point(2, 35)
+            Me.dgvOrdenCompra.Location = New System.Drawing.Point(9, 6)
             Me.dgvOrdenCompra.MultiSelect = False
             Me.dgvOrdenCompra.Name = "dgvOrdenCompra"
             Me.dgvOrdenCompra.ReadOnly = True
             Me.dgvOrdenCompra.RowHeadersVisible = False
             Me.dgvOrdenCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvOrdenCompra.Size = New System.Drawing.Size(579, 200)
+            Me.dgvOrdenCompra.Size = New System.Drawing.Size(554, 200)
             Me.dgvOrdenCompra.TabIndex = 43
             '
             'MenuStrip1
@@ -273,7 +265,7 @@
             Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnReporte.Name = "btnReporte"
-            Me.btnReporte.Size = New System.Drawing.Size(90, 28)
+            Me.btnReporte.Size = New System.Drawing.Size(91, 28)
             Me.btnReporte.Text = "REPORTE"
             '
             'btnAceptar
@@ -290,7 +282,7 @@
             '
             Me.KryptonGroupBox1.CaptionOverlap = 0R
             Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox1.Location = New System.Drawing.Point(587, 34)
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(576, 6)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
             'KryptonGroupBox1.Panel
@@ -410,16 +402,83 @@
             Me.KryptonLabel1.TabIndex = 0
             Me.KryptonLabel1.Values.Text = "No"
             '
+            'KryptonNavigator1
+            '
+            Me.KryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None
+            Me.KryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide
+            Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 32)
+            Me.KryptonNavigator1.Name = "KryptonNavigator1"
+            Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
+            Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
+            Me.KryptonNavigator1.SelectedIndex = 0
+            Me.KryptonNavigator1.Size = New System.Drawing.Size(1018, 540)
+            Me.KryptonNavigator1.TabIndex = 190
+            Me.KryptonNavigator1.Text = "KryptonNavigator1"
+            '
+            'KryptonPage1
+            '
+            Me.KryptonPage1.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage1.Controls.Add(Me.dgvDetalleOrdenCompra)
+            Me.KryptonPage1.Controls.Add(Me.dgvOrdenCompra)
+            Me.KryptonPage1.Controls.Add(Me.KryptonGroupBox1)
+            Me.KryptonPage1.Flags = 65534
+            Me.KryptonPage1.LastVisibleSet = True
+            Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
+            Me.KryptonPage1.Name = "KryptonPage1"
+            Me.KryptonPage1.Size = New System.Drawing.Size(1016, 511)
+            Me.KryptonPage1.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.KryptonPage1.Text = "Busqueda"
+            Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
+            Me.KryptonPage1.UniqueName = "5D44B70E5E604B1F24B31853908D244B"
+            '
+            'KryptonPage2
+            '
+            Me.KryptonPage2.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage2.Controls.Add(Me.PdfViewer1)
+            Me.KryptonPage2.Flags = 65534
+            Me.KryptonPage2.LastVisibleSet = True
+            Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
+            Me.KryptonPage2.Name = "KryptonPage2"
+            Me.KryptonPage2.Size = New System.Drawing.Size(1016, 511)
+            Me.KryptonPage2.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.KryptonPage2.Text = "Reporte"
+            Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
+            Me.KryptonPage2.UniqueName = "B1CF942E9E5B4F0330AFA13F65BE84E0"
+            '
+            'dgvDetalleOrdenCompra
+            '
+            Me.dgvDetalleOrdenCompra.AllowUserToAddRows = False
+            Me.dgvDetalleOrdenCompra.AllowUserToDeleteRows = False
+            Me.dgvDetalleOrdenCompra.AllowUserToResizeRows = False
+            Me.dgvDetalleOrdenCompra.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvDetalleOrdenCompra.BorderStyle = System.Windows.Forms.BorderStyle.None
+            Me.dgvDetalleOrdenCompra.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
+            Me.dgvDetalleOrdenCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            Me.dgvDetalleOrdenCompra.Location = New System.Drawing.Point(9, 218)
+            Me.dgvDetalleOrdenCompra.MultiSelect = False
+            Me.dgvDetalleOrdenCompra.Name = "dgvDetalleOrdenCompra"
+            Me.dgvDetalleOrdenCompra.ReadOnly = True
+            Me.dgvDetalleOrdenCompra.RowHeadersVisible = False
+            Me.dgvDetalleOrdenCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+            Me.dgvDetalleOrdenCompra.Size = New System.Drawing.Size(996, 282)
+            Me.dgvDetalleOrdenCompra.TabIndex = 190
+            '
+            'PdfViewer1
+            '
+            Me.PdfViewer1.Location = New System.Drawing.Point(2, 3)
+            Me.PdfViewer1.Name = "PdfViewer1"
+            Me.PdfViewer1.Size = New System.Drawing.Size(1012, 505)
+            Me.PdfViewer1.TabIndex = 0
+            '
             'FormBuscarOrdenCompra
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(1018, 572)
-            Me.Controls.Add(Me.KryptonGroupBox1)
+            Me.Controls.Add(Me.KryptonNavigator1)
             Me.Controls.Add(Me.MenuStrip1)
-            Me.Controls.Add(Me.dgvDetalleOrdenCompra)
-            Me.Controls.Add(Me.dgvOrdenCompra)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormBuscarOrdenCompra"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -429,7 +488,6 @@
             Me.StateActive.Border.ImageAlign = Krypton.Toolkit.PaletteRectangleAlign.Local
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "BUSCAR ORDEN DE COMPRA"
-            CType(Me.dgvDetalleOrdenCompra, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.dgvOrdenCompra, System.ComponentModel.ISupportInitialize).EndInit()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
@@ -438,11 +496,17 @@
             Me.KryptonGroupBox1.Panel.PerformLayout()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox1.ResumeLayout(False)
+            CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonNavigator1.ResumeLayout(False)
+            CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonPage1.ResumeLayout(False)
+            CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonPage2.ResumeLayout(False)
+            CType(Me.dgvDetalleOrdenCompra, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
         End Sub
-        Friend WithEvents dgvDetalleOrdenCompra As System.Windows.Forms.DataGridView
         Friend WithEvents txtTotalOrdenCompra As System.Windows.Forms.TextBox
         Friend WithEvents txtIvaOrdenCompra As System.Windows.Forms.TextBox
         Friend WithEvents txtDescuentoOrdenCompra As System.Windows.Forms.TextBox
@@ -472,5 +536,10 @@
         Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel1 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel11 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonNavigator1 As ComponentFactory.Krypton.Navigator.KryptonNavigator
+        Friend WithEvents KryptonPage1 As ComponentFactory.Krypton.Navigator.KryptonPage
+        Friend WithEvents KryptonPage2 As ComponentFactory.Krypton.Navigator.KryptonPage
+        Friend WithEvents dgvDetalleOrdenCompra As DataGridView
+        Friend WithEvents PdfViewer1 As PdfiumViewer.PdfViewer
     End Class
 End Namespace

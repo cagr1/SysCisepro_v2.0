@@ -83,5 +83,12 @@ Namespace CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
             Return comando
         End Function
 
+        Public Function SeleccionarRegistrosOrdenCompraXIdOrdenCompra(ByVal tipoCon As TipoConexion, ByVal idOrdenC As Integer) As DataTable
+            Dim pars = New List(Of Object())
+            pars.Add(New Object() {"idOrden", SqlDbType.BigInt, idOrdenC})
+            Dim dt = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_SeleccionarRegistrosOrdenCompraXIdOrden", True, pars)
+            Return dt
+        End Function
+
     End Class
 End Namespace
