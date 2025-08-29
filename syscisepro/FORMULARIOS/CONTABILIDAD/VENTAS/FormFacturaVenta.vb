@@ -563,20 +563,22 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub CargarSaldoCliente()
 
             Dim Contrato = _objetoClienteGeneral.BuscarFiltradoPorRazonSocialClienteGeneral(_tipoCon, txtNombreComercialCliente.Text)
-            Dim Valor As Decimal = Convert.ToDecimal(Contrato.Rows(0)(23))
-            Dim FechaContrato = Convert.ToDateTime(Contrato.Rows(0)(22))
-            Dim Facturas = _objetoFacturaVenta.BuscarFacturaVentaXIdClienteConceptoRangoFecha(_tipoCon, lblIdClienteGeneral.Text, cmbConcepto.SelectedValue, FechaContrato, DateTime.Now)
-            Dim Facturado As Decimal = 0.0D
 
-            If Facturas.Rows.Count > 0 Then
-                For Each Row As DataRow In Facturas.Rows
-                    If Row(11) IsNot Nothing AndAlso Not IsDBNull(Row(11)) AndAlso Convert.ToInt32(Row("EST")) > 0 Then
-                        Facturado += Convert.ToDecimal(Row(11))
-                    End If
+            If Contrato Is Nothing OrElse Contrato.Rows.Count > 0 Then
+                Dim Valor As Decimal = Convert.ToDecimal(Contrato.Rows(0)(23))
+                Dim FechaContrato = Convert.ToDateTime(Contrato.Rows(0)(22))
+                Dim Facturas = _objetoFacturaVenta.BuscarFacturaVentaXIdClienteConceptoRangoFecha(_tipoCon, lblIdClienteGeneral.Text, cmbConcepto.SelectedValue, FechaContrato, DateTime.Now)
+                Dim Facturado As Decimal = 0.0D
 
-                Next
-            End If
-            Dim Saldo = Valor - Facturado
+                If Facturas.Rows.Count > 0 Then
+                    For Each Row As DataRow In Facturas.Rows
+                        If Row(11) IsNot Nothing AndAlso Not IsDBNull(Row(11)) AndAlso Convert.ToInt32(Row("EST")) > 0 Then
+                            Facturado += Convert.ToDecimal(Row(11))
+                        End If
+
+                    Next
+                End If
+                Dim Saldo = Valor - Facturado
 
                 If Valor = 0 Then
                     lblSaldo.Text = "No se ha ingresado valor de contrato"
@@ -585,6 +587,11 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 Else
                     lblSaldo.Text = Saldo.ToString()
                 End If
+            Else
+                lblSaldo.Text = "Cliente sin contrato"
+            End If
+
+
 
 
 

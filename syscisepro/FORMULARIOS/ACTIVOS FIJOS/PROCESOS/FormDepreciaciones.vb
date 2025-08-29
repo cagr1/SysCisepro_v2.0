@@ -336,20 +336,20 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             cuentasTable.AddCell(New PdfPCell(New Phrase("Detalle", fuente8Bold)) With {.Border = PdfPCell.NO_BORDER})
 
             ' Filas fijas
-            cuentasTable.AddCell(New PdfPCell(New Phrase("1", fuente8)) With {.Border = PdfPCell.NO_BORDER})
+            cuentasTable.AddCell(New PdfPCell(New Phrase("1", fuente8Bold)) With {.Border = PdfPCell.NO_BORDER})
             cuentasTable.AddCell(New PdfPCell(New Phrase("Activo", fuente8)) With {.Border = PdfPCell.NO_BORDER})
 
-            cuentasTable.AddCell(New PdfPCell(New Phrase("102", fuente8)) With {.Border = PdfPCell.NO_BORDER})
+            cuentasTable.AddCell(New PdfPCell(New Phrase("102", fuente8Bold)) With {.Border = PdfPCell.NO_BORDER})
             cuentasTable.AddCell(New PdfPCell(New Phrase("Activo No Corriente", fuente8)) With {.Border = PdfPCell.NO_BORDER})
 
-            cuentasTable.AddCell(New PdfPCell(New Phrase("10201", fuente8)) With {.Border = PdfPCell.NO_BORDER})
+            cuentasTable.AddCell(New PdfPCell(New Phrase("10201", fuente8Bold)) With {.Border = PdfPCell.NO_BORDER})
             cuentasTable.AddCell(New PdfPCell(New Phrase("Propiedades, Planta y Equipo", fuente8)) With {.Border = PdfPCell.NO_BORDER})
 
             ' Filas dinámicas desde consulta
-            cuentasTable.AddCell(New PdfPCell(New Phrase(CodigoCuentaPadre, fuente8)) With {.Border = PdfPCell.NO_BORDER})
+            cuentasTable.AddCell(New PdfPCell(New Phrase(CodigoCuentaPadre, fuente8Bold)) With {.Border = PdfPCell.NO_BORDER})
             cuentasTable.AddCell(New PdfPCell(New Phrase(NombreCuentaAPdre, fuente8)) With {.Border = PdfPCell.NO_BORDER})
 
-            cuentasTable.AddCell(New PdfPCell(New Phrase(CodigoCuentaHijo, fuente8)) With {.Border = PdfPCell.NO_BORDER})
+            cuentasTable.AddCell(New PdfPCell(New Phrase(CodigoCuentaHijo, fuente8Bold)) With {.Border = PdfPCell.NO_BORDER})
             cuentasTable.AddCell(New PdfPCell(New Phrase(NombreCuentaHijo, fuente8)) With {.Border = PdfPCell.NO_BORDER})
 
             ' Añadir tabla izquierda al contenedor

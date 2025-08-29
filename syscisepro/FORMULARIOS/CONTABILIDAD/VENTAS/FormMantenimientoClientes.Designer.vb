@@ -43,6 +43,8 @@
             Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMantenimientoClientes))
             Me.cmbTipoIdentificacion = New System.Windows.Forms.ComboBox()
             Me.lblIdClienteGeneral = New System.Windows.Forms.Label()
@@ -167,7 +169,8 @@
             Me.TabControl1 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.chkConvenio = New Krypton.Toolkit.KryptonCheckBox()
             Me.KryptonLabel18 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonGroupBox5 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.gbxInformacionAdicional = New Krypton.Toolkit.KryptonGroupBox()
+            Me.dtpFechaContrato = New System.Windows.Forms.DateTimePicker()
             Me.KryptonLabel17 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel16 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel15 = New Krypton.Toolkit.KryptonLabel()
@@ -244,9 +247,8 @@
             Me.KryptonLabel38 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonPage6 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.KryptonLabel43 = New Krypton.Toolkit.KryptonLabel()
-            Me.dtpFechaContrato = New System.Windows.Forms.DateTimePicker()
+            Me.gbxConvenioCliente = New Krypton.Toolkit.KryptonGroupBox()
             CType(Me.dgvClienteGeneral, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.gbConvenioBancario.SuspendLayout()
             CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.msKardex.SuspendLayout()
             CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -262,10 +264,10 @@
             Me.KryptonNavigator1.SuspendLayout()
             CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.TabControl1.SuspendLayout()
-            CType(Me.KryptonGroupBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.KryptonGroupBox5.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.KryptonGroupBox5.Panel.SuspendLayout()
-            Me.KryptonGroupBox5.SuspendLayout()
+            CType(Me.gbxInformacionAdicional, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.gbxInformacionAdicional.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.gbxInformacionAdicional.Panel.SuspendLayout()
+            Me.gbxInformacionAdicional.SuspendLayout()
             CType(Me.KryptonGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox4.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox4.Panel.SuspendLayout()
@@ -316,6 +318,10 @@
             Me.KryptonGroupBox11.SuspendLayout()
             CType(Me.KryptonPage6, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonPage6.SuspendLayout()
+            CType(Me.gbxConvenioCliente, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.gbxConvenioCliente.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.gbxConvenioCliente.Panel.SuspendLayout()
+            Me.gbxConvenioCliente.SuspendLayout()
             Me.SuspendLayout()
             '
             'cmbTipoIdentificacion
@@ -612,7 +618,7 @@
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvClienteGeneral.DefaultCellStyle = DataGridViewCellStyle3
             Me.dgvClienteGeneral.GridColor = System.Drawing.SystemColors.ControlDarkDark
-            Me.dgvClienteGeneral.Location = New System.Drawing.Point(10, 373)
+            Me.dgvClienteGeneral.Location = New System.Drawing.Point(7, 376)
             Me.dgvClienteGeneral.MultiSelect = False
             Me.dgvClienteGeneral.Name = "dgvClienteGeneral"
             DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -628,7 +634,7 @@
             Me.dgvClienteGeneral.RowsDefaultCellStyle = DataGridViewCellStyle5
             Me.dgvClienteGeneral.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Roboto", 8.0!)
             Me.dgvClienteGeneral.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvClienteGeneral.Size = New System.Drawing.Size(665, 292)
+            Me.dgvClienteGeneral.Size = New System.Drawing.Size(668, 289)
             Me.dgvClienteGeneral.TabIndex = 36
             '
             'txtBuscarCliente
@@ -636,7 +642,7 @@
             Me.txtBuscarCliente.BackColor = System.Drawing.Color.White
             Me.txtBuscarCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtBuscarCliente.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtBuscarCliente.Location = New System.Drawing.Point(62, 347)
+            Me.txtBuscarCliente.Location = New System.Drawing.Point(59, 349)
             Me.txtBuscarCliente.Name = "txtBuscarCliente"
             Me.txtBuscarCliente.Size = New System.Drawing.Size(295, 21)
             Me.txtBuscarCliente.TabIndex = 0
@@ -644,13 +650,10 @@
             'gbConvenioBancario
             '
             Me.gbConvenioBancario.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.gbConvenioBancario.Controls.Add(Me.DataGridView1)
-            Me.gbConvenioBancario.Controls.Add(Me.btnAdd)
-            Me.gbConvenioBancario.Controls.Add(Me.btnRemove)
             Me.gbConvenioBancario.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbConvenioBancario.Location = New System.Drawing.Point(53, 390)
+            Me.gbConvenioBancario.Location = New System.Drawing.Point(17, 210)
             Me.gbConvenioBancario.Name = "gbConvenioBancario"
-            Me.gbConvenioBancario.Size = New System.Drawing.Size(604, 121)
+            Me.gbConvenioBancario.Size = New System.Drawing.Size(82, 46)
             Me.gbConvenioBancario.TabIndex = 189
             Me.gbConvenioBancario.TabStop = False
             Me.gbConvenioBancario.Text = "CONVENIO DÉBITO BANCARIO"
@@ -666,25 +669,41 @@
             Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10})
             DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
             DataGridViewCellStyle7.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
             DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle7
+            Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+            Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10})
+            DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle8
             Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark
-            Me.DataGridView1.Location = New System.Drawing.Point(3, 17)
+            Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
             Me.DataGridView1.MultiSelect = False
             Me.DataGridView1.Name = "DataGridView1"
             Me.DataGridView1.ReadOnly = True
+            DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle9.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
             Me.DataGridView1.RowHeadersVisible = False
             Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.DataGridView1.Size = New System.Drawing.Size(598, 101)
+            Me.DataGridView1.Size = New System.Drawing.Size(664, 94)
             Me.DataGridView1.TabIndex = 37
             '
             'Column1
@@ -761,6 +780,7 @@
             '
             'btnAdd
             '
+            Me.btnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.btnAdd.Enabled = False
             Me.btnAdd.FlatAppearance.BorderSize = 0
             Me.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue
@@ -768,7 +788,7 @@
             Me.btnAdd.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnAdd.ForeColor = System.Drawing.Color.Black
             Me.btnAdd.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnAdd.Location = New System.Drawing.Point(709, 0)
+            Me.btnAdd.Location = New System.Drawing.Point(613, 345)
             Me.btnAdd.Name = "btnAdd"
             Me.btnAdd.Size = New System.Drawing.Size(26, 26)
             Me.btnAdd.TabIndex = 191
@@ -776,14 +796,15 @@
             '
             'btnRemove
             '
+            Me.btnRemove.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.btnRemove.Enabled = False
             Me.btnRemove.FlatAppearance.BorderSize = 0
             Me.btnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue
             Me.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnRemove.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnRemove.ForeColor = System.Drawing.Color.Black
+            Me.btnRemove.ForeColor = System.Drawing.Color.Transparent
             Me.btnRemove.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnRemove.Location = New System.Drawing.Point(738, 0)
+            Me.btnRemove.Location = New System.Drawing.Point(645, 345)
             Me.btnRemove.Name = "btnRemove"
             Me.btnRemove.Size = New System.Drawing.Size(26, 26)
             Me.btnRemove.TabIndex = 190
@@ -797,7 +818,7 @@
             Me.msKardex.Location = New System.Drawing.Point(0, 0)
             Me.msKardex.Name = "msKardex"
             Me.msKardex.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.msKardex.Size = New System.Drawing.Size(678, 32)
+            Me.msKardex.Size = New System.Drawing.Size(680, 32)
             Me.msKardex.TabIndex = 180
             Me.msKardex.Text = "msIngresoBodega"
             '
@@ -888,22 +909,22 @@
             '
             Me.DataGridView3.AllowUserToDeleteRows = False
             Me.DataGridView3.AllowUserToResizeRows = False
-            DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.DataGridView3.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle8
+            DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.DataGridView3.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
             Me.DataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
             Me.DataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.DataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.DataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.Column11})
-            DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.DataGridView3.DefaultCellStyle = DataGridViewCellStyle9
+            DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.DataGridView3.DefaultCellStyle = DataGridViewCellStyle11
             Me.DataGridView3.Dock = System.Windows.Forms.DockStyle.Fill
             Me.DataGridView3.GridColor = System.Drawing.SystemColors.ControlDarkDark
             Me.DataGridView3.Location = New System.Drawing.Point(0, 0)
@@ -1028,21 +1049,21 @@
             '
             Me.dgvSitios.AllowUserToAddRows = False
             Me.dgvSitios.AllowUserToDeleteRows = False
-            DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvSitios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+            DataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvSitios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle12
             Me.dgvSitios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
             Me.dgvSitios.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvSitios.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvSitios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvSitios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvSitios.DefaultCellStyle = DataGridViewCellStyle11
+            DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvSitios.DefaultCellStyle = DataGridViewCellStyle13
             Me.dgvSitios.GridColor = System.Drawing.SystemColors.ControlDarkDark
             Me.dgvSitios.Location = New System.Drawing.Point(8, 267)
             Me.dgvSitios.MultiSelect = False
@@ -1444,33 +1465,12 @@
             '
             Me.dgvFacturaVenta.AllowUserToAddRows = False
             Me.dgvFacturaVenta.AllowUserToDeleteRows = False
-            DataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvFacturaVenta.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle12
+            DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvFacturaVenta.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle14
             Me.dgvFacturaVenta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
             Me.dgvFacturaVenta.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvFacturaVenta.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvFacturaVenta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle13.Font = New System.Drawing.Font("Roboto", 8.0!)
-            DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvFacturaVenta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
-            Me.dgvFacturaVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle14.Font = New System.Drawing.Font("Roboto", 8.0!)
-            DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvFacturaVenta.DefaultCellStyle = DataGridViewCellStyle14
-            Me.dgvFacturaVenta.GridColor = System.Drawing.SystemColors.ControlDarkDark
-            Me.dgvFacturaVenta.Location = New System.Drawing.Point(12, 149)
-            Me.dgvFacturaVenta.MultiSelect = False
-            Me.dgvFacturaVenta.Name = "dgvFacturaVenta"
             DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
             DataGridViewCellStyle15.Font = New System.Drawing.Font("Roboto", 8.0!)
@@ -1478,7 +1478,28 @@
             DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
             DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvFacturaVenta.RowHeadersDefaultCellStyle = DataGridViewCellStyle15
+            Me.dgvFacturaVenta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle15
+            Me.dgvFacturaVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle16.Font = New System.Drawing.Font("Roboto", 8.0!)
+            DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvFacturaVenta.DefaultCellStyle = DataGridViewCellStyle16
+            Me.dgvFacturaVenta.GridColor = System.Drawing.SystemColors.ControlDarkDark
+            Me.dgvFacturaVenta.Location = New System.Drawing.Point(12, 149)
+            Me.dgvFacturaVenta.MultiSelect = False
+            Me.dgvFacturaVenta.Name = "dgvFacturaVenta"
+            DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle17.Font = New System.Drawing.Font("Roboto", 8.0!)
+            DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvFacturaVenta.RowHeadersDefaultCellStyle = DataGridViewCellStyle17
             Me.dgvFacturaVenta.RowHeadersVisible = False
             Me.dgvFacturaVenta.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Roboto", 8.0!)
             Me.dgvFacturaVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -1604,33 +1625,12 @@
             '
             Me.DataGridView2.AllowUserToAddRows = False
             Me.DataGridView2.AllowUserToDeleteRows = False
-            DataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.DataGridView2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
+            DataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.DataGridView2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle18
             Me.DataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
             Me.DataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle17.Font = New System.Drawing.Font("Roboto", 8.0!)
-            DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
-            Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle18.Font = New System.Drawing.Font("Roboto", 8.0!)
-            DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle18
-            Me.DataGridView2.GridColor = System.Drawing.SystemColors.ControlDarkDark
-            Me.DataGridView2.Location = New System.Drawing.Point(9, 62)
-            Me.DataGridView2.MultiSelect = False
-            Me.DataGridView2.Name = "DataGridView2"
             DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control
             DataGridViewCellStyle19.Font = New System.Drawing.Font("Roboto", 8.0!)
@@ -1638,7 +1638,28 @@
             DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight
             DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle19
+            Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle19
+            Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle20.Font = New System.Drawing.Font("Roboto", 8.0!)
+            DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle20
+            Me.DataGridView2.GridColor = System.Drawing.SystemColors.ControlDarkDark
+            Me.DataGridView2.Location = New System.Drawing.Point(9, 62)
+            Me.DataGridView2.MultiSelect = False
+            Me.DataGridView2.Name = "DataGridView2"
+            DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle21.Font = New System.Drawing.Font("Roboto", 8.0!)
+            DataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle21
             Me.DataGridView2.RowHeadersVisible = False
             Me.DataGridView2.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Roboto", 8.0!)
             Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -1685,30 +1706,33 @@
             Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.TabControl1, Me.KryptonPage2, Me.KryptonPage3, Me.KryptonPage4, Me.KryptonPage5, Me.KryptonPage6})
             Me.KryptonNavigator1.SelectedIndex = 0
-            Me.KryptonNavigator1.Size = New System.Drawing.Size(680, 696)
+            Me.KryptonNavigator1.Size = New System.Drawing.Size(682, 696)
             Me.KryptonNavigator1.TabIndex = 40
             Me.KryptonNavigator1.Text = "KryptonNavigator1"
             '
             'TabControl1
             '
             Me.TabControl1.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.TabControl1.Controls.Add(Me.btnAdd)
+            Me.TabControl1.Controls.Add(Me.btnRemove)
             Me.TabControl1.Controls.Add(Me.lblIdClienteGeneral)
             Me.TabControl1.Controls.Add(Me.chkConvenio)
             Me.TabControl1.Controls.Add(Me.KryptonLabel18)
             Me.TabControl1.Controls.Add(Me.dgvClienteGeneral)
             Me.TabControl1.Controls.Add(Me.txtBuscarCliente)
-            Me.TabControl1.Controls.Add(Me.KryptonGroupBox5)
+            Me.TabControl1.Controls.Add(Me.gbxInformacionAdicional)
             Me.TabControl1.Controls.Add(Me.KryptonGroupBox4)
             Me.TabControl1.Controls.Add(Me.KryptonGroupBox3)
             Me.TabControl1.Controls.Add(Me.KryptonGroupBox2)
             Me.TabControl1.Controls.Add(Me.KryptonGroupBox1)
             Me.TabControl1.Controls.Add(Me.msKardex)
             Me.TabControl1.Controls.Add(Me.gbConvenioBancario)
+            Me.TabControl1.Controls.Add(Me.gbxConvenioCliente)
             Me.TabControl1.Flags = 65534
             Me.TabControl1.LastVisibleSet = True
             Me.TabControl1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.TabControl1.Name = "TabControl1"
-            Me.TabControl1.Size = New System.Drawing.Size(678, 667)
+            Me.TabControl1.Size = New System.Drawing.Size(680, 667)
             Me.TabControl1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.TabControl1.Text = "Datos"
             Me.TabControl1.ToolTipTitle = "Page ToolTip"
@@ -1730,24 +1754,34 @@
             Me.KryptonLabel18.TabIndex = 186
             Me.KryptonLabel18.Values.Text = "Buscar"
             '
-            'KryptonGroupBox5
+            'gbxInformacionAdicional
             '
-            Me.KryptonGroupBox5.CaptionOverlap = 0R
-            Me.KryptonGroupBox5.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
-            Me.KryptonGroupBox5.Location = New System.Drawing.Point(3, 267)
-            Me.KryptonGroupBox5.Name = "KryptonGroupBox5"
+            Me.gbxInformacionAdicional.CaptionOverlap = 0R
+            Me.gbxInformacionAdicional.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
+            Me.gbxInformacionAdicional.Location = New System.Drawing.Point(7, 269)
+            Me.gbxInformacionAdicional.Name = "gbxInformacionAdicional"
             '
-            'KryptonGroupBox5.Panel
+            'gbxInformacionAdicional.Panel
             '
-            Me.KryptonGroupBox5.Panel.Controls.Add(Me.dtpFechaContrato)
-            Me.KryptonGroupBox5.Panel.Controls.Add(Me.KryptonLabel17)
-            Me.KryptonGroupBox5.Panel.Controls.Add(Me.KryptonLabel16)
-            Me.KryptonGroupBox5.Panel.Controls.Add(Me.KryptonLabel15)
-            Me.KryptonGroupBox5.Panel.Controls.Add(Me.txtObservaciones)
-            Me.KryptonGroupBox5.Panel.Controls.Add(Me.TextBoxVal)
-            Me.KryptonGroupBox5.Size = New System.Drawing.Size(672, 74)
-            Me.KryptonGroupBox5.TabIndex = 185
-            Me.KryptonGroupBox5.Values.Heading = "Informacion Adicional sobre Contacto"
+            Me.gbxInformacionAdicional.Panel.Controls.Add(Me.dtpFechaContrato)
+            Me.gbxInformacionAdicional.Panel.Controls.Add(Me.KryptonLabel17)
+            Me.gbxInformacionAdicional.Panel.Controls.Add(Me.KryptonLabel16)
+            Me.gbxInformacionAdicional.Panel.Controls.Add(Me.KryptonLabel15)
+            Me.gbxInformacionAdicional.Panel.Controls.Add(Me.txtObservaciones)
+            Me.gbxInformacionAdicional.Panel.Controls.Add(Me.TextBoxVal)
+            Me.gbxInformacionAdicional.Size = New System.Drawing.Size(668, 74)
+            Me.gbxInformacionAdicional.TabIndex = 185
+            Me.gbxInformacionAdicional.Values.Heading = "Informacion Adicional sobre Contacto"
+            '
+            'dtpFechaContrato
+            '
+            Me.dtpFechaContrato.CalendarFont = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaContrato.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaContrato.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaContrato.Location = New System.Drawing.Point(100, 3)
+            Me.dtpFechaContrato.Name = "dtpFechaContrato"
+            Me.dtpFechaContrato.Size = New System.Drawing.Size(85, 21)
+            Me.dtpFechaContrato.TabIndex = 24
             '
             'KryptonLabel17
             '
@@ -1767,7 +1801,7 @@
             '
             'KryptonLabel15
             '
-            Me.KryptonLabel15.Location = New System.Drawing.Point(5, 2)
+            Me.KryptonLabel15.Location = New System.Drawing.Point(4, 2)
             Me.KryptonLabel15.Name = "KryptonLabel15"
             Me.KryptonLabel15.Size = New System.Drawing.Size(93, 20)
             Me.KryptonLabel15.TabIndex = 21
@@ -1889,7 +1923,7 @@
             '
             Me.KryptonGroupBox1.CaptionOverlap = 0R
             Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox1.Location = New System.Drawing.Point(3, 33)
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(5, 35)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
             'KryptonGroupBox1.Panel
@@ -2601,22 +2635,26 @@
             Me.KryptonLabel43.TabIndex = 182
             Me.KryptonLabel43.Values.Text = "Buscar"
             '
-            'dtpFechaContrato
+            'gbxConvenioCliente
             '
-            Me.dtpFechaContrato.CalendarFont = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaContrato.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaContrato.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaContrato.Location = New System.Drawing.Point(100, 3)
-            Me.dtpFechaContrato.Name = "dtpFechaContrato"
-            Me.dtpFechaContrato.Size = New System.Drawing.Size(85, 21)
-            Me.dtpFechaContrato.TabIndex = 24
+            Me.gbxConvenioCliente.CaptionOverlap = 0R
+            Me.gbxConvenioCliente.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
+            Me.gbxConvenioCliente.Location = New System.Drawing.Point(7, 376)
+            Me.gbxConvenioCliente.Name = "gbxConvenioCliente"
+            '
+            'gbxConvenioCliente.Panel
+            '
+            Me.gbxConvenioCliente.Panel.Controls.Add(Me.DataGridView1)
+            Me.gbxConvenioCliente.Size = New System.Drawing.Size(668, 118)
+            Me.gbxConvenioCliente.TabIndex = 191
+            Me.gbxConvenioCliente.Values.Heading = "Convenio Cliente"
             '
             'FormMantenimientoClientes
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(680, 696)
+            Me.ClientSize = New System.Drawing.Size(682, 696)
             Me.Controls.Add(Me.KryptonNavigator1)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormMantenimientoClientes"
@@ -2627,7 +2665,6 @@
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "MANTENIMIENTO DE CLIENTES"
             CType(Me.dgvClienteGeneral, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbConvenioBancario.ResumeLayout(False)
             CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.msKardex.ResumeLayout(False)
             Me.msKardex.PerformLayout()
@@ -2650,11 +2687,11 @@
             CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.TabControl1.ResumeLayout(False)
             Me.TabControl1.PerformLayout()
-            CType(Me.KryptonGroupBox5.Panel, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.KryptonGroupBox5.Panel.ResumeLayout(False)
-            Me.KryptonGroupBox5.Panel.PerformLayout()
-            CType(Me.KryptonGroupBox5, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.KryptonGroupBox5.ResumeLayout(False)
+            CType(Me.gbxInformacionAdicional.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.gbxInformacionAdicional.Panel.ResumeLayout(False)
+            Me.gbxInformacionAdicional.Panel.PerformLayout()
+            CType(Me.gbxInformacionAdicional, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.gbxInformacionAdicional.ResumeLayout(False)
             CType(Me.KryptonGroupBox4.Panel, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox4.Panel.ResumeLayout(False)
             Me.KryptonGroupBox4.Panel.PerformLayout()
@@ -2719,6 +2756,10 @@
             CType(Me.KryptonPage6, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonPage6.ResumeLayout(False)
             Me.KryptonPage6.PerformLayout()
+            CType(Me.gbxConvenioCliente.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.gbxConvenioCliente.Panel.ResumeLayout(False)
+            CType(Me.gbxConvenioCliente, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.gbxConvenioCliente.ResumeLayout(False)
             Me.ResumeLayout(False)
 
         End Sub
@@ -2866,7 +2907,7 @@
         Friend WithEvents KryptonGroupBox4 As Krypton.Toolkit.KryptonGroupBox
         Friend WithEvents KryptonLabel6 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel5 As Krypton.Toolkit.KryptonLabel
-        Friend WithEvents KryptonGroupBox5 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents gbxInformacionAdicional As Krypton.Toolkit.KryptonGroupBox
         Friend WithEvents KryptonLabel17 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel16 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel15 As Krypton.Toolkit.KryptonLabel
@@ -2923,5 +2964,6 @@
         Friend WithEvents cmbTipoEmpresa As ComboBox
         Friend WithEvents KryptonLabel52 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents dtpFechaContrato As DateTimePicker
+        Friend WithEvents gbxConvenioCliente As Krypton.Toolkit.KryptonGroupBox
     End Class
 End Namespace

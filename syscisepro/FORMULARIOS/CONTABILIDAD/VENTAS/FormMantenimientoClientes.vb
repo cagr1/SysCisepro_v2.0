@@ -1491,5 +1491,19 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub KryptonPage1_Click(sender As Object, e As EventArgs) Handles TabControl1.Click
 
         End Sub
+
+        Private Sub chkConvenio_CheckedChanged(sender As Object, e As EventArgs) Handles chkConvenio.CheckedChanged
+            If chkConvenio.Checked Then
+                ' Mostrar controles de convenio
+                gbxConvenioCliente.BringToFront()
+                btnAdd.BringToFront()
+                btnRemove.BringToFront()
+            Else
+                ' Regresar a la normalidad
+                dgvClienteGeneral.BringToFront()
+                btnAdd.SendToBack()
+                btnRemove.SendToBack()
+            End If
+        End Sub
     End Class
 End Namespace
