@@ -321,7 +321,7 @@
             Me.btnReporteTodos.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnReporteTodos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnReporteTodos.Name = "btnReporteTodos"
-            Me.btnReporteTodos.Size = New System.Drawing.Size(125, 28)
+            Me.btnReporteTodos.Size = New System.Drawing.Size(128, 28)
             Me.btnReporteTodos.Text = "REPORTE TOTAL"
             '
             'KryptonGroupBox1

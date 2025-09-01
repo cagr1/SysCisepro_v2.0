@@ -599,51 +599,63 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
         End Sub
         Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAgregar.Click
             Try
-                If cmbConcepto.Text <> "" And cmbCuentasContables.Text <> "" And lblCodigoCuentaContable.Text <> "" And txtDetalleAsiento.Text <> "" And txtValorDebeAsiento.Text <> "" And txtValorHaberAsiento.Text <> "" Then
-                    If txtValorDebeAsiento.Text <> txtValorHaberAsiento.Text Then
-                        Dim codicuenta = cmbCuentasContables.Text.Trim()
-                        Dim cod = codicuenta.Split("-")(0).Trim
-                        Dim cue = codicuenta.Replace((cod.Trim & " - "), String.Empty).Trim
+                Dim codicuenta = cmbCuentasContables.Text.Trim()
+                Dim cod = codicuenta.Split("-")(0).Trim
+                Dim cue = codicuenta.Replace((cod.Trim & " - "), String.Empty).Trim
 
-                        If _botonseleccionado = 1 Then
-                            dgvAsientosDiario.Rows.Add(0, dtpFechaAsiento.Value, lblCodigoCuentaContable.Text, cue, cmbConcepto.Text, txtDetalleAsiento.Text, txtValorDebeAsiento.Text, txtValorHaberAsiento.Text, txtNumeroRegistro.Text, txtDebeHaber.Text, txtConciliarAsiento.Text, txtEstadoAsiento.Text, txtIdLibroDiario.Text)
-                            dgvAsientosDiario.AutoResizeRows()
-                            SumarTotalAsientoDiario()
-                        ElseIf _botonseleccionado = 2 Then
-                            For indice = 0 To dgvAsientoBuscado.RowCount - 1
-                                If txtIdAsiento.Text = dgvAsientoBuscado.Rows(indice).Cells(0).Value Then
-                                    dgvAsientoBuscado.Rows(indice).Cells(1).Value = dtpFechaAsiento.Value
-                                    dgvAsientoBuscado.Rows(indice).Cells(2).Value = cod
-                                    dgvAsientoBuscado.Rows(indice).Cells(3).Value = cue
-                                    dgvAsientoBuscado.Rows(indice).Cells(4).Value = cmbConcepto.Text
-                                    If cmbConcepto.Text = "COMPROBANTE DE EGRESO" Then
-                                        dgvAsientoBuscado.Rows(indice).Cells(5).Value = "ID CE:" & (_objetoComprobanteEgresoBancos.BuscarMayorIdComprobanteEgresoBancos(_tipoCon) + 1) & " PAGADO A: " & txtNombreClienteProveedorPersonal.Text & " BANCO: " & cmbBancos.Text & " CTA: " & cmbCuentaBancos.Text & " " & txtDetalleAsiento.Text
-                                    ElseIf cmbConcepto.Text = "COMPROBANTE DE INGRESO" Then
-                                        dgvAsientoBuscado.Rows(indice).Cells(5).Value = "ID CI:" & (_objetoComprobanteIngresoBancos.BuscarMayorIdComprobanteIngresoBancos(_tipoCon) + 1) & " " & txtDetalleAsiento.Text
-                                    ElseIf cmbConcepto.Text = "COMPROBANTE DE INGRESO CUENTAS POR PAGAR" Then
-                                        dgvAsientoBuscado.Rows(indice).Cells(5).Value = txtDetalleAsiento.Text
-                                    Else
-                                        dgvAsientoBuscado.Rows(indice).Cells(5).Value = txtDetalleAsiento.Text
+                Dim cc = _objetoPlanCuentas.BuscarDetallesCuentaPorCodigo(_tipoCon, cod)
+
+                If cc.Rows(0)(5) = "SI" Then
+                    If cmbConcepto.Text <> "" And cmbCuentasContables.Text <> "" And lblCodigoCuentaContable.Text <> "" And txtDetalleAsiento.Text <> "" And txtValorDebeAsiento.Text <> "" And txtValorHaberAsiento.Text <> "" Then
+                        If txtValorDebeAsiento.Text <> txtValorHaberAsiento.Text Then
+
+                            If _botonseleccionado = 1 Then
+                                dgvAsientosDiario.Rows.Add(0, dtpFechaAsiento.Value, lblCodigoCuentaContable.Text, cue, cmbConcepto.Text, txtDetalleAsiento.Text, txtValorDebeAsiento.Text, txtValorHaberAsiento.Text, txtNumeroRegistro.Text, txtDebeHaber.Text, txtConciliarAsiento.Text, txtEstadoAsiento.Text, txtIdLibroDiario.Text)
+                                dgvAsientosDiario.AutoResizeRows()
+                                SumarTotalAsientoDiario()
+                            ElseIf _botonseleccionado = 2 Then
+                                For indice = 0 To dgvAsientoBuscado.RowCount - 1
+                                    If txtIdAsiento.Text = dgvAsientoBuscado.Rows(indice).Cells(0).Value Then
+                                        dgvAsientoBuscado.Rows(indice).Cells(1).Value = dtpFechaAsiento.Value
+                                        dgvAsientoBuscado.Rows(indice).Cells(2).Value = cod
+                                        dgvAsientoBuscado.Rows(indice).Cells(3).Value = cue
+                                        dgvAsientoBuscado.Rows(indice).Cells(4).Value = cmbConcepto.Text
+                                        If cmbConcepto.Text = "COMPROBANTE DE EGRESO" Then
+                                            dgvAsientoBuscado.Rows(indice).Cells(5).Value = "ID CE:" & (_objetoComprobanteEgresoBancos.BuscarMayorIdComprobanteEgresoBancos(_tipoCon) + 1) & " PAGADO A: " & txtNombreClienteProveedorPersonal.Text & " BANCO: " & cmbBancos.Text & " CTA: " & cmbCuentaBancos.Text & " " & txtDetalleAsiento.Text
+                                        ElseIf cmbConcepto.Text = "COMPROBANTE DE INGRESO" Then
+                                            dgvAsientoBuscado.Rows(indice).Cells(5).Value = "ID CI:" & (_objetoComprobanteIngresoBancos.BuscarMayorIdComprobanteIngresoBancos(_tipoCon) + 1) & " " & txtDetalleAsiento.Text
+                                        ElseIf cmbConcepto.Text = "COMPROBANTE DE INGRESO CUENTAS POR PAGAR" Then
+                                            dgvAsientoBuscado.Rows(indice).Cells(5).Value = txtDetalleAsiento.Text
+                                        Else
+                                            dgvAsientoBuscado.Rows(indice).Cells(5).Value = txtDetalleAsiento.Text
+                                        End If
+                                        dgvAsientoBuscado.Rows(indice).Cells(6).Value = CDec(txtValorDebeAsiento.Text).ToString("N")
+                                        dgvAsientoBuscado.Rows(indice).Cells(7).Value = CDec(txtValorHaberAsiento.Text).ToString("N")
+                                        dgvAsientoBuscado.Rows(indice).Cells(8).Value = txtNumeroRegistro.Text
+                                        If CDec(dgvAsientoBuscado.Rows(indice).Cells(6).Value) > CDec(dgvAsientoBuscado.Rows(indice).Cells(7).Value) Then
+                                            dgvAsientoBuscado.Rows(indice).Cells(9).Value = 1
+                                        ElseIf CDec(dgvAsientoBuscado.Rows(indice).Cells(7).Value) > CDec(dgvAsientoBuscado.Rows(indice).Cells(6).Value) Then
+                                            dgvAsientoBuscado.Rows(indice).Cells(9).Value = 2
+                                        End If
+                                        dgvAsientoBuscado.Rows(indice).Cells(11).Value = 1
                                     End If
-                                    dgvAsientoBuscado.Rows(indice).Cells(6).Value = CDec(txtValorDebeAsiento.Text).ToString("N")
-                                    dgvAsientoBuscado.Rows(indice).Cells(7).Value = CDec(txtValorHaberAsiento.Text).ToString("N")
-                                    dgvAsientoBuscado.Rows(indice).Cells(8).Value = txtNumeroRegistro.Text
-                                    If CDec(dgvAsientoBuscado.Rows(indice).Cells(6).Value) > CDec(dgvAsientoBuscado.Rows(indice).Cells(7).Value) Then
-                                        dgvAsientoBuscado.Rows(indice).Cells(9).Value = 1
-                                    ElseIf CDec(dgvAsientoBuscado.Rows(indice).Cells(7).Value) > CDec(dgvAsientoBuscado.Rows(indice).Cells(6).Value) Then
-                                        dgvAsientoBuscado.Rows(indice).Cells(9).Value = 2
-                                    End If
-                                    dgvAsientoBuscado.Rows(indice).Cells(11).Value = 1
-                                End If
-                            Next
-                            SumarTotalAsientoDiarioBusqueda()
+                                Next
+                                SumarTotalAsientoDiarioBusqueda()
+                            End If
+                        Else
+                            KryptonMessageBox.Show("EL VALOR DEL DEBE NO PUEDE SER IGUAL AL DEL HABER", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         End If
+
+
+
                     Else
-                        KryptonMessageBox.Show("EL VALOR DEL DEBE NO PUEDE SER IGUAL AL DEL HABER", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("POR FAVOR REVISE QUE TODOS LOS PARAMETROS ESTEN CORRECTOS PARA AGREGAR.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     End If
                 Else
-                    KryptonMessageBox.Show("POR FAVOR REVISE QUE TODOS LOS PARAMETROS ESTEN CORRECTOS PARA AGREGAR.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("La cuenta seleccionada es cuenta padre", "Mensaje de advertencia", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
+                    Return
                 End If
+
             Catch ex As Exception
                 KryptonMessageBox.Show("AGREGAR ASIENTO." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
@@ -1173,8 +1185,10 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                             dgvAsientoRoles.CurrentRow.Cells("concepto").Value = "COMPROBANTE ASIENTO DE DIARIO"
                             If cbxTipo.SelectedIndex = 1 Then
                                 dgvAsientoRoles.CurrentRow.Cells("detalle").Value = "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year
-                            Else
+                            ElseIf cbxTipo.SelectedIndex = 2 Then
                                 dgvAsientoRoles.CurrentRow.Cells("detalle").Value = "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year
+                            ElseIf cbxTipo.SelectedIndex = 3 Then
+                                dgvAsientoRoles.CurrentRow.Cells("detalle").Value = "ASIENTO DE DIARIO MES OPERATIVO ESPECIAL" & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year
                             End If
                         Else
                             dgvAsientoRoles.CurrentRow.Cells("codigo").Value = String.Empty
@@ -1288,6 +1302,10 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             End If
 
             SumarTotalAsientoRoles()
+        End Sub
+
+        Private Sub cmbCuentasContables_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCuentasContables.SelectedIndexChanged
+
         End Sub
     End Class
 End Namespace

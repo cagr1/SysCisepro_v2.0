@@ -1003,24 +1003,30 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         Private Function ValidarFecha()
             Dim fechaActual = New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day)
 
+            Dim fechaMinimaIngreso = New Date(Date.Now.Year, 1, 1)
+            'Dim fechaMaximaIngreso = New Date(Date.Now.Year, 12, 31)
             Dim fechaCompra = New Date(dtpFechaEmisionComprobanteCompra.Value.Year, dtpFechaEmisionComprobanteCompra.Value.Month, dtpFechaEmisionComprobanteCompra.Value.Day)
+            'Dim fechaCompra As Date = dtpFechaEmisionComprobanteCompra.Value
             Dim fechaRetencion = New Date(dtpComprobanteRetencion.Value.Year, dtpComprobanteRetencion.Value.Month, dtpComprobanteRetencion.Value.Day)
+            'Dim fechaRetencion As Date = dtpComprobanteRetencion.Value
 
             'cambio de fecha para registro de nota de credito 
-            Dim fechaMaximaIngreso = fechaCompra
-            If _tipoCon = TipoConexion.Seportpac Then
-                fechaMaximaIngreso = fechaCompra.AddDays(360) ' 6 meses
-            Else
-                fechaMaximaIngreso = fechaCompra.AddDays(180) ' 2 meses
-            End If
+            'Dim fechaMaximaIngreso = fechaCompra
+            'If _tipoCon = TipoConexion.Seportpac Then
+            '    fechaMaximaIngreso = fechaCompra.AddDays(360) ' 6 meses
+            'Else
+            '    fechaMaximaIngreso = fechaCompra.AddDays(180) ' 2 meses
+            'End If
+
+
 
             If fechaRetencion < fechaCompra Then
-                'MsgBox("Hey!! ¯\_(ツ)_/¯ la fecha de la retención no puede ser menor a la compra!")
+
                 KryptonMessageBox.Show("La fecha de la retención no puede ser menor a la compra!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return False
             Else
-                If fechaActual > fechaMaximaIngreso Then
-                    'MsgBox("Hey!! ¯\_(ツ)_/¯ no puedes ingresar facturas después de 90 días de su emisión!")
+                If fechaCompra < fechaMinimaIngreso Then
+
                     KryptonMessageBox.Show("No puedes ingresar facturas después de 90 días de su emisión!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return False
                 ElseIf fechaCompra > fechaActual Then

@@ -10,6 +10,7 @@ Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO.REPORTES
 Imports ClosedXML.Excel
 Imports System.IO
+Imports DocumentFormat.OpenXml.Office2019.Word
 
 
 Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
@@ -661,9 +662,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
         Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
             dgvAsientosDiario.CurrentCell = Nothing
-
             If CheckBox1.Checked Then
-                For Each row As DataGridViewRow In dgvAsientosDiario.Rows 
+                For Each row As DataGridViewRow In dgvAsientosDiario.Rows
                     If row.Cells("DEBE").Value = 0 And row.Cells("HABER").Value = 0 Then
                         row.Visible = False
                     End If
@@ -682,17 +682,36 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
         End Sub
 
         Private Sub dgvAsientosDiario_EditingControlShowing(sender As Object, e As DataGridViewEditingControlShowingEventArgs) Handles dgvAsientosDiario.EditingControlShowing
-            Dim tBox = CType(e.Control, Windows.Forms.TextBox)
-            tBox.CharacterCasing = CharacterCasing.Upper
-            AddHandler tBox.KeyPress, AddressOf ItemType_KeyPress
-            If dgvAsientosDiario.CurrentCell.ColumnIndex = 3 Then
-                tBox.Multiline = False
-                tBox.AutoCompleteSource = AutoCompleteSource.CustomSource
-                tBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend
-                tBox.AutoCompleteCustomSource = _objetoPlanCuentas.Autocompletar(_tipoCon)
-            Else
-                tBox.AutoCompleteMode = AutoCompleteMode.None
+            'Dim tBox = TryCast(e.Control, Windows.Forms.TextBox)
+
+            'If tBox IsNot Nothing Then
+            '    tBox.CharacterCasing = CharacterCasing.Upper
+            '    RemoveHandler tBox.KeyPress, AddressOf ItemType_KeyPress
+            '    AddHandler tBox.KeyPress, AddressOf ItemType_KeyPress
+            '    If dgvAsientosDiario.CurrentCell.ColumnIndex = 3 Then
+            '        tBox.Multiline = False
+            '        tBox.AutoCompleteSource = AutoCompleteSource.CustomSource
+            '        tBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+            '        tBox.AutoCompleteCustomSource = _objetoPlanCuentas.Autocompletar(_tipoCon)
+            '    Else
+            '        tBox.AutoCompleteMode = AutoCompleteMode.None
+            '    End If
+            'End If
+
+
+            Dim itemName = TryCast(e.Control, TextBox)
+            If itemName IsNot Nothing Then
+                If dgvAsientosDiario.CurrentCell.ColumnIndex = 2 Then
+                    itemName.AutoCompleteCustomSource = _objetoPlanCuentas.Autocompletar(_tipoCon)
+                    itemName.AutoCompleteMode = AutoCompleteMode.Suggest
+                    itemName.AutoCompleteSource = AutoCompleteSource.CustomSource
+                Else
+                    itemName.AutoCompleteMode = AutoCompleteMode.None
+                End If
             End If
+            Dim itemType = TryCast(e.Control, TextBox)
+            If itemType IsNot Nothing Then AddHandler itemType.KeyPress, AddressOf ItemType_KeyPress
+
         End Sub
 
         Private Sub dgvAsientosDiario_CellBeginEdit(sender As Object, e As DataGridViewCellCancelEventArgs) Handles dgvAsientosDiario.CellBeginEdit
@@ -719,6 +738,15 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
                     ' cuenta
                     dgvAsientosDiario.CurrentRow.Cells(3).Value = cuenta
+
+                    'Dim cc = _objetoPlanCuentas.BuscarDetallesCuentaPorCodigo(_tipoCon, co)
+                    'If cc.Rows(0)(5) = "SI" Then
+
+                    'Else
+                    '    KryptonMessageBox.Show("La cuenta seleccionada es cuenta padre", "Mensaje de advertencia", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
+                    '    Return
+                    'End If
+
                 Catch ex As Exception
                     dgvAsientosDiario.CurrentRow.Cells(2).Value = "CUENTA NO EXISTE!"
                 End Try

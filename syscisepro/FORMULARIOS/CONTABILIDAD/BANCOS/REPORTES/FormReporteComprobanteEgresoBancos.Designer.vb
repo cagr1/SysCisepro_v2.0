@@ -36,6 +36,7 @@
             Me.crvMachala = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
             Me.txtIdComprobanteEgreso = New System.Windows.Forms.TextBox()
             Me.txtIdComprobamteEgreso2 = New System.Windows.Forms.TextBox()
+            Me.PdfViewer2 = New PdfiumViewer.PdfViewer()
             CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonNavigator1.SuspendLayout()
             CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,12 +52,11 @@
             Me.crvComprovanteEgresoBancos.ActiveViewIndex = -1
             Me.crvComprovanteEgresoBancos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvComprovanteEgresoBancos.Cursor = System.Windows.Forms.Cursors.Default
-            Me.crvComprovanteEgresoBancos.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.crvComprovanteEgresoBancos.Location = New System.Drawing.Point(0, 0)
+            Me.crvComprovanteEgresoBancos.Location = New System.Drawing.Point(149, 44)
             Me.crvComprovanteEgresoBancos.Name = "crvComprovanteEgresoBancos"
             Me.crvComprovanteEgresoBancos.ShowCloseButton = False
             Me.crvComprovanteEgresoBancos.ShowLogo = False
-            Me.crvComprovanteEgresoBancos.Size = New System.Drawing.Size(880, 635)
+            Me.crvComprovanteEgresoBancos.Size = New System.Drawing.Size(530, 390)
             Me.crvComprovanteEgresoBancos.TabIndex = 0
             Me.crvComprovanteEgresoBancos.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             '
@@ -65,11 +65,12 @@
             Me.crvChequeEmitido.ActiveViewIndex = -1
             Me.crvChequeEmitido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvChequeEmitido.Cursor = System.Windows.Forms.Cursors.Default
-            Me.crvChequeEmitido.Location = New System.Drawing.Point(133, 137)
+            Me.crvChequeEmitido.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.crvChequeEmitido.Location = New System.Drawing.Point(0, 0)
             Me.crvChequeEmitido.Name = "crvChequeEmitido"
             Me.crvChequeEmitido.ShowCloseButton = False
             Me.crvChequeEmitido.ShowLogo = False
-            Me.crvChequeEmitido.Size = New System.Drawing.Size(642, 379)
+            Me.crvChequeEmitido.Size = New System.Drawing.Size(880, 635)
             Me.crvChequeEmitido.TabIndex = 0
             Me.crvChequeEmitido.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             '
@@ -92,7 +93,7 @@
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 0)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2, Me.KryptonPage3})
-            Me.KryptonNavigator1.SelectedIndex = 1
+            Me.KryptonNavigator1.SelectedIndex = 0
             Me.KryptonNavigator1.Size = New System.Drawing.Size(882, 662)
             Me.KryptonNavigator1.TabIndex = 8
             Me.KryptonNavigator1.Text = "KryptonNavigator1"
@@ -100,6 +101,7 @@
             'KryptonPage1
             '
             Me.KryptonPage1.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage1.Controls.Add(Me.PdfViewer2)
             Me.KryptonPage1.Controls.Add(Me.crvComprovanteEgresoBancos)
             Me.KryptonPage1.Flags = 65534
             Me.KryptonPage1.LastVisibleSet = True
@@ -113,8 +115,8 @@
             'KryptonPage2
             '
             Me.KryptonPage2.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
-            Me.KryptonPage2.Controls.Add(Me.PdfViewer1)
             Me.KryptonPage2.Controls.Add(Me.crvChequeEmitido)
+            Me.KryptonPage2.Controls.Add(Me.PdfViewer1)
             Me.KryptonPage2.Flags = 65534
             Me.KryptonPage2.LastVisibleSet = True
             Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
@@ -126,9 +128,9 @@
             '
             'PdfViewer1
             '
-            Me.PdfViewer1.Location = New System.Drawing.Point(2, 2)
+            Me.PdfViewer1.Location = New System.Drawing.Point(2, 182)
             Me.PdfViewer1.Name = "PdfViewer1"
-            Me.PdfViewer1.Size = New System.Drawing.Size(876, 622)
+            Me.PdfViewer1.Size = New System.Drawing.Size(876, 442)
             Me.PdfViewer1.TabIndex = 1
             '
             'KryptonPage3
@@ -178,6 +180,13 @@
             Me.txtIdComprobamteEgreso2.TabIndex = 3
             Me.txtIdComprobamteEgreso2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
+            'PdfViewer2
+            '
+            Me.PdfViewer2.Location = New System.Drawing.Point(3, 3)
+            Me.PdfViewer2.Name = "PdfViewer2"
+            Me.PdfViewer2.Size = New System.Drawing.Size(874, 629)
+            Me.PdfViewer2.TabIndex = 1
+            '
             'FormReporteComprobanteEgresoBancos
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -220,5 +229,6 @@
         Friend WithEvents txtIdComprobamteEgreso2 As TextBox
         Friend WithEvents crvMachala As CrystalDecisions.Windows.Forms.CrystalReportViewer
         Friend WithEvents PdfViewer1 As PdfiumViewer.PdfViewer
+        Friend WithEvents PdfViewer2 As PdfiumViewer.PdfViewer
     End Class
 End Namespace

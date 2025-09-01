@@ -912,10 +912,10 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             Dim claveIngresada As String ' clave ingresada para autorizar facturas con fecha saltada
             Dim claveGenerada As String ' clave para autorizar facturas con fecha saltada
             '
-            Dim fechaMinimaIngreso = New Date(Date.Now.Year - 1, 1, 1)
+            Dim fechaMinimaIngreso = New Date(Date.Now.Year, 1, 1)
             Dim fechaActualIngreso = New Date(dtpFechaEmisionFacturaVenta.Value.Year, dtpFechaEmisionFacturaVenta.Value.Month, dtpFechaEmisionFacturaVenta.Value.Day)
 
-            If fechaMinimaIngreso > fechaActualIngreso Then ' si la fecha de registro de la factura corresponde al periodo contable en curso
+            If fechaActualIngreso < fechaMinimaIngreso Then ' si la fecha de registro de la factura corresponde al periodo contable en curso
                 'MsgBox("NO SE PUEDEN REGISTRAR TRANSACCIONES DEL PERIODO " + dtpFechaEmisionFacturaVenta.Value.Year.ToString + "!", MsgBoxStyle.Critical, "Mensaje de validación")
                 KryptonMessageBox.Show("No se pueden registrar transacciones del periodo " + dtpFechaEmisionFacturaVenta.Value.Year.ToString + "!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             Else
