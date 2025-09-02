@@ -145,7 +145,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             {12, "1010512"},
             {15, "1010513"}
         }
-
+        Dim saldoRetencion As Decimal = 0
 
 
         Private Sub FormRegistroComprobanteCompra_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
@@ -1154,23 +1154,30 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
             ' verificar nota de credito
             If cmbNombreParametroDocumentos.SelectedValue = 7 Then
-                Dim fact = _objetoComprobantesCompra.SeleccionarComprobanteCompraXNumeroyAutorizacion(_tipoCon, txtDocModComprobanteCompra.Text, txtRazModComprobanteCompra.Text)
-                If fact.Rows.Count = 0 Then
-                    'MsgBox("DEBE ESPECIFICAR LA FACTURA A LA QUE AFECTA ESTA NOTA DE CREDITO!")
-                    KryptonMessageBox.Show("Debe especificar la factura a la que afecta esta nota de crédito", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+
+
+                If CDec(txtTotalComprobanteCompra.Text) > saldoRetencion Then
+                    KryptonMessageBox.Show("El total de la nota de crédito no puede ser mayor al saldo de la factura", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
-                Else
-                    Dim tfn = _objetoComprobantesCompra.SeleccionarTotalSaldoComprobanteCompraXId(_tipoCon, fact.Rows(0)(0).ToString())
-                    If tfn.Rows.Count = 0 Then
+                End If
+
+                Dim fact = _objetoComprobantesCompra.SeleccionarComprobanteCompraXNumeroyAutorizacion(_tipoCon, txtDocModComprobanteCompra.Text, txtRazModComprobanteCompra.Text)
+                    If fact.Rows.Count = 0 Then
                         'MsgBox("DEBE ESPECIFICAR LA FACTURA A LA QUE AFECTA ESTA NOTA DE CREDITO!")
                         KryptonMessageBox.Show("Debe especificar la factura a la que afecta esta nota de crédito", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         Return
+                    Else
+                        Dim tfn = _objetoComprobantesCompra.SeleccionarTotalSaldoComprobanteCompraXId(_tipoCon, fact.Rows(0)(0).ToString())
+                        If tfn.Rows.Count = 0 Then
+                            'MsgBox("DEBE ESPECIFICAR LA FACTURA A LA QUE AFECTA ESTA NOTA DE CREDITO!")
+                            KryptonMessageBox.Show("Debe especificar la factura a la que afecta esta nota de crédito", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                            Return
+                        End If
                     End If
                 End If
-            End If
 
-            ' activo fijo
-            If chkActivoFijo.Checked And _sqlCommandsActivoFijo.Count = 0 Then
+                ' activo fijo
+                If chkActivoFijo.Checked And _sqlCommandsActivoFijo.Count = 0 Then
                 'MsgBox("DEBE INGRESAR LA INFORMACIÓN DEL ACTIVO FIJO!")
                 KryptonMessageBox.Show("Debe ingresar la información del activo fijo", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
@@ -2503,12 +2510,14 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
                     btnGuardar.Enabled = False
                     btnGuardarEnFondoRotativo.Enabled = False
+                    saldoRetencion = 0
                     Return
                 End If
             End If
 
             btnGuardar.Enabled = True
             btnGuardarEnFondoRotativo.Enabled = True
+            saldoRetencion = CDec(frmEmitido.dgvCustodios.CurrentRow.Cells(17).Value)
         End Sub
 
         Private Sub cbxPtoEmision_SelectedValueChanged(sender As Object, e As EventArgs) Handles cbxPtoEmision.SelectedValueChanged

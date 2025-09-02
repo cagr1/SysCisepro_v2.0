@@ -519,7 +519,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     If dgvComprobanteEgresoBancos.CurrentRow.Cells(8).Value = "CHEQUE" Then
                         If dgvComprobanteEgresoBancos.CurrentRow.Cells(10).Value < 38001 Then
                             rep.lblIdComprobanteEgreso.Text = lblIdComprobanteEgresoBanco.Text
-                            rep.Row = dgvComprobanteEgresoBancos.CurrentRow
+                            'rep.Row = dgvComprobanteEgresoBancos.CurrentRow
                             'rep.Tipo = 1
                             rep.ShowDialog()
 
@@ -532,7 +532,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                         End If
                     Else
                         rep.lblIdComprobanteEgreso.Text = lblIdComprobanteEgresoBanco.Text
-                        rep.Row = dgvComprobanteEgresoBancos.CurrentRow
+                        'rep.Row = dgvComprobanteEgresoBancos.CurrentRow
                         'rep.Tipo = 1
                         rep.ShowDialog()
                     End If

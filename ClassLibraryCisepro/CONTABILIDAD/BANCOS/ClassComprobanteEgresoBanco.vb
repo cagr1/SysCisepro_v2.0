@@ -232,6 +232,12 @@ Namespace CONTABILIDAD.BANCOS
             Return ComandosSql.ProcesarComandoCisepro(tipoCon, comando)
         End Function
 
+        Public Function BuscarComprobantesEgresoBancoXIdComprobanteReporte(ByVal tipoCon As TipoConexion, ByVal idCompEgreso As Integer) As DataTable
+            Dim pars = New List(Of Object())
+            pars.Add(New Object() {"ID_COMPROBANTE_EGRESO_BANCOS", SqlDbType.Int, idCompEgreso})
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_buscarComprobanteEgreseBancoReporte", True, pars)
+        End Function
+
     End Class
 End Namespace
 

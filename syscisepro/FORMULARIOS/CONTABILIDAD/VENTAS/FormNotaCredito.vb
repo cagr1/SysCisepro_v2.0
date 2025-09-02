@@ -521,6 +521,15 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             'FACTURA 01, NOTA DE CRÉDITO 04, NOTA DE DÉBITO 05, GUÍA DE REMISIÓN 06, COMPROBANTE DE RETENCIÓN 07
             _claveAcceso = ValidationForms.GenerarClaveAccesoComprobantesElectronicos("04", dtpFechaEmisionNotaCredito.Value, _rucEmpresa, _tipoAmbiente, _establecimientoNotaCredito, _ptoEmisionNotaCredito, _secuencialNotaCredito, _tipoEmision)
 
+
+            Dim dt = _objetoPagosFacturaVenta.SeleccionarPagosActivoXIdComprobante(_tipoCon, lblIdFacturaVenta.Text)
+            Dim saldoPago As Decimal = 0.0
+            saldoPago = CDec(dt.Rows(0)(5).ToString())
+            If CDec(txtTotalNotaCredito.Text) > saldoPago Then
+                KryptonMessageBox.Show("El total de la nota de crédito no puede ser mayor al saldo: " & saldoPago.ToString() & " de la factura", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                Return
+            End If
+
             If _claveAcceso.ToString.Length = 49 Then
                 If lblIdFacturaVenta.Text <> "..." Then
                     If _numeroNotaCredito <> "" And txtTotalNotaCredito.Text <> "0.00" And txtComprobanteModificaNotaCredito.Text <> "" And txtRazonModificacionNotaCredito.Text <> "" Then

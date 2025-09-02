@@ -682,37 +682,41 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
         End Sub
 
         Private Sub dgvAsientosDiario_EditingControlShowing(sender As Object, e As DataGridViewEditingControlShowingEventArgs) Handles dgvAsientosDiario.EditingControlShowing
-            'Dim tBox = TryCast(e.Control, Windows.Forms.TextBox)
+            Dim tBox = TryCast(e.Control, Windows.Forms.TextBox)
 
-            'If tBox IsNot Nothing Then
-            '    tBox.CharacterCasing = CharacterCasing.Upper
-            '    RemoveHandler tBox.KeyPress, AddressOf ItemType_KeyPress
-            '    AddHandler tBox.KeyPress, AddressOf ItemType_KeyPress
-            '    If dgvAsientosDiario.CurrentCell.ColumnIndex = 3 Then
-            '        tBox.Multiline = False
-            '        tBox.AutoCompleteSource = AutoCompleteSource.CustomSource
-            '        tBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend
-            '        tBox.AutoCompleteCustomSource = _objetoPlanCuentas.Autocompletar(_tipoCon)
-            '    Else
-            '        tBox.AutoCompleteMode = AutoCompleteMode.None
-            '    End If
-            'End If
-
-
-            Dim itemName = TryCast(e.Control, TextBox)
-            If itemName IsNot Nothing Then
-                If dgvAsientosDiario.CurrentCell.ColumnIndex = 2 Then
-                    itemName.AutoCompleteCustomSource = _objetoPlanCuentas.Autocompletar(_tipoCon)
-                    itemName.AutoCompleteMode = AutoCompleteMode.Suggest
-                    itemName.AutoCompleteSource = AutoCompleteSource.CustomSource
+            If tBox IsNot Nothing Then
+                tBox.CharacterCasing = CharacterCasing.Upper
+                RemoveHandler tBox.KeyPress, AddressOf ItemType_KeyPress
+                AddHandler tBox.KeyPress, AddressOf ItemType_KeyPress
+                If dgvAsientosDiario.CurrentCell.ColumnIndex = 3 Then
+                    tBox.Multiline = False
+                    tBox.AutoCompleteSource = AutoCompleteSource.CustomSource
+                    tBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+                    tBox.AutoCompleteCustomSource = _objetoPlanCuentas.Autocompletar(_tipoCon)
                 Else
-                    itemName.AutoCompleteMode = AutoCompleteMode.None
+                    tBox.AutoCompleteMode = AutoCompleteMode.None
                 End If
             End If
-            Dim itemType = TryCast(e.Control, TextBox)
-            If itemType IsNot Nothing Then AddHandler itemType.KeyPress, AddressOf ItemType_KeyPress
+
+
+            'Dim itemName = TryCast(e.Control, TextBox)
+            'If itemName IsNot Nothing Then
+            '    If dgvAsientosDiario.CurrentCell.ColumnIndex = 3 Then
+            '        itemName.AutoCompleteCustomSource = _objetoPlanCuentas.Autocompletar(_tipoCon)
+            '        itemName.AutoCompleteMode = AutoCompleteMode.Suggest
+            '        itemName.AutoCompleteSource = AutoCompleteSource.CustomSource
+            '    Else
+            '        itemName.AutoCompleteMode = AutoCompleteMode.None
+            '    End If
+            'End If
+            'Dim itemType = TryCast(e.Control, TextBox)
+            'If itemType IsNot Nothing Then AddHandler itemType.KeyPress, AddressOf ItemType_KeyPress
+
+
 
         End Sub
+
+
 
         Private Sub dgvAsientosDiario_CellBeginEdit(sender As Object, e As DataGridViewCellCancelEventArgs) Handles dgvAsientosDiario.CellBeginEdit
             If dgvAsientosDiario.RowCount = 0 Then Return
@@ -733,19 +737,19 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                     Dim codigo = codicuenta.Split("-")(0).Trim
                     Dim cuenta = codicuenta.Replace((codigo.Trim & " - "), String.Empty).Trim
 
-                    ' codigo
-                    dgvAsientosDiario.CurrentRow.Cells(2).Value = codigo
 
-                    ' cuenta
-                    dgvAsientosDiario.CurrentRow.Cells(3).Value = cuenta
+                    'dgvAsientosDiario.CurrentRow.Cells(3).Value = cuenta
 
-                    'Dim cc = _objetoPlanCuentas.BuscarDetallesCuentaPorCodigo(_tipoCon, co)
-                    'If cc.Rows(0)(5) = "SI" Then
-
-                    'Else
-                    '    KryptonMessageBox.Show("La cuenta seleccionada es cuenta padre", "Mensaje de advertencia", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
-                    '    Return
-                    'End If
+                    Dim cc = _objetoPlanCuentas.BuscarDetallesCuentaPorCodigo(_tipoCon, codigo)
+                    If cc.Rows(0)(5) = "SI" Then
+                        dgvAsientosDiario.CurrentRow.Cells(2).Value = codigo
+                        dgvAsientosDiario.CurrentRow.Cells(3).Value = cuenta
+                    Else
+                        KryptonMessageBox.Show("La cuenta seleccionada es cuenta padre", "Mensaje de advertencia", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
+                        dgvAsientosDiario.CurrentRow.Cells(2).Value = String.Empty
+                        dgvAsientosDiario.CurrentRow.Cells(3).Value = String.Empty
+                        Return
+                    End If
 
                 Catch ex As Exception
                     dgvAsientosDiario.CurrentRow.Cells(2).Value = "CUENTA NO EXISTE!"

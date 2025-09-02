@@ -519,7 +519,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                             cue = porret.Rows(0)(2)
                         End If
 
-                        Dim response = InputBox("INGRESE LA BASE IMPONIBLE", "COMPROBANTE RETENCIÓN", CDec(txtIva.Text))
+                        Dim response = KryptonInputBox.Show("INGRESE LA BASE IMPONIBLE", "COMPROBANTE RETENCIÓN", CDec(txtIva.Text).ToString())
                         If IsNumeric(response) Then
                             Dim valorRetenidoIva = Math.Round((CDec(response) * porcent) / 100, 3, MidpointRounding.AwayFromZero)
                             dgvDetalleComprobanteRetencionVenta.Rows.Add(dtpComprobanteRetencion.Value.Year, _objetoConceptos.BuscarCodigoConceptoXIdConcepto(_tipoCon, CInt(cmbConcepto.SelectedValue)), CDec(response), cmbImpuesto.Text, porcent, Math.Round(valorRetenidoIva, 2, MidpointRounding.ToEven), cod, cue)
@@ -564,8 +564,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     If ValidacionValores() Then
                         If Math.Round(CDec(txtTotalComprobanteRetencion.Text), 2) <= _objetoPagosFacturaVenta.BuscarMayorSaldoPagosFacturaventaXIdFactura(_tipoCon, lblIdFacturaVenta.Text) Then ' si el valor de la retención es menor o igual al saldo de la factura guarda
 
-                            'If MessageBox.Show("¿Esta seguro que desea guardar EL COMPRONATE DE RETENCIÓN?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
-                            If KryptonMessageBox.Show("¿Esta seguro que desea guardar EL COMPRONATE DE RETENCIÓN?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+
+                            If KryptonMessageBox.Show("¿Esta seguro que desea guardar EL COMPROBANTE DE RETENCIÓN?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
                             _sqlCommands.Clear()
 
                             GuardarComprobanteRetencion()

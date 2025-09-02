@@ -53,7 +53,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
 
 
         Dim numeroRegistro As Int64 = 0
-        Public Property Row As DataGridViewRow
+        'Public Property Row As DataGridViewRow
 
         Public Sub conectarReporteComprobanteEgreso()
             Try
@@ -70,6 +70,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                 'crvComprovanteEgresoBancos.ReportSource = crComprobanteEgreso
                 'crvComprovanteEgresoBancos.Zoom(75)
                 'crvComprovanteEgresoBancos.Refresh()
+
+                Dim dt = objetoComprobanteEgresoBancos.BuscarComprobantesEgresoBancoXIdComprobanteReporte(_tipoCon, CInt(lblIdComprobanteEgreso.Text))
 
                 Dim ruta As String = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "ComprobanteEgresoBanco.pdf")
                 PdfViewer2.Document?.Dispose()
@@ -102,7 +104,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                     Dim fuente8Bold As iTextSharp.text.Font = New iTextSharp.text.Font(baseFont, 8, iTextSharp.text.Font.BOLD)
 
 
-                    document.NewPage()
+                    'document.NewPage()
 
 
                     'document.Add(logo)
@@ -117,10 +119,10 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
 
                     Dim idContent As New Phrase()
                     idContent.Add(New Chunk("Numero    ", fuente8Bold))
-                    idContent.Add(New Chunk("   " & Row.Cells.Item(0).Value.ToString(), fuente8))
+                    idContent.Add(New Chunk("   " & dt.Rows(0)(0).ToString(), fuente8))
                     idContent.Add(New Chunk(vbLf, fuente10))
                     idContent.Add(New Chunk(vbLf & "Fecha  ", fuente8Bold))
-                    idContent.Add(New Chunk(Row.Cells.Item(2).Value.ToString(), fuente8))
+                    idContent.Add(New Chunk(dt.Rows(0)(1).ToString(), fuente8))
 
 
 
@@ -159,7 +161,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
 
                     Dim FacturContent As New Phrase()
                     FacturContent.Add(New Chunk("Factura: ", fuente8Bold))
-                    FacturContent.Add(New Chunk(Row.Cells.Item(3).Value.ToString(), fuente8))
+                    FacturContent.Add(New Chunk(dt.Rows(0)(2).ToString(), fuente8))
 
                     Dim FacturCell As New PdfPCell(FacturContent) With {
                             .HorizontalAlignment = Element.ALIGN_LEFT,
@@ -171,7 +173,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
 
                     Dim PagadoAContent As New Phrase()
                     PagadoAContent.Add(New Chunk("Pagado a: ", fuente8Bold))
-                    PagadoAContent.Add(New Chunk(Row.Cells.Item(5).Value.ToString(), fuente8))
+                    PagadoAContent.Add(New Chunk(dt.Rows(0)(3).ToString(), fuente8))
 
                     Dim PagadoACell As New PdfPCell(PagadoAContent) With {
                             .HorizontalAlignment = Element.ALIGN_LEFT,
@@ -183,7 +185,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
 
                     Dim RucContent As New Phrase()
                     RucContent.Add(New Chunk("RUC/CI: ", fuente8Bold))
-                    RucContent.Add(New Chunk(Row.Cells.Item(4).Value.ToString(), fuente8))
+                    RucContent.Add(New Chunk(dt.Rows(0)(4).ToString(), fuente8))
 
                     Dim RucCell As New PdfPCell(RucContent) With {
                             .HorizontalAlignment = Element.ALIGN_LEFT,
@@ -195,7 +197,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
 
                     Dim ConceptoContent As New Phrase()
                     ConceptoContent.Add(New Chunk("Concepto: ", fuente8Bold))
-                    ConceptoContent.Add(New Chunk(Row.Cells.Item(7).Value.ToString(), fuente8))
+                    ConceptoContent.Add(New Chunk(dt.Rows(0)(5).ToString(), fuente8))
 
                     Dim ConceptoCell As New PdfPCell(ConceptoContent) With {
                             .HorizontalAlignment = Element.ALIGN_LEFT,
@@ -206,7 +208,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
 
                     Dim ActividadContent As New Phrase()
                     ActividadContent.Add(New Chunk("Actividad: ", fuente8Bold))
-                    ActividadContent.Add(New Chunk(Row.Cells.Item(6).Value.ToString(), fuente8))
+                    ActividadContent.Add(New Chunk(dt.Rows(0)(6).ToString(), fuente8))
 
                     Dim ActividadCell As New PdfPCell(ActividadContent) With {
                             .HorizontalAlignment = Element.ALIGN_LEFT,
@@ -217,7 +219,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
 
                     Dim TipoPago As New Phrase()
                     TipoPago.Add(New Chunk("Tipo Pago: ", fuente8Bold))
-                    TipoPago.Add(New Chunk(Row.Cells.Item(8).Value.ToString(), fuente8))
+                    TipoPago.Add(New Chunk(dt.Rows(0)(7).ToString(), fuente8))
 
                     Dim TipoPagoCell As New PdfPCell(TipoPago) With {
                             .HorizontalAlignment = Element.ALIGN_LEFT,
@@ -233,7 +235,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
 
                     Dim BancoContent As New Phrase()
                     BancoContent.Add(New Chunk("Banco: ", fuente8Bold))
-                    BancoContent.Add(New Chunk(Row.Cells.Item(11).Value.ToString(), fuente8))
+                    BancoContent.Add(New Chunk(dt.Rows(0)(8).ToString(), fuente8))
 
                     Dim BancoCell As New PdfPCell(BancoContent) With {
                             .HorizontalAlignment = Element.ALIGN_LEFT,
@@ -244,7 +246,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
 
                     Dim CuentaContent As New Phrase()
                     CuentaContent.Add(New Chunk("Cuenta: ", fuente8Bold))
-                    CuentaContent.Add(New Chunk(Row.Cells.Item(12).Value.ToString(), fuente8))
+                    CuentaContent.Add(New Chunk(dt.Rows(0)(9).ToString(), fuente8))
 
                     Dim CuentaCell As New PdfPCell(CuentaContent) With {
                             .HorizontalAlignment = Element.ALIGN_LEFT,
@@ -255,7 +257,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
 
                     Dim ChequeContent As New Phrase()
                     ChequeContent.Add(New Chunk("Cheque: ", fuente8Bold))
-                    ChequeContent.Add(New Chunk(Row.Cells.Item(10).Value.ToString(), fuente8))
+                    ChequeContent.Add(New Chunk(dt.Rows(0)(10).ToString(), fuente8))
 
                     Dim ChequeCell As New PdfPCell(ChequeContent) With {
                             .HorizontalAlignment = Element.ALIGN_LEFT,
