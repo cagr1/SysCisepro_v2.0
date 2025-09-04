@@ -111,7 +111,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                     'crea reporte
                     Dim headerTable As PdfPTable = New PdfPTable(3)
                     headerTable.TotalWidth = 400
-
+                    headerTable.WidthPercentage = 100
                     Dim ColumnWidhts As Single() = New Single() {120, 200, 80}
                     headerTable.SetWidths(ColumnWidhts)
 
@@ -146,17 +146,22 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                             .Border = PdfPCell.NO_BORDER
                         }
                     headerTable.AddCell(logoCell)
+
+
+
                     headerTable.WriteSelectedRows(0, -1, 20, 575, writer.DirectContent)
+
+                    Dim headerTableHeight As Single = headerTable.TotalHeight
 
                     Dim rectTabla1 As PdfContentByte = writer.DirectContent
                     rectTabla1.RoundRectangle(10.0F, 540.0F, 390.0F, 40.0F, 10.0F)
                     rectTabla1.Stroke()
 
 
-                    Dim tabla1 As PdfPTable = New PdfPTable(2)
-                    tabla1.TotalWidth = 400
-
-                    Dim ColumnWidhts1 As Single() = New Single() {120, 280}
+                    Dim tabla1 As PdfPTable = New PdfPTable(3)
+                    tabla1.TotalWidth = 380
+                    tabla1.WidthPercentage = 100
+                    Dim ColumnWidhts1 As Single() = New Single() {120, 120, 140}
                     tabla1.SetWidths(ColumnWidhts1)
 
                     Dim FacturContent As New Phrase()
@@ -166,21 +171,10 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                     Dim FacturCell As New PdfPCell(FacturContent) With {
                             .HorizontalAlignment = Element.ALIGN_LEFT,
                             .VerticalAlignment = Element.ALIGN_MIDDLE,
-                            .Border = PdfPCell.NO_BORDER
+                            .Border = PdfPCell.NO_BORDER,
+                            .Colspan = 3
                         }
                     tabla1.AddCell(FacturCell)
-
-
-                    Dim PagadoAContent As New Phrase()
-                    PagadoAContent.Add(New Chunk("Pagado a: ", fuente8Bold))
-                    PagadoAContent.Add(New Chunk(dt.Rows(0)(3).ToString(), fuente8))
-
-                    Dim PagadoACell As New PdfPCell(PagadoAContent) With {
-                            .HorizontalAlignment = Element.ALIGN_LEFT,
-                            .VerticalAlignment = Element.ALIGN_MIDDLE,
-                            .Border = PdfPCell.NO_BORDER
-                        }
-                    tabla1.AddCell(PagadoACell)
 
 
                     Dim RucContent As New Phrase()
@@ -202,9 +196,24 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                     Dim ConceptoCell As New PdfPCell(ConceptoContent) With {
                             .HorizontalAlignment = Element.ALIGN_LEFT,
                             .VerticalAlignment = Element.ALIGN_MIDDLE,
-                            .Border = PdfPCell.NO_BORDER
+                            .Border = PdfPCell.NO_BORDER,
+                            .Colspan = 2
                         }
                     tabla1.AddCell(ConceptoCell)
+
+                    Dim PagadoAContent As New Phrase()
+                    PagadoAContent.Add(New Chunk("Pagado a: ", fuente8Bold))
+                    PagadoAContent.Add(New Chunk(dt.Rows(0)(3).ToString(), fuente8))
+
+                    Dim PagadoACell As New PdfPCell(PagadoAContent) With {
+                            .HorizontalAlignment = Element.ALIGN_LEFT,
+                            .VerticalAlignment = Element.ALIGN_MIDDLE,
+                            .Border = PdfPCell.NO_BORDER
+                        }
+                    tabla1.AddCell(PagadoACell)
+
+
+
 
                     Dim ActividadContent As New Phrase()
                     ActividadContent.Add(New Chunk("Actividad: ", fuente8Bold))
@@ -228,10 +237,6 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                         }
                     tabla1.AddCell(TipoPagoCell)
 
-                    Dim tabla2 As PdfPTable = New PdfPTable(3)
-                    tabla2.TotalWidth = 400
-                    Dim ColumnWidhts2 As Single() = New Single() {120, 120, 160}
-                    tabla2.SetWidths(ColumnWidhts2)
 
                     Dim BancoContent As New Phrase()
                     BancoContent.Add(New Chunk("Banco: ", fuente8Bold))
@@ -242,7 +247,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                             .VerticalAlignment = Element.ALIGN_MIDDLE,
                             .Border = PdfPCell.NO_BORDER
                         }
-                    tabla2.AddCell(BancoCell)
+                    tabla1.AddCell(BancoCell)
 
                     Dim CuentaContent As New Phrase()
                     CuentaContent.Add(New Chunk("Cuenta: ", fuente8Bold))
@@ -253,7 +258,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                             .VerticalAlignment = Element.ALIGN_MIDDLE,
                             .Border = PdfPCell.NO_BORDER
                         }
-                    tabla2.AddCell(CuentaCell)
+                    tabla1.AddCell(CuentaCell)
 
                     Dim ChequeContent As New Phrase()
                     ChequeContent.Add(New Chunk("Cheque: ", fuente8Bold))
@@ -264,15 +269,9 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                             .VerticalAlignment = Element.ALIGN_MIDDLE,
                             .Border = PdfPCell.NO_BORDER
                         }
-                    tabla2.AddCell(ChequeCell)
+                    tabla1.AddCell(ChequeCell)
 
-                    Dim tabla2cell As PdfPCell = New PdfPCell(tabla2) With {
-                            .HorizontalAlignment = Element.ALIGN_LEFT,
-                            .VerticalAlignment = Element.ALIGN_MIDDLE,
-                            .Border = PdfPCell.NO_BORDER,
-                            .Colspan = 2
-                        }
-                    tabla1.AddCell(tabla2cell)
+
 
 
 
@@ -280,11 +279,11 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                     EspacioVacío1.Add(New Chunk(" ", fuente8))
 
                     Dim EspacioVacíoCell1 As New PdfPCell(EspacioVacío1) With {
-                .HorizontalAlignment = Element.ALIGN_LEFT,
-                .VerticalAlignment = Element.ALIGN_MIDDLE,
-                .Border = PdfPCell.NO_BORDER,
-                .Colspan = 2
-            }
+                        .HorizontalAlignment = Element.ALIGN_LEFT,
+                        .VerticalAlignment = Element.ALIGN_MIDDLE,
+                        .Border = PdfPCell.NO_BORDER,
+                        .Colspan = 2
+                    }
                     tabla1.AddCell(EspacioVacíoCell1)
 
                     ' Crear la segunda fila vacía
@@ -296,7 +295,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                     .VerticalAlignment = Element.ALIGN_MIDDLE,
                     .Border = PdfPCell.NO_BORDER,
                     .Colspan = 2
-                }
+                    }
                     tabla1.AddCell(EspacioVacíoCell2)
 
                     ' Crear la línea de separación (subrayado)
@@ -304,11 +303,11 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                     LineaSeparacion.Add(New Chunk("___________________", fuente8))
 
                     Dim LineaCell As New PdfPCell(LineaSeparacion) With {
-                .HorizontalAlignment = Element.ALIGN_CENTER,
-                .VerticalAlignment = Element.ALIGN_MIDDLE,
-                .Border = PdfPCell.NO_BORDER,
-                .Colspan = 2
-            }
+                        .HorizontalAlignment = Element.ALIGN_CENTER,
+                        .VerticalAlignment = Element.ALIGN_MIDDLE,
+                        .Border = PdfPCell.NO_BORDER,
+                        .Colspan = 3
+                    }
                     tabla1.AddCell(LineaCell)
 
                     ' Agregar el texto "Recibi conforme"
@@ -316,11 +315,11 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                     RecibiConformeContent.Add(New Chunk("Recibi conforme", fuente8Bold))
 
                     Dim RecibiConformeCell As New PdfPCell(RecibiConformeContent) With {
-            .HorizontalAlignment = Element.ALIGN_CENTER,
-            .VerticalAlignment = Element.ALIGN_MIDDLE,
-            .Border = PdfPCell.NO_BORDER,
-            .Colspan = 2
-            }
+                    .HorizontalAlignment = Element.ALIGN_CENTER,
+                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                    .Border = PdfPCell.NO_BORDER,
+                    .Colspan = 3
+                    }
 
 
                     tabla1.AddCell(RecibiConformeCell)
@@ -328,37 +327,52 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
 
                     tabla1.WriteSelectedRows(0, -1, 20, 520, writer.DirectContent)
 
+                    Dim tabla1Height As Single = tabla1.TotalHeight + 20
+                    Dim yRectabla2 As Single = 540.0F - tabla1Height - 10
+
+                    Dim rectTabla2 As PdfContentByte = writer.DirectContent
+                    rectTabla2.RoundRectangle(10.0F, yRectabla2, 390.0F, tabla1Height, 10.0F)
+                    rectTabla2.Stroke()
+
+                    'document.Add(tabla1)
                     'insert 2 row empty
+
+                    Dim espacio As New Paragraph(vbLf & vbLf)
+                    espacio.SpacingAfter = 170
+                    document.Add(espacio)
+
 
                     Dim table2 As New PdfPTable(4)
                     table2.TotalWidth = 400
+                    table2.WidthPercentage = 110
                     Dim asientoTable As DataTable = ds.Tables("ASIENTOS_LIBRO_DIARIO")
                     Dim columnWidthsTable2() As Single = {80, 180, 70, 70}
                     table2.SetWidths(columnWidthsTable2)
 
 
                     Dim tituloTable2 As New PdfPCell(New Phrase("ASIENTOS DE DIARIO", fuente10)) With {
-                .HorizontalAlignment = Element.ALIGN_CENTER,
-                .VerticalAlignment = Element.ALIGN_MIDDLE,
-                .Colspan = 4,
-                .Border = PdfPCell.NO_BORDER
-            }
+                        .HorizontalAlignment = Element.ALIGN_CENTER,
+                        .VerticalAlignment = Element.ALIGN_MIDDLE,
+                        .BackgroundColor = BaseColor.LIGHT_GRAY,
+                        .Colspan = 4,
+                        .Border = PdfPCell.NO_BORDER
+                    }
                     table2.AddCell(tituloTable2)
 
                     Dim emptyCell2 As New PdfPCell(New Phrase(" ", fuente8)) With {
-                .HorizontalAlignment = Element.ALIGN_CENTER,
-                .VerticalAlignment = Element.ALIGN_MIDDLE,
-                .Colspan = 4,
-                .Border = PdfPCell.NO_BORDER
-            }
-                    tabla2.AddCell(emptyCell2)
+                        .HorizontalAlignment = Element.ALIGN_CENTER,
+                        .VerticalAlignment = Element.ALIGN_MIDDLE,
+                        .Colspan = 3,
+                        .Border = PdfPCell.NO_BORDER
+                    }
+                    tabla1.AddCell(emptyCell2)
 
                     Dim emptyCell3 As New PdfPCell(New Phrase(" ", fuente8)) With {
-                .HorizontalAlignment = Element.ALIGN_CENTER,
-                .VerticalAlignment = Element.ALIGN_MIDDLE,
-                .Colspan = 4,  ' Ocupa las 4 columnas
-                .Border = PdfPCell.NO_BORDER
-            }
+                        .HorizontalAlignment = Element.ALIGN_CENTER,
+                        .VerticalAlignment = Element.ALIGN_MIDDLE,
+                        .Colspan = 4,  ' Ocupa las 4 columnas
+                        .Border = PdfPCell.NO_BORDER
+                    }
                     table2.AddCell(emptyCell3)
 
                     table2.AddCell(New Phrase("Codigo", fuente8Bold))
@@ -381,19 +395,28 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
 
                     Next
 
-                    table2.WriteSelectedRows(0, -1, 10, 350, writer.DirectContent)
+                    Dim emptyCell As New PdfPCell(New Phrase("TOTAL", fuente8Bold)) With {
+                        .Colspan = 2,
+                        .HorizontalAlignment = Element.ALIGN_CENTER
+                    }
+                    table2.AddCell(emptyCell)
 
-                    Dim table3 As New PdfPTable(2)
-                    Dim columnWidthsTotal() As Single = {70, 70}
-                    table3.TotalWidth = 140
-                    Dim table2Height As Single = table2.TotalHeight
-                    table3.SetWidths(columnWidthsTotal)
+                    Dim totalDebeCell As New PdfPCell(New Phrase(totalDebe.ToString("#,##0.00"), fuente8Bold)) With {
+                        .HorizontalAlignment = Element.ALIGN_RIGHT
+                                    }
+                    table2.AddCell(totalDebeCell)
 
-                    table3.AddCell(New Phrase(totalDebe.ToString("#,##0.00"), fuente8Bold))
-                    table3.AddCell(New Phrase(totalHaber.ToString("#,##0.00"), fuente8Bold))
-                    Dim baseY As Single = 350 - table2Height
+                    Dim totalHaberCell As New PdfPCell(New Phrase(totalHaber.ToString("#,##0.00"), fuente8Bold)) With {
+                        .HorizontalAlignment = Element.ALIGN_RIGHT
+                    }
+                    table2.AddCell(totalHaberCell)
+                    document.Add(table2)
+                    'table2.WriteSelectedRows(0, -1, 10, 350, writer.DirectContent)
 
-                    table3.WriteSelectedRows(0, -1, 270, baseY, writer.DirectContent)
+                    'document.Add(table2)
+
+
+
 
                     Dim table4 As New PdfPTable(3)
                     Dim columnWidthsTotal2() As Single = {120, 120, 120}

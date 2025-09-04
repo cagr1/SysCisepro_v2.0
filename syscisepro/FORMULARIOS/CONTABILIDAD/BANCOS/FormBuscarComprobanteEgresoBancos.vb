@@ -510,6 +510,12 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             End Try
         End Sub
         Private Sub btnReporte_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporte.Click
+            If dgvComprobanteEgresoBancos.Rows.Count = 0 Then
+                KryptonMessageBox.Show("Por favor cargue comprobantes de egreso", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                Return
+            End If
+
+
             Dim rep = New FormReporteComprobanteEgresoBancos
             rep.TipoCox = TipoCox
             Dim mac = New FormReporteComprobanteEgresoBancoMachala

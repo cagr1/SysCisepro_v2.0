@@ -194,33 +194,27 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
 
             ' Creamos una tabla de 3 columnas
             Dim encabezado As New PdfPTable(3)
-            encabezado.WidthPercentage = 100
-            encabezado.SetWidths(New Single() {20, 50, 30}) ' proporción columnas
+            encabezado.WidthPercentage = 110
 
-            ' Estilo general con bordes redondeados
-            Dim bordeRedondeado As New PdfPCell()
-            bordeRedondeado.Border = Rectangle.BOX
-            bordeRedondeado.BorderWidth = 1.5F
-            bordeRedondeado.Padding = 5
-            bordeRedondeado.HorizontalAlignment = Element.ALIGN_CENTER
-            bordeRedondeado.VerticalAlignment = Element.ALIGN_MIDDLE
+            encabezado.TotalWidth = 420
+            encabezado.SetWidths(New Single() {60, 240, 100}) ' proporción columnas
+
 
             ' ==== Celda 1: Logo ====
-            Dim cellLogo As New PdfPCell(logo, True)
-            cellLogo.Border = Rectangle.BOX
-            cellLogo.BorderWidth = 1.5F
+            Dim cellLogo As New PdfPCell(logo)
             cellLogo.HorizontalAlignment = Element.ALIGN_CENTER
             cellLogo.VerticalAlignment = Element.ALIGN_MIDDLE
+            cellLogo.Border = Rectangle.NO_BORDER
 
             encabezado.AddCell(cellLogo)
 
             ' ==== Celda 2: Título ====
             Dim cellTitulo As New PdfPCell(New Phrase("ORDEN DE COMPRA", fuente12))
-            cellTitulo.Border = Rectangle.BOX
-            cellTitulo.BorderWidth = 1.5F
+
             cellTitulo.HorizontalAlignment = Element.ALIGN_CENTER
             cellTitulo.VerticalAlignment = Element.ALIGN_MIDDLE
             cellTitulo.Padding = 6
+            cellTitulo.Border = Rectangle.NO_BORDER
             encabezado.AddCell(cellTitulo)
 
             ' ==== Celda 3: Datos en 4 líneas ====
@@ -233,17 +227,146 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
             "Fecha: " & fechaReporte
 
             Dim cellInfo As New PdfPCell(New Phrase(textoCabecera, fuente8))
-            cellInfo.Border = Rectangle.BOX
-            cellInfo.BorderWidth = 1.5F
+
             cellInfo.HorizontalAlignment = Element.ALIGN_LEFT
             cellInfo.VerticalAlignment = Element.ALIGN_MIDDLE
             cellInfo.Padding = 5
+            cellInfo.Border = Rectangle.NO_BORDER
 
             ' Importante: sin bordes internos → se deja texto en líneas
             encabezado.AddCell(cellInfo)
-
+            encabezado.SpacingBefore = 10
             ' Agregar la tabla al documento
             document.Add(encabezado)
+
+            'Recuadro 1
+            Dim rectTabla1 As PdfContentByte = writer.DirectContent
+            rectTabla1.RoundRectangle(10.0F, 515.0F, 390.0F, 50.0F, 10.0F)
+            rectTabla1.Stroke()
+
+            ' tabla 1 la cabecera
+
+            Dim table1 As New PdfPTable(2)
+            table1.TotalWidth = 400
+            table1.LockedWidth = True
+            table1.SetWidths(New Single() {100, 300})
+            table1.SpacingBefore = 10
+
+            ' ==== Celda 1 ====
+            Dim parrafoCelda1 As New Paragraph()
+            parrafoCelda1.Add(New Phrase("RUC: 0790013360001" & vbCrLf, fuente10Bold))
+            parrafoCelda1.Add(New Phrase("No Orden: ", fuente10Bold))
+            parrafoCelda1.Add(New Phrase(txtIdOrdenCompra.Text, fuente10))
+
+            Dim cell1 As New PdfPCell(parrafoCelda1)
+            cell1.HorizontalAlignment = Element.ALIGN_LEFT
+            cell1.VerticalAlignment = Element.ALIGN_TOP
+            cell1.Border = Rectangle.NO_BORDER
+            cell1.Padding = 2
+            table1.AddCell(cell1)
+
+            ' ==== Celda 2 ====
+            Dim parrafoCelda2 As New Paragraph()
+            parrafoCelda2.Alignment = Element.ALIGN_CENTER
+            parrafoCelda2.Add(New Phrase("Servicios en Seguridad Fisica y Electronica" & vbCrLf, fuente10))
+            parrafoCelda2.Add(New Phrase("CISEPRO C Ltda" & vbCrLf, fuente12)) ' bold 12
+            parrafoCelda2.Add(New Phrase("Dirección: Av. Alejandro Castro Benitez y El Bosque sector 5" & vbCrLf, fuente10))
+            parrafoCelda2.Add(New Phrase("Email: email@cisepro.com.ec", fuente10))
+
+            Dim cell2 As New PdfPCell(parrafoCelda2)
+            cell2.HorizontalAlignment = Element.ALIGN_CENTER
+            cell2.VerticalAlignment = Element.ALIGN_TOP
+            cell2.Border = Rectangle.NO_BORDER
+            cell2.Padding = 2
+            table1.AddCell(cell2)
+            table1.SpacingAfter = 20
+
+            ' Tabla 2 Datos de Proveedor
+
+            Dim table2 As New PdfPTable(3)
+            table2.TotalWidth = 400
+            table2.LockedWidth = True
+            table2.SetWidths(New Single() {200, 100, 100})
+
+            'Fila 1
+            Dim Celda1Tabla2 As New Paragraph()
+            Celda1Tabla2.Add(New Phrase("Nombre: ", fuente8Bold))
+            Celda1Tabla2.Add(New Phrase(txtNombreProveedor.Text, fuente8))
+            Dim cellNombre As New PdfPCell(Celda1Tabla2)
+            cellNombre.HorizontalAlignment = Element.ALIGN_LEFT
+            cellNombre.Border = Rectangle.NO_BORDER
+            table2.AddCell(cellNombre)
+
+            Dim Celda2Tabla2 As New Paragraph()
+            Celda2Tabla2.Add(New Phrase("RUC: ", fuente8Bold))
+            Celda2Tabla2.Add(New Phrase(txtRucProveedor.Text, fuente8))
+            Dim cellRuc As New PdfPCell(Celda2Tabla2)
+            cellRuc.HorizontalAlignment = Element.ALIGN_LEFT
+            cellRuc.Border = Rectangle.NO_BORDER
+            table2.AddCell(cellRuc)
+
+            Dim Celda3Tabla2 As New Paragraph()
+            Celda3Tabla2.Add(New Phrase("Ciudad: ", fuente8Bold))
+            Celda3Tabla2.Add(New Phrase(dt.Rows(0)(4).ToString, fuente8))
+            Dim cellCiudad As New PdfPCell(Celda3Tabla2)
+            cellCiudad.HorizontalAlignment = Element.ALIGN_LEFT
+            cellCiudad.Border = Rectangle.NO_BORDER
+            table2.AddCell(cellCiudad)
+
+            'Fila 2
+            Dim Celda4Tabla2 As New Paragraph()
+            Celda4Tabla2.Add(New Phrase("Direccion: ", fuente8Bold))
+            Celda4Tabla2.Add(New Phrase(dt.Rows(0)(7).ToString, fuente8))
+            Dim cellDireccion As New PdfPCell(Celda4Tabla2)
+            cellDireccion.HorizontalAlignment = Element.ALIGN_LEFT
+            cellDireccion.Border = Rectangle.NO_BORDER
+            table2.AddCell(cellDireccion)
+
+
+
+            Dim Celda6Tabla2 As New Paragraph()
+            Celda6Tabla2.Add(New Phrase("Email: ", fuente8Bold))
+            Celda6Tabla2.Add(New Phrase(dt.Rows(0)(6).ToString, fuente8))
+            Dim cellEmail As New PdfPCell(Celda6Tabla2)
+            cellEmail.HorizontalAlignment = Element.ALIGN_LEFT
+            cellEmail.Border = Rectangle.NO_BORDER
+            cellEmail.Colspan = 2
+            table2.AddCell(cellEmail)
+
+            'Fila 3
+
+            Dim Celda5Tabla2 As New Paragraph()
+            Celda5Tabla2.Add(New Phrase("Telefono: ", fuente8Bold))
+            Celda5Tabla2.Add(New Phrase(dt.Rows(0)(5).ToString, fuente8))
+            Dim cellTelefono As New PdfPCell(Celda5Tabla2)
+            cellTelefono.HorizontalAlignment = Element.ALIGN_LEFT
+            cellTelefono.Border = Rectangle.NO_BORDER
+            table2.AddCell(cellTelefono)
+
+            Dim Celda7Tabla2 As New Paragraph()
+            Celda7Tabla2.Add(New Phrase("Obli Contabilidad: ", fuente8Bold))
+            Celda7Tabla2.Add(New Phrase(dt.Rows(0)(8).ToString, fuente8))
+            Dim cellContacto As New PdfPCell(Celda7Tabla2)
+            cellContacto.HorizontalAlignment = Element.ALIGN_LEFT
+            cellContacto.Border = Rectangle.NO_BORDER
+            table2.AddCell(cellContacto)
+
+            Dim Celda8Tabla2 As New Paragraph()
+            Celda8Tabla2.Add(New Phrase("Contribuyente E: ", fuente8Bold))
+            Celda8Tabla2.Add(New Phrase(dt.Rows(0)(9).ToString, fuente8))
+            Dim cellObliContabilidad As New PdfPCell(Celda8Tabla2)
+            cellObliContabilidad.HorizontalAlignment = Element.ALIGN_LEFT
+            cellObliContabilidad.Border = Rectangle.NO_BORDER
+            table2.AddCell(cellObliContabilidad)
+
+
+            'Detalle Orden Compra
+
+            table2.SpacingAfter = 10
+
+
+            document.Add(table1)
+            document.Add(table2)
 
             'Cierre
             document.Close()
@@ -257,6 +380,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
             PdfViewer1.Document = PdfiumViewer.PdfDocument.Load(pdfStream)
             PdfViewer1.ZoomMode = 1
 
+            KryptonNavigator1.SelectedPage = KryptonPage2
 
         End Sub
 

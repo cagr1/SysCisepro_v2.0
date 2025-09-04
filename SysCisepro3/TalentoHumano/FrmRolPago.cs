@@ -29,6 +29,11 @@ using SysCisepro3.Reportes;
 using CrystalDecisions.CrystalReports.Engine;
 using ClosedXML.Excel;
 using System.Diagnostics;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using DocumentFormat.OpenXml.Bibliography;
+using Microsoft.VisualBasic.Logging;
+using PdfiumViewer;
 
 namespace SysCisepro3.TalentoHumano
 {
@@ -3232,7 +3237,7 @@ namespace SysCisepro3.TalentoHumano
                     var newlogo = Validaciones.NombreLogo(TipoCon, System.Windows.Forms.Application.StartupPath);
 
                     // Convertir la imagen a un stream de memoria
-                    using (var logoImage = Image.FromFile(newlogo))
+                    using (var logoImage = System.Drawing.Image.FromFile(newlogo))
                     {
                         // Convertir la imagen a un stream de memoria
                         using (MemoryStream ms = new MemoryStream())
@@ -4377,6 +4382,510 @@ namespace SysCisepro3.TalentoHumano
                 Console.WriteLine("An error occured: " + ex.Message);
                 crvReporteRol.ReportSource = null;
             }
+
+        }
+
+        private void btnAduana_Click(object sender, EventArgs e)
+        {
+
+            if (dgvDetallesRol.CurrentRow == null) return;
+            if (dgvDetallesRol.CurrentRow.Cells[0].Value == DBNull.Value) return;
+
+            string ruta = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "RolPagoIndividual.pdf");
+            pdfViewer1.Document?.Dispose();
+            pdfViewer1.Document = null;
+            
+            MemoryStream pdfStream = new MemoryStream();
+            iTextSharp.text.Document document = new iTextSharp.text.Document(PageSize.A5);
+            PdfWriter writer = PdfWriter.GetInstance(document, pdfStream);
+            writer.CloseStream = false;
+            document.Open();
+
+            string rutaLogo = Validaciones.NombreLogo(TipoCon, System.Windows.Forms.Application.StartupPath);
+            iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(rutaLogo);
+            logo.ScaleToFit(30, 30);
+
+            bool paginaAgregada = false;
+
+            foreach (DataGridViewRow row in dgvDetallesRol.Rows)
+            {
+                if (row.Cells[1].Value != null && row.Cells[1].Value != DBNull.Value)
+                {
+                    GenerarReporte(document, writer, logo, row);
+                    paginaAgregada = true;
+                }
+            }
+
+            if (!paginaAgregada)
+            {
+                KryptonMessageBox.Show("No se encontraron registros para generar el reporte", "Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+                document.Close();
+                writer.Close();
+                return;
+            }
+
+            document.Close();
+            writer.Close();
+
+            pdfStream.Seek(0, SeekOrigin.Begin);
+            pdfViewer1.Document = PdfiumViewer.PdfDocument.Load(pdfStream);
+            pdfViewer1.ZoomMode = PdfViewerZoomMode.FitWidth; // 
+        }
+        private void GenerarReporte(iTextSharp.text.Document document ,   PdfWriter writer,  iTextSharp.text.Image logo,  DataGridViewRow row)
+        {
+            BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.EMBEDDED);
+            iTextSharp.text.Font fuente12 = new iTextSharp.text.Font(baseFont, 12, iTextSharp.text.Font.BOLD);
+            iTextSharp.text.Font fuente10 = new iTextSharp.text.Font(baseFont, 10);
+            iTextSharp.text.Font fuente10Bold = new iTextSharp.text.Font(baseFont, 10, iTextSharp.text.Font.BOLD);
+            iTextSharp.text.Font fuente8 = new iTextSharp.text.Font(baseFont, 8);
+            iTextSharp.text.Font fuente8Bold = new iTextSharp.text.Font(baseFont, 8, iTextSharp.text.Font.BOLD);
+            iTextSharp.text.Font fuente8Blanca = new iTextSharp.text.Font(baseFont, 8, iTextSharp.text.Font.NORMAL, BaseColor.WHITE);
+            BaseColor azulClaro = new BaseColor(173, 216, 230);
+            //un poco mas opaco que azulclaro
+            BaseColor azulClaroOpaco = new BaseColor(173, 216, 230, 100);
+            
+            document.NewPage();
+            string empre = Validaciones.NombreCompany(TipoCon);
+            // Crear tabla de 3 columnas
+            PdfPTable headerTable = new PdfPTable(3);
+            headerTable.TotalWidth = 380;
+            headerTable.LockedWidth = true;
+            
+
+            float[] ColumnWidhts = new float[] { 120, 180, 80 };
+            headerTable.SetWidths(ColumnWidhts);
+
+            // Contenido de la celda izquierda
+            Phrase idContent = new Phrase();
+            idContent.Add(new Chunk("Id Rol    ", fuente8Bold));
+            idContent.Add(new Chunk("   " + lblIdRol.Text.ToString(), fuente8));
+            idContent.Add(new Chunk(Environment.NewLine, fuente8));
+            idContent.Add(new Chunk(Environment.NewLine, fuente8));
+            idContent.Add(new Chunk("Nro:      ", fuente8Bold));
+            idContent.Add(new Chunk(row.Cells[2].Value.ToString(), fuente8));
+            idContent.Add(new Chunk(Environment.NewLine, fuente8));
+            idContent.Add(new Chunk(Environment.NewLine + "Fecha  ", fuente8Bold));
+            idContent.Add(new Chunk(DateTime.Now.ToString("dd/MM/yyyy"), fuente8));
+
+            PdfPCell idCell = new PdfPCell(idContent)
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                VerticalAlignment = Element.ALIGN_MIDDLE,
+                Border = PdfPCell.NO_BORDER
+            };
+            headerTable.AddCell(idCell);
+
+            // Celda central con título
+            PdfPCell tituloCell = new PdfPCell(new Phrase("ROL DE PAGO", fuente12))
+            {
+                HorizontalAlignment = Element.ALIGN_CENTER,
+                VerticalAlignment = Element.ALIGN_MIDDLE,
+                Border = PdfPCell.NO_BORDER
+            };
+            headerTable.AddCell(tituloCell);
+
+            // Celda derecha con logo
+            PdfPCell logoCell = new PdfPCell(logo)
+            {
+                HorizontalAlignment = Element.ALIGN_CENTER,
+                VerticalAlignment = Element.ALIGN_CENTER,
+                Border = PdfPCell.NO_BORDER
+            };
+            headerTable.AddCell(logoCell);
+
+            headerTable.SpacingAfter = 10; // Espacio antes de la tabla
+            document.Add(headerTable);
+            // Dibujar la tabla en la posición absoluta
+            //headerTable.WriteSelectedRows(0, -1, 20, 575, writer.DirectContent);
+
+            //Dibujar rectangulo para header
+            PdfContentByte rectTabla1 = writer.DirectContent;
+            rectTabla1.RoundRectangle(10.0F, 508.0F, 400.0F, 60.0F, 10.0F);
+            rectTabla1.Stroke();
+
+            //Tabla2 datos generales
+
+            PdfPTable table1 = new PdfPTable(3);
+
+            table1.TotalWidth = 380;
+            float[] columnWidths1 = new float[] { 140, 120, 120 };
+            table1.SetWidths(columnWidths1);
+            table1.LockedWidth = true;
+
+            table1.SpacingBefore = 10; // Espacio antes de la tabla
+            table1.SpacingAfter = 20; // Espacio después de la tabla
+            // Fila 1
+            
+            Phrase Empresa = new Phrase();
+            Empresa.Add(new Chunk("Empresa: ", fuente8Bold));
+            Empresa.Add(new Chunk(empre, fuente8));
+
+            PdfPCell empresaCell = new PdfPCell(Empresa)
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                VerticalAlignment = Element.ALIGN_MIDDLE,
+                Border = PdfPCell.NO_BORDER,
+              
+            };
+            table1.AddCell(empresaCell);
+
+            Phrase Cargo = new Phrase();
+            Cargo.Add(new Chunk("Cargo: ", fuente8Bold));
+            Cargo.Add(new Chunk(row.Cells[10].Value.ToString(), fuente8));
+            PdfPCell cargoCell = new PdfPCell(Cargo)
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                VerticalAlignment = Element.ALIGN_MIDDLE,
+                Border = PdfPCell.NO_BORDER,
+
+            };
+            table1.AddCell(cargoCell);
+
+            Phrase Cedula = new Phrase();
+            Cedula.Add(new Chunk("Cédula: ", fuente8Bold));
+            Cedula.Add(new Chunk(row.Cells[6].Value.ToString(), fuente8));
+            PdfPCell cedulaCell = new PdfPCell(Cedula)
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                VerticalAlignment = Element.ALIGN_MIDDLE,
+                Border = PdfPCell.NO_BORDER,
+
+            };
+            table1.AddCell(cedulaCell);
+
+            // Fila 2
+            Phrase Nombre = new Phrase();
+            Nombre.Add(new Chunk("Nombre: ", fuente8Bold));
+            Nombre.Add(new Chunk(row.Cells[5].Value.ToString(), fuente8));
+            PdfPCell nombreCell = new PdfPCell(Nombre)
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                VerticalAlignment = Element.ALIGN_MIDDLE,
+                Border = PdfPCell.NO_BORDER,
+                Colspan = 2,
+            };
+            table1.AddCell(nombreCell);
+
+            Phrase FechaIngreso = new Phrase();
+            FechaIngreso.Add(new Chunk("F. Ingreso: ", fuente8Bold));
+            FechaIngreso.Add(new Chunk(Convert.ToDateTime(row.Cells[9].Value).ToString("dd/MM/yyyy"), fuente8));
+            PdfPCell fechaIngresoCell = new PdfPCell(FechaIngreso)
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                VerticalAlignment = Element.ALIGN_MIDDLE,
+                Border = PdfPCell.NO_BORDER,
+
+            };
+
+            table1.AddCell(fechaIngresoCell);
+            
+            // Fila 3
+            Phrase Puesto = new Phrase();
+            Puesto.Add(new Chunk("Puesto de Trabajo: ", fuente8Bold));
+            Puesto.Add(new Chunk(row.Cells[4].Value.ToString(), fuente8));
+            PdfPCell puestoCell = new PdfPCell(Puesto)
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                VerticalAlignment = Element.ALIGN_MIDDLE,
+                Border = PdfPCell.NO_BORDER,
+                Colspan = 2,
+            };
+            table1.AddCell(puestoCell);
+
+            Phrase Mes = new Phrase();
+            Mes.Add(new Chunk("Mes / Año: ", fuente8Bold));
+            Mes.Add(new Chunk(System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(dtpMesAnio.Value.Month).ToUpper() + " / " + dtpMesAnio.Value.Year.ToString() , fuente8));
+            PdfPCell mesCell = new PdfPCell(Mes)
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                VerticalAlignment = Element.ALIGN_MIDDLE,
+                Border = PdfPCell.NO_BORDER,
+
+            };
+            table1.AddCell(mesCell);
+
+            document.Add(table1);
+
+            //Dibujar rectangulo para tabla1
+            PdfContentByte rectTabla2 = writer.DirectContent;
+            rectTabla2.RoundRectangle(10.0F, 438.0F, 400.0F, 60.0F, 10.0F);
+            rectTabla2.Stroke();
+
+            //Tabla2 Detalle de Ingresos y Egresos
+
+
+            //
+            PdfPTable table2 = new PdfPTable(3);
+            table2.TotalWidth = 380;
+            float[] columnWidths2 = new float[] { 100, 20 , 260 };
+            table2.LockedWidth = true;
+            table2.SetWidths(columnWidths2);
+
+            //Titulo tabla 2
+            Phrase TituloIngresos = new Phrase();
+            TituloIngresos.Add(new Chunk("DETALLE DE INGRESOS Y EGRESOS", fuente10Bold));
+            PdfPCell tituloIngresosCell = new PdfPCell(TituloIngresos)
+            {
+                HorizontalAlignment = Element.ALIGN_CENTER,
+                VerticalAlignment = Element.ALIGN_MIDDLE,
+                Border = PdfPCell.NO_BORDER,
+                BackgroundColor = BaseColor.LIGHT_GRAY,
+                Colspan = 3,
+            };
+            table2.AddCell(tituloIngresosCell);
+            //empty space
+            Phrase empty = new Phrase();
+            empty.Add(new Chunk(Environment.NewLine, fuente8));
+            PdfPCell emptyCell = new PdfPCell(empty)
+            {
+                HorizontalAlignment = Element.ALIGN_CENTER,
+                VerticalAlignment = Element.ALIGN_MIDDLE,
+                Border = PdfPCell.NO_BORDER,
+                Colspan = 3,
+            };
+            table2.AddCell(emptyCell);
+
+            //dias trabajados
+            Phrase DiasTrabajados = new Phrase();
+            DiasTrabajados.Add(new Chunk("Dias Trabajados", fuente8Bold));
+            DiasTrabajados.Add(new Chunk("  " + row.Cells[13].Value.ToString(), fuente8));
+            PdfPCell diasTrabajadosCell = new PdfPCell(DiasTrabajados)
+            {
+                HorizontalAlignment = Element.ALIGN_CENTER,
+                VerticalAlignment = Element.ALIGN_MIDDLE,
+                Border = PdfPCell.NO_BORDER,
+                Colspan = 2,
+            };
+            table2.AddCell(diasTrabajadosCell);
+
+            //dias descanso
+            Phrase DiasDescanso = new Phrase();
+            DiasDescanso.Add(new Chunk("Dias Descanso", fuente8Bold));
+            DiasDescanso.Add(new Chunk("  " + row.Cells[15].Value.ToString(), fuente8));
+            PdfPCell diasDescansoCell = new PdfPCell(DiasDescanso)
+            {
+                HorizontalAlignment = Element.ALIGN_CENTER,
+                VerticalAlignment = Element.ALIGN_MIDDLE,
+                Border = PdfPCell.NO_BORDER,
+                
+            };
+            table2.AddCell(diasDescansoCell);
+            table2.AddCell(new PdfPCell(new Phrase(" ")) { 
+                Border = PdfPCell.NO_BORDER,
+                Colspan = 3,
+            });
+            table2.SpacingBefore = 15; // Espacio antes de la tabla
+
+            //tabla Ingresos
+
+            PdfPTable tablaIngresos = new PdfPTable(2);
+            tablaIngresos.WidthPercentage = 100;
+            
+            tablaIngresos.AddCell(new PdfPCell(new Phrase("INGRESOS", fuente8Bold)) { 
+                Colspan = 2,
+                HorizontalAlignment = Element.ALIGN_CENTER,
+                BorderWidth = 1,
+                Border = PdfPCell.BOTTOM_BORDER,
+
+            });
+            
+            // Sueldo
+            tablaIngresos.AddCell(new PdfPCell(new Phrase("Sueldo:", fuente8Bold))
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                Border = PdfPCell.NO_BORDER,
+
+            });
+            tablaIngresos.AddCell(new PdfPCell(new Phrase(row.Cells[12].Value.ToString(), fuente8))
+            {
+                HorizontalAlignment = Element.ALIGN_RIGHT,
+                Border = PdfPCell.NO_BORDER,
+            });
+
+            //Valor por Hora
+            Phrase valorHoraPhrase = new Phrase();
+            valorHoraPhrase.Add(new Chunk("V. por Hora:                ", fuente8Bold));   
+            valorHoraPhrase.Add(new Chunk(row.Cells[19].Value.ToString(), fuente8)); 
+
+            // Celda con todo junto
+            tablaIngresos.AddCell(new PdfPCell(valorHoraPhrase)
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                BackgroundColor = azulClaro,
+                Border = PdfPCell.NO_BORDER,
+                Colspan = 2
+            });
+
+            //cantidad de horas
+            tablaIngresos.AddCell(new PdfPCell(new Phrase("C de Horas:", fuente8Bold))
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                BackgroundColor = azulClaro,
+                Border = PdfPCell.NO_BORDER,
+            });
+            tablaIngresos.AddCell(new PdfPCell(new Phrase(row.Cells[18].Value.ToString(), fuente8))
+            {
+                HorizontalAlignment = Element.ALIGN_RIGHT,
+                BackgroundColor = azulClaro,
+                Border = PdfPCell.BOTTOM_BORDER,
+            });
+
+            //Total HoraNormal
+            tablaIngresos.AddCell(new PdfPCell(new Phrase("Total H Nor:", fuente8Bold))
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                Border = PdfPCell.NO_BORDER,
+            });
+            tablaIngresos.AddCell(new PdfPCell(new Phrase(row.Cells[20].Value.ToString(), fuente8))
+            {
+                HorizontalAlignment = Element.ALIGN_RIGHT,
+                Border = PdfPCell.NO_BORDER,
+            });
+
+            //Valor Hora 50%
+            Phrase valorHora50Phrase = new Phrase();
+            valorHora50Phrase.Add(new Chunk("V. 50% Hora:              ", fuente8Bold));
+            valorHora50Phrase.Add(new Chunk(row.Cells[22].Value.ToString(), fuente8));
+
+            tablaIngresos.AddCell(new PdfPCell(valorHora50Phrase)
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                BackgroundColor = azulClaro,
+                Border = PdfPCell.NO_BORDER,
+                Colspan = 2
+            });
+
+            //cantidad de horas 50%
+
+            tablaIngresos.AddCell(new PdfPCell(new Phrase("C de Horas:", fuente8Bold))
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                BackgroundColor = azulClaro,
+                Border = PdfPCell.NO_BORDER,
+            });
+            tablaIngresos.AddCell(new PdfPCell(new Phrase(row.Cells[21].Value.ToString(), fuente8))
+            {
+                HorizontalAlignment = Element.ALIGN_RIGHT,
+                BackgroundColor = azulClaro,
+                Border = PdfPCell.BOTTOM_BORDER,
+            });
+
+            //Total Hora 50%
+
+            tablaIngresos.AddCell(new PdfPCell(new Phrase("Total H 50:", fuente8Bold))
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                Border = PdfPCell.NO_BORDER,
+            });
+            tablaIngresos.AddCell(new PdfPCell(new Phrase(row.Cells[23].Value.ToString(), fuente8))
+            {
+                HorizontalAlignment = Element.ALIGN_RIGHT,
+                Border = PdfPCell.NO_BORDER,
+            });
+
+            //Valor Hora 100%
+            Phrase valorHora100Phrase = new Phrase();
+            valorHora100Phrase.Add(new Chunk("V. 100% Hora:            ", fuente8Bold));
+            valorHora100Phrase.Add(new Chunk(row.Cells[25].Value.ToString(), fuente8));
+
+            tablaIngresos.AddCell(new PdfPCell(valorHora100Phrase)
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                BackgroundColor = azulClaro,
+                Border = PdfPCell.NO_BORDER,
+                Colspan = 2
+            });
+
+            //cantidad de horas 100%
+
+            tablaIngresos.AddCell(new PdfPCell(new Phrase("C de Horas:", fuente8Bold))
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                BackgroundColor = azulClaro,
+                Border = PdfPCell.NO_BORDER,
+            });
+            tablaIngresos.AddCell(new PdfPCell(new Phrase(row.Cells[24].Value.ToString(), fuente8))
+            {
+                HorizontalAlignment = Element.ALIGN_RIGHT,
+                BackgroundColor = azulClaro,
+                Border = PdfPCell.BOTTOM_BORDER,
+            });
+
+            //Total Hora 100%
+
+            tablaIngresos.AddCell(new PdfPCell(new Phrase("Total H 100:", fuente8Bold))
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                Border = PdfPCell.NO_BORDER,
+            });
+            tablaIngresos.AddCell(new PdfPCell(new Phrase(row.Cells[26].Value.ToString(), fuente8))
+            {
+                HorizontalAlignment = Element.ALIGN_RIGHT,
+                Border = PdfPCell.NO_BORDER,
+            });
+
+            //XIII
+            tablaIngresos.AddCell(new PdfPCell(new Phrase("XIII:", fuente8Bold))
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                Border = PdfPCell.NO_BORDER,
+            });
+            tablaIngresos.AddCell(new PdfPCell(new Phrase(row.Cells[35].Value.ToString(), fuente8))
+            {
+                HorizontalAlignment = Element.ALIGN_RIGHT,
+                Border = PdfPCell.NO_BORDER,
+            });
+            //XIV
+            tablaIngresos.AddCell(new PdfPCell(new Phrase("XIV:", fuente8Bold))
+            {
+                HorizontalAlignment = Element.ALIGN_LEFT,
+                Border = PdfPCell.NO_BORDER,
+            });
+            tablaIngresos.AddCell(new PdfPCell(new Phrase(row.Cells[37].Value.ToString(), fuente8))
+            {
+                HorizontalAlignment = Element.ALIGN_RIGHT,
+                Border = PdfPCell.NO_BORDER,
+            });
+
+
+
+
+
+
+
+
+            //tabla Egresos
+
+            PdfPTable tablaEgresos = new PdfPTable(4);
+            tablaEgresos.WidthPercentage = 100;             
+            
+
+            tablaEgresos.AddCell(new PdfPCell(new Phrase("EGRESOS", fuente8Bold))
+            {
+                Colspan = 4,
+                HorizontalAlignment = Element.ALIGN_CENTER,
+                Border = PdfPCell.BOTTOM_BORDER,
+            });
+
+
+
+            table2.AddCell(new PdfPCell(tablaIngresos)
+            {                
+                Border = PdfPCell.NO_BORDER,
+            });
+            table2.AddCell(new PdfPCell(new Phrase("")) { Border = PdfPCell.NO_BORDER });
+            table2.AddCell(new PdfPCell(tablaEgresos)
+            {
+                Border = PdfPCell.NO_BORDER,
+            });
+            
+
+
+            document.Add(table2);
+
+
+
+
 
         }
     }

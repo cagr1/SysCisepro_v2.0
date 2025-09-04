@@ -56,8 +56,8 @@
             Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonNavigator1 = New ComponentFactory.Krypton.Navigator.KryptonNavigator()
             Me.KryptonPage1 = New ComponentFactory.Krypton.Navigator.KryptonPage()
-            Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.dgvDetalleOrdenCompra = New System.Windows.Forms.DataGridView()
+            Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.PdfViewer1 = New PdfiumViewer.PdfViewer()
             CType(Me.dgvOrdenCompra, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
@@ -69,9 +69,9 @@
             Me.KryptonNavigator1.SuspendLayout()
             CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonPage1.SuspendLayout()
+            CType(Me.dgvDetalleOrdenCompra, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonPage2.SuspendLayout()
-            CType(Me.dgvDetalleOrdenCompra, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'txtTotalOrdenCompra
@@ -432,20 +432,6 @@
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage1.UniqueName = "5D44B70E5E604B1F24B31853908D244B"
             '
-            'KryptonPage2
-            '
-            Me.KryptonPage2.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
-            Me.KryptonPage2.Controls.Add(Me.PdfViewer1)
-            Me.KryptonPage2.Flags = 65534
-            Me.KryptonPage2.LastVisibleSet = True
-            Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
-            Me.KryptonPage2.Name = "KryptonPage2"
-            Me.KryptonPage2.Size = New System.Drawing.Size(1016, 511)
-            Me.KryptonPage2.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.KryptonPage2.Text = "Reporte"
-            Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
-            Me.KryptonPage2.UniqueName = "B1CF942E9E5B4F0330AFA13F65BE84E0"
-            '
             'dgvDetalleOrdenCompra
             '
             Me.dgvDetalleOrdenCompra.AllowUserToAddRows = False
@@ -463,6 +449,20 @@
             Me.dgvDetalleOrdenCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvDetalleOrdenCompra.Size = New System.Drawing.Size(996, 282)
             Me.dgvDetalleOrdenCompra.TabIndex = 190
+            '
+            'KryptonPage2
+            '
+            Me.KryptonPage2.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage2.Controls.Add(Me.PdfViewer1)
+            Me.KryptonPage2.Flags = 65534
+            Me.KryptonPage2.LastVisibleSet = True
+            Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
+            Me.KryptonPage2.Name = "KryptonPage2"
+            Me.KryptonPage2.Size = New System.Drawing.Size(1016, 511)
+            Me.KryptonPage2.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.KryptonPage2.Text = "Reporte"
+            Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
+            Me.KryptonPage2.UniqueName = "B1CF942E9E5B4F0330AFA13F65BE84E0"
             '
             'PdfViewer1
             '
@@ -500,9 +500,9 @@
             Me.KryptonNavigator1.ResumeLayout(False)
             CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonPage1.ResumeLayout(False)
+            CType(Me.dgvDetalleOrdenCompra, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonPage2.ResumeLayout(False)
-            CType(Me.dgvDetalleOrdenCompra, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 

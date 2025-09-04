@@ -521,8 +521,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
                         Dim response = KryptonInputBox.Show("INGRESE LA BASE IMPONIBLE", "COMPROBANTE RETENCIÓN", CDec(txtIva.Text).ToString())
                         If IsNumeric(response) Then
-                            Dim valorRetenidoIva = Math.Round((CDec(response) * porcent) / 100, 3, MidpointRounding.AwayFromZero)
-                            dgvDetalleComprobanteRetencionVenta.Rows.Add(dtpComprobanteRetencion.Value.Year, _objetoConceptos.BuscarCodigoConceptoXIdConcepto(_tipoCon, CInt(cmbConcepto.SelectedValue)), CDec(response), cmbImpuesto.Text, porcent, Math.Round(valorRetenidoIva, 2, MidpointRounding.ToEven), cod, cue)
+                            Dim valorRetenidoIva = Math.Round((CDec(response) * porcent) / 100, 2, MidpointRounding.AwayFromZero)
+                            dgvDetalleComprobanteRetencionVenta.Rows.Add(dtpComprobanteRetencion.Value.Year, _objetoConceptos.BuscarCodigoConceptoXIdConcepto(_tipoCon, CInt(cmbConcepto.SelectedValue)), CDec(response), cmbImpuesto.Text, porcent, valorRetenidoIva, cod, cue)
                         Else
                             'MsgBox("POR FAVOR INGRESE SOLO NÚMEROS" & vbNewLine & "EL SEPARADOR DECIMAL ES EL '.'", MsgBoxStyle.Exclamation, "Mensaje de validación")
                             KryptonMessageBox.Show("Por favor ingrese solo números" & vbNewLine & "El separador decimal es el '.'", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)

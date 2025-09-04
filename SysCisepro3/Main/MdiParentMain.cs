@@ -1622,11 +1622,17 @@ namespace SysCisepro3.Main
         }
         private void rEPORTEGENERALDEPERSONALToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmFlujoOperaciones.Instancia.MdiParent = this;
-            FrmFlujoOperaciones.TipoCon = TipoCon;
-            FrmFlujoOperaciones.Usuario = ObjUsuario;
-            FrmFlujoOperaciones.Instancia.Show();
-            FrmFlujoOperaciones.Instancia.BringToFront();
+            //FrmFlujoOperaciones.Instancia.MdiParent = this;
+            //FrmFlujoOperaciones.TipoCon = TipoCon;
+            //FrmFlujoOperaciones.Usuario = ObjUsuario;
+            //FrmFlujoOperaciones.Instancia.Show();
+            //FrmFlujoOperaciones.Instancia.BringToFront();
+
+            FrmReportePersonalGeneral.Instancia.MdiParent = this;
+            FrmReportePersonalGeneral.TipoCon = TipoCon;
+            FrmReportePersonalGeneral.Usuario = ObjUsuario;
+            FrmReportePersonalGeneral.Instancia.Show();
+            FrmReportePersonalGeneral.Instancia.BringToFront();
         }
         private void rESÚMENPAGOSNÓMINAToolStripMenuItem_Click(object sender, EventArgs e)
         {

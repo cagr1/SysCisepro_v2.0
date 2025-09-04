@@ -344,12 +344,12 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
                 'Datos contrato
                 'convertir dgvClienteGeneral.CurrentRow.Cells.Item(22).Value a Year
-                Dim Year = dgvClienteGeneral.CurrentRow.Cells.Item(22).Value.ToString()
+                Dim Year = If(dgvClienteGeneral.CurrentRow.Cells.Item(22).Value.ToString() Is DBNull.Value, "", dgvClienteGeneral.CurrentRow.Cells.Item(22).Value) 'fecha
 
-                dtpFechaContrato.Text = dgvClienteGeneral.CurrentRow.Cells.Item(22).Value
-                TextBoxVal.Text = dgvClienteGeneral.CurrentRow.Cells.Item(23).Value
-                TextBox5.Text = dgvClienteGeneral.CurrentRow.Cells.Item(23).Value
-                TextBox7.Text = dgvClienteGeneral.CurrentRow.Cells.Item(22).Value
+                dtpFechaContrato.Text = If(dgvClienteGeneral.CurrentRow.Cells.Item(22).Value Is DBNull.Value, "01/01/1985", dgvClienteGeneral.CurrentRow.Cells.Item(22).Value)
+                TextBoxVal.Text = If(dgvClienteGeneral.CurrentRow.Cells.Item(23).Value Is DBNull.Value, "", dgvClienteGeneral.CurrentRow.Cells.Item(23).Value) 'valor
+                TextBox5.Text = If(dgvClienteGeneral.CurrentRow.Cells.Item(23).Value Is DBNull.Value, "", dgvClienteGeneral.CurrentRow.Cells.Item(23).Value) 'valor
+                TextBox7.Text = If(dgvClienteGeneral.CurrentRow.Cells.Item(22).Value Is DBNull.Value, "", dgvClienteGeneral.CurrentRow.Cells.Item(22).Value) 'fecha
 
                 dgvFacturaVenta.DataSource = Nothing
                 SumarTotalFacturas()
