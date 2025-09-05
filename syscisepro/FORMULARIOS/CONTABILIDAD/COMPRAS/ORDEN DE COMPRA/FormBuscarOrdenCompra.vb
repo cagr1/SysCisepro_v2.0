@@ -224,7 +224,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
             "Código: RE 3.6.1-7" & vbCrLf &
             "Versión: 003" & vbCrLf &
             "Página: 1" & vbCrLf &
-            "Fecha: " & fechaReporte
+            "Fecha: " & DateTime.Now.ToString("dd/MM/yyyy")
 
             Dim cellInfo As New PdfPCell(New Phrase(textoCabecera, fuente8))
 
@@ -257,6 +257,10 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
             parrafoCelda1.Add(New Phrase("RUC: 0790013360001" & vbCrLf, fuente10Bold))
             parrafoCelda1.Add(New Phrase("No Orden: ", fuente10Bold))
             parrafoCelda1.Add(New Phrase(txtIdOrdenCompra.Text, fuente10))
+            parrafoCelda1.Add(New Phrase(vbCrLf, fuente10))
+            parrafoCelda1.Add(New Phrase("Fecha: ", fuente10Bold))
+            parrafoCelda1.Add(New Phrase(fechaReporte, fuente10))
+
 
             Dim cell1 As New PdfPCell(parrafoCelda1)
             cell1.HorizontalAlignment = Element.ALIGN_LEFT
@@ -268,9 +272,11 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
             ' ==== Celda 2 ====
             Dim parrafoCelda2 As New Paragraph()
             parrafoCelda2.Alignment = Element.ALIGN_CENTER
-            parrafoCelda2.Add(New Phrase("Servicios en Seguridad Fisica y Electronica" & vbCrLf, fuente10))
-            parrafoCelda2.Add(New Phrase("CISEPRO C Ltda" & vbCrLf, fuente12)) ' bold 12
-            parrafoCelda2.Add(New Phrase("Dirección: Av. Alejandro Castro Benitez y El Bosque sector 5" & vbCrLf, fuente10))
+            'parrafoCelda2.Add(New Phrase("Servicios en Seguridad Fisica y Electronica" & vbCrLf, fuente10))
+            parrafoCelda2.Add(New Phrase("CISEPRO C LTDA" & vbCrLf, fuente12)) ' bold 12
+            'empty line
+            parrafoCelda2.Add(New Phrase(" " & vbCrLf, fuente10))
+            parrafoCelda2.Add(New Phrase("Av. Alejandro Castro Benitez y El Bosque sector 5" & vbCrLf, fuente10))
             parrafoCelda2.Add(New Phrase("Email: email@cisepro.com.ec", fuente10))
 
             Dim cell2 As New PdfPCell(parrafoCelda2)
@@ -287,6 +293,22 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
             table2.TotalWidth = 400
             table2.LockedWidth = True
             table2.SetWidths(New Single() {200, 100, 100})
+
+            'Titulo tabla 2
+            Dim parrafoTituloTabla2 As New Paragraph()
+            parrafoTituloTabla2.Add(New Phrase("DATOS DEL PROVEEDOR", fuente10Bold))
+            Dim cellTituloTabla2 As New PdfPCell(parrafoTituloTabla2)
+            cellTituloTabla2.Colspan = 3
+            cellTituloTabla2.HorizontalAlignment = Element.ALIGN_CENTER
+            cellTituloTabla2.VerticalAlignment = Element.ALIGN_MIDDLE
+            cellTituloTabla2.Border = Rectangle.NO_BORDER
+            cellTituloTabla2.BackgroundColor = BaseColor.LIGHT_GRAY
+            table2.AddCell(cellTituloTabla2)
+            'espacio vacio
+            Dim cellEspacioVacio As New PdfPCell(New Phrase(" ", fuente8))
+            cellEspacioVacio.Border = Rectangle.NO_BORDER
+            cellEspacioVacio.Colspan = 3
+            table2.AddCell(cellEspacioVacio)
 
             'Fila 1
             Dim Celda1Tabla2 As New Paragraph()
@@ -360,14 +382,184 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
             table2.AddCell(cellObliContabilidad)
 
 
-            'Detalle Orden Compra
-
             table2.SpacingAfter = 10
+
+            ' Table3 Detalles Orden Compra
+
+            Dim table3 As New PdfPTable(4)
+            table3.TotalWidth = 400
+            table3.LockedWidth = True
+            table3.SetWidths(New Single() {180, 60, 80, 80})
+
+
+            Dim headers() As String = {"Item", "Cantidad", "Valor Unitario", "Valor Total"}
+            For Each header As String In headers
+                Dim headerCell As New PdfPCell(New Phrase(header, fuente8Bold)) With {
+                .HorizontalAlignment = Element.ALIGN_CENTER,
+                .BackgroundColor = BaseColor.LIGHT_GRAY
+            }
+                table3.AddCell(headerCell)
+            Next
+
+            'detalle
+            For Each dr As DataRow In dt.Rows
+                Dim cellItem As New PdfPCell(New Phrase(dr(10).ToString(), fuente8)) With {
+                    .HorizontalAlignment = Element.ALIGN_LEFT
+                }
+                table3.AddCell(cellItem)
+
+
+                Dim cellCantidad As New PdfPCell(New Phrase(dr(11).ToString(), fuente8)) With {
+                    .HorizontalAlignment = Element.ALIGN_CENTER
+                }
+                table3.AddCell(cellCantidad)
+
+
+                Dim valorUnitario As Decimal = If(IsDBNull(dr(12)), 0D, Convert.ToDecimal(dr(12)))
+                table3.AddCell(New PdfPCell(New Phrase(String.Format("{0:N2}", valorUnitario), fuente8)) With {
+                    .HorizontalAlignment = Element.ALIGN_RIGHT
+                })
+
+                ' Valor Total (formato contable 1,000.65)
+                Dim valorTotal As Decimal = If(IsDBNull(dr(13)), 0D, Convert.ToDecimal(dr(13)))
+                table3.AddCell(New PdfPCell(New Phrase(String.Format("{0:N2}", valorTotal), fuente8)) With {
+                    .HorizontalAlignment = Element.ALIGN_RIGHT
+                })
+
+            Next
+
+            table3.SpacingAfter = 5
+
+            'table4 detale valores 
+
+            Dim table4 As New PdfPTable(2)
+            table4.TotalWidth = 400
+            table4.LockedWidth = True
+            table4.SetWidths(New Single() {240, 160})
+
+            'subtabla 1
+            Dim table4Sub1 As New PdfPTable(2)
+            table4Sub1.TotalWidth = 240
+            table4Sub1.LockedWidth = True
+            table4Sub1.SetWidths(New Single() {120, 120})
+
+            Dim Celda1Tabla4 As New Paragraph()
+            Celda1Tabla4.Add(New Phrase("Son: ", fuente8Bold))
+            Celda1Tabla4.Add(New Phrase(valorEnLetras, fuente8))
+            Dim cellSubtotal As New PdfPCell(Celda1Tabla4)
+            cellSubtotal.HorizontalAlignment = Element.ALIGN_LEFT
+            cellSubtotal.Border = Rectangle.NO_BORDER
+            cellSubtotal.Colspan = 2
+            table4Sub1.AddCell(cellSubtotal)
+
+            'forma de pago
+            Dim Celda2Tabla4 As New Paragraph()
+            Celda2Tabla4.Add(New Phrase("Forma de Pago: ", fuente8Bold))
+            Celda2Tabla4.Add(New Phrase(dt.Rows(0)(19).ToString, fuente8))
+            Dim cellTotal As New PdfPCell(Celda2Tabla4)
+            cellTotal.HorizontalAlignment = Element.ALIGN_LEFT
+            cellTotal.Border = Rectangle.NO_BORDER
+            table4Sub1.AddCell(cellTotal)
+
+            'Tipo de pago
+            Dim Celda3Tabla4 As New Paragraph()
+            Celda3Tabla4.Add(New Phrase("Tipo de Pago: ", fuente8Bold))
+            Celda3Tabla4.Add(New Phrase(dt.Rows(0)(20).ToString, fuente8))
+            Dim cellFormaPago As New PdfPCell(Celda3Tabla4)
+            cellFormaPago.HorizontalAlignment = Element.ALIGN_LEFT
+            cellFormaPago.Border = Rectangle.NO_BORDER
+            table4Sub1.AddCell(cellFormaPago)
+
+            'Observaciones
+            Dim Celda4Tabla4 As New Paragraph()
+            Celda4Tabla4.Add(New Phrase("Observaciones: ", fuente8Bold))
+            Celda4Tabla4.Add(New Phrase(dt.Rows(0)(21).ToString, fuente8))
+            Dim cellObservaciones As New PdfPCell(Celda4Tabla4)
+            cellObservaciones.HorizontalAlignment = Element.ALIGN_LEFT
+            cellObservaciones.Border = Rectangle.NO_BORDER
+            cellObservaciones.Colspan = 2
+            table4Sub1.AddCell(cellObservaciones)
+
+            'subtabla 2
+            'subototal
+            Dim table4Sub2 As New PdfPTable(2)
+            table4Sub2.TotalWidth = 160
+            table4Sub2.LockedWidth = True
+            table4Sub2.SetWidths(New Single() {80, 80})
+
+            ' Subtotal
+            Dim cellLabelSubtotal As New PdfPCell(New Phrase("Subtotal", fuente8Bold))
+            cellLabelSubtotal.HorizontalAlignment = Element.ALIGN_LEFT
+            cellLabelSubtotal.Border = Rectangle.NO_BORDER
+            table4Sub2.AddCell(cellLabelSubtotal)
+
+            Dim subtotal As Decimal = If(IsNumeric(txtSubtotal12OrdenCompra.Text), Convert.ToDecimal(txtSubtotal12OrdenCompra.Text), 0D)
+            Dim cellValueSubtotal As New PdfPCell(New Phrase(String.Format("{0:N2}", subtotal), fuente8))
+            cellValueSubtotal.HorizontalAlignment = Element.ALIGN_RIGHT
+            cellValueSubtotal.Border = Rectangle.NO_BORDER
+            table4Sub2.AddCell(cellValueSubtotal)
+
+
+            'subtotal 0
+            Dim celllabelSubtotal0 As New PdfPCell(New Phrase("Subtotal 0%", fuente8Bold))
+            celllabelSubtotal0.HorizontalAlignment = Element.ALIGN_LEFT
+            celllabelSubtotal0.Border = Rectangle.NO_BORDER
+            table4Sub2.AddCell(celllabelSubtotal0)
+
+            Dim subtotal0 As Decimal = If(IsNumeric(txtSubtotal0OrdenCompra.Text), Convert.ToDecimal(txtSubtotal0OrdenCompra.Text), 0D)
+            Dim cellValueSubtotal0 As New PdfPCell(New Phrase(String.Format("{0:N2}", subtotal0), fuente8))
+            cellValueSubtotal0.HorizontalAlignment = Element.ALIGN_RIGHT
+            cellValueSubtotal0.Border = Rectangle.NO_BORDER
+            table4Sub2.AddCell(cellValueSubtotal0)
+
+            'descuento
+            Dim cellLabelDescuento As New PdfPCell(New Phrase("Descuento", fuente8Bold))
+            cellLabelDescuento.HorizontalAlignment = Element.ALIGN_LEFT
+            cellLabelDescuento.Border = Rectangle.NO_BORDER
+            table4Sub2.AddCell(cellLabelDescuento)
+
+            Dim descuento As Decimal = If(IsNumeric(txtDescuentoOrdenCompra.Text), Convert.ToDecimal(txtDescuentoOrdenCompra.Text), 0D)
+            Dim cellValueDescuento As New PdfPCell(New Phrase(String.Format("{0:N2}", descuento), fuente8))
+            cellValueDescuento.HorizontalAlignment = Element.ALIGN_RIGHT
+            cellValueDescuento.Border = Rectangle.NO_BORDER
+            table4Sub2.AddCell(cellValueDescuento)
+
+            'iva
+            Dim cellLabelIva As New PdfPCell(New Phrase("IVA", fuente8Bold))
+            cellLabelIva.HorizontalAlignment = Element.ALIGN_LEFT
+            cellLabelIva.Border = Rectangle.NO_BORDER
+            table4Sub2.AddCell(cellLabelIva)
+
+            Dim iva As Decimal = If(IsNumeric(txtIvaOrdenCompra.Text), Convert.ToDecimal(txtIvaOrdenCompra.Text), 0D)
+            Dim cellValueIva As New PdfPCell(New Phrase(String.Format("{0:N2}", iva), fuente8))
+            cellValueIva.HorizontalAlignment = Element.ALIGN_RIGHT
+            cellValueIva.Border = Rectangle.NO_BORDER
+            table4Sub2.AddCell(cellValueIva)
+
+            'total
+            Dim cellLabelTotal As New PdfPCell(New Phrase("Total", fuente8Bold))
+            cellLabelTotal.HorizontalAlignment = Element.ALIGN_LEFT
+            cellLabelTotal.Border = Rectangle.NO_BORDER
+            table4Sub2.AddCell(cellLabelTotal)
+
+            Dim total As Decimal = If(IsNumeric(txtTotalOrdenCompra.Text), Convert.ToDecimal(txtTotalOrdenCompra.Text), 0D)
+            Dim cellValueTotal As New PdfPCell(New Phrase(String.Format("{0:N2}", total), fuente8))
+            cellValueTotal.HorizontalAlignment = Element.ALIGN_RIGHT
+            cellValueTotal.Border = Rectangle.NO_BORDER
+            table4Sub2.AddCell(cellValueTotal)
+
+
+            'agregar las subtablas a la tabla principal
+            table4.AddCell(table4Sub1)
+            table4.AddCell(table4Sub2)
+
+
 
 
             document.Add(table1)
             document.Add(table2)
-
+            document.Add(table3)
+            document.Add(table4)
             'Cierre
             document.Close()
             pdfStream.Position = 0
