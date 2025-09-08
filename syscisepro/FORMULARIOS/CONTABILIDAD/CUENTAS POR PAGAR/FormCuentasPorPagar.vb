@@ -459,5 +459,150 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
         Private Sub MenuStrip1_ItemClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
 
         End Sub
+
+        Private Sub btnBuscarAcumulado_Click(sender As Object, e As EventArgs) Handles btnBuscarAcumulado.Click
+            Dim fechaDesde As DateTime = dtpDesdeAcu.Value.Date
+            Dim fechaHasta As Date = dtpHastaAcu.Value.Date.AddDays(1).AddSeconds(-1) ' hasta el final del día
+
+            dgvProveedorAcumulado.DataSource = Nothing
+
+            cargarCuentasPorPagarGeneralPorClienteAcumulado(fechaDesde, fechaHasta, If(rbGeneralAcu.Checked, 0, ""))
+        End Sub
+
+        Private Sub cargarCuentasPorPagarGeneralPorClienteAcumulado(fechaDesde As DateTime, fechaHasta As DateTime, proveedor As Integer)
+            Try
+
+
+                dgvProveedorAcumulado.Rows.Clear()
+                Dim auxCli = String.Empty
+                Dim totCliente(6) As Decimal
+                Dim totGeneral(7) As Decimal
+
+                With dgvProveedorAcumulado.Columns
+                    .Add("Proveedor", "Proveedor")
+                    .Add("Factura", "Factura")
+                    .Add("Fecha", "Fecha")
+                    .Add("Facturado", "Facturado")
+                    .Add("0-30", "0-30")
+                    .Add("31-60", "31-60")
+                    .Add("61-90", "61-90")
+                    .Add("91-120", "91-120")
+                    .Add(">120", ">120")
+                    .Add("Total", "Total")
+                End With
+
+
+                Dim data As DataTable = objetoCuentasPorPagar.BuscarCuentasPorPagarGeneralDetalladoPorClienteAcumulado(_tipoCon, fechaDesde, fechaHasta, proveedor)
+
+                If data.Rows.Count > 0 Then
+
+                    auxCli = data.Rows(0)("Proveedor").ToString().Trim()
+
+
+
+
+                    For Each row As DataRow In data.Rows
+                        Dim currentProveedor As String = row("Proveedor").ToString().Trim()
+
+                        ' Si cambió el proveedor, agregamos totales y reiniciamos
+                        If Not auxCli.Equals(currentProveedor) AndAlso Not String.IsNullOrEmpty(auxCli) Then
+                            AgregarFilaTotalProveedor(totCliente, auxCli)
+                            AgregarEspacioEntreProveedores()
+
+                            ' Pasamos al total general
+                            For i As Integer = 0 To 6
+                                totGeneral(i) += totCliente(i)
+                                totCliente(i) = 0
+                            Next
+                        End If
+
+                        ' Agregar fila con datos del proveedor
+                        dgvProveedorAcumulado.Rows.Add(
+                            row("Proveedor"),
+                            row("Factura"),
+                            Format(CDate(row("Fecha")), "dd/MM/yyyy"),
+                            CDec(row("Facturado")).ToString("N2"),
+                            CDec(row("0-30")).ToString("N2"),
+                            CDec(row("31-60")).ToString("N2"),
+                            CDec(row("61-90")).ToString("N2"),
+                            CDec(row("91-120")).ToString("N2"),
+                            CDec(row(">120")).ToString("N2"),
+                            CDec(row("Total")).ToString("N2")
+                        )
+
+                        ' Acumular totales del proveedor
+                        totCliente(0) += CDec(row(3))
+                        totCliente(1) += CDec(row(4)) ' 1-30"))
+                        totCliente(2) += CDec(row(5))
+                        totCliente(3) += CDec(row(6))
+                        totCliente(4) += CDec(row(7))
+                        totCliente(5) += CDec(row(8))
+                        totCliente(6) += CDec(row(9))
+
+                        auxCli = currentProveedor
+                    Next
+
+                    ' Agregar el total del último proveedor
+                    If data.Rows.Count > 0 Then
+                        AgregarFilaTotalProveedor(totCliente, auxCli)
+
+                        ' Sumar al total general
+                        For i As Integer = 0 To 6
+                            totGeneral(i) += totCliente(i)
+                        Next
+                    End If
+
+                    ' Agregar total general
+                    Dim rowIndex As Integer = dgvProveedorAcumulado.Rows.Add()
+                    With dgvProveedorAcumulado.Rows(rowIndex)
+                        .Cells(0).Value = "TOTAL GENERAL"
+                        .Cells(3).Value = totGeneral(0).ToString("N2") ' Facturado
+                        .Cells(4).Value = totGeneral(1).ToString("N2") ' 1-30
+                        .Cells(5).Value = totGeneral(2).ToString("N2") ' 31-60
+                        .Cells(6).Value = totGeneral(3).ToString("N2") ' 61-90
+                        .Cells(7).Value = totGeneral(4).ToString("N2") ' 91-120
+                        .Cells(8).Value = totGeneral(5).ToString("N2") ' >120
+                        .Cells(9).Value = totGeneral(6).ToString("N2") ' Total
+
+                        ' Formato
+                        .DefaultCellStyle.Font = New Font("Segoe UI", 9, FontStyle.Bold)
+                        .DefaultCellStyle.BackColor = Color.LightSteelBlue
+                    End With
+
+                    dgvProveedorAcumulado.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells)
+                    dgvProveedorAcumulado.AutoResizeRows()
+
+
+
+                End If
+
+            Catch ex As Exception
+                KryptonMessageBox.Show("Hubo un problema al cargar los datos." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
+        End Sub
+
+        Private Sub AgregarFilaTotalProveedor(totales() As Decimal, nombreProveedor As String)
+            Dim rowIndex As Integer = dgvProveedorAcumulado.Rows.Add()
+            With dgvProveedorAcumulado.Rows(rowIndex)
+                .Cells(0).Value = "TOTAL " & nombreProveedor
+                .Cells(3).Value = totales(0).ToString("N2")
+                .Cells(4).Value = totales(1).ToString("N2")
+                .Cells(5).Value = totales(2).ToString("N2")
+                .Cells(6).Value = totales(3).ToString("N2")
+                .Cells(7).Value = totales(4).ToString("N2")
+                .Cells(8).Value = totales(5).ToString("N2")
+                .Cells(9).Value = totales(6).ToString("N2")
+
+                .DefaultCellStyle.Font = New Font("Segoe UI", 8, FontStyle.Bold)
+                .DefaultCellStyle.BackColor = Color.LightGray
+            End With
+        End Sub
+
+        Private Sub AgregarEspacioEntreProveedores()
+            dgvProveedorAcumulado.Rows.Add()
+            If dgvProveedorAcumulado.RowCount > 0 Then
+                dgvProveedorAcumulado.Rows(dgvProveedorAcumulado.RowCount - 1).Height = 10
+            End If
+        End Sub
     End Class
 End Namespace

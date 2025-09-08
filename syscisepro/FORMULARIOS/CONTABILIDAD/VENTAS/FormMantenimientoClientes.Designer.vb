@@ -194,6 +194,7 @@
             Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
+            Me.gbxConvenioCliente = New Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.KryptonGroupBox7 = New Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonGroupBox6 = New Krypton.Toolkit.KryptonGroupBox()
@@ -247,7 +248,7 @@
             Me.KryptonLabel38 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonPage6 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.KryptonLabel43 = New Krypton.Toolkit.KryptonLabel()
-            Me.gbxConvenioCliente = New Krypton.Toolkit.KryptonGroupBox()
+            Me.btnConvenio = New System.Windows.Forms.ToolStripMenuItem()
             CType(Me.dgvClienteGeneral, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.msKardex.SuspendLayout()
@@ -284,6 +285,10 @@
             CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox1.Panel.SuspendLayout()
             Me.KryptonGroupBox1.SuspendLayout()
+            CType(Me.gbxConvenioCliente, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.gbxConvenioCliente.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.gbxConvenioCliente.Panel.SuspendLayout()
+            Me.gbxConvenioCliente.SuspendLayout()
             CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonPage2.SuspendLayout()
             CType(Me.KryptonGroupBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -318,10 +323,6 @@
             Me.KryptonGroupBox11.SuspendLayout()
             CType(Me.KryptonPage6, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonPage6.SuspendLayout()
-            CType(Me.gbxConvenioCliente, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.gbxConvenioCliente.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.gbxConvenioCliente.Panel.SuspendLayout()
-            Me.gbxConvenioCliente.SuspendLayout()
             Me.SuspendLayout()
             '
             'cmbTipoIdentificacion
@@ -618,7 +619,7 @@
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvClienteGeneral.DefaultCellStyle = DataGridViewCellStyle3
             Me.dgvClienteGeneral.GridColor = System.Drawing.SystemColors.ControlDarkDark
-            Me.dgvClienteGeneral.Location = New System.Drawing.Point(7, 376)
+            Me.dgvClienteGeneral.Location = New System.Drawing.Point(7, 500)
             Me.dgvClienteGeneral.MultiSelect = False
             Me.dgvClienteGeneral.Name = "dgvClienteGeneral"
             DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -634,7 +635,7 @@
             Me.dgvClienteGeneral.RowsDefaultCellStyle = DataGridViewCellStyle5
             Me.dgvClienteGeneral.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Roboto", 8.0!)
             Me.dgvClienteGeneral.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvClienteGeneral.Size = New System.Drawing.Size(668, 289)
+            Me.dgvClienteGeneral.Size = New System.Drawing.Size(668, 165)
             Me.dgvClienteGeneral.TabIndex = 36
             '
             'txtBuscarCliente
@@ -813,12 +814,12 @@
             'msKardex
             '
             Me.msKardex.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-            Me.msKardex.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.btnNuevo, Me.btnGuardar, Me.btnModificar, Me.btnAnular, Me.btnCancelar, Me.ToolStripMenuItem3})
+            Me.msKardex.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.btnNuevo, Me.btnGuardar, Me.btnModificar, Me.btnConvenio, Me.btnAnular, Me.btnCancelar, Me.ToolStripMenuItem3})
             Me.msKardex.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.msKardex.Location = New System.Drawing.Point(0, 0)
             Me.msKardex.Name = "msKardex"
             Me.msKardex.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.msKardex.Size = New System.Drawing.Size(680, 32)
+            Me.msKardex.Size = New System.Drawing.Size(680, 60)
             Me.msKardex.TabIndex = 180
             Me.msKardex.Text = "msIngresoBodega"
             '
@@ -869,6 +870,7 @@
             Me.btnAnular.Name = "btnAnular"
             Me.btnAnular.Size = New System.Drawing.Size(85, 28)
             Me.btnAnular.Text = "ANULAR"
+            Me.btnAnular.Visible = False
             '
             'btnCancelar
             '
@@ -2033,6 +2035,20 @@
             Me.KryptonLabel1.TabIndex = 0
             Me.KryptonLabel1.Values.Text = "Tipo Identifi"
             '
+            'gbxConvenioCliente
+            '
+            Me.gbxConvenioCliente.CaptionOverlap = 0R
+            Me.gbxConvenioCliente.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
+            Me.gbxConvenioCliente.Location = New System.Drawing.Point(7, 376)
+            Me.gbxConvenioCliente.Name = "gbxConvenioCliente"
+            '
+            'gbxConvenioCliente.Panel
+            '
+            Me.gbxConvenioCliente.Panel.Controls.Add(Me.DataGridView1)
+            Me.gbxConvenioCliente.Size = New System.Drawing.Size(668, 118)
+            Me.gbxConvenioCliente.TabIndex = 191
+            Me.gbxConvenioCliente.Values.Heading = "Convenio Cliente"
+            '
             'KryptonPage2
             '
             Me.KryptonPage2.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
@@ -2635,19 +2651,13 @@
             Me.KryptonLabel43.TabIndex = 182
             Me.KryptonLabel43.Values.Text = "Buscar"
             '
-            'gbxConvenioCliente
+            'btnConvenio
             '
-            Me.gbxConvenioCliente.CaptionOverlap = 0R
-            Me.gbxConvenioCliente.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
-            Me.gbxConvenioCliente.Location = New System.Drawing.Point(7, 376)
-            Me.gbxConvenioCliente.Name = "gbxConvenioCliente"
-            '
-            'gbxConvenioCliente.Panel
-            '
-            Me.gbxConvenioCliente.Panel.Controls.Add(Me.DataGridView1)
-            Me.gbxConvenioCliente.Size = New System.Drawing.Size(668, 118)
-            Me.gbxConvenioCliente.TabIndex = 191
-            Me.gbxConvenioCliente.Values.Heading = "Convenio Cliente"
+            Me.btnConvenio.Image = Global.syscisepro.My.Resources.Resources.delete_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnConvenio.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.btnConvenio.Name = "btnConvenio"
+            Me.btnConvenio.Size = New System.Drawing.Size(120, 28)
+            Me.btnConvenio.Text = "QUITAR CONV"
             '
             'FormMantenimientoClientes
             '
@@ -2712,6 +2722,10 @@
             Me.KryptonGroupBox1.Panel.PerformLayout()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox1.ResumeLayout(False)
+            CType(Me.gbxConvenioCliente.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.gbxConvenioCliente.Panel.ResumeLayout(False)
+            CType(Me.gbxConvenioCliente, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.gbxConvenioCliente.ResumeLayout(False)
             CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonPage2.ResumeLayout(False)
             Me.KryptonPage2.PerformLayout()
@@ -2756,10 +2770,6 @@
             CType(Me.KryptonPage6, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonPage6.ResumeLayout(False)
             Me.KryptonPage6.PerformLayout()
-            CType(Me.gbxConvenioCliente.Panel, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbxConvenioCliente.Panel.ResumeLayout(False)
-            CType(Me.gbxConvenioCliente, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbxConvenioCliente.ResumeLayout(False)
             Me.ResumeLayout(False)
 
         End Sub
@@ -2965,5 +2975,6 @@
         Friend WithEvents KryptonLabel52 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents dtpFechaContrato As DateTimePicker
         Friend WithEvents gbxConvenioCliente As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents btnConvenio As ToolStripMenuItem
     End Class
 End Namespace

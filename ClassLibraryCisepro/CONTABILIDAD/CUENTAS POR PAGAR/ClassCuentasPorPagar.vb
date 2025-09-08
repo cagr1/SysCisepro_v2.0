@@ -88,7 +88,7 @@ Namespace CONTABILIDAD.CUENTAS_POR_PAGAR
             pars.Add(New Object() {"FECHA_INICIAL", SqlDbType.DateTime, fechaInicial})
             pars.Add(New Object() {"FECHA_FINAL", SqlDbType.DateTime, fechaFinal})
             pars.Add(New Object() {"ID_PROVEEDOR_GENERAL", SqlDbType.Int, idCliente})
-            Dim table = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "CuentasPorPagarXIdProveedorRangoFecha", True, pars) 
+            Dim table = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "CuentasPorPagarXIdProveedorRangoFecha", True, pars)
 
             For Each row As DataRow In table.Rows
                 If row.Item("saldo") < 0.01 Then row.Delete()
@@ -96,7 +96,17 @@ Namespace CONTABILIDAD.CUENTAS_POR_PAGAR
 
             Return table
         End Function
-         
+
+
+        Public Function BuscarCuentasPorPagarGeneralDetalladoPorClienteAcumulado(ByVal tipoCon As TipoConexion, ByVal fechaInicial As DateTime, ByVal fechaFinal As DateTime, ByVal IdProveedor As Integer) As DataTable
+            Dim pars = New List(Of Object())
+            pars.Add(New Object() {"FECHA_INICIAL", SqlDbType.DateTime, fechaInicial})
+            pars.Add(New Object() {"FECHA_FINAL", SqlDbType.DateTime, fechaFinal})
+            pars.Add(New Object() {"ID_PROVEEDOR", SqlDbType.Int, IdProveedor})
+            Dim table = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_BuscarCuentasPorPagarGeneralAcumulado", True, pars)
+            Return table
+        End Function
+
     End Class
 End Namespace
 

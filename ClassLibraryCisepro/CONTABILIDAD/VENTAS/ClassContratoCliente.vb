@@ -71,5 +71,15 @@ Namespace CONTABILIDAD.VENTAS
             End With
             Return comando
         End Function
+
+        Public Function EliminarRegistroContratoClienteGeneral() As SqlCommand
+            Dim comando = New SqlCommand
+            With comando
+                .CommandType = CommandType.Text
+                .CommandText = "Update CONTRATO_CLIENTE SET ESTADO=0 FROM CONTRATO_CLIENTE WHERE ID_CONTRATO=@ID_CONTRATO;"
+                .Parameters.AddWithValue("@ID_CONTRATO", SqlDbType.BigInt).Value = IdContrato
+            End With
+            Return comando
+        End Function
     End Class
 End Namespace

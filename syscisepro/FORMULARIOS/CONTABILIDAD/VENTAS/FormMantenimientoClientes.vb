@@ -704,14 +704,14 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                                                    v.ToString("N"),
                                                    frm.TextBox1.Text.Trim)
                         Else
-                            MessageBox.Show("Debe agregar el valor a debitar, correspondiente al convenio!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                            KryptonMessageBox.Show("Debe agregar el valor a debitar, correspondiente al convenio!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         End If
                     Else
-                        MessageBox.Show("Debe agregar todos los datos del convenio!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("Debe agregar todos los datos del convenio!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     End If
                 End If
             Catch ex As Exception
-                MessageBox.Show("Ocurrio un problema al agregar convenio: " & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Ocurrio un problema al agregar convenio: " & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
         End Sub
         Private Sub DataGridView1_CellDoubleClick(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
@@ -743,24 +743,24 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                             DataGridView1.CurrentRow.Cells(8).Value = v.ToString("N")
                             DataGridView1.CurrentRow.Cells(9).Value = frm.TextBox1.Text.Trim
                         Else
-                            MessageBox.Show("Debe agregar el valor a debitar, correspondiente al convenio!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                            KryptonMessageBox.Show("Debe agregar el valor a debitar, correspondiente al convenio!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         End If
                     Else
-                        MessageBox.Show("Debe agregar todos los datos del convenio!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("Debe agregar todos los datos del convenio!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     End If
                 End If
             Catch ex As Exception
-                MessageBox.Show("Ocurrio un problema al modificar convenio: " & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Ocurrio un problema al modificar convenio: " & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
         End Sub
         Private Sub btnRemove_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnRemove.Click
             If DataGridView1.RowCount = 0 Then Return
-            If MessageBox.Show("Seguro que desea quitar este convenio", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("Seguro que desea quitar este convenio", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             Try
-                If _botonSeleccionado = 2 Then _objetoConvenioCliente.QuitarRegistroConvenioClienteGeneral(_tipoCon, CInt(DataGridView1.CurrentRow.Cells(1).Value))
+                If _botonSeleccionado = 2 Then _objetoConvenioCliente.QuitarRegistroConvenioClienteGeneral(_tipoCon, CInt(DataGridView1.CurrentRow.Cells(0).Value))
                 DataGridView1.Rows.Remove(DataGridView1.CurrentRow)
             Catch ex As Exception
-                MessageBox.Show("Ocurrio un problema al quitar convenio: " & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Ocurrio un problema al quitar convenio: " & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
         End Sub
         Private Sub ToolStripMenuItem3_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem3.Click
@@ -950,7 +950,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
 
             Catch ex As Exception
-                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub btnAnular_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAnular.Click
@@ -1156,6 +1156,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 _objetoContratoCliente.IdContrato = CInt(TextBoxVal.Tag)
                 _sqlCommands.Add(_objetoContratoCliente.ModificarRegistroContratoClienteGeneral())
             End If
+
+
 
             For Each row As DataGridViewRow In DataGridView1.Rows
                 With _objetoConvenioCliente
@@ -1504,6 +1506,18 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 btnAdd.SendToBack()
                 btnRemove.SendToBack()
             End If
+        End Sub
+
+        Private Sub btnConvenio_Click(sender As Object, e As EventArgs) Handles btnConvenio.Click
+            If DataGridView1.RowCount = 0 Then
+                KryptonMessageBox.Show("No existen cuentas de convenio", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                Return
+            End If
+
+            Dim id = DataGridView1.CurrentRow.Cells(0).Value
+
+
+
         End Sub
     End Class
 End Namespace
