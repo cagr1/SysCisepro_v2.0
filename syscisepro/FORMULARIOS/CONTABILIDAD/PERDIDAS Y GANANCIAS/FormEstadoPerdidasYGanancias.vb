@@ -501,7 +501,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             btnCargar.Padding = New Padding(5)
 
 
-            cbxDates.SelectedIndex = 3
+            'cbxDates.SelectedIndex = 3
 
             Dim ctxMenu As ComponentFactory.Krypton.Toolkit.KryptonContextMenu = btnExcel.KryptonContextMenu
 
@@ -1267,26 +1267,29 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 FechaDesdeT = New Date(FechaDesdeT.Year, FechaDesdeT.Month, FechaDesdeT.Day, 0, 0, 0)
                 FechaHastaT = New Date(FechaHastaT.Year, FechaHastaT.Month, FechaHastaT.Day, 23, 59, 59)
 
-                If cbxShowColumns.SelectedIndex = 0 Then
-                    Columnas = "Mensual"
-                ElseIf cbxShowColumns.SelectedIndex = 1 Then
-                    Columnas = "Trimestral"
-                ElseIf cbxShowColumns.SelectedIndex = 2 Then
-                    Columnas = "Semestral"
-                ElseIf cbxShowColumns.SelectedIndex = 3 Then
-                    Columnas = "Anual"
-                End If
+                'calculo para periodo previo en fechas
+
+                Dim dasySpan As Integer = (FechaHastaT - FechaDesdeT).Days + 1
+                Dim FechaDesdePrevio As Date = FechaDesdeT.AddDays(-dasySpan)
+                Dim FechaHastaPrevio As Date = FechaDesdeT.AddDays(-1)
+
+
+                ' Determinar tipo de columnas
+                Select Case cbxShowColumns.SelectedIndex
+                    Case 0 : Columnas = "Mensual"
+                    Case 1 : Columnas = "Trimestral"
+                    Case 2 : Columnas = "Semestral"
+                    Case 3 : Columnas = "Anual"
+                End Select
 
 
                 If Anterior Then
                     Previo = False
                     EstadoPyG = _objEstado.SeleccionarEstadoPerdidasGananciasComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioAnterior, PorcentajeAnterior)
-                ElseIf Previo Then
-                    Anterior = False
-                    EstadoPyG = _objEstado.SeleccionarEstadoPerdidasGananciasComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioPrevio, PorcentajePrevio)
                 Else
+                    Anterior = False
 
-                    EstadoPyG = _objEstado.SeleccionarEstadoPerdidasGananciasComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioAnterior, PorcentajeAnterior)
+                    EstadoPyG = _objEstado.SeleccionarEstadoPerdidasGananciasComparativoDinamico(_tipoCon, FechaDesdePrevio, FechaHastaPrevio, Rango, Columnas, Anterior, Previo, CambioPrevio, PorcentajePrevio)
 
                 End If
                 If EstadoPyG IsNot Nothing AndAlso EstadoPyG.Rows.Count > 0 Then

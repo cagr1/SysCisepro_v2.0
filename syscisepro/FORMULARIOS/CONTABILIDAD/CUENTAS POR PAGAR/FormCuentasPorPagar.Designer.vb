@@ -66,6 +66,7 @@
             Me.KryptonNavigator1 = New ComponentFactory.Krypton.Navigator.KryptonNavigator()
             Me.KryptonPage1 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.dgvProveedorAcumulado = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
             Me.KryptonGroupBox3 = New Krypton.Toolkit.KryptonGroupBox()
             Me.btnBuscarAcumulado = New ComponentFactory.Krypton.Toolkit.KryptonButton()
             Me.KryptonLabel12 = New Krypton.Toolkit.KryptonLabel()
@@ -75,7 +76,6 @@
             Me.rbClienteAcu = New System.Windows.Forms.RadioButton()
             Me.dtpDesdeAcu = New System.Windows.Forms.DateTimePicker()
             Me.rbGeneralAcu = New System.Windows.Forms.RadioButton()
-            Me.dgvProveedorAcumulado = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
             CType(Me.dgvCuentasPorPagar, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,11 +92,11 @@
             Me.KryptonPage1.SuspendLayout()
             CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonPage2.SuspendLayout()
+            CType(Me.dgvProveedorAcumulado, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox3.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox3.Panel.SuspendLayout()
             Me.KryptonGroupBox3.SuspendLayout()
-            CType(Me.dgvProveedorAcumulado, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'dgvCuentasPorPagar
@@ -532,7 +532,7 @@
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
             Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
-            Me.KryptonNavigator1.SelectedIndex = 0
+            Me.KryptonNavigator1.SelectedIndex = 1
             Me.KryptonNavigator1.Size = New System.Drawing.Size(910, 508)
             Me.KryptonNavigator1.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonNavigator1.TabIndex = 200
@@ -567,6 +567,20 @@
             Me.KryptonPage2.Text = "Acumulado"
             Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage2.UniqueName = "A188187A0F1140C0E28DD9959FD4F774"
+            '
+            'dgvProveedorAcumulado
+            '
+            Me.dgvProveedorAcumulado.ColumnHeadersHeight = 35
+            Me.dgvProveedorAcumulado.GridStyles.Style = ComponentFactory.Krypton.Toolkit.DataGridViewStyle.Mixed
+            Me.dgvProveedorAcumulado.GridStyles.StyleBackground = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridDataCellList
+            Me.dgvProveedorAcumulado.Location = New System.Drawing.Point(12, 66)
+            Me.dgvProveedorAcumulado.Name = "dgvProveedorAcumulado"
+            Me.dgvProveedorAcumulado.RowHeadersVisible = False
+            Me.dgvProveedorAcumulado.RowHeadersWidth = 40
+            Me.dgvProveedorAcumulado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+            Me.dgvProveedorAcumulado.Size = New System.Drawing.Size(885, 402)
+            Me.dgvProveedorAcumulado.StateNormal.Background.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvProveedorAcumulado.TabIndex = 200
             '
             'KryptonGroupBox3
             '
@@ -688,20 +702,6 @@
             Me.rbGeneralAcu.Text = "General"
             Me.rbGeneralAcu.UseVisualStyleBackColor = False
             '
-            'dgvProveedorAcumulado
-            '
-            Me.dgvProveedorAcumulado.ColumnHeadersHeight = 35
-            Me.dgvProveedorAcumulado.GridStyles.Style = ComponentFactory.Krypton.Toolkit.DataGridViewStyle.Mixed
-            Me.dgvProveedorAcumulado.GridStyles.StyleBackground = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridDataCellList
-            Me.dgvProveedorAcumulado.Location = New System.Drawing.Point(12, 66)
-            Me.dgvProveedorAcumulado.Name = "dgvProveedorAcumulado"
-            Me.dgvProveedorAcumulado.RowHeadersVisible = False
-            Me.dgvProveedorAcumulado.RowHeadersWidth = 40
-            Me.dgvProveedorAcumulado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvProveedorAcumulado.Size = New System.Drawing.Size(885, 402)
-            Me.dgvProveedorAcumulado.StateNormal.Background.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.dgvProveedorAcumulado.TabIndex = 200
-            '
             'FormCuentasPorPagar
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -737,12 +737,12 @@
             Me.KryptonPage1.ResumeLayout(False)
             CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonPage2.ResumeLayout(False)
+            CType(Me.dgvProveedorAcumulado, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.KryptonGroupBox3.Panel, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox3.Panel.ResumeLayout(False)
             Me.KryptonGroupBox3.Panel.PerformLayout()
             CType(Me.KryptonGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox3.ResumeLayout(False)
-            CType(Me.dgvProveedorAcumulado, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
