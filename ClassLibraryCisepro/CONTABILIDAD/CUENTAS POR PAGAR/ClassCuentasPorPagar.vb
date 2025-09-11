@@ -107,6 +107,15 @@ Namespace CONTABILIDAD.CUENTAS_POR_PAGAR
             Return table
         End Function
 
+        Public Function BuscarCuentasPorPagarDetallado(ByVal tipoCon As TipoConexion, ByVal fechaInicial As DateTime, ByVal fechaFinal As DateTime, ByVal IdProveedor As Integer) As DataTable
+            Dim pars = New List(Of Object())
+            pars.Add(New Object() {"FECHA_INICIAL", SqlDbType.DateTime, fechaInicial})
+            pars.Add(New Object() {"FECHA_FINAL", SqlDbType.DateTime, fechaFinal})
+            pars.Add(New Object() {"ID_PROVEEDOR", SqlDbType.Int, IdProveedor})
+            Dim table = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_BuscarCuentasPorPagarGeneralDetallado", True, pars)
+            Return table
+        End Function
+
     End Class
 End Namespace
 

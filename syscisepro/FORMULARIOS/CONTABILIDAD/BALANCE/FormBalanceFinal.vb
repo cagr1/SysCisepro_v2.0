@@ -840,13 +840,13 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
 
                 If Anterior Then
                     Previo = False
-                    Balance = objPlanCuentas.SeleccionarBalnceFinalComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioAnterior, PorcentajeAnterior)
+                    Balance = objPlanCuentas.SeleccionarBalnceFinalComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Columnas, Anterior, Previo, CambioAnterior, PorcentajeAnterior)
                 ElseIf Previo Then
                     Anterior = False
-                    Balance = objPlanCuentas.SeleccionarBalnceFinalComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioPrevio, PorcentajePrevio)
+                    Balance = objPlanCuentas.SeleccionarBalnceFinalComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Columnas, Anterior, Previo, CambioPrevio, PorcentajePrevio)
                 Else
 
-                    Balance = objPlanCuentas.SeleccionarBalnceFinalComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioAnterior, PorcentajeAnterior)
+                    Balance = objPlanCuentas.SeleccionarBalnceFinalComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Columnas, Anterior, Previo, CambioAnterior, PorcentajeAnterior)
 
                 End If
                 If Balance IsNot Nothing AndAlso Balance.Rows.Count > 0 Then
@@ -1044,7 +1044,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
         Private Sub btnCuztomize_Click(sender As Object, e As EventArgs) Handles btnCuztomize.Click
             Dim frm As New FormReportEstadoPyG()
 
-            frm.SelectedRange = cbxDates.SelectedIndex
+            'frm.SelectedRange = cbxDates.SelectedIndex
             frm.FechaDesde = dtpFechaDesdeMes.Value
             frm.FechaHasta = dtpFechaHastaMes.Value
             frm.ShowColumns = cbxShowColumns.SelectedIndex
@@ -1056,7 +1056,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
             frm.PorcentajePrevio = PorcentajePrevio
 
             If frm.ShowDialog() = DialogResult.OK Then
-                SelectedRangeT = frm.SelectedRange
+                'SelectedRangeT = frm.SelectedRange
                 FechaDesdeT = frm.FechaDesde
                 FechaHastaT = frm.FechaHasta
                 ShowColumnsT = frm.ShowColumns
@@ -1067,7 +1067,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
                 CambioPrevio = frm.CambioPrevio
                 PorcentajePrevio = frm.PorcentajePrevio
 
-                cbxDates.SelectedIndex = SelectedRangeT
+                'cbxDates.SelectedIndex = SelectedRangeT
                 dtpFechaDesdeMes.Value = FechaDesdeT
                 dtpFechaHastaMes.Value = FechaHastaT
                 cbxShowColumns.SelectedIndex = ShowColumnsT
@@ -1079,8 +1079,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
 
         Private Sub dtpFechaDesdeMes_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaDesdeMes.ValueChanged
 
-            UpdateCbxDates()
-            callReport()
+            'UpdateCbxDates()
+            'callReport()
 
 
         End Sub

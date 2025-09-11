@@ -1,12 +1,13 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Drawing
-Imports System.Windows.Forms 
-Imports ClassLibraryCisepro.CONTABILIDAD.COMPRAS.PROVEEDORES 
+Imports System.Windows.Forms
+Imports ClassLibraryCisepro.CONTABILIDAD.COMPRAS.PROVEEDORES
 Imports ClassLibraryCisepro.CONTABILIDAD.CUENTAS_POR_PAGAR
 Imports ClassLibraryCisepro.ENUMS
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports Krypton.Toolkit
+Imports ClosedXML.Excel
 
 Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
     ''' <summary>
@@ -603,6 +604,266 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
             If dgvProveedorAcumulado.RowCount > 0 Then
                 dgvProveedorAcumulado.Rows(dgvProveedorAcumulado.RowCount - 1).Height = 10
             End If
+        End Sub
+
+        Private Sub btnExportarComparacion_Click(sender As Object, e As EventArgs) Handles btnExportarComparacion.Click
+            ExportarDatosComparacion(dgvProveedorAcumulado, "CuentasPorPagar_Acumulados")
+        End Sub
+
+        Private Sub ExportarDatosComparacion(ByVal dgvComparacion As DataGridView, ByVal titulo As String)
+            Try
+                If dgvComparacion.Rows.Count = 0 Then
+                    Krypton.Toolkit.KryptonMessageBox.Show("Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    Return
+                End If
+
+
+
+                Dim fec = ValidationForms.FechaActual(_tipoCon)
+
+
+
+                'Crear un nuevo libro y hoja
+                Dim workbook = New XLWorkbook()
+                Dim worksheet = workbook.Worksheets.Add("CxP_Acumulados")
+
+                Dim ic = ValidationForms.NumToCharExcelFromVisibleColumnsDataGrid(dgvComparacion)
+                worksheet.Range("A1:" & ic & (dgvComparacion.RowCount + 50)).Style.Font.FontSize = 10
+
+
+                'Encabezado
+
+                worksheet.Range("A1:" & ic & "1").Merge()
+                worksheet.Range("A1:" & ic & "1").Value = ValidationForms.NombreCompany(_tipoCon).ToString() & "  -  " & titulo
+                worksheet.Range("A1:" & ic & "1").Style.Font.Bold = True
+                worksheet.Range("A1:" & ic & "1").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center
+                worksheet.Range("A1:" & ic & "1").Style.Fill.BackgroundColor = XLColor.FromColor(ValidationForms.GetColorSistema(_tipoCon))
+                worksheet.Range("A1:" & ic & "1").Style.Font.FontColor = XLColor.White
+                worksheet.Range("A1:" & ic & "1").Style.Font.FontSize = 12
+
+                ' Copete
+                worksheet.Range("A2:" & ic & "2").Merge()
+                worksheet.Range("A2:" & ic & "2").Value = "PERÍODO: " & dtpDesdeAcu.Value.ToLongDateString() & "  AL " & dtpHastaAcu.Value.ToLongDateString()
+                worksheet.Range("A2:" & ic & "2").Style.Font.FontSize = 12
+
+                ' Fecha
+                worksheet.Range("A3:" & ic & "3").Merge()
+                worksheet.Range("A3:" & ic & "3").Value = "Fecha de Reporte: " & fec.ToLongDateString() & " " & fec.ToLongTimeString()
+                worksheet.Range("A3:" & ic & "3").Style.Font.FontSize = 12
+
+                'Encabezados de Columnas 
+                Dim indc = 1
+                Dim headin = 5
+                For i = 0 To dgvComparacion.Columns.Count - 1
+                    If Not dgvComparacion.Columns(i).Visible Then Continue For
+                    worksheet.Cell(headin, indc).Value = dgvComparacion.Columns(i).HeaderText
+                    worksheet.Cell(headin, indc).Style.Font.Bold = True
+                    worksheet.Cell(headin, indc).Style.Border.OutsideBorder = XLBorderStyleValues.Thin
+                    worksheet.Cell(headin, indc).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center
+                    worksheet.Cell(headin, indc).Style.Fill.BackgroundColor = XLColor.FromColor(ValidationForms.GetColorSistema(_tipoCon))
+                    worksheet.Cell(headin, indc).Style.Font.FontColor = XLColor.White
+                    indc += 1
+                Next
+
+
+                ' Detalle de la tabla
+                Dim columnasTexto As String() = {"Proveedor", "Factura", "Fecha", "Dias Transcurridos"} ' Solo "Cuenta" es texto
+                Dim columnasNumericas As String() = {"Facturado", "0-30", "31-60", "61-90", "91-120", ">120", "Total", "Saldo Pendiente"} ' Estas son numéricas
+                Dim c = 0
+                For o = 0 To dgvComparacion.Rows.Count - 1
+                    ' Omitir filas ocultas si el CheckBox está marcado
+
+
+                    indc = 1
+                    For j = 0 To dgvComparacion.Columns.Count - 1
+                        If Not dgvComparacion.Columns(j).Visible Then Continue For
+
+                        Dim cellValue = dgvComparacion.Rows(o).Cells(j).Value
+                        Dim cell = worksheet.Cell(c + 1 + headin, indc)
+                        Dim columnName As String = dgvComparacion.Columns(j).HeaderText
+
+                        ' Aplicar formato según el tipo de columna
+                        If columnasNumericas.Contains(columnName) Then
+                            ' Columnas numéricas específicas ("Codigo", "Nivel", "Padre")
+                            If cellValue IsNot Nothing AndAlso IsNumeric(cellValue) Then
+                                cell.Value = CDbl(cellValue) ' Asegurar que el valor sea numérico
+                            Else
+                                cell.Value = 0 ' Valor por defecto si no es numérico
+                            End If
+                        ElseIf columnasTexto.Contains(columnName) Then
+                            ' Columna de texto ("Cuenta")
+                            cell.Value = If(cellValue IsNot Nothing, cellValue.ToString(), String.Empty)
+                        Else
+                            ' Formato contable para el resto de columnas
+                            If cellValue IsNot Nothing AndAlso IsNumeric(cellValue) Then
+                                cell.Value = CDbl(cellValue)
+                                cell.Style.NumberFormat.Format = "#,##0.00" ' Formato contable
+                            Else
+                                cell.Value = If(cellValue IsNot Nothing, cellValue.ToString(), String.Empty)
+                            End If
+                        End If
+
+                        ' Aplicar bordes a la celda
+                        cell.Style.Border.SetLeftBorder(XLBorderStyleValues.Thin)
+                        cell.Style.Border.SetRightBorder(XLBorderStyleValues.Thin)
+
+                        ' Aplicar borde inferior solo en la última fila
+                        If o = dgvComparacion.Rows.Count - 1 Then
+                            cell.Style.Border.SetBottomBorder(XLBorderStyleValues.Thin)
+                        End If
+
+                        indc += 1
+                    Next
+                    c += 1
+                Next
+
+
+                ' Bordes inferiores
+                worksheet.Range("A" & (c + headin) & ":" & ic & indc).Style.Border.BottomBorder = XLBorderStyleValues.Thin
+
+                ' Ajustar columnas
+                Dim range As IXLRange = worksheet.Range("A1:" & ic & (dgvComparacion.RowCount + 50))
+                worksheet.Columns("A:" & ic).AdjustToContents()
+
+                ' Guardar el archivo
+                Dim saveFileDialog As New SaveFileDialog()
+                saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx"
+                saveFileDialog.FileName = $"{titulo}_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx"
+
+                If saveFileDialog.ShowDialog() = DialogResult.OK Then
+                    workbook.SaveAs(saveFileDialog.FileName)
+                    Process.Start(saveFileDialog.FileName)
+                End If
+
+                Krypton.Toolkit.KryptonMessageBox.Show("Datos exportados correctamente!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+
+
+
+
+            Catch ex As Exception
+                Krypton.Toolkit.KryptonMessageBox.Show("ERROR: " & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
+        End Sub
+
+        Private Sub btnBuscarDetallado_Click(sender As Object, e As EventArgs) Handles btnBuscarDetallado.Click
+            Dim fechaDesde As DateTime = dtpDesdeAcu.Value.Date
+            Dim fechaHasta As Date = dtpHastaAcu.Value.Date.AddDays(1).AddSeconds(-1) ' hasta el final del día
+
+            dgvDetallado.DataSource = Nothing
+
+            cargarCuentasPorPagarDetallado(fechaDesde, fechaHasta, If(rbGeneralAcu.Checked, 0, ""))
+        End Sub
+
+        Private Sub cargarCuentasPorPagarDetallado(fechaDesde As DateTime, fechaHasta As DateTime, proveedor As Integer)
+            Try
+                dgvDetallado.Rows.Clear()
+                dgvDetallado.Columns.Clear()
+                Dim auxProveedor = String.Empty
+                Dim totFacturado As Decimal = 0
+                Dim totSaldoPendiente As Decimal = 0
+                Dim totGeneralFacturado As Decimal = 0
+                Dim totGeneralSaldoPendiente As Decimal = 0
+
+                With dgvDetallado.Columns
+                    .Add("Proveedor", "Proveedor")
+                    .Add("Factura", "Factura")
+                    .Add("Fecha", "Fecha")
+                    .Add("Facturado", "Facturado")
+                    .Add("Dias Transcurridos", "Dias Transcurridos")
+                    .Add("Saldo Pendiente", "Saldo Pendiente")
+                End With
+
+
+                Dim data As DataTable = objetoCuentasPorPagar.BuscarCuentasPorPagarDetallado(_tipoCon, fechaDesde, fechaHasta, proveedor)
+
+                If data.Rows.Count > 0 Then
+
+                    auxProveedor = data.Rows(0)("Proveedor").ToString().Trim()
+
+
+                    For Each row As DataRow In data.Rows
+                        Dim currentProveedor As String = row("Proveedor").ToString().Trim()
+
+                        ' Si cambió el proveedor, agregamos totales y reiniciamos
+                        If Not auxProveedor.Equals(currentProveedor) AndAlso Not String.IsNullOrEmpty(auxProveedor) Then
+                            ' Agregar fila de total por proveedor
+                            Dim rowIndex As Integer = dgvDetallado.Rows.Add()
+                            With dgvDetallado.Rows(rowIndex)
+                                .Cells(0).Value = "TOTAL " & auxProveedor
+                                .Cells(3).Value = totFacturado.ToString("N2")
+                                .Cells(5).Value = totSaldoPendiente.ToString("N2")
+                                .DefaultCellStyle.Font = New Font("Segoe UI", 9, FontStyle.Bold)
+                                .DefaultCellStyle.BackColor = Color.LightGray
+                            End With
+
+                            ' Agregar fila en blanco como separador
+                            dgvDetallado.Rows.Add()
+
+                            ' Acumular en total general
+                            totGeneralFacturado += totFacturado
+                            totGeneralSaldoPendiente += totSaldoPendiente
+
+                            ' Reiniciar acumuladores por proveedor
+                            totFacturado = 0
+                            totSaldoPendiente = 0
+                        End If
+
+                        ' Agregar fila con datos del proveedor
+                        dgvDetallado.Rows.Add(
+                        row("Proveedor"),
+                        row("Factura"),
+                        Format(CDate(row("Fecha")), "dd/MM/yyyy"),
+                        CDec(row("Facturado")).ToString("N2"),
+                        row("Dias Transcurridos"),
+                        CDec(row("Saldo Pendiente")).ToString("N2")
+                    )
+
+                        ' Acumular totales del proveedor
+                        totFacturado += CDec(row("Facturado"))
+                        totSaldoPendiente += CDec(row("Saldo Pendiente"))
+
+                        auxProveedor = currentProveedor
+                    Next
+
+                    ' Agregar el total del último proveedor
+                    If data.Rows.Count > 0 Then
+                        Dim rowIndex As Integer = dgvDetallado.Rows.Add()
+                        With dgvDetallado.Rows(rowIndex)
+                            .Cells(0).Value = "TOTAL " & auxProveedor
+                            .Cells(3).Value = totFacturado.ToString("N2")
+                            .Cells(5).Value = totSaldoPendiente.ToString("N2")
+                            .DefaultCellStyle.Font = New Font("Segoe UI", 9, FontStyle.Bold)
+                            .DefaultCellStyle.BackColor = Color.LightGray
+                        End With
+
+                        ' Acumular último proveedor en total general
+                        totGeneralFacturado += totFacturado
+                        totGeneralSaldoPendiente += totSaldoPendiente
+                    End If
+
+                    ' Agregar total general
+                    Dim rowGeneral As Integer = dgvDetallado.Rows.Add()
+                    With dgvDetallado.Rows(rowGeneral)
+                        .Cells(0).Value = "TOTAL GENERAL"
+                        .Cells(3).Value = totGeneralFacturado.ToString("N2")
+                        .Cells(5).Value = totGeneralSaldoPendiente.ToString("N2")
+                        .DefaultCellStyle.Font = New Font("Segoe UI", 9, FontStyle.Bold)
+                        .DefaultCellStyle.BackColor = Color.LightSteelBlue
+                    End With
+
+                    dgvDetallado.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells)
+
+
+
+                End If
+
+            Catch ex As Exception
+                KryptonMessageBox.Show("Hubo un problema al cargar los datos." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
+        End Sub
+
+        Private Sub btnExportarDetallado_Click(sender As Object, e As EventArgs) Handles btnExportarDetallado.Click
+            ExportarDatosComparacion(dgvDetallado, "CuentasPorPagar_Detallado")
         End Sub
     End Class
 End Namespace

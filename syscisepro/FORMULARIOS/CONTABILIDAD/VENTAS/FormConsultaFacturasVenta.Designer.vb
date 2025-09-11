@@ -322,7 +322,7 @@
             Me.rbConcepto.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbConcepto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbConcepto.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbConcepto.Location = New System.Drawing.Point(95, 1)
+            Me.rbConcepto.Location = New System.Drawing.Point(95, 3)
             Me.rbConcepto.Name = "rbConcepto"
             Me.rbConcepto.Size = New System.Drawing.Size(72, 17)
             Me.rbConcepto.TabIndex = 35
@@ -348,7 +348,7 @@
             Me.rbConsorcio.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbConsorcio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbConsorcio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbConsorcio.Location = New System.Drawing.Point(95, 19)
+            Me.rbConsorcio.Location = New System.Drawing.Point(95, 21)
             Me.rbConsorcio.Name = "rbConsorcio"
             Me.rbConsorcio.Size = New System.Drawing.Size(55, 17)
             Me.rbConsorcio.TabIndex = 24
@@ -452,7 +452,7 @@
             Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnReporte.Name = "btnReporte"
-            Me.btnReporte.Size = New System.Drawing.Size(90, 28)
+            Me.btnReporte.Size = New System.Drawing.Size(89, 28)
             Me.btnReporte.Text = "REPORTE"
             '
             'REPORTEDEVENTASToolStripMenuItem
@@ -460,7 +460,7 @@
             Me.REPORTEDEVENTASToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.REPORTEDEVENTASToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.REPORTEDEVENTASToolStripMenuItem.Name = "REPORTEDEVENTASToolStripMenuItem"
-            Me.REPORTEDEVENTASToolStripMenuItem.Size = New System.Drawing.Size(202, 30)
+            Me.REPORTEDEVENTASToolStripMenuItem.Size = New System.Drawing.Size(200, 30)
             Me.REPORTEDEVENTASToolStripMenuItem.Text = "REPORTE DE VENTAS"
             '
             'ESTADÍSTICOToolStripMenuItem
@@ -468,7 +468,7 @@
             Me.ESTADÍSTICOToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.finance_mode_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.ESTADÍSTICOToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ESTADÍSTICOToolStripMenuItem.Name = "ESTADÍSTICOToolStripMenuItem"
-            Me.ESTADÍSTICOToolStripMenuItem.Size = New System.Drawing.Size(202, 30)
+            Me.ESTADÍSTICOToolStripMenuItem.Size = New System.Drawing.Size(200, 30)
             Me.ESTADÍSTICOToolStripMenuItem.Text = "RESÚMEN ESTADÍSTICO"
             '
             'btnExportar
@@ -477,7 +477,7 @@
             Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.btnExportar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnExportar.Name = "btnExportar"
-            Me.btnExportar.Size = New System.Drawing.Size(96, 28)
+            Me.btnExportar.Size = New System.Drawing.Size(95, 28)
             Me.btnExportar.Text = "EXPORTAR"
             '
             'btnValidar
@@ -494,7 +494,7 @@
             Me.GENERARFACTURAToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.pdf
             Me.GENERARFACTURAToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.GENERARFACTURAToolStripMenuItem.Name = "GENERARFACTURAToolStripMenuItem"
-            Me.GENERARFACTURAToolStripMenuItem.Size = New System.Drawing.Size(93, 28)
+            Me.GENERARFACTURAToolStripMenuItem.Size = New System.Drawing.Size(94, 28)
             Me.GENERARFACTURAToolStripMenuItem.Text = "FACTURA"
             '
             'btnFacturaPath

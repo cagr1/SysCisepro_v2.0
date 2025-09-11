@@ -130,6 +130,14 @@ Namespace CONTABILIDAD.CUENTAS_POR_COBRAR
             Return table
         End Function
 
+        Public Function BuscarCuentasPorCobrarGeneralDetallado(ByVal tipoCon As TipoConexion, ByVal fechaInicial As DateTime, ByVal fechaFinal As DateTime) As DataTable
+            Dim pars = New List(Of Object())
+            pars.Add(New Object() {"DESDE", SqlDbType.DateTime, fechaInicial})
+            pars.Add(New Object() {"HASTA", SqlDbType.DateTime, fechaFinal})
+            Dim table = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_BuscarCuentasPorCobrarGeneralDetallado", True, pars)
+            Return table
+        End Function
+
 
     End Class
 End Namespace

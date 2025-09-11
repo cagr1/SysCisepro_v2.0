@@ -375,7 +375,7 @@
             Me.tcAuxiliares.Name = "tcAuxiliares"
             Me.tcAuxiliares.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.tcAuxiliares.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage3, Me.KryptonPage2})
-            Me.tcAuxiliares.SelectedIndex = 0
+            Me.tcAuxiliares.SelectedIndex = 1
             Me.tcAuxiliares.Size = New System.Drawing.Size(922, 631)
             Me.tcAuxiliares.TabIndex = 291
             Me.tcAuxiliares.Text = "KryptonNavigator1"
@@ -512,7 +512,7 @@
             '
             'btnExportarComparacion
             '
-            Me.btnExportarComparacion.Location = New System.Drawing.Point(678, 3)
+            Me.btnExportarComparacion.Location = New System.Drawing.Point(574, 3)
             Me.btnExportarComparacion.Name = "btnExportarComparacion"
             Me.btnExportarComparacion.Size = New System.Drawing.Size(30, 30)
             Me.btnExportarComparacion.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.[False]
@@ -534,7 +534,7 @@
             Me.chkOcultar.Images.CheckedNormal = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
             Me.chkOcultar.Images.CheckedPressed = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
             Me.chkOcultar.Images.CheckedTracking = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.chkOcultar.Location = New System.Drawing.Point(567, 10)
+            Me.chkOcultar.Location = New System.Drawing.Point(471, 10)
             Me.chkOcultar.Name = "chkOcultar"
             Me.chkOcultar.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue
             Me.chkOcultar.Size = New System.Drawing.Size(91, 18)
@@ -547,7 +547,7 @@
             Me.cbxDates.AlwaysActive = False
             Me.cbxDates.DropDownWidth = 150
             Me.cbxDates.Items.AddRange(New Object() {"Mensual", "Trimestral", "Semestral", "Anual ", "Personalizado"})
-            Me.cbxDates.Location = New System.Drawing.Point(10, 8)
+            Me.cbxDates.Location = New System.Drawing.Point(714, 10)
             Me.cbxDates.Name = "cbxDates"
             Me.cbxDates.Size = New System.Drawing.Size(76, 21)
             Me.cbxDates.TabIndex = 233
@@ -559,7 +559,7 @@
             Me.cbxShowColumns.DropDownWidth = 121
             Me.cbxShowColumns.IntegralHeight = False
             Me.cbxShowColumns.Items.AddRange(New Object() {"Mensual", "Trimestral", "Semestral", "Anual"})
-            Me.cbxShowColumns.Location = New System.Drawing.Point(409, 8)
+            Me.cbxShowColumns.Location = New System.Drawing.Point(313, 8)
             Me.cbxShowColumns.Name = "cbxShowColumns"
             Me.cbxShowColumns.Size = New System.Drawing.Size(131, 21)
             Me.cbxShowColumns.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near
@@ -568,7 +568,7 @@
             '
             'KryptonLabel11
             '
-            Me.KryptonLabel11.Location = New System.Drawing.Point(256, 8)
+            Me.KryptonLabel11.Location = New System.Drawing.Point(160, 8)
             Me.KryptonLabel11.Name = "KryptonLabel11"
             Me.KryptonLabel11.Size = New System.Drawing.Size(41, 20)
             Me.KryptonLabel11.TabIndex = 231
@@ -576,7 +576,7 @@
             '
             'KryptonLabel10
             '
-            Me.KryptonLabel10.Location = New System.Drawing.Point(111, 8)
+            Me.KryptonLabel10.Location = New System.Drawing.Point(15, 8)
             Me.KryptonLabel10.Name = "KryptonLabel10"
             Me.KryptonLabel10.Size = New System.Drawing.Size(45, 20)
             Me.KryptonLabel10.TabIndex = 230
@@ -589,7 +589,7 @@
             Me.dtpFechaDesdeMes.CustomFormat = "MMMM - yyyy"
             Me.dtpFechaDesdeMes.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpFechaDesdeMes.InputControlStyle = Krypton.Toolkit.InputControlStyle.Ribbon
-            Me.dtpFechaDesdeMes.Location = New System.Drawing.Point(162, 8)
+            Me.dtpFechaDesdeMes.Location = New System.Drawing.Point(66, 8)
             Me.dtpFechaDesdeMes.Name = "dtpFechaDesdeMes"
             Me.dtpFechaDesdeMes.Size = New System.Drawing.Size(85, 21)
             Me.dtpFechaDesdeMes.TabIndex = 228
@@ -601,7 +601,7 @@
             Me.dtpFechaHastaMes.CustomFormat = "MMMM - yyyy"
             Me.dtpFechaHastaMes.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpFechaHastaMes.InputControlStyle = Krypton.Toolkit.InputControlStyle.Ribbon
-            Me.dtpFechaHastaMes.Location = New System.Drawing.Point(303, 8)
+            Me.dtpFechaHastaMes.Location = New System.Drawing.Point(207, 8)
             Me.dtpFechaHastaMes.Name = "dtpFechaHastaMes"
             Me.dtpFechaHastaMes.Size = New System.Drawing.Size(86, 21)
             Me.dtpFechaHastaMes.TabIndex = 229

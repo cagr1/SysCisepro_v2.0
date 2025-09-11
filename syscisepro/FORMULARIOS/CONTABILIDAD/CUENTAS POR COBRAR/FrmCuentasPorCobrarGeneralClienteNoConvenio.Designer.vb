@@ -23,21 +23,21 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
             Me.btnBuscar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnExportar = New System.Windows.Forms.ToolStripMenuItem()
@@ -97,6 +97,7 @@
             Me.cientoveinte = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.KryptonGroupBox3 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.btnExportarComparacion = New Krypton.Toolkit.KryptonButton()
             Me.btnBuscarAcumulado = New ComponentFactory.Krypton.Toolkit.KryptonButton()
             Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
@@ -105,6 +106,18 @@
             Me.rbClienteAcu = New System.Windows.Forms.RadioButton()
             Me.dtpDesdeAcu = New System.Windows.Forms.DateTimePicker()
             Me.rbGeneralAcu = New System.Windows.Forms.RadioButton()
+            Me.KryptonPage3 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.dgvDetallado = New Krypton.Toolkit.KryptonDataGridView()
+            Me.KryptonGroupBox4 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.btnExportarDetallado = New Krypton.Toolkit.KryptonButton()
+            Me.KryptonButton1 = New ComponentFactory.Krypton.Toolkit.KryptonButton()
+            Me.KryptonLabel12 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel13 = New Krypton.Toolkit.KryptonLabel()
+            Me.TextBox1 = New System.Windows.Forms.TextBox()
+            Me.dtpHastaDetallado = New System.Windows.Forms.DateTimePicker()
+            Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+            Me.dtpDesdeDetallado = New System.Windows.Forms.DateTimePicker()
+            Me.RadioButton2 = New System.Windows.Forms.RadioButton()
             Me.MenuStrip1.SuspendLayout()
             CType(Me.dgvCuentasPorCobrar, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -126,6 +139,13 @@
             CType(Me.KryptonGroupBox3.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox3.Panel.SuspendLayout()
             Me.KryptonGroupBox3.SuspendLayout()
+            CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonPage3.SuspendLayout()
+            CType(Me.dgvDetallado, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox4.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox4.Panel.SuspendLayout()
+            Me.KryptonGroupBox4.SuspendLayout()
             Me.SuspendLayout()
             '
             'MenuStrip1
@@ -327,21 +347,21 @@
             Me.dgvCuentasPorCobrar.AllowUserToAddRows = False
             Me.dgvCuentasPorCobrar.AllowUserToDeleteRows = False
             Me.dgvCuentasPorCobrar.AllowUserToResizeRows = False
-            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvCuentasPorCobrar.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+            DataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvCuentasPorCobrar.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
             Me.dgvCuentasPorCobrar.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.dgvCuentasPorCobrar.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvCuentasPorCobrar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvCuentasPorCobrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvCuentasPorCobrar.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column13, Me.Column14, Me.Column15})
-            DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvCuentasPorCobrar.DefaultCellStyle = DataGridViewCellStyle13
+            DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvCuentasPorCobrar.DefaultCellStyle = DataGridViewCellStyle28
             Me.dgvCuentasPorCobrar.GridColor = System.Drawing.SystemColors.ControlLightLight
             Me.dgvCuentasPorCobrar.Location = New System.Drawing.Point(4, 62)
             Me.dgvCuentasPorCobrar.MultiSelect = False
@@ -354,8 +374,8 @@
             '
             'Column1
             '
-            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            Me.Column1.DefaultCellStyle = DataGridViewCellStyle2
+            DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            Me.Column1.DefaultCellStyle = DataGridViewCellStyle17
             Me.Column1.HeaderText = "ID CL"
             Me.Column1.Name = "Column1"
             Me.Column1.ReadOnly = True
@@ -370,8 +390,8 @@
             '
             'Column3
             '
-            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            Me.Column3.DefaultCellStyle = DataGridViewCellStyle3
+            DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            Me.Column3.DefaultCellStyle = DataGridViewCellStyle18
             Me.Column3.HeaderText = "ID FACT"
             Me.Column3.Name = "Column3"
             Me.Column3.ReadOnly = True
@@ -379,8 +399,8 @@
             '
             'Column4
             '
-            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            Me.Column4.DefaultCellStyle = DataGridViewCellStyle4
+            DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            Me.Column4.DefaultCellStyle = DataGridViewCellStyle19
             Me.Column4.HeaderText = "N° FACTURA"
             Me.Column4.Name = "Column4"
             Me.Column4.ReadOnly = True
@@ -388,8 +408,8 @@
             '
             'Column5
             '
-            DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            Me.Column5.DefaultCellStyle = DataGridViewCellStyle5
+            DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            Me.Column5.DefaultCellStyle = DataGridViewCellStyle20
             Me.Column5.HeaderText = "FEC. EMISIÓN"
             Me.Column5.Name = "Column5"
             Me.Column5.ReadOnly = True
@@ -397,8 +417,8 @@
             '
             'Column6
             '
-            DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-            Me.Column6.DefaultCellStyle = DataGridViewCellStyle6
+            DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+            Me.Column6.DefaultCellStyle = DataGridViewCellStyle21
             Me.Column6.HeaderText = "FACTURADO"
             Me.Column6.Name = "Column6"
             Me.Column6.ReadOnly = True
@@ -406,8 +426,8 @@
             '
             'Column7
             '
-            DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-            Me.Column7.DefaultCellStyle = DataGridViewCellStyle7
+            DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+            Me.Column7.DefaultCellStyle = DataGridViewCellStyle22
             Me.Column7.HeaderText = "RETENIDO"
             Me.Column7.Name = "Column7"
             Me.Column7.ReadOnly = True
@@ -415,8 +435,8 @@
             '
             'Column8
             '
-            DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-            Me.Column8.DefaultCellStyle = DataGridViewCellStyle8
+            DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+            Me.Column8.DefaultCellStyle = DataGridViewCellStyle23
             Me.Column8.HeaderText = "A COBRAR"
             Me.Column8.Name = "Column8"
             Me.Column8.ReadOnly = True
@@ -424,8 +444,8 @@
             '
             'Column9
             '
-            DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-            Me.Column9.DefaultCellStyle = DataGridViewCellStyle9
+            DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+            Me.Column9.DefaultCellStyle = DataGridViewCellStyle24
             Me.Column9.HeaderText = "NOT. CRÉDITO"
             Me.Column9.Name = "Column9"
             Me.Column9.ReadOnly = True
@@ -433,8 +453,8 @@
             '
             'Column10
             '
-            DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-            Me.Column10.DefaultCellStyle = DataGridViewCellStyle10
+            DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+            Me.Column10.DefaultCellStyle = DataGridViewCellStyle25
             Me.Column10.HeaderText = "ABONADO"
             Me.Column10.Name = "Column10"
             Me.Column10.ReadOnly = True
@@ -442,8 +462,8 @@
             '
             'Column11
             '
-            DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-            Me.Column11.DefaultCellStyle = DataGridViewCellStyle11
+            DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+            Me.Column11.DefaultCellStyle = DataGridViewCellStyle26
             Me.Column11.HeaderText = "SALDO"
             Me.Column11.Name = "Column11"
             Me.Column11.ReadOnly = True
@@ -474,8 +494,8 @@
             '
             'Column15
             '
-            DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-            Me.Column15.DefaultCellStyle = DataGridViewCellStyle12
+            DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+            Me.Column15.DefaultCellStyle = DataGridViewCellStyle27
             Me.Column15.HeaderText = "$$ CONVENIO"
             Me.Column15.Name = "Column15"
             Me.Column15.ReadOnly = True
@@ -608,8 +628,8 @@
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 32)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
             Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
-            Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
-            Me.KryptonNavigator1.SelectedIndex = 1
+            Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2, Me.KryptonPage3})
+            Me.KryptonNavigator1.SelectedIndex = 0
             Me.KryptonNavigator1.Size = New System.Drawing.Size(879, 525)
             Me.KryptonNavigator1.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonNavigator1.TabIndex = 199
@@ -661,15 +681,15 @@
             '
             'cliente
             '
-            DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            Me.cliente.DefaultCellStyle = DataGridViewCellStyle14
+            DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            Me.cliente.DefaultCellStyle = DataGridViewCellStyle29
             Me.cliente.HeaderText = "Cliente"
             Me.cliente.Name = "cliente"
             '
             'factura
             '
-            DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            Me.factura.DefaultCellStyle = DataGridViewCellStyle15
+            DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            Me.factura.DefaultCellStyle = DataGridViewCellStyle30
             Me.factura.HeaderText = "No Factura"
             Me.factura.Name = "factura"
             '
@@ -722,6 +742,7 @@
             '
             'KryptonGroupBox3.Panel
             '
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.btnExportarComparacion)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.btnBuscarAcumulado)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel10)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel11)
@@ -733,6 +754,25 @@
             Me.KryptonGroupBox3.Size = New System.Drawing.Size(861, 55)
             Me.KryptonGroupBox3.TabIndex = 198
             Me.KryptonGroupBox3.Values.Heading = "Datos"
+            '
+            'btnExportarComparacion
+            '
+            Me.btnExportarComparacion.Location = New System.Drawing.Point(813, 0)
+            Me.btnExportarComparacion.Name = "btnExportarComparacion"
+            Me.btnExportarComparacion.Size = New System.Drawing.Size(30, 30)
+            Me.btnExportarComparacion.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.[False]
+            Me.btnExportarComparacion.StateCommon.Border.Draw = Krypton.Toolkit.InheritBool.[False]
+            Me.btnExportarComparacion.StateCommon.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnExportarComparacion.TabIndex = 256
+            Me.btnExportarComparacion.Values.ImageStates.ImageCheckedNormal = Nothing
+            Me.btnExportarComparacion.Values.ImageStates.ImageCheckedPressed = Nothing
+            Me.btnExportarComparacion.Values.ImageStates.ImageCheckedTracking = Nothing
+            Me.btnExportarComparacion.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarComparacion.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarComparacion.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarComparacion.Values.Text = ""
             '
             'btnBuscarAcumulado
             '
@@ -833,6 +873,169 @@
             Me.rbGeneralAcu.Text = "General"
             Me.rbGeneralAcu.UseVisualStyleBackColor = False
             '
+            'KryptonPage3
+            '
+            Me.KryptonPage3.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage3.Controls.Add(Me.dgvDetallado)
+            Me.KryptonPage3.Controls.Add(Me.KryptonGroupBox4)
+            Me.KryptonPage3.Flags = 65534
+            Me.KryptonPage3.LastVisibleSet = True
+            Me.KryptonPage3.MinimumSize = New System.Drawing.Size(50, 50)
+            Me.KryptonPage3.Name = "KryptonPage3"
+            Me.KryptonPage3.Size = New System.Drawing.Size(877, 496)
+            Me.KryptonPage3.Text = "Detallado"
+            Me.KryptonPage3.ToolTipTitle = "Page ToolTip"
+            Me.KryptonPage3.UniqueName = "38101F161C864E158F8A61F4FB008EE5"
+            '
+            'dgvDetallado
+            '
+            Me.dgvDetallado.BorderStyle = System.Windows.Forms.BorderStyle.None
+            Me.dgvDetallado.Location = New System.Drawing.Point(5, 68)
+            Me.dgvDetallado.Name = "dgvDetallado"
+            Me.dgvDetallado.Size = New System.Drawing.Size(859, 417)
+            Me.dgvDetallado.StateNormal.Background.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvDetallado.TabIndex = 200
+            '
+            'KryptonGroupBox4
+            '
+            Me.KryptonGroupBox4.CaptionOverlap = 0R
+            Me.KryptonGroupBox4.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox4.Location = New System.Drawing.Point(5, 7)
+            Me.KryptonGroupBox4.Name = "KryptonGroupBox4"
+            '
+            'KryptonGroupBox4.Panel
+            '
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.btnExportarDetallado)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonButton1)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel12)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel13)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.TextBox1)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.dtpHastaDetallado)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.RadioButton1)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.dtpDesdeDetallado)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.RadioButton2)
+            Me.KryptonGroupBox4.Size = New System.Drawing.Size(861, 55)
+            Me.KryptonGroupBox4.TabIndex = 199
+            Me.KryptonGroupBox4.Values.Heading = "Datos"
+            '
+            'btnExportarDetallado
+            '
+            Me.btnExportarDetallado.Location = New System.Drawing.Point(811, -1)
+            Me.btnExportarDetallado.Name = "btnExportarDetallado"
+            Me.btnExportarDetallado.Size = New System.Drawing.Size(30, 30)
+            Me.btnExportarDetallado.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.[False]
+            Me.btnExportarDetallado.StateCommon.Border.Draw = Krypton.Toolkit.InheritBool.[False]
+            Me.btnExportarDetallado.StateCommon.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnExportarDetallado.TabIndex = 257
+            Me.btnExportarDetallado.Values.ImageStates.ImageCheckedNormal = Nothing
+            Me.btnExportarDetallado.Values.ImageStates.ImageCheckedPressed = Nothing
+            Me.btnExportarDetallado.Values.ImageStates.ImageCheckedTracking = Nothing
+            Me.btnExportarDetallado.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarDetallado.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarDetallado.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarDetallado.Values.Text = ""
+            '
+            'KryptonButton1
+            '
+            Me.KryptonButton1.AutoSize = True
+            Me.KryptonButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+            Me.KryptonButton1.Location = New System.Drawing.Point(473, -1)
+            Me.KryptonButton1.Name = "KryptonButton1"
+            Me.KryptonButton1.Size = New System.Drawing.Size(32, 32)
+            Me.KryptonButton1.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
+            Me.KryptonButton1.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
+            Me.KryptonButton1.StateCommon.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
+            Me.KryptonButton1.StateCommon.Content.Padding = New System.Windows.Forms.Padding(2)
+            Me.KryptonButton1.TabIndex = 250
+            Me.KryptonButton1.Values.ImageStates.ImageCheckedNormal = Nothing
+            Me.KryptonButton1.Values.ImageStates.ImageCheckedPressed = Nothing
+            Me.KryptonButton1.Values.ImageStates.ImageCheckedTracking = Nothing
+            Me.KryptonButton1.Values.ImageStates.ImageDisabled = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.KryptonButton1.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.KryptonButton1.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
+            Me.KryptonButton1.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
+            Me.KryptonButton1.Values.Text = ""
+            '
+            'KryptonLabel12
+            '
+            Me.KryptonLabel12.Location = New System.Drawing.Point(659, 5)
+            Me.KryptonLabel12.Name = "KryptonLabel12"
+            Me.KryptonLabel12.Size = New System.Drawing.Size(41, 20)
+            Me.KryptonLabel12.TabIndex = 4
+            Me.KryptonLabel12.Values.Text = "Hasta"
+            '
+            'KryptonLabel13
+            '
+            Me.KryptonLabel13.Location = New System.Drawing.Point(519, 5)
+            Me.KryptonLabel13.Name = "KryptonLabel13"
+            Me.KryptonLabel13.Size = New System.Drawing.Size(45, 20)
+            Me.KryptonLabel13.TabIndex = 3
+            Me.KryptonLabel13.Values.Text = "Desde"
+            '
+            'TextBox1
+            '
+            Me.TextBox1.BackColor = System.Drawing.Color.White
+            Me.TextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.TextBox1.Enabled = False
+            Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TextBox1.ForeColor = System.Drawing.SystemColors.ControlText
+            Me.TextBox1.Location = New System.Drawing.Point(152, 4)
+            Me.TextBox1.Name = "TextBox1"
+            Me.TextBox1.Size = New System.Drawing.Size(304, 20)
+            Me.TextBox1.TabIndex = 2
+            '
+            'dtpHastaDetallado
+            '
+            Me.dtpHastaDetallado.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpHastaDetallado.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpHastaDetallado.Location = New System.Drawing.Point(705, 3)
+            Me.dtpHastaDetallado.Name = "dtpHastaDetallado"
+            Me.dtpHastaDetallado.Size = New System.Drawing.Size(88, 21)
+            Me.dtpHastaDetallado.TabIndex = 1
+            '
+            'RadioButton1
+            '
+            Me.RadioButton1.AutoSize = True
+            Me.RadioButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.RadioButton1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.RadioButton1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.RadioButton1.Location = New System.Drawing.Point(75, 7)
+            Me.RadioButton1.Name = "RadioButton1"
+            Me.RadioButton1.Size = New System.Drawing.Size(60, 17)
+            Me.RadioButton1.TabIndex = 1
+            Me.RadioButton1.TabStop = True
+            Me.RadioButton1.Text = "Cliente"
+            Me.RadioButton1.UseVisualStyleBackColor = False
+            '
+            'dtpDesdeDetallado
+            '
+            Me.dtpDesdeDetallado.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpDesdeDetallado.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpDesdeDetallado.Location = New System.Drawing.Point(567, 4)
+            Me.dtpDesdeDetallado.Name = "dtpDesdeDetallado"
+            Me.dtpDesdeDetallado.Size = New System.Drawing.Size(85, 21)
+            Me.dtpDesdeDetallado.TabIndex = 0
+            Me.dtpDesdeDetallado.Value = New Date(2013, 1, 1, 0, 1, 0, 0)
+            '
+            'RadioButton2
+            '
+            Me.RadioButton2.AutoSize = True
+            Me.RadioButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.RadioButton2.Checked = True
+            Me.RadioButton2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.RadioButton2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.RadioButton2.Location = New System.Drawing.Point(9, 7)
+            Me.RadioButton2.Name = "RadioButton2"
+            Me.RadioButton2.Size = New System.Drawing.Size(64, 17)
+            Me.RadioButton2.TabIndex = 0
+            Me.RadioButton2.TabStop = True
+            Me.RadioButton2.Text = "General"
+            Me.RadioButton2.UseVisualStyleBackColor = False
+            '
             'FrmCuentasPorCobrarGeneralClienteNoConvenio
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -876,6 +1079,14 @@
             Me.KryptonGroupBox3.Panel.PerformLayout()
             CType(Me.KryptonGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox3.ResumeLayout(False)
+            CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonPage3.ResumeLayout(False)
+            CType(Me.dgvDetallado, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.KryptonGroupBox4.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox4.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox4.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox4, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox4.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -947,5 +1158,18 @@
         Friend WithEvents noventa_120 As DataGridViewTextBoxColumn
         Friend WithEvents cientoveinte As DataGridViewTextBoxColumn
         Friend WithEvents total As DataGridViewTextBoxColumn
+        Friend WithEvents KryptonPage3 As ComponentFactory.Krypton.Navigator.KryptonPage
+        Friend WithEvents dgvDetallado As Krypton.Toolkit.KryptonDataGridView
+        Friend WithEvents KryptonGroupBox4 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonButton1 As ComponentFactory.Krypton.Toolkit.KryptonButton
+        Friend WithEvents KryptonLabel12 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel13 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents TextBox1 As TextBox
+        Friend WithEvents dtpHastaDetallado As DateTimePicker
+        Friend WithEvents RadioButton1 As RadioButton
+        Friend WithEvents dtpDesdeDetallado As DateTimePicker
+        Friend WithEvents RadioButton2 As RadioButton
+        Friend WithEvents btnExportarComparacion As Krypton.Toolkit.KryptonButton
+        Friend WithEvents btnExportarDetallado As Krypton.Toolkit.KryptonButton
     End Class
 End Namespace

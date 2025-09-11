@@ -252,7 +252,7 @@ Namespace CONTABILIDAD.PLAN_DE_CUENTAS
             End If
         End Function
 
-        Public Function SeleccionarBalnceFinalComparativoDinamico(ByVal tipoCon As TipoConexion, ByVal FechaInicial As DateTime, ByVal FechaFinal As DateTime, ByVal RangoBusqueda As String, ByVal OrdenColumns As String, ByVal chkAnterior As Boolean, ByVal chkPrevio As Boolean, cambio As Boolean, variacion As Boolean) As DataTable
+        Public Function SeleccionarBalnceFinalComparativoDinamico(ByVal tipoCon As TipoConexion, ByVal FechaInicial As DateTime, ByVal FechaFinal As DateTime, ByVal OrdenColumns As String, ByVal chkAnterior As Boolean, ByVal chkPrevio As Boolean, cambio As Boolean, variacion As Boolean) As DataTable
             Dim pars = New List(Of Object())
 
             Dim chkAnteriorInt As Integer = If(chkAnterior, 1, 0)
@@ -262,7 +262,6 @@ Namespace CONTABILIDAD.PLAN_DE_CUENTAS
 
             pars.Add(New Object() {"@FechaInicio", SqlDbType.DateTime, FechaInicial})
             pars.Add(New Object() {"@FechaFin", SqlDbType.DateTime, FechaFinal})
-            pars.Add(New Object() {"@RangoBusqueda", SqlDbType.VarChar, RangoBusqueda})
             pars.Add(New Object() {"@OrdenColumns", SqlDbType.VarChar, OrdenColumns})
             pars.Add(New Object() {"@chkAnterior", SqlDbType.Bit, chkAnteriorInt})
             pars.Add(New Object() {"@chkPrevio", SqlDbType.Bit, chkPrevioInt})
