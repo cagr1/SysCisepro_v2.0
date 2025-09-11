@@ -32,8 +32,6 @@ Partial Class FormReportEstadoPyG
         Me.chkCambioPrevio = New ComponentFactory.Krypton.Toolkit.KryptonCheckBox()
         Me.chkPrevio = New ComponentFactory.Krypton.Toolkit.KryptonCheckBox()
         Me.KryptonGroupBox2 = New Krypton.Toolkit.KryptonGroupBox()
-        Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
-        Me.cbxDates = New ComponentFactory.Krypton.Toolkit.KryptonComboBox()
         Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
         Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
         Me.dtpFechaDesdeMes = New Krypton.Toolkit.KryptonDateTimePicker()
@@ -49,7 +47,6 @@ Partial Class FormReportEstadoPyG
         CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.KryptonGroupBox2.Panel.SuspendLayout()
         Me.KryptonGroupBox2.SuspendLayout()
-        CType(Me.cbxDates, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'chkAnterior
@@ -69,7 +66,7 @@ Partial Class FormReportEstadoPyG
         '
         Me.KryptonGroupBox1.CaptionOverlap = 0R
         Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-        Me.KryptonGroupBox1.Location = New System.Drawing.Point(2, 121)
+        Me.KryptonGroupBox1.Location = New System.Drawing.Point(2, 84)
         Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
         '
         'KryptonGroupBox1.Panel
@@ -182,37 +179,17 @@ Partial Class FormReportEstadoPyG
         '
         'KryptonGroupBox2.Panel
         '
-        Me.KryptonGroupBox2.Panel.Controls.Add(Me.KryptonLabel2)
-        Me.KryptonGroupBox2.Panel.Controls.Add(Me.cbxDates)
         Me.KryptonGroupBox2.Panel.Controls.Add(Me.KryptonLabel11)
         Me.KryptonGroupBox2.Panel.Controls.Add(Me.KryptonLabel10)
         Me.KryptonGroupBox2.Panel.Controls.Add(Me.dtpFechaDesdeMes)
         Me.KryptonGroupBox2.Panel.Controls.Add(Me.dtpFechaHastaMes)
-        Me.KryptonGroupBox2.Size = New System.Drawing.Size(317, 112)
+        Me.KryptonGroupBox2.Size = New System.Drawing.Size(317, 76)
         Me.KryptonGroupBox2.TabIndex = 253
         Me.KryptonGroupBox2.Values.Heading = "Rango de Reporte"
         '
-        'KryptonLabel2
-        '
-        Me.KryptonLabel2.Location = New System.Drawing.Point(14, 10)
-        Me.KryptonLabel2.Name = "KryptonLabel2"
-        Me.KryptonLabel2.Size = New System.Drawing.Size(47, 20)
-        Me.KryptonLabel2.TabIndex = 237
-        Me.KryptonLabel2.Values.Text = "Fechas"
-        '
-        'cbxDates
-        '
-        Me.cbxDates.AlwaysActive = False
-        Me.cbxDates.DropDownWidth = 150
-        Me.cbxDates.Items.AddRange(New Object() {"Mensual", "Trimestral", "Semestral", "Anual ", "Personalizado"})
-        Me.cbxDates.Location = New System.Drawing.Point(65, 10)
-        Me.cbxDates.Name = "cbxDates"
-        Me.cbxDates.Size = New System.Drawing.Size(101, 21)
-        Me.cbxDates.TabIndex = 236
-        '
         'KryptonLabel11
         '
-        Me.KryptonLabel11.Location = New System.Drawing.Point(159, 37)
+        Me.KryptonLabel11.Location = New System.Drawing.Point(159, 17)
         Me.KryptonLabel11.Name = "KryptonLabel11"
         Me.KryptonLabel11.Size = New System.Drawing.Size(41, 20)
         Me.KryptonLabel11.TabIndex = 235
@@ -220,7 +197,7 @@ Partial Class FormReportEstadoPyG
         '
         'KryptonLabel10
         '
-        Me.KryptonLabel10.Location = New System.Drawing.Point(14, 37)
+        Me.KryptonLabel10.Location = New System.Drawing.Point(14, 17)
         Me.KryptonLabel10.Name = "KryptonLabel10"
         Me.KryptonLabel10.Size = New System.Drawing.Size(45, 20)
         Me.KryptonLabel10.TabIndex = 234
@@ -233,7 +210,7 @@ Partial Class FormReportEstadoPyG
         Me.dtpFechaDesdeMes.CustomFormat = "MMMM - yyyy"
         Me.dtpFechaDesdeMes.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFechaDesdeMes.InputControlStyle = Krypton.Toolkit.InputControlStyle.Ribbon
-        Me.dtpFechaDesdeMes.Location = New System.Drawing.Point(65, 37)
+        Me.dtpFechaDesdeMes.Location = New System.Drawing.Point(65, 17)
         Me.dtpFechaDesdeMes.Name = "dtpFechaDesdeMes"
         Me.dtpFechaDesdeMes.Size = New System.Drawing.Size(85, 21)
         Me.dtpFechaDesdeMes.TabIndex = 232
@@ -245,7 +222,7 @@ Partial Class FormReportEstadoPyG
         Me.dtpFechaHastaMes.CustomFormat = "MMMM - yyyy"
         Me.dtpFechaHastaMes.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFechaHastaMes.InputControlStyle = Krypton.Toolkit.InputControlStyle.Ribbon
-        Me.dtpFechaHastaMes.Location = New System.Drawing.Point(206, 37)
+        Me.dtpFechaHastaMes.Location = New System.Drawing.Point(206, 17)
         Me.dtpFechaHastaMes.Name = "dtpFechaHastaMes"
         Me.dtpFechaHastaMes.Size = New System.Drawing.Size(86, 21)
         Me.dtpFechaHastaMes.TabIndex = 233
@@ -258,7 +235,7 @@ Partial Class FormReportEstadoPyG
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(53, 298)
+        Me.Button1.Location = New System.Drawing.Point(53, 270)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(89, 34)
         Me.Button1.TabIndex = 254
@@ -273,7 +250,7 @@ Partial Class FormReportEstadoPyG
         Me.btnAcpetar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAcpetar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAcpetar.ForeColor = System.Drawing.Color.White
-        Me.btnAcpetar.Location = New System.Drawing.Point(163, 298)
+        Me.btnAcpetar.Location = New System.Drawing.Point(163, 270)
         Me.btnAcpetar.Name = "btnAcpetar"
         Me.btnAcpetar.Size = New System.Drawing.Size(89, 34)
         Me.btnAcpetar.TabIndex = 255
@@ -285,7 +262,7 @@ Partial Class FormReportEstadoPyG
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(234, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(321, 332)
+        Me.ClientSize = New System.Drawing.Size(321, 320)
         Me.Controls.Add(Me.btnAcpetar)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.KryptonGroupBox2)
@@ -311,7 +288,6 @@ Partial Class FormReportEstadoPyG
         Me.KryptonGroupBox2.Panel.PerformLayout()
         CType(Me.KryptonGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.KryptonGroupBox2.ResumeLayout(False)
-        CType(Me.cbxDates, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -330,8 +306,6 @@ Partial Class FormReportEstadoPyG
     Friend WithEvents KryptonLabel10 As Krypton.Toolkit.KryptonLabel
     Friend WithEvents dtpFechaDesdeMes As Krypton.Toolkit.KryptonDateTimePicker
     Friend WithEvents dtpFechaHastaMes As Krypton.Toolkit.KryptonDateTimePicker
-    Friend WithEvents cbxDates As ComponentFactory.Krypton.Toolkit.KryptonComboBox
     Friend WithEvents Button1 As Button
     Friend WithEvents btnAcpetar As Button
-    Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
 End Class

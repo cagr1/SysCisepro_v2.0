@@ -121,8 +121,8 @@ Namespace FORMULARIOS.OPERACIONES
 
             _hoy = ValidationForms.FechaActual(_tipoCon)
             Me.btnAgregar.ToolTipText = "Agregar Vigilante"
-            dgvDia.Font = New Font("Roboto", 8, FontStyle.Regular)
-            dgvNoche.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvDia.Font = New Font("Roboto", 9, FontStyle.Regular)
+            dgvNoche.Font = New Font("Roboto", 9, FontStyle.Regular)
             DataGridView1.Font = New Font("Roboto", 8, FontStyle.Regular)
             dtpMes.Value = New Date(_hoy.Year, _hoy.Month, 1)
             Text += " " & ValidationForms.NombreCompany(_tipoCon)

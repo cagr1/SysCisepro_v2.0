@@ -7,6 +7,7 @@ Imports ClassLibraryCisepro.ProcesosSql
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.BANCOS
     ''' <summary>
@@ -133,10 +134,10 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             If lblComprobante.Text.Trim.Equals("S/N") Or txtBeneficiario.Text.Trim.Length = 0 Or _
                txtTipoServicio.Text.Trim.Length = 0 Or txtNumCuenta.Text.Trim.Length = 0 Or _
                txtReferencia.Text.Trim.Length = 0 Or dgvDebitos.RowCount = 0 Then
-                MessageBox.Show("Por favor llene la información de la planilla para guardar", "VALIDACIÓN DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Por favor llene la información de la planilla para guardar", "VALIDACIÓN DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             Else
 
-                If MessageBox.Show("Seguro que desea guardar la planilla actual?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                If KryptonMessageBox.Show("Seguro que desea guardar la planilla actual?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) = DialogResult.Yes Then
 
                     _sqlCommands.Clear()
 
@@ -156,7 +157,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                             .CantCuentas = lblCant.Text
                             .TotCuentas = lblTotal.Text
                             .Estado = 1
-                            .Observacion = txtObservacion.Text.Trim 
+                            .Observacion = txtObservacion.Text.Trim
                         End With
                         _sqlCommands.Add(_objPlanilla.NuevoRegistroPlanillaCobrosPagos())
 
@@ -179,11 +180,11 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                                 .Idfactura = row.Cells("IdFactura").Value.ToString
                                 .Numfactura = row.Cells("NumFactura").Value.ToString
                                 .Idcliente = row.Cells("IdCliente").Value.ToString
-                                .Cliente = row.Cells("Cliente").Value.ToString 
+                                .Cliente = row.Cells("Cliente").Value.ToString
                             End With
                             _sqlCommands.Add(_objDetaPlanilla.NuevoRegistroDetallePlanillaCobrosPagos())
                             iddet += 1
-                        Next 
+                        Next
                         lblComprobante.Text = _objPlanilla.IdPlanilla
 
                     End If
@@ -225,12 +226,12 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                             End With
                             _sqlCommands.Add(_objDetaPlanilla.NuevoRegistroDetallePlanillaCobrosPagos())
                             iddet += 1
-                        Next 
+                        Next
                     End If
 
 
 
-                     
+
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
                     If res(0) Then
                         dtpFechaProceso.Enabled = False
@@ -251,13 +252,14 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
                         tsmNuevo.Enabled = True
                         tsmGuardar.Enabled = False
-                        tsmEditar.Enabled = True 
+                        tsmEditar.Enabled = True
                         tsmCancelar.Enabled = False
 
                         LoadPlanillasRecientes()
                     End If
 
-                    MsgBox(If(res(0), res(1) & " Ahora puede generar el archivo BIZ!", res(1)), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                    'MsgBox(If(res(0), res(1) & " Ahora puede generar el archivo BIZ!", res(1)), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
 
                 End If
             End If
@@ -320,12 +322,12 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
         Private Sub btnGenerarExcel_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGenerarExcel.Click
             If _tipoGuardar <> 0 Then
-                MessageBox.Show("No se puede generar el archivo mientras está activa una opción de guardar o procesar", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("No se puede generar el archivo mientras está activa una opción de guardar o procesar", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             If _tipoGuardar <> 0 Then
-                MessageBox.Show("No ha seleccionado ninguna orden para generar el archivo!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("No ha seleccionado ninguna orden para generar el archivo!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -350,6 +352,11 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                         Else
                             ba = row.Cells(8).Value.ToString.Trim.Split(" ")(0).Trim
                         End If
+                        'verificar que Cells(5).Value tengo solo 40 caracteres
+                        If row.Cells(5).Value.ToString.Length > 40 Then
+                            row.Cells(5).Value = row.Cells(5).Value.ToString.Substring(0, 40)
+                        End If
+
 
                         objWriter.WriteLine(
                             "DET" &
@@ -395,7 +402,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     Next
 
                     objWriter.Close()
-                    MessageBox.Show("Archivo generado correctamente", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    KryptonMessageBox.Show("Archivo generado correctamente", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 End If
 
             Catch ex As Exception
@@ -448,7 +455,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 End If
                 CalcularTotales()
             Catch ex As Exception
-                MessageBox.Show(ex.Message)
+                'MessageBox.Show(ex.Message)
+                KryptonMessageBox.Show(ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -489,7 +497,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 lblTotal.Text = data.Rows(0).Item("TOTAL_CUENTAS")
 
             Catch ex As Exception
-                MessageBox.Show("Error al cargar planilla: " + ex.Message)
+                'MessageBox.Show("Error al cargar planilla: " + ex.Message)
+                KryptonMessageBox.Show("Error al cargar planilla: " + ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -600,7 +609,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         Private Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-                    MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    'MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -669,7 +679,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try             
         End Sub
 

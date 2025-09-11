@@ -54,7 +54,7 @@ Public Class FormReportEstadoPyG
         End Select
 
 
-        cbxDates.SelectedIndex = SelectedRange
+
         dtpFechaDesdeMes.Value = FechaDesde
         dtpFechaHastaMes.Value = FechaHasta
         cbxShowColumns.SelectedIndex = ShowColumns
@@ -99,10 +99,10 @@ Public Class FormReportEstadoPyG
             Return
         End If
 
-        Dim Rango As String
+
 
         ' Guardar los valores antes de cerrar
-        SelectedRange = cbxDates.SelectedIndex
+
 
         FechaDesde = dtpFechaDesdeMes.Value
         FechaHasta = dtpFechaHastaMes.Value
@@ -142,59 +142,59 @@ Public Class FormReportEstadoPyG
         Me.Close()
     End Sub
 
-    Private Sub cbxDates_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxDates.SelectedIndexChanged
-        Dim selectedRange As String = cbxDates.SelectedItem.ToString()
+    'Private Sub cbxDates_SelectedIndexChanged(sender As Object, e As EventArgs)
+    '    Dim selectedRange As String = cbxDates.SelectedItem.ToString()
 
-        Select Case selectedRange.Trim()
-            Case "Mensual"
-                ' Desde el primer día del mes actual
-                dtpFechaDesdeMes.Value = New Date(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month, 1)
-                dtpFechaHastaMes.Value = New Date(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month, Date.DaysInMonth(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month))
+    '    Select Case selectedRange.Trim()
+    '        Case "Mensual"
+    '            ' Desde el primer día del mes actual
+    '            dtpFechaDesdeMes.Value = New Date(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month, 1)
+    '            dtpFechaHastaMes.Value = New Date(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month, Date.DaysInMonth(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month))
 
-            Case "Trimestral"
-                ' Desde el primer día del mes, restando 2 meses (para cubrir 3 meses en total)
-                dtpFechaDesdeMes.Value = New Date(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month, 1).AddMonths(-2)
+    '        Case "Trimestral"
+    '            ' Desde el primer día del mes, restando 2 meses (para cubrir 3 meses en total)
+    '            dtpFechaDesdeMes.Value = New Date(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month, 1).AddMonths(-2)
 
-            Case "Semestral"
-                ' Desde el primer día del mes, restando 5 meses (para cubrir 6 meses en total)
-                dtpFechaDesdeMes.Value = New Date(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month, 1).AddMonths(-5)
+    '        Case "Semestral"
+    '            ' Desde el primer día del mes, restando 5 meses (para cubrir 6 meses en total)
+    '            dtpFechaDesdeMes.Value = New Date(dtpFechaHastaMes.Value.Year, dtpFechaHastaMes.Value.Month, 1).AddMonths(-5)
 
-            Case "Anual"
-                ' Desde el primer día del mes, restando 1 año
-                dtpFechaDesdeMes.Value = New Date(dtpFechaHastaMes.Value.Year - 1, dtpFechaHastaMes.Value.Month, dtpFechaHastaMes.Value.Day)
+    '        Case "Anual"
+    '            ' Desde el primer día del mes, restando 1 año
+    '            dtpFechaDesdeMes.Value = New Date(dtpFechaHastaMes.Value.Year - 1, dtpFechaHastaMes.Value.Month, dtpFechaHastaMes.Value.Day)
 
 
-            Case "Custom"
-                ' No hacer cambios en las fechas, el usuario las define manualmente
-        End Select
-    End Sub
+    '        Case "Custom"
+    '            ' No hacer cambios en las fechas, el usuario las define manualmente
+    '    End Select
+    'End Sub
 
     Private Sub dtpFechaDesdeMes_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaDesdeMes.ValueChanged
-        UpdateCbxDates()
+        'UpdateCbxDates()
     End Sub
 
-    Private Sub UpdateCbxDates()
-        Dim fechaDesde As Date = dtpFechaDesdeMes.Value
-        Dim fechaHasta As Date = dtpFechaHastaMes.Value
+    'Private Sub UpdateCbxDates()
+    '    Dim fechaDesde As Date = dtpFechaDesdeMes.Value
+    '    Dim fechaHasta As Date = dtpFechaHastaMes.Value
 
-        RemoveHandler cbxDates.SelectedIndexChanged, AddressOf cbxDates_SelectedIndexChanged
+    '    RemoveHandler cbxDates.SelectedIndexChanged, AddressOf cbxDates_SelectedIndexChanged
 
-        'Verificar si el rango de fechas coincide con un periodo estandar
-        If IsMonthlyRange(fechaDesde, fechaHasta) Then
-            cbxDates.SelectedIndex = 0
-        ElseIf IsQuarterlyRange(fechaDesde, fechaHasta) Then
-            cbxDates.SelectedIndex = 1
-        ElseIf IsSemestralRange(fechaDesde, fechaHasta) Then
-            cbxDates.SelectedIndex = 2
-        ElseIf IsAnnualRange(fechaDesde, fechaHasta) Then
-            cbxDates.SelectedIndex = 3
-        Else
-            cbxDates.SelectedIndex = 4
-        End If
+    '    'Verificar si el rango de fechas coincide con un periodo estandar
+    '    If IsMonthlyRange(fechaDesde, fechaHasta) Then
+    '        cbxDates.SelectedIndex = 0
+    '    ElseIf IsQuarterlyRange(fechaDesde, fechaHasta) Then
+    '        cbxDates.SelectedIndex = 1
+    '    ElseIf IsSemestralRange(fechaDesde, fechaHasta) Then
+    '        cbxDates.SelectedIndex = 2
+    '    ElseIf IsAnnualRange(fechaDesde, fechaHasta) Then
+    '        cbxDates.SelectedIndex = 3
+    '    Else
+    '        cbxDates.SelectedIndex = 4
+    '    End If
 
-        AddHandler cbxDates.SelectedIndexChanged, AddressOf cbxDates_SelectedIndexChanged
+    '    AddHandler cbxDates.SelectedIndexChanged, AddressOf cbxDates_SelectedIndexChanged
 
-    End Sub
+    'End Sub
 
     Private Function IsMonthlyRange(ByVal fechadesde As Date, ByVal fechashasta As Date) As Boolean
         Return fechadesde.Day = 1 AndAlso fechashasta = fechadesde.AddMonths(1).AddDays(-1)

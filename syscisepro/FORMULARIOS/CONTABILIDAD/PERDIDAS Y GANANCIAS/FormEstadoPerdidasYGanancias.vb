@@ -917,8 +917,8 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
         Private Sub dtpFechaDesdeMes_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaDesdeMes.ValueChanged
 
-            UpdateCbxDates()
-            callReport()
+            'UpdateCbxDates()
+            'callReport()
 
         End Sub
 
@@ -1144,7 +1144,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         Private Sub btnCuztomize_Click(sender As Object, e As EventArgs) Handles btnCuztomize.Click
             Dim frm As New FormReportEstadoPyG()
 
-            frm.SelectedRange = cbxDates.SelectedIndex
+            'frm.SelectedRange = cbxDates.SelectedIndex
             frm.FechaDesde = dtpFechaDesdeMes.Value
             frm.FechaHasta = dtpFechaHastaMes.Value
             frm.ShowColumns = cbxShowColumns.SelectedIndex
@@ -1156,7 +1156,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             frm.PorcentajePrevio = PorcentajePrevio
 
             If frm.ShowDialog() = DialogResult.OK Then
-                SelectedRangeT = frm.SelectedRange
+                'SelectedRangeT = frm.SelectedRange
                 FechaDesdeT = frm.FechaDesde
                 FechaHastaT = frm.FechaHasta
                 ShowColumnsT = frm.ShowColumns
@@ -1167,7 +1167,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 CambioPrevio = frm.CambioPrevio
                 PorcentajePrevio = frm.PorcentajePrevio
 
-                cbxDates.SelectedIndex = SelectedRangeT
+                'cbxDates.SelectedIndex = SelectedRangeT
                 dtpFechaDesdeMes.Value = FechaDesdeT
                 dtpFechaHastaMes.Value = FechaHastaT
                 cbxShowColumns.SelectedIndex = ShowColumnsT
@@ -1222,39 +1222,6 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
         End Sub
 
-        'Private Sub UpdateCbxShowColumns()
-        '    Dim fechaDesde As Date = dtpFechaDesdeMes.Value
-        '    Dim fechaHasta As Date = dtpFechaHastaMes.Value
-        '    Dim rangeInMonths As Integer = (fechaHasta.Year - fechaDesde.Year) * 12 + (fechaHasta.Month - fechaDesde.Month)
-
-
-
-        '    ' Siempre permitir "Mensual"
-        '    cbxShowColumns.SelectedIndex = 0
-        '    Columnas = "Mensual"
-        '    ' Permitir "Trimestral" si el rango es de al menos 3 meses
-        '    If rangeInMonths >= 3 Then
-        '        'cbxShowColumns.SelectedIndex = 1
-        '        Columnas = "Trimestral"
-        '    End If
-
-        '    ' Permitir "Semestral" si el rango es de al menos 6 meses
-        '    If rangeInMonths >= 6 Then
-        '        'cbxShowColumns.SelectedIndex = 2
-        '        Columnas = "Semestral"
-        '    End If
-
-        '    ' Permitir "Anual" si el rango es de al menos 12 meses
-        '    If rangeInMonths >= 12 Then
-        '        cbxShowColumns.SelectedIndex = 3
-        '        Columnas = "Anual"
-        '    End If
-
-        '    ' Seleccionar la primera opción por defecto
-        '    'If cbxShowColumns.Items.Count > 0 Then
-        '    '    cbxShowColumns.SelectedIndex = 0
-        '    'End If
-        'End Sub
 
         Private Sub callReport()
 
@@ -1269,9 +1236,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
                 'calculo para periodo previo en fechas
 
-                Dim dasySpan As Integer = (FechaHastaT - FechaDesdeT).Days + 1
-                Dim FechaDesdePrevio As Date = FechaDesdeT.AddDays(-dasySpan)
-                Dim FechaHastaPrevio As Date = FechaDesdeT.AddDays(-1)
+
 
 
                 ' Determinar tipo de columnas
@@ -1285,11 +1250,11 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
                 If Anterior Then
                     Previo = False
-                    EstadoPyG = _objEstado.SeleccionarEstadoPerdidasGananciasComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Rango, Columnas, Anterior, Previo, CambioAnterior, PorcentajeAnterior)
+                    EstadoPyG = _objEstado.SeleccionarEstadoPerdidasGananciasComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Columnas, Anterior, Previo, CambioAnterior, PorcentajeAnterior)
                 Else
                     Anterior = False
 
-                    EstadoPyG = _objEstado.SeleccionarEstadoPerdidasGananciasComparativoDinamico(_tipoCon, FechaDesdePrevio, FechaHastaPrevio, Rango, Columnas, Anterior, Previo, CambioPrevio, PorcentajePrevio)
+                    EstadoPyG = _objEstado.SeleccionarEstadoPerdidasGananciasComparativoDinamico(_tipoCon, FechaDesdeT, FechaHastaT, Columnas, Anterior, Previo, CambioPrevio, PorcentajePrevio)
 
                 End If
                 If EstadoPyG IsNot Nothing AndAlso EstadoPyG.Rows.Count > 0 Then
@@ -1513,28 +1478,28 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             Next
         End Sub
 
-        Private Sub UpdateCbxDates()
-            Dim fechaDesde As Date = dtpFechaDesdeMes.Value
-            Dim fechaHasta As Date = dtpFechaHastaMes.Value
+        'Private Sub UpdateCbxDates()
+        '    Dim fechaDesde As Date = dtpFechaDesdeMes.Value
+        '    Dim fechaHasta As Date = dtpFechaHastaMes.Value
 
-            RemoveHandler cbxDates.SelectedIndexChanged, AddressOf cbxDates_SelectedIndexChanged
+        '    RemoveHandler cbxDates.SelectedIndexChanged, AddressOf cbxDates_SelectedIndexChanged
 
-            'Verificar si el rango de fechas coincide con un periodo estandar
-            If IsMonthlyRange(fechaDesde, fechaHasta) Then
-                cbxDates.SelectedIndex = 0
-            ElseIf IsQuarterlyRange(fechaDesde, fechaHasta) Then
-                cbxDates.SelectedIndex = 1
-            ElseIf IsSemestralRange(fechaDesde, fechaHasta) Then
-                cbxDates.SelectedIndex = 2
-            ElseIf IsAnnualRange(fechaDesde, fechaHasta) Then
-                cbxDates.SelectedIndex = 3
-            Else
-                cbxDates.SelectedIndex = 4
-            End If
+        '    'Verificar si el rango de fechas coincide con un periodo estandar
+        '    If IsMonthlyRange(fechaDesde, fechaHasta) Then
+        '        cbxDates.SelectedIndex = 0
+        '    ElseIf IsQuarterlyRange(fechaDesde, fechaHasta) Then
+        '        cbxDates.SelectedIndex = 1
+        '    ElseIf IsSemestralRange(fechaDesde, fechaHasta) Then
+        '        cbxDates.SelectedIndex = 2
+        '    ElseIf IsAnnualRange(fechaDesde, fechaHasta) Then
+        '        cbxDates.SelectedIndex = 3
+        '    Else
+        '        cbxDates.SelectedIndex = 4
+        '    End If
 
-            AddHandler cbxDates.SelectedIndexChanged, AddressOf cbxDates_SelectedIndexChanged
+        '    AddHandler cbxDates.SelectedIndexChanged, AddressOf cbxDates_SelectedIndexChanged
 
-        End Sub
+        'End Sub
 
         Private Function IsMonthlyRange(ByVal fechadesde As Date, ByVal fechashasta As Date) As Boolean
             Return fechadesde.Day = 1 AndAlso fechashasta = fechadesde.AddMonths(1).AddDays(-1)
@@ -1557,7 +1522,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         End Sub
 
         Private Sub dtpFechaHastaMes_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaHastaMes.ValueChanged
-
+            'callReport()
         End Sub
 
         Private Sub dgvComparacion_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvComparacion.CellClick
