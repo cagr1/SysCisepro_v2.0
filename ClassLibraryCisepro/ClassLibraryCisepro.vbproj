@@ -153,6 +153,7 @@
     <Compile Include="CONTABILIDAD\MAYORIZACION\ClassDetalleMayores.vb" />
     <Compile Include="CONTABILIDAD\MAYORIZACION\ClassMayorGeneral.vb" />
     <Compile Include="CONTABILIDAD\PERDIDAS Y GANANCIAS\ClassPerdidasYGanancia.vb" />
+    <Compile Include="CONTABILIDAD\PERDIDAS Y GANANCIAS\ClassPresupuesto.vb" />
     <Compile Include="CONTABILIDAD\RETENCIONES EMITIDAS\ClassConceptosPago.vb" />
     <Compile Include="CONTABILIDAD\RETENCIONES EMITIDAS\ClassContribuyenteRetenido.vb" />
     <Compile Include="CONTABILIDAD\RETENCIONES EMITIDAS\ClassImpuestos.vb" />

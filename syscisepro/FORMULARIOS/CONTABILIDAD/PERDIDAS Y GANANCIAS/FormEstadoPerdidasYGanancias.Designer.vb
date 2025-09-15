@@ -103,16 +103,20 @@
             Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
             Me.dtpFechaDesdeMes = New Krypton.Toolkit.KryptonDateTimePicker()
             Me.dtpFechaHastaMes = New Krypton.Toolkit.KryptonDateTimePicker()
+            Me.KryptonPage4 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.dgvPlantilla = New Krypton.Toolkit.KryptonDataGridView()
+            Me.KryptonGroupBox6 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.btnGuardarPlantilla = New ComponentFactory.Krypton.Toolkit.KryptonButton()
+            Me.btnCargarPlantilla = New ComponentFactory.Krypton.Toolkit.KryptonButton()
+            Me.btnExportarPlantilla = New Krypton.Toolkit.KryptonButton()
+            Me.btnBuscarModi = New ComponentFactory.Krypton.Toolkit.KryptonButton()
+            Me.dtpDesdePlantilla = New Krypton.Toolkit.KryptonDateTimePicker()
             Me.KryptonRibbonGroupButton1 = New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton()
             Me.KryptonRibbonGroupButton2 = New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton()
             Me.KryptonRibbonGroupButton3 = New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton()
             Me.KryptonRibbonGroupTriple1 = New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple()
             Me.KryptonRibbonGroup1 = New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup()
             Me.KryptonContextMenuItems1 = New ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems()
-            Me.KryptonPage4 = New ComponentFactory.Krypton.Navigator.KryptonPage()
-            Me.KryptonGroupBox6 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonDataGridView1 = New Krypton.Toolkit.KryptonDataGridView()
-            Me.KryptonDateTimePicker1 = New Krypton.Toolkit.KryptonDateTimePicker()
             CType(Me.dgvEgresos, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvIngresos, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.ContextMenuStripClicDerecho.SuspendLayout()
@@ -151,11 +155,11 @@
             CType(Me.cbxShowColumns, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonPage4, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonPage4.SuspendLayout()
+            CType(Me.dgvPlantilla, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox6, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox6.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox6.Panel.SuspendLayout()
             Me.KryptonGroupBox6.SuspendLayout()
-            CType(Me.KryptonDataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'txtTotal
@@ -656,7 +660,7 @@
             Me.btnCargar.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft
             Me.btnCargar.TabIndex = 294
             Me.btnCargar.Values.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnCargar.Values.Text = "Cargar"
+            Me.btnCargar.Values.Text = "Buscar"
             '
             'KryptonPage3
             '
@@ -972,6 +976,121 @@
             Me.dtpFechaHastaMes.Size = New System.Drawing.Size(86, 21)
             Me.dtpFechaHastaMes.TabIndex = 229
             '
+            'KryptonPage4
+            '
+            Me.KryptonPage4.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage4.Controls.Add(Me.dgvPlantilla)
+            Me.KryptonPage4.Controls.Add(Me.KryptonGroupBox6)
+            Me.KryptonPage4.Flags = 65534
+            Me.KryptonPage4.LastVisibleSet = True
+            Me.KryptonPage4.MinimumSize = New System.Drawing.Size(50, 50)
+            Me.KryptonPage4.Name = "KryptonPage4"
+            Me.KryptonPage4.Size = New System.Drawing.Size(817, 641)
+            Me.KryptonPage4.Text = "Plantilla"
+            Me.KryptonPage4.ToolTipTitle = "Page ToolTip"
+            Me.KryptonPage4.UniqueName = "BAF1FBD973C64E3A0FBFD824E83E308B"
+            '
+            'dgvPlantilla
+            '
+            Me.dgvPlantilla.BorderStyle = System.Windows.Forms.BorderStyle.None
+            Me.dgvPlantilla.Location = New System.Drawing.Point(11, 105)
+            Me.dgvPlantilla.Name = "dgvPlantilla"
+            Me.dgvPlantilla.RowHeadersVisible = False
+            Me.dgvPlantilla.Size = New System.Drawing.Size(788, 520)
+            Me.dgvPlantilla.StateNormal.Background.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvPlantilla.TabIndex = 1
+            '
+            'KryptonGroupBox6
+            '
+            Me.KryptonGroupBox6.CaptionOverlap = 0R
+            Me.KryptonGroupBox6.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox6.Location = New System.Drawing.Point(7, 7)
+            Me.KryptonGroupBox6.Name = "KryptonGroupBox6"
+            '
+            'KryptonGroupBox6.Panel
+            '
+            Me.KryptonGroupBox6.Panel.Controls.Add(Me.btnGuardarPlantilla)
+            Me.KryptonGroupBox6.Panel.Controls.Add(Me.btnCargarPlantilla)
+            Me.KryptonGroupBox6.Panel.Controls.Add(Me.btnExportarPlantilla)
+            Me.KryptonGroupBox6.Panel.Controls.Add(Me.btnBuscarModi)
+            Me.KryptonGroupBox6.Panel.Controls.Add(Me.dtpDesdePlantilla)
+            Me.KryptonGroupBox6.Size = New System.Drawing.Size(792, 92)
+            Me.KryptonGroupBox6.TabIndex = 0
+            Me.KryptonGroupBox6.Values.Heading = "Datos"
+            '
+            'btnGuardarPlantilla
+            '
+            Me.btnGuardarPlantilla.AutoSize = True
+            Me.btnGuardarPlantilla.Location = New System.Drawing.Point(239, 12)
+            Me.btnGuardarPlantilla.Name = "btnGuardarPlantilla"
+            Me.btnGuardarPlantilla.Size = New System.Drawing.Size(88, 30)
+            Me.btnGuardarPlantilla.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft
+            Me.btnGuardarPlantilla.TabIndex = 296
+            Me.btnGuardarPlantilla.Values.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnGuardarPlantilla.Values.Text = "Guardar"
+            '
+            'btnCargarPlantilla
+            '
+            Me.btnCargarPlantilla.AutoSize = True
+            Me.btnCargarPlantilla.Location = New System.Drawing.Point(137, 12)
+            Me.btnCargarPlantilla.Name = "btnCargarPlantilla"
+            Me.btnCargarPlantilla.Size = New System.Drawing.Size(88, 30)
+            Me.btnCargarPlantilla.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft
+            Me.btnCargarPlantilla.TabIndex = 295
+            Me.btnCargarPlantilla.Values.Image = Global.syscisepro.My.Resources.Resources.upload_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnCargarPlantilla.Values.Text = "Cargar"
+            '
+            'btnExportarPlantilla
+            '
+            Me.btnExportarPlantilla.Location = New System.Drawing.Point(646, 12)
+            Me.btnExportarPlantilla.Name = "btnExportarPlantilla"
+            Me.btnExportarPlantilla.Size = New System.Drawing.Size(30, 30)
+            Me.btnExportarPlantilla.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.[False]
+            Me.btnExportarPlantilla.StateCommon.Border.Draw = Krypton.Toolkit.InheritBool.[False]
+            Me.btnExportarPlantilla.StateCommon.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnExportarPlantilla.TabIndex = 252
+            Me.btnExportarPlantilla.Values.ImageStates.ImageCheckedNormal = Nothing
+            Me.btnExportarPlantilla.Values.ImageStates.ImageCheckedPressed = Nothing
+            Me.btnExportarPlantilla.Values.ImageStates.ImageCheckedTracking = Nothing
+            Me.btnExportarPlantilla.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarPlantilla.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarPlantilla.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarPlantilla.Values.Text = ""
+            '
+            'btnBuscarModi
+            '
+            Me.btnBuscarModi.AutoSize = True
+            Me.btnBuscarModi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+            Me.btnBuscarModi.Location = New System.Drawing.Point(83, 12)
+            Me.btnBuscarModi.Name = "btnBuscarModi"
+            Me.btnBuscarModi.Size = New System.Drawing.Size(32, 32)
+            Me.btnBuscarModi.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
+            Me.btnBuscarModi.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
+            Me.btnBuscarModi.StateCommon.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnBuscarModi.StateCommon.Content.Padding = New System.Windows.Forms.Padding(2)
+            Me.btnBuscarModi.TabIndex = 250
+            Me.btnBuscarModi.Values.ImageStates.ImageCheckedNormal = Nothing
+            Me.btnBuscarModi.Values.ImageStates.ImageCheckedPressed = Nothing
+            Me.btnBuscarModi.Values.ImageStates.ImageCheckedTracking = Nothing
+            Me.btnBuscarModi.Values.ImageStates.ImageDisabled = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscarModi.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscarModi.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
+            Me.btnBuscarModi.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
+            Me.btnBuscarModi.Values.Text = ""
+            '
+            'dtpDesdePlantilla
+            '
+            Me.dtpDesdePlantilla.CustomFormat = "yyyy"
+            Me.dtpDesdePlantilla.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+            Me.dtpDesdePlantilla.Location = New System.Drawing.Point(12, 17)
+            Me.dtpDesdePlantilla.Name = "dtpDesdePlantilla"
+            Me.dtpDesdePlantilla.Size = New System.Drawing.Size(64, 21)
+            Me.dtpDesdePlantilla.TabIndex = 0
+            '
             'KryptonRibbonGroupButton1
             '
             Me.KryptonRibbonGroupButton1.ImageLarge = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
@@ -993,51 +1112,6 @@
             'KryptonRibbonGroup1
             '
             Me.KryptonRibbonGroup1.Items.AddRange(New ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer() {Me.KryptonRibbonGroupTriple1})
-            '
-            'KryptonPage4
-            '
-            Me.KryptonPage4.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
-            Me.KryptonPage4.Controls.Add(Me.KryptonDataGridView1)
-            Me.KryptonPage4.Controls.Add(Me.KryptonGroupBox6)
-            Me.KryptonPage4.Flags = 65534
-            Me.KryptonPage4.LastVisibleSet = True
-            Me.KryptonPage4.MinimumSize = New System.Drawing.Size(50, 50)
-            Me.KryptonPage4.Name = "KryptonPage4"
-            Me.KryptonPage4.Size = New System.Drawing.Size(817, 641)
-            Me.KryptonPage4.Text = "Plantilla"
-            Me.KryptonPage4.ToolTipTitle = "Page ToolTip"
-            Me.KryptonPage4.UniqueName = "BAF1FBD973C64E3A0FBFD824E83E308B"
-            '
-            'KryptonGroupBox6
-            '
-            Me.KryptonGroupBox6.CaptionOverlap = 0R
-            Me.KryptonGroupBox6.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox6.Location = New System.Drawing.Point(7, 7)
-            Me.KryptonGroupBox6.Name = "KryptonGroupBox6"
-            '
-            'KryptonGroupBox6.Panel
-            '
-            Me.KryptonGroupBox6.Panel.Controls.Add(Me.KryptonDateTimePicker1)
-            Me.KryptonGroupBox6.Size = New System.Drawing.Size(792, 92)
-            Me.KryptonGroupBox6.TabIndex = 0
-            Me.KryptonGroupBox6.Values.Heading = "Datos"
-            '
-            'KryptonDataGridView1
-            '
-            Me.KryptonDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-            Me.KryptonDataGridView1.Location = New System.Drawing.Point(11, 157)
-            Me.KryptonDataGridView1.Name = "KryptonDataGridView1"
-            Me.KryptonDataGridView1.RowHeadersVisible = False
-            Me.KryptonDataGridView1.Size = New System.Drawing.Size(788, 466)
-            Me.KryptonDataGridView1.StateNormal.Background.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.KryptonDataGridView1.TabIndex = 1
-            '
-            'KryptonDateTimePicker1
-            '
-            Me.KryptonDateTimePicker1.Location = New System.Drawing.Point(12, 17)
-            Me.KryptonDateTimePicker1.Name = "KryptonDateTimePicker1"
-            Me.KryptonDateTimePicker1.Size = New System.Drawing.Size(75, 21)
-            Me.KryptonDateTimePicker1.TabIndex = 0
             '
             'FormEstadoPerdidasYGanancias
             '
@@ -1101,11 +1175,12 @@
             CType(Me.cbxShowColumns, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.KryptonPage4, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonPage4.ResumeLayout(False)
+            CType(Me.dgvPlantilla, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.KryptonGroupBox6.Panel, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox6.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox6.Panel.PerformLayout()
             CType(Me.KryptonGroupBox6, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox6.ResumeLayout(False)
-            CType(Me.KryptonDataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
 
         End Sub
@@ -1185,7 +1260,11 @@
         Friend WithEvents chbxOcultarPresupuesto As ComponentFactory.Krypton.Toolkit.KryptonCheckBox
         Friend WithEvents KryptonPage4 As ComponentFactory.Krypton.Navigator.KryptonPage
         Friend WithEvents KryptonGroupBox6 As Krypton.Toolkit.KryptonGroupBox
-        Friend WithEvents KryptonDataGridView1 As Krypton.Toolkit.KryptonDataGridView
-        Friend WithEvents KryptonDateTimePicker1 As Krypton.Toolkit.KryptonDateTimePicker
+        Friend WithEvents dgvPlantilla As Krypton.Toolkit.KryptonDataGridView
+        Friend WithEvents dtpDesdePlantilla As Krypton.Toolkit.KryptonDateTimePicker
+        Friend WithEvents btnBuscarModi As ComponentFactory.Krypton.Toolkit.KryptonButton
+        Friend WithEvents btnExportarPlantilla As Krypton.Toolkit.KryptonButton
+        Friend WithEvents btnCargarPlantilla As ComponentFactory.Krypton.Toolkit.KryptonButton
+        Friend WithEvents btnGuardarPlantilla As ComponentFactory.Krypton.Toolkit.KryptonButton
     End Class
 End Namespace

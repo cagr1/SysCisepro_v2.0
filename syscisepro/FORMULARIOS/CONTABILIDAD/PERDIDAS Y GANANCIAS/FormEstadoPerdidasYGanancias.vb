@@ -57,6 +57,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         Dim _valoresOriginales As New Dictionary(Of String, Dictionary(Of String, Decimal))
 
         ReadOnly _objEstado As New ClassPerdidasYGanancia
+        ReadOnly _objPresupuesto As New ClassPresupuesto
 
         Private Sub CargaIngresosMensual(ByVal all As Boolean)
             Dim fechaDesde = dtpFechaDesde.Value.Day.ToString & "-" & dtpFechaDesde.Value.Month.ToString & "-" & dtpFechaDesde.Value.Year.ToString & " 00:00:00.001"
@@ -2300,6 +2301,180 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
                 row.Visible = If(chbxOcultarPresupuesto.Checked, Not todasCero, True)
             Next
+        End Sub
+
+        Private Sub btnBuscarModi_Click(sender As Object, e As EventArgs) Handles btnBuscarModi.Click
+            dgvPlantilla.DataSource = Nothing
+
+            Dim year = CInt(dtpDesdePlantilla.Value.Year)
+
+            Dim dt = _objEstado.SeleccionarPlantillaPresuepuesto(_tipoCon, year)
+
+            If dt.Rows.Count = 0 Then
+                KryptonMessageBox.Show("No se encontraron datos para el año seleccionado", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Return
+            End If
+
+            dgvPlantilla.DataSource = dt
+            dgvPlantilla.Columns(0).Width = 80
+            dgvPlantilla.Columns(1).Width = 300
+            dgvPlantilla.Columns(2).Width = 60
+            dgvPlantilla.Columns(3).Width = 80
+            dgvPlantilla.Columns(4).Width = 80
+            dgvPlantilla.Columns(5).Width = 80
+            dgvPlantilla.Columns(6).Width = 80
+            dgvPlantilla.Columns(7).Width = 80
+            dgvPlantilla.Columns(8).Width = 80
+            dgvPlantilla.Columns(9).Width = 80
+            dgvPlantilla.Columns(10).Width = 80
+            dgvPlantilla.Columns(11).Width = 80
+            dgvPlantilla.Columns(12).Width = 80
+
+
+            'gvPlantilla.AutoResizeRows()
+
+
+
+        End Sub
+
+        Private Sub btnCargarPlantilla_Click(sender As Object, e As EventArgs) Handles btnCargarPlantilla.Click
+            dgvPlantilla.DataSource = Nothing
+            dgvPlantilla.Rows.Clear()
+            dgvPlantilla.Columns.Clear()
+
+            Dim dtPresupuesto As New DataTable()
+            '1. Leer Archivo Excel con ClosedXML
+            Dim openFileDialog As New OpenFileDialog()
+            openFileDialog.Filter = "Archivos de Excel (*.xlsx)|*.xlsx"
+
+            If openFileDialog.ShowDialog() <> DialogResult.OK Then Return
+
+
+
+            Using workbook As New XLWorkbook(openFileDialog.FileName)
+                    Dim worksheet As IXLWorksheet = workbook.Worksheet(1)
+                    Dim rangeUsed = worksheet.RangeUsed()
+
+                    'Crear DataTable manualmente
+                    Dim firstRow As IXLRangeRow = rangeUsed.FirstRow()
+
+                    For Each cell As IXLCell In firstRow.Cells()
+                        Dim columnName As String = If(Not cell.IsEmpty, cell.Value.ToString().Trim(), $"Columna{cell.Address.ColumnNumber}")
+                        'Verificar si la celda está vacía usando el método propio de ClosedXML
+                        If String.IsNullOrWhiteSpace(columnName) Then
+                            columnName = $"Columna{cell.Address.ColumnNumber}"
+                        End If
+
+                        dtPresupuesto.Columns.Add(columnName)
+                    Next
+                dtPresupuesto.Columns.Add("EstadoValidacion", GetType(String))
+
+                'leer datos excluyendo la fila de encabezados
+                For Each row As IXLRangeRow In rangeUsed.Rows().Skip(1)
+                    Dim newRow = dtPresupuesto.NewRow()
+                    For i As Integer = 0 To dtPresupuesto.Columns.Count - 2 ' Excluir EstadoValidacion
+                        Dim cell = row.Cell(i + 1)
+                        newRow(i) = If(cell IsNot Nothing, cell.GetString().Trim(), String.Empty)
+                    Next
+                    dtPresupuesto.Rows.Add(newRow)
+
+                Next
+
+                ' Verificar duplicados dentro del Excel por combinación Codigo + Cuenta
+                Dim duplicados As New List(Of String)
+                Dim combinacionesSet As New HashSet(Of String)(StringComparer.OrdinalIgnoreCase)
+
+                For Each row As DataRow In dtPresupuesto.Rows
+                    Dim combinacion As String = $"{row("Codigo").ToString().Trim()}|{row("Cuenta").ToString().Trim()}"
+                    If Not combinacionesSet.Add(combinacion) Then
+                        duplicados.Add($"Duplicado en Excel: Código={row("Codigo")} | Cuenta={row("Cuenta")}")
+                    End If
+                Next
+
+                If duplicados.Count > 0 Then
+                    KryptonMessageBox.Show($"Errores de duplicados:{vbCrLf}{String.Join(vbCrLf, duplicados)}", "Errores en Excel", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return ' No escribir nada en el DGV
+                End If
+
+
+                'Validar Cuentas
+                Dim dtCuentasValidas As DataTable = _objEstado.SeleccionarCuentasPerdidasGanancias(_tipoCon)
+                Dim errores As New List(Of String)
+
+                ' Crear diccionario para búsqueda rápida
+                Dim dictCuentasBD As New Dictionary(Of String, String)
+                For Each rowBD As DataRow In dtCuentasValidas.Rows
+                    Dim codigoBD = rowBD("CODIGO").ToString().Trim()
+                    Dim cuentaBD = rowBD("CUENTA").ToString().Trim()
+                    If Not dictCuentasBD.ContainsKey(codigoBD) Then
+                        dictCuentasBD.Add(codigoBD, cuentaBD)
+                    End If
+                Next
+
+
+
+                Dim codigosEnPlantilla As New HashSet(Of String)(StringComparer.OrdinalIgnoreCase)
+
+                For Each row As DataRow In dtPresupuesto.Rows
+                    Dim codigoExcel As String = row("Codigo").ToString().Trim()
+                    Dim cuentaExcel As String = row("Cuenta").ToString().Trim()
+
+                    codigosEnPlantilla.Add(codigoExcel)
+
+                    If dictCuentasBD.ContainsKey(codigoExcel) Then
+                        Dim cuentaBD As String = dictCuentasBD(codigoExcel)
+                        If String.IsNullOrWhiteSpace(cuentaExcel) OrElse cuentaExcel = "0" Then
+                            row("Cuenta") = cuentaBD
+                            row("EstadoValidacion") = "Correcto (rellenado)"
+                        ElseIf Not String.Equals(cuentaExcel, cuentaBD, StringComparison.OrdinalIgnoreCase) Then
+                            row("EstadoValidacion") = $"Error: Cuenta no coincide (Excel: {cuentaExcel} | BD: {cuentaBD})"
+                            errores.Add(row("EstadoValidacion").ToString())
+                        Else
+                            row("EstadoValidacion") = "Correcto"
+                        End If
+                    Else
+                        row("EstadoValidacion") = $"Error: Código no existe ({codigoExcel})"
+                        errores.Add(row("EstadoValidacion").ToString())
+                    End If
+                Next
+
+
+
+
+                ' Verificar códigos de la base que no están en la plantilla
+                For Each codigoBD In dictCuentasBD.Keys
+                    If Not codigosEnPlantilla.Contains(codigoBD) Then
+                        errores.Add($"Falta código en plantilla: {codigoBD} ({dictCuentasBD(codigoBD)})")
+                    End If
+                Next
+
+                If errores.Count > 0 Then
+                    KryptonMessageBox.Show($"Errores de validación: {vbCrLf}{String.Join(vbCrLf, errores)}", "Validación Fallida", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
+                End If
+
+                dgvPlantilla.DataSource = dtPresupuesto
+                dgvPlantilla.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+
+
+            End Using
+
+        End Sub
+
+        Private Sub btnGuardarPlantilla_Click(sender As Object, e As EventArgs) Handles btnGuardarPlantilla.Click
+            If dgvPlantilla.Rows.Count = 0 Then
+                KryptonMessageBox.Show("No hay datos para guardar", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Return
+            End If
+
+            Dim year = CInt(dtpDesdePlantilla.Value.Year)
+            Dim meses() As String = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"}
+
+
+
+
+
+
         End Sub
     End Class
 End Namespace

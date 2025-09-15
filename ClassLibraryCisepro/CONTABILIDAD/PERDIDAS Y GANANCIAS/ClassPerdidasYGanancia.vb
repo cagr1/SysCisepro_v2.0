@@ -140,5 +140,19 @@ Namespace CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         End Function
 
 
+        Public Function SeleccionarPlantillaPresuepuesto(ByVal tipoCon As TipoConexion, ByVal year As Integer) As DataTable
+            Dim pars = New List(Of Object())
+
+            pars.Add(New Object() {"@year", SqlDbType.Int, year})
+
+            Dim tabla = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_buscarPlantillaPresupuesto", True, pars)
+
+            Return tabla
+        End Function
+
+
+
+
+
     End Class
 End Namespace
