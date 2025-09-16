@@ -7,6 +7,10 @@ Imports ClosedXML.Excel
 Imports System.IO
 Imports System.Globalization
 Imports Org.BouncyCastle.Asn1
+Imports System.Data.SqlClient
+Imports ClassLibraryCisepro.ProcesosSql
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+Imports SixLabors.Fonts.Tables.General
 'Imports DocumentFormat.OpenXml.Wordprocessing
 'Imports ComponentFactory.Krypton.Toolkit
 'Imports DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
@@ -19,6 +23,8 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
     Public Class FormEstadoPerdidasYGanancias
 
         Private _tipoCon As TipoConexion
+        Dim _sqlCommands As List(Of SqlCommand)
+        Public UserName As String
         Property TipoCox As Integer
             Get
                 Select Case _tipoCon
@@ -55,9 +61,13 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         Private CambioPrevio As Boolean
         Private PorcentajePrevio As Boolean
         Dim _valoresOriginales As New Dictionary(Of String, Dictionary(Of String, Decimal))
+        Private _ModoNuevo As Integer = 1
+        Private _ModoEdicion As Integer = 2
+        Private _modoActual As Integer = 0
 
         ReadOnly _objEstado As New ClassPerdidasYGanancia
         ReadOnly _objPresupuesto As New ClassPresupuesto
+
 
         Private Sub CargaIngresosMensual(ByVal all As Boolean)
             Dim fechaDesde = dtpFechaDesde.Value.Day.ToString & "-" & dtpFechaDesde.Value.Month.ToString & "-" & dtpFechaDesde.Value.Year.ToString & " 00:00:00.001"
@@ -495,6 +505,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             Me.dgvIngresos.ContextMenuStrip = Me.ContextMenuStripClicDerecho
             Me.dgvEgresos.ContextMenuStrip = Me.ContextMenuStripClicDerechoEgresos
             cbNivel.SelectedIndex = 0
+            _sqlCommands = New List(Of SqlCommand)
 
             'make dtpFechaDesdeCom a year ago
 
@@ -1610,7 +1621,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         End Sub
 
         Private Sub btnExportarComparacion_Click(sender As Object, e As EventArgs) Handles btnExportarComparacion.Click
-            ExportarDatosCompracion_excel(dgvComparacion, "EstadoPyG_Comparativo")
+            ExportarDatosCompracion_excel(dgvComparacion, "EstadoPyG_Comparativo", False)
         End Sub
 
         Private Sub ExportarDatosCompracion(ByVal dgvComparacion As DataGridView, ByVal titulo As String)
@@ -1759,11 +1770,11 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         End Sub
 
 
-        Private Sub ExportarDatosCompracion_excel(ByVal dgv As DataGridView, ByVal titulo As String)
+        Private Sub ExportarDatosCompracion_excel(ByVal dgv As DataGridView, ByVal titulo As String, ByVal esPlantilla As Boolean)
             Try
                 ' 1) Validar si hay filas reales
                 If dgv.Rows.Cast(Of DataGridViewRow).All(Function(r) r.IsNewRow OrElse Not r.Visible) Then
-                    Krypton.Toolkit.KryptonMessageBox.Show("Primero realice una búsqueda", "Validación",
+                    KryptonMessageBox.Show("Primero realice una búsqueda", "Validación",
                                                    KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
@@ -1774,100 +1785,184 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 Dim worksheet = workbook.Worksheets.Add("Comparación")
                 Dim ic = ValidationForms.NumToCharExcelFromVisibleColumnsDataGrid(dgv)
 
-                ' 3) Cabecera
-                Dim objName = ValidationForms.NombreCompany(_tipoCon)
-                Dim nombreCompany As String = If(objName IsNot Nothing AndAlso Not IsDBNull(objName), objName.ToString(), "")
-                worksheet.Cell(1, 1).Value = $"{nombreCompany}  -  {titulo}"
-                worksheet.Range($"A1:{ic}1").Merge()
-                With worksheet.Range($"A1:{ic}1").Style
-                    .Font.Bold = True
-                    .Font.FontSize = 12
-                    .Font.FontColor = XLColor.White
-                    .Alignment.Horizontal = XLAlignmentHorizontalValues.Center
-                    .Fill.BackgroundColor = XLColor.FromColor(ValidationForms.GetColorSistema(_tipoCon))
-                End With
-                worksheet.Range($"A2:{ic}2").Merge().Value = $"PERÍODO: {dtpFechaDesde.Value.ToLongDateString()}  AL {dtpFechaHasta.Value.ToLongDateString()}"
-                worksheet.Range($"A3:{ic}3").Merge().Value = $"Fecha de Reporte: {fec.ToLongDateString()} {fec.ToLongTimeString()}"
-                worksheet.Range($"A2:{ic}3").Style.Font.FontSize = 12
+
+                If Not esPlantilla Then
+
+                    Dim objName = ValidationForms.NombreCompany(_tipoCon)
+                    Dim nombreCompany As String = If(objName IsNot Nothing AndAlso Not IsDBNull(objName), objName.ToString(), "")
+                    worksheet.Cell(1, 1).Value = $"{nombreCompany}  -  {titulo}"
+                    worksheet.Range($"A1:{ic}1").Merge()
+                    With worksheet.Range($"A1:{ic}1").Style
+                        .Font.Bold = True
+                        .Font.FontSize = 12
+                        .Font.FontColor = XLColor.White
+                        .Alignment.Horizontal = XLAlignmentHorizontalValues.Center
+                        .Fill.BackgroundColor = XLColor.FromColor(ValidationForms.GetColorSistema(_tipoCon))
+                    End With
+                    worksheet.Range($"A2:{ic}2").Merge().Value = $"PERÍODO: {dtpFechaDesde.Value.ToLongDateString()}  AL {dtpFechaHasta.Value.ToLongDateString()}"
+                    worksheet.Range($"A3:{ic}3").Merge().Value = $"Fecha de Reporte: {fec.ToLongDateString()} {fec.ToLongTimeString()}"
+                    worksheet.Range($"A2:{ic}3").Style.Font.FontSize = 12
+                End If
 
                 ' 4) Columnas visibles (sin “+” row‐header)
                 Dim allVis = dgv.Columns.Cast(Of DataGridViewColumn).
-                     Where(Function(c) c.Visible AndAlso c.HeaderText <> "+").ToList()
-                Dim idxNivel = dgv.Columns("Nivel").Index
-                Dim idxCuenta = dgv.Columns("Cuenta").Index
-                Dim dataCols = allVis.Where(Function(c) c.HeaderText <> "Cuenta").ToList()
+                Where(Function(c) c.Visible AndAlso c.HeaderText <> "+").ToList()
+
+                Dim colsToExport As List(Of DataGridViewColumn)
+                If esPlantilla Then
+                    colsToExport = allVis.Where(Function(c) Not String.Equals(c.HeaderText, "EstadoValidacion", StringComparison.OrdinalIgnoreCase)).ToList()
+                Else
+                    ' comportamiento original: para reporte con indent etc. mantenemos lógica previa más compleja
+                    colsToExport = allVis
+                End If
+
+
+
+                Dim headin = If(esPlantilla, 1, 5)
+                Dim rowExcel = headin + 1
 
                 ' 5) Máximo nivel y ancho fijo de indent (≈30px → width=4)
-                Dim maxNivel = dgv.Rows.Cast(Of DataGridViewRow).
-                       Where(Function(r) Not r.IsNewRow).
-                       Max(Function(r) If(IsNumeric(r.Cells(idxNivel).Value), CInt(r.Cells(idxNivel).Value), 0))
-                Dim startDataCol = maxNivel + 2
-                For colIdx As Integer = 1 To maxNivel + 1
-                    worksheet.Column(colIdx).Width = 4
-                Next
 
-                ' 6) Encabezados (fila 5)
-                Dim headin = 5
-                For i = 0 To dataCols.Count - 1
-                    With worksheet.Cell(headin, startDataCol + i)
-                        .Value = dataCols(i).HeaderText
-                        .Style.Font.Bold = True
-                        .Style.Font.FontColor = XLColor.White
-                        .Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center
-                        .Style.Border.OutsideBorder = XLBorderStyleValues.Thin
-                        .Style.Fill.BackgroundColor = XLColor.FromColor(ValidationForms.GetColorSistema(_tipoCon))
-                    End With
-                Next
 
-                ' 7) Detalle de filas
-                Dim rowExcel = headin + 1
-                For Each r As DataGridViewRow In dgv.Rows
-                    If r.IsNewRow OrElse (chkOcultar.Checked AndAlso Not r.Visible) Then Continue For
+                If esPlantilla Then
 
-                    Dim bgColor As Color = r.DefaultCellStyle.BackColor
-
-                    ' a) Indent + Cuenta
-                    Dim nivel = If(IsNumeric(r.Cells(idxNivel).Value), CInt(r.Cells(idxNivel).Value), 0)
-                    Dim cuentaStr = If(r.Cells(idxCuenta).Value?.ToString(), "")
-                    With worksheet.Cell(rowExcel, 1 + nivel)
-                        .Value = cuentaStr
-                        .Style.Fill.BackgroundColor = XLColor.FromColor(bgColor)
-                    End With
-
-                    ' b) Resto de columnas
-                    For i = 0 To dataCols.Count - 1
-                        Dim col = dataCols(i)
-                        Dim cel = worksheet.Cell(rowExcel, startDataCol + i)
-                        Dim v = r.Cells(col.Index).Value
-
-                        If col.HeaderText = "Codigo" Or col.HeaderText = "Nivel" Or col.HeaderText = "Padre" Then
-                            ' siempre texto
-                            cel.Value = If(v?.ToString(), "")
-                        ElseIf IsNumeric(v) Then
-                            cel.Value = CDbl(v)
-                            cel.Style.NumberFormat.Format = "#,##0.00"
-                        Else
-                            cel.Value = If(v?.ToString(), "")
-                        End If
-
-                        cel.Style.Border.LeftBorder = XLBorderStyleValues.Thin
-                        cel.Style.Border.RightBorder = XLBorderStyleValues.Thin
-                        If r.Index = dgv.Rows.Count - 1 Then cel.Style.Border.BottomBorder = XLBorderStyleValues.Thin
+                    For i = 0 To colsToExport.Count - 1
+                        With worksheet.Cell(headin, i + 1)
+                            .Value = colsToExport(i).HeaderText
+                            .Style.Font.Bold = True
+                            .Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center
+                            .Style.Border.OutsideBorder = XLBorderStyleValues.Thin
+                        End With
                     Next
 
-                    rowExcel += 1
-                Next
+                    ' 5) Filas: ITERAR exactamente igual al dgv (orden y columnas)
+                    For Each r As DataGridViewRow In dgv.Rows
+                        If r.IsNewRow OrElse (chkOcultar.Checked AndAlso Not r.Visible) Then Continue For
 
-                ' 8) Ajustes y guardado
-                'worksheet.Columns($"A:{ic}").AdjustToContents()
-                Dim lastDataCol = startDataCol + dataCols.Count - 1
-                For colIdx As Integer = startDataCol To lastDataCol
-                    worksheet.Column(colIdx).AdjustToContents()
-                Next
+                        For i = 0 To colsToExport.Count - 1
+                            Dim col = colsToExport(i)
+                            Dim v = r.Cells(col.Index).Value
+                            Dim cel = worksheet.Cell(rowExcel, i + 1)
+
+                            ' Forzar tipos: Codigo & Cuenta => texto; Year => entero; demás numéricos => decimal contable
+                            Select Case col.HeaderText.Trim()
+                                Case "Codigo", "Cuenta"
+                                    ' Forzar texto (evita que Excel lo convierta a número)
+                                    cel.SetValue(If(v?.ToString(), ""))
+                                    cel.Style.NumberFormat.Format = "@" ' formato texto
+
+                                Case "Year"
+                                    Dim s = If(v?.ToString(), "")
+                                    Dim n As Integer
+                                    If Integer.TryParse(s, n) Then
+                                        cel.Value = n
+                                        cel.Style.NumberFormat.Format = "0"
+                                    Else
+                                        cel.Value = s
+                                    End If
+
+                                Case "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+                                    If v IsNot Nothing AndAlso Not IsDBNull(v) AndAlso IsNumeric(v) Then
+                                        cel.Value = Convert.ToDecimal(v)
+                                    Else
+                                        cel.Value = 0D
+                                    End If
+                                    cel.Style.NumberFormat.Format = "#,##0.00"
+
+                                Case Else
+                                    ' Por defecto: mantener texto
+                                    cel.SetValue(If(v?.ToString(), ""))
+                            End Select
+
+                            cel.Style.Border.OutsideBorder = XLBorderStyleValues.Thin
+                        Next
+                        rowExcel += 1
+                    Next
+
+                    ' Ajustar columnas
+                    worksheet.Columns().AdjustToContents()
+                Else
+                    Dim idxNivel = dgv.Columns("Nivel").Index
+                    Dim idxCuenta = dgv.Columns("Cuenta").Index
+                    Dim dataCols = allVis.Where(Function(c) c.HeaderText <> "Cuenta").ToList()
+
+                    Dim maxNivel = dgv.Rows.Cast(Of DataGridViewRow).
+                      Where(Function(r) Not r.IsNewRow).
+                      Max(Function(r) If(IsNumeric(r.Cells(idxNivel).Value), CInt(r.Cells(idxNivel).Value), 0))
+                    Dim startDataCol = maxNivel + 2
+                    For colIdx As Integer = 1 To maxNivel + 1
+                        worksheet.Column(colIdx).Width = 4
+                    Next
+
+                    For i = 0 To dataCols.Count - 1
+                        With worksheet.Cell(headin, startDataCol + i)
+                            .Value = dataCols(i).HeaderText
+                            .Style.Font.Bold = True
+                            .Style.Font.FontColor = XLColor.White
+                            .Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center
+                            .Style.Border.OutsideBorder = XLBorderStyleValues.Thin
+                            .Style.Fill.BackgroundColor = XLColor.FromColor(ValidationForms.GetColorSistema(_tipoCon))
+                        End With
+                    Next
+
+                    ' 7) Detalle de filas
+
+                    For Each r As DataGridViewRow In dgv.Rows
+                        If r.IsNewRow OrElse (chkOcultar.Checked AndAlso Not r.Visible) Then Continue For
+
+                        Dim bgColor As Color = r.DefaultCellStyle.BackColor
+
+                        ' a) Indent + Cuenta
+                        Dim nivel = If(IsNumeric(r.Cells(idxNivel).Value), CInt(r.Cells(idxNivel).Value), 0)
+                        Dim cuentaStr = If(r.Cells(idxCuenta).Value?.ToString(), "")
+                        With worksheet.Cell(rowExcel, 1 + nivel)
+                            .Value = cuentaStr
+                            .Style.Fill.BackgroundColor = XLColor.FromColor(bgColor)
+                        End With
+
+                        ' b) Resto de columnas
+                        For i = 0 To dataCols.Count - 1
+                            Dim col = dataCols(i)
+                            Dim cel = worksheet.Cell(rowExcel, startDataCol + i)
+                            Dim v = r.Cells(col.Index).Value
+
+                            If col.HeaderText = "Codigo" Or col.HeaderText = "Nivel" Or col.HeaderText = "Padre" Then
+                                ' siempre texto
+                                cel.Value = If(v?.ToString(), "")
+                            ElseIf IsNumeric(v) Then
+                                cel.Value = CDbl(v)
+                                cel.Style.NumberFormat.Format = "#,##0.00"
+                            Else
+                                cel.Value = If(v?.ToString(), "")
+                            End If
+
+                            cel.Style.Border.LeftBorder = XLBorderStyleValues.Thin
+                            cel.Style.Border.RightBorder = XLBorderStyleValues.Thin
+                            If r.Index = dgv.Rows.Count - 1 Then cel.Style.Border.BottomBorder = XLBorderStyleValues.Thin
+                        Next
+
+                        rowExcel += 1
+                    Next
+
+                    ' 8) Ajustes y guardado
+                    'worksheet.Columns($"A:{ic}").AdjustToContents()
+                    Dim lastDataCol = startDataCol + dataCols.Count - 1
+                    For colIdx As Integer = startDataCol To lastDataCol
+                        worksheet.Column(colIdx).AdjustToContents()
+                    Next
+
+
+                End If
+
+
+
+
+
                 Using sfd As New SaveFileDialog() With {
-            .Filter = "Excel files (*.xlsx)|*.xlsx",
-            .FileName = $"{titulo}_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx"
-        }
+                    .Filter = "Excel files (*.xlsx)|*.xlsx",
+                    .FileName = $"{titulo}_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx"
+                }
+
                     If sfd.ShowDialog() = DialogResult.OK Then
                         workbook.SaveAs(sfd.FileName)
                         Process.Start(sfd.FileName)
@@ -1902,109 +1997,114 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
                 Dim dtPresupuesto As New DataTable()
                 '1. Leer Archivo Excel con ClosedXML
-                Dim openFileDialog As New OpenFileDialog()
-                openFileDialog.Filter = "Archivos de Excel (*.xlsx)|*.xlsx"
+                'Dim openFileDialog As New OpenFileDialog()
+                'openFileDialog.Filter = "Archivos de Excel (*.xlsx)|*.xlsx"
 
-                If openFileDialog.ShowDialog() = DialogResult.OK Then
-                    Using workbook As New XLWorkbook(openFileDialog.FileName)
-                        Dim worksheet As IXLWorksheet = workbook.Worksheet(1)
-                        Dim rangeUsed = worksheet.RangeUsed()
+                'If openFileDialog.ShowDialog() = DialogResult.OK Then
+                '    Using workbook As New XLWorkbook(openFileDialog.FileName)
+                '        Dim worksheet As IXLWorksheet = workbook.Worksheet(1)
+                '        Dim rangeUsed = worksheet.RangeUsed()
 
-                        'Crear DataTable manualmente
-                        Dim firstRow As IXLRangeRow = rangeUsed.FirstRow()
+                '        'Crear DataTable manualmente
+                '        Dim firstRow As IXLRangeRow = rangeUsed.FirstRow()
 
-                        For Each cell As IXLCell In firstRow.Cells()
-                            Dim columnName As String
-                            'Verificar si la celda está vacía usando el método propio de ClosedXML
-                            If Not cell.IsEmpty Then
-                                columnName = cell.Value.ToString().Trim()
-                            Else
-                                columnName = $"Columna{cell.Address.ColumnNumber}"
-                            End If
-                            'Validar nombre de columna vacío
-                            If String.IsNullOrWhiteSpace(columnName) Then
-                                columnName = $"Columna{cell.Address.ColumnNumber}"
-                            End If
+                '        For Each cell As IXLCell In firstRow.Cells()
+                '            Dim columnName As String
+                '            'Verificar si la celda está vacía usando el método propio de ClosedXML
+                '            If Not cell.IsEmpty Then
+                '                columnName = cell.Value.ToString().Trim()
+                '            Else
+                '                columnName = $"Columna{cell.Address.ColumnNumber}"
+                '            End If
+                '            'Validar nombre de columna vacío
+                '            If String.IsNullOrWhiteSpace(columnName) Then
+                '                columnName = $"Columna{cell.Address.ColumnNumber}"
+                '            End If
 
-                            dtPresupuesto.Columns.Add(columnName)
-                        Next
-                        'leer datos excluyendo la fila de encabezados
-                        For Each row As IXLRangeRow In rangeUsed.Rows().Skip(1)
-                            Dim newRow = dtPresupuesto.NewRow()
-                            For i As Integer = 0 To dtPresupuesto.Columns.Count - 1
-                                Dim cell = row.Cell(i + 1)
+                '            dtPresupuesto.Columns.Add(columnName)
+                '        Next
+                '        'leer datos excluyendo la fila de encabezados
+                '        For Each row As IXLRangeRow In rangeUsed.Rows().Skip(1)
+                '            Dim newRow = dtPresupuesto.NewRow()
+                '            For i As Integer = 0 To dtPresupuesto.Columns.Count - 1
+                '                Dim cell = row.Cell(i + 1)
 
-                                ' Manejar diferentes tipos de celdas
-                                If cell.DataType = XLDataType.Number Then
-                                    newRow(i) = cell.GetValue(Of Decimal)()
-                                Else
-                                    Dim stringValue = cell.Value.ToString().Trim()
-                                    If Decimal.TryParse(stringValue, Nothing) Then
-                                        newRow(i) = CDec(stringValue)
-                                    Else
-                                        newRow(i) = 0D ' Valor por defecto para no numéricos
-                                    End If
-                                End If
-                            Next
-                            dtPresupuesto.Rows.Add(newRow)
-                        Next
+                '                ' Manejar diferentes tipos de celdas
+                '                If cell.DataType = XLDataType.Number Then
+                '                    newRow(i) = cell.GetValue(Of Decimal)()
+                '                Else
+                '                    Dim stringValue = cell.Value.ToString().Trim()
+                '                    If Decimal.TryParse(stringValue, Nothing) Then
+                '                        newRow(i) = CDec(stringValue)
+                '                    Else
+                '                        newRow(i) = 0D ' Valor por defecto para no numéricos
+                '                    End If
+                '                End If
+                '            Next
+                '            dtPresupuesto.Rows.Add(newRow)
+                '        Next
 
-                        'Validar Cuentas
-                        Dim dtCuentasValidas As DataTable = _objEstado.SeleccionarCuentasPerdidasGanancias(_tipoCon)
-                        Dim errores As New List(Of String)
+                '        'Validar Cuentas
+                '        Dim dtCuentasValidas As DataTable = _objEstado.SeleccionarCuentasPerdidasGanancias(_tipoCon)
+                '        Dim errores As New List(Of String)
 
 
-                        Dim cuentasNoEncontradas As New List(Of String)
+                '        Dim cuentasNoEncontradas As New List(Of String)
 
-                        ' Crear diccionario para búsqueda rápida
-                        Dim dictCuentasBD As New Dictionary(Of String, String)
-                        For Each rowBD As DataRow In dtCuentasValidas.Rows
-                            Dim codigoBD = rowBD("CODIGO").ToString().Trim()
-                            Dim cuentaBD = rowBD("CUENTA").ToString().Trim()
-                            If Not dictCuentasBD.ContainsKey(codigoBD) Then
-                                dictCuentasBD.Add(codigoBD, cuentaBD)
-                            End If
-                        Next
+                '        ' Crear diccionario para búsqueda rápida
+                '        Dim dictCuentasBD As New Dictionary(Of String, String)
+                '        For Each rowBD As DataRow In dtCuentasValidas.Rows
+                '            Dim codigoBD = rowBD("CODIGO").ToString().Trim()
+                '            Dim cuentaBD = rowBD("CUENTA").ToString().Trim()
+                '            If Not dictCuentasBD.ContainsKey(codigoBD) Then
+                '                dictCuentasBD.Add(codigoBD, cuentaBD)
+                '            End If
+                '        Next
 
-                        For Each row As DataRow In dtPresupuesto.Rows
-                            Dim codigoExcel As String = row("Codigo").ToString().Trim()
-                            Dim cuentaExcel As String = row("Cuenta").ToString().Trim()
+                '        For Each row As DataRow In dtPresupuesto.Rows
+                '            Dim codigoExcel As String = row("Codigo").ToString().Trim()
+                '            Dim cuentaExcel As String = row("Cuenta").ToString().Trim()
 
-                            If dictCuentasBD.ContainsKey(codigoExcel) Then
-                                Dim cuentaBD As String = dictCuentasBD(codigoExcel)
+                '            If dictCuentasBD.ContainsKey(codigoExcel) Then
+                '                Dim cuentaBD As String = dictCuentasBD(codigoExcel)
 
-                                ' Comparación insensible a mayúsculas y espacios
-                                If Not String.Equals(cuentaExcel, cuentaBD, StringComparison.OrdinalIgnoreCase) Then
-                                    ' Intenta una comparación más flexible
-                                    If cuentaExcel = "0" OrElse String.IsNullOrWhiteSpace(cuentaExcel) Then
-                                        ' Si en Excel viene vacío o cero, actualizamos con el valor de BD
-                                        row("Cuenta") = cuentaBD
-                                    Else
-                                        errores.Add($"Cuenta no coincide: {codigoExcel} (Excel: {cuentaExcel} | BD: {cuentaBD})")
-                                    End If
-                                End If
-                            Else
-                                cuentasNoEncontradas.Add(codigoExcel)
-                            End If
-                        Next
+                '                ' Comparación insensible a mayúsculas y espacios
+                '                If Not String.Equals(cuentaExcel, cuentaBD, StringComparison.OrdinalIgnoreCase) Then
+                '                    ' Intenta una comparación más flexible
+                '                    If cuentaExcel = "0" OrElse String.IsNullOrWhiteSpace(cuentaExcel) Then
+                '                        ' Si en Excel viene vacío o cero, actualizamos con el valor de BD
+                '                        row("Cuenta") = cuentaBD
+                '                    Else
+                '                        errores.Add($"Cuenta no coincide: {codigoExcel} (Excel: {cuentaExcel} | BD: {cuentaBD})")
+                '                    End If
+                '                End If
+                '            Else
+                '                cuentasNoEncontradas.Add(codigoExcel)
+                '            End If
+                '        Next
 
-                        ' Manejar cuentas no encontradas
-                        If cuentasNoEncontradas.Count > 0 Then
-                            errores.AddRange(cuentasNoEncontradas.Select(Function(c) $"Código no existe: {c}"))
-                        End If
+                '        ' Manejar cuentas no encontradas
+                '        If cuentasNoEncontradas.Count > 0 Then
+                '            errores.AddRange(cuentasNoEncontradas.Select(Function(c) $"Código no existe: {c}"))
+                '        End If
 
-                        If errores.Count > 0 Then
-                            KryptonMessageBox.Show($"Errores de validación: {vbCrLf}{String.Join(vbCrLf, errores)}", "Validación Fallida", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
-                            Exit Sub
-                        End If
-                    End Using
-                Else
-                    Return
-                End If
+                '        If errores.Count > 0 Then
+                '            KryptonMessageBox.Show($"Errores de validación: {vbCrLf}{String.Join(vbCrLf, errores)}", "Validación Fallida", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                '            Exit Sub
+                '        End If
+                '    End Using
+                'Else
+                '    Return
+                'End If
 
                 Dim FechaDesde = New Date(dtpFechaDesdePresupuesto.Value.Year, dtpFechaDesdePresupuesto.Value.Month, dtpFechaDesdePresupuesto.Value.Day, 0, 0, 0)
                 Dim FechaHasta = New Date(dtpFechaHastaPresupuesto.Value.Year, dtpFechaHastaPresupuesto.Value.Month, dtpFechaHastaPresupuesto.Value.Day, 23, 59, 59)
                 Dim dtReal = _objEstado.SeleccionarEstadoPerdidasGananciasSimple(_tipoCon, FechaDesde, FechaHasta)
+                dtPresupuesto = _objEstado.SeleccionarPlantillaPresuepuesto(_tipoCon, CInt(FechaDesde.Year))
+
+                'remover columna Year de dtPresupuesto
+                dtPresupuesto.Columns.Remove("Year")
+
 
                 Dim mesesSP As List(Of String) = dtReal.Columns.Cast(Of DataColumn)().
                 Where(Function(c) c.ColumnName <> "Codigo" AndAlso c.ColumnName <> "Cuenta" AndAlso c.ColumnName <> "Nivel" AndAlso c.ColumnName <> "Padre").
@@ -2165,7 +2265,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         End Sub
 
         Private Sub btnExportarPresupuesto_Click(sender As Object, e As EventArgs) Handles btnExportarPresupuesto.Click
-            ExportarDatosCompracion_excel(dgvPresupuesto, "EstadoPyG_Presupuesto")
+            ExportarDatosCompracion_excel(dgvPresupuesto, "EstadoPyG_Presupuesto", False)
         End Sub
 
         Private Sub dgvPresupuesto_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPresupuesto.CellClick
@@ -2307,7 +2407,6 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
             dgvPlantilla.DataSource = Nothing
 
             Dim year = CInt(dtpDesdePlantilla.Value.Year)
-
             Dim dt = _objEstado.SeleccionarPlantillaPresuepuesto(_tipoCon, year)
 
             If dt.Rows.Count = 0 Then
@@ -2352,21 +2451,20 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
 
             Using workbook As New XLWorkbook(openFileDialog.FileName)
-                    Dim worksheet As IXLWorksheet = workbook.Worksheet(1)
-                    Dim rangeUsed = worksheet.RangeUsed()
+                Dim worksheet As IXLWorksheet = workbook.Worksheet(1)
+                Dim rangeUsed = worksheet.RangeUsed()
 
-                    'Crear DataTable manualmente
-                    Dim firstRow As IXLRangeRow = rangeUsed.FirstRow()
+                'Crear DataTable manualmente
+                Dim firstRow As IXLRangeRow = rangeUsed.FirstRow()
+                For Each cell As IXLCell In firstRow.Cells()
+                    Dim columnName As String = If(Not cell.IsEmpty, cell.Value.ToString().Trim(), $"Columna{cell.Address.ColumnNumber}")
+                    'Verificar si la celda está vacía usando el método propio de ClosedXML
+                    If String.IsNullOrWhiteSpace(columnName) Then
+                        columnName = $"Columna{cell.Address.ColumnNumber}"
+                    End If
 
-                    For Each cell As IXLCell In firstRow.Cells()
-                        Dim columnName As String = If(Not cell.IsEmpty, cell.Value.ToString().Trim(), $"Columna{cell.Address.ColumnNumber}")
-                        'Verificar si la celda está vacía usando el método propio de ClosedXML
-                        If String.IsNullOrWhiteSpace(columnName) Then
-                            columnName = $"Columna{cell.Address.ColumnNumber}"
-                        End If
-
-                        dtPresupuesto.Columns.Add(columnName)
-                    Next
+                    dtPresupuesto.Columns.Add(columnName)
+                Next
                 dtPresupuesto.Columns.Add("EstadoValidacion", GetType(String))
 
                 'leer datos excluyendo la fila de encabezados
@@ -2462,19 +2560,193 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         End Sub
 
         Private Sub btnGuardarPlantilla_Click(sender As Object, e As EventArgs) Handles btnGuardarPlantilla.Click
+            _sqlCommands.Clear()
+
+            Dim nombreU As String = ""
+            Select Case _modoActual
+                Case _ModoNuevo
+                    nombreU = "Nuevo Plantilla por: " & UserName
+                    NuevaPlantilla()
+                Case _ModoEdicion
+                    nombreU = "Actualizar Plantilla por: " & UserName
+                    UpdatePlantilla()
+                Case Else
+                    KryptonMessageBox.Show("No hay datos para guardar", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    Return
+            End Select
+
+            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
+            If res(0) Then
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                _modoActual = 0
+                Habilitar(0)
+            Else
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
+            End If
+
+        End Sub
+
+        Private Sub btnUpdatePlantilla_Click(sender As Object, e As EventArgs) Handles btnUpdatePlantilla.Click
+            _modoActual = _ModoEdicion
+            Habilitar(_ModoEdicion)
+        End Sub
+
+        Private Sub btnNuevoPlantilla_Click(sender As Object, e As EventArgs) Handles btnNuevoPlantilla.Click
+            _modoActual = _ModoNuevo
+            Habilitar(_ModoNuevo)
+        End Sub
+
+
+
+        Private Function NuevaPlantilla()
             If dgvPlantilla.Rows.Count = 0 Then
                 KryptonMessageBox.Show("No hay datos para guardar", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
-                Return
+
+            End If
+
+            Dim year = CInt(dtpDesdePlantilla.Value.Year)
+            Dim meses() As String = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"}
+
+            Try
+
+                For Each row As DataGridViewRow In dgvPlantilla.Rows
+
+                    If row.IsNewRow Then Continue For
+
+                    Dim codigo = row.Cells("Codigo").Value.ToString().Trim()
+                    Dim cuenta = row.Cells("Cuenta").Value.ToString().Trim()
+
+                    If String.IsNullOrWhiteSpace(codigo) OrElse String.IsNullOrWhiteSpace(cuenta) Then Continue For
+
+                    For mesIndex As Integer = 0 To meses.Length - 1
+
+                        Dim colName As String = meses(mesIndex)
+
+                        If Not dgvPlantilla.Columns.Contains(colName) Then Continue For
+
+                        Dim valorObj = row.Cells(colName).Value
+                        Dim presupuesto As Decimal = 0D
+
+                        If valorObj IsNot Nothing AndAlso IsNumeric(valorObj) Then
+                            presupuesto = CDec(valorObj)
+                        End If
+
+
+                        With _objPresupuesto
+                            .Codigo = codigo
+                            .Cuenta = cuenta
+                            .Mes = mesIndex + 1
+                            .Year = year
+                            .Presupuesto = presupuesto
+                            .fecha = DateTime.Now
+                            .Estado = True
+                        End With
+
+                        _sqlCommands.Add(_objPresupuesto.Guardar())
+
+                    Next
+                Next
+
+
+
+            Catch ex As Exception
+                KryptonMessageBox.Show("Error: " & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+
+            End Try
+        End Function
+
+        Private Function UpdatePlantilla()
+            If dgvPlantilla.Rows.Count = 0 Then
+                KryptonMessageBox.Show("No hay datos para guardar", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+
             End If
 
             Dim year = CInt(dtpDesdePlantilla.Value.Year)
             Dim meses() As String = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"}
 
 
+            Try
+
+                For Each row As DataGridViewRow In dgvPlantilla.Rows
+
+                    If row.IsNewRow Then Continue For
+
+                    Dim codigo = row.Cells("Codigo").Value.ToString().Trim()
+                    Dim cuenta = row.Cells("Cuenta").Value.ToString().Trim()
+
+                    If String.IsNullOrWhiteSpace(codigo) OrElse String.IsNullOrWhiteSpace(cuenta) Then Continue For
+
+                    For mesIndex As Integer = 0 To meses.Length - 1
+
+                        Dim colName As String = meses(mesIndex)
+
+                        If Not dgvPlantilla.Columns.Contains(colName) Then Continue For
+
+                        Dim valorObj = row.Cells(colName).Value
+                        Dim presupuesto As Decimal = 0D
+
+                        With _objPresupuesto
+                            .Codigo = codigo
+                            .Cuenta = cuenta
+                            .Mes = mesIndex + 1
+                            .Year = year
+                            .Presupuesto = presupuesto
+                            .fecha = DateTime.Now
+                            .Estado = True
+                        End With
+
+                        _sqlCommands.Add(_objPresupuesto.Update())
+
+                    Next
+                Next
 
 
+            Catch ex As Exception
+                KryptonMessageBox.Show("Error: " & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+
+            End Try
+        End Function
+
+        Private Function Habilitar(modo As Integer)
+            Select Case modo
+                Case _ModoNuevo
+
+                    btnNuevoPlantilla.Enabled = False
+                    btnUpdatePlantilla.Enabled = False
+                    btnGuardarPlantilla.Enabled = True
+                    btnCargarPlantilla.Enabled = True
+                    btnBuscarModi.Enabled = False
+                    btnCancel.Enabled = True
+
+                Case _ModoEdicion
+                    btnNuevoPlantilla.Enabled = False
+                    btnUpdatePlantilla.Enabled = False
+                    btnGuardarPlantilla.Enabled = True
+                    btnCargarPlantilla.Enabled = True
+                    btnCancel.Enabled = True
+
+                Case Else
+                    btnNuevoPlantilla.Enabled = True
+                    btnUpdatePlantilla.Enabled = True
+                    btnGuardarPlantilla.Enabled = False
+                    btnCargarPlantilla.Enabled = False
+                    btnBuscarModi.Enabled = True
 
 
+            End Select
+        End Function
+
+        Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+            dgvPlantilla.DataSource = Nothing
+            dgvPlantilla.Rows.Clear()
+            _modoActual = 0
+            Habilitar(0)
+
+        End Sub
+
+        Private Sub btnExportarPlantilla_Click(sender As Object, e As EventArgs) Handles btnExportarPlantilla.Click
+            ExportarDatosCompracion_excel(dgvPlantilla, "Formato de Plantilla", True)
         End Sub
     End Class
 End Namespace

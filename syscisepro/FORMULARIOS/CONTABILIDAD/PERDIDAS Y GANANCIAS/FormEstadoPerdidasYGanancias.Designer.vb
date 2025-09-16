@@ -106,6 +106,9 @@
             Me.KryptonPage4 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.dgvPlantilla = New Krypton.Toolkit.KryptonDataGridView()
             Me.KryptonGroupBox6 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.btnNuevoPlantilla = New ComponentFactory.Krypton.Toolkit.KryptonButton()
+            Me.btnCancel = New ComponentFactory.Krypton.Toolkit.KryptonButton()
+            Me.btnUpdatePlantilla = New ComponentFactory.Krypton.Toolkit.KryptonButton()
             Me.btnGuardarPlantilla = New ComponentFactory.Krypton.Toolkit.KryptonButton()
             Me.btnCargarPlantilla = New ComponentFactory.Krypton.Toolkit.KryptonButton()
             Me.btnExportarPlantilla = New Krypton.Toolkit.KryptonButton()
@@ -584,7 +587,7 @@
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
             Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarRibbonTabGroup
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage3, Me.KryptonPage2, Me.KryptonPage4})
-            Me.KryptonNavigator1.SelectedIndex = 3
+            Me.KryptonNavigator1.SelectedIndex = 0
             Me.KryptonNavigator1.Size = New System.Drawing.Size(819, 670)
             Me.KryptonNavigator1.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonNavigator1.TabIndex = 294
@@ -1009,6 +1012,9 @@
             '
             'KryptonGroupBox6.Panel
             '
+            Me.KryptonGroupBox6.Panel.Controls.Add(Me.btnNuevoPlantilla)
+            Me.KryptonGroupBox6.Panel.Controls.Add(Me.btnCancel)
+            Me.KryptonGroupBox6.Panel.Controls.Add(Me.btnUpdatePlantilla)
             Me.KryptonGroupBox6.Panel.Controls.Add(Me.btnGuardarPlantilla)
             Me.KryptonGroupBox6.Panel.Controls.Add(Me.btnCargarPlantilla)
             Me.KryptonGroupBox6.Panel.Controls.Add(Me.btnExportarPlantilla)
@@ -1018,10 +1024,44 @@
             Me.KryptonGroupBox6.TabIndex = 0
             Me.KryptonGroupBox6.Values.Heading = "Datos"
             '
+            'btnNuevoPlantilla
+            '
+            Me.btnNuevoPlantilla.AutoSize = True
+            Me.btnNuevoPlantilla.Location = New System.Drawing.Point(139, 12)
+            Me.btnNuevoPlantilla.Name = "btnNuevoPlantilla"
+            Me.btnNuevoPlantilla.Size = New System.Drawing.Size(88, 30)
+            Me.btnNuevoPlantilla.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft
+            Me.btnNuevoPlantilla.TabIndex = 299
+            Me.btnNuevoPlantilla.Values.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnNuevoPlantilla.Values.Text = "Nuevo"
+            '
+            'btnCancel
+            '
+            Me.btnCancel.AutoSize = True
+            Me.btnCancel.Location = New System.Drawing.Point(564, 12)
+            Me.btnCancel.Name = "btnCancel"
+            Me.btnCancel.Size = New System.Drawing.Size(100, 30)
+            Me.btnCancel.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft
+            Me.btnCancel.TabIndex = 298
+            Me.btnCancel.Values.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancel.Values.Text = "Cancelar"
+            '
+            'btnUpdatePlantilla
+            '
+            Me.btnUpdatePlantilla.AutoSize = True
+            Me.btnUpdatePlantilla.Location = New System.Drawing.Point(446, 12)
+            Me.btnUpdatePlantilla.Name = "btnUpdatePlantilla"
+            Me.btnUpdatePlantilla.Size = New System.Drawing.Size(100, 30)
+            Me.btnUpdatePlantilla.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft
+            Me.btnUpdatePlantilla.TabIndex = 297
+            Me.btnUpdatePlantilla.Values.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnUpdatePlantilla.Values.Text = "Actualizar"
+            '
             'btnGuardarPlantilla
             '
             Me.btnGuardarPlantilla.AutoSize = True
-            Me.btnGuardarPlantilla.Location = New System.Drawing.Point(239, 12)
+            Me.btnGuardarPlantilla.Enabled = False
+            Me.btnGuardarPlantilla.Location = New System.Drawing.Point(341, 12)
             Me.btnGuardarPlantilla.Name = "btnGuardarPlantilla"
             Me.btnGuardarPlantilla.Size = New System.Drawing.Size(88, 30)
             Me.btnGuardarPlantilla.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft
@@ -1032,7 +1072,8 @@
             'btnCargarPlantilla
             '
             Me.btnCargarPlantilla.AutoSize = True
-            Me.btnCargarPlantilla.Location = New System.Drawing.Point(137, 12)
+            Me.btnCargarPlantilla.Enabled = False
+            Me.btnCargarPlantilla.Location = New System.Drawing.Point(239, 12)
             Me.btnCargarPlantilla.Name = "btnCargarPlantilla"
             Me.btnCargarPlantilla.Size = New System.Drawing.Size(88, 30)
             Me.btnCargarPlantilla.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft
@@ -1042,7 +1083,7 @@
             '
             'btnExportarPlantilla
             '
-            Me.btnExportarPlantilla.Location = New System.Drawing.Point(646, 12)
+            Me.btnExportarPlantilla.Location = New System.Drawing.Point(690, 12)
             Me.btnExportarPlantilla.Name = "btnExportarPlantilla"
             Me.btnExportarPlantilla.Size = New System.Drawing.Size(30, 30)
             Me.btnExportarPlantilla.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.[False]
@@ -1063,7 +1104,7 @@
             '
             Me.btnBuscarModi.AutoSize = True
             Me.btnBuscarModi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-            Me.btnBuscarModi.Location = New System.Drawing.Point(83, 12)
+            Me.btnBuscarModi.Location = New System.Drawing.Point(91, 12)
             Me.btnBuscarModi.Name = "btnBuscarModi"
             Me.btnBuscarModi.Size = New System.Drawing.Size(32, 32)
             Me.btnBuscarModi.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
@@ -1266,5 +1307,8 @@
         Friend WithEvents btnExportarPlantilla As Krypton.Toolkit.KryptonButton
         Friend WithEvents btnCargarPlantilla As ComponentFactory.Krypton.Toolkit.KryptonButton
         Friend WithEvents btnGuardarPlantilla As ComponentFactory.Krypton.Toolkit.KryptonButton
+        Friend WithEvents btnCancel As ComponentFactory.Krypton.Toolkit.KryptonButton
+        Friend WithEvents btnUpdatePlantilla As ComponentFactory.Krypton.Toolkit.KryptonButton
+        Friend WithEvents btnNuevoPlantilla As ComponentFactory.Krypton.Toolkit.KryptonButton
     End Class
 End Namespace

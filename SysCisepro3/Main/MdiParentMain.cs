@@ -1492,7 +1492,7 @@ namespace SysCisepro3.Main
         }
         private void gENERALToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS.FormEstadoPerdidasYGanancias { MdiParent = this, TipoCox = TipoCox };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS.FormEstadoPerdidasYGanancias { MdiParent = this, TipoCox = TipoCox, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void dETALLADOToolStripMenuItem_Click(object sender, EventArgs e)
