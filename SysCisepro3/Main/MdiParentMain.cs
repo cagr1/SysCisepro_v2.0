@@ -2190,6 +2190,13 @@ namespace SysCisepro3.Main
             FrmFlujoOperaciones.Instancia.BringToFront();
         }
 
+        private void aRMAStoolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
 
 
 

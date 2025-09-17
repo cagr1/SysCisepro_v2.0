@@ -230,6 +230,7 @@
             this.gENERALToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dETALLADOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bALANCEFINALToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fLUJOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsRecursoHumano = new System.Windows.Forms.ToolStripDropDownButton();
             this.rEGISTROPROYECTOCONTRATACIONtoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rEGISTRODEASPIRANTESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -262,6 +263,7 @@
             this.dIVISIÓNPOLÍTICADELPAISToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sITIOSDETRABAJOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pROGRAMACIÓNGENERALToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aRMAStoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator26 = new System.Windows.Forms.ToolStripSeparator();
             this.rEPORTEASISTENCIAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rEGISTRARSANCIÓNMULTAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -297,7 +299,6 @@
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.fLUJOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -2124,6 +2125,14 @@
             this.bALANCEFINALToolStripMenuItem.Text = "BALANCE FINAL";
             this.bALANCEFINALToolStripMenuItem.Click += new System.EventHandler(this.bALANCEFINALToolStripMenuItem_Click);
             // 
+            // fLUJOToolStripMenuItem
+            // 
+            this.fLUJOToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.finance_mode_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.fLUJOToolStripMenuItem.Name = "fLUJOToolStripMenuItem";
+            this.fLUJOToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.fLUJOToolStripMenuItem.Text = "FLUJO DE OPERACION";
+            this.fLUJOToolStripMenuItem.Click += new System.EventHandler(this.fLUJOToolStripMenuItem_Click);
+            // 
             // tsRecursoHumano
             // 
             this.tsRecursoHumano.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -2399,6 +2408,7 @@
             this.dIVISIÓNPOLÍTICADELPAISToolStripMenuItem,
             this.sITIOSDETRABAJOToolStripMenuItem,
             this.pROGRAMACIÓNGENERALToolStripMenuItem,
+            this.aRMAStoolStripMenuItem1,
             this.toolStripSeparator26,
             this.rEPORTEASISTENCIAToolStripMenuItem,
             this.rEGISTRARSANCIÓNMULTAToolStripMenuItem,
@@ -2448,6 +2458,15 @@
             this.pROGRAMACIÓNGENERALToolStripMenuItem.Size = new System.Drawing.Size(299, 30);
             this.pROGRAMACIÓNGENERALToolStripMenuItem.Text = "PROGRAMACIÓN GENERAL";
             this.pROGRAMACIÓNGENERALToolStripMenuItem.Click += new System.EventHandler(this.pROGRAMACIÓNGENERALToolStripMenuItem_Click);
+            // 
+            // aRMAStoolStripMenuItem1
+            // 
+            this.aRMAStoolStripMenuItem1.Image = global::SysCisepro3.Properties.Resources.local_police_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.aRMAStoolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.aRMAStoolStripMenuItem1.Name = "aRMAStoolStripMenuItem1";
+            this.aRMAStoolStripMenuItem1.Size = new System.Drawing.Size(299, 30);
+            this.aRMAStoolStripMenuItem1.Text = "ARMAS";
+            this.aRMAStoolStripMenuItem1.Click += new System.EventHandler(this.aRMAStoolStripMenuItem1_Click);
             // 
             // toolStripSeparator26
             // 
@@ -2794,14 +2813,6 @@
             this.notifyIcon1.BalloonTipClicked += new System.EventHandler(this.notifyIcon1_BalloonTipClicked);
             this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_Click);
             // 
-            // fLUJOToolStripMenuItem
-            // 
-            this.fLUJOToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.finance_mode_24dp_FILL0_wght400_GRAD0_opsz24;
-            this.fLUJOToolStripMenuItem.Name = "fLUJOToolStripMenuItem";
-            this.fLUJOToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
-            this.fLUJOToolStripMenuItem.Text = "FLUJO DE OPERACION";
-            this.fLUJOToolStripMenuItem.Click += new System.EventHandler(this.fLUJOToolStripMenuItem_Click);
-            // 
             // MdiParentMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -3109,6 +3120,7 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator24;
         private System.Windows.Forms.ToolStripMenuItem fLUJOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aRMAStoolStripMenuItem1;
     }
 }
 

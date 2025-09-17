@@ -97,6 +97,11 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             _sqlCommands.Add(_objActivoFijoBaja.NuevoActivoFijoBajas)
         End Sub
 
+        'OBSOLETO
+        'INSERVIBLE
+        'NINGUNO
+
+
         Private Sub dgvActivosFijos_CellClick(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvActivosFijos.CellClick
             If dgvActivosFijos.RowCount = 0 Or dgvActivosFijos.CurrentRow Is Nothing Then Return
 

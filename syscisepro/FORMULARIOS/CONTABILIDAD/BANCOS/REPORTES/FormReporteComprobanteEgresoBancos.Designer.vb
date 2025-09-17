@@ -30,13 +30,13 @@
             Me.lblIdComprobanteEgreso = New System.Windows.Forms.Label()
             Me.KryptonNavigator1 = New ComponentFactory.Krypton.Navigator.KryptonNavigator()
             Me.KryptonPage1 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.PdfViewer2 = New PdfiumViewer.PdfViewer()
             Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.PdfViewer1 = New PdfiumViewer.PdfViewer()
             Me.KryptonPage3 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.crvMachala = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
             Me.txtIdComprobanteEgreso = New System.Windows.Forms.TextBox()
             Me.txtIdComprobamteEgreso2 = New System.Windows.Forms.TextBox()
-            Me.PdfViewer2 = New PdfiumViewer.PdfViewer()
             CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonNavigator1.SuspendLayout()
             CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -112,6 +112,13 @@
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage1.UniqueName = "7FDBF879EAA34B832D9FF6244D0AE350"
             '
+            'PdfViewer2
+            '
+            Me.PdfViewer2.Location = New System.Drawing.Point(3, 3)
+            Me.PdfViewer2.Name = "PdfViewer2"
+            Me.PdfViewer2.Size = New System.Drawing.Size(874, 629)
+            Me.PdfViewer2.TabIndex = 1
+            '
             'KryptonPage2
             '
             Me.KryptonPage2.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
@@ -179,13 +186,6 @@
             Me.txtIdComprobamteEgreso2.Size = New System.Drawing.Size(100, 23)
             Me.txtIdComprobamteEgreso2.TabIndex = 3
             Me.txtIdComprobamteEgreso2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'PdfViewer2
-            '
-            Me.PdfViewer2.Location = New System.Drawing.Point(3, 3)
-            Me.PdfViewer2.Name = "PdfViewer2"
-            Me.PdfViewer2.Size = New System.Drawing.Size(874, 629)
-            Me.PdfViewer2.TabIndex = 1
             '
             'FormReporteComprobanteEgresoBancos
             '

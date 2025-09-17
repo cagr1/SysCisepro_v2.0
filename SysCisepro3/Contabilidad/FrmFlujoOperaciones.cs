@@ -208,6 +208,7 @@ namespace SysCisepro3.Contabilidad
             
             
             //BLOQUE 1
+            
             // Ganancia(Perdida) antes de 15% a trabajadores
             string Activo = "1";
             decimal ActivoActual= ObtenerValorCuentaResultados(dtActual, Activo);
@@ -225,129 +226,101 @@ namespace SysCisepro3.Contabilidad
             decimal utilidadAnterior = ActivoAnterior + PasivoAnterior + PatrimonioAnterior;
 
             decimal variacionUtilidad = utilidadActual - utilidadAnterior;
-            
-            
-
+                       
             dtFlujo.Rows[2]["Valor"] = variacionUtilidad;
             
             
-            //Ajuste por gasto depreciacion
+            //Ajuste por gasto depreciacion y amortizaciones
 
             string Depreciaciones = "520219";
             decimal Ajuste1 = ObtenerValorCuentaResultados(dtActual, Depreciaciones);
-            
-                        
+                                
             dtFlujo.Rows[5]["Valor"] = Ajuste1 ;
-            
-            //total bloque1
+
+            //Ajuste por partidas distintas al efectivo // suma total bloque1
             decimal bloque1 = Ajuste1;
             //total sumado bloque 1
             dtFlujo.Rows[4]["Valor"] = bloque1;
 
+
             //BLOQUE 2
             
-
             //dismunicion en cuentas por cobrar clientes
             string CuentasPorCobrar = "1010205";
-
             decimal activo1 = ObtenerValorCuentaVariacion(dtVariacion, CuentasPorCobrar);
             dtFlujo.Rows[19]["Valor"] = activo1;
 
             //dismunicion en cuentas otras cuentas por cobrar 
-            string CuentasPorCobrar2 = "1010208";
-            
+            string CuentasPorCobrar2 = "1010208";            
             decimal activo2 = ObtenerValorCuentaVariacion(dtVariacion, CuentasPorCobrar2);
             dtFlujo.Rows[20]["Valor"] = activo2;
 
             //dismunicion en anticipos de proveedores
-
-            string AnticiposProveedores = "1010403";
-            
+            string AnticiposProveedores = "1010403";            
             decimal activo3 = ObtenerValorCuentaVariacion(dtVariacion, AnticiposProveedores);
             dtFlujo.Rows[21]["Valor"] = activo3;
            
             //disminucion en otros activos
-
-            string SegurosPagados = "1010401";
-            
+            string SegurosPagados = "1010401";            
             decimal ao1 = ObtenerValorCuentaVariacion(dtVariacion, SegurosPagados);
-
             string AnticiposEmpleados = "1010404";
             
             decimal ao2 = ObtenerValorCuentaVariacion(dtVariacion, AnticiposEmpleados);
-
             string ActivosImpuestosCorrientes = "10105";
             
             decimal ao3 = ObtenerValorCuentaVariacion(dtVariacion, ActivosImpuestosCorrientes);
-
-            decimal otrosActivos = (ao1 + ao2 + ao3);
-            
+            decimal otrosActivos = (ao1 + ao2 + ao3);            
             dtFlujo.Rows[24]["Valor"] = otrosActivos;
 
             //dismunicion en cuentas por pagar comerciales
-            string CuentasPorPagar = "20103";
-            
+            string CuentasPorPagar = "20103";            
             decimal pasivo1 = ObtenerValorCuentaVariacion(dtVariacion, CuentasPorPagar);
             dtFlujo.Rows[25]["Valor"] = pasivo1;
 
             //dismunicion en cuentas por otras cuentas pagar 
-            string CuentasPorPagar2 = "2010701";
-            
+            string CuentasPorPagar2 = "2010701";            
             decimal pasivo2 = ObtenerValorCuentaVariacion(dtVariacion, CuentasPorPagar2);
             dtFlujo.Rows[26]["Valor"] = pasivo2;
 
             //dismunicion en benefecios a empleados
             string iess = "2010703";
             
-            decimal be = ObtenerValorCuentaVariacion(dtVariacion, iess);
-            
+            decimal be = ObtenerValorCuentaVariacion(dtVariacion, iess);            
             string beneficiosxley = "2010704";
 
             decimal be2 = ObtenerValorCuentaVariacion(dtVariacion, beneficiosxley);
-
             string participacionTrabajadores = "2010705";
 
-            decimal be3 = ObtenerValorCuentaVariacion(dtVariacion, participacionTrabajadores);
-            
+            decimal be3 = ObtenerValorCuentaVariacion(dtVariacion, participacionTrabajadores);            
             string sueldos = "2010707";
 
             decimal be4 = ObtenerValorCuentaVariacion(dtVariacion, sueldos);
-
             string utilidadesporpagar = "2010709001";
 
             decimal be5 = ObtenerValorCuentaVariacion(dtVariacion, utilidadesporpagar);
-
             decimal totalBeneficios = be + be2 + be3 + be4 + be5;
             
             dtFlujo.Rows[27]["Valor"] = totalBeneficios;
 
             //dismunicion en anticipos a clientes
-
             string AnticiposClientes = "20113";
-
             decimal pasivo3 = ObtenerValorCuentaVariacion(dtVariacion, AnticiposClientes);
             dtFlujo.Rows[28]["Valor"] = pasivo3;
 
             //disminucion en otros pasivos
-
-            string ObligacionesFinancieras = "20104";
-                                   
+            string ObligacionesFinancieras = "20104";                                   
             decimal op1 = ObtenerValorCuentaVariacion(dtVariacion, ObligacionesFinancieras);
 
-            string DividendosPorPagar = "2010706";
-            
+            string DividendosPorPagar = "2010706";            
             decimal op2 = ObtenerValorCuentaVariacion(dtVariacion, DividendosPorPagar);
 
-            string PasivoPorDerechoArriendo = "2010901";
-            
+            string PasivoPorDerechoArriendo = "2010901";            
             decimal op3 = ObtenerValorCuentaVariacion(dtVariacion, PasivoPorDerechoArriendo);
 
             decimal otrosPasivos = (op1 + op2 + op3);
-
             dtFlujo.Rows[29]["Valor"] = otrosPasivos;
 
             //total sumado bloque 2
-
             decimal bloque2 = activo1 + activo2 + activo3  + otrosActivos + pasivo1 + pasivo2 + pasivo3  + totalBeneficios  + otrosPasivos;
 
             dtFlujo.Rows[18]["Valor"] = bloque2;

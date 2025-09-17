@@ -827,15 +827,12 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
                 FechaDesdeT = New Date(FechaDesdeT.Year, FechaDesdeT.Month, FechaDesdeT.Day, 0, 0, 0)
                 FechaHastaT = New Date(FechaHastaT.Year, FechaHastaT.Month, FechaHastaT.Day, 23, 59, 59)
 
-                If cbxShowColumns.SelectedIndex = 0 Then
-                    Columnas = "Mensual"
-                ElseIf cbxShowColumns.SelectedIndex = 1 Then
-                    Columnas = "Trimestral"
-                ElseIf cbxShowColumns.SelectedIndex = 2 Then
-                    Columnas = "Semestral"
-                ElseIf cbxShowColumns.SelectedIndex = 3 Then
-                    Columnas = "Anual"
-                End If
+                Select Case cbxShowColumns.SelectedIndex
+                    Case 0 : Columnas = "Mensual"
+                    Case 1 : Columnas = "Trimestral"
+                    Case 2 : Columnas = "Semestral"
+                    Case 3 : Columnas = "Anual"
+                End Select
 
 
                 If Anterior Then

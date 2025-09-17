@@ -475,6 +475,12 @@
     <Compile Include="Main\MdiParentMonitoreo.Designer.cs">
       <DependentUpon>MdiParentMonitoreo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Operaciones\FrmArmas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\FrmArmas.Designer.cs">
+      <DependentUpon>FrmArmas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Operaciones\FrmBuscarPuestoTrabajo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -818,6 +824,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main\MdiParentMonitoreo.resx">
       <DependentUpon>MdiParentMonitoreo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\FrmArmas.resx">
+      <DependentUpon>FrmArmas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\FrmBuscarPuestoTrabajo.resx">
       <DependentUpon>FrmBuscarPuestoTrabajo.cs</DependentUpon>
