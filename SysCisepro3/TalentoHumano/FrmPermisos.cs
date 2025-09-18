@@ -414,10 +414,7 @@ namespace SysCisepro3.TalentoHumano
                 var datos = _objRegistroPermisoPersonal.SeleccionarPermisosDatos(TipoCon, filtro, Convert.ToDateTime(fechaDesde), Convert.ToDateTime(fechaHasta), tipo);
                 //var reporte = _objRegistroPermisoPersonal.SeleccionarPermisosDatos(TipoCon, filtro, Convert.ToDateTime(fechaDesde), Convert.ToDateTime(fechaHasta), tipo);
                 listView2.Items.Clear();
-                listView2.Groups.Clear();
-
-
-               
+                listView2.Groups.Clear();               
                
 
                 foreach (DataRow row in grupos.Rows)

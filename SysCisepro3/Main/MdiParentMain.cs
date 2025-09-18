@@ -2192,7 +2192,12 @@ namespace SysCisepro3.Main
 
         private void aRMAStoolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            this.BringToFront();
+            FrmArmas.Instancia.MdiParent = this;
+            FrmArmas.TipoCon = TipoCon;
+            FrmArmas.Usuario = ObjUsuario;
+            FrmArmas.Instancia.Show();
+            FrmArmas.Instancia.BringToFront();
         }
 
 

@@ -1,10 +1,10 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
-    <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+    <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
     Partial Class FormBajasActivosFijos
         'Inherits System.Windows.Forms.Form
         Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
-        <System.Diagnostics.DebuggerNonUserCode()> _
+        <System.Diagnostics.DebuggerNonUserCode()>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
             Try
                 If disposing AndAlso components IsNot Nothing Then
@@ -21,7 +21,7 @@
         'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
         'Se puede modificar usando el Diseñador de Windows Forms.  
         'No lo modifique con el editor de código.
-        <System.Diagnostics.DebuggerStepThrough()> _
+        <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Me.components = New System.ComponentModel.Container()
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -71,7 +71,6 @@
             Me.KryptonLabel3 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel2 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel1 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel9 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.GroupBox1.SuspendLayout()
             CType(Me.dgvActivosFijos, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
@@ -470,7 +469,6 @@
             '
             'KryptonGroupBox1.Panel
             '
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel9)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.lblTipoActivo)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel8)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel7)
@@ -564,14 +562,6 @@
             Me.KryptonLabel1.TabIndex = 42
             Me.KryptonLabel1.Values.Text = "Estado"
             '
-            'KryptonLabel9
-            '
-            Me.KryptonLabel9.Location = New System.Drawing.Point(495, 136)
-            Me.KryptonLabel9.Name = "KryptonLabel9"
-            Me.KryptonLabel9.Size = New System.Drawing.Size(88, 20)
-            Me.KryptonLabel9.TabIndex = 74
-            Me.KryptonLabel9.Values.Text = "Memorandum"
-            '
             'FormBajasActivosFijos
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -653,6 +643,5 @@
         Friend WithEvents KryptonLabel3 As ComponentFactory.Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel8 As ComponentFactory.Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel7 As ComponentFactory.Krypton.Toolkit.KryptonLabel
-        Friend WithEvents KryptonLabel9 As ComponentFactory.Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

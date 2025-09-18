@@ -23,7 +23,6 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            Me.components = New System.ComponentModel.Container()
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -49,10 +48,10 @@
             Me.nodo = New System.Windows.Forms.DataGridViewButtonColumn()
             Me.dtpFechaDesde = New System.Windows.Forms.DateTimePicker()
             Me.dtpFechaHasta = New System.Windows.Forms.DateTimePicker()
-            Me.ContextMenuStripClicDerecho = New System.Windows.Forms.ContextMenuStrip(Me.components)
+            Me.ContextMenuStripClicDerecho = New System.Windows.Forms.ContextMenuStrip()
             Me.tsmOcultar = New System.Windows.Forms.ToolStripMenuItem()
             Me.tsmMostrar = New System.Windows.Forms.ToolStripMenuItem()
-            Me.ContextMenuStripClicDerechoEgresos = New System.Windows.Forms.ContextMenuStrip(Me.components)
+            Me.ContextMenuStripClicDerechoEgresos = New System.Windows.Forms.ContextMenuStrip()
             Me.tsmOcultarEgresos = New System.Windows.Forms.ToolStripMenuItem()
             Me.tsmMostrarEgresos = New System.Windows.Forms.ToolStripMenuItem()
             Me.cbNivel = New System.Windows.Forms.ComboBox()

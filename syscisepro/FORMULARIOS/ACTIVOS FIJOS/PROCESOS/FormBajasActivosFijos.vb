@@ -49,7 +49,9 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         Private Sub txtBusquedaActivoFijo_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles txtBusquedaActivoFijo.TextChanged
             If rbCodigoActivo.Checked = True Then
                 Try
-                    dgvActivosFijos.DataSource = _objActivoFijo.BuscarPorCodigoActivoFijo(_tipoCon, txtBusquedaActivoFijo.Text)
+                    Dim texto As String = txtBusquedaActivoFijo.Text.Trim()
+                    Dim serie As String = texto.Substring(texto.LastIndexOf(".") + 1)
+                    dgvActivosFijos.DataSource = _objActivoFijo.BuscarPorCodigoActivoFijo(_tipoCon, texto)
                     dgvActivosFijos.AutoResizeColumns()
                     dgvActivosFijos.AutoResizeRows()
                     dgvActivosFijos.ReadOnly = False
