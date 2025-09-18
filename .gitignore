@@ -361,3 +361,10 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Cisepro
+SysCisepro4.2/SysCisepro3/app.config
+SysCisepro4.2/syscisepro/app.config
+SysCisepro4.2/ClassLibraryCisepro/app.config
+SysCisepro4.2/ClassLibrarySecurity/app.config
+SysCisepro4.2/DashboardAPI/appsettings.json
