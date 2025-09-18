@@ -363,8 +363,8 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # Cisepro
-SysCisepro4.2/SysCisepro3/app.config
-SysCisepro4.2/syscisepro/app.config
-SysCisepro4.2/ClassLibraryCisepro/app.config
-SysCisepro4.2/ClassLibrarySecurity/app.config
-SysCisepro4.2/DashboardAPI/appsettings.json
+SysCisepro3/app.config
+syscisepro/app.config
+ClassLibraryCisepro/app.config
+ClassLibrarySecurity/app.config
+DashboardAPI/appsettings.json
